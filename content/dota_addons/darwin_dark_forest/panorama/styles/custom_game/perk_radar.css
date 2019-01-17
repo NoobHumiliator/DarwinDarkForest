@@ -1,0 +1,24 @@
+.PerkRadarPanelHud{
+    width: 100%;
+    height: 100%;
+}
+
+.PerkRadarPanel {
+    position: 30px 30px 0; 
+    width: 160px;
+    height: 160px;
+    border-top: 0px solid #333;
+    border-bottom: 0px solid #333;
+    background-image: url("file://{images}/custom_game/perk_radar/radar_background.png");
+    background-size: 100% 100%;
+    opacity: 0.6;
+}
+
+
+.PerkRadarContainer {
+    position: 1430px 830px 0; 
+    width: 220px;
+    height: 220px;
+    border-top: 0px solid #333;
+    border-bottom: 0px solid #333;
+}

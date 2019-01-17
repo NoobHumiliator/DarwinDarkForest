@@ -1,0 +1,21 @@
+<root>
+    <styles>
+       <include src="file://{resources}/styles/custom_game/perk_radar.css" />
+    </styles>
+
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/perk_radar.js" />
+    </scripts>
+    <Panel hittest="false" class="PerkRadarPanelHud">
+       <Panel class="PerkRadarContainer" id="PerkRadarContainer">
+           <Panel class="PerkRadarPanel" id="PerkRadarPanel">
+           </Panel>
+            <Label text="#fury" style="width:40px;position:90px 5px 0;text-align:center;"/>
+            <Label text="#durable" style="width:40px;position:180px 55px 0;text-align:center;"/>
+            <Label text="#element" style="width:40px;position:180px 150px 0;text-align:center;"/>
+            <Label text="#hunt" style="width:40px;position:90px 200px 0;text-align:center;"/>
+            <Label text="#decay" style="width:40px;position:0px 150px 0;text-align:center;"/>
+            <Label text="#mystery" style="width:40px;position:0px 55px 0;text-align:center;"/>
+       </Panel>
+    </Panel>
+</root>
