@@ -156,3 +156,19 @@ function PrintTable(t, indent, done)
         end
     end
 end
+
+
+function GetRandomValidPosition()
+    local minx = GetWorldMinX()
+    local maxx = GetWorldMaxX()
+    local miny = GetWorldMinY()
+    local maxy = GetWorldMaxY()
+    local function getRandomPos()
+            return Vector(RandomFloat(minx, maxx), RandomFloat(miny, maxy), 0)
+          end
+    local randomPos = getRandomPos()
+    while not GridNav:CanFindPath(GameRules.vWorldCenterPos,randomPos) do
+        randomPos = getRandomPos()
+    end
+    return randomPos
+end

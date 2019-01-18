@@ -3,5 +3,7 @@
 	custom_net_tables =
 	[
 		"game_state",
+		"player_perk",
+		"player_creature_index"
 	]
 }

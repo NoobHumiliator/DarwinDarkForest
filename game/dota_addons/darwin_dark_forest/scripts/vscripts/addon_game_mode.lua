@@ -1,8 +1,40 @@
+--测试模式
+_G.bTEST_MODE=true
 
 _G.nNEUTRAL_TEAM = 4
 --最大玩家数量 可能会根据地图调整
 _G.nMAX_PLAYER_NUMBER = 10
 
+_G.vEXP_TABLE={
+    0,
+    16,
+    40,
+    76,
+    130,
+    211,
+    323,
+    506,
+    780,
+    1191,
+    2700, --11级 游戏结束
+    5000
+}
+
+
+_G.vCREEP_EXP_TABLE={
+    4,
+    6,
+    9,
+    14,
+    20,
+    30,
+    46,
+    68,
+    103,
+    375
+}
+
+vCREEP_EXP_TABLE[0]=2
 
 
 if GameMode == nil then
@@ -12,6 +44,7 @@ end
 
 require( "events" )
 require( "evolve" )
+require( "neutral_spawner" )
 require( "utils/utility_functions" )
 require( "utils/timers" )
 
@@ -26,12 +59,14 @@ function Activate()
 	GameMode:InitGameMode()
 end
 
+GameRules.vWorldCenterPos=Vector(-640,624,128)
+
 --载入单位
 GameRules.vUnitsKV = LoadKeyValues('scripts/npc/npc_units_custom.txt')
 --key 是 playerId，value是六维数组存储玩家的perk点
 GameMode.vPlayerPerk={}
 
--- 处理一下 计算一下总进化度
+-- 处理一下 计算一下总进化度 计算一下怪物等级 
 for sUnitName, vData in pairs(GameRules.vUnitsKV) do
     if vData and type(vData) == "table" then
         --元素
@@ -60,6 +95,14 @@ for sUnitName, vData in pairs(GameRules.vUnitsKV) do
         end
         --计算总perk
         vData.nTotalPerk=vData.nElement+vData.nMystery+vData.nDurable+vData.nFury+vData.nDecay+vData.nHunt
+        
+        --为每个生物定义一个等级
+        if vData.AttackCapabilities=="DOTA_UNIT_CAP_NO_ATTACK" then
+            vData.nCreatureLevel=0
+        else
+            vData.nCreatureLevel=vData.Level
+        end
+
     end
 end
 
@@ -72,8 +115,9 @@ function GameMode:InitGameMode()
 
     GameRules:GetGameModeEntity().GameMode = self
     Timers:start()
-    self.worldCenterPos=Vector(-640,624,128)
+    NeutralSpawner:Init()
     GameMode.vStartPointLocation={} --key是teamnumber value坐标
+    
 
     --队伍颜色
 	self.m_TeamColors = {}
@@ -118,25 +162,25 @@ function GameMode:InitGameMode()
     		self:PutStartPositionToRandomPosForTeam(v)
     	end
     end)
-
-	
+    
 	GameRules:SetSameHeroSelectionEnabled(true)
     GameRules:SetUseUniversalShopMode(true)
-    GameRules:SetHeroSelectionTime(0.1)
-    GameRules:SetStrategyTime(3)
-    GameRules:SetShowcaseTime(1)
-    GameRules:SetPreGameTime(60)
-    GameRules:SetPostGameTime(180)
-    GameRules:SetTreeRegrowTime(5)
-    GameRules:SetGoldTickTime(0.4)
-    GameRules:SetGoldPerTick(2)
-    GameRules:SetStartingGold(0)
+
+
     GameRules:GetGameModeEntity():SetRemoveIllusionsOnDeath(true)
     GameRules:GetGameModeEntity():SetFogOfWarDisabled(false)
     GameRules:GetGameModeEntity():SetCameraDistanceOverride(1500)
     GameRules:GetGameModeEntity():SetSelectionGoldPenaltyEnabled(false)
     GameRules:GetGameModeEntity():SetLoseGoldOnDeath(false)
     GameRules:GetGameModeEntity():SetBuybackEnabled(false)
+    
+    --为测试模式设置
+    if bTEST_MODE and not IsDedicatedServer() then
+        GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
+    end
+
+ 
+
     --[[
     GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, "DamageFilter"), self)
     GameRules:GetGameModeEntity():SetExecuteOrderFilter(Dynamic_Wrap(GameMode, "OrderFilter"), self)
@@ -146,9 +190,12 @@ function GameMode:InitGameMode()
     ]]
     SendToServerConsole("dota_max_physical_items_purchase_limit 9999")
     
+
+
     --替换英雄模型
     ListenToGameEvent("dota_player_pick_hero",Dynamic_Wrap(GameMode,"OnPlayerPickHero"),self)
     ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( GameMode, 'OnGameRulesStateChange' ), self )
+    ListenToGameEvent( "entity_killed", Dynamic_Wrap( GameMode, 'OnEntityKilled' ), self )
 
     --[[
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( GameMode, "OnNPCSpawned" ), self )
@@ -200,13 +247,13 @@ function GameMode:PutStartPositionToRandomPosForTeam(team, deadPos)
         if start:GetTeamNumber() == team then
            
             local maxTry = 10
-            local randomPos = self:GetRandomValidPosition()
+            local randomPos = GetRandomValidPosition()
             if deadPos == nil then deadPos = Vector(0,0,0) end
             while (randomPos - deadPos):Length2D() < 4000 do
-                randomPos =self:GetRandomValidPosition()
+                randomPos =GetRandomValidPosition()
                 maxTry = maxTry - 1
                 if maxTry <= 0 then
-                    randomPos =self:GetRandomValidPosition()
+                    randomPos =GetRandomValidPosition()
                     break
                 end
             end
@@ -216,21 +263,6 @@ function GameMode:PutStartPositionToRandomPosForTeam(team, deadPos)
     end
 end
 
-function GameMode:GetRandomValidPosition()
-    local minx = GetWorldMinX()
-    local maxx = GetWorldMaxX()
-    local miny = GetWorldMinY()
-    local maxy = GetWorldMaxY()
-    local function getRandomPos()
-            return Vector(RandomFloat(minx, maxx), RandomFloat(miny, maxy), 0)
-          end
-    local randomPos = getRandomPos()
-    if self.worldCenterPos == nil then self.worldCenterPos = Entities:FindByName(nil, "world_center"):GetOrigin() end
-    while not GridNav:CanFindPath(self.worldCenterPos,randomPos) do
-        randomPos = getRandomPos()
-    end
-    return randomPos
-end
 
 
 

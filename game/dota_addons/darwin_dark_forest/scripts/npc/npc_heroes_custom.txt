@@ -5,7 +5,7 @@
 	"npc_dota_hero_wisp"
 	{
 		"override_hero"	"npc_dota_hero_wisp"
-		"Ability1"	"empty1"
+		"Ability1"	"dota_ability_hero_invulnerable"
 		"Ability2"	"empty2"
 		"Ability3"	"empty3"
 		"Ability4"	"empty4"
@@ -31,7 +31,7 @@
 		"Ability24"	"empty_special_8"
 
 		"VisionNighttimeRange"	"384"
-		"ModelScale"	"0.0001"
+		"ModelScale"	"1"
 		"MovementSpeed"	"500"
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
 		"VisionDaytimeRange"	"512"
