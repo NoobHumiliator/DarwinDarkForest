@@ -98,9 +98,10 @@ function GameMode:OnEntityKilled(keys)
        
        --给玩家经验
        local nCreepExp=vCREEP_EXP_TABLE[hKilledUnit.nCreatureLevel] 
-
        hHero.nCustomExp=hHero.nCustomExp+nCreepExp
        
+       CustomNetTables:SetTableValue( "player_exp", tostring(nPlayerId), {hHero.nCustomExp} )
+
        --计算等级
        local nNewLevel=1
        for i, v in ipairs(vEXP_TABLE) do

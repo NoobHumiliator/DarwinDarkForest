@@ -12,7 +12,6 @@ function OnUpdateSelectedUnit()
 
 
 
-
 (function () {
 
     // Built-In Dota client events

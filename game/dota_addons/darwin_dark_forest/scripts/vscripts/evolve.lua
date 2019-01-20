@@ -4,7 +4,6 @@
 --进化
 function Evolve (nPlayerId,hHero)
      
-     print("Evolve"..nPlayerId)
     local nLevel=hHero:GetLevel()
     
     -- 遍历kv 加入进化池 key 单位名称 value单位总perk点

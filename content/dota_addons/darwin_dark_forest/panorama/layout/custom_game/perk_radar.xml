@@ -7,16 +7,22 @@
         <include src="file://{resources}/scripts/custom_game/perk_radar.js" />
         <include src="file://{resources}/scripts/custom_game/selection_filter.js" />
     </scripts>
+    
     <Panel hittest="false" class="PerkRadarPanelHud">
        <Panel class="PerkRadarContainer" id="PerkRadarContainer">
            <Panel class="PerkRadarPanel" id="PerkRadarPanel">
            </Panel>
-            <Label text="#fury" style="width:40px;position:90px 5px 0;text-align:center;"/>
-            <Label text="#durable" style="width:40px;position:180px 55px 0;text-align:center;"/>
-            <Label text="#element" style="width:40px;position:180px 150px 0;text-align:center;"/>
-            <Label text="#hunt" style="width:40px;position:90px 200px 0;text-align:center;"/>
-            <Label text="#decay" style="width:40px;position:0px 150px 0;text-align:center;"/>
-            <Label text="#mystery" style="width:40px;position:0px 55px 0;text-align:center;"/>
+            <Label text="#fury" class="RadarLabel" style="width:40px;position:90px 5px 0;text-align:center;"/>
+            <Label text="#durable" class="RadarLabel" style="width:40px;position:180px 55px 0;text-align:center;"/>
+            <Label text="#element" class="RadarLabel"  style="width:40px;position:180px 150px 0;text-align:center;"/>
+            <Label text="#hunt" class="RadarLabel" style="width:40px;position:90px 200px 0;text-align:center;"/>
+            <Label text="#decay" class="RadarLabel" style="width:40px;position:0px 150px 0;text-align:center;"/>
+            <Label text="#mystery" class="RadarLabel" style="width:40px;position:0px 55px 0;text-align:center;"/>
+            <Panel class="LevelProgress" style="position:0px 220px 0;">
+               <Panel  class="ProgressBarLeft"  />
+               <Panel  class="ProgressBarRight" />
+               <Label  class="LevelProgressTest" text="70/100经验" />
+            </Panel>
        </Panel>
     </Panel>
 </root>

@@ -4,6 +4,8 @@
 	[
 		"game_state",
 		"player_perk",
+		"player_exp",
+		"exp_table",
 		"player_creature_index"
 	]
 }

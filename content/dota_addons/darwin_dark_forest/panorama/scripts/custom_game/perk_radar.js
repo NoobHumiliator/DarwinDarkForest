@@ -18,22 +18,22 @@
 
     if (2.0<radio)
     {
-        $("#PerkRadarContainer").style.position="1750px 830px 0"
+        $("#PerkRadarContainer").style.position="1720px 830px 0"
         x=1750;
     }
     if (1.7<radio&&radio<2.0) //16:9
     {
-    	$("#PerkRadarContainer").style.position="1430px 830px 0"
+    	$("#PerkRadarContainer").style.position="1400px 830px 0"
     	x=1430
     }
 	if ( 1.5<radio&&radio<1.7)
     {
-    	$("#PerkRadarContainer").style.position="1130px 830px 0"
+    	$("#PerkRadarContainer").style.position="1100px 830px 0"
     	x=1130
     }
     if ( radio<1.4 )
     {
-    	$("#PerkRadarContainer").style.position="930px 830px 0"
+    	$("#PerkRadarContainer").style.position="900px 830px 0"
     	x=930
     }
     var center_y=x+0.5*perk_radar_panel_size;
