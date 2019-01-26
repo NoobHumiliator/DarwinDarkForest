@@ -19,8 +19,7 @@ function Evolve (nPlayerId,hHero)
 
             if vData.nCreatureLevel ==nLevel then
                if  nLevel==1 then --第一级从直接随机选一个
-                   vEnvolvePool[sUnitName] = 1
-                   nEnvolvePoolTotalPerk=nEnvolvePoolTotalPerk+1
+                   table.insert(vEnvolveBlankPool, sUnitName)
                else
                    local bPerkValid=true  
                    if vData.nElement>GameMode.vPlayerPerk[nPlayerId][1] then
@@ -57,7 +56,7 @@ function Evolve (nPlayerId,hHero)
     
 
     local sUnitToEnvolve =""
-    if nEnvolvePoolTotalPerk >0
+    if nEnvolvePoolTotalPerk >0 then
         local nDice= RandomInt(1,nEnvolvePoolTotalPerk)
         local sUnitToEnvolve =""
         --遍历进化池 确认进化结果

@@ -192,8 +192,9 @@ function GameMode:OnNPCSpawned( event )
     --如果已经初始化过 （是复生 而不是第一次选出来）
     if hSpawnedUnit:IsHero() and hSpawnedUnit.nCurrentCreepLevel then
         local nPlayerId = hSpawnedUnit:GetOwner():GetPlayerID()
-        --将镜头定位到重生英雄
+        --将镜头定位到重生英雄，然后放开
         PlayerResource:SetCameraTarget(nPlayerId,hSpawnedUnit)
+        PlayerResource:SetCameraTarget(nPlayerId,nil) 
         Evolve(nPlayerId,hSpawnedUnit)
     end
     
