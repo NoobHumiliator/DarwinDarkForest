@@ -52,7 +52,8 @@ require( "utils/timers" )
 -- Precache
 ---------------------------------------------------------------------------
 function Precache( context )
-	
+ 	 PrecacheResource( "particle", "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_necro_souls_hero.vpcf", context )    
+     PrecacheResource( "particle", "particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", context )
 end
 
 function Activate()
@@ -173,7 +174,8 @@ function GameMode:InitGameMode()
     GameRules:GetGameModeEntity():SetSelectionGoldPenaltyEnabled(false)
     GameRules:GetGameModeEntity():SetLoseGoldOnDeath(false)
     GameRules:GetGameModeEntity():SetBuybackEnabled(false)
-    
+    --在死亡事件里面固定重生时间
+
     --为测试模式设置
     if bTEST_MODE and not IsDedicatedServer() then
         GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
@@ -196,6 +198,7 @@ function GameMode:InitGameMode()
     ListenToGameEvent("dota_player_pick_hero",Dynamic_Wrap(GameMode,"OnPlayerPickHero"),self)
     ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( GameMode, 'OnGameRulesStateChange' ), self )
     ListenToGameEvent( "entity_killed", Dynamic_Wrap( GameMode, 'OnEntityKilled' ), self )
+    ListenToGameEvent( "npc_spawned", Dynamic_Wrap( GameMode, "OnNPCSpawned" ), self )
 
     --[[
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( GameMode, "OnNPCSpawned" ), self )
@@ -263,7 +266,19 @@ function GameMode:PutStartPositionToRandomPosForTeam(team, deadPos)
     end
 end
 
-
+---------------------------------------------------------------------------------
+-- 将玩家的出生点放到指定的位置
+---------------------------------------------------------------------------------
+function GameMode:PutStartPositionToLocation(hHero,vLocation)
+    -- 将对应队伍的出生点放到随机的位置去
+    local playerStarts = Entities:FindAllByClassname("info_player_start_dota")
+    for _, start in pairs(playerStarts) do
+        if start:GetTeamNumber() == hHero:GetTeamNumber() then
+            GameMode.vStartPointLocation[hHero:GetTeamNumber()]=vLocation
+            start:SetOrigin(vLocation)
+        end
+    end
+end
 
 
 ---------------------------------------------------------------------------

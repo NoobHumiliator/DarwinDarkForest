@@ -11,7 +11,39 @@
     border-bottom: 0px solid #333;
     background-image: url("file://{images}/custom_game/perk_radar/radar_background.png");
     background-size: 100% 100%;
-    opacity: 0.6;
+    opacity: 0.7;
+}
+
+.RadarDot {
+    position: 73px 73px 0;
+    width: 14px;
+    height: 14px;
+    background-size: 100% 100%;
+}
+
+
+.ElementDot {
+    background-image: url("file://{images}/custom_game/perk_radar/blue.png");
+}
+
+.DurableDot {
+    background-image: url("file://{images}/custom_game/perk_radar/yellow.png");
+}
+
+.FuryDot {
+    background-image: url("file://{images}/custom_game/perk_radar/red.png");
+}
+
+.HuntDot {
+    background-image: url("file://{images}/custom_game/perk_radar/black.png");
+}
+
+.MysteryDot {
+    background-image: url("file://{images}/custom_game/perk_radar/purple.png");
+}
+
+.DecayDot {
+    background-image: url("file://{images}/custom_game/perk_radar/green.png");
 }
 
 
@@ -26,7 +58,7 @@
 .ProgressBarLeft {
 
    height: 100%;
-   width: 95%;
+   width: 0%;
    background-color:gradient( linear, 0% 0%, 0% 100%, from( #BBCAEA ), color-stop( 0.5, #ffffff), color-stop( 0.5, #D9DFEC), to( #BBCAEA ) );
    box-shadow:#61789Caa -2px -2px 4px 4px;
 
@@ -56,7 +88,7 @@
 
 }
 
-.LevelProgressTest{
+.LevelProgressLable{
 
     horizontal-align:center;
     vertical-align:center;
@@ -76,4 +108,10 @@
   max-width:90px;
   text-overflow:shrink;
   text-shadow:1px 2px 4px 4 #000a;
+}
+
+
+.Opacity
+{
+   opacity: 0;
 }

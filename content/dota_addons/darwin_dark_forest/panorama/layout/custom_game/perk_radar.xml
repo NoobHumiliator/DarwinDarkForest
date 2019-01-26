@@ -11,17 +11,25 @@
     <Panel hittest="false" class="PerkRadarPanelHud">
        <Panel class="PerkRadarContainer" id="PerkRadarContainer">
            <Panel class="PerkRadarPanel" id="PerkRadarPanel">
+                  <Panel id="RadarDot_1" onmouseover="ShowRadarDotTooltip(1)" onmouseout="HideRadarDotTooltip(1)" class="RadarDot Opacity ElementDot" />
+                  <Panel id="RadarDot_3" onmouseover="ShowRadarDotTooltip(3)" onmouseout="HideRadarDotTooltip(3)" class="RadarDot Opacity DurableDot" />
+                  <Panel id="RadarDot_4" onmouseover="ShowRadarDotTooltip(4)" onmouseout="HideRadarDotTooltip(4)"  class="RadarDot Opacity FuryDot" />
+                  <Panel id="RadarDot_6" onmouseover="ShowRadarDotTooltip(6)" onmouseout="HideRadarDotTooltip(6)" class="RadarDot Opacity HuntDot" />
+                  <Panel id="RadarDot_2" onmouseover="ShowRadarDotTooltip(2)" onmouseout="HideRadarDotTooltip(2)" class="RadarDot Opacity MysteryDot" />
+                  <Panel id="RadarDot_5" onmouseover="ShowRadarDotTooltip(5)" onmouseout="HideRadarDotTooltip(5)" class="RadarDot Opacity DecayDot" />
            </Panel>
-            <Label text="#fury" class="RadarLabel" style="width:40px;position:90px 5px 0;text-align:center;"/>
-            <Label text="#durable" class="RadarLabel" style="width:40px;position:180px 55px 0;text-align:center;"/>
-            <Label text="#element" class="RadarLabel"  style="width:40px;position:180px 150px 0;text-align:center;"/>
-            <Label text="#hunt" class="RadarLabel" style="width:40px;position:90px 200px 0;text-align:center;"/>
-            <Label text="#decay" class="RadarLabel" style="width:40px;position:0px 150px 0;text-align:center;"/>
-            <Label text="#mystery" class="RadarLabel" style="width:40px;position:0px 55px 0;text-align:center;"/>
+
+            <Label text="#fury" id="RadarLabel_4" class="RadarLabel" onmouseover="ShowRadarTooltip(4)" onmouseout="HideRadarTooltip(4)"  style="width:40px;position:90px 5px 0;text-align:center;"/>
+            <Label text="#durable" id="RadarLabel_3" class="RadarLabel" onmouseover="ShowRadarTooltip(3)" onmouseout="HideRadarTooltip(3)" style="width:40px;position:180px 55px 0;text-align:center;"/>
+            <Label text="#element" id="RadarLabel_1" class="RadarLabel" onmouseover="ShowRadarTooltip(1)" onmouseout="HideRadarTooltip(1)" style="width:40px;position:180px 150px 0;text-align:center;"/>
+            <Label text="#hunt" id="RadarLabel_6" class="RadarLabel" onmouseover="ShowRadarTooltip(6)" onmouseout="HideRadarTooltip(6)" style="width:40px;position:90px 200px 0;text-align:center;"/>
+            <Label text="#decay" id="RadarLabel_5" class="RadarLabel" onmouseover="ShowRadarTooltip(5)" onmouseout="HideRadarTooltip(5)" style="width:40px;position:0px 150px 0;text-align:center;"/>
+            <Label text="#mystery" id="RadarLabel_2" class="RadarLabel" onmouseover="ShowRadarTooltip(2)" onmouseout="HideRadarTooltip(2)" style="width:40px;position:0px 55px 0;text-align:center;"/>
+
             <Panel class="LevelProgress" style="position:0px 220px 0;">
-               <Panel  class="ProgressBarLeft"  />
-               <Panel  class="ProgressBarRight" />
-               <Label  class="LevelProgressTest" text="70/100经验" />
+               <Panel  id="ProgressBarLeft"  class="ProgressBarLeft"  />
+               <Panel  id="ProgressBarRight"  class="ProgressBarRight" />
+               <Label  id="LevelProgressLable"  class="LevelProgressLable" text="0/16经验" />
             </Panel>
        </Panel>
     </Panel>

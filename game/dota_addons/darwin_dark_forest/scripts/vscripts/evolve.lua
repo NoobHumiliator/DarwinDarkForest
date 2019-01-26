@@ -4,10 +4,12 @@
 --进化
 function Evolve (nPlayerId,hHero)
      
-    local nLevel=hHero:GetLevel()
+    local nLevel=hHero.nCurrentCreepLevel
     
     -- 遍历kv 加入进化池 key 单位名称 value单位总perk点
     local vEnvolvePool={}
+    local vEnvolveBlankPool={} --白板池子
+
     local nEnvolvePoolTotalPerk=0 --进化池perk的总量
 
     for sUnitName, vData in pairs(GameRules.vUnitsKV) do
@@ -41,7 +43,11 @@ function Evolve (nPlayerId,hHero)
                    end
                    --满足条件加入进化池
                    if bPerkValid then
-                      vEnvolvePool[sUnitName] = vData.nTotalPerk
+                      if vData.nTotalPerk == 0 then
+                         table.insert(vEnvolveBlankPool, sUnitName)
+                      else
+                         vEnvolvePool[sUnitName] = vData.nTotalPerk
+                      end
                       nEnvolvePoolTotalPerk=nEnvolvePoolTotalPerk+vData.nTotalPerk
                    end
                 end
@@ -49,20 +55,27 @@ function Evolve (nPlayerId,hHero)
         end
     end
     
-    local nDice= RandomInt(0,nEnvolvePoolTotalPerk-1)
+
     local sUnitToEnvolve =""
-    --遍历进化池 确认进化结果
-    local nTemp=0
-    for sUnitName,nPerk in pairs(vEnvolvePool) do
-       nTemp=nTemp+nPerk
-       if nDice<nTemp then
-        sUnitToEnvolve=sUnitName
-        break;
-      end
+    if nEnvolvePoolTotalPerk >0
+        local nDice= RandomInt(1,nEnvolvePoolTotalPerk)
+        local sUnitToEnvolve =""
+        --遍历进化池 确认进化结果
+        local nTemp=0
+        for sUnitName,nPerk in pairs(vEnvolvePool) do
+           nTemp=nTemp+nPerk
+           if nDice<=nTemp then
+            sUnitToEnvolve=sUnitName
+            break;
+          end
+        end
+    else
+        local nDice= RandomInt(1,#vEnvolveBlankPool)
+        sUnitToEnvolve=vEnvolveBlankPool[nDice]
     end
     
-    local vUnitToEnvolve = GameRules.vUnitsKV[sUnitToEnvolve]
-    local hUnit=SpawnUnitToReplaceHero(sUnitToEnvolve,hHero,nPlayerId)
+    print("To Evolve Creature"..sUnitToEnvolve)
+    return SpawnUnitToReplaceHero(sUnitToEnvolve,hHero,nPlayerId)
     --[[ 废弃，直接给玩家一个单位
     hHero:SetBaseHealthRegen(vUnitToEnvolve.StatusHealthRegen)
     hHero:SetBaseMaxHealth(vUnitToEnvolve.StatusHealth)
@@ -104,19 +117,20 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
   hHero:AddNoDraw()
   hHero:FindAbilityByName("dota_ability_hero_invulnerable"):SetLevel(1)
   --如果已经控制了某个生物 先移除
-  if hHero.currentCreep~=nil then
+  if  hHero.currentCreep~=nil and not hHero.currentCreep:IsNull() then
     hHero.currentCreep:AddNoDraw()
     UTIL_Remove(  hHero.currentCreep )
   end
 
   local hUnit = CreateUnitByName(sUnitname,GameMode.vStartPointLocation[hHero:GetTeamNumber()],true,hHero, hHero, hHero:GetTeamNumber())
   hUnit:SetControllableByPlayer(hHero:GetPlayerID(), true)
-  --PlayerResource:SetOverrideSelectionEntity(hHero:GetPlayerID(), hUnit)
-  
+
+
   hHero.currentCreep=hUnit
+  hHero.nCurrentCreepLevel=hUnit:GetLevel()
+  
   --放在NetTable送达前台
   CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerId), {creepIndex=hUnit:GetEntityIndex()} )
-  print("123"..CustomNetTables:GetTableValue( "player_creature_index", tostring(nPlayerId)).creepIndex  )
   -- Fix for centering camera
   Timers:CreateTimer({
     callback = function()
