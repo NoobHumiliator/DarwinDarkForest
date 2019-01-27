@@ -16,7 +16,12 @@ function Spawn( entityKeyValues )
        return
     end
 
-    thisEntity:SetAcquisitionRange(600)
+    thisEntity:SetAcquisitionRange(540)
+    
+    --是否正在追击
+    thisEntity.bChasing=false
+
+
     --保存初始移动速度
     thisEntity.nOriginalMovementSpeed=thisEntity:GetBaseMoveSpeed()
     --降低移动速度
@@ -60,11 +65,17 @@ function CheckIfHasAggro()
 
 	--如果有追击目标
 	if thisEntity:GetAggroTarget() ~= nil then
+        
+        --切换追击状态 此时视为被玩家捅了一下
+        if not thisEntity.bChasing then
+        	thisEntity.bChasing=true
+            thisEntity.flLastHitTime =  GameRules:GetGameTime();   
+        end
 		--还原移动速度
-		print("thisEntity:GetAggroTarget()"..thisEntity:GetAggroTarget():GetUnitName())
 		thisEntity:SetBaseMoveSpeed( thisEntity.nOriginalMovementSpeed )
         --如果四秒不受玩家反击，或者丢失玩家视野
 		if (  thisEntity.flLastHitTime and ( GameRules:GetGameTime() - thisEntity.flLastHitTime >4 ) ) or not thisEntity:CanEntityBeSeenByMyTeam(thisEntity:GetAggroTarget())   then
+	 		thisEntity.bChasing=false
 	 		return RetreatFromUnit(thisEntity:GetAggroTarget())
 		end
 	else

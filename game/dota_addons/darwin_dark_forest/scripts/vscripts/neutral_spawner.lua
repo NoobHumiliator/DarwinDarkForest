@@ -1,12 +1,32 @@
+local vMysteryTopLeft= {x=-6830,y=7637 }
+local vMysteryDownRight= {x=2416,y=-1412}
+local vDurableTopLeft= {x=-2190,y=7825}
+local vDurableDownRight= {x=4620,y=222}
+local vDecayTopLeft= {x=-8233,y=3980}
+local vDecayDownRight= {x=476,y=-5165}
+local vElementTopLeft= {x=-1967,y=3937}
+local vElementDownRight= {x=6000,y=-6000}
+
+local vFuryTopLeft_1= {x=1078,y=7899}
+local vFuryDownRight_1= {x=5883,y=1410}
+local vFuryTopLeft_2= {x=5883,y=6909}
+local vFuryDownRight_2= {x=8211,y=-5400}
+
+
+local vHuntTopLeft= {x=-4914,y=5695}
+local vHuntDownRight= {x=3357,y=2972}
+
+
+
 local vLevelRatio ={}
 
-vLevelRatio["courier"]=0.35 --这是信使的比例
+vLevelRatio["courier"]=0.5 --这是信使的比例
 --key是与玩家等级差距 value是比例 
-vLevelRatio[-1]=0.15
-vLevelRatio[0]=0.25
-vLevelRatio[1]=0.175
+vLevelRatio[-1]=0.2
+vLevelRatio[0]=0.15
+vLevelRatio[1]=0.1
 vLevelRatio[2]=0.05
-vLevelRatio[3]=0.025
+vLevelRatio[3]=0.05
 
 if NeutralSpawner == nil then
   NeutralSpawner = {}
@@ -23,7 +43,7 @@ function NeutralSpawner:Init()
   self.vCreatureLevelMap = {0,0,0,0,0,0,0,0,0,0}
   self.vCreatureLevelMap[0]=0
 
-  self.flTimeInterval = 1 --刷怪间隔
+  self.flTimeInterval = 0.5 --刷怪间隔
 
   ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(NeutralSpawner, "OnGameRulesStateChange"), self)
 
@@ -42,13 +62,19 @@ end
 function NeutralSpawner:Begin()
      
     -- 先刷几只压压惊
-    --for i=1,50 do
-    --   self:SpawnOneCreature()
-    --end
+    for i=1,10 do
+       self:SpawnOneCreature()
+    end
     
     --根据间隔刷怪
     Timers:CreateTimer(1, function()
-        self:SpawnOneCreature()
+        NeutralSpawner:SpawnOneCreature()
+        if NeutralSpawner.nCreaturesNumber<80 then
+           NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval/3
+        else
+           NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval*3
+        end
+
       return NeutralSpawner.flTimeInterval
     end)
 
@@ -71,9 +97,9 @@ function NeutralSpawner:SpawnOneCreature()
    
    --如果一级的话 调高信使比例
    if nAverageLevel==1 then
-      vLevelRatio["courier"]=0.5
+      vLevelRatio["courier"]=0.7
    else
-      vLevelRatio["courier"]=0.35
+      vLevelRatio["courier"]=0.5
    end
 
    --print("Player's Average Level is:"..nAverageLevel)

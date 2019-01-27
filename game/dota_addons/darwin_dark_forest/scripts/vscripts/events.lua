@@ -194,7 +194,13 @@ function GameMode:OnNPCSpawned( event )
         local nPlayerId = hSpawnedUnit:GetOwner():GetPlayerID()
         --将镜头定位到重生英雄，然后放开
         PlayerResource:SetCameraTarget(nPlayerId,hSpawnedUnit)
-        PlayerResource:SetCameraTarget(nPlayerId,nil) 
+
+        Timers:CreateTimer( endTime = 0.5, {
+            callback = function()
+              PlayerResource:SetCameraTarget(nPlayerId,nil) 
+            end
+        })
+        
         Evolve(nPlayerId,hSpawnedUnit)
     end
     

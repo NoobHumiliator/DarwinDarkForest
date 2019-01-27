@@ -54,19 +54,22 @@ function Evolve (nPlayerId,hHero)
         end
     end
     
+    PrintTable(vEnvolveBlankPool)
+    PrintTable(vEnvolvePool)
+    print(nEnvolvePoolTotalPerk)
 
     local sUnitToEnvolve =""
     if nEnvolvePoolTotalPerk >0 then
         local nDice= RandomInt(1,nEnvolvePoolTotalPerk)
-        local sUnitToEnvolve =""
+
         --遍历进化池 确认进化结果
         local nTemp=0
         for sUnitName,nPerk in pairs(vEnvolvePool) do
            nTemp=nTemp+nPerk
            if nDice<=nTemp then
-            sUnitToEnvolve=sUnitName
-            break;
-          end
+             sUnitToEnvolve=sUnitName
+             break;
+           end
         end
     else
         local nDice= RandomInt(1,#vEnvolveBlankPool)
@@ -75,6 +78,7 @@ function Evolve (nPlayerId,hHero)
     
     print("To Evolve Creature"..sUnitToEnvolve)
     return SpawnUnitToReplaceHero(sUnitToEnvolve,hHero,nPlayerId)
+
     --[[ 废弃，直接给玩家一个单位
     hHero:SetBaseHealthRegen(vUnitToEnvolve.StatusHealthRegen)
     hHero:SetBaseMaxHealth(vUnitToEnvolve.StatusHealth)
