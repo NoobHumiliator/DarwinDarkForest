@@ -36,6 +36,12 @@ _G.vCREEP_EXP_TABLE={
 
 vCREEP_EXP_TABLE[0]=2
 
+-- 根据系数调整升级经验
+for i,_ in ipairs(vEXP_TABLE) do
+    vEXP_TABLE[i]=math.floor(vEXP_TABLE[i]*1.5+0.5)
+end
+
+
 
 if GameMode == nil then
 	_G.GameMode = class({}) 
@@ -64,6 +70,12 @@ GameRules.vWorldCenterPos=Vector(-640,624,128)
 
 --载入单位
 GameRules.vUnitsKV = LoadKeyValues('scripts/npc/npc_units_custom.txt')
+--载入技能
+GameRules.vAbilitiesKV = LoadKeyValues('scripts/npc/npc_abilities_custom.txt')
+
+GameRules.vAbilitiesTable = {}
+
+
 --key 是 playerId，value是六维数组存储玩家的perk点
 GameMode.vPlayerPerk={}
 
@@ -106,6 +118,73 @@ for sUnitName, vData in pairs(GameRules.vUnitsKV) do
 
     end
 end
+
+-- 处理一下 将KV里面的技能 按等级拆碎 进化的时候一并洗入技能池
+for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
+    if vData and type(vData) == "table" then
+        
+        --保证是进化类型的技能 而不是其他
+        if vData.nMystery~=nil or vData.nElement~=nil or vData.nDurable~=nil or vData.nFury~=nil or vData.nDecay~=nil or vData.nHunt~=nil  then
+            
+            local vLevel=1
+            --最大技能等级
+            if vData.MaxLevel and tonumber(vData.MaxLevel) then
+               vLevel=tonumber(vData.MaxLevel)
+            end
+
+            -- 构造数据
+            for i=1,vLevel do
+                
+                --元素
+                local nElement=0
+                if vData.nElement ~=nil then
+                   nElement=tonumber(SpliteStr(vData.nElement)[i])
+                end
+                --神秘
+                local nMystery=0
+                if vData.nMystery ~=nil then
+                   nMystery=tonumber(SpliteStr(vData.nMystery)[i])
+                end
+                --耐久
+                local nDurable=0
+                if vData.nDurable ~=nil then
+                    nDurable=tonumber(SpliteStr(vData.nDurable)[i])
+                end
+                --狂暴
+                local nFury=0
+                if vData.nFury ~=nil then
+                    nFury=tonumber(SpliteStr(vData.nFury)[i])
+                end
+                --腐朽
+                local nDecay=0
+                if vData.nDecay ~=nil then
+                    nDecay=tonumber(SpliteStr(vData.nDecay)[i])
+                end
+                --狩猎
+                local nHunt=0
+                if vData.nHunt ~=nil then
+                    nHunt=tonumber(SpliteStr(vData.nHunt)[i])
+                end
+
+                local vTempData={
+                  sAbilityName=sAbilityName,              
+                  nLevel=i,
+                  nElement=nElement,
+                  nMystery=nMystery,
+                  nDurable=nDurable,
+                  nFury=nFury,
+                  nDecay=nDecay,
+                  nHunt=nHunt,
+                  nTotalPerk=nElement+nMystery+nDurable+nFury+nDecay+nHunt
+                }            
+                table.insert(GameRules.vAbilitiesTable,vTempData)
+            end
+        end
+
+    end
+end
+
+
 
 
 
@@ -180,8 +259,8 @@ function GameMode:InitGameMode()
     if bTEST_MODE and not IsDedicatedServer() then
         GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
     end
-
- 
+    
+  
 
     --[[
     GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, "DamageFilter"), self)
@@ -199,7 +278,7 @@ function GameMode:InitGameMode()
     ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( GameMode, 'OnGameRulesStateChange' ), self )
     ListenToGameEvent( "entity_killed", Dynamic_Wrap( GameMode, 'OnEntityKilled' ), self )
     ListenToGameEvent( "npc_spawned", Dynamic_Wrap( GameMode, "OnNPCSpawned" ), self )
-
+    ListenToGameEvent("player_chat", Dynamic_Wrap(GameMode, "OnPlayerSay"), self) 
     --[[
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( GameMode, "OnNPCSpawned" ), self )
 	ListenToGameEvent( "dota_team_kill_credit", Dynamic_Wrap( GameMode, 'OnTeamKillCredit' ), self )
@@ -369,3 +448,4 @@ function GameMode:OnThink()
 
 	return 1
 end
+

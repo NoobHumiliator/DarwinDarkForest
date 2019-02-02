@@ -158,11 +158,22 @@ function PrintTable(t, indent, done)
 end
 
 
-function GetRandomValidPosition()
+function GetRandomValidPosition(vTopLeft,vDownRight)
+    
     local minx = GetWorldMinX()
     local maxx = GetWorldMaxX()
     local miny = GetWorldMinY()
     local maxy = GetWorldMaxY()
+
+    if vTopLeft and vDownRight then
+       
+       minx=vTopLeft.x
+       maxx=vDownRight.x 
+       miny=vTopLeft.y
+       maxy=vDownRight.y
+
+    end
+
     local function getRandomPos()
             return Vector(RandomFloat(minx, maxx), RandomFloat(miny, maxy), 0)
           end
@@ -171,4 +182,18 @@ function GetRandomValidPosition()
         randomPos = getRandomPos()
     end
     return randomPos
+end
+
+
+--以空格拆分字符串
+function SpliteStr(str)
+    local arr = {}
+    for w in string.gmatch(str, "%S+") do
+       table.insert(arr,w)
+    end
+    return arr
+end
+
+function string.trim(s)
+    return s:match "^%s*(.-)%s*$"
 end

@@ -1,4 +1,5 @@
 --[[ events.lua ]]
+LinkLuaModifier( "modifier_zero_cooldown_and_mana_cost", "modifiers/modifier_zero_cooldown_and_mana_cost", LUA_MODIFIER_MOTION_NONE )
 
 ---------------------------------------------------------------------------
 -- Event: Game state change handler
@@ -75,12 +76,15 @@ function GameMode:OnEntityKilled(keys)
 
        local tempPerksMap = {0,0,0,0,0,0}
 
+
        tempPerksMap[1] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nElement  *flPercentage
        tempPerksMap[2] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nMystery *flPercentage
        tempPerksMap[3] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nDurable *flPercentage
        tempPerksMap[4] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nFury *flPercentage
        tempPerksMap[5] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nDecay *flPercentage
        tempPerksMap[6] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nHunt *flPercentage
+
+     
 
        --计算一个总进化点数       
        local flTotalPerks=0
@@ -104,13 +108,36 @@ function GameMode:OnEntityKilled(keys)
                  end
              end
        end
+        --收割灵魂例子特效 白色特效
+       if flTotalPerks ==0 then
+           local nSoulParticle = ParticleManager:CreateParticle("particles/absorb_particle/absorb_white.vpcf", PATTACH_POINT_FOLLOW, hKillerUnit)
+           ParticleManager:SetParticleControlEnt(nSoulParticle, 0, hKilledUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
+           ParticleManager:SetParticleControlEnt(nSoulParticle, 1, hKillerUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
+       end
 
-
-       --收割灵魂例子特效
-       local nSoulParticle = ParticleManager:CreateParticle("particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_necro_souls_hero.vpcf", PATTACH_POINT_FOLLOW, hKillerUnit)
-       ParticleManager:SetParticleControlEnt(nSoulParticle, 0, hKilledUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
-       ParticleManager:SetParticleControlEnt(nSoulParticle, 1, hKillerUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
+         
+       local tempPerksColorMap = { 
+          {color="blue",value=tempPerksMap[1]},
+          {color="purple",value=tempPerksMap[2]},
+          {color="yellow",value=tempPerksMap[3]},
+          {color="red",value=tempPerksMap[4]},
+          {color="green",value=tempPerksMap[5]},
+          {color="black",value=tempPerksMap[6]}
+       }     
        
+       table.sort(tempPerksColorMap,function(a,b)
+            return a.value > b.value
+       end)
+
+       --排序选出最大的两个
+       for _,v in pairs(tempPerksColorMap) do
+         if v.value>0 then 
+           local nSoulParticle = ParticleManager:CreateParticle("particles/absorb_particle/absorb_"..v.color..".vpcf", PATTACH_POINT_FOLLOW, hKillerUnit)
+           ParticleManager:SetParticleControlEnt(nSoulParticle, 0, hKilledUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
+           ParticleManager:SetParticleControlEnt(nSoulParticle, 1, hKillerUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
+         end
+       end
+
        --给玩家经验
        hHero.nCustomExp=hHero.nCustomExp+vCREEP_EXP_TABLE[hKilledUnit.nCreatureLevel] 
        
@@ -128,7 +155,7 @@ function GameMode:OnEntityKilled(keys)
           Evolve(nPlayerId,hHero)
 
           --进化完了播放升级粒子特效
-          local nLevelUpParticleIndex = ParticleManager:CreateParticle("particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", PATTACH_ABSORIGIN_FOLLOW, hHero.currentCreep)
+          local nLevelUpParticleIndex = ParticleManager:CreateParticle("particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", PATTACH_ABSORIGIN_FOLLOW, hHero.hCurrentCreep)
           ParticleManager:ReleaseParticleIndex(nLevelUpParticleIndex)
 
        end
@@ -143,30 +170,28 @@ function GameMode:OnEntityKilled(keys)
    if  hKilledUnit:GetOwner() and not hKilledUnit:IsHero() then
        local nPlayerId = hKilledUnit:GetOwner():GetPlayerID()
        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
-
-       hHero.nCustomExp=hHero.nCustomExp-(vEXP_TABLE[hHero.currentCreep:GetLevel()+1]-vEXP_TABLE[hHero.currentCreep:GetLevel()])*0.5
-      
-       --保证不是负数
-       if hHero.nCustomExp<1 then
-          hHero.nCustomExp=1
+       -- 保证不是召唤生物
+       if hHero.hCurrentCreep == hKilledUnit then
+           hHero.nCustomExp=hHero.nCustomExp-(vEXP_TABLE[hHero.hCurrentCreep:GetLevel()+1]-vEXP_TABLE[hHero.hCurrentCreep:GetLevel()])*0.5
+           --保证不是负数
+           if hHero.nCustomExp<1 then
+              hHero.nCustomExp=1
+           end
+           --计算等级
+           local nNewLevel=CalculateNewLevel(hHero)
+           hHero.nCurrentCreepLevel=nNewLevel
+           --击杀英雄
+           hHero:Kill(nil, hKillerUnit)
+           GameMode:PutStartPositionToRandomPosForTeam(hHero:GetTeamNumber());
+           hHero:SetTimeUntilRespawn(5)
+            --计算等级
+           local nNewLevel=CalculateNewLevel(hHero)
+           hHero.nCurrentCreepLevel=nNewLevel
+           --英雄重生的时候再进化
+           --Evolve(nPlayerId,hHero)
+            --更新雷达显示
+            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
        end
-  
-       --计算等级
-       local nNewLevel=CalculateNewLevel(hHero)
-       hHero.nCurrentCreepLevel=nNewLevel
-       
-       --击杀英雄
-       hHero:Kill(nil, hKillerUnit)
-       GameMode:PutStartPositionToRandomPosForTeam(hHero:GetTeamNumber());
-       hHero:SetTimeUntilRespawn(5)
-
-        --计算等级
-       local nNewLevel=CalculateNewLevel(hHero)
-       hHero.nCurrentCreepLevel=nNewLevel
-       --英雄重生的时候再进化
-       --Evolve(nPlayerId,hHero)
-        --更新雷达显示
-        CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
    end
 
 end
@@ -177,7 +202,7 @@ function CalculateNewLevel(hHero)
      --计算等级
      local nNewLevel=1
      for i, v in ipairs(vEXP_TABLE) do
-         if  hHero.nCustomExp>vEXP_TABLE[i]  and   hHero.nCustomExp<vEXP_TABLE[i+1]  then
+         if  hHero.nCustomExp>=vEXP_TABLE[i]  and   hHero.nCustomExp<vEXP_TABLE[i+1]  then
              nNewLevel=i
              break
          end
@@ -195,7 +220,7 @@ function GameMode:OnNPCSpawned( event )
         --将镜头定位到重生英雄，然后放开
         PlayerResource:SetCameraTarget(nPlayerId,hSpawnedUnit)
 
-        Timers:CreateTimer( endTime = 0.5, {
+        Timers:CreateTimer({ endTime = 0.5, 
             callback = function()
               PlayerResource:SetCameraTarget(nPlayerId,nil) 
             end
@@ -208,5 +233,77 @@ function GameMode:OnNPCSpawned( event )
     if hSpawnedUnit and hSpawnedUnit.GetUnitName then
         hSpawnedUnit:SetForwardVector(RandomVector(1))
     end
+
+end
+
+
+
+
+--玩家打字事件
+function GameMode:OnPlayerSay(keys) 
+ 
+    local hPlayer = PlayerInstanceFromIndex( keys.userid )
+    local hHero = hPlayer:GetAssignedHero()
+    local nPlayerId= hHero:GetPlayerID()
+    local nSteamID = PlayerResource:GetSteamAccountID( nPlayerId)
+    local sText = string.trim( string.lower(keys.text) )
+
+    --为测试模式设置作弊码
+    if bTEST_MODE and not IsDedicatedServer() then
+        --刷新
+        if sText=="re" and hHero and hHero.hCurrentCreep then
+           hHero.hCurrentCreep:SetMana(hHero.hCurrentCreep:GetMaxMana())
+           hHero.hCurrentCreep:SetHealth(hHero.hCurrentCreep:GetMaxHealth())
+           for i=1,20 do
+                local hAbility=hHero.hCurrentCreep:GetAbilityByIndex(i-1)
+                if hAbility then
+                   hAbility:EndCooldown()
+                end
+           end
+        end
+        --wtf 模式
+        if sText=="wtf" and hHero and not hHero.hCurrentCreep:IsNull() then
+           hHero.hCurrentCreep:AddNewModifier(hHero.hCurrentCreep, nil, "modifier_zero_cooldown_and_mana_cost", {})
+        end
+        -- 关闭 wtf 模式
+        if sText=="unwtf" and hHero and not hHero.hCurrentCreep:IsNull() then
+           hHero.hCurrentCreep:RemoveModifierByName("modifier_zero_cooldown_and_mana_cost")
+        end
+        
+        -- 进化 换模型
+        if sText=="evolve" and hHero and not hHero.hCurrentCreep:IsNull() then
+            Evolve(nPlayerId,hHero)
+        end
+        -- 升级
+        if string.match(sText,"to%d") and hHero and not hHero.hCurrentCreep:IsNull() then
+           local nLevel= tonumber(string.match(sText,"%d+"))
+           --给玩家对应等级的经验
+           if nLevel>=1 and nLevel<=10 then
+             hHero.nCustomExp=vCREEP_EXP_TABLE[nLevel]+1
+               --计算等级
+             local nNewLevel=CalculateNewLevel(hHero)
+             
+             --如果升级了 进化
+             if nNewLevel~=hHero.nCurrentCreepLevel then
+                
+                --播放进化声音
+                EmitSoundOn('General.LevelUp.Bonus',hHero) 
+
+                GameMode:PutStartPositionToLocation(hHero,hHero:GetAbsOrigin())
+                hHero.nCurrentCreepLevel=nNewLevel
+                Evolve(nPlayerId,hHero)
+
+                --进化完了播放升级粒子特效
+                local nLevelUpParticleIndex = ParticleManager:CreateParticle("particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", PATTACH_ABSORIGIN_FOLLOW, hHero.hCurrentCreep)
+                ParticleManager:ReleaseParticleIndex(nLevelUpParticleIndex)
+             end
+             --更新UI显示
+             CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
+             CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+           end
+        end
+
+    end
+
 
 end

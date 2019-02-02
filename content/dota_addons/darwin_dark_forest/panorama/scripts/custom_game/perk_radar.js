@@ -14,6 +14,7 @@ function UpdateRadar(keys)
    {
         var element_y = (element/100)*radar_radius/2
         var element_x =  element_y*1.732
+        $("#RadarDot_1").SetHasClass("Opacity", false);  
         $("#RadarDot_1").style.position= (element_x+73)+"px"+" "+(element_y+73)+"px 0"
    } else {
         $("#RadarDot_1").SetHasClass("Opacity", true);

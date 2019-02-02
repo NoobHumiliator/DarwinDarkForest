@@ -1,6 +1,23 @@
 --[[进化]]
 --LinkLuaModifier( "modifier_hero_adjustment", "modifiers/modifier_hero_adjustment", LUA_MODIFIER_MOTION_NONE )
 
+--技能数量几率表
+
+vAbilityChanceEachLevel={
+   { [0]=100 },  -- 1级
+   { [0]=10,[1]=70,[2]=15,[3]=5}, --2级
+   { [0]=5,[1]=50,[2]=35,[3]=10}, --3级
+   { [1]=10,[2]=70,[3]=15,[4]=5}, --4级
+   { [1]=5,[2]=50,[3]=35,[4]=10}, --5级
+   { [2]=10,[3]=70,[4]=15,[5]=5}, --6级
+   { [2]=5,[3]=50,[4]=35,[5]=10}, --7级
+   { [3]=10,[4]=70,[5]=15,[6]=5}, --8级
+   { [3]=5,[4]=50,[5]=35,[6]=10}, --9级
+   { [4]=10,[5]=70,[6]=20 } --10级
+}
+
+
+
 --进化
 function Evolve (nPlayerId,hHero)
      
@@ -53,10 +70,6 @@ function Evolve (nPlayerId,hHero)
             end
         end
     end
-    
-    PrintTable(vEnvolveBlankPool)
-    PrintTable(vEnvolvePool)
-    print(nEnvolvePoolTotalPerk)
 
     local sUnitToEnvolve =""
     if nEnvolvePoolTotalPerk >0 then
@@ -77,8 +90,10 @@ function Evolve (nPlayerId,hHero)
     end
     
     print("To Evolve Creature"..sUnitToEnvolve)
-    return SpawnUnitToReplaceHero(sUnitToEnvolve,hHero,nPlayerId)
+    local hUnit = SpawnUnitToReplaceHero(sUnitToEnvolve,hHero,nPlayerId)
+    AddAbilityForUnit(hUnit,nPlayerId)
 
+    return hUnit
     --[[ 废弃，直接给玩家一个单位
     hHero:SetBaseHealthRegen(vUnitToEnvolve.StatusHealthRegen)
     hHero:SetBaseMaxHealth(vUnitToEnvolve.StatusHealth)
@@ -120,16 +135,16 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
   hHero:AddNoDraw()
   hHero:FindAbilityByName("dota_ability_hero_invulnerable"):SetLevel(1)
   --如果已经控制了某个生物 先移除
-  if  hHero.currentCreep~=nil and not hHero.currentCreep:IsNull() then
-    hHero.currentCreep:AddNoDraw()
-    UTIL_Remove(  hHero.currentCreep )
+  if  hHero.hCurrentCreep~=nil and not hHero.hCurrentCreep:IsNull() then
+    hHero.hCurrentCreep:AddNoDraw()
+    UTIL_Remove(  hHero.hCurrentCreep )
   end
 
   local hUnit = CreateUnitByName(sUnitname,GameMode.vStartPointLocation[hHero:GetTeamNumber()],true,hHero, hHero, hHero:GetTeamNumber())
   hUnit:SetControllableByPlayer(hHero:GetPlayerID(), true)
 
 
-  hHero.currentCreep=hUnit
+  hHero.hCurrentCreep=hUnit
   hHero.nCurrentCreepLevel=hUnit:GetLevel()
   
   --放在NetTable送达前台
@@ -145,4 +160,96 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
   })
   return hUnit
 
+end
+
+
+
+function AddAbilityForUnit(hUnit,nPlayerId)
+   
+   local nLevel=hUnit:GetLevel()
+   local vAbilityChance =  vAbilityChanceEachLevel[nLevel]
+
+   local nDice= RandomInt(1,100)
+
+   local nTemp=0
+   local nAbilityNumber=0
+
+   for k,v in pairs(vAbilityChance) do
+       nTemp=nTemp+v
+       if nDice<=nTemp then
+         nAbilityNumber=k
+         break;
+       end
+   end
+   
+   print("Ability number for player"..nPlayerId.." is:"..nAbilityNumber)
+
+   local vAbilityPool={}
+   local nAbilityTotalPerks=0
+
+   for _, vData in pairs(GameRules.vAbilitiesTable) do
+         
+       local bPerkValid=true
+       if vData.nElement>GameMode.vPlayerPerk[nPlayerId][1] then
+            bPerkValid=false
+       end
+       if vData.nMystery>GameMode.vPlayerPerk[nPlayerId][2] then
+          bPerkValid=false
+       end
+       if vData.nDurable>GameMode.vPlayerPerk[nPlayerId][3] then
+          bPerkValid=false
+       end
+       if vData.nFury>GameMode.vPlayerPerk[nPlayerId][4] then
+          bPerkValid=false
+       end
+       if vData.nDecay>GameMode.vPlayerPerk[nPlayerId][5] then
+          bPerkValid=false
+       end
+       if vData.nHunt>GameMode.vPlayerPerk[nPlayerId][6] then
+          bPerkValid=false
+       end
+       --满足条件加入技能池
+       if bPerkValid then
+          table.insert(vAbilityPool, vData)
+          nAbilityTotalPerks=nAbilityTotalPerks+vData.nTotalPerk
+       end
+    end
+
+    if nAbilityNumber>0 then
+     for i=1,nAbilityNumber do
+
+          --如果技能池为空
+          if #vAbilityPool==0 then
+             break
+          end
+
+          local nDice= RandomInt(1,nAbilityTotalPerks)
+          local sNewAbilityName=""
+          local nAbilityLevel=1
+          --遍历技能池 确认技能结果
+          local nTemp=0
+          for k,vData in pairs(vAbilityPool) do
+             nTemp=nTemp+vData.nTotalPerk
+             if nDice<=nTemp then
+               sNewAbilityName=vData.sAbilityName
+               nAbilityLevel=vData.nLevel
+               break;
+             end
+          end
+          
+
+          --为单位添加技能
+          hUnit:AddAbility(sNewAbilityName)
+          hUnit:FindAbilityByName(sNewAbilityName):SetLevel(nAbilityLevel)
+
+          --将同名技能移除
+          for k,vData in pairs(vAbilityPool) do
+             if vData.sAbilityName==sNewAbilityName then
+                nAbilityTotalPerks=nAbilityTotalPerks-vData.nTotalPerk
+                table.remove(vAbilityPool, k)
+             end
+          end
+
+      end
+    end
 end

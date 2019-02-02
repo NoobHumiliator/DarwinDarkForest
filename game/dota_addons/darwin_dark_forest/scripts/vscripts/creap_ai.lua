@@ -37,10 +37,13 @@ function CreepThink()
     if thisEntity.vWaypoints==nil then
 
 	    thisEntity.vWaypoints = {}
+	    --画一个漫步的行走方向
+	    local currentWayPoint = thisEntity:GetAbsOrigin()
 		while #thisEntity.vWaypoints < 10 do
-			local waypoint = thisEntity:GetAbsOrigin() + RandomVector( RandomFloat( 0, 2048 ) )
+			local waypoint = currentWayPoint + RandomVector( RandomFloat( 0, 2048 ) )
 			if GridNav:CanFindPath( thisEntity:GetAbsOrigin(), waypoint ) then
 				table.insert( thisEntity.vWaypoints, waypoint )
+				currentWayPoint=waypoint
 			end
 		end
 		
@@ -69,13 +72,14 @@ function CheckIfHasAggro()
         --切换追击状态 此时视为被玩家捅了一下
         if not thisEntity.bChasing then
         	thisEntity.bChasing=true
+        	thisEntity:SetBaseMoveSpeed( thisEntity.nOriginalMovementSpeed )
             thisEntity.flLastHitTime =  GameRules:GetGameTime();   
         end
 		--还原移动速度
-		thisEntity:SetBaseMoveSpeed( thisEntity.nOriginalMovementSpeed )
         --如果四秒不受玩家反击，或者丢失玩家视野
 		if (  thisEntity.flLastHitTime and ( GameRules:GetGameTime() - thisEntity.flLastHitTime >4 ) ) or not thisEntity:CanEntityBeSeenByMyTeam(thisEntity:GetAggroTarget())   then
 	 		thisEntity.bChasing=false
+	 		thisEntity:SetBaseMoveSpeed( nWalkingMoveSpeed )
 	 		return RetreatFromUnit(thisEntity:GetAggroTarget())
 		end
 	else
@@ -88,15 +92,14 @@ end
 
 function RetreatFromUnit(hUnit)
 
-
 	local vAwayFromEnemy = thisEntity:GetOrigin() - hUnit:GetOrigin()
 	vAwayFromEnemy = vAwayFromEnemy:Normalized()
-	local vMoveToPos = thisEntity:GetOrigin() + vAwayFromEnemy * nWalkingMoveSpeed
+	local vMoveToPos = thisEntity:GetOrigin() + vAwayFromEnemy * nWalkingMoveSpeed*1.75
 
 	-- if away from enemy is an unpathable area, find a new direction to run to
 	local nAttempts = 0
 	while ( ( not GridNav:CanFindPath( thisEntity:GetOrigin(), vMoveToPos ) ) and ( nAttempts < 5 ) ) do
-		vMoveToPos = thisEntity:GetOrigin() + RandomVector( thisEntity:GetIdealSpeed() )
+		vMoveToPos = thisEntity:GetOrigin() + RandomVector( nWalkingMoveSpeed*1.75 )
 		nAttempts = nAttempts + 1
 	end
 
@@ -108,7 +111,7 @@ function RetreatFromUnit(hUnit)
  
     thisEntity:SetAggroTarget(nil)
 
-	return 1.25
+	return 1.75
 end
 --------------------------------------------------------------------------------
 -- RoamBetweenWaypoints

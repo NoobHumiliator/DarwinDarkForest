@@ -1,11 +1,9 @@
 local vMysteryTopLeft= {x=-6830,y=7637 }
 local vMysteryDownRight= {x=2416,y=-1412}
+local vElementTopLeft= {x=1125,y=-200}
+local vElementDownRight= {x=6000,y=-6000}
 local vDurableTopLeft= {x=-2190,y=7825}
 local vDurableDownRight= {x=4620,y=222}
-local vDecayTopLeft= {x=-8233,y=3980}
-local vDecayDownRight= {x=476,y=-5165}
-local vElementTopLeft= {x=-1967,y=3937}
-local vElementDownRight= {x=6000,y=-6000}
 
 local vFuryTopLeft_1= {x=1078,y=7899}
 local vFuryDownRight_1= {x=5883,y=1410}
@@ -13,8 +11,11 @@ local vFuryTopLeft_2= {x=5883,y=6909}
 local vFuryDownRight_2= {x=8211,y=-5400}
 
 
-local vHuntTopLeft= {x=-4914,y=5695}
-local vHuntDownRight= {x=3357,y=2972}
+local vDecayTopLeft= {x=-8051,y=1980}
+local vDecayDownRight= {x=476,y=-5165}
+
+local vHuntTopLeft= {x=-4914,y=2900}
+local vHuntDownRight= {x=3357,y=-2000}
 
 
 
@@ -132,7 +133,7 @@ function NeutralSpawner:SpawnOneCreature()
    --- 刷怪逻辑
    if #vTemp>0 then
       local sUnitName=vTemp[RandomInt(1, #vTemp)]
-      local vRandomPos = GetRandomValidPosition()
+      local vRandomPos = GetRandomValidPositionForCreature(GameRules.vUnitsKV[sUnitName])
       
       local hUnit = CreateUnitByName(sUnitName, vRandomPos, true, nil, nil, DOTA_TEAM_NEUTRALS)
       FindClearSpaceForUnit(hUnit, vRandomPos, true)
@@ -145,4 +146,68 @@ function NeutralSpawner:SpawnOneCreature()
 
 end
 
+
+
+
+function GetRandomValidPositionForCreature( vData )
+   
+    local vType = {}
+    
+    if vData.nMystery>0 then
+        table.insert(vType, 1)
+    end
+
+    if vData.nElement>0 then
+        table.insert(vType, 2)
+    end
+    
+    if vData.nDurable>0 then
+        table.insert(vType, 3)
+    end
+
+    if vData.nFury>0 then
+        table.insert(vType, 4)
+    end
+
+    if vData.nDecay>0 then
+        table.insert(vType, 5)
+    end
+
+    if vData.nHunt>0 then
+        table.insert(vType, 6)
+    end
+
+    if #vType>0 then
+       
+       local nDice=RandomInt(1, #vType)
+       local nType = vType[nDice]
+
+       if nType==1 then
+          return GetRandomValidPosition(vMysteryTopLeft,vMysteryDownRight)
+       end
+       if nType==2 then
+          return GetRandomValidPosition(vElementTopLeft,vElementDownRight)
+       end
+       if nType==3 then
+          return GetRandomValidPosition(vDurableTopLeft,vDurableDownRight)
+       end 
+       if nType==4 then
+           if RandomInt(1, 2) == 1 then
+              return GetRandomValidPosition(vFuryTopLeft_1,vFuryDownRight_1)
+           else
+              return GetRandomValidPosition(vFuryTopLeft_2,vFuryDownRight_2)
+           end
+       end
+       if nType==5 then
+          return GetRandomValidPosition(vDecayTopLeft,vDecayDownRight)
+       end
+       if nType==6 then
+          return GetRandomValidPosition(vHuntTopLeft,vHuntDownRight)
+       end
+
+    else
+       return GetRandomValidPosition()
+    end
+
+end
 
