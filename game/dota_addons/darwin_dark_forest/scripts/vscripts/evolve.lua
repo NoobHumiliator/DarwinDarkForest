@@ -91,6 +91,7 @@ function Evolve (nPlayerId,hHero)
     
     print("To Evolve Creature"..sUnitToEnvolve)
     local hUnit = SpawnUnitToReplaceHero(sUnitToEnvolve,hHero,nPlayerId)
+
     AddAbilityForUnit(hUnit,nPlayerId)
 
     return hUnit
@@ -147,6 +148,15 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
   hHero.hCurrentCreep=hUnit
   hHero.nCurrentCreepLevel=hUnit:GetLevel()
   
+  for i=1,20 do
+    local hAbility=hUnit:GetAbilityByIndex(i-1)
+    if hAbility and GameRules.vUnitsKV[sUnitname].AbilitiesLevel then
+       local nLevel= tonumber(SpliteStr(GameRules.vUnitsKV[sUnitname].AbilitiesLevel)[i])
+       hAbility:SetLevel(nLevel)
+    end
+  end
+
+
   --放在NetTable送达前台
   CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerId), {creepIndex=hUnit:GetEntityIndex()} )
   -- Fix for centering camera
@@ -215,6 +225,16 @@ function AddAbilityForUnit(hUnit,nPlayerId)
        end
     end
 
+    
+    for i=1,20 do
+      local hAbility=hUnit:GetAbilityByIndex(i-1)
+      if hAbility and hAbility.GetAbilityName then
+           local abilityName=hAbility:GetAbilityName()
+           nAbilityTotalPerks=RemoveAbilityFromPoolByName(nAbilityTotalPerks,abilityName,vAbilityPool)        
+      end
+    end
+    
+
     if nAbilityNumber>0 then
      for i=1,nAbilityNumber do
 
@@ -236,20 +256,29 @@ function AddAbilityForUnit(hUnit,nPlayerId)
                break;
              end
           end
-          
 
           --为单位添加技能
           hUnit:AddAbility(sNewAbilityName)
           hUnit:FindAbilityByName(sNewAbilityName):SetLevel(nAbilityLevel)
-
-          --将同名技能移除
-          for k,vData in pairs(vAbilityPool) do
-             if vData.sAbilityName==sNewAbilityName then
-                nAbilityTotalPerks=nAbilityTotalPerks-vData.nTotalPerk
-                table.remove(vAbilityPool, k)
-             end
-          end
+           
+          nAbilityTotalPerks=RemoveAbilityFromPoolByName(sNewAbilityName,vAbilityPool)
 
       end
     end
+end
+
+
+function RemoveAbilityFromPoolByName(nAbilityTotalPerks,sNewAbilityName,vAbilityPool)
+   --将同名技能从技能池移除
+    local i,max=1,#vAbilityPool
+    while i<=max do
+        if vAbilityPool[i].sAbilityName == sNewAbilityName then
+            nAbilityTotalPerks=nAbilityTotalPerks-vAbilityPool[i].nTotalPerk
+            table.remove(vAbilityPool,i)
+            i = i-1
+            max = max-1
+        end
+        i= i+1
+    end
+    return nAbilityTotalPerks
 end

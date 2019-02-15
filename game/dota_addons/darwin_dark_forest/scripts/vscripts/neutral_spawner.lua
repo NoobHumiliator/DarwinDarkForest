@@ -90,7 +90,11 @@ function NeutralSpawner:SpawnOneCreature()
    for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
       if PlayerResource:IsValidPlayer( nPlayerID ) then
         local hHero = PlayerResource:GetSelectedHeroEntity( nPlayerID )
-        nTotalLevel=nTotalLevel+hHero.nCustomLevel
+        if hHero==nil then
+          nTotalLevel=nTotalLevel+1
+        else
+          nTotalLevel=nTotalLevel+hHero.nCustomLevel 
+        end
         nTotalHero=nTotalHero+1
       end
    end

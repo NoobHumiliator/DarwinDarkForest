@@ -11,6 +11,13 @@ function Spawn( entityKeyValues )
 	if thisEntity == nil then
 		return
 	end
+
+    if thisEntity:GetLevel() then
+		local nLevel= thisEntity:GetLevel()
+		thisEntity:SetHullRadius(5+nLevel*3)  --体型跟随等级线性增加 8到35
+	end
+
+
     -- 对玩家无效
     if thisEntity:GetTeam()~=DOTA_TEAM_NEUTRALS then
        return

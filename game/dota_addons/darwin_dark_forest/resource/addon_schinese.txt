@@ -176,6 +176,12 @@
 "ui_detail_decay"                                                           "散播瘟疫与剧毒"
 "ui_detail_mystery"                                                         "虚空与不可名状之力"
 
+"DOTA_Tooltip_modifier_forged_spirit_melting_strike_effect"                 "灼烧攻击"
+
+"DOTA_Tooltip_ability_forged_spirit_melting_strike_lua"	                        "灼烧攻击"
+"DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_Description"	            "当熔炉精灵有足够魔法值时，其攻击将熔化敌方英雄的护甲。每次攻击命中后效果会叠加。"
+"DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_armor_removed"	        "每次攻击减甲："
+"DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_duration"	            "持续时间："
 
 }
 }

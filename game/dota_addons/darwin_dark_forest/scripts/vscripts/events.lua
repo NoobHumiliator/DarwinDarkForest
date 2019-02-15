@@ -302,6 +302,35 @@ function GameMode:OnPlayerSay(keys)
              CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
            end
         end
+        --强制进化到某生物
+        if string.find(sText,"npc_dota_creature_") == 1 and hHero and not hHero.hCurrentCreep:IsNull() then
+            
+            if GameRules.vUnitsKV[sText]==nil then
+               print("Invalid creature"..sText)     
+               return          
+            end
+            --经验/基因 设置过去
+            local nLevel = GameRules.vUnitsKV[sText].nCreatureLevel
+
+            hHero.nCustomExp=vEXP_TABLE[nLevel]+1
+
+            GameMode.vPlayerPerk[nPlayerId][1] = GameRules.vUnitsKV[sText].nElement
+            GameMode.vPlayerPerk[nPlayerId][2] = GameRules.vUnitsKV[sText].nMystery
+            GameMode.vPlayerPerk[nPlayerId][3] = GameRules.vUnitsKV[sText].nDurable
+            GameMode.vPlayerPerk[nPlayerId][4] = GameRules.vUnitsKV[sText].nFury
+            GameMode.vPlayerPerk[nPlayerId][5] = GameRules.vUnitsKV[sText].nDecay
+            GameMode.vPlayerPerk[nPlayerId][6] = GameRules.vUnitsKV[sText].nHunt
+    
+            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[nLevel+1]-vEXP_TABLE[nLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
+            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+            
+            GameMode:PutStartPositionToLocation(hHero,hHero:GetAbsOrigin())
+
+            -- 替换模型
+            local hUnit = SpawnUnitToReplaceHero(sText,hHero,nPlayerId)
+            AddAbilityForUnit(hUnit,nPlayerId)
+
+        end
 
     end
 
