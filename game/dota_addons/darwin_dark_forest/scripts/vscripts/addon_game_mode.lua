@@ -54,17 +54,22 @@ require( "neutral_spawner" )
 require( "utils/utility_functions" )
 require( "utils/timers" )
 
+function Activate()
+    GameMode:InitGameMode()
+end
 ---------------------------------------------------------------------------
 -- Precache
 ---------------------------------------------------------------------------
 function Precache( context )
- 	 PrecacheResource( "particle", "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_necro_souls_hero.vpcf", context )    
+     PrecacheResource( "particle", "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_necro_souls_hero.vpcf", context )    
      PrecacheResource( "particle", "particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", context )
+     PrecacheUnitByNameAsync('npc_dota_hero_crystal_maiden', function() end)
+     PrecacheUnitByNameAsync('npc_dota_hero_morphling', function() end)
+     for sUnitName, vData in pairs(GameRules.vUnitsKV) do
+         PrecacheUnitByNameAsync(sUnitName, function() end)
+     end
 end
 
-function Activate()
-	GameMode:InitGameMode()
-end
 
 GameRules.vWorldCenterPos=Vector(-640,624,128)
 
@@ -118,6 +123,12 @@ for sUnitName, vData in pairs(GameRules.vUnitsKV) do
 
     end
 end
+
+
+  for sUnitName, vData in pairs(GameRules.vUnitsKV) do
+         print("Precache "..sUnitName)
+         PrecacheUnitByNameAsync(sUnitName, function() end)
+     end
 
 -- 处理一下 将KV里面的技能 按等级拆碎 进化的时候一并洗入技能池
 for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
@@ -183,7 +194,6 @@ for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
 
     end
 end
-
 
 
 

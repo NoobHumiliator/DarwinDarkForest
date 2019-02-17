@@ -1,0 +1,45 @@
+mud_golem_hurl_boulder_lua = class({})
+--------------------------------------------------------------------------------
+
+function mud_golem_hurl_boulder_lua:OnSpellStart()
+	local bolt_speed = self:GetSpecialValueFor( "speed" )
+
+	local info = {
+			EffectName = "particles/neutral_fx/mud_golem_hurl_boulder.vpcf",
+			Ability = self,
+			iMoveSpeed = bolt_speed,
+			Source = self:GetCaster(),
+			Target = self:GetCursorTarget(),
+			bDodgeable = true,
+			bProvidesVision = true,
+			iVisionTeamNumber = self:GetCaster():GetTeamNumber(),
+			iVisionRadius = 100,
+			iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_2, 
+		}
+
+	ProjectileManager:CreateTrackingProjectile( info )
+	EmitSoundOn( "n_mud_golem.Boulder.Cast", self:GetCaster() )
+end
+
+--------------------------------------------------------------------------------
+
+function mud_golem_hurl_boulder_lua:OnProjectileHit( hTarget, vLocation )
+
+	if not self:GetCaster():IsNull() and  hTarget ~= nil and ( not hTarget:IsInvulnerable() ) and ( not hTarget:TriggerSpellAbsorb( self ) ) then
+		EmitSoundOn( "n_mud_golem.Boulder.Target", hTarget )
+		local damage = self:GetSpecialValueFor( "damage" )
+		local duration = self:GetSpecialValueFor( "duration" )
+
+		local vDamage = {
+			victim = hTarget,
+			attacker = self:GetCaster(),
+			damage = damage,
+			damage_type = DAMAGE_TYPE_MAGICAL,
+		}
+		ApplyDamage( vDamage )
+		hTarget:AddNewModifier( self:GetCaster(), self, "modifier_stunned", { duration = duration } )
+	end
+
+	return true
+end
+--------------------------------------------------------------------------------

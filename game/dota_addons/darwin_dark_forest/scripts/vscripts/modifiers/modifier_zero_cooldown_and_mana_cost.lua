@@ -34,5 +34,5 @@ function modifier_zero_cooldown_and_mana_cost:GetModifierPercentageManacost()
 end
 
 function modifier_zero_cooldown_and_mana_cost:GetModifierCooldownReduction_Constant()
-	return 100
+	return 99
 end

@@ -2,7 +2,7 @@ modifier_forged_spirit_melting_strike = class({})
 --------------------------------------------------------------------------------
 
 function modifier_forged_spirit_melting_strike:IsHidden()
-	return false
+	return true
 end
 
 function modifier_forged_spirit_melting_strike:DeclareFunctions()

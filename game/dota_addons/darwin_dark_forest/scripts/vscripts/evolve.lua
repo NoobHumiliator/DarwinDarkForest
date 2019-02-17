@@ -2,7 +2,7 @@
 --LinkLuaModifier( "modifier_hero_adjustment", "modifiers/modifier_hero_adjustment", LUA_MODIFIER_MOTION_NONE )
 
 --技能数量几率表
-
+--[[
 vAbilityChanceEachLevel={
    { [0]=100 },  -- 1级
    { [0]=10,[1]=70,[2]=15,[3]=5}, --2级
@@ -15,8 +15,36 @@ vAbilityChanceEachLevel={
    { [3]=5,[4]=50,[5]=35,[6]=10}, --9级
    { [4]=10,[5]=70,[6]=20 } --10级
 }
+]]
+vAbilityChanceEachLevel={
+   { [0]=100 },  -- 1级
+   { [0]=30,[1]=50,[2]=15,[3]=5}, --2级
+   { [0]=20,[1]=40,[2]=30,[3]=10}, --3级
+   { [0]=10,[1]=30,[2]=45,[3]=15}, --4级
+   { [1]=30,[2]=50,[3]=15,[4]=5}, --5级
+   { [1]=20,[2]=40,[3]=30,[4]=10}, --6级
+   { [1]=10,[2]=30,[3]=45,[4]=15}, --7级
+   { [2]=30,[3]=50,[4]=15,[5]=5}, --8级
+   { [2]=20,[3]=40,[4]=30,[5]=10}, --9级
+   { [2]=10,[3]=30,[4]=45,[5]=15} --10级
+}
 
 
+
+--[[
+vAbilityChanceEachLevel={
+   { [0]=100 },  -- 1级
+   { [0]=75,[1]=20,[2]=5}, --2级
+   { [0]=50,[1]=40,[2]=10}, --3级
+   { [0]=25,[1]=60,[2]=15}, --4级
+   { [1]=75,[2]=20,[3]=5}, --5级
+   { [1]=50,[2]=40,[3]=10}, --6级
+   { [1]=25,[2]=60,[3]=15}, --7级
+   { [2]=75,[3]=20,[4]=5}, --8级
+   { [2]=50,[3]=40,[4]=10}, --9级
+   { [2]=25,[3]=60,[4]=15} --10级
+}
+]]
 
 --进化
 function Evolve (nPlayerId,hHero)
@@ -225,7 +253,7 @@ function AddAbilityForUnit(hUnit,nPlayerId)
        end
     end
 
-    
+    print("1")
     for i=1,20 do
       local hAbility=hUnit:GetAbilityByIndex(i-1)
       if hAbility and hAbility.GetAbilityName then
@@ -260,8 +288,8 @@ function AddAbilityForUnit(hUnit,nPlayerId)
           --为单位添加技能
           hUnit:AddAbility(sNewAbilityName)
           hUnit:FindAbilityByName(sNewAbilityName):SetLevel(nAbilityLevel)
-           
-          nAbilityTotalPerks=RemoveAbilityFromPoolByName(sNewAbilityName,vAbilityPool)
+           print("2")
+          nAbilityTotalPerks=RemoveAbilityFromPoolByName(nAbilityTotalPerks,sNewAbilityName,vAbilityPool)
 
       end
     end
