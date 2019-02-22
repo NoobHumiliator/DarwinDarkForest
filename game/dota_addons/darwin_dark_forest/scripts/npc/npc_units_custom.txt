@@ -3292,6 +3292,77 @@
 	//-----------------------------------------
 	//   Level-4
 	//-----------------------------------------
+    
+
+    "npc_dota_creature_acidic_flytrap"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/items/venomancer/ward/acidic_ward_of_the_flytrap/acidic_ward_of_the_flytrap.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_VenomancerWard"
+		"Level"						"4"
+		"ModelScale" 				"1"
+        
+
+        "nHunt"                     "4"  
+		"nDecay"                    "4"           
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"venomancer_ward_burrowstrike"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"40"		// Damage range min.
+		"AttackDamageMax"			"46"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_venomancer/venomancer_plague_ward_projectile.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1500"		// Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"40"
+		"HealthBarOffset"			"170"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"270"		// Speed.		
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"650"		// Base health.
+		"StatusHealthRegen"			"1.5"		// Health regeneration rate.
+		"StatusMana"				"200"			// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}	
+
+
 
     "npc_dota_creature_gnoll_assassin_2"	
 	{
@@ -3304,12 +3375,12 @@
 		"ModelScale" 				"1"
           
         "nHunt"                     "6"  
-		"nDecay"                    "4"           
+		"nDecay"                    "2"           
 
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"gnoll_assassin_envenomed_weapon"			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability2"					"venomancer_ward_burrowstrike"			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
@@ -4948,7 +5019,144 @@
 	//-----------------------------------------
 	//   Level-5
 	//-----------------------------------------
-    
+
+    "npc_dota_creature_deathbringer_spawn"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/items/venomancer/deathbringer_ward/deathbringer_ward.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_VenomancerWard"
+		"Level"						"5"
+		"ModelScale" 				"1.1"
+        
+
+        "nHunt"                     "8"  
+		"nDecay"                    "8"           
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"venomancer_ward_burrowstrike"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "2"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"52"		// Damage range min.
+		"AttackDamageMax"			"60"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_venomancer/venomancer_plague_ward_projectile.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1500"		// Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"40"
+		"HealthBarOffset"			"170"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"100"		// Speed.		
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"950"		// Base health.
+		"StatusHealthRegen"			"3.5"		// Health regeneration rate.
+		"StatusMana"				"350"		// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}	
+
+
+	"npc_dota_creature_stalagmite_spawn"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/items/venomancer/ward/ti8_veno_stalagmite_crawler_stalagmite_crawler/ti8_veno_stalagmite_crawler_stalagmite_crawler.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_VenomancerWard"
+		"Level"						"5"
+		"ModelScale" 				"1.1"
+        
+        "nHunt"                     "2"  
+		"nDecay"                    "2"
+		"nFury"                     "2"             
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"venomancer_ward_burrowstrike"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "2"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"56"		// Damage range min.
+		"AttackDamageMax"			"66"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_venomancer/venomancer_plague_ward_projectile.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1500"		// Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"40"
+		"HealthBarOffset"			"170"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"100"		// Speed.		
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"870"		// Base health.
+		"StatusHealthRegen"			"3.5"		// Health regeneration rate.
+		"StatusMana"				"350"		// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}	
+
     "npc_dota_creature_infernus"
 	{
 
@@ -5236,7 +5444,7 @@
 		"ModelScale" 				"0.7"
         
         "vscripts"					"creap_ai.lua"
-        "nElement"                  "8"
+        "nFury"                     "8"
         "nMystery"                  "8"
 
 		// Abilities
@@ -5276,10 +5484,10 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"950"
+		"StatusHealth"				"700"
 		"StatusHealthRegen"			"3.0"
-		"StatusMana"				"700"
-		"StatusManaRegen"			"4"
+		"StatusMana"				"350"
+		"StatusManaRegen"			"2.6"
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -6889,6 +7097,73 @@
 	//   Level-6
 	//-----------------------------------------
 
+	"npc_dota_creature_ferocious_toxicants"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/items/venomancer/ward/ferocious_toxicants_embrace_ward/ferocious_toxicants_embrace_ward.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_VenomancerWard"
+		"Level"						"6"
+		"ModelScale" 				"1.3"
+        
+        "nHunt"                     "10"  
+		"nDecay"                    "10"           
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"venomancer_ward_burrowstrike"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"2"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"78"		// Damage range min.
+		"AttackDamageMax"			"86"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_venomancer/venomancer_plague_ward_projectile.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1500"		// Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"170"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"100"		// Speed.		
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1200"		// Base health.
+		"StatusHealthRegen"			"3.5"		// Health regeneration rate.
+		"StatusMana"				"400"			// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+
 	 //坚韧拉满
 	"npc_dota_creature_granite_golem"
 	{
@@ -7127,7 +7402,7 @@
 		"ModelScale" 				"0.8"
         
         "vscripts"					"creap_ai.lua"
-        "nElement"                  "10"
+        "nFury"                     "10"
         "nMystery"                  "10"
 
 
@@ -7168,10 +7443,10 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1050"
+		"StatusHealth"				"1000"
 		"StatusHealthRegen"			"3.5"
-		"StatusMana"				"850"
-		"StatusManaRegen"			"5"
+		"StatusMana"				"400"
+		"StatusManaRegen"			"3"
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -8831,6 +9106,73 @@
 	//   Level-7
 	//-----------------------------------------
 
+	"npc_dota_creature_centipede"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/items/venomancer/centipede_ward/centipede_ward.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_VenomancerWard"
+		"Level"						"7"
+		"ModelScale" 				"1.5"
+        
+        "nHunt"                     "12"  
+		"nDecay"                    "12"           
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"venomancer_ward_burrowstrike"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "4"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"98"		// Damage range min.
+		"AttackDamageMax"			"110"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_venomancer/venomancer_plague_ward_projectile.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1500"		// Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"170"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"100"		// Speed.		
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1700"		// Base health.
+		"StatusHealthRegen"			"6.5"		// Health regeneration rate.
+		"StatusMana"				"450"			// Base mana.
+		"StatusManaRegen"			"1.2"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+
 	"npc_dota_creature_gluttony"
 	{
 
@@ -8841,7 +9183,8 @@
 		"ModelScale" 				"0.85"
         
         "vscripts"					"creap_ai.lua"
-        "nElement"                  "12"
+
+        "nFury"                     "12"
         "nMystery"                  "12"
 
 
@@ -8862,8 +9205,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"76"		// Damage range min.
-		"AttackDamageMax"			"82"		// Damage range max.
+		"AttackDamageMin"			"72"		// Damage range min.
+		"AttackDamageMax"			"79"		// Damage range max.
 		"AttackRate"				"1.2"		// Speed of attack.
 		"AttackAnimationPoint"		"0.26"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
@@ -8882,10 +9225,10 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1450"
+		"StatusHealth"				"1250"
 		"StatusHealthRegen"			"5.5"
-		"StatusMana"				"1150"
-		"StatusManaRegen"			"7"
+		"StatusMana"				"450"
+		"StatusManaRegen"			"3.4"
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -10419,6 +10762,401 @@
     //-----------------------------------------
 	//   Level-8
 	//-----------------------------------------
+    
+    "npc_dota_creature_spectre"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/spectre/spectre.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Ranged"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+         
+        "nMystery"                  "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"spectre_dispersion"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "4"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"97"		// Damage range min.
+		"AttackDamageMax"			"102"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"500"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"280"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2450"		// Base health.
+		"StatusHealthRegen"			"11"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"323"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"324"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"325"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"326"
+				}
+			}
+		}
+	}
+
+
+
+	"npc_dota_creature_pudge"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Ranged"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"500"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"275"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"5955"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"5954"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"5950"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+	}
+    
+    "npc_dota_creature_razor"
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/razor/razor.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Venomancer"
+		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1"
+        
+        "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
+        "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_razor.vsndevts"
+
+        "nHunt"                     "14"  
+		"nElement"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"razor_eye_of_the_storm"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "2"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		    "130"
+		"AttackDamageMax"		    "135"
+		"AttackRate"		        "1.700000"
+		"AttackAnimationPoint"		"0.300000"
+		"AttackAcquisitionRange"	"800"
+		"AttackRange"		        "475"
+		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
+		"ProjectileSpeed"		    "2000"   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"170"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"		// Speed.		
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2150"		// Base health.
+		"StatusHealthRegen"			"10.5"		// Health regeneration rate.
+		"StatusMana"				"1000"	    // Base mana.
+		"StatusManaRegen"			"2.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"340"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"341"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"342"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"343"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"344"
+				}
+	        }
+		}
+	}
+
+
+    "npc_dota_creature_venomancer"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/venomancer/venomancer.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Venomancer"
+		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.0"
+        
+        "nHunt"                     "14"  
+		"nDecay"                    "14"           
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"venomancer_poison_nova"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"2"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"142"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"450"		// Range within a target can be acquired.
+		"AttackRange"				"450"		// Range within a target can be attacked.
+		"ProjectileModel"		     "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
+		"ProjectileSpeed"		     "900"	     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"170"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"		// Speed.		
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2300"		// Base health.
+		"StatusHealthRegen"			"9.5"		// Health regeneration rate.
+		"StatusMana"				"500"			// Base mana.
+		"StatusManaRegen"			"1.25"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"291"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"292"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"293"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"294"
+				}
+	        }
+		}
+	}
+
+
     "npc_dota_creature_tiny_03"
 	{
 		// General
@@ -10530,10 +11268,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"life_stealer_rage"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -10580,6 +11320,33 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"443"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"444"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"8658"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"8659"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"530"
+				}
+	        }
+		}
 	}
 
     "npc_dota_creature_frostbitten_gaint"	
@@ -11645,7 +12412,7 @@
 		"vscripts"					"creap_ai.lua"
 
 		"nMystery"                  "14"
-		"nElement"                  "14"
+		"nFury"                     "14"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -11686,10 +12453,10 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1900"		// Base health.
-		"StatusHealthRegen"			"9"		    // Health regeneration rate.
-		"StatusMana"				"550"		// Base mana.
-		"StatusManaRegen"			"15"		// Mana regeneration rate.		 
+		"StatusHealth"				"1750"		// Base health.
+		"StatusHealthRegen"			"8"		    // Health regeneration rate.
+		"StatusMana"				"500"		// Base mana.
+		"StatusManaRegen"			"3.75"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -11934,6 +12701,494 @@
 	}
 
 	//Level-9
+    
+    "npc_dota_creature_spectre_enduring_solitude"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/spectre/spectre.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Ranged"
+		"Level"						"9"
+		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
+         
+        "nMystery"                  "16"
+        "nDurable"                  "16"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"spectre_dispersion"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"138"		// Damage range min.
+		"AttackDamageMax"			"146"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"500"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"280"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2450"		// Base health.
+		"StatusHealthRegen"			"11"		// Health regeneration rate.
+		"StatusMana"				"550"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"323"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"324"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"325"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"326"
+				}
+			}
+		}
+	}
+
+
+    "npc_dota_creature_pudge_plague_champion"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Ranged"
+		"Level"						"10"
+		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
+         
+        "nDecay"                    "16"
+        "nDurable"                  "16"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "4"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"10"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"142"		// Damage range min.
+		"AttackDamageMax"			"146"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"500"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"275"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3300"		// Base health.
+		"StatusHealthRegen"			"15"		// Health regeneration rate.
+		"StatusMana"				"550"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"8497"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8498"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"8499"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"8500"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"8501"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"8496"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"8495"
+				}
+			}
+		}
+	}
+
+
+    "npc_dota_creature_razor_lightning_lord"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/razor/razor.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Venomancer"
+		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
+		"Level"						"9"
+		"ModelScale" 				"1.1"
+        
+        "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
+        "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_razor.vsndevts"
+
+        "nHunt"                     "16"  
+		"nElement"                  "16"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"razor_eye_of_the_storm"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		    "168"
+		"AttackDamageMax"		    "182"
+		"AttackRate"		        "1.700000"
+		"AttackAnimationPoint"		"0.300000"
+		"AttackAcquisitionRange"	"800"
+		"AttackRange"		        "475"
+		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
+		"ProjectileSpeed"		    "2000"   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"170"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"		// Speed.		
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2850"		// Base health.
+		"StatusHealthRegen"			"13.5"		// Health regeneration rate.
+		"StatusMana"				"1650"			// Base mana.
+		"StatusManaRegen"			"4"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"9357"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"9356"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"9355"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"9354"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"9353"
+				}
+	        }
+		}
+	}
+
+
+    "npc_dota_creature_venomancer_deathbringer"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/venomancer/venomancer.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Venomancer"
+		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
+		"Level"						"9"
+		"ModelScale" 				"1.1"
+        
+        "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
+        "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
+
+        "nHunt"                     "14"  
+		"nDecay"                    "14"           
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"venomancer_poison_nova"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "2"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"2"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"186"		// Damage range min.
+		"AttackDamageMax"			"200"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"450"		// Range within a target can be acquired.
+		"AttackRange"				"450"		// Range within a target can be attacked.
+		"ProjectileModel"		     "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
+		"ProjectileSpeed"		     "900"	     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"170"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"		// Speed.		
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2900"		// Base health.
+		"StatusHealthRegen"			"10.5"		// Health regeneration rate.
+		"StatusMana"				"500"			// Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"6642"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"6643"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"6644"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"6645"
+				}
+	        }
+		}
+	}
+
+    "npc_dota_creature_venomancer_stalker"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/venomancer/venomancer.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Venomancer"
+		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
+		"Level"						"9"
+		"ModelScale" 				"1.1"
+        
+        "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
+        "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
+
+        "nHunt"                     "6"  
+		"nDecay"                    "6"
+		"nFury"                     "6"         
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"venomancer_poison_nova"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "2"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"208"		// Damage range min.
+		"AttackDamageMax"			"218"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"450"		// Range within a target can be acquired.
+		"AttackRange"				"450"		// Range within a target can be attacked.
+		"ProjectileModel"		     "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
+		"ProjectileSpeed"		     "900"	     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"170"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"		// Speed.		
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"10.5"		// Health regeneration rate.
+		"StatusMana"				"500"			// Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"9915"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"9916"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"9917"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"9918"
+				}
+	        }
+		}
+	}
+
+
+
 
     "npc_dota_creature_ancient_apparition"
 	{
@@ -12038,7 +13293,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"9"
-		"ModelScale" 				"1"
+		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
          
         "nDecay"                   "16"
@@ -12046,10 +13301,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"life_stealer_rage"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -12290,8 +13547,8 @@
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
          
+        "nFury"                     "16"
         "nMystery"                  "16"
-        "nElement"                  "16"
 
 
 		// Abilities
@@ -12311,8 +13568,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"128"		// Damage range min.
-		"AttackDamageMax"			"145"		// Damage range max.
+		"AttackDamageMin"			"170"		// Damage range min.
+		"AttackDamageMax"			"182"		// Damage range max.
 		"AttackRate"				"1.8"		// Speed of attack.
 		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
@@ -12333,10 +13590,10 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2550"		// Base health.
-		"StatusHealthRegen"			"12"		// Health regeneration rate.
-		"StatusMana"				"950"	    // Base mana.
-		"StatusManaRegen"			"9.0"		    // Mana regeneration rate.		 
+		"StatusHealth"				"2300"		// Base health.
+		"StatusHealthRegen"			"11"		// Health regeneration rate.
+		"StatusMana"				"550"	    // Base mana.
+		"StatusManaRegen"			"4"		    // Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -13455,6 +14712,298 @@
 
 	//Level-10
     
+    "npc_dota_creature_life_stealer_profane_union"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/life_stealer/life_stealer.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Ranged"
+		"Level"						"10"
+		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
+         
+        "nDecay"                   "18"
+        "nFury"                    "18"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"life_stealer_rage"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "4"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"2"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"278"		// Damage range min.
+		"AttackDamageMax"			"289"		// Damage range max.
+		"AttackRate"				"1.7"		// Speed of attack.
+		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
+		"AttackRange"				"250"		// Range within a target can be attacked.
+		"ProjectileModel"			 ""         // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"280"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3000"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"550"	    // Base mana.
+		"StatusManaRegen"			"1.5"		    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"443"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"444"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"8658"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"9199"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"530"
+				}
+	        }
+		}
+	}
+
+
+
+    "npc_dota_creature_razor_severing"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/razor/razor.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Venomancer"
+		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
+		"Level"						"10"
+		"ModelScale" 				"1.2"
+        
+        "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
+        "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_razor.vsndevts"
+
+        "nHunt"                     "18"  
+		"nElement"                  "18"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"razor_eye_of_the_storm"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "4"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		    "23"
+		"AttackDamageMax"		    "25"
+		"AttackRate"		        "1.700000"
+		"AttackAnimationPoint"		"0.300000"
+		"AttackAcquisitionRange"	"800"
+		"AttackRange"		        "475"
+		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
+		"ProjectileSpeed"		    "2000"   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"170"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"		// Speed.		
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3250"		// Base health.
+		"StatusHealthRegen"			"10.5"		// Health regeneration rate.
+		"StatusMana"				"1200"			// Base mana.
+		"StatusManaRegen"			"3"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"8000"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"6916"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"342"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"343"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"344"
+				}
+	        }
+		}
+	}
+
+
+
+
+	"npc_dota_creature_venomancer_ferocious_toxicant"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/venomancer/venomancer.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Venomancer"
+		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
+		"Level"						"10"
+		"ModelScale" 				"1.2"
+        
+        "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
+        "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
+
+        "nHunt"                     "18"  
+		"nDecay"                    "18"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"venomancer_poison_nova"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"249"		// Damage range min.
+		"AttackDamageMax"			"270"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"450"		// Range within a target can be acquired.
+		"AttackRange"				"450"		// Range within a target can be attacked.
+		"ProjectileModel"		     "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
+		"ProjectileSpeed"		     "900"	     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"170"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"		// Speed.		
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3500"		// Base health.
+		"StatusHealthRegen"			"15.5"		// Health regeneration rate.
+		"StatusMana"				"600"			// Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"9894"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"9895"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"9896"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"9897"
+				}
+	        }
+		}
+	}
+    
     "npc_dota_creature_nightmare_hunter"
 	{
         // General
@@ -13627,7 +15176,7 @@
 		"vscripts"					"creap_ai.lua"
          
         "nMystery"                  "18"
-        "nElement"                  "18"
+        "nFury"                     "18"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -13646,8 +15195,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"192"		// Damage range min.
-		"AttackDamageMax"			"206"		// Damage range max.
+		"AttackDamageMin"			"220"		// Damage range min.
+		"AttackDamageMax"			"236"		// Damage range max.
 		"AttackRate"				"1.8"		// Speed of attack.
 		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
@@ -13668,10 +15217,10 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3150"		// Base health.
-		"StatusHealthRegen"			"15"		// Health regeneration rate.
-		"StatusMana"				"1200"	    // Base mana.
-		"StatusManaRegen"			"12.0"		    // Mana regeneration rate.		 
+		"StatusHealth"				"2900"		// Base health.
+		"StatusHealthRegen"			"14"		// Health regeneration rate.
+		"StatusMana"				"600"	    // Base mana.
+		"StatusManaRegen"			"4.5"		    // Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -14297,11 +15846,11 @@
 	}
 
 
-	"npc_dota_creature_undying_flesh_tyrant"
+	"npc_dota_creature_pudge_surgical_precision"
 	{
         // General
 		//----------------------------------------------------------------
-		"Model"						"models/items/undying/flesh_golem/deathmatch_dominator_golem/deathmatch_dominator_golem.vmdl"	// Model.
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"10"
@@ -14309,19 +15858,21 @@
 		"vscripts"					"creap_ai.lua"
          
         "nDecay"                    "18"
-        "nFury"                     "18"
+        "nDurable"                  "18"
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"pudge_meat_hook"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+        
+        "AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"8"			// Physical protection.
-		"MagicalResistance"         "0"
+		"ArmorPhysical"				"10"			// Physical protection.
+		"MagicalResistance"         "25"
 
 		// Attack
 		//----------------------------------------------------------------
@@ -14364,6 +15915,40 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"7541"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7542"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7543"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"7544"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7545"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"7546"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"7547"
+				}
+			}
+		}
 	}
 
 
