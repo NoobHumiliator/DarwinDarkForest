@@ -25,7 +25,7 @@ end
 
 function mud_golem_hurl_boulder_lua:OnProjectileHit( hTarget, vLocation )
 
-	if not self:GetCaster():IsNull() and  hTarget ~= nil and ( not hTarget:IsInvulnerable() ) and ( not hTarget:TriggerSpellAbsorb( self ) ) then
+	if not self:IsNull() and  not self:GetCaster():IsNull() and  hTarget ~= nil and ( not hTarget:IsInvulnerable() ) and ( not hTarget:TriggerSpellAbsorb( self ) ) then
 		EmitSoundOn( "n_mud_golem.Boulder.Target", hTarget )
 		local damage = self:GetSpecialValueFor( "damage" )
 		local duration = self:GetSpecialValueFor( "duration" )

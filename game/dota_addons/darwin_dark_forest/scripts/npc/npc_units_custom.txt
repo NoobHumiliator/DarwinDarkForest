@@ -2,7 +2,408 @@
 "DOTAUnits"
 {
 	"Version"	"1"
-     
+    //Summon 
+
+    "npc_dota_zeus_cloud"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_zeus_cloud"	// Class of entity of link to.
+		"Model"						"models/heroes/zeus/zeus_sigil.vmdl"	// Model.
+		"SoundSet"					"Creep_Good_Range"					// Name of sound set.
+		"Level"						"0"
+		"UnitLabel"					"zeus_cloud"
+		"wearable"				    "8640"
+		"IsSummoned"                "1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		
+		"Ability1"					""			// Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+		"MagicalResistance"		    "0"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"			// Type of attack - melee, ranged, etc.
+		"AttackDamageMin"			"0"			// Damage range min.
+		"AttackDamageMax"			"0"			// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1"			// Speed of attack.
+		"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+		"AttackRange"				"500"		// Range within a target can be attacked.
+		"ProjectileModel"			"" // Particle system model for projectile.
+		"ProjectileSpeed"			"900"		// Speed of projectile.
+
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"			// Base strength
+		"AttributeStrengthGain"		"0"			// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"			// Base intelligence
+		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"			// Base agility
+		"AttributeAgilityGain"		"0"			// Agility bonus per level.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"100"			// Gold earned min.
+		"BountyGoldMax"				"100"			// Gold earned max.
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"16"			// Base health.
+		"StatusHealthRegen"			"0"			// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"500"		// Range of vision during day light.
+		"VisionNighttimeRange"		"500"		// Range of vision at night time.
+	}	
+
+
+
+    "npc_dota_creature_wraith_warrior"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/items/wraith_king/wk_ti8_creep/wk_ti8_creep.vmdl"
+		"SoundSet"		            "Hero_SkeletonKing"
+		"Level"						"1"
+		"ModelScale" 				"1.0"
+		"IsSummoned"                "1"
+
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_skeletonking.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_skeleton_king.vsndevts"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"25"
+		"AttackDamageMax"			"25"
+		"AttackRate"				"1.0"
+		"AttackAnimationPoint"		"0.36"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"40"
+		"HealthBarOffset"			"135"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"260"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"1"
+		"StatusMana"				"500"
+		"StatusManaRegen"			"2"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"
+		"VisionNighttimeRange"		"800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+
+
+    "npc_dota_creature_skeleton_mage"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/heroes/pugna/pugna.vmdl"
+		"SoundSet"		            "Hero_Pugna"
+		"Level"						"1"
+		"ModelScale" 				"0.5"
+		"IsSummoned"                "1"
+
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_pugna.vsndevts"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pugna_nether_blast"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"25"
+		"AttackDamageMax"			"25"
+		"AttackRate"				"1.0"
+		"AttackAnimationPoint"		"0.36"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"450"
+		"ProjectileModel"			"particles/units/heroes/hero_pugna/pugna_base_attack.vpcf"
+		"ProjectileSpeed"			"900"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALLEST"
+		"RingRadius"				"40"
+		"HealthBarOffset"			"135"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"250"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"1"
+		"StatusMana"				"500"
+		"StatusManaRegen"			"2"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"
+		"VisionNighttimeRange"		"800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"153"
+				}
+			   "Wearable2"
+			   {
+					"ItemDef"			"154"
+			   }
+               "Wearable3"
+			   {
+					"ItemDef"			"155"
+			   }
+			   "Wearable4"
+			   {
+					"ItemDef"			"156"
+			   }
+			   "Wearable5"
+			   {
+					"ItemDef"			"157"
+			   }
+	        }
+		}
+	}
+
+
+
+    "npc_dota_creature_tombstone_zombie"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/lane_creeps/creep_bad_melee_diretide/creep_bad_melee_diretide.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"Level"						"1"
+		"ModelScale" 				"0.7"
+		"IsSummoned"                "1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"36"
+		"AttackDamageMax"			"38"
+		"AttackRate"				"1.0"
+		"AttackAnimationPoint"		"0.36"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALLEST"
+		"RingRadius"				"40"
+		"HealthBarOffset"			"135"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"250"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"1"
+		"StatusMana"				"50"
+		"StatusManaRegen"			"2"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"
+		"VisionNighttimeRange"		"800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+	}
+
+
+    "npc_dota_creature_tombstone"
+	{
+		// General
+		"BaseClass"					"npc_dota_unit_spectral_tusk_tombstone"
+		"Model"						"models/heroes/undying/undying_tower.vmdl"
+		"SoundSet"					"Undying_Tombstone"
+		"ModelScale"				"0.8"
+		"Level"						"4"
+		"IsSummoned"				"1"
+		"IsAncient"					"1"
+		"IsOther"					"1"
+				
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"neutral_spell_immunity"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"100"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
+		"HealthBarOffset"			"270"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0.0"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"140"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"
+		"VisionNighttimeRange"		"1800"
+	}
+
+
+
+    //Level-0
+
+
     "npc_dota_courier_baby_winter_wyvern"
 	{
 		// General
@@ -474,6 +875,7 @@
 
     //Level-1
 
+
     "npc_dota_creature_tiny_mud_golem"
 	{
 		// General
@@ -567,12 +969,12 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"forged_spirit_melting_strike_lua"			        // Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability2"					"hunt_thirst_lua"			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
         
         //设置技能等级 需要时填上
-        "AbilitiesLevel"            "1"
+        "AbilitiesLevel"            "1 10"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -604,7 +1006,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"220"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"250"		// Base mana.
+		"StatusMana"				"2500"		// Base mana.
 		"StatusManaRegen"			"1"			// Mana regeneration rate.		 
 		
 		// Vision
@@ -796,7 +1198,7 @@
 		"Model"						"models/creeps/darkreef/blob/darkreef_blob_02_small.vmdl"	// Model.
 		"SoundSet"					"n_creep_Melee"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"1"
+		"ModelScale"				"0.8"
 		"Level"						"1"
 
 			
@@ -5020,6 +5422,156 @@
 	//   Level-5
 	//-----------------------------------------
 
+	"npc_dota_creature_dragonspawn_samll"
+	{
+		// General
+		// 
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"						"models/creeps/neutral_creeps/n_creep_dragonspawn_a/n_creep_dragonspawn_a.vmdl"	// Model.
+		"SoundSet"					"n_creep_Melee"
+		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"ModelScale"				"1"
+		"Level"						"5"
+		"vscripts"					"creap_ai.lua"
+
+		"nElement"                  "2"
+        "nFury"                     "2"
+        "nDurable"                  "2"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"			// Physical protection.
+		"MagicalResistance"			"0"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"52"		// Damage range min.
+		"AttackDamageMax"			"59"		// Damage range max.
+		"AttackRate"				"1.1"		// Speed of attack.
+		"AttackAnimationPoint"		"0.35"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
+		"ProjectileModel"			"" // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"160"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"280"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1150"		// Base health.
+		"StatusHealthRegen"			"5.5"		    // Health regeneration rate.
+		"StatusMana"				"700"	    // Base mana.
+		"StatusManaRegen"			"2.0"		// Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+		
+		// Creature Data
+		//----------------------------------------------------------------------------------------------------------------------
+		"Creature"
+		{
+		}
+	}
+    
+    "npc_dota_creature_black_drake_small"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/neutral_creeps/n_creep_black_drake/n_creep_black_drake.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Ranged"
+		"Level"						"5"
+		"ModelScale" 				"0.85"
+		"vscripts"					"creap_ai.lua"
+         
+        "nFury"                     "8"
+        "nElement"                  "8"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"black_dragon_fireball"			// Ability 1
+		"Ability2"					""	                            // Ability 2
+		"Ability3"					""	                            // Ability 3
+		"Ability4"					""			                    // Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"-1"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"52"		// Damage range min.
+		"AttackDamageMax"			"58"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.94"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
+		"AttackRange"				"300"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/neutral_fx/black_dragon_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"900"		// Speed of projectile.		        
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"290"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"550"		// Base health.
+		"StatusHealthRegen"			"2.5"		// Health regeneration rate.
+		"StatusMana"				"875"	    // Base mana.
+		"StatusManaRegen"			"2.2"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+
+
     "npc_dota_creature_deathbringer_spawn"	
 	{
 		// General
@@ -6747,7 +7299,7 @@
 		"Model"						"models/creeps/knoll_1/knoll_1.vmdl"
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"5"
-		"ModelScale" 				"1"
+		"ModelScale" 				"1.3"
 
 
 		"vscripts"					"creap_ai.lua"
@@ -6768,13 +7320,13 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"56"		// Damage range min.
 		"AttackDamageMax"			"78"		// Damage range max.
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
+		"AttackRange"				"110"		// Range within a target can be attacked.
 		"ProjectileModel"			""			// Particle system model for projectile.
 		"ProjectileSpeed"			"0"			// Speed of projectile.	
 		// Bounds
@@ -7191,7 +7743,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.\
 
-		"AbilitiesLevel"            "1"
+		"AbilitiesLevel"            "2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -7249,13 +7801,12 @@
 		"Model"						"models/creeps/neutral_creeps/n_creep_black_drake/n_creep_black_drake.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
-		"Level"						"7"
+		"Level"						"6"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
          
-        "nFury"                     "5"
-        "nElement"                  "5"
-        "nHunt"                     "5"
+        "nFury"                     "10"
+        "nElement"                  "10"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -7264,13 +7815,15 @@
 		"Ability3"					""	                            // Ability 3
 		"Ability4"					""			                    // Ability 4
 
+		"AbilitiesLevel"            "4"
+
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"2"			// Physical protection.
+		"ArmorPhysical"				"0"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"70"		// Damage range min.
 		"AttackDamageMax"			"78"		// Damage range max.
 		"AttackRate"				"1.5"		// Speed of attack.
@@ -7325,7 +7878,6 @@
         "vscripts"					"creap_ai.lua"
         "nElement"                  "10"
         "nMystery"                  "10"
-
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -7848,8 +8400,8 @@
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
-		"nElement"                  "10"
-        "nDecay"                    "10"
+		"nElement"                  "4"
+        "nDecay"                    "6"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -7926,8 +8478,9 @@
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
-		"nElement"                  "10"
-        "nFury"                     "10"
+		"nElement"                  "4"
+        "nFury"                     "4"
+        "nDurable"                  "4"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -7947,13 +8500,13 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"82"		// Damage range min.
 		"AttackDamageMax"			"99"		// Damage range max.
 		"AttackRate"				"1.1"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
-		"AttackRange"				"120"		// Range within a target can be attacked.
+		"AttackRange"				"100"		// Range within a target can be attacked.
 		"ProjectileModel"			"" // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		// Speed of projectile.		     
 
@@ -7970,8 +8523,8 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1200"		// Base health.
-		"StatusHealthRegen"			"4"		    // Health regeneration rate.
+		"StatusHealth"				"1450"		// Base health.
+		"StatusHealthRegen"			"6.5"		    // Health regeneration rate.
 		"StatusMana"				"700"	    // Base mana.
 		"StatusManaRegen"			"3.5"		// Mana regeneration rate.
 
@@ -8239,7 +8792,7 @@
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
-		"nFury"                     "5"
+		"nDurable"                  "10"
         "nDecay"                    "10"
 
 		// Abilities
@@ -9105,6 +9658,156 @@
     //-----------------------------------------
 	//   Level-7
 	//-----------------------------------------
+
+	"npc_dota_creature_ogreseal_undead_large"
+	{
+		// General
+		// 
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"						"models/creeps/ice_biome/ogreseal/ogreseal_undead.vmdl"	// Model.
+		"SoundSet"					"n_creep_Melee"
+		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"ModelScale"				"1.1"
+		"Level"						"7"
+		"vscripts"					"creap_ai.lua"
+
+		"nDurable"                  "12"
+        "nDecay"                    "12"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"creature_ogreseal_flop"
+		"Ability2"					""
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"			// Physical protection.
+		"MagicalResistance"			"0"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"80"		// Damage range min.
+		"AttackDamageMax"			"92"		// Damage range max.
+		"AttackRate"				"1.8"
+		"AttackAnimationPoint"		"0.5714"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"180"
+		"ProjectileModel"			""	// Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"65"
+		"HealthBarOffset"			"160"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"280"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2100"		// Base health.
+		"StatusHealthRegen"			"6"		    // Health regeneration rate.
+		"StatusMana"				"450"	    // Base mana.
+		"StatusManaRegen"			"1.2"		// Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+		
+		// Creature Data
+		//----------------------------------------------------------------------------------------------------------------------
+		"Creature"
+		{
+		}
+	}
+	
+
+	"npc_dota_creature_black_dragon"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/neutral_creeps/n_creep_black_dragon/n_creep_black_dragon.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Ranged"
+		"Level"						"7"
+		"ModelScale" 				"1"
+		"vscripts"					"creap_ai.lua"
+         
+        "nFury"                     "12"
+        "nElement"                  "12"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"black_dragon_fireball"			// Ability 1
+		"Ability2"					"black_dragon_splash_attack"	// Ability 2
+		"Ability3"					""	// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5 1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"97"		// Damage range min.
+		"AttackDamageMax"			"105"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.94"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
+		"AttackRange"				"300"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/neutral_fx/black_dragon_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"900"		// Speed of projectile.		        
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"300"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1050"		// Base health.
+		"StatusHealthRegen"			"4"		      // Health regeneration rate.
+		"StatusMana"				"1125"			// Base mana.
+		"StatusManaRegen"			"2.9"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+
 
 	"npc_dota_creature_centipede"	
 	{
@@ -10297,7 +11000,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-		"AbilitiesLevel"            "2"
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -10428,8 +11131,9 @@
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
          
-        "nDecay"                   "12"
-        "nElement"                 "12"
+        "nDecay"                   "4"
+        "nElement"                 "2"
+        "nDurable"                 "4"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -10440,7 +11144,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"2"			// Physical protection.
+		"ArmorPhysical"				"6"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -10467,10 +11171,10 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1800"		// Base health.
+		"StatusHealth"				"1900"		// Base health.
 		"StatusHealthRegen"			"6"		// Health regeneration rate.
 		"StatusMana"				"500"			// Base mana.
-		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		"StatusManaRegen"			"1.2"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -10565,8 +11269,9 @@
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
          
-        "nElement"                  "12"
-        "nFury"                     "10"
+        "nElement"                  "6"
+        "nFury"                     "6"
+        "nDurable"                  "6"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -10581,15 +11286,15 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"135"		// Damage range min.
 		"AttackDamageMax"			"145"		// Damage range max.
 		"AttackRate"				"1.7"		// Speed of attack.
 		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
-		"AttackRange"				"250"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
-		"ProjectileSpeed"			"1200"		// Speed of projectile.		     
+		"AttackRange"				"110"		// Range within a target can be attacked.
+		"ProjectileModel"			"" // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		     
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -10604,10 +11309,10 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1320"		// Base health.
-		"StatusHealthRegen"			"6"		// Health regeneration rate.
+		"StatusHealth"				"1850"		// Base health.
+		"StatusHealthRegen"			"9"		// Health regeneration rate.
 		"StatusMana"				"950"			// Base mana.
-		"StatusManaRegen"			"2.0"		// Mana regeneration rate.		 
+		"StatusManaRegen"			"2.5"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -10762,6 +11467,201 @@
     //-----------------------------------------
 	//   Level-8
 	//-----------------------------------------
+
+	"npc_dota_creature_lich"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/lich/lich.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_FacelessVoid"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+
+		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+        "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
+         
+        "nElement"                  "14"
+        "nDecay"                    "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"lich_chain_frost"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"144"		// Damage range max.
+		"AttackRate"				"1.4"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"		        "550"
+		"ProjectileModel"		    "particles/units/heroes/hero_lich/lich_base_attack.vpcf"     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"300"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2300"		// Base health.
+		"StatusHealthRegen"			"11"		     // Health regeneration rate.
+		"StatusMana"				"1250"	    // Base mana.
+		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"331"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"332"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"333"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"334"
+				}
+			}
+		}
+	}
+
+	 "npc_dota_creature_faceless_void"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/faceless_void/faceless_void.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_FacelessVoid"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+
+		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+        "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
+         
+        "nMystery"                  "14"
+        "nFury"                     "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"faceless_void_chronosphere"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"142"		// Damage range min.
+		"AttackDamageMax"			"150"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"280"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1750"		// Base health.
+		"StatusHealthRegen"			"8"		     // Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"15"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"90"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"91"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"92"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"93"
+				}
+			}
+		}
+	}
     
     "npc_dota_creature_spectre"
 	{
@@ -10769,7 +11669,9 @@
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/spectre/spectre.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"		            "Hero_Spectre"
+        "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+        "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_spectre.vsndevts" 
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
@@ -10799,7 +11701,7 @@
 		"AttackRate"				"1.6"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRange"				"128"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
 
@@ -10819,7 +11721,7 @@
 		"StatusHealth"				"2450"		// Base health.
 		"StatusHealthRegen"			"11"		// Health regeneration rate.
 		"StatusMana"				"500"	    // Base mana.
-		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -10973,8 +11875,8 @@
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/razor/razor.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"		            "Hero_Venomancer"
-		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
+		"SoundSet"		            "Hero_Razor"
+		"IdleSoundLoop"		        "Hero_Razor.IdleLoop"
 		"Level"						"8"
 		"ModelScale" 				"1"
         
@@ -11086,7 +11988,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "1"
+		"AbilitiesLevel"            "2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -11273,7 +12175,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "2"
+		"AbilitiesLevel"            "4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -11360,8 +12262,9 @@
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
          
-        "nDecay"                   "14"
-        "nElement"                 "14"
+        "nDecay"                   "5"
+        "nElement"                 "3"
+        "nDurable"                 "5"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -11372,13 +12275,13 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"2"			// Physical protection.
+		"ArmorPhysical"				"7"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"120"		// Damage range min.
-		"AttackDamageMax"			"145"		// Damage range max.
+		"AttackDamageMin"			"136"		// Damage range min.
+		"AttackDamageMax"			"150"		// Damage range max.
 		"AttackRate"				"1.7"		// Speed of attack.
 		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
@@ -11395,12 +12298,12 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"280"		// Speed.			
+		"MovementSpeed"				"290"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2300"		// Base health.
-		"StatusHealthRegen"			"7"		// Health regeneration rate.
+		"StatusHealth"				"2650"		// Base health.
+		"StatusHealthRegen"			"12"		// Health regeneration rate.
 		"StatusMana"				"950"			// Base mana.
 		"StatusManaRegen"			"8.5"		// Mana regeneration rate.		 
 		
@@ -11417,7 +12320,7 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
 
-	"npc_dota_creature_black_dragon"	
+	"npc_dota_creature_black_dragon_large"	
 	{
 		// General
 		//----------------------------------------------------------------
@@ -11437,6 +12340,8 @@
 		"Ability2"					"black_dragon_splash_attack"	// Ability 2
 		"Ability3"					"black_dragon_dragonhide_aura"	// Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6 1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -11463,14 +12368,14 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
-		"MovementSpeed"				"300"		// Speed.			
+		"MovementSpeed"				"330"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2050"		// Base health.
-		"StatusHealthRegen"			"7"		// Health regeneration rate.
-		"StatusMana"				"950"			// Base mana.
-		"StatusManaRegen"			"8.5"		// Mana regeneration rate.		 
+		"StatusHealth"				"1650"		// Base health.
+		"StatusHealthRegen"			"7"		   // Health regeneration rate.
+		"StatusMana"				"1250"			// Base mana.
+		"StatusManaRegen"			"3.2"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -12702,13 +13607,216 @@
 
 	//Level-9
     
+    "npc_dota_creature_lich_rime_lord"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/lich/lich.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_FacelessVoid"
+		"Level"						"9"
+		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
+
+		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+        "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
+         
+        "nElement"                  "16"
+        "nDecay"                    "16"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"lich_chain_frost"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "4"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"6"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"182"		// Damage range min.
+		"AttackDamageMax"			"190"		// Damage range max.
+		"AttackRate"				"1.4"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"		        "550"
+		"ProjectileModel"		    "particles/units/heroes/hero_lich/lich_base_attack.vpcf"     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"300"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2900"		// Base health.
+		"StatusHealthRegen"			"13"	    // Health regeneration rate.
+		"StatusMana"				"1375"	    // Base mana.
+		"StatusManaRegen"			"3.4"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"9560"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"9561"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"12636"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"12637"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"12638"
+				}
+			}
+		}
+	}
+
+
+    "npc_dota_creature_faceless_void_endless_plane"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/faceless_void/faceless_void.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_FacelessVoid"
+		"Level"						"9"
+		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
+
+		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+        "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
+         
+        "nMystery"                  "16"
+        "nFury"                     "16"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"faceless_void_chronosphere"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"188"		// Damage range min.
+		"AttackDamageMax"			"196"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"280"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2350"		// Base health.
+		"StatusHealthRegen"			"11"		     // Health regeneration rate.
+		"StatusMana"				"550"	    // Base mana.
+		"StatusManaRegen"			"3.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"7377"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7378"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7379"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"8317"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"8374"
+				}
+			}
+		}
+	}
+
+
     "npc_dota_creature_spectre_enduring_solitude"
 	{
         // General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/spectre/spectre.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"		            "Hero_Spectre"
+        "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+        "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_spectre.vsndevts" 
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
@@ -12738,7 +13846,7 @@
 		"AttackRate"				"1.6"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRange"				"128"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
 
@@ -12755,10 +13863,10 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2450"		// Base health.
-		"StatusHealthRegen"			"11"		// Health regeneration rate.
+		"StatusHealth"				"2950"		// Base health.
+		"StatusHealthRegen"			"12"		// Health regeneration rate.
 		"StatusMana"				"550"	    // Base mana.
-		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		"StatusManaRegen"			"2.7"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -12777,19 +13885,23 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"			"323"
+					"ItemDef"			"9512"
 				}
 				"Wearable2"
 				{
-					"ItemDef"			"324"
+					"ItemDef"			"9513"
 				}
 				"Wearable3"
 				{
-					"ItemDef"			"325"
+					"ItemDef"			"9514"
 				}
 				"Wearable4"
 				{
-					"ItemDef"			"326"
+					"ItemDef"			"9515"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"9516"
 				}
 			}
 		}
@@ -13024,11 +14136,11 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "2"
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"2"			// Physical protection.
+		"ArmorPhysical"				"4"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -13118,7 +14230,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "2"
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -13306,7 +14418,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "3"
+		"AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -13389,8 +14501,9 @@
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
          
-        "nDecay"                    "16"
-        "nElement"                  "16"
+        "nDecay"                    "8"
+        "nElement"                  "8"
+        "nDurable"                  "8"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -14711,6 +15824,301 @@
 
 
 	//Level-10
+    "npc_dota_creature_lich_serakund_tyrant"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/lich/lich.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_FacelessVoid"
+		"Level"						"10"
+		"ModelScale" 				"1.3"
+		"vscripts"					"creap_ai.lua"
+
+		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+        "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
+         
+        "nElement"                  "18"
+        "nDecay"                    "18"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"lich_chain_frost"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"7"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"236"		// Damage range min.
+		"AttackDamageMax"			"244"		// Damage range max.
+		"AttackRate"				"1.4"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"		        "550"
+		"ProjectileModel"		    "particles/units/heroes/hero_lich/lich_base_attack.vpcf"     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"310"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3500"		// Base health.
+		"StatusHealthRegen"			"13"	    // Health regeneration rate.
+		"StatusMana"				"1375"	    // Base mana.
+		"StatusManaRegen"			"3.4"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"9560"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"9561"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"12636"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"12637"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"12638"
+				}
+			}
+		}
+	}
+
+    
+
+    "npc_dota_creature_faceless_void_time_breaker"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/faceless_void/faceless_void.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_FacelessVoid"
+		"Level"						"10"
+		"ModelScale" 				"1.3"
+		"vscripts"					"creap_ai.lua"
+
+		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+        "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
+         
+        "nMystery"                  "18"
+        "nFury"                     "18"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"faceless_void_chronosphere"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"188"		// Damage range min.
+		"AttackDamageMax"			"196"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"280"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2350"		// Base health.
+		"StatusHealthRegen"			"11"		     // Health regeneration rate.
+		"StatusMana"				"550"	    // Base mana.
+		"StatusManaRegen"			"3.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"8268"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7996"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"4020"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"4157"
+				}
+			}
+		}
+	}
+
+
+	"npc_dota_creature_spectre_transversant_soul"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/spectre/spectre.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Spectre"
+
+        "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+        "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_spectre.vsndevts" 
+
+		"Level"						"10"
+		"ModelScale" 				"1.3"
+		"vscripts"					"creap_ai.lua"
+         
+        "nMystery"                  "18"
+        "nDurable"                  "18"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"spectre_dispersion"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"11"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"182"		// Damage range min.
+		"AttackDamageMax"			"199"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"280"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3650"		// Base health.
+		"StatusHealthRegen"			"17"		// Health regeneration rate.
+		"StatusMana"				"600"	    // Base mana.
+		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"323"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"324"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"9129"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"326"
+				}
+			}
+		}
+	}
+
     
     "npc_dota_creature_life_stealer_profane_union"
 	{
@@ -14733,7 +16141,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -14935,7 +16343,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "3"
+		"AbilitiesLevel"            "4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -15010,7 +16418,7 @@
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/rikimaru/rikimaru.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"		            "Hero_Riki"
 		"Level"						"10"
 		"ModelScale" 				"1.4"
 		"vscripts"					"creap_ai.lua"
@@ -15018,12 +16426,17 @@
 		"nHunt"                     "18"
 		"nMystery"                  "18"
 
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_riki.vsndevts"
+		"VoiceFile"	            	"soundevents/voscripts/game_sounds_vo_riki.vsndevts"
+
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"riki_blink_strike"			// Ability 1
 		"Ability2"					""	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
+        
+        "AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -15050,7 +16463,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.			
+		"MovementSpeed"				"400"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -15095,13 +16508,13 @@
 	}
 
 
-	"npc_dota_creature_blue_dragon"
+	"npc_dota_creature_red_dragon_elder"
 	{
         // General
 		//----------------------------------------------------------------
 		"Model"						"models/items/dragon_knight/legacy_of_the_winterwyrm_form_of_the_winterwyrm/legacy_of_the_winterwyrm_form_of_the_winterwyrm.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"		            "Hero_DragonKnight"
 		"Level"						"9"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
@@ -15141,8 +16554,8 @@
 
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"290"		// Speed.			
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"330"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -15170,7 +16583,8 @@
 		//----------------------------------------------------------------
 		"Model"						"models/items/warlock/golem/hellsworn_golem/hellsworn_golem.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"Hero_WarlockGolem"
+		"IdleSoundLoop"				"Hero_WarlockGolem.Spawn_Loop"
 		"Level"						"10"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
@@ -15213,7 +16627,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"290"		// Speed.			
+		"MovementSpeed"				"395"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -15254,7 +16668,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Roshan"					// Name of sound set.
 		"Level"						"10"
-		"ModelScale" 				"1.0"
+		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
          
 
@@ -15291,7 +16705,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"295"		// Speed.			
+		"MovementSpeed"				"385"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -15320,7 +16734,8 @@
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/ice_biome/storegga/storegga.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"Hero_Tiny"
+		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_tiny.vsndevts"
 		"Level"						"10"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
@@ -15360,7 +16775,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"330"		// Speed.			
+		"MovementSpeed"				"365"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -15388,9 +16803,12 @@
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/ogre_magi/ogre_magi.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
-		"Level"						"9"
-		"ModelScale" 				"1"
+		"SoundSet"		            "Hero_OgreMagi"
+        "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_ogre_magi.vsndevts"
+
+		"Level"						"10"
+		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
          
         "nDurable"                  "18"
@@ -15431,7 +16849,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"290"		// Speed.			
+		"MovementSpeed"				"375"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -15490,9 +16908,11 @@
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/troll_warlord/troll_warlord.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
-		"Level"						"9"
-		"ModelScale" 				"1.1"
+		"SoundSet"		            "Hero_TrollWarlord"
+		"GameSoundsFile"	   	    "soundevents/game_sounds_heroes/game_sounds_troll_warlord.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_troll_warlord.vsndevts"
+		"Level"						"10"
+		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
          
         "nHunt"                     "18"
@@ -15532,7 +16952,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"350"		// Speed.			
+		"MovementSpeed"				"405"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -15583,10 +17003,13 @@
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/broodmother/broodmother.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
-		"Level"						"9"
-		"ModelScale" 				"1.1"
+		"SoundSet"		            "Hero_Broodmother"
+		"Level"						"10"
+		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+
+		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_broodmother.vsndevts"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_broodmother.vsndevts"
          
         "nHunt"                     "36"
 
@@ -15624,7 +17047,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"350"		// Speed.			
+		"MovementSpeed"				"415"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -15676,9 +17099,11 @@
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/centaur/centaur.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"		            "Hero_Centaur"
+		"GameSoundsFile"		   "soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts"
+		"VoiceFile"		           "soundevents/voscripts/game_sounds_vo_centaur.vsndevts"
 		"Level"						"10"
-		"ModelScale" 				"1.4"
+		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
          
         "nFury"                     "18"
@@ -15719,7 +17144,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"310"		// Speed.			
+		"MovementSpeed"				"370"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -15783,7 +17208,12 @@
 		//----------------------------------------------------------------
 		"Model"						"models/items/undying/flesh_golem/corrupted_scourge_corpse_hive/corrupted_scourge_corpse_hive.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		
+        "SoundSet"		            "Hero_Undying"
+		"IdleSoundLoop"		        "Hero_Undying.IdleLoop"
+        "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_undying.vsndevts"
+
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
@@ -15823,7 +17253,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"260"		// Speed.			
+		"MovementSpeed"				"345"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -15852,7 +17282,10 @@
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"		            "Hero_Pudge"
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_pudge.vsndevts"
+
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
@@ -15895,7 +17328,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"275"		// Speed.			
+		"MovementSpeed"				"355"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -15958,7 +17391,11 @@
 		//----------------------------------------------------------------
 		"Model"						"models/items/undying/flesh_golem/davy_jones_set_davy_jones_set_kraken/davy_jones_set_davy_jones_set_kraken.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"		            "Hero_Undying"
+		"IdleSoundLoop"		        "Hero_Undying.IdleLoop"
+        "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_undying.vsndevts"
+
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
@@ -15999,7 +17436,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		// Speed.			
+		"MovementSpeed"				"370"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -16028,13 +17465,18 @@
 		//----------------------------------------------------------------
 		"Model"						"models/items/undying/flesh_golem/frostivus_2018_undying_accursed_draugr_golem/frostivus_2018_undying_accursed_draugr_golem.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"		            "Hero_Undying"
+		"IdleSoundLoop"		        "Hero_Undying.IdleLoop"
+        "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_undying.vsndevts"
+
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
          
-        "nDecay"                    "18"
-        "nElement"                  "18"
+        "nDecay"                    "10"
+        "nElement"                  "10"
+        "nDurable"                  "10"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -16069,7 +17511,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"275"		// Speed.			
+		"MovementSpeed"				"365"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -16135,11 +17577,10 @@
 		"RingRadius"				"60"
 		"HealthBarOffset"			"190"
 
-
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"300"		// Speed.			
+		"MovementSpeed"				"395"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -16167,7 +17608,11 @@
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/enigma/enigma.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"		"Hero_Enigma"
+		"IdleSoundLoop"		"Hero_Enigma.IdleLoop"
+	    "GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_enigma.vsndevts"
+
 		"Level"						"10"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
@@ -16207,7 +17652,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"280"		// Speed.			
+		"MovementSpeed"				"390"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -16265,7 +17710,10 @@
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/ancient_apparition/ancient_apparition.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"		            "Hero_ancient_apparition"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_ancient_apparition.vsndevts"
+
 		"Level"						"10"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
@@ -16274,7 +17722,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"morphling_waveform"			// Ability 1
+		"Ability1"					""			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
@@ -16305,7 +17753,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"280"		// Speed.			
+		"MovementSpeed"				"390"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------

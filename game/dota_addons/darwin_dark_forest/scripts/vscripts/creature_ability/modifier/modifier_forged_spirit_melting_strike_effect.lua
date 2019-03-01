@@ -21,5 +21,9 @@ end
 
 
 function modifier_forged_spirit_melting_strike_effect:GetModifierPhysicalArmorBonus()
-	return self:GetStackCount() * -1 * self:GetAbility():GetSpecialValueFor( "armor_removed" )
+	if self:GetAbility() then
+	    return self:GetStackCount() * -1 * self:GetAbility():GetSpecialValueFor( "armor_removed" )
+	else
+		self:Destroy()
+	end
 end

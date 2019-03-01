@@ -63,8 +63,10 @@ end
 function Precache( context )
      PrecacheResource( "particle", "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_necro_souls_hero.vpcf", context )    
      PrecacheResource( "particle", "particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", context )
+     --如果 unit 里面写过的技能不需要 其他直接拿来用的技能都需要预加载
      PrecacheUnitByNameAsync('npc_dota_hero_crystal_maiden', function() end)
      PrecacheUnitByNameAsync('npc_dota_hero_morphling', function() end)
+     PrecacheUnitByNameAsync('npc_dota_hero_pugna', function() end)
      for sUnitName, vData in pairs(GameRules.vUnitsKV) do
          PrecacheUnitByNameAsync(sUnitName, function() end)
      end
@@ -87,6 +89,7 @@ GameMode.vPlayerPerk={}
 -- 处理一下 计算一下总进化度 计算一下怪物等级 
 for sUnitName, vData in pairs(GameRules.vUnitsKV) do
     if vData and type(vData) == "table" then
+        
         --元素
         if vData.nElement ==nil then
         	vData.nElement=0
@@ -142,6 +145,8 @@ for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
             if vData.MaxLevel and tonumber(vData.MaxLevel) then
                vLevel=tonumber(vData.MaxLevel)
             end
+            
+            print("Adding "..sAbilityName)       
 
             -- 构造数据
             for i=1,vLevel do
@@ -187,9 +192,10 @@ for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
                   nDecay=nDecay,
                   nHunt=nHunt,
                   nTotalPerk=nElement+nMystery+nDurable+nFury+nDecay+nHunt
-                }            
+                }     
                 table.insert(GameRules.vAbilitiesTable,vTempData)
             end
+
         end
 
     end
@@ -269,8 +275,6 @@ function GameMode:InitGameMode()
     if bTEST_MODE and not IsDedicatedServer() then
         GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
     end
-    
-  
 
     --[[
     GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, "DamageFilter"), self)

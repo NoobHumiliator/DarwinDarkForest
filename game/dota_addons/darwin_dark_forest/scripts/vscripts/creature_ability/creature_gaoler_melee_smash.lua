@@ -1,5 +1,5 @@
 gaoler_melee_smash = class({})
-LinkLuaModifier( "modifier_gaoler_melee_smash_thinker", "modifiers/modifier_gaoler_melee_smash_thinker", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_gaoler_melee_smash_thinker", "creature_ability/modifier/modifier_gaoler_melee_smash_thinker", LUA_MODIFIER_MOTION_NONE )
 
 -----------------------------------------------------------------------------
 

@@ -55,6 +55,10 @@ function GameMode:OnPlayerPickHero(keys)
 end
 
 function GameMode:OnEntityKilled(keys)
+  
+   if keys.entindex_attacker==nil then
+       return
+   end
 
    local hKilledUnit = EntIndexToHScript( keys.entindex_killed )
    local hKillerUnit = EntIndexToHScript(keys.entindex_attacker)
@@ -65,11 +69,11 @@ function GameMode:OnEntityKilled(keys)
    --如果玩家击杀野怪，把野怪的进化点赋给玩家
    if  hKilledUnit:GetTeamNumber() == DOTA_TEAM_NEUTRALS then
 
-       local nPlayerId = hKillerUnit:GetOwner():GetPlayerID()
+       local nPlayerId = hKillerUnit:GetMainControllingPlayer()
        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
 
        --消除野怪户籍
-       NeutralSpawner.nCreaturesNumber=NeutralSpawner.nCreaturesNumber+1
+       NeutralSpawner.nCreaturesNumber=NeutralSpawner.nCreaturesNumber-1
 
        NeutralSpawner.vCreatureLevelMap[hKilledUnit.nCreatureLevel]=NeutralSpawner.vCreatureLevelMap[hKilledUnit.nCreatureLevel]-1
        
@@ -167,11 +171,13 @@ function GameMode:OnEntityKilled(keys)
    end
 
     --如果玩家生物被击杀，损失经验 换出生点 换模型
-   if  hKilledUnit:GetOwner() and not hKilledUnit:IsHero() then
+   if  hKilledUnit:GetOwner() and not hKilledUnit:IsHero() and hKilledUnit:GetOwner() and hKilledUnit:GetOwner().GetPlayerID then
        local nPlayerId = hKilledUnit:GetOwner():GetPlayerID()
        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
        -- 保证不是召唤生物
        if hHero.hCurrentCreep == hKilledUnit then
+          local nPlayerId = hKilledUnit:GetOwner():GetPlayerID()
+          local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
            hHero.nCustomExp=hHero.nCustomExp-(vEXP_TABLE[hHero.hCurrentCreep:GetLevel()+1]-vEXP_TABLE[hHero.hCurrentCreep:GetLevel()])*0.5
            --保证不是负数
            if hHero.nCustomExp<1 then

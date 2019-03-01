@@ -70,10 +70,16 @@ function NeutralSpawner:Begin()
     --根据间隔刷怪
     Timers:CreateTimer(1, function()
         NeutralSpawner:SpawnOneCreature()
-        if NeutralSpawner.nCreaturesNumber<80 then
-           NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval/3
+        print("NeutralSpawner.nCreaturesNumber"..NeutralSpawner.nCreaturesNumber)
+        print("NeutralSpawner.flTimeInterval"..NeutralSpawner.flTimeInterval)
+        if NeutralSpawner.nCreaturesNumber<50 then
+           NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval/2
         else
-           NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval*3
+           NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval*2
+           --设置一个最低刷怪间隔
+           if NeutralSpawner.flTimeInterval>30 then
+              NeutralSpawner.flTimeInterval=30
+           end
         end
 
       return NeutralSpawner.flTimeInterval
@@ -114,7 +120,9 @@ function NeutralSpawner:SpawnOneCreature()
        for sUnitName,vData in pairs(GameRules.vUnitsKV) do
            --print(vData)
            if vData and type(vData) == "table" and vData.AttackCapabilities=="DOTA_UNIT_CAP_NO_ATTACK" then
-              table.insert(vTemp, sUnitName)
+             if vData.IsSummoned==nil or vData.IsSummoned==0 then
+               table.insert(vTemp, sUnitName)
+             end
            end
        end
    else 
@@ -124,8 +132,10 @@ function NeutralSpawner:SpawnOneCreature()
              if  self.vCreatureLevelMap[i]/(self.nCreaturesNumber) <= vLevelRatio[i-nAverageLevel] then
                  for sUnitName,vData in pairs(GameRules.vUnitsKV) do
                      if vData and type(vData) == "table" then
-                         if vData.nCreatureLevel==i then
-                            table.insert(vTemp, sUnitName)
+                         if vData.IsSummoned==nil or vData.IsSummoned==0 then
+                             if vData.nCreatureLevel==i then
+                                table.insert(vTemp, sUnitName)
+                             end
                          end
                      end
                  end
@@ -139,6 +149,7 @@ function NeutralSpawner:SpawnOneCreature()
       local sUnitName=vTemp[RandomInt(1, #vTemp)]
       local vRandomPos = GetRandomValidPositionForCreature(GameRules.vUnitsKV[sUnitName])
       
+      print("To Spawn "..sUnitName)
       local hUnit = CreateUnitByName(sUnitName, vRandomPos, true, nil, nil, DOTA_TEAM_NEUTRALS)
       FindClearSpaceForUnit(hUnit, vRandomPos, true)
       --设置生物等级

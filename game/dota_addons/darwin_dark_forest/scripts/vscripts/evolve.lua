@@ -59,41 +59,43 @@ function Evolve (nPlayerId,hHero)
 
     for sUnitName, vData in pairs(GameRules.vUnitsKV) do
 
-        if vData and type(vData) == "table" then
-            -- 等级相当，perk相符         
-
-            if vData.nCreatureLevel ==nLevel then
-               if  nLevel==1 then --第一级从直接随机选一个
-                   table.insert(vEnvolveBlankPool, sUnitName)
-               else
-                   local bPerkValid=true  
-                   if vData.nElement>GameMode.vPlayerPerk[nPlayerId][1] then
-                      bPerkValid=false
-                   end
-                   if vData.nMystery>GameMode.vPlayerPerk[nPlayerId][2] then
-                      bPerkValid=false
-                   end
-                   if vData.nDurable>GameMode.vPlayerPerk[nPlayerId][3] then
-                      bPerkValid=false
-                   end
-                   if vData.nFury>GameMode.vPlayerPerk[nPlayerId][4] then
-                      bPerkValid=false
-                   end
-                   if vData.nDecay>GameMode.vPlayerPerk[nPlayerId][5] then
-                      bPerkValid=false
-                   end
-                   if vData.nHunt>GameMode.vPlayerPerk[nPlayerId][6] then
-                      bPerkValid=false
-                   end
-                   --满足条件加入进化池
-                   if bPerkValid then
-                      if vData.nTotalPerk == 0 then
-                         table.insert(vEnvolveBlankPool, sUnitName)
-                      else
-                         vEnvolvePool[sUnitName] = vData.nTotalPerk
-                      end
-                      nEnvolvePoolTotalPerk=nEnvolvePoolTotalPerk+vData.nTotalPerk
-                   end
+        if vData and type(vData) == "table" then       
+             -- 跳过召唤生物
+            if vData.IsSummoned==nil or vData.IsSummoned==0 then
+             -- 等级相当，perk相符    
+                if vData.nCreatureLevel ==nLevel then
+                   if  nLevel==1 then --第一级从直接随机选一个
+                       table.insert(vEnvolveBlankPool, sUnitName)
+                   else
+                       local bPerkValid=true  
+                       if vData.nElement>GameMode.vPlayerPerk[nPlayerId][1] then
+                          bPerkValid=false
+                       end
+                       if vData.nMystery>GameMode.vPlayerPerk[nPlayerId][2] then
+                          bPerkValid=false
+                       end
+                       if vData.nDurable>GameMode.vPlayerPerk[nPlayerId][3] then
+                          bPerkValid=false
+                       end
+                       if vData.nFury>GameMode.vPlayerPerk[nPlayerId][4] then
+                          bPerkValid=false
+                       end
+                       if vData.nDecay>GameMode.vPlayerPerk[nPlayerId][5] then
+                          bPerkValid=false
+                       end
+                       if vData.nHunt>GameMode.vPlayerPerk[nPlayerId][6] then
+                          bPerkValid=false
+                       end
+                       --满足条件加入进化池
+                       if bPerkValid then
+                          if vData.nTotalPerk == 0 then
+                             table.insert(vEnvolveBlankPool, sUnitName)
+                          else
+                             vEnvolvePool[sUnitName] = vData.nTotalPerk
+                          end
+                          nEnvolvePoolTotalPerk=nEnvolvePoolTotalPerk+vData.nTotalPerk
+                       end
+                    end
                 end
             end
         end
