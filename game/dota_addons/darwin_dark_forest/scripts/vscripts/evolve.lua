@@ -173,7 +173,8 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
 
   local hUnit = CreateUnitByName(sUnitname,GameMode.vStartPointLocation[hHero:GetTeamNumber()],true,hHero, hHero, hHero:GetTeamNumber())
   hUnit:SetControllableByPlayer(hHero:GetPlayerID(), true)
-
+  -- evolve island util
+  AddTinyBody(hUnit)
 
   hHero.hCurrentCreep=hUnit
   hHero.nCurrentCreepLevel=hUnit:GetLevel()
@@ -255,7 +256,6 @@ function AddAbilityForUnit(hUnit,nPlayerId)
        end
     end
 
-    print("1")
     for i=1,20 do
       local hAbility=hUnit:GetAbilityByIndex(i-1)
       if hAbility and hAbility.GetAbilityName then

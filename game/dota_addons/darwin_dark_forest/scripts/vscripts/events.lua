@@ -29,9 +29,7 @@ function GameMode:OnPlayerPickHero(keys)
     GameMode.vPlayerPerk[nPlayerId]={0,0,0,0,0,0}
     CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
     hHero.nCustomExp=1 --自定义经验
-    hHero.nCustomLevel=1 --自定义等级
     
-
     -- 移除饰品
     for _,child in pairs(hHero:GetChildren()) do
        if child:GetClassname() == "dota_item_wearable" then

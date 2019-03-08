@@ -53,6 +53,9 @@ require( "evolve" )
 require( "neutral_spawner" )
 require( "utils/utility_functions" )
 require( "utils/timers" )
+require( "utils/bit" )
+require( "utils/evolve_island_util" )
+
 
 function Activate()
     GameMode:InitGameMode()
@@ -82,12 +85,45 @@ GameRules.vAbilitiesKV = LoadKeyValues('scripts/npc/npc_abilities_custom.txt')
 
 GameRules.vAbilitiesTable = {}
 
+--key 是等级 value是数组 
+vCreaturePerksTotal={}
+
+vCreaturePerksTotal={}
+for i=0,10 do
+   vCreaturePerksTotal[i]={}
+   vCreaturePerksTotal[i]["nElement"]=0
+   vCreaturePerksTotal[i]["nMystery"]=0
+   vCreaturePerksTotal[i]["nDurable"]=0
+   vCreaturePerksTotal[i]["nFury"]=0
+   vCreaturePerksTotal[i]["nDecay"]=0
+   vCreaturePerksTotal[i]["nHunt"]=0
+end
+
+
+
+vAbilityPerksTotal={}
+vAbilityPerksTotal["nElement"]=0
+vAbilityPerksTotal["nMystery"]=0
+vAbilityPerksTotal["nDurable"]=0
+vAbilityPerksTotal["nFury"]=0
+vAbilityPerksTotal["nDecay"]=0
+vAbilityPerksTotal["nHunt"]=0
+
+
+
+
+
+
+
+
+
 
 --key 是 playerId，value是六维数组存储玩家的perk点
 GameMode.vPlayerPerk={}
 
 -- 处理一下 计算一下总进化度 计算一下怪物等级 
 for sUnitName, vData in pairs(GameRules.vUnitsKV) do
+
     if vData and type(vData) == "table" then
         
         --元素
@@ -114,7 +150,7 @@ for sUnitName, vData in pairs(GameRules.vUnitsKV) do
         if vData.nHunt ==nil then
         	vData.nHunt=0
         end
-        --计算总perk
+
         vData.nTotalPerk=vData.nElement+vData.nMystery+vData.nDurable+vData.nFury+vData.nDecay+vData.nHunt
         
         --为每个生物定义一个等级
@@ -123,9 +159,28 @@ for sUnitName, vData in pairs(GameRules.vUnitsKV) do
         else
             vData.nCreatureLevel=vData.Level
         end
+        --计算总perk
+        vCreaturePerksTotal[vData.nCreatureLevel]["nElement"]=vCreaturePerksTotal[vData.nCreatureLevel]["nElement"]+vData.nElement
+        vCreaturePerksTotal[vData.nCreatureLevel]["nMystery"]=vCreaturePerksTotal[vData.nCreatureLevel]["nMystery"]+vData.nMystery
+        vCreaturePerksTotal[vData.nCreatureLevel]["nDurable"]=vCreaturePerksTotal[vData.nCreatureLevel]["nDurable"]+vData.nDurable
+        vCreaturePerksTotal[vData.nCreatureLevel]["nFury"]=vCreaturePerksTotal[vData.nCreatureLevel]["nFury"]+vData.nFury
+        vCreaturePerksTotal[vData.nCreatureLevel]["nDecay"]=vCreaturePerksTotal[vData.nCreatureLevel]["nDecay"]+vData.nDecay
+        vCreaturePerksTotal[vData.nCreatureLevel]["nHunt"]=vCreaturePerksTotal[vData.nCreatureLevel]["nHunt"]+vData.nHunt
+
 
     end
 end
+
+
+for i=0,10 do
+    print("Creature Level"..i)
+    for k,v in pairs(vCreaturePerksTotal[i]) do
+        print(k..":"..v)
+    end
+    print("-----------------------------------")
+end
+
+
 
 
   for sUnitName, vData in pairs(GameRules.vUnitsKV) do
@@ -193,6 +248,14 @@ for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
                   nHunt=nHunt,
                   nTotalPerk=nElement+nMystery+nDurable+nFury+nDecay+nHunt
                 }     
+
+                vAbilityPerksTotal["nElement"]=vAbilityPerksTotal["nElement"]+nElement
+                vAbilityPerksTotal["nMystery"]=vAbilityPerksTotal["nMystery"]+nMystery
+                vAbilityPerksTotal["nDurable"]=vAbilityPerksTotal["nDurable"]+nDurable
+                vAbilityPerksTotal["nFury"]=vAbilityPerksTotal["nFury"]+nFury
+                vAbilityPerksTotal["nDecay"]=vAbilityPerksTotal["nDecay"]+nDecay
+                vAbilityPerksTotal["nHunt"]=vAbilityPerksTotal["nHunt"]+nHunt
+
                 table.insert(GameRules.vAbilitiesTable,vTempData)
             end
 
@@ -201,6 +264,10 @@ for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
     end
 end
 
+print("Ability Total Perks：")
+for k,v in pairs(vAbilityPerksTotal) do
+    print(k..":"..v)
+end
 
 
 

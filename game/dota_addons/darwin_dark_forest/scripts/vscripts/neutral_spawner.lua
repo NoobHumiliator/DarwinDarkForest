@@ -24,10 +24,11 @@ local vLevelRatio ={}
 vLevelRatio["courier"]=0.5 --这是信使的比例
 --key是与玩家等级差距 value是比例 
 vLevelRatio[-1]=0.2
-vLevelRatio[0]=0.15
-vLevelRatio[1]=0.1
-vLevelRatio[2]=0.05
-vLevelRatio[3]=0.05
+vLevelRatio[0]=0.14
+vLevelRatio[1]=0.09
+vLevelRatio[2]=0.06
+vLevelRatio[3]=0.04
+vLevelRatio[4]=0.02
 
 if NeutralSpawner == nil then
   NeutralSpawner = {}
@@ -61,22 +62,21 @@ function NeutralSpawner:OnGameRulesStateChange()
 end
 
 function NeutralSpawner:Begin()
-     
-    -- 先刷几只压压惊
-    for i=1,10 do
-       self:SpawnOneCreature()
-    end
-    
+         
     --根据间隔刷怪
     Timers:CreateTimer(1, function()
         NeutralSpawner:SpawnOneCreature()
         print("NeutralSpawner.nCreaturesNumber"..NeutralSpawner.nCreaturesNumber)
         print("NeutralSpawner.flTimeInterval"..NeutralSpawner.flTimeInterval)
-        if NeutralSpawner.nCreaturesNumber<50 then
+        if NeutralSpawner.nCreaturesNumber<80 then
            NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval/2
+           --位置最小刷怪间隔 防止太卡
+           if NeutralSpawner.flTimeInterval<0.1 then
+              NeutralSpawner.flTimeInterval=0.1
+           end
         else
            NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval*2
-           --设置一个最低刷怪间隔
+           --设置一个最大刷怪间隔
            if NeutralSpawner.flTimeInterval>30 then
               NeutralSpawner.flTimeInterval=30
            end
@@ -99,11 +99,12 @@ function NeutralSpawner:SpawnOneCreature()
         if hHero==nil then
           nTotalLevel=nTotalLevel+1
         else
-          nTotalLevel=nTotalLevel+hHero.nCustomLevel 
+          nTotalLevel=nTotalLevel+hHero.nCurrentCreepLevel 
         end
         nTotalHero=nTotalHero+1
       end
    end
+
    local nAverageLevel = math.floor(nTotalLevel/nTotalHero + 0.5) --四舍五入
    
    --如果一级的话 调高信使比例
@@ -149,8 +150,18 @@ function NeutralSpawner:SpawnOneCreature()
       local sUnitName=vTemp[RandomInt(1, #vTemp)]
       local vRandomPos = GetRandomValidPositionForCreature(GameRules.vUnitsKV[sUnitName])
       
-      print("To Spawn "..sUnitName)
       local hUnit = CreateUnitByName(sUnitName, vRandomPos, true, nil, nil, DOTA_TEAM_NEUTRALS)
+
+      for i=1,20 do
+        local hAbility=hUnit:GetAbilityByIndex(i-1)
+        if hAbility and GameRules.vUnitsKV[sUnitName].AbilitiesLevel then
+           local nLevel= tonumber(SpliteStr(GameRules.vUnitsKV[sUnitName].AbilitiesLevel)[i])
+           hAbility:SetLevel(nLevel)
+        end
+      end
+
+      -- evolve island util
+      AddTinyBody(hUnit)
       FindClearSpaceForUnit(hUnit, vRandomPos, true)
       --设置生物等级
       hUnit.nCreatureLevel=GameRules.vUnitsKV[sUnitName].nCreatureLevel

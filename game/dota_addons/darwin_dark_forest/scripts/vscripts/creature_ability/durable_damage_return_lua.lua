@@ -6,7 +6,6 @@ function durable_damage_return_lua:OnSpellStart()
 	local duration = self:GetSpecialValueFor( "duration" )
 	self:GetCaster():AddNewModifier( self:GetCaster(), self, "modifier_durable_damage_return_lua", { duration = duration }  )
 	EmitSoundOn( "Hero_NyxAssassin.SpikedCarapace", self:GetCaster() )
-	self:GetCaster():StartGesture( ACT_DOTA_ABILITY_4 );
 end
 
 --------------------------------------------------------------------------------
