@@ -9,3 +9,9 @@ function forged_spirit_melting_strike_lua:GetIntrinsicModifierName()
 end
 
 --------------------------------------------------------------------------------
+
+function forged_spirit_melting_strike_lua:OnSpellStart()
+	self:ToggleAutoCast()
+end
+
+--------------------------------------------------------------------------------

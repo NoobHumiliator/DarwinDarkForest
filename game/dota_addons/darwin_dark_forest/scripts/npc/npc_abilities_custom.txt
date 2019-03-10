@@ -556,7 +556,7 @@
     "forged_spirit_melting_strike_lua"
     {
 
-        "AbilityBehavior"                                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityBehavior"                                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
         "BaseClass"                                      "ability_lua"
         "ScriptFile"                                     "creature_ability/forged_spirit_melting_strike_lua"
         "AbilityTextureName"                             "forged_spirit_melting_strike"

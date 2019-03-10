@@ -113,12 +113,12 @@
     "npc_dota_creature_forge_spirit"                                                "熔炉精灵"
     "npc_dota_creature_crawl_zombie"                                                "爬行僵尸"
     "npc_dota_creature_kobold"                                                      "狗头人"
-    "npc_dota_creature_amoeba_1"                                                    "神秘气泡怪"
     "npc_dota_creature_pine_cone"                                                   "松子战士"
     "npc_dota_creature_greevil"                                                     "贪魔"
+    "npc_dota_creature_geodesic_1"                                                  "虚空节点"
      
      //Level-2
-    "npc_dota_creature_amoeba_2"                                                    "神秘聚合体"
+    "npc_dota_creature_geodesic_2"                                                  "虚空节点"
     "npc_dota_creature_iceforged"                                                   "冰火元素"
     "npc_dota_creature_woodfang"                                                    "木牙"
     "npc_dota_creature_basic_zombie"                                                "僵尸"
@@ -131,6 +131,9 @@
     "npc_dota_creature_red_harpy"                                                   "风暴鹰身人"
     "npc_dota_creature_giant_wolf"                                                  "巨狼"
     "npc_dota_creature_small_mud_golem"                                             "黏土傀儡"
+    "npc_dota_creature_ogre_mage_1"                                                 "食人魔学徒"
+    "npc_dota_creature_amoeba_1"                                                    "神秘元素"
+
 
     //Level-3
     "npc_dota_creature_radiant_melee_2"                                             "天辉高级近战兵"
@@ -155,9 +158,13 @@
     "npc_dota_creature_geodesic"                                                    "虚空节点"
     "npc_dota_creature_satyr_trickster_1"                                           "萨特放逐者"
     "npc_dota_creature_harpy_storm"                                                 "鹰身人风暴巫师"
+    "npc_dota_creature_ogre_mage_2"                                                 "食人魔法师"
+    "npc_dota_creature_eidelon_1"                                                   "小虚空行者"
+
 
 
     //Level-4
+    "npc_dota_creature_amoeba_2"                                                    "神秘元素聚合体"
     "npc_dota_creature_frostbitten_necromancer_1"                                   "霜牙死灵法师"
     "npc_dota_creature_frostbitten_acolyte_2"                                       "霜牙助祭"
     "npc_dota_creature_ogre_mauler_2"                                               "食人魔拳手"
@@ -181,12 +188,13 @@
     "npc_dota_creature_bad_melee_3"                                                 "夜魇中路近战兵"
     "npc_dota_creature_bad_range_3"                                                 "夜魇中路远程兵"
     "npc_dota_creature_centaur_warrior"                                             "半人马战士"
-    "npc_dota_creature_ogre_mage"                                                   "食人魔法师"
+    "npc_dota_creature_ogre_mage_3"                                                  "食人魔法师"
     "npc_dota_creature_eidelon"                                                     "小型虚空行者"
     "npc_dota_creature_esl_relics_forge_spirit"                                     "受缚元素"
     "npc_dota_creature_satyr_soulstealer_1"                                         "萨特摧心者"
-    "npc_dota_creature_relict"                                                      "狒狒"
+    "npc_dota_creature_baboon"                                                      "狒狒"
     "npc_dota_creature_satyr_trickster_2"                                           "萨特放逐者"
+    "npc_dota_creature_eidelon_2"                                                   "虚空行者"
 
     //Level-5
     "npc_dota_creature_frostbitten_necromancer_1"                                   "霜牙死灵法师"
@@ -206,7 +214,6 @@
     "npc_dota_creature_good_siege"                                                  "投石车"
     "npc_dota_creature_centaur_elite"                                               "半人马精锐"
     "npc_dota_creature_perceptive_spiderling"                                       "邪眼蜘蛛"
-    "npc_dota_creature_eidelon_2"                                                   "大虚空行者"
     "npc_dota_creature_arsenal_magus_forged_spirit"                                 "占星烈焰"
     "npc_dota_creature_ghost"                                                       "幽魂"
     "npc_dota_creature_meranth_guard"                                               "鱼人斥候"
@@ -220,10 +227,13 @@
     "npc_dota_creature_ogre_archmage"                                               "食人魔冰霜法师"
     "npc_dota_creature_forest_troll_high_priest"                                    "丘陵巨魔牧师"
     "npc_dota_creature_forest_troll_elite"                                          "丘陵巨魔精英战士"
-    "npc_dota_creature_satyr_hellcaller_1"                                           "萨特折磨者"
+    "npc_dota_creature_satyr_hellcaller_1"                                          "萨特折磨者"
+    "npc_dota_creature_tentacular_conqueror_1"                                      "虚空信徒"
 
 
     //Level-6
+    "npc_dota_creature_amoeba_3"                                                    "神秘元素巨怪"
+    "npc_dota_creature_necro_archer_2"                                              "死灵书弓箭手"
     "npc_dota_creature_centaur_elite_2"                                             "半人马精锐"
     "npc_dota_creature_frostbitten_elder_1"                                         "霜牙死灵长老"
     "npc_dota_creature_frostbitten_necromancer_2"                                   "霜牙死灵法师"
@@ -254,7 +264,7 @@
     "npc_dota_creature_madness_wolf"                                                "狂狼"
     "npc_dota_creature_disease_wolf"                                                "瘟疫之狼"
     "npc_dota_creature_mystery_wolf"                                                "神秘狼灵"
-    "npc_dota_creature_tentacular_conqueror"                                        "虚空信徒"
+    "npc_dota_creature_tentacular_conqueror_2"                                      "虚空信徒"
     "npc_dota_creature_satyr_prowler"                                               "萨特潜行先锋"
    
     //Level-7

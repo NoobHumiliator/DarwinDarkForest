@@ -154,8 +154,8 @@ function CastAbility(hTarget)
 				return hAbility:GetCastPoint()+RandomFloat(0.1, 0.3)
         	end
 
-        	--无目标技能 直接乱放
-        	if ContainsValue(hAbility:GetBehavior(),DOTA_ABILITY_BEHAVIOR_NO_TARGET) then
+        	--无目标非切换技能 直接乱放
+        	if ContainsValue(hAbility:GetBehavior(),DOTA_ABILITY_BEHAVIOR_NO_TARGET) and not ContainsValue(hAbility:GetBehavior(),DOTA_ABILITY_BEHAVIOR_AUTOCAST) then
     				
 			    ExecuteOrderFromTable({
 					UnitIndex = thisEntity:entindex(),
