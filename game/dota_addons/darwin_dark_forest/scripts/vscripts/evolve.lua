@@ -29,7 +29,7 @@ vAbilityChanceEachLevel={
    { [2]=10,[3]=30,[4]=45,[5]=15} --10级
 }
 
-
+vPairedAbility={bristleback_bristleback="bristleback_quill_spray"}
 
 --[[
 vAbilityChanceEachLevel={
@@ -166,13 +166,24 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
   hHero:AddNoDraw()
   hHero:FindAbilityByName("dota_ability_hero_invulnerable"):SetLevel(1)
   --如果已经控制了某个生物 先移除
+
+  --保留生物的当前血量百分比
+  local flCurrentHealthRatio = 1
   if  hHero.hCurrentCreep~=nil and not hHero.hCurrentCreep:IsNull() then
+    if hHero.hCurrentCreep:IsAlive() then
+        flCurrentHealthRatio= hHero.hCurrentCreep:GetHealth()/hHero.hCurrentCreep:GetMaxHealth()
+        if flCurrentHealthRatio<=0 then
+           flCurrentHealthRatio=0.01
+        end
+    end
     hHero.hCurrentCreep:AddNoDraw()
     UTIL_Remove(  hHero.hCurrentCreep )
   end
 
+
   local hUnit = CreateUnitByName(sUnitname,GameMode.vStartPointLocation[hHero:GetTeamNumber()],true,hHero, hHero, hHero:GetTeamNumber())
   hUnit:SetControllableByPlayer(hHero:GetPlayerID(), true)
+  hUnit:SetHealth(hUnit:GetMaxHealth()*flCurrentHealthRatio)
   -- evolve island util
   AddTinyBody(hUnit)
 
@@ -289,8 +300,15 @@ function AddAbilityForUnit(hUnit,nPlayerId)
 
           --为单位添加技能
           hUnit:AddAbility(sNewAbilityName)
+          
           hUnit:FindAbilityByName(sNewAbilityName):SetLevel(nAbilityLevel)
-           print("2")
+          
+          --添加配对技能
+          if vPairedAbility[sNewAbilityName]~=nil then
+                hero:AddAbility(vPairedAbility[sNewAbilityName])
+                hero:FindAbilityByName(vPairedAbility[sNewAbilityName]):SetLevel(nAbilityLevel)
+          end
+
           nAbilityTotalPerks=RemoveAbilityFromPoolByName(nAbilityTotalPerks,sNewAbilityName,vAbilityPool)
 
       end

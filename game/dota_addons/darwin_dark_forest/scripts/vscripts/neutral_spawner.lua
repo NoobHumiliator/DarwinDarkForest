@@ -151,7 +151,8 @@ function NeutralSpawner:SpawnOneCreature()
       local vRandomPos = GetRandomValidPositionForCreature(GameRules.vUnitsKV[sUnitName])
       
       local hUnit = CreateUnitByName(sUnitName, vRandomPos, true, nil, nil, DOTA_TEAM_NEUTRALS)
-
+      
+      print("sUnitName"..sUnitName)
       for i=1,20 do
         local hAbility=hUnit:GetAbilityByIndex(i-1)
         if hAbility and GameRules.vUnitsKV[sUnitName].AbilitiesLevel then
@@ -162,6 +163,8 @@ function NeutralSpawner:SpawnOneCreature()
 
       -- evolve island util
       AddTinyBody(hUnit)
+      hUnit:SetNightTimeVisionRange(1000)
+      hUnit:SetDayTimeVisionRange(1800)
       FindClearSpaceForUnit(hUnit, vRandomPos, true)
       --设置生物等级
       hUnit.nCreatureLevel=GameRules.vUnitsKV[sUnitName].nCreatureLevel

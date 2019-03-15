@@ -70,6 +70,11 @@ function Precache( context )
      PrecacheUnitByNameAsync('npc_dota_hero_crystal_maiden', function() end)
      PrecacheUnitByNameAsync('npc_dota_hero_morphling', function() end)
      PrecacheUnitByNameAsync('npc_dota_hero_pugna', function() end)
+     PrecacheResource( "soundfile", "soundevents/game_sounds_dungeon.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_dungeon_enemies.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_creeps.vsndevts", context )
+
+
      for sUnitName, vData in pairs(GameRules.vUnitsKV) do
          PrecacheUnitByNameAsync(sUnitName, function() end)
      end
@@ -173,7 +178,7 @@ end
 
 
 for i=0,10 do
-    print("Creature Level"..i)
+    print("Creature Level "..i)
     for k,v in pairs(vCreaturePerksTotal[i]) do
         print(k..":"..v)
     end
@@ -184,7 +189,6 @@ end
 
 
   for sUnitName, vData in pairs(GameRules.vUnitsKV) do
-         print("Precache "..sUnitName)
          PrecacheUnitByNameAsync(sUnitName, function() end)
      end
 
@@ -201,7 +205,7 @@ for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
                vLevel=tonumber(vData.MaxLevel)
             end
             
-            print("Adding "..sAbilityName)       
+            --print("Adding "..sAbilityName)       
 
             -- 构造数据
             for i=1,vLevel do
@@ -264,7 +268,7 @@ for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
     end
 end
 
-print("Ability Total Perks：")
+print("Ability Total Perks: ")
 for k,v in pairs(vAbilityPerksTotal) do
     print(k..":"..v)
 end
@@ -340,7 +344,7 @@ function GameMode:InitGameMode()
 
     --为测试模式设置
     if bTEST_MODE and not IsDedicatedServer() then
-        GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
+        --GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
     end
 
     --[[

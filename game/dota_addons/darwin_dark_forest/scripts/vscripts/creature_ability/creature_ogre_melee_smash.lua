@@ -1,4 +1,5 @@
 creature_ogre_melee_smash = class({})
+LinkLuaModifier( "modifier_command_restricted", "creature_ability/modifier/modifier_command_restricted", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier( "modifier_ogre_tank_melee_smash_thinker", "creature_ability/modifier/modifier_ogre_tank_melee_smash_thinker", LUA_MODIFIER_MOTION_NONE )
 
 -----------------------------------------------------------------------------
@@ -28,6 +29,7 @@ function creature_ogre_melee_smash:OnSpellStart()
 		local vToTarget = self:GetCursorPosition() - self:GetCaster():GetOrigin()
 		vToTarget = vToTarget:Normalized()
 		local vTarget = self:GetCursorPosition()
+		self:GetCaster():AddNewModifier(self:GetCaster(), self, "modifier_command_restricted", {duration=flSpeed})
 		local hThinker = CreateModifierThinker( self:GetCaster(), self, "modifier_ogre_tank_melee_smash_thinker", { duration = flSpeed }, vTarget, self:GetCaster():GetTeamNumber(), false )
 	end
 end

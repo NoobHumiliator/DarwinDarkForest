@@ -7,7 +7,9 @@ end
 
 --创建的时候 直接打开自动释放
 function modifier_forged_spirit_melting_strike:OnCreated()
-	self:GetAbility():ToggleAutoCast()
+	if IsServer() then
+	  self:GetAbility():ToggleAutoCast()
+    end
 end
 
 

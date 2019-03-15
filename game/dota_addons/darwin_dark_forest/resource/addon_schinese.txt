@@ -232,6 +232,8 @@
 
 
     //Level-6
+    "npc_dota_creature_slark_1"                                                     "神秘海域鱼人"
+    "npc_dota_creature_element_spider_1"                                            "元素蜘蛛"
     "npc_dota_creature_amoeba_3"                                                    "神秘元素巨怪"
     "npc_dota_creature_necro_archer_2"                                              "死灵书弓箭手"
     "npc_dota_creature_centaur_elite_2"                                             "半人马精锐"
@@ -268,6 +270,8 @@
     "npc_dota_creature_satyr_prowler"                                               "萨特潜行先锋"
    
     //Level-7
+    "npc_dota_creature_slark_2"                                                     "神秘海域夜行者"
+    "npc_dota_creature_element_spider_2"                                            "元素蜘蛛"
     "npc_dota_creature_frostbitten_elder"                                           "霜牙长者"
     "npc_dota_creature_ogreseal_undead_1"                                           "鬼灵海象"
     "npc_dota_creature_ogre_onehead_archmage"                                       "食人魔大法师"
@@ -298,6 +302,7 @@
     "npc_dota_creature_satyr_dreamer"                                               "萨特梦者"
 
     //Level-8
+    "npc_dota_creature_slark_3"                                                     "暗黑之礁逃犯"
     "npc_dota_creature_ogreseal_undead_2"                                           "鬼灵海象"
     "npc_dota_creature_lich"                                                        "巫妖"
     "npc_dota_creature_faceless_void"                                               "虚空假面"
