@@ -205,7 +205,7 @@ for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
                vLevel=tonumber(vData.MaxLevel)
             end
             
-            --print("Adding "..sAbilityName)       
+            print("Adding "..sAbilityName)       
 
             -- 构造数据
             for i=1,vLevel do

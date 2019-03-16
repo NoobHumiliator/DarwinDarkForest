@@ -964,12 +964,12 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"forged_spirit_melting_strike_lua"			        // Ability 1
-		"Ability2"					"night_stalker_hunter_in_the_night"			// Ability 2
-		"Ability3"					"night_stalker_darkness"			// Ability 3
+		"Ability2"					"death_prophet_carrion_swarm"			// Ability 2
+		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
         
         //设置技能等级 需要时填上
-        "AbilitiesLevel"            "1 8 8"
+        "AbilitiesLevel"            "1 8"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -1522,7 +1522,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "2"
+		"AbilitiesLevel"            "1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -2161,7 +2161,7 @@
 		"StatusHealth"				"320"	    	// Base health.
 		"StatusHealthRegen"			"0.75"		    // Health regeneration rate.
 		"StatusMana"				"200"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusManaRegen"			"0.5"			// Mana regeneration rate.
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
@@ -2787,7 +2787,7 @@
 		"StatusHealth"				"480"	    	// Base health.
 		"StatusHealthRegen"			"0.75"		    // Health regeneration rate.
 		"StatusMana"				"200"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusManaRegen"			"0.5"			// Mana regeneration rate.
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
@@ -3045,7 +3045,7 @@
 		"Ability4"					""			// Ability 4
         
         //设置技能等级 需要时填上
-        "AbilitiesLevel"            "3"
+        "AbilitiesLevel"            "2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -6194,7 +6194,7 @@
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -6931,7 +6931,7 @@
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
-		"AbilitiesLevel"            "5"
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -6976,6 +6976,16 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"8625"
+				}
+	        }
+		}
 	}
 
 
@@ -7795,7 +7805,7 @@
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
-		"AbilitiesLevel"            "5"
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -9617,7 +9627,7 @@
 		"Ability3"					""
 		"Ability4"					""
 
-		"AbilitiesLevel"            "6"
+		"AbilitiesLevel"            "4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -9662,6 +9672,16 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"8625"
+				}
+	        }
+		}
 	}
 
 
@@ -11913,7 +11933,7 @@
 		"Ability3"					""
 		"Ability4"					""
 
-        "AbilitiesLevel"            "7"
+        "AbilitiesLevel"            "5"
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"2"
@@ -11957,6 +11977,16 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"8625"
+				}
+	        }
+		}
 	}
 
     "npc_dota_creature_updated_eidolon"
