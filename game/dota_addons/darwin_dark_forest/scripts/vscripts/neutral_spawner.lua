@@ -66,8 +66,8 @@ function NeutralSpawner:Begin()
     --根据间隔刷怪
     Timers:CreateTimer(1, function()
         NeutralSpawner:SpawnOneCreature()
-        print("NeutralSpawner.nCreaturesNumber"..NeutralSpawner.nCreaturesNumber)
-        print("NeutralSpawner.flTimeInterval"..NeutralSpawner.flTimeInterval)
+        --print("NeutralSpawner.nCreaturesNumber"..NeutralSpawner.nCreaturesNumber)
+        --print("NeutralSpawner.flTimeInterval"..NeutralSpawner.flTimeInterval)
         if NeutralSpawner.nCreaturesNumber<80 then
            NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval/2
            --位置最小刷怪间隔 防止太卡
@@ -152,7 +152,6 @@ function NeutralSpawner:SpawnOneCreature()
       
       local hUnit = CreateUnitByName(sUnitName, vRandomPos, true, nil, nil, DOTA_TEAM_NEUTRALS)
       
-      print("sUnitName"..sUnitName)
       for i=1,20 do
         local hAbility=hUnit:GetAbilityByIndex(i-1)
         if hAbility and GameRules.vUnitsKV[sUnitName].AbilitiesLevel then

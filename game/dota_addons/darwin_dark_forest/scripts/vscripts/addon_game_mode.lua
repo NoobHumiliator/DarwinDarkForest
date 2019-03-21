@@ -67,12 +67,19 @@ function Precache( context )
      PrecacheResource( "particle", "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_necro_souls_hero.vpcf", context )    
      PrecacheResource( "particle", "particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", context )
      --如果 unit 里面写过的技能不需要 其他直接拿来用的技能都需要预加载
-     PrecacheUnitByNameAsync('npc_dota_hero_crystal_maiden', function() end)
-     PrecacheUnitByNameAsync('npc_dota_hero_morphling', function() end)
-     PrecacheUnitByNameAsync('npc_dota_hero_pugna', function() end)
      PrecacheResource( "soundfile", "soundevents/game_sounds_dungeon.vsndevts", context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_dungeon_enemies.vsndevts", context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_creeps.vsndevts", context )
+
+     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_spirit_breaker.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_morphling.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_warlock.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_death_prophet.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts", context )
 
 
      for sUnitName, vData in pairs(GameRules.vUnitsKV) do
@@ -487,33 +494,28 @@ end
 ---------------------------------------------------------------------------
 function GameMode:UpdateScoreboard()
 	local sortedTeams = {}
-	for _, team in pairs( self.vfoundTeamsList ) do
+	for _, nTeamID in pairs( self.vfoundTeamsList ) do
+        local nTeamMaxLevel = 1;         
 		for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
 		  --选出等级最高的英雄
-		  local nTeamMaxLevel = 1;		  
-		  if PlayerResource:IsValidPlayer( nPlayerID ) and PlayerResource:GetTeamNumber()==team then
-             local nLevel=GetSelectedHeroEntity (nPlayerID):GetLevel()
+		  if PlayerResource:IsValidPlayer( nPlayerID ) and PlayerResource:GetSelectedHeroEntity (nPlayerID) and PlayerResource:GetSelectedHeroEntity(nPlayerID):GetTeamNumber()==nTeamID then
+             local nLevel=PlayerResource:GetSelectedHeroEntity (nPlayerID).nCurrentCreepLevel
              if nTeamMaxLevel<nLevel then
              	nTeamMaxLevel=nLevel
              end
 		  end
 	    end
-		table.insert( sortedTeams, { teamID = team, teamScore = nTeamMaxLevel } )
-	end
+        local sortedTeam={}
+        sortedTeam.teamID=nTeamID
+        sortedTeam.teamScore=nTeamMaxLevel
+        CustomNetTables:SetTableValue( "team_max_level",tostring(nTeamID), {team_max_level=nTeamMaxLevel} )
 
+		table.insert( sortedTeams,sortedTeam)
+	end
+    
+ 
 	-- reverse-sort by score
 	table.sort( sortedTeams, function(a,b) return ( a.teamScore > b.teamScore ) end )
-
-	for _, t in pairs( sortedTeams ) do
-		local clr = self:ColorForTeam( t.teamID )
-		-- Scaleform UI Scoreboard
-		local score = 
-		{
-			team_id = t.teamID,
-			team_score = t.teamScore
-		}
-		FireGameEvent( "score_board", score )
-	end
 
 end
 
@@ -525,7 +527,7 @@ function GameMode:OnThink()
 		self:UpdatePlayerColor( nPlayerID )
 	end
 	
-	--self:UpdateScoreboard()
+	self:UpdateScoreboard()
 	-- Stop thinking if game is paused
 	if GameRules:IsGamePaused() == true then
         return 1

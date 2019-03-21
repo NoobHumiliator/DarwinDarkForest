@@ -14,7 +14,7 @@ function decay_summon_wraith_warrior:OnSpellStart()
 		if hWraithWarrior ~= nil then
 
 			local wraith_warrior_duration = self:GetSpecialValueFor( "wraith_warrior_duration" )
-			local wraith_warrior_health = self:GetSpecialValueFor( "wraith_warrior_health" )
+			self.wraith_warrior_health = self:GetSpecialValueFor( "wraith_warrior_health" )
             local wraith_warrior_damage = self:GetSpecialValueFor( "wraith_warrior_damage" )
 
             EmitSoundOn( "Undying_Zombie.Spawn", hWraithWarrior )
@@ -30,8 +30,8 @@ function decay_summon_wraith_warrior:OnSpellStart()
 			Timers:CreateTimer({
 				    endTime = 0.05,
 				    callback = function()
-				       	hWraithWarrior:SetMaxHealth(wraith_warrior_health)
-				        hWraithWarrior:Heal(wraith_warrior_health,hWraithWarrior)
+				       	hWraithWarrior:SetMaxHealth(self.wraith_warrior_health)
+				        hWraithWarrior:Heal(self.wraith_warrior_health,hWraithWarrior)
 				    end
 				})
 

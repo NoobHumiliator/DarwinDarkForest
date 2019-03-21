@@ -29,7 +29,8 @@ vAbilityChanceEachLevel={
    { [2]=10,[3]=30,[4]=45,[5]=15} --10级
 }
 
-vPairedAbility={bristleback_bristleback="bristleback_quill_spray"}
+vPairedAbility={bristleback_bristleback="bristleback_quill_spray",
+ancient_apparition_ice_blast="ancient_apparition_ice_blast_release"}
 
 --[[
 vAbilityChanceEachLevel={
@@ -182,6 +183,11 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
 
 
   local hUnit = CreateUnitByName(sUnitname,GameMode.vStartPointLocation[hHero:GetTeamNumber()],true,hHero, hHero, hHero:GetTeamNumber())
+  
+  --设置视野范围
+  hUnit:SetDayTimeVisionRange(1800)
+  hUnit:SetNightTimeVisionRange(1000)
+
   hUnit:SetControllableByPlayer(hHero:GetPlayerID(), true)
   hUnit:SetHealth(hUnit:GetMaxHealth()*flCurrentHealthRatio)
   -- evolve island util
@@ -194,6 +200,9 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
     local hAbility=hUnit:GetAbilityByIndex(i-1)
     if hAbility and GameRules.vUnitsKV[sUnitname].AbilitiesLevel then
        local nLevel= tonumber(SpliteStr(GameRules.vUnitsKV[sUnitname].AbilitiesLevel)[i])
+       if nLevel==nil or nLevel==0 then
+          nLevel=1
+       end
        hAbility:SetLevel(nLevel)
     end
   end

@@ -20,8 +20,10 @@ function modifier_bounty_hunter_track_lua_debuff:OnCreated()
 end
 
 function modifier_bounty_hunter_track_lua_debuff:OnIntervalThink()
-	 if self and self.GetCaster and ( not self:GetCaster():IsNull() ) then
-        AddFOWViewer(self:GetCaster():GetTeamNumber(), self:GetParent():GetOrigin(), 1000, 0.2, true)
+     if IsServer() then
+		 if self and self.GetCaster and self:GetCaster() and self:GetCaster():IsAlive() and ( not self:GetCaster():IsNull() ) then
+	        AddFOWViewer(self:GetCaster():GetTeamNumber(), self:GetParent():GetOrigin(), 1000, 0.2, true)
+	     end
      end
 end
 
