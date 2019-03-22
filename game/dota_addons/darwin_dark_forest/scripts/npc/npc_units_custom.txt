@@ -14861,7 +14861,7 @@
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
          
-        "nElement"                  "8"
+        "nMystery"                  "8"
         "nDurable"                  "14"
 
 		// Abilities
