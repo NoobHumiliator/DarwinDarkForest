@@ -17047,7 +17047,7 @@
 	}
 
 
-	"npc_dota_creature_ogre_double_head_archmage"
+	"npc_dota_creature_ogre_double_head_antipodeans"
 	{
         // General
 		//----------------------------------------------------------------
@@ -17128,23 +17128,23 @@
 	        {
 	           "Wearable1"
 				{
-					"ItemDef"			"12802"
+					"ItemDef"			"7839"
 				}
 				"Wearable2"
 				{
-					"ItemDef"			"12801"
+					"ItemDef"			"7845"
 				}
 				"Wearable3"
 				{
-					"ItemDef"			"12800"
+					"ItemDef"			"7846"
 				}
 				"Wearable4"
 				{
-					"ItemDef"			"12799"
+					"ItemDef"			"7847"
 				}
 				"Wearable5"
 				{
-					"ItemDef"			"12798"
+					"ItemDef"			"7848"
 				}
 	        }
 		}
@@ -18006,7 +18006,7 @@
 
 
 	//Level-10
-    "npc_dota_creature_spirit_breaker_savage_mettle"
+    "npc_dota_creature_spirit_breaker_elemental_realms"
 	{
 		// General
 		//
@@ -18088,27 +18088,27 @@
 	        {
 	           "Wearable1"
 				{
-					"ItemDef"			"9744"
+					"ItemDef"			"7452"
 				}
 				"Wearable2"
 				{
-					"ItemDef"			"9548"
+					"ItemDef"			"7453"
 				}
 				"Wearable3"
 				{
-					"ItemDef"			"9549"
+					"ItemDef"			"7454"
 				}
 				"Wearable4"
 				{
-					"ItemDef"			"9551"
+					"ItemDef"			"7455"
 				}
 				"Wearable5"
 				{
-					"ItemDef"			"9553"
+					"ItemDef"			"7456"
 				}
 				"Wearable6"
 				{
-					"ItemDef"			"9554"
+					"ItemDef"			"8786"
 				}
 	        }
 		}
@@ -18214,7 +18214,7 @@
 		}
 	}
 
-    "npc_dota_creature_faceless_void_witness"
+    "npc_dota_creature_faceless_void_nezzureem"
 	{
         // General
 		//----------------------------------------------------------------
@@ -18292,26 +18292,30 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"			"8268"
+					"ItemDef"			"12655"
 				}
 				"Wearable2"
 				{
-					"ItemDef"			"7996"
+					"ItemDef"			"12656"
 				}
 				"Wearable3"
 				{
-					"ItemDef"			"4020"
+					"ItemDef"			"12657"
 				}
 				"Wearable4"
 				{
-					"ItemDef"			"4157"
+					"ItemDef"			"12658"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"12659"
 				}
 			}
 		}
 	}
 
 
-	"npc_dota_creature_spectre_transversant_soul"
+	"npc_dota_creature_spectre_conservator"
 	{
         // General
 		//----------------------------------------------------------------
@@ -18390,26 +18394,30 @@
 			{
 				"Wearable1"
 				{
-					"ItemDef"			"323"
+					"ItemDef"			"7517"
 				}
 				"Wearable2"
 				{
-					"ItemDef"			"324"
+					"ItemDef"			"7518"
 				}
 				"Wearable3"
 				{
-					"ItemDef"			"9129"
+					"ItemDef"			"7519"
 				}
 				"Wearable4"
 				{
-					"ItemDef"			"326"
+					"ItemDef"			"7520"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7521"
 				}
 			}
 		}
 	}
 
     
-    "npc_dota_creature_life_stealer_profane_union"
+    "npc_dota_creature_life_stealer_chainbreaker"
 	{
         // General
 		//----------------------------------------------------------------
@@ -18510,7 +18518,7 @@
 	}
 
 
-    "npc_dota_creature_razor_severing"	
+    "npc_dota_creature_razor_affront_of_the_overseer"	
 	{
 		// General
 		//----------------------------------------------------------------
@@ -18585,23 +18593,23 @@
 	        {
 	           "Wearable1"
 				{
-					"ItemDef"			"8000"
+					"ItemDef"			"8680"
 				}
 				"Wearable2"
 				{
-					"ItemDef"			"6916"
+					"ItemDef"			"8615"
 				}
 				"Wearable3"
 				{
-					"ItemDef"			"342"
+					"ItemDef"			"8614"
 				}
 				"Wearable4"
 				{
-					"ItemDef"			"343"
+					"ItemDef"			"8613"
 				}
 				"Wearable5"
 				{
-					"ItemDef"			"344"
+					"ItemDef"			"8608"
 				}
 	        }
 		}
