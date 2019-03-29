@@ -101,12 +101,24 @@
 	"ui_detail_decay"                                                           "散播瘟疫与剧毒"
 	"ui_detail_mystery"                                                         "虚空与不可名状之力"
 
-	"DOTA_Tooltip_modifier_forged_spirit_melting_strike_effect"                 "灼烧攻击"
 
-	"DOTA_Tooltip_ability_forged_spirit_melting_strike_lua"	                        "灼烧攻击"
-	"DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_Description"	            "当熔炉精灵有足够魔法值时，其攻击将熔化敌方英雄的护甲。每次攻击命中后效果会叠加。"
-	"DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_armor_removed"	        "每次攻击减甲："
-	"DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_duration"	            "持续时间："
+    //召唤
+    "npc_dota_zeus_cloud"                                                           "雷云"
+    "npc_dota_creature_summoned_familiar"                                           "佣兽"
+    "npc_dota_creature_wraith_warrior"                                              "冥界士兵"
+    "npc_dota_creature_skeleton_mage"                                               "骷髅法师"
+    "npc_dota_creature_tombstone_zombie"                                            "僵尸"
+    "npc_dota_creature_tombstone"                                                   "墓碑"
+
+    //Level-0
+    "npc_dota_courier_baby_winter_wyvern"                                           "冰龙宝宝"
+    "npc_dota_courier_echo_wisp"                                                    "虚空水母"
+    "npc_dota_courier_deathripper"                                                  "死灵爪"
+    "npc_dota_courier_deathbringer"                                                 "地狱犬"
+    "npc_dota_courier_turtle"                                                       "海龟"
+    "npc_dota_courier_snowl"                                                        "猫头鹰小猎手"
+
+
 
      //Level-1
 	"npc_dota_creature_tiny_mud_golem"                                              "碎土傀儡"
@@ -302,6 +314,7 @@
     "npc_dota_creature_satyr_dreamer"                                               "萨特梦者"
 
     //Level-8
+    "npc_dota_creature_spirit_breaker"                                              "裂魂人"
     "npc_dota_creature_slark_3"                                                     "暗黑之礁逃犯"
     "npc_dota_creature_ogreseal_undead_2"                                           "鬼灵海象"
     "npc_dota_creature_lich"                                                        "巫妖"
@@ -332,6 +345,7 @@
     "npc_dota_creature_visage"                                                      "死灵飞龙"
 
     //Level-9
+    "npc_dota_creature_spirit_breaker_ironbarde_charger"                            "钢甲冲锋者"
     "npc_dota_creature_lich_rime_lord"                                              "雾凇领主"
     "npc_dota_creature_faceless_void_endless_plane"                                 "无尽平行"    
     "npc_dota_creature_spectre_enduring_solitude"                                   "恒久孤寂"
@@ -358,6 +372,12 @@
     "npc_dota_creature_primal_void"                                                 "虚空尊者"
     "npc_dota_creature_dream_secret"                                                "梦魇王子"
     //Level-10
+
+    "npc_dota_creature_razor_affront_of_the_overseer"                               "监察之蔑"
+    "npc_dota_creature_life_stealer_chainbreaker"                                   "破链之刑"
+    "npc_dota_creature_spectre_conservator"                                         "汇聚幽魂"
+    "npc_dota_creature_faceless_void_nezzureem"                                     "奥玄岩晶"
+    "npc_dota_creature_spirit_breaker_elemental_realms"                             "黑钢杀戮者"
     "npc_dota_creature_lich_serakund_tyrant"                                        "寒域暴君"
     "npc_dota_creature_faceless_void_witness"                                       "猩红见证者"
     "npc_dota_creature_spectre_transversant_soul"                                   "横裂之魄"
@@ -401,7 +421,39 @@
     "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_health"        "血量："
     "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_damage"        "攻击力："
 
- 
+
+    "DOTA_Tooltip_modifier_forged_spirit_melting_strike_effect"                     "灼烧攻击"
+    "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua"                         "灼烧攻击"
+    "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_Description"             "当熔炉精灵有足够魔法值时，其攻击将熔化敌方英雄的护甲。每次攻击命中后效果会叠加。"
+    "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_armor_removed"           "每次攻击减甲："
+    "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_duration"                "持续时间："
+
+
+    "DOTA_Tooltip_modifier_slark_shadow_dance_lua_invisible"                        "暗影之舞"
+    "DOTA_Tooltip_ability_slark_shadow_dance_lua"                                   "暗影之舞"
+    "DOTA_Tooltip_ability_slark_shadow_dance_lua_Description"                       "斯拉克将自己藏进暗影之云，变成隐身状态，提高移动速度，不会被反隐手段发现。攻击、施法、使用物品都不会使斯拉克显形。"
+    "DOTA_Tooltip_ability_slark_shadow_dance_lua_duration"                          "持续时间："
+    "DOTA_Tooltip_ability_slark_shadow_dance_lua_bonus_movement_speed"              "移动速度加成："
+    
+
+    "DOTA_Tooltip_modifier_bounty_hunter_track_lua_debuff"                           "追踪术"
+    "DOTA_Tooltip_modifier_bounty_hunter_track_lua_speed"                            "速度提升"
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua"                                   "追踪术"
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua_Description"                       "追踪一个敌方单位，获得目标的真实视域。自己在被追踪者周围可以获得移动速度提升，对其发动攻击时具有致命一击效果。"
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua_target_crit_multiplier"            "%自身致命一击："
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua_duration"                          "持续时间："
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua_bonus_move_speed_pct"              "自身移动速度提升："
+
+
+    "DOTA_Tooltip_modifier_visage_gravekeepers_cloak_lua_effect"                           "陵卫斗篷"
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua"                                   "陵卫斗篷"
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_Description"                       "维萨吉产生数层屏障来保护他，降低受到的伤害。每当他受到伤害，就会失去一层屏障，失去的屏障需要一定时间才能恢复。"
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_max_layers"                        "最大层数："
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_damage_reduction"                  "每层伤害减免："
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_recovery_time"                     "每层恢复时间："
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_minimum_damage"                    "最低伤害："
+
+    
 
   } 
 

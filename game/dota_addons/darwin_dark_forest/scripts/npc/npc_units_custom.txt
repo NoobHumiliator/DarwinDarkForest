@@ -2,6 +2,96 @@
 "DOTAUnits"
 {
 	"Version"	"1"
+    //建筑
+
+    "npc_dota_shrine"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_filler"	// Class of entity of link to.
+		"Model"						"models/props_structures/radiant_statue002.vmdl"	// Model.
+		"SoundSet"					"Creep_Good_Melee"					// Name of sound set.
+		"MinimapIcon"				"minimap_miscbuilding"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		
+		"Ability1"					"shrine_passive"			// Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"10"			// Physical protection.
+		"MagicalResistance"			"0"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"0"			// Damage range min.
+		"AttackDamageMax"			"0"			// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"0"			// Speed of attack.
+		"AttackAnimationPoint"		"0"			// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"0"			// Range within a target can be acquired.
+		"AttackRange"				"0"			// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.
+
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"			// Base strength
+		"AttributeStrengthGain"		"0"			// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"			// Base intelligence
+		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"			// Base agility
+		"AttributeAgilityGain"		"0"			// Agility bonus per level.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"75"		// Gold earned min.
+		"BountyGoldMax"				"75"		// Gold earned max.
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_FILLER"			// Hull type used for navigation/locomotion.
+		"RingRadius"				"100"
+		"HealthBarOffset"			"260"
+		"MinimapIconSize"			"200"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
+		"MovementSpeed"				"0"			// Speed
+		"MovementTurnRate"			"0"			// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1000"		// Base health.
+		"StatusHealthRegen"			"0"			// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"900"		// Range of vision during day light.
+		"VisionNighttimeRange"		"600"		// Range of vision at night time.
+	}	
+
+
     //Summon 
 
     "npc_dota_zeus_cloud"
@@ -161,7 +251,6 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
-
 
 
 
@@ -993,7 +1082,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"50"
+		"RingRadius"				"40"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -1062,7 +1151,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"40"
 		"HealthBarOffset"			"190"
 
 		// Movement
@@ -1144,7 +1233,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"40"
 		"HealthBarOffset"			"180"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -1302,7 +1391,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"40"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -1375,7 +1464,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"40"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -1453,7 +1542,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"40"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -1529,7 +1618,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -1603,7 +1692,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"190"
 
 		// Movement
@@ -1644,11 +1733,10 @@
 	"npc_dota_creature_woodfang"
 	{
 		// General
-		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/furion/treant/ravenous_woodfang/ravenous_woodfang.vmdl"	// Model.
-		"SoundSet"					"n_creep_Ranged"
-		"ModelScale"				"1"
+		"SoundSet"					"Furion_Treant"
+		"ModelScale"				"0.5"
 		"Level"						"2"
 		
 		"vscripts"					"creap_ai.lua"
@@ -1683,7 +1771,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -1757,7 +1845,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -1832,7 +1920,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -1904,7 +1992,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"40"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"150"
 
 		// Movement
@@ -1974,7 +2062,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -2054,7 +2142,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"50"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -2131,7 +2219,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -2207,7 +2295,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -2282,7 +2370,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -2363,7 +2451,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -2443,7 +2531,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"55"
+		"RingRadius"				"45"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -2524,7 +2612,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -2604,7 +2692,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -2650,7 +2738,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/neutral_creeps/n_creep_ogre_lrg/n_creep_ogre_lrg.vmdl"
 		"SoundSet"					"n_creep_Melee"
-		"Level"						"4"
+		"Level"						"3"
 		"ModelScale" 				"0.75"
         
         "vscripts"					"creap_ai.lua"
@@ -2683,7 +2771,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -2757,7 +2845,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -2833,7 +2921,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -2907,7 +2995,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -2983,7 +3071,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -3056,7 +3144,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"40"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -3126,7 +3214,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"190"
 
 		// Movement
@@ -3416,7 +3504,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -3495,7 +3583,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -3573,7 +3661,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -3660,7 +3748,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -3741,7 +3829,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -3822,7 +3910,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -3904,7 +3992,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -3984,7 +4072,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -4063,7 +4151,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -4137,7 +4225,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"50"
 		"HealthBarOffset"			"190"
 
 		// Movement
@@ -4349,7 +4437,7 @@
 		"ProjectileSpeed"			"900"		// Speed of projectile.
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"240"
 
 		// Movement
@@ -4427,7 +4515,7 @@
 		"ProjectileSpeed"			"0"			// Speed of projectile.	
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -4498,7 +4586,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -4565,7 +4653,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"190"
 
 		// Movement
@@ -4632,7 +4720,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"50"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"170"
 
 
@@ -4703,7 +4791,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -4778,7 +4866,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"50"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -4848,7 +4936,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"40"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -4917,7 +5005,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"40"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -4990,7 +5078,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"50"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 
 
@@ -5063,7 +5151,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -5142,7 +5230,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -5221,7 +5309,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -5300,7 +5388,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -5379,7 +5467,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -5479,7 +5567,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -5555,7 +5643,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -5630,7 +5718,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -5706,7 +5794,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -5781,7 +5869,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -5854,7 +5942,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -5923,7 +6011,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -5994,7 +6082,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -6063,7 +6151,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -6135,7 +6223,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -6207,7 +6295,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -6276,7 +6364,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -6355,7 +6443,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -6424,7 +6512,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"34"		// Damage range min.
 		"AttackDamageMax"			"37"		// Damage range max.
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -6435,7 +6523,7 @@
 		"ProjectileSpeed"			"0"			// Speed of projectile.	
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -6501,7 +6589,7 @@
 		"ProjectileSpeed"			"0"			// Speed of projectile.	
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"55"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -6728,7 +6816,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"65"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -6809,7 +6897,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -6888,7 +6976,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -7034,7 +7122,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"40"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -7103,7 +7191,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"40"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -7241,7 +7329,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"46"		// Damage range min.
 		"AttackDamageMax"			"54"		// Damage range max.
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -7288,7 +7376,7 @@
 		"Model"						"models/items/furion/treant/treant_cis/treant_cis.vmdl"
 		"SoundSet"					"Furion_Treant"					// Name of sound set.
 		"Level"						"5"
-		"ModelScale" 				"1"
+		"ModelScale" 				"1.2"
         
         "vscripts"					"creap_ai.lua"
 
@@ -7307,7 +7395,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"38"		// Damage range min.
 		"AttackDamageMax"			"46"		// Damage range max.
 		"AttackRate"				"1.75"		// Speed of attack.
@@ -7320,7 +7408,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
 		"HealthBarOffset"			"170"
-
+        "RingRadius"				"60"
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
@@ -7829,7 +7917,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"80"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"220"
 
 		// Movement
@@ -7899,7 +7987,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"80"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"220"
 
 		// Movement
@@ -8129,7 +8217,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -8209,7 +8297,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -8288,7 +8376,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -8368,7 +8456,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -8446,7 +8534,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -8526,7 +8614,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -8604,7 +8692,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -8651,7 +8739,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"hellbear_smash"
+		"Ability1"					"polar_furbolg_ursa_warrior_thunder_clap"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -8663,7 +8751,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"56"		// Damage range min.
 		"AttackDamageMax"			"78"		// Damage range max.
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -8811,7 +8899,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"50"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"170"
 
 		// Bounty
@@ -8884,7 +8972,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"50"
+		"RingRadius"				"60"
 		"HealthBarOffset"			"170"
 
 		// Bounty
@@ -8973,7 +9061,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -9060,7 +9148,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -9133,7 +9221,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -9209,7 +9297,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -9279,7 +9367,7 @@
 		"ProjectileSpeed"			"0"		// Speed of projectile.
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"240"
 
 		// Movement
@@ -9350,7 +9438,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"360"
 
 
@@ -9433,7 +9521,7 @@
 		"ProjectileSpeed"			"0"			// Speed of projectile.	
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -9502,7 +9590,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -9577,7 +9665,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -9648,7 +9736,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"190"
 
 
@@ -9719,7 +9807,7 @@
 		"ProjectileSpeed"			"900"		// Speed of projectile.
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"240"
 
 		// Movement
@@ -10168,13 +10256,13 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"55"		// Damage range min.
 		"AttackDamageMax"			"68"		// Damage range max.
 		"AttackRate"				"1.0"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
-		"AttackRange"				"120"		// Range within a target can be attacked.
+		"AttackRange"				"110"		// Range within a target can be attacked.
 		"ProjectileModel"			"" // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		// Speed of projectile.		     
 
@@ -10546,7 +10634,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"hellbear_smash"
+		"Ability1"					"polar_furbolg_ursa_warrior_thunder_clap"
 		"Ability2"					""
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -10568,7 +10656,7 @@
 		"AttackRate"				"1.5"		// Speed of attack.
 		"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"300"		// Range within a target can be attacked.
+		"AttackRange"				"105"		// Range within a target can be attacked.
 		"ProjectileModel"			""	// Particle system model for projectile.
 		"ProjectileSpeed"			"0"		// Speed of projectile.		     
 
@@ -11154,7 +11242,7 @@
 		{
 		}
 	}
-
+    // 虚空信徒
    "npc_dota_creature_tentacular_conqueror_2"
 	{
 
@@ -13226,7 +13314,7 @@
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
-		"AttackRange"				"250"		// Range within a target can be attacked.
+		"AttackRange"				"300"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
 		"ProjectileSpeed"			"1200"		// Speed of projectile.		     
 
@@ -17451,7 +17539,7 @@
 		"AttackRate"				"1.4"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRange"				"128"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
 
@@ -17940,7 +18028,7 @@
 		"AttackRate"				"1.6"
 		"AttackAnimationPoint"		"0.3"
 		"AttackAcquisitionRange"	"550"
-		"AttackRange"				"550"
+		"AttackRange"				"138"
 		"ProjectileModel"			""
 		"ProjectileSpeed"			"0"	        
 
@@ -18748,7 +18836,7 @@
 		"AttackRate"				"1.6"
 		"AttackAnimationPoint"		"0.3"
 		"AttackAcquisitionRange"	"550"
-		"AttackRange"				"550"
+		"AttackRange"				"138"
 		"ProjectileModel"			""
 		"ProjectileSpeed"			"0"	        
 
@@ -18809,7 +18897,7 @@
 	{
         // General
 		//----------------------------------------------------------------
-		"Model"						"models/items/dragon_knight/legacy_of_the_winterwyrm_form_of_the_winterwyrm/legacy_of_the_winterwyrm_form_of_the_winterwyrm.vmdl"	// Model.
+		"Model"						"models/items/dragon_knight/oblivion_blazer_dragon/oblivion_blazer_dragon.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_DragonKnight"
 		"Level"						"10"
@@ -19836,9 +19924,9 @@
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/knoll_1/werewolf_boss.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"Hero_Lycan"
 		"Level"						"10"
-		"ModelScale" 				"1.5"
+		"ModelScale" 				"2"
 		"vscripts"					"creap_ai.lua"
          
         "nFury"                     "36"
@@ -19865,7 +19953,7 @@
 		"AttackRate"				"1.2"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRange"				"138"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
 
@@ -19995,6 +20083,7 @@
 				}
 				"Wearable6"
 				{
+
 					"ItemDef"			"498"
 				}
 			}

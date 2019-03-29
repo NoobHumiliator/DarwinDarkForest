@@ -2488,12 +2488,12 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "movement_speed"        "300 325 350 375 400 425 450 475"
+                "movement_speed"        "300 350 400 450 500 550 600 650"
             }
             "02"
             {
                 "var_type"              "FIELD_FLOAT"
-                "stun_duration"         "1.4 1.6 1.8 2.0 2.2 2.4 2.6 2.8"
+                "stun_duration"         "1.4 1.8 2.2 2.6 3.0 3.4 3.8 4.2"
             }
             "03"
             {
@@ -3347,6 +3347,37 @@
     }   
     
 
+    "shrine_passive"
+    {
+        "BaseClass"                     "ability_lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+
+        "MaxLevel"                      "8"
+
+        "nDurable"                      "4 9 14 19 24 29 34 39"
+        "nDecay"                        "4 9 14 19 24 29 34 39"
+
+        "ScriptFile"                    "creature_ability/shrine_passive"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "heal_percent"                      "1"
+            }
+            "02"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "mana_percent"                      "2"
+            }
+        }
+    }
+
+
     "visage_gravekeepers_cloak_lua"
     {
         "BaseClass"                     "ability_lua"
@@ -3942,6 +3973,45 @@
                 "frostbite_duration_scepter"    "17"
             }
         }
+    }
+
+    "test_blink"
+    { 
+
+        "BaseClass"                     "antimage_blink"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0.4"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "1"
+        
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "5"
+        
+        "AbilitySound"                  "Hero_Antimage.Blink_out"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "blink_range"           "99999"
+                "LinkedSpecialBonus"    "special_bonus_unique_antimage_3"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "min_blink_range"       "200"
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
     }
 
 

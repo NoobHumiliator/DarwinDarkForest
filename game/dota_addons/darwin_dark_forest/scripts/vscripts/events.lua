@@ -269,6 +269,13 @@ function GameMode:OnPlayerSay(keys)
         if sText=="wtf" and hHero and not hHero.hCurrentCreep:IsNull() then
            hHero.hCurrentCreep:AddNewModifier(hHero.hCurrentCreep, nil, "modifier_zero_cooldown_and_mana_cost", {})
         end
+
+        -- 加闪烁技能
+        if sText=="blink" and hHero and not hHero.hCurrentCreep:IsNull() then
+           hHero.hCurrentCreep:AddAbility("test_blink")
+           hHero.hCurrentCreep:FindAbilityByName("test_blink"):SetLevel(1)
+        end
+    
         -- 关闭 wtf 模式
         if sText=="unwtf" and hHero and not hHero.hCurrentCreep:IsNull() then
            hHero.hCurrentCreep:RemoveModifierByName("modifier_zero_cooldown_and_mana_cost")

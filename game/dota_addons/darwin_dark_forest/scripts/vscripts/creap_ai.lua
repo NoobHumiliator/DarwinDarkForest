@@ -1,4 +1,4 @@
-LinkLuaModifier( "modifier_neutral_passive", "modifiers/modifier_neutral_passive", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_creature_passive", "modifiers/modifier_creature_passive", LUA_MODIFIER_MOTION_NONE )
 
 nWalkingMoveSpeed=140
 
@@ -13,9 +13,12 @@ function Spawn( entityKeyValues )
 	end
 
     if thisEntity:GetLevel() then
-		local nLevel= thisEntity:GetLevel()
-		thisEntity:SetHullRadius(5+nLevel*3)  --体型跟随等级线性增加 8到35
+		local nLevel= thisEntity:GetLevel()     
+		thisEntity:SetHullRadius(10+nLevel*4)  --体型跟随等级线性增加 10到50
 	end
+
+    --被攻击时间
+    thisEntity:AddNewModifier(thisEntity, nil, "modifier_creature_passive", {})
 
 
     -- 对玩家无效
@@ -33,8 +36,6 @@ function Spawn( entityKeyValues )
     thisEntity.nOriginalMovementSpeed=thisEntity:GetBaseMoveSpeed()
     --降低移动速度
     thisEntity:SetBaseMoveSpeed(nWalkingMoveSpeed)
-
-    thisEntity:AddNewModifier(thisEntity, nil, "modifier_neutral_passive", {})
 
 	thisEntity:SetContextThink( "CreepThink", CreepThink, 0.5 )
 end

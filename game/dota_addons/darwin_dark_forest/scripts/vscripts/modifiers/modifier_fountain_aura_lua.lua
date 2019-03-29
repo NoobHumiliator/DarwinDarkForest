@@ -5,6 +5,18 @@ modifier_fountain_aura_lua = class({})
 function modifier_fountain_aura_lua:IsHidden()
 	return true
 end
+--------------------------------------------------------------------------------
+
+
+
+function modifier_fountain_aura_lua:CheckState()
+	local state =
+	{
+		[MODIFIER_STATE_UNSELECTABLE] = true,
+	}
+
+	return state
+end
 
 --------------------------------------------------------------------------------
 
@@ -21,7 +33,7 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_fountain_aura_lua:GetAuraSearchTeam()
-	return DOTA_UNIT_TARGET_TEAM_FRIENDLY
+	return DOTA_UNIT_TARGET_TEAM_BOTH
 end
 
 --------------------------------------------------------------------------------
@@ -45,7 +57,7 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_fountain_aura_lua:GetAuraRadius()
-	return 1275
+	return 500
 end
 
 --------------------------------------------------------------------------------

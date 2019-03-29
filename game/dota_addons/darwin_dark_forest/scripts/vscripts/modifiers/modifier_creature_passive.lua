@@ -1,29 +1,29 @@
-modifier_neutral_passive = class({})
+modifier_creature_passive = class({})
 
 
 -----------------------------------------------------------------------------------
-function modifier_neutral_passive:IsHidden()
+function modifier_creature_passive:IsHidden()
 	return true
 end
 --------------------------------------------------------------------------------
-function modifier_neutral_passive:IsPermanent()
+function modifier_creature_passive:IsPermanent()
 	return true
 end
 --------------------------------------------------------------------------------
-function modifier_neutral_passive:IsPurgable()
+function modifier_creature_passive:IsPurgable()
 	return false
 end
 --------------------------------------------------------------------------------
 
-function modifier_neutral_passive:DeclareFunctions()
+function modifier_creature_passive:DeclareFunctions()
 	local funcs = 
 	{
-		MODIFIER_EVENT_ON_TAKEDAMAGE
+		MODIFIER_EVENT_ON_TAKEDAMAGE,
 	}
 	return funcs
 end
 ---------------------------------------------------------------------------------
-function modifier_neutral_passive:OnTakeDamage (event)
+function modifier_creature_passive:OnTakeDamage (event)
 
 	if event.unit == self:GetParent() then
         
@@ -37,3 +37,4 @@ function modifier_neutral_passive:OnTakeDamage (event)
 
 	end
 end
+-----------------------------------------------------------------------------------

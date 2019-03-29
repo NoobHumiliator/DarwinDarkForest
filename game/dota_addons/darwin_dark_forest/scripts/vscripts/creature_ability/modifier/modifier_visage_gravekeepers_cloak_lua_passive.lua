@@ -1,5 +1,9 @@
 modifier_visage_gravekeepers_cloak_lua_passive = modifier_visage_gravekeepers_cloak_lua_passive or class({})
 
+function modifier_visage_gravekeepers_cloak_lua_passive:IsHidden()
+   return true
+end
+
 
 function modifier_visage_gravekeepers_cloak_lua_passive:OnCreated()
 	if IsServer() then
