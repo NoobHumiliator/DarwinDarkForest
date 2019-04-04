@@ -41,8 +41,9 @@
 	</script>
 		
 	<Panel>
-		<CustomUIElement type="HudTopBar"  layoutfile="file://{resources}/layout/custom_game/multiteam_top_scoreboard.xml" />
-        <CustomUIElement type="Hud"		   layoutfile="file://{resources}/layout/custom_game/perk_radar.xml" />
+	   <CustomUIElement type="HudTopBar" layoutfile="file://{resources}/layout/custom_game/multiteam_top_scoreboard.xml" />
+       <CustomUIElement type="Hud"		 layoutfile="file://{resources}/layout/custom_game/perk_radar.xml" />
+	   <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" />
 	</Panel>
 </root>
 

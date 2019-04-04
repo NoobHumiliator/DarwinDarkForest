@@ -55,7 +55,7 @@ require( "utils/utility_functions" )
 require( "utils/timers" )
 require( "utils/bit" )
 require( "utils/evolve_island_util" )
-
+require( "utils/notifications" )
 
 function Activate()
     GameMode:InitGameMode()
@@ -105,7 +105,7 @@ GameRules.vAbilitiesTable = {}
 vCreaturePerksTotal={}
 
 vCreaturePerksTotal={}
-for i=0,10 do
+for i=0,11 do
    vCreaturePerksTotal[i]={}
    vCreaturePerksTotal[i]["nElement"]=0
    vCreaturePerksTotal[i]["nMystery"]=0
@@ -175,6 +175,7 @@ for sUnitName, vData in pairs(GameRules.vUnitsKV) do
         else
             vData.nCreatureLevel=vData.Level
         end
+        print("sUnitName"..sUnitName)
         --计算总perk
         vCreaturePerksTotal[vData.nCreatureLevel]["nElement"]=vCreaturePerksTotal[vData.nCreatureLevel]["nElement"]+vData.nElement
         vCreaturePerksTotal[vData.nCreatureLevel]["nMystery"]=vCreaturePerksTotal[vData.nCreatureLevel]["nMystery"]+vData.nMystery
@@ -292,6 +293,9 @@ end
 function GameMode:InitGameMode()
 
     GameRules:GetGameModeEntity().GameMode = self
+    GameRules.bUltimateStage=false  --终极进化阶段
+    GameRules.bLevelTenStage=false  --有生物到达10级
+
     Timers:start()
     NeutralSpawner:Init()
     GameMode.vStartPointLocation={} --key是teamnumber value坐标
@@ -355,7 +359,7 @@ function GameMode:InitGameMode()
 
     --为测试模式设置
     if bTEST_MODE and not IsDedicatedServer() then
-        --GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
+        GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
     end
 
     --[[
@@ -494,10 +498,13 @@ end
 
 
 ---------------------------------------------------------------------------
--- 更新等级榜
+-- 更新等级榜，检查获胜
 ---------------------------------------------------------------------------
-function GameMode:UpdateScoreboard()
+function GameMode:UpdateScoreboardAndVictory()
+
 	local sortedTeams = {}
+    local vAliveTeams = {}
+
 	for _, nTeamID in pairs( self.vfoundTeamsList ) do
         local nTeamMaxLevel = 1;         
 		for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
@@ -506,6 +513,9 @@ function GameMode:UpdateScoreboard()
              local nLevel=PlayerResource:GetSelectedHeroEntity (nPlayerID).nCurrentCreepLevel
              if nTeamMaxLevel<nLevel then
              	nTeamMaxLevel=nLevel
+             end
+             if PlayerResource:GetSelectedHeroEntity(nPlayerID):IsAlive() or PlayerResource:GetSelectedHeroEntity(nPlayerID):GetRespawnTime() < 10 then
+                table.insert(vAliveTeams, nTeamID)
              end
 		  end
 	    end
@@ -517,12 +527,18 @@ function GameMode:UpdateScoreboard()
 		table.insert( sortedTeams,sortedTeam)
 	end
     
+    RemoveRepeated(vAliveTeams)
+
+    --终极进化阶段 只剩唯一队伍
+    if GameRules.bUltimateStage and #vAliveTeams==1 then
+      --获胜
+      GameRules:SetGameWinner(vAliveTeams[1])
+    end
  
 	-- reverse-sort by score
 	table.sort( sortedTeams, function(a,b) return ( a.teamScore > b.teamScore ) end )
 
 end
-
 ---------------------------------------------------------------------------
 -- Update player labels and the scoreboard
 ---------------------------------------------------------------------------
@@ -531,7 +547,7 @@ function GameMode:OnThink()
 		self:UpdatePlayerColor( nPlayerID )
 	end
 	
-	self:UpdateScoreboard()
+	self:UpdateScoreboardAndVictory()
 	-- Stop thinking if game is paused
 	if GameRules:IsGamePaused() == true then
         return 1

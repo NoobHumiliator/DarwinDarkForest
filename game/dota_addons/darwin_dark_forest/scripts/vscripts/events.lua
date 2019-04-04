@@ -48,7 +48,6 @@ function GameMode:OnPlayerPickHero(keys)
     	hHero:RemoveAbility("empty"..i)
     end
     hHero.nCurrentCreepLevel=1
-
     Evolve(nPlayerId,hHero)
 end
 
@@ -70,11 +69,11 @@ function GameMode:OnEntityKilled(keys)
        local nPlayerId = hKillerUnit:GetMainControllingPlayer()
        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
 
-       --消除野怪户籍
-       NeutralSpawner.nCreaturesNumber=NeutralSpawner.nCreaturesNumber-1
-
-       NeutralSpawner.vCreatureLevelMap[hKilledUnit.nCreatureLevel]=NeutralSpawner.vCreatureLevelMap[hKilledUnit.nCreatureLevel]-1
-       
+       --消除野怪户籍 (被击杀单位不是野怪的召唤生物)      
+       if hKilledUnit.nCreatureLevel then
+           NeutralSpawner.nCreaturesNumber=NeutralSpawner.nCreaturesNumber-1
+           NeutralSpawner.vCreatureLevelMap[hKilledUnit.nCreatureLevel]=NeutralSpawner.vCreatureLevelMap[hKilledUnit.nCreatureLevel]-1
+       end
 
        local tempPerksMap = {0,0,0,0,0,0}
 
@@ -141,7 +140,11 @@ function GameMode:OnEntityKilled(keys)
        end
 
        --给玩家经验
-       hHero.nCustomExp=hHero.nCustomExp+vCREEP_EXP_TABLE[hKilledUnit.nCreatureLevel] 
+       if hKilledUnit.nCreatureLevel then
+         hHero.nCustomExp=hHero.nCustomExp+vCREEP_EXP_TABLE[hKilledUnit.nCreatureLevel] 
+       else
+         hHero.nCustomExp=hHero.nCustomExp+vCREEP_EXP_TABLE[hKilledUnit:GetLevel()] 
+       end
        
        --计算等级
        local nNewLevel=CalculateNewLevel(hHero)
@@ -181,13 +184,16 @@ function GameMode:OnEntityKilled(keys)
            if hHero.nCustomExp<1 then
               hHero.nCustomExp=1
            end
-           --计算等级
-           local nNewLevel=CalculateNewLevel(hHero)
-           hHero.nCurrentCreepLevel=nNewLevel
            --击杀英雄
            hHero:Kill(nil, hKillerUnit)
            GameMode:PutStartPositionToRandomPosForTeam(hHero:GetTeamNumber());
-           hHero:SetTimeUntilRespawn(5)
+
+           -- 终极进化阶段不能再重生
+           if GameRules.bUltimateStage then
+              hHero:SetTimeUntilRespawn(5)
+           else
+              hHero:SetTimeUntilRespawn(99999999999)
+           end
             --计算等级
            local nNewLevel=CalculateNewLevel(hHero)
            hHero.nCurrentCreepLevel=nNewLevel
@@ -229,6 +235,10 @@ function GameMode:OnNPCSpawned( event )
               PlayerResource:SetCameraTarget(nPlayerId,nil) 
             end
         })
+
+        --计算等级
+        local nNewLevel=CalculateNewLevel(hSpawnedUnit)
+        hSpawnedUnit.nCurrentCreepLevel=nNewLevel
         
         Evolve(nPlayerId,hSpawnedUnit)
     end
@@ -294,8 +304,8 @@ function GameMode:OnPlayerSay(keys)
                --计算等级
              local nNewLevel=CalculateNewLevel(hHero)
              
-             --如果升级了 进化
-             if nNewLevel~=hHero.nCurrentCreepLevel then
+             --如果升级了 并且不是死亡状态（处理召唤生物杀人）
+             if nNewLevel~=hHero.nCurrentCreepLevel and hHero:IsAlive() then
                 
                 --播放进化声音
                 EmitSoundOn('General.LevelUp.Bonus',hHero) 

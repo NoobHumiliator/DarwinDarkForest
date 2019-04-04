@@ -19,17 +19,6 @@ local vHuntDownRight= {x=3357,y=-2000}
 
 
 
-local vLevelRatio ={}
-
-vLevelRatio["courier"]=0.5 --这是信使的比例
---key是与玩家等级差距 value是比例 
-vLevelRatio[-1]=0.2
-vLevelRatio[0]=0.14
-vLevelRatio[1]=0.09
-vLevelRatio[2]=0.06
-vLevelRatio[3]=0.04
-vLevelRatio[4]=0.02
-
 if NeutralSpawner == nil then
   NeutralSpawner = {}
   NeutralSpawner.__index = NeutralSpawner
@@ -42,7 +31,7 @@ function NeutralSpawner:Init()
   end
 
   self.nCreaturesNumber = 0
-  self.vCreatureLevelMap = {0,0,0,0,0,0,0,0,0,0}
+  self.vCreatureLevelMap = {0,0,0,0,0,0,0,0,0,0,0,0,0,0}
   self.vCreatureLevelMap[0]=0
 
   self.flTimeInterval = 0.5 --刷怪间隔
@@ -66,9 +55,9 @@ function NeutralSpawner:Begin()
     --根据间隔刷怪
     Timers:CreateTimer(1, function()
         NeutralSpawner:SpawnOneCreature()
-        --print("NeutralSpawner.nCreaturesNumber"..NeutralSpawner.nCreaturesNumber)
-        --print("NeutralSpawner.flTimeInterval"..NeutralSpawner.flTimeInterval)
-        if NeutralSpawner.nCreaturesNumber<80 then
+        print("NeutralSpawner.nCreaturesNumber"..NeutralSpawner.nCreaturesNumber)
+        print("NeutralSpawner.flTimeInterval"..NeutralSpawner.flTimeInterval)
+        if NeutralSpawner.nCreaturesNumber<100 then
            NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval/2
            --位置最小刷怪间隔 防止太卡
            if NeutralSpawner.flTimeInterval<0.1 then
@@ -77,8 +66,8 @@ function NeutralSpawner:Begin()
         else
            NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval*2
            --设置一个最大刷怪间隔
-           if NeutralSpawner.flTimeInterval>30 then
-              NeutralSpawner.flTimeInterval=30
+           if NeutralSpawner.flTimeInterval>20 then
+              NeutralSpawner.flTimeInterval=20
            end
         end
 
@@ -107,16 +96,86 @@ function NeutralSpawner:SpawnOneCreature()
 
    local nAverageLevel = math.floor(nTotalLevel/nTotalHero + 0.5) --四舍五入
    
-   --如果一级的话 调高信使比例
+   --比例
+   local vLevelRatio ={}
+   vLevelRatio["courier"]=0.55 --这是信使的比例
+  --key是与玩家等级差距 value是比例
+   vLevelRatio[-3]=0.05
+   vLevelRatio[-2]=0.08
+   vLevelRatio[-1]=0.12
+   vLevelRatio[0]=0.09
+   vLevelRatio[1]=0.05
+   vLevelRatio[2]=0.03
+   vLevelRatio[3]=0.02
+   vLevelRatio[4]=0.01
+
+
+   --1级 调高信使比例
    if nAverageLevel==1 then
-      vLevelRatio["courier"]=0.7
-   else
-      vLevelRatio["courier"]=0.5
+      vLevelRatio["courier"]=0.80
    end
+
+   --2级 调高信使比例
+   if nAverageLevel==2 then
+      vLevelRatio["courier"]=0.68
+   end
+   
+   --3级 调高信使比例
+   if nAverageLevel==3 then
+      vLevelRatio["courier"]=0.60
+   end
+
+
+   if nAverageLevel==7 then
+     vLevelRatio[-3]=0.05
+     vLevelRatio[-2]=0.09
+     vLevelRatio[-1]=0.13
+     vLevelRatio[0]=0.10
+     vLevelRatio[1]=0.05
+     vLevelRatio[2]=0.02
+     vLevelRatio[3]=0.01
+     vLevelRatio[4]=0.00
+   end
+
+   
+   if nAverageLevel==8 then
+     vLevelRatio[-3]=0.05
+     vLevelRatio[-2]=0.09
+     vLevelRatio[-1]=0.13
+     vLevelRatio[0]=0.09
+     vLevelRatio[1]=0.05
+     vLevelRatio[2]=0.02
+     vLevelRatio[3]=0.01
+     vLevelRatio[4]=0.00
+   end
+
+   if nAverageLevel==9 then
+      vLevelRatio[-3]=0.05
+      vLevelRatio[-2]=0.12
+      vLevelRatio[-1]=0.15
+      vLevelRatio[0]=0.09
+      vLevelRatio[1]=0.03
+      vLevelRatio[2]=0.01
+      vLevelRatio[3]=0.00
+      vLevelRatio[4]=0.00
+   end
+
+   if nAverageLevel==10 then
+      vLevelRatio[-3]=0.05
+      vLevelRatio[-2]=0.13
+      vLevelRatio[-1]=0.17
+      vLevelRatio[0]=0.07
+      vLevelRatio[1]=0.03
+      vLevelRatio[2]=0.00
+      vLevelRatio[3]=0.00
+      vLevelRatio[4]=0.00
+   end 
+
 
    --print("Player's Average Level is:"..nAverageLevel)
    local vTemp={} --随机池
 
+   --优先保证信使数量
    if self.nCreaturesNumber==0  or self.vCreatureLevelMap[0]/(self.nCreaturesNumber) <= vLevelRatio["courier"]  then --第一只怪或者信使不足   先信使里面刷
        for sUnitName,vData in pairs(GameRules.vUnitsKV) do
            --print(vData)
@@ -127,9 +186,10 @@ function NeutralSpawner:SpawnOneCreature()
            end
        end
    else 
-        --从队伍平均等级 -1 到 +3开始遍历 
-        for i=nAverageLevel-1,nAverageLevel+3 do
+        --从队伍平均等级 +4 到 -3 倒叙遍历 (保证高等级怪物的即时补充)
+        for i=nAverageLevel+4,nAverageLevel-3,-1 do
              --如果某个等级怪物不足 补足此等级怪物
+             print("Ratio"..self.vCreatureLevelMap[i]/(self.nCreaturesNumber).."i"..i)
              if  self.vCreatureLevelMap[i]/(self.nCreaturesNumber) <= vLevelRatio[i-nAverageLevel] then
                  for sUnitName,vData in pairs(GameRules.vUnitsKV) do
                      if vData and type(vData) == "table" then
@@ -140,11 +200,14 @@ function NeutralSpawner:SpawnOneCreature()
                          end
                      end
                  end
-                break
+                 if #vTemp>0 then
+                   print("To Spawn Creature Level:"..i)
+                   break
+                 end
              end
         end
    end
-
+   
    --- 刷怪逻辑
    if #vTemp>0 then
       local sUnitName=vTemp[RandomInt(1, #vTemp)]
@@ -204,7 +267,7 @@ function GetRandomValidPositionForCreature( vData )
     if vData.nHunt>0 then
         table.insert(vType, 6)
     end
-
+    
     if #vType>0 then
        
        local nDice=RandomInt(1, #vType)

@@ -19,6 +19,7 @@ function modifier_creature_passive:DeclareFunctions()
 	local funcs = 
 	{
 		MODIFIER_EVENT_ON_TAKEDAMAGE,
+		MODIFIER_PROPERTY_PROVIDES_FOW_POSITION
 	}
 	return funcs
 end
@@ -36,5 +37,17 @@ function modifier_creature_passive:OnTakeDamage (event)
         end
 
 	end
+end
+-----------------------------------------------------------------------------------
+
+
+function modifier_creature_passive:GetModifierProvidesFOWVision()
+       
+     if self:GetParent():GetLevel()==10 then
+        return 1
+     else
+     	return 0
+     end
+
 end
 -----------------------------------------------------------------------------------

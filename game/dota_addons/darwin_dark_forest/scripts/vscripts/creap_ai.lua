@@ -16,6 +16,7 @@ function Spawn( entityKeyValues )
 		local nLevel= thisEntity:GetLevel()     
 		thisEntity:SetHullRadius(10+nLevel*4)  --体型跟随等级线性增加 10到50
 	end
+    
 
     --被攻击时间
     thisEntity:AddNewModifier(thisEntity, nil, "modifier_creature_passive", {})
@@ -76,8 +77,10 @@ function CheckIfHasAggro()
 
 	--如果有追击目标
 	if thisEntity:GetAggroTarget() ~= nil then
-		--尝试释放技能
-         CastAbility(thisEntity:GetAggroTarget())
+		--尝试释放技能 11级生物技能毁天灭地 所以跳过释放
+		 if thisEntity:GetLevel()<11 then
+		 	CastAbility(thisEntity:GetAggroTarget())
+	     end
         --切换追击状态 此时视为被玩家捅了一下
         if not thisEntity.bChasing then
         	thisEntity.bChasing=true

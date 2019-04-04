@@ -198,3 +198,15 @@ function string.trim(s)
     return s:match "^%s*(.-)%s*$"
 end
 
+--数组去重
+function RemoveRepeated(a)
+    for k,v in pairs(a) do
+        local count=0
+        for j in pairs(a)do count=count+1 end
+        for i=k+1,count do
+            if v==a[i] then
+                table.remove(a,i)
+            end
+        end
+    end
+end

@@ -93,6 +93,182 @@
 
 
     //Summon 
+    "npc_dota_creature_small_storegga"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/heroes/tiny_01/tiny_01.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"Level"						"3"
+		"ModelScale" 				"1.1"
+		"IsSummoned"                "1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"mud_golem_hurl_boulder_lua"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"
+		"MagicalResistance"			"0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"170"
+		"AttackDamageMax"			"180"
+		"AttackRate"				"1.3"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			""
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"50"
+		"HealthBarOffset"			"130"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"390"
+		"MovementTurnRate"			"0.5"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"
+		"StatusHealthRegen"			"1.0"
+		"StatusMana"				"300"
+		"StatusManaRegen"			"2.0"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"
+		"VisionNighttimeRange"		"800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Creature Data
+		//----------------------------------------------------------------------------------------------------------------------
+		"Creature"
+		{	
+
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"6866" // head: Elemental Ice Head
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"494" // armor: default
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"6868" // arms: Elemental Ice Left Arm
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"6867" // offhand_weapon: Elemental Ice Right Arm
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"6869" // armor: Elemental Ice Body
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"516" // ambient_effects: default
+				}
+			}
+		}
+	}
+
+
+
+    "npc_dota_creature_shard_split"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"						"models/creeps/neutral_creeps/n_creep_golem_b/n_creep_golem_b.vmdl"	// Model.
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale"				"0.5"
+		"Level"						"1"
+		
+		"nDurable"                   "1"
+		"IsSummoned"                 "1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"mud_golem_hurl_boulder_lua" // Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"			"10"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"1"		// Damage range min.
+		"AttackDamageMax"			"1"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
+		"ProjectileModel"			"" // Particle system model for projectile.
+		"ProjectileSpeed"			""			// Speed of projectile.
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"40"
+		"HealthBarOffset"			"160"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"250"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"		// Base health.
+		"StatusHealthRegen"			"0.1"		// Health regeneration rate.
+		"StatusMana"				"100"		// Base mana.
+		"StatusManaRegen"			"1"			// Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+	}
+
 
     "npc_dota_zeus_cloud"
 	{
@@ -196,7 +372,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"visage_summon_familiars_stone_form"
-		"Ability2"					"familiars_passive"
+		"Ability2"					""
 
 		// Armor
 		//----------------------------------------------------------------
@@ -574,7 +750,7 @@
 		"Model"						"models/courier/baby_winter_wyvern/baby_winter_wyvern.vmdl"	// Model.
 		"SoundSet"					"n_creep_Melee"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.6"
+		"ModelScale"				"0.5"
 		"Level"						"1"
 		
         "nElement"                  "4"
@@ -610,7 +786,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"30"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -652,7 +828,7 @@
 		"Model"						"models/items/courier/echo_wisp/echo_wisp.vmdl"	// Model.
 		"SoundSet"					"n_creep_Melee"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.6"
+		"ModelScale"				"0.5"
 		"Level"						"1"
 		
         "nMystery"                  "4"
@@ -688,7 +864,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"30"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -730,7 +906,7 @@
 		"Model"						"models/items/courier/deathripper/deathripper.vmdl"	// Model.
 		"SoundSet"					"n_creep_Melee"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.6"
+		"ModelScale"				"0.5"
 		"Level"						"1"
 		
         "nDecay"                    "4"
@@ -766,7 +942,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"30"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -808,7 +984,7 @@
 		"Model"						"models/items/courier/deathbringer/deathbringer.vmdl"	// Model.
 		"SoundSet"					"n_creep_Melee"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.6"
+		"ModelScale"				"0.5"
 		"Level"						"1"
 		
         "nFury"                     "4"
@@ -844,7 +1020,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"30"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -886,7 +1062,7 @@
 		"Model"						"models/items/courier/nexon_turtle_01_grey/nexon_turtle_01_grey.vmdl"	// Model.
 		"SoundSet"					"n_creep_Melee"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.6"
+		"ModelScale"				"0.5"
 		"Level"						"1"
 		
         "nDurable"                  "4"
@@ -922,7 +1098,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"30"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -965,7 +1141,7 @@
 		"Model"						"models/items/courier/snowl/snowl.vmdl"	// Model.
 		"SoundSet"					"n_creep_Melee"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.6"
+		"ModelScale"				"0.5"
 		"Level"						"1"
 		
         "nHunt"                     "4"
@@ -1001,7 +1177,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"30"
 		"HealthBarOffset"			"160"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
 
@@ -1053,7 +1229,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"mud_golem_hurl_boulder_lua" // Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability2"					"durable_shard_split"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -1061,7 +1237,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-		"AbilitiesLevel"            "2"
+		"AbilitiesLevel"            "2 1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -2025,7 +2201,7 @@
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/broodmother/spiderling/lycosidae_spiderling/lycosidae_spiderling.vmdl"	// Model.
 		"SoundSet"					"n_creep_Melee"
-		"ModelScale"				"0.4"
+		"ModelScale"				"0.3"
 		"Level"						"2"
 		
 		"nHunt"                     "2"
@@ -2502,7 +2678,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"mud_golem_hurl_boulder_lua" // Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability2"					"durable_shard_split"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -2510,7 +2686,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-		"AbilitiesLevel"            "3"
+		"AbilitiesLevel"            "3 2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -3251,8 +3427,6 @@
 		}
 	}
 
-
-
     
     "npc_dota_creature_coconut"
 	{										
@@ -3262,7 +3436,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"3"
-		"ModelScale" 				"1"
+		"ModelScale" 				"0.8"
 
 		"vscripts"					"creap_ai.lua"
 
@@ -3475,7 +3649,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"mud_golem_hurl_boulder_lua"            // Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability2"					"durable_shard_split"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -3483,7 +3657,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -4409,13 +4583,13 @@
         
         "vscripts"					"creap_ai.lua"
 
-        "nElement"                  "6"
+        "nDecay"                    "6"
         "nMystery"                  "6"
 
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"visage_summon_familiars_stone_form"			// Ability 1
-		"Ability2"					"familiars_passive"			// Ability 2
+		"Ability2"					""			// Ability 2
 		"Ability3"					""
 		"Ability4"					""
 
@@ -5830,7 +6004,7 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/broodmother/spiderling/araknarok_broodmother_araknarok_spiderling/araknarok_broodmother_araknarok_spiderling.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Broodmother"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"0.6"
 		"Level"						"4"
@@ -6640,7 +6814,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"visage_summon_familiars_stone_form"			// Ability 1
-		"Ability2"					"familiars_passive"			// Ability 2
+		"Ability2"					""			// Ability 2
 		"Ability3"					""
 		"Ability4"					""
 
@@ -7951,7 +8125,7 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/items/broodmother/spiderling/perceptive_spiderling/perceptive_spiderling.vmdl"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"Hero_Broodmother"
 		"Level"						"5"
 		"ModelScale" 				"0.7"
 
@@ -8257,7 +8431,7 @@
 		// 
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/creeps/darkreef/meranth_guard/meranth_guard.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Slardar"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"5"
@@ -8285,7 +8459,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"52"		// Damage range min.
 		"AttackDamageMax"			"59"		// Damage range max.
 		"AttackRate"				"1.0"		// Speed of attack.
@@ -8336,7 +8510,7 @@
 		// 
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/broodmother/spiderling/thistle_crawler/thistle_crawler.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Broodmother"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"0.7"
 		"Level"						"5"
@@ -9785,7 +9959,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"visage_summon_familiars_stone_form"			// Ability 1
-		"Ability2"					"familiars_passive"			// Ability 2
+		"Ability2"					""			// Ability 2
 		"Ability3"					""
 		"Ability4"					""
 
@@ -9888,7 +10062,7 @@
 		"ProjectileSpeed"			"0"			// Speed of projectile.		
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"240"
 
 		// Movement
@@ -9966,7 +10140,7 @@
 		"ProjectileSpeed"			"1000"		// Speed of projectile.
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -10048,7 +10222,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -10124,7 +10298,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -10197,7 +10371,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"190"
 
 
@@ -10268,7 +10442,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -10346,7 +10520,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -10425,7 +10599,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -10503,7 +10677,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -10583,7 +10757,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -10662,7 +10836,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"70"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -10701,7 +10875,7 @@
 		// 
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/broodmother/spiderling/elder_blood_heir_of_elder_blood/elder_blood_heir_of_elder_blood.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Broodmother"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"0.8"
 		"Level"						"6"
@@ -10779,7 +10953,7 @@
 		// 
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/broodmother/spiderling/the_glacial_creeper_creepling/the_glacial_creeper_creepling.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Broodmother"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"0.8"
 		"Level"						"6"
@@ -10859,7 +11033,7 @@
 		// 
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/broodmother/spiderling/spiderling_dlotus_red/spiderling_dlotus_red.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Broodmother"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1.0"
 		"Level"						"6"
@@ -11283,7 +11457,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"65"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -11326,6 +11500,77 @@
     //-----------------------------------------
 	//   Level-7
 	//-----------------------------------------
+    
+    "npc_dota_creature_arachne_spider"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/items/broodmother/spiderling/ti8_brood_the_great_arachne_spiderling/ti8_brood_the_great_arachne_spiderling.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Broodmother"
+		"Level"						"8"
+		"ModelScale" 				"1.0"
+		"vscripts"					"creap_ai.lua"
+         
+        "nHunt"                     "24"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"dark_troll_warlord_ensnare"			// Ability 1
+		"Ability2"					""	        // Ability 2
+		"Ability3"					""	        // Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"108"		// Damage range min.
+		"AttackDamageMax"			"116"		// Damage range max.
+		"AttackRate"				"1.0"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"128"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"	        
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"360"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"385"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1550"		// Base health.
+		"StatusHealthRegen"			"7"		// Health regeneration rate.
+		"StatusMana"				"450"			// Base mana.
+		"StatusManaRegen"			"2.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+
 
 	"npc_dota_creature_slark_2"
 	{
@@ -11376,7 +11621,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -11440,7 +11685,7 @@
 		// 
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/broodmother/spiderling/the_glacial_creeper_creepling/the_glacial_creeper_creepling.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Broodmother"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"0.9"
 		"Level"						"7"
@@ -11479,7 +11724,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"65"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -11556,7 +11801,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -11629,7 +11874,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"360"
 
 
@@ -11714,7 +11959,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"360"
 
 
@@ -11789,7 +12034,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"65"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -11864,7 +12109,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"190"
 
 
@@ -11934,7 +12179,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -12003,7 +12248,7 @@
 		"ProjectileSpeed"			"0"			// Speed of projectile.		
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"240"
 
 		// Movement
@@ -12079,7 +12324,7 @@
 		"ProjectileSpeed"			"0"		// Speed of projectile.
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"240"
 
 		// Movement
@@ -12148,7 +12393,7 @@
 		"ProjectileSpeed"			"0"		// Speed of projectile.
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"240"
 
 		// Movement
@@ -12194,7 +12439,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"visage_summon_familiars_stone_form"
-		"Ability2"					"familiars_passive"
+		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
 
@@ -12216,7 +12461,7 @@
 		"ProjectileSpeed"			"900"		// Speed of projectile.
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"240"
 
 		// Movement
@@ -12283,7 +12528,7 @@
 		"ProjectileSpeed"			"1000"		// Speed of projectile.
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -12360,7 +12605,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"180"
 
 		// Movement
@@ -12442,7 +12687,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"80"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"220"
 
 		// Movement
@@ -12513,7 +12758,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"80"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"220"
 
 		// Movement
@@ -12585,7 +12830,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"80"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"220"
 
 		// Movement
@@ -12629,7 +12874,7 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/creeps/darkreef/prisoner_swoledar/prisoner_swoledar03.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Slardar"
 
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
@@ -12670,7 +12915,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -12743,7 +12988,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -12779,14 +13024,15 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/broodmother/spiderling/amber_queen_spiderling_2/amber_queen_spiderling_2.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Broodmother"
 
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"0.9"
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
 
-		"nHunt"                    "24"
+		"nHunt"                     "12"
+		"nDurable"                  "4"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -12820,7 +13066,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -12896,7 +13142,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -12975,7 +13221,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -13114,7 +13360,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"190"
 
 
@@ -13183,7 +13429,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"190"
 
 
@@ -13252,7 +13498,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"190"
 
 
@@ -13320,7 +13566,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"190"
 
 
@@ -13390,7 +13636,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"70"
 		"HealthBarOffset"			"190"
 
 
@@ -13422,6 +13668,102 @@
     //-----------------------------------------
 	//   Level-8
 	//-----------------------------------------
+
+	"npc_dota_creature_broodmother"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/broodmother/broodmother.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Broodmother"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+         
+        "nHunt"                     "28"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"7"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"139"		// Damage range min.
+		"AttackDamageMax"			"156"		// Damage range max.
+		"AttackRate"				"0.9"		// Speed of attack.
+		"AttackAnimationPoint"		"0.2"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"90"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"400"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"4100"		// Base health.
+		"StatusHealthRegen"			"20"		// Health regeneration rate.
+		"StatusMana"				"550"	    // Base mana.
+		"StatusManaRegen"			"5.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"101"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"102"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"103"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"565"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"566"
+				}
+	        }
+		}
+	}
 
     "npc_dota_creature_spirit_breaker"
 	{
@@ -13473,7 +13815,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -13587,7 +13929,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -13690,7 +14032,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"65"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -13769,7 +14111,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"190"
 
 
@@ -13865,7 +14207,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"190"
 
 
@@ -13964,7 +14306,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"190"
 
 
@@ -14059,7 +14401,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"190"
 
 
@@ -14170,7 +14512,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -14265,7 +14607,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -14358,7 +14700,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -14429,7 +14771,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"190"
 
 
@@ -14525,7 +14867,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"190"
 
 
@@ -14595,7 +14937,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"190"
 
 
@@ -14666,7 +15008,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -14739,7 +15081,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -14839,7 +15181,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -14868,75 +15210,7 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
 
-	"npc_dota_creature_arachne_spider"	
-	{
-		// General
-		//----------------------------------------------------------------
-		"Model"						"models/items/broodmother/spiderling/ti8_brood_the_great_arachne_spiderling/ti8_brood_the_great_arachne_spiderling.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creature"
-		"SoundSet"		            "Hero_Broodmother"
-		"Level"						"8"
-		"ModelScale" 				"1.0"
-		"vscripts"					"creap_ai.lua"
-         
-        "nHunt"                     "28"
-
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"dark_troll_warlord_ensnare"			// Ability 1
-		"Ability2"					""	        // Ability 2
-		"Ability3"					""	        // Ability 3
-		"Ability4"					""			// Ability 4
-
-		"AbilitiesLevel"            "6"
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"3"			// Physical protection.
-		"MagicalResistance"         "0"
-
-		// Attack
-		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"182"		// Damage range min.
-		"AttackDamageMax"			"196"		// Damage range max.
-		"AttackRate"				"1.0"
-		"AttackAnimationPoint"		"0.3"
-		"AttackAcquisitionRange"	"1200"
-		"AttackRange"				"128"
-		"ProjectileModel"			""
-		"ProjectileSpeed"			"0"	        
-
-		// Bounds
-		//----------------------------------------------------------------
-		"RingRadius"				"100"
-		"HealthBarOffset"			"360"
-
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"385"		// Speed.			
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"1850"		// Base health.
-		"StatusHealthRegen"			"9"		// Health regeneration rate.
-		"StatusMana"				"500"			// Base mana.
-		"StatusManaRegen"			"4.5"		// Mana regeneration rate.		 
-		
-		// Vision
-		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"800"		// Range of vision during day light.
-		"VisionNighttimeRange"		"800"		// Range of vision at night time.
-
-		// Team
-		//----------------------------------------------------------------
-		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-	}
+	
 
 	"npc_dota_creature_gaoler"	
 	{
@@ -14978,7 +15252,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -15048,7 +15322,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -15119,7 +15393,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -15208,7 +15482,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -15282,7 +15556,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -15355,7 +15629,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -15423,7 +15697,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -15516,7 +15790,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -15595,7 +15869,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -15677,7 +15951,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
@@ -15747,7 +16021,7 @@
 		"IdleSoundLoop"		        "Hero_Visage.IdleLoop"
 
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_visage.vsndevts"
-		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_visage.vsndevts"
+		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_visage.vsndevts"
 
 		"Level"						"8"
 		"ModelScale" 				"1"
@@ -15782,13 +16056,13 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
 
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
 		"MovementSpeed"				"310"		// Speed.			
 
 		// Status
@@ -15862,7 +16136,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -15966,7 +16240,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -16067,7 +16341,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -16167,7 +16441,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -16269,7 +16543,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -16377,7 +16651,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -16475,7 +16749,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -16569,7 +16843,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -16662,7 +16936,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -16764,7 +17038,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -16858,7 +17132,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -16949,7 +17223,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -17024,7 +17298,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -17105,7 +17379,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -17182,7 +17456,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -17282,7 +17556,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -17377,7 +17651,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -17407,18 +17681,22 @@
 	}
 
 
-	"npc_dota_creature_broodmother"
+	"npc_dota_creature_broodmother_glutton_larder"
 	{
         // General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/broodmother/broodmother.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"Hero_Broodmother"
 		"Level"						"9"
-		"ModelScale" 				"1.0"
+		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
          
         "nHunt"                     "32"
+
+        "VoiceFile"		        "soundevents/voscripts/game_sounds_vo_broodmother.vsndevts"
+		"particle_folder"		"particles/units/heroes/hero_broodmother"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_broodmother.vsndevts"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -17441,15 +17719,14 @@
 		"AttackRate"				"0.9"		// Speed of attack.
 		"AttackAnimationPoint"		"0.2"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRange"				"138"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
-
 
 		// Movement
 		//----------------------------------------------------------------
@@ -17481,23 +17758,19 @@
 	        {
 	           "Wearable1"
 				{
-					"ItemDef"			"101"
+					"ItemDef"			"8562"
 				}
 				"Wearable2"
 				{
-					"ItemDef"			"102"
+					"ItemDef"			"8563"
 				}
 				"Wearable3"
 				{
-					"ItemDef"			"103"
+					"ItemDef"			"8564"
 				}
 				"Wearable4"
 				{
-					"ItemDef"			"565"
-				}
-				"Wearable5"
-				{
-					"ItemDef"			"566"
+					"ItemDef"			"8565"
 				}
 	        }
 		}
@@ -17545,7 +17818,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -17655,7 +17928,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -17725,7 +17998,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -17792,7 +18065,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -17862,7 +18135,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"190"
 
 
@@ -17933,7 +18206,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"360"
 
 
@@ -18034,7 +18307,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"100"
+		"RingRadius"				"90"
 		"HealthBarOffset"			"360"
 
 		// Movement
@@ -18144,7 +18417,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"160"
 
 		// Movement
@@ -18247,7 +18520,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -18347,7 +18620,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -18449,7 +18722,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -18550,7 +18823,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -18650,7 +18923,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -18748,7 +19021,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"170"
 
 		// Movement
@@ -18933,7 +19206,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -19005,7 +19278,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"110"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -19084,7 +19357,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"			// Hull type used for navigation/locomotion.
-		"RingRadius"				"110"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"400"
 
 		// Movement
@@ -19113,7 +19386,7 @@
 	}
 
 
-	"npc_dota_creature_storegga"
+	"npc_dota_creature_storegga_1"
 	{
         // General
 		//----------------------------------------------------------------
@@ -19129,8 +19402,8 @@
   
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability1"					"storegga_melee_smash"
+		"Ability2"					"storegga_ground_pound"
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
@@ -19153,7 +19426,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -19227,7 +19500,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -19330,7 +19603,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -19400,7 +19673,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"npc_dota_creature_arachne_spider"			// Ability 1
+		"Ability1"					""			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
@@ -19426,7 +19699,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 		// Movement
@@ -19522,7 +19795,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -19600,7 +19873,7 @@
 		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_undying.vsndevts"
 
 		"Level"						"10"
-		"ModelScale" 				"1.3"
+		"ModelScale" 				"1.25"
 		"vscripts"					"creap_ai.lua"
          
         "nDecay"                    "36"
@@ -19625,13 +19898,13 @@
 		"AttackRate"				"1.7"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRange"				"138"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -19706,7 +19979,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -19814,7 +20087,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -19889,7 +20162,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -19959,7 +20232,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 		// Movement
@@ -20097,11 +20370,11 @@
 		"Model"						"models/heroes/ancient_apparition/ancient_apparition.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_ancient_apparition"
-		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts"
-		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_ancient_apparition.vsndevts"
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_ancient_apparition.vsndevts"
 
 		"Level"						"10"
-		"ModelScale" 				"1"
+		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
          
         "nElement"                  "36"
@@ -20132,7 +20405,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"60"
+		"RingRadius"				"100"
 		"HealthBarOffset"			"190"
 
 
@@ -20187,5 +20460,557 @@
 		}
 	}
 
+    // Level-11
+	"npc_dota_creature_storm_spirit"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/storm_spirit/storm_spirit.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_StormSpirit"
+		"GameSoundsFile"	    	"soundevents/game_sounds_heroes/game_sounds_stormspirit.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_stormspirit.vsndevts"
+
+		"Level"						"11"
+		"ModelScale" 				"1.5"
+         
+        "vscripts"					"creap_ai.lua"
+        "nElement"                  "40"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"storm_spirit_electric_vortex"			// Ability 1
+		"Ability2"					"storm_spirit_ball_lightning"			// Ability 2
+		"Ability3"					""			                            // Ability 3
+		"Ability4"					""			                            // Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"6"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"206"		// Damage range min.
+		"AttackDamageMax"			"216"		// Damage range max.
+		"AttackRate"	           	"1.700000"
+		"AttackAnimationPoint"		"0.500000"
+		"AttackAcquisitionRange"    "800"
+		"AttackRange"		        "480"
+		"ProjectileModel"		    "particles/units/heroes/hero_stormspirit/stormspirit_base_attack.vpcf"
+		"ProjectileSpeed"		    "1100"	     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"120"
+		"HealthBarOffset"			"190"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"390"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"30000"		// Base health.
+		"StatusHealthRegen"			"150"		// Health regeneration rate.
+		"StatusMana"				"18000"	    // Base mana.
+		"StatusManaRegen"			"175"	    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      	
+
+		    "DisableResistance"			"60.0"		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"308"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"309"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"310"
+				}
+	        }
+		}
+	}
+
+
+    "npc_dota_creature_nightstalker"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/nightstalker/nightstalker.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_NightStalker"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_night_stalker.vsndevts"
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_nightstalker.vsndevts"
+
+		"Level"						"11"
+		"ModelScale" 				"1.5"
+         
+        "vscripts"					"creap_ai.lua"
+        "nHunt"                     "40"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"night_stalker_hunter_in_the_night"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			                            // Ability 3
+		"Ability4"					""			                            // Ability 4
+
+        "AbilitiesLevel"            "9"
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"6"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"206"		// Damage range min.
+		"AttackDamageMax"			"216"		// Damage range max.
+        "AttackRate"		        "1.200000"
+		"AttackAnimationPoint"		"0.550000"
+		"AttackAcquisitionRange"    "600"
+		"AttackRange"		        "150"     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"120"
+		"HealthBarOffset"			"190"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"390"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"30000"		// Base health.
+		"StatusHealthRegen"			"150"		// Health regeneration rate.
+		"StatusMana"				"18000"	    // Base mana.
+		"StatusManaRegen"			"175"	    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{    
+
+			"DisableResistance"			"60.0"	
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"337"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"338"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"339"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"8661"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"8662"
+				}
+	        }
+		}
+
+	}
+
+	"npc_dota_creature_storegga_2"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/ice_biome/storegga/storegga.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Tiny"
+
+		"Level"						"11"
+		"ModelScale" 				"1.7"
+         
+        "vscripts"					"creap_ai.lua"
+        "nDurable"                  "40"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"storegga_melee_smash"
+		"Ability2"					"storegga_ground_pound"
+		"Ability3"					"storegga_throw_rock" 
+		"Ability4"					""
+
+        "AbilitiesLevel"            "2 2 1"
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"16"			// Physical protection.
+		"MagicalResistance"         "80"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"206"		// Damage range min.
+		"AttackDamageMax"			"216"		// Damage range max.
+        "AttackRate"		        "1.200000"
+		"AttackAnimationPoint"		"0.550000"
+		"AttackAcquisitionRange"    "600"
+		"AttackRange"		        "180"     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"120"
+		"HealthBarOffset"			"190"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"390"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"30000"		// Base health.
+		"StatusHealthRegen"			"150"		// Health regeneration rate.
+		"StatusMana"				"18000"	    // Base mana.
+		"StatusManaRegen"			"175"	    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{	
+			"DisableResistance"			"90.0"
+		}
+	}
+    
+
+    "npc_dota_creature_dark_seer"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"		                "models/heroes/dark_seer/dark_seer.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_DarkSeer"
+
+		"Level"						"11"
+		"ModelScale" 				"1.5"
+        
+
+        "vscripts"					"creap_ai.lua"
+        "nMystery"                  "40"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"dark_seer_surge"
+		"Ability2"					"dark_seer_vacuum"
+		"Ability3"					"" 
+		"Ability4"					""
+
+        "AbilitiesLevel"            "9 9"
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"16"			// Physical protection.
+		"MagicalResistance"         "80"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"206"		// Damage range min.
+		"AttackDamageMax"			"216"		// Damage range max.
+        "AttackRate"		        "1.200000"
+		"AttackAnimationPoint"		"0.550000"
+		"AttackAcquisitionRange"    "600"
+		"AttackRange"		        "180"     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"120"
+		"HealthBarOffset"			"190"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"390"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"30000"		// Base health.
+		"StatusHealthRegen"			"150"		// Health regeneration rate.
+		"StatusMana"				"18000"	    // Base mana.
+		"StatusManaRegen"			"175"	    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{	
+			"DisableResistance"			"60.0"
+			"AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"348"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"349"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"350"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"351"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"352"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"524"
+				}
+	        }
+		}
+	}
+
+
+	"npc_dota_creature_necrolyte_apostle_of_decay"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"		                "models/heroes/necrolyte/necrolyte.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Necrolyte"
+        "IdleSoundLoop"		        "Hero_Necrolyte.IdleLoop"
+
+		"Level"						"11"
+		"ModelScale" 				"1.5"
+        
+        "vscripts"					"creap_ai.lua"
+        "nDecay"                    "40"
+
+		// Abilities
+		//----------------------------------------------------------------
+		//竭心光环 代码里面加  
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					"" 
+		"Ability4"					""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"16"			// Physical protection.
+		"MagicalResistance"         "35"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"206"		// Damage range min.
+		"AttackDamageMax"			"216"		// Damage range max.
+		"AttackRate"		        "1.700000"
+		"AttackAnimationPoint"		"0.40000"
+		"AttackAcquisitionRange"    "800"
+		"AttackRange"		        "500"
+		"ProjectileModel"		    "particles/units/heroes/hero_necrolyte/necrolyte_base_attack.vpcf"
+		"ProjectileSpeed"		    "900"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"120"
+		"HealthBarOffset"			"190"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"450"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"30000"		// Base health.
+		"StatusHealthRegen"			"150"		// Health regeneration rate.
+		"StatusMana"				"18000"	    // Base mana.
+		"StatusManaRegen"			"175"	    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{	
+			"DisableResistance"			"60.0"
+			"AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"8927"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8928"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"8929"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"8930"
+				}
+	        }
+		}
+	}
+
+
+    "npc_dota_creature_ursa_razorwyrm"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"	               	    "models/heroes/ursa/ursa.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Ursa"
+
+		"Level"						"11"
+		"ModelScale" 				"1.5"
+        
+        "vscripts"					"creap_ai.lua"
+        "nFury"                     "40"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"spirit_breaker_charge_of_darkness"
+		"Ability2"					"ursa_overpower"
+		"Ability3"					"ursa_fury_swipes" 
+		"Ability4"					""
+
+		"AbilitiesLevel"            "9 9 9"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"16"			// Physical protection.
+		"MagicalResistance"         "35"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"412"		// Damage range min.
+		"AttackDamageMax"			"450"		// Damage range max.
+		"AttackRate"		        "1.7"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"    "500"
+		"AttackRange"		        "150"
+		"ProjectileModel"		    ""
+		"ProjectileSpeed"		    "0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"120"
+		"HealthBarOffset"			"190"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"415"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"30000"		// Base health.
+		"StatusHealthRegen"			"150"		// Health regeneration rate.
+		"StatusMana"				"18000"	    // Base mana.
+		"StatusManaRegen"			"175"	    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{	
+			"DisableResistance"			"40.0"
+			"AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"7920"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7921"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7922"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"7928"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"17045"
+				}
+	        }
+		}
+	}
 
 }	

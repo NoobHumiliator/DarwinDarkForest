@@ -46,6 +46,10 @@
     background-image: url("file://{images}/custom_game/perk_radar/green.png");
 }
 
+.DecayDot {
+    background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_broodmother_glutton_larder.png");
+}
+
 
 .PerkRadarContainer {
     position: 1430px 830px 0; 

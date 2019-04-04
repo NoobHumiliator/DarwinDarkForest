@@ -1,6 +1,11 @@
 modifier_zero_cooldown_and_mana_cost = class({})
 
 
+
+function modifier_zero_cooldown_and_mana_cost:GetTexture()
+	return "dazzle_bad_juju"
+end
+
 -----------------------------------------------------------------------------------
 function modifier_zero_cooldown_and_mana_cost:IsHidden()
 	return false
@@ -30,9 +35,9 @@ end
 ----------------------------------------------------------------
 
 function modifier_zero_cooldown_and_mana_cost:GetModifierPercentageManacost()
-	return 1
+	return 100
 end
 
 function modifier_zero_cooldown_and_mana_cost:GetModifierCooldownReduction_Constant()
-	return 99
+	return 100
 end
