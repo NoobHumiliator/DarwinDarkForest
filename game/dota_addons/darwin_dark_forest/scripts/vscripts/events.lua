@@ -190,9 +190,9 @@ function GameMode:OnEntityKilled(keys)
 
            -- 终极进化阶段不能再重生
            if GameRules.bUltimateStage then
-              hHero:SetTimeUntilRespawn(5)
-           else
               hHero:SetTimeUntilRespawn(99999999999)
+           else
+              hHero:SetTimeUntilRespawn(5)
            end
             --计算等级
            local nNewLevel=CalculateNewLevel(hHero)

@@ -1,6 +1,6 @@
 
 storegga_ground_pound = class({})
-LinkLuaModifier( "modifier_storegga_ground_pound_thinker", "modifiers/creatures/modifier_storegga_ground_pound_thinker", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_storegga_ground_pound_thinker", "creature_ability/modifier/modifier_storegga_ground_pound_thinker", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 
