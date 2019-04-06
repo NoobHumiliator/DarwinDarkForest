@@ -13,12 +13,6 @@ end
 
 function storegga_throw_rock:OnAbilityPhaseStart()
 	if IsServer() then
-		-- Cast Preview
-		self.nCastPreviewFX = ParticleManager:CreateParticle( "particles/dark_moon/darkmoon_creep_warning.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetCaster() )
-		ParticleManager:SetParticleControlEnt( self.nCastPreviewFX, 0, self:GetCaster(), PATTACH_ABSORIGIN_FOLLOW, nil, self:GetCaster():GetOrigin(), true )
-		ParticleManager:SetParticleControl( self.nCastPreviewFX, 1, Vector( 50, 50, 50 ) )
-		ParticleManager:SetParticleControl( self.nCastPreviewFX, 15, Vector( 25, 150, 255 ) )
-
 		self.hRockUnit = CreateUnitByName( "npc_dota_storegga_rock", self:GetCaster():GetAbsOrigin(), true, self:GetCaster(), self:GetCaster(), self:GetCaster():GetTeamNumber() )
 		if self.hRockUnit ~= nil then
 			-- Note: modifier_storegga_thrown keeps the rock attached to storegga's hand if the projectile doesn't exist, and otherwise
@@ -42,7 +36,6 @@ end
 
 function storegga_throw_rock:OnAbilityPhaseInterrupted()
 	if IsServer() then
-		ParticleManager:DestroyParticle( self.nCastPreviewFX, false )
 
 		UTIL_Remove( self.hRockUnit )
 	end
@@ -52,7 +45,6 @@ end
 
 function storegga_throw_rock:OnSpellStart()
 	if IsServer() then
-		ParticleManager:DestroyParticle( self.nCastPreviewFX, false )
 
 		self.throw_speed = self:GetSpecialValueFor( "throw_speed" )
 		self.impact_radius = self:GetSpecialValueFor( "impact_radius" )
@@ -62,19 +54,6 @@ function storegga_throw_rock:OnSpellStart()
 		self.knockback_damage = self:GetSpecialValueFor( "knockback_damage" )
 		self.knockback_height = self:GetSpecialValueFor( "knockback_height" )
 		self.children_to_spawn = self:GetSpecialValueFor( "children_to_spawn" )
-
-		if GameRules.holdOut.hFort then
-			self.hFort = GameRules.holdOut.hFort
-		else
-			local hFort = GameRules.holdOut.FindAndGetFort()
-			if hFort then
-				self.hFort = hFort
-			else
-				print( "ERROR - storegga_throw_rock: Could not set initial goal entity" )
-				self:Destroy()
-				return
-			end
-		end
 
 		if not self.hChildren then
 			self.hChildren = { }
@@ -205,10 +184,11 @@ function storegga_throw_rock:OnProjectileHit( hTarget, vLocation )
 			if hChild ~= nil and hChild:IsNull() == false then
 				table.insert( self.hChildren, hChild )
 				hChild:SetOwner( self:GetCaster() )
-				hChild:SetInitialGoalEntity( self.hFort )
 				hChild:SetDeathXP( 0 )
 				hChild:SetMinimumGoldBounty( 0 )
 				hChild:SetMaximumGoldBounty( 0 )
+				hChild:SetControllableByPlayer(self:GetCaster():GetMainControllingPlayer(), false)
+				hChild:AddNewModifier( self:GetCaster(), self, "modifier_kill", { duration = 20 } )
 				hChild:FindAbilityByName("mud_golem_hurl_boulder_lua"):SetLevel(1)
 			end
 		end

@@ -104,6 +104,9 @@
     "npc_dota_creature_skeleton_mage"                                               "骷髅法师"
     "npc_dota_creature_tombstone_zombie"                                            "僵尸"
     "npc_dota_creature_tombstone"                                                   "墓碑"
+    "npc_dota_storegga_rock"                                                        "巨岩"
+    "npc_dota_creature_small_storegga"                                              "磐石分裂体"
+
 
     //Level-0
     "npc_dota_courier_baby_winter_wyvern"                                           "冰龙宝宝"
@@ -278,9 +281,12 @@
     "npc_dota_creature_mystery_wolf"                                                "神秘狼灵"
     "npc_dota_creature_tentacular_conqueror_2"                                      "虚空信徒"
     "npc_dota_creature_satyr_prowler"                                               "萨特潜行先锋"
+    "npc_dota_creature_ogreseal_1"                                                  "海象"
+
 
    
     //Level-7
+    "npc_dota_creature_ogreseal_2"                                                  "海象"
     "npc_dota_creature_slark_2"                                                     "神秘海域夜行者"
     "npc_dota_creature_element_spider_2"                                            "元素蜘蛛"
     "npc_dota_creature_frostbitten_elder"                                           "霜牙长者"
@@ -408,7 +414,7 @@
     "npc_dota_creature_storegga_2"                                                  "上古磐石巨人"
     "npc_dota_creature_ursa_razorwyrm"                                              "龙鳞战熊"
     "npc_dota_creature_necrolyte_apostle_of_decay"                                  "腐朽天启"
-    "npc_dota_creature_dark_seer"                                                   "黑暗贤者"
+    "npc_dota_creature_dark_seer_imperial_relics"                                   "虚空帝皇"
     "npc_dota_creature_nightstalker"                                                "暗夜魔王"
     "npc_dota_creature_storm_spirit"                                                "风暴之灵"
 

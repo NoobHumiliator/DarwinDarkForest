@@ -3171,8 +3171,8 @@
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
         "AbilitySound"                  "Hero_Nightstalker.Darkness"
 
-        "MaxLevel"                      "8"
-         "nHunt"                         "8 16 24 32 40 48 56 64"
+        "MaxLevel"                      "9"
+         "nHunt"                        "8 16 24 32 40 48 56 64 99"
 
 
         // Stats
@@ -3180,7 +3180,7 @@
         "AbilityCastPoint"              "0.3"
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
 
-        "AbilityCooldown"               "140 130 120 110 100 90 80 70"
+        "AbilityCooldown"               "140 130 120 110 100 90 80 70 40"
         "AbilityManaCost"               "125"
             
         // Special
@@ -3195,7 +3195,7 @@
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "bonus_damage"          "75 100 125 150 175 200 225 250"
+                "bonus_damage"          "75 100 125 150 175 200 225 250 300"
             }
         }
     }
@@ -4190,7 +4190,7 @@
         
         // Damage.
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityDamage"                 "32"
+        "AbilityDamage"                 "68"
 
         // Special
         //-------------------------------------------------------------------------------------------------------------
@@ -4209,7 +4209,7 @@
             "03"
             {
                 "var_type"                          "FIELD_INTEGER"
-                "ball_lightning_move_speed"         "2500"        
+                "ball_lightning_move_speed"         "3000"        
             }
             "04"
             {
@@ -4219,12 +4219,12 @@
             "05"
             {
                 "var_type"                          "FIELD_INTEGER"
-                "ball_lightning_travel_cost_base"   "4"        
+                "ball_lightning_travel_cost_base"   "2"        
             }
             "06"
             {
                 "var_type"                              "FIELD_FLOAT"
-                "ball_lightning_travel_cost_percent"    "0.2"       
+                "ball_lightning_travel_cost_percent"    "0.15"       
             }
             "07"
             {
@@ -4341,7 +4341,7 @@
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCastRange"              "500"
+        "AbilityCastRange"              "300 500"
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_7"   // Activity
         "AnimationPlaybackRate"         "0.5"   // Animation speed multiplier
         "AnimationIgnoresModelScale"    "1"
@@ -4361,7 +4361,7 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "impact_radius"         "275 350"
+                "impact_radius"         "250 350"
             }
             "02"
             {
@@ -4405,7 +4405,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCooldown"               "20"
         "AbilityChannelTime"            "5.0"
-        "AbilityCastPoint"              "2.5"
+        "AbilityCastPoint"              "1.5"
 
         // Special
         //-------------------------------------------------------------------------------------------------------------
@@ -4429,7 +4429,7 @@
             "04"
             {
                 "var_type"              "FIELD_INTEGER"
-                "radius"                "500"
+                "radius"                "300 500"
             }
             "05"
             {
@@ -4450,22 +4450,23 @@
         "FightRecapLevel"               "1"
         "AbilitySound"                  "Hero_Dark_Seer.Vacuum"
 
-        "MaxLevel"                      "9"
+        "MaxLevel"                      "8"
         
-        "nMystery"                      "8 16 24 32 40 48 56 64 99"
+        "nMystery"                      "4 8 12 16 20 24 28 32"
+        "nElement"                      "4 8 12 16 20 24 28 32"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCastRange"              "450 500 550 600 650 700 750 800 1200"
+        "AbilityCastRange"              "450 500 550 600 650 700 750 800"
         "AbilityCastPoint"              "0.4"
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "17 16 15 14 13 12 11 10 6"
+        "AbilityCooldown"               "14 13 12 11 10 9 8 7"
         
         // Cost
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityManaCost"               "80 100 110 120 130 140 150 160 170"
+        "AbilityManaCost"               "80 100 110 120 130 140 150 160"
         
         // Special  
         //-------------------------------------------------------------------------------------------------------------
@@ -4474,18 +4475,18 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "radius"                "400 450 500 550 600 650 700 750 1100"
+                "radius"                "400 450 500 550 600 650 700 750"
                 "LinkedSpecialBonus"    "special_bonus_unique_dark_seer_2"
             }
             "02"
             {
                 "var_type"              "FIELD_FLOAT"
-                "duration"              "0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.6"
+                "duration"              "0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0"
             }
             "03"
             {
                 "var_type"              "FIELD_INTEGER"
-                "damage"                "100 150 200 300 400 550 700 900 2000"
+                "damage"                "100 200 300 400 500 600 700 800"
             }
             "04"
             {
@@ -4495,10 +4496,69 @@
             "05"
             {
                 "var_type"              "FIELD_INTEGER"
-                "cast_range_tooltip"    "450 500 550 600 650 700 750 800 1200"
+                "cast_range_tooltip"    "450 500 550 600 650 700 750 800"
             }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+
+    "dark_seer_ion_shell"
+    {
+        "BaseClass"                     "dark_seer_ion_shell"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_BOTH"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "8"
+        "AbilitySound"                  "Hero_Dark_Seer.Ion_Shield_Start"
+
+
+        "nMystery"                      "4 8 12 16 20 24 28 32"
+        "nDurable"                      "4 8 12 16 20 24 28 32"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "600"
+        "AbilityCastPoint"              "0.4"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "9"
+        
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "100 110 120 130 140 150 160 170"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityModifierSupportValue"   "0.0"   // just does damage
+            
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "radius"                "250"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage_per_second"     "30 50 70 90 130 150 180 210"
+                "LinkedSpecialBonus"    "special_bonus_unique_dark_seer"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "duration"              "25"
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
     }
 
     "necrolyte_heartstopper_aura"
@@ -4598,6 +4658,36 @@
                 "radius"                    "1200"
             }
         }
+    }
+
+    "no_health_bar"
+    {
+        "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "BaseClass"             "ability_datadriven"
+
+        "IsOnCastBar"                   "0"
+
+        "Modifiers"
+        {
+            "modifier_no_health_bar"
+            {
+                "Passive" "1"
+                "States"
+                {
+                    "MODIFIER_STATE_NO_HEALTH_BAR"          "MODIFIER_STATE_VALUE_ENABLED"
+                }
+            }
+        }
+    }
+
+    "storegga_rock_passive"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"                "creature_ability/storegga_rock_passive"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "IsOnCastBar"               "0"
+
     }
     
 

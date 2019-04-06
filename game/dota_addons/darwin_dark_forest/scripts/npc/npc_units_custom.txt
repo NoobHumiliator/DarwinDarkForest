@@ -93,6 +93,101 @@
 
 
     //Summon 
+
+    "npc_dota_storegga_rock"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/rocks/crypt_rock_basalt_medium_01.vmdl"
+		"SoundSet"					"Creep_Good_Melee"
+		"Level"						"1"
+		"ModelScale" 				"1.5"
+		"MinimapIcon"				"minimap_enemyicon"
+		"MinimapIconSize"			"300"
+		"IsSummoned"                "1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"no_health_bar"
+		"Ability2"					"storegga_rock_passive"
+		"Ability3"					""
+
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"999"
+		"MagicalResistance"			"100"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"0"
+		"AttackAnimationPoint"		"0"
+		"AttackAcquisitionRange"	"0"
+		"AttackRange"				"0"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"
+		"AttributeStrengthGain"		"0"
+		"AttributeBaseIntelligence"	"0"
+		"AttributeIntelligenceGain"	"0"
+		"AttributeBaseAgility"		"0"
+		"AttributeAgilityGain"		"0"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"110"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1.0"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"99999"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"0"
+		"StatusStartingMana"		"0"
+		"StatusManaRegen"			"0"
+
+		// Minimap
+		//----------------------------------------------------------------
+		"MinimapIcon"				"minimap_storega_rock"
+		"MinimapIconSize"			"300"
+		"MinimapDisableRotation"	"1"
+		
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1"
+		"VisionNighttimeRange"		"1"
+
+		"DisableDamageDisplay"		"1"
+	}
     "npc_dota_creature_small_storegga"
 	{
 		// General
@@ -100,8 +195,8 @@
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/heroes/tiny_01/tiny_01.vmdl"
 		"SoundSet"					"n_creep_Melee"
-		"Level"						"3"
-		"ModelScale" 				"1.1"
+		"Level"						"1"
+		"ModelScale" 				"0.9"
 		"IsSummoned"                "1"
 
 		// Abilities
@@ -127,7 +222,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"50"
+		"RingRadius"				"30"
 		"HealthBarOffset"			"130"
 
 		// Bounty
@@ -9288,7 +9383,7 @@
 		"SoundSet"					"n_creep_Melee"
 
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"1"
+		"ModelScale"				"0.6"
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 		
@@ -11997,7 +12092,7 @@
 		"Model"						"models/creeps/ice_biome/ogreseal/ogreseal_undead.vmdl"	// Model.
 		"SoundSet"					"n_creep_Melee"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"1.1"
+		"ModelScale"				"0.7"
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
 
@@ -12954,7 +13049,7 @@
 		"SoundSet"					"n_creep_Melee"
 
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"1.15"
+		"ModelScale"				"0.7"
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
 		
@@ -13417,15 +13512,15 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"125"		// Damage range min.
 		"AttackDamageMax"			"139"		// Damage range max.
 		"AttackRate"				"1.7"		// Speed of attack.
 		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
-		"AttackRange"				"250"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
-		"ProjectileSpeed"			"1200"		// Speed of projectile.		     
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			"" // Particle system model for projectile.
+		"ProjectileSpeed"			""		// Speed of projectile.		     
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -13995,7 +14090,7 @@
 		"Model"						"models/creeps/ice_biome/ogreseal/ogreseal_undead.vmdl"	// Model.
 		"SoundSet"					"n_creep_Melee"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"1.1"
+		"ModelScale"				"0.8"
 		"Level"						"8"
 		"vscripts"					"creap_ai.lua"
 
@@ -14380,7 +14475,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "3"
+		"AbilitiesLevel"            "6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -16522,7 +16617,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "7"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -19958,7 +20053,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "8"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -20472,7 +20567,7 @@
 		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_stormspirit.vsndevts"
 
 		"Level"						"11"
-		"ModelScale" 				"1.5"
+		"ModelScale" 				"1.8"
          
         "vscripts"					"creap_ai.lua"
         "nElement"                  "40"
@@ -20492,10 +20587,10 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"206"		// Damage range min.
-		"AttackDamageMax"			"216"		// Damage range max.
-		"AttackRate"	           	"1.700000"
-		"AttackAnimationPoint"		"0.500000"
+		"AttackDamageMin"			"1050"		// Damage range min.
+		"AttackDamageMax"			"1250"		// Damage range max.
+		"AttackRate"	           	"1.000000"
+		"AttackAnimationPoint"		"0.300000"
 		"AttackAcquisitionRange"    "800"
 		"AttackRange"		        "480"
 		"ProjectileModel"		    "particles/units/heroes/hero_stormspirit/stormspirit_base_attack.vpcf"
@@ -20571,11 +20666,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"night_stalker_hunter_in_the_night"			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability2"					"night_stalker_darkness"			// Ability 2
 		"Ability3"					""			                            // Ability 3
 		"Ability4"					""			                            // Ability 4
 
-        "AbilitiesLevel"            "9"
+        "AbilitiesLevel"            "9 9"
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"6"			// Physical protection.
@@ -20584,10 +20679,10 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"206"		// Damage range min.
-		"AttackDamageMax"			"216"		// Damage range max.
-        "AttackRate"		        "1.200000"
-		"AttackAnimationPoint"		"0.550000"
+		"AttackDamageMin"			"950"		// Damage range min.
+		"AttackDamageMax"			"1150"		// Damage range max.
+        "AttackRate"		        "1.000000"
+		"AttackAnimationPoint"		"0.300000"
 		"AttackAcquisitionRange"    "600"
 		"AttackRange"		        "150"     
 
@@ -20690,7 +20785,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"RingRadius"				"120"
-		"HealthBarOffset"			"190"
+		"HealthBarOffset"			"360"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -20722,7 +20817,7 @@
 	}
     
 
-    "npc_dota_creature_dark_seer"
+    "npc_dota_creature_dark_seer_imperial_relics"
 	{
         // General
 		//----------------------------------------------------------------
@@ -20741,10 +20836,10 @@
 		//----------------------------------------------------------------
 		"Ability1"					"dark_seer_surge"
 		"Ability2"					"dark_seer_vacuum"
-		"Ability3"					"" 
+		"Ability3"					"dark_seer_ion_shell" 
 		"Ability4"					""
 
-        "AbilitiesLevel"            "9 9"
+        "AbilitiesLevel"            "9 8 8"
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"16"			// Physical protection.
@@ -20755,8 +20850,8 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"950"		// Damage range min.
 		"AttackDamageMax"			"1150"		// Damage range max.
-        "AttackRate"		        "1.200000"
-		"AttackAnimationPoint"		"0.550000"
+        "AttackRate"		        "1.100000"
+		"AttackAnimationPoint"		"0.350000"
 		"AttackAcquisitionRange"    "600"
 		"AttackRange"		        "180"     
 
@@ -20795,23 +20890,23 @@
 	        {
 	           "Wearable1"
 				{
-					"ItemDef"			"348"
+					"ItemDef"			"6754"
 				}
 				"Wearable2"
 				{
-					"ItemDef"			"349"
+					"ItemDef"			"6756"
 				}
 				"Wearable3"
 				{
-					"ItemDef"			"350"
+					"ItemDef"			"6770"
 				}
 				"Wearable4"
 				{
-					"ItemDef"			"351"
+					"ItemDef"			"6771"
 				}
 				"Wearable5"
 				{
-					"ItemDef"			"352"
+					"ItemDef"			"6772"
 				}
 				"Wearable6"
 				{
@@ -20923,6 +21018,9 @@
 		"Model"	               	    "models/heroes/ursa/ursa.vmdl"
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_Ursa"
+
+	    "GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_ursa.vsndevts"
 
 		"Level"						"11"
 		"ModelScale" 				"1.5"

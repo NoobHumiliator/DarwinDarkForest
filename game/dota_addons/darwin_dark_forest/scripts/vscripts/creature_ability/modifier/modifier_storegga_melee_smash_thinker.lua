@@ -37,7 +37,9 @@ function modifier_storegga_melee_smash_thinker:OnDestroy()
 			ParticleManager:SetParticleControl( nFXIndex, 1, Vector( self.impact_radius, self.impact_radius, self.impact_radius ) )
 			ParticleManager:ReleaseParticleIndex( nFXIndex )
 
-			local enemies = FindUnitsInRadius( self:GetParent():GetTeamNumber(), self:GetParent():GetOrigin(), self:GetParent(), self.impact_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, self:GetAbility():GetAbilityTargetType(), DOTA_UNIT_TARGET_FLAG_NONE, 0, false )
+            GridNav:DestroyTreesAroundPoint(self:GetParent():GetOrigin(),self.impact_radius,false)
+
+			local enemies = FindUnitsInRadius( self:GetParent():GetTeamNumber(), self:GetParent():GetOrigin(), self:GetParent(), self.impact_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, 0, false )
 			for _,enemy in pairs( enemies ) do
 				if enemy ~= nil and enemy:IsInvulnerable() == false then
 					local damageInfo = 

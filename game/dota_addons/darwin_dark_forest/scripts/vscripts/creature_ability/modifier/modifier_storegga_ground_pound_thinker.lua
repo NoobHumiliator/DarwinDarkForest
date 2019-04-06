@@ -42,9 +42,12 @@ function modifier_storegga_ground_pound_thinker:OnIntervalThink()
 		--print( string.format( "OnIntervalThink - time is: %.2f", GameRules:GetGameTime() ) )
 
 		local vThinkerPos = self:GetParent():GetAbsOrigin()
-		local hEnemies = FindUnitsInRadius( self:GetCaster():GetTeamNumber(), vThinkerPos, nil, self.radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_CLOSEST, false )
+		local hEnemies = FindUnitsInRadius( self:GetCaster():GetTeamNumber(), vThinkerPos, nil, self.radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_CLOSEST, false )
+		
+        GridNav:DestroyTreesAroundPoint(self:GetCaster():GetOrigin(),self.radius,false)
+
 		for _, hEnemy in pairs( hEnemies ) do
-			if hEnemy ~= nil and hEnemy:IsInvulnerable() == false and hEnemy:IsMagicImmune() == false then
+			if hEnemy ~= nil and hEnemy:IsInvulnerable() == false  then
 				local damageInfo =
 				{
 					victim = hEnemy,

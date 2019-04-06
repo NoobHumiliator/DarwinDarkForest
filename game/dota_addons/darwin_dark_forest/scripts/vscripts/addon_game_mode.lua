@@ -20,9 +20,10 @@ _G.vEXP_TABLE={
     101349
 }
 
+--每级递增1.5倍
 
 _G.vCREEP_EXP_TABLE={
-    4,
+    4, --1
     6,
     9,
     14,
@@ -31,7 +32,8 @@ _G.vCREEP_EXP_TABLE={
     46,
     68,
     103,
-    375
+    155, --10
+    233  --11
 }
 
 vCREEP_EXP_TABLE[0]=2
@@ -69,6 +71,7 @@ function Precache( context )
      --如果 unit 里面写过的技能不需要 其他直接拿来用的技能都需要预加载
      PrecacheResource( "soundfile", "soundevents/game_sounds_dungeon.vsndevts", context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_dungeon_enemies.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_winter_2018.vsndevts", context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_creeps.vsndevts", context )
 
      PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_spirit_breaker.vsndevts", context )

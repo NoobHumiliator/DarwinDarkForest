@@ -31,7 +31,7 @@ function NeutralSpawner:Init()
   end
 
   self.nCreaturesNumber = 0
-  self.vCreatureLevelMap = {0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+  self.vCreatureLevelMap = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
   self.vCreatureLevelMap[0]=0
 
   self.flTimeInterval = 0.5 --刷怪间隔
