@@ -37,8 +37,10 @@ function mud_golem_hurl_boulder_lua:OnProjectileHit( hTarget, vLocation )
 			damage_type = DAMAGE_TYPE_MAGICAL,
 		}
 		ApplyDamage( vDamage )
-		hTarget:AddNewModifier( self:GetCaster(), self, "modifier_stunned", { duration = duration } )
-	end
+		if  self and hTarget and not hTarget:IsNull() then
+		  hTarget:AddNewModifier( self:GetCaster(), self, "modifier_stunned", { duration = duration } )
+		end
+	end 
 
 	return true
 end

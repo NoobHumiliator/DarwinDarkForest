@@ -43,7 +43,7 @@ for i,_ in ipairs(vEXP_TABLE) do
     vEXP_TABLE[i]=math.floor(vEXP_TABLE[i]*1.5+0.5)
 end
 
-
+GameRules.vWorldCenterPos=Vector(-640,624,128)
 
 if GameMode == nil then
 	_G.GameMode = class({}) 
@@ -53,11 +53,14 @@ end
 require( "events" )
 require( "evolve" )
 require( "neutral_spawner" )
+require( "item" )
 require( "utils/utility_functions" )
 require( "utils/timers" )
 require( "utils/bit" )
 require( "utils/evolve_island_util" )
 require( "utils/notifications" )
+
+
 
 function Activate()
     GameMode:InitGameMode()
@@ -94,9 +97,6 @@ function Precache( context )
      end
 end
 
-
-GameRules.vWorldCenterPos=Vector(-640,624,128)
-
 --载入单位
 GameRules.vUnitsKV = LoadKeyValues('scripts/npc/npc_units_custom.txt')
 --载入技能
@@ -104,9 +104,10 @@ GameRules.vAbilitiesKV = LoadKeyValues('scripts/npc/npc_abilities_custom.txt')
 
 GameRules.vAbilitiesTable = {}
 
---key 是等级 value是数组 
-vCreaturePerksTotal={}
+--key 是 playerId，value是六维数组存储玩家的perk点
+GameMode.vPlayerPerk={}
 
+--key 是等级 value是数组 
 vCreaturePerksTotal={}
 for i=0,11 do
    vCreaturePerksTotal[i]={}
@@ -119,7 +120,6 @@ for i=0,11 do
 end
 
 
-
 vAbilityPerksTotal={}
 vAbilityPerksTotal["nElement"]=0
 vAbilityPerksTotal["nMystery"]=0
@@ -129,16 +129,6 @@ vAbilityPerksTotal["nDecay"]=0
 vAbilityPerksTotal["nHunt"]=0
 
 
-
-
-
-
-
-
-
-
---key 是 playerId，value是六维数组存储玩家的perk点
-GameMode.vPlayerPerk={}
 
 -- 处理一下 计算一下总进化度 计算一下怪物等级 
 for sUnitName, vData in pairs(GameRules.vUnitsKV) do
@@ -289,7 +279,6 @@ for k,v in pairs(vAbilityPerksTotal) do
 end
 
 
-
 ---------------------------------------------------------------------------
 -- Initializer
 ---------------------------------------------------------------------------
@@ -298,7 +287,8 @@ function GameMode:InitGameMode()
     GameRules:GetGameModeEntity().GameMode = self
     GameRules.bUltimateStage=false  --终极进化阶段
     GameRules.bLevelTenStage=false  --有生物到达10级
-
+    
+    ItemController:Init()
     Timers:start()
     NeutralSpawner:Init()
     GameMode.vStartPointLocation={} --key是teamnumber value坐标

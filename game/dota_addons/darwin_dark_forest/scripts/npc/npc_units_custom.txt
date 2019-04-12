@@ -11,7 +11,8 @@
 		"BaseClass"					"npc_dota_filler"	// Class of entity of link to.
 		"Model"						"models/props_structures/radiant_statue002.vmdl"	// Model.
 		"SoundSet"					"Creep_Good_Melee"					// Name of sound set.
-		"MinimapIcon"				"minimap_miscbuilding"
+		"MinimapIcon"				"minimap_ward_obs"
+		"MinimapIconSize"			"1"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1320,6 +1321,7 @@
 		
 		"nDurable"                   "1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -1393,6 +1395,7 @@
 		
         "vscripts"					"creap_ai.lua"
 		"nElement"                  "1"
+		"HasInventory"				"1"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -1474,6 +1477,7 @@
 		"nDecay"                    "1"
 
 		"vscripts"					"creap_ai.lua"		
+		"HasInventory"				"1"
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					""			// Ability 1.
@@ -1552,6 +1556,7 @@
 				
         "nHunt"                     "1"
         "vscripts"					"creap_ai.lua"
+        "HasInventory"				"1"
 
 
 		// Abilities
@@ -1631,6 +1636,7 @@
 			
         "nMystery"                  "1"
         "vscripts"					"creap_ai.lua"
+        "HasInventory"				"1"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -1702,6 +1708,7 @@
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"0.45"
 		"Level"						"1"
+		"HasInventory"				"1"
 			
         "vscripts"					"creap_ai.lua"
 
@@ -1779,6 +1786,7 @@
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"1"
+		"HasInventory"				"1"
 			
         "vscripts"					"creap_ai.lua"
         "nFury"                     "1"
@@ -1854,6 +1862,7 @@
 		"SoundSet"					"Hero_Enigma"
 		"ModelScale"				"1"
 		"Level"						"2"
+		"HasInventory"				"1"
 
 			
         "nMystery"                  "4"
@@ -1932,6 +1941,7 @@
 		"ModelScale"				"1.0"
 		"Level"						"2"
 		"ModelScale" 			    ".7"
+		"HasInventory"				"1"
 		
         "vscripts"					"creap_ai.lua"
 		"nElement"                  "4"
@@ -2009,6 +2019,7 @@
 		"SoundSet"					"Furion_Treant"
 		"ModelScale"				"0.5"
 		"Level"						"2"
+		"HasInventory"				"1"
 		
 		"vscripts"					"creap_ai.lua"
 
@@ -2082,6 +2093,7 @@
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"2"
+		"HasInventory"				"1"
 
 	    "nDecay"                    "4"
 	    "vscripts"					"creap_ai.lua"
@@ -2159,6 +2171,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"ModelScale"				"1"
 		"Level"						"2"
+		"HasInventory"				"1"
 		
 		"vscripts"					"creap_ai.lua"
 		// Abilities
@@ -2234,6 +2247,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"2"
 		"ModelScale" 			    ".9"
+		"HasInventory"				"1"
 
 
 		"nHunt"                     "4"
@@ -2298,6 +2312,7 @@
 		"SoundSet"					"Hero_Broodmother"
 		"ModelScale"				"0.3"
 		"Level"						"2"
+		"HasInventory"				"1"
 		
 		"nHunt"                     "2"
         "nDecay"                    "2"
@@ -2377,6 +2392,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"ModelScale"				"0.7"
 		"Level"						"2"
+		"HasInventory"				"1"
 		
 		"nFury"                     "2"
 		"nElement"                  "2"
@@ -2455,6 +2471,7 @@
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"2"
+		"HasInventory"				"1"
 
 		"nFury"                     "1"
 			
@@ -2533,6 +2550,7 @@
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"2"
+		"HasInventory"				"1"
 			
         "vscripts"					"creap_ai.lua"
 
@@ -2608,6 +2626,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"ModelScale"				"1"
 		"Level"						"2"
+		"HasInventory"				"1"
 		
 		"vscripts"					"creap_ai.lua"
 
@@ -2686,6 +2705,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"ModelScale"				"0.9"
 		"Level"						"2"
+		"HasInventory"				"1"
 		
 		"nFury"                     "4"
 		"vscripts"					"creap_ai.lua"
@@ -2766,6 +2786,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"ModelScale"				"0.7"
 		"Level"						"2"
+		"HasInventory"				"1"
 		
 		"nDurable"                   "4"
 		"vscripts"					"creap_ai.lua"
@@ -2851,6 +2872,7 @@
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"3"
 		"ModelScale" 				"0.75"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
 
@@ -2932,6 +2954,7 @@
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"3"
 		"ModelScale" 				"0.75"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
 
@@ -3011,6 +3034,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"3"
 		"ModelScale" 				"0.75"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nElement"                  "4"
@@ -3080,6 +3104,7 @@
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1.1"
 		"Level"						"3"
+		"HasInventory"				"1"
 
 		"nFury"                     "1"
 		"nDurable"                  "1"
@@ -3159,6 +3184,7 @@
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1.1"
 		"Level"						"3"
+		"HasInventory"				"1"
 			
         "vscripts"					"creap_ai.lua"
 
@@ -3234,6 +3260,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"ModelScale"				"1"
 		"Level"						"3"
+		"HasInventory"				"1"
 		
 		"vscripts"					"creap_ai.lua"
 		// Abilities
@@ -3309,6 +3336,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"ModelScale"				"1.1"
 		"Level"						"3"
+		"HasInventory"				"1"
 		
 		"vscripts"					"creap_ai.lua"
 
@@ -3386,6 +3414,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"3"
 		"ModelScale" 				".90"
+		"HasInventory"				"1"
           
         "nHunt"                     "4"  
 		"nDecay"                    "2"               
@@ -3453,6 +3482,7 @@
 		"SoundSet"					"Creep_Good_Range"					// Name of sound set.
 		"Level"						"3"
 		"ModelScale" 			    ".75"
+		"HasInventory"				"1"
 		
         "vscripts"					"creap_ai.lua"
 		"nElement"                  "8"
@@ -3532,6 +3562,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"3"
 		"ModelScale" 				"0.8"
+		"HasInventory"				"1"
 
 		"vscripts"					"creap_ai.lua"
 
@@ -3598,6 +3629,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"3"
 		"ModelScale" 				"0.8"
+		"HasInventory"				"1"
 
 		"nDurable"                  "2"
 		"nElement"                  "2"
@@ -3667,6 +3699,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"3"
 		"ModelScale" 				"1"
+		"HasInventory"				"1"
 
 		"nDurable"                  "2"
 		"nHunt"                     "3"
@@ -3737,6 +3770,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"ModelScale"				"1"
 		"Level"						"3"
+		"HasInventory"				"1"
 		
 		"nDurable"                  "4"
 		"vscripts"					"creap_ai.lua"
@@ -3818,6 +3852,8 @@
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"3"
+        "HasInventory"				"1"
+
         "vscripts"					"creap_ai.lua"
 
 		"nDecay"                    "8"
@@ -3896,6 +3932,7 @@
 		"ModelScale"				"1"
 		"Level"						"3"
         "vscripts"					"creap_ai.lua"
+        "HasInventory"				"1"
 
 		"nDecay"                    "4"
 		"nFury"                     "2"
@@ -3982,6 +4019,7 @@
 		"ModelScale"				"0.5"
 		"Level"						"3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nHunt"                    "8"
 		
@@ -4063,6 +4101,7 @@
 		"ModelScale"				"1"
 		"Level"						"3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nFury"                     "8"
 
@@ -4144,6 +4183,7 @@
 		"ModelScale"				"1"
 		"Level"						"3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nMystery"                   "4"
 	    "nDurable"                   "4"	
@@ -4227,6 +4267,7 @@
 		"ModelScale"				"1"
 		"Level"						"3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nFury"                     "2"
 		"nHunt"                     "3"
@@ -4307,6 +4348,7 @@
 		"ModelScale"				"0.7"
 		"Level"						"3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nElement"                  "4"
         "nDecay"                    "4"
@@ -4386,6 +4428,7 @@
 		"ModelScale"				"1"
 		"Level"						"3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nFury"                     "3"
 		"nDurable"                  "3"
@@ -4463,6 +4506,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"3"
 		"ModelScale" 			    ".90"
+		"HasInventory"				"1"
 		
         "vscripts"					"creap_ai.lua"
 
@@ -4532,6 +4576,7 @@
 		"SoundSet"					"n_creep_Ranged"					// Name of sound set.
 		"ModelScale"				"0.7"
 		"Level"						"3"
+		"HasInventory"				"1"
 		
         "vscripts"					"creap_ai.lua"
 		"nMystery"                  "3"
@@ -4599,6 +4644,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"3"
 		"ModelScale" 			    "0.925"
+		"HasInventory"				"1"
 
 	    "vscripts"					"creap_ai.lua"
 
@@ -4672,6 +4718,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/heroes/visage/visage_familiar.vmdl"
 		"SoundSet"					"Visage_Familiar"
+		"HasInventory"				"1"
 
 		"Level"						"4"
 		"ModelScale" 				"1"
@@ -4753,6 +4800,7 @@
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"4"
 		"ModelScale" 				"1.2"
+		"HasInventory"				"1"
 
 
 		"vscripts"					"creap_ai.lua"
@@ -4823,6 +4871,7 @@
 		"SoundSet"					"Hero_Venomancer"
 		"Level"						"4"
 		"ModelScale" 				"0.9"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
 
@@ -4892,6 +4941,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"4"
 		"ModelScale" 			    "1"
+		"HasInventory"				"1"
 		
         "vscripts"					"creap_ai.lua"
 		"nFury"                     "2"
@@ -4959,6 +5009,7 @@
 		"SoundSet"					"n_creep_Ranged"					// Name of sound set.
 		"ModelScale"				"0.9"
 		"Level"						"4"
+		"HasInventory"				"1"
 		
         "vscripts"					"creap_ai.lua"
 		"nMystery"                  "6"
@@ -5029,6 +5080,7 @@
 		"ModelScale"				"1"
 		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -5103,6 +5155,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"4"
 		"ModelScale" 				"1"
+		"HasInventory"				"1"
 
 		"nDurable"                  "3"
 		"nElement"                  "3"
@@ -5173,7 +5226,8 @@
 		"SoundSet"					"Hero_VenomancerWard"
 		"Level"						"4"
 		"ModelScale" 				"1"
-        
+        "vscripts"					"creap_ai.lua"
+        "HasInventory"				"1"
 
         "nHunt"                     "4"  
 		"nDecay"                    "4"           
@@ -5243,6 +5297,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"4"
 		"ModelScale" 				"1"
+		"HasInventory"				"1"
           
         "nHunt"                     "6"  
 		"nDecay"                    "2"           
@@ -5316,6 +5371,7 @@
 		"Level"						"4"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nFury"                     "4"
 		"nHunt"                     "4"
@@ -5389,6 +5445,7 @@
 		"ModelScale"				"1"
 		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -5466,6 +5523,7 @@
 		"ModelScale"				"1"
 		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 		
 		"nDecay"                    "12"
 
@@ -5544,6 +5602,7 @@
 		"ModelScale"				"1"
 		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 		
 		"nDecay"                    "8"
 		"nFury"                     "2"
@@ -5623,6 +5682,7 @@
 		"ModelScale"				"1"
 		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 		
 		"nDecay"                    "8"
 		"nDurable"                  "2"
@@ -5698,11 +5758,12 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/heroes/tiny_01/tiny_01_head.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Tiny"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nDurable"                  "12"
 		
@@ -5796,11 +5857,12 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/creeps/dire_hound/dire_hound.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Lycan_Wolf"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nFury"                     "12"
 		
@@ -5877,6 +5939,7 @@
 		"ModelScale"				"1"
 		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nDurable"                  "3"
 		"nHunt"                     "3"
@@ -5952,6 +6015,7 @@
 		"ModelScale"				"1"
 		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nMystery"                  "4"
 		"nDurable"                  "4"
@@ -6028,6 +6092,7 @@
 		"ModelScale"				"0.6"
 		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nHunt"                     "12"
 
@@ -6104,6 +6169,7 @@
 		"ModelScale"				"0.6"
 		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nHunt"                     "8"
         "nDurable"                  "4"
@@ -6178,6 +6244,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"ModelScale"				"1"
 		"Level"						"4"
+		"HasInventory"				"1"
 
         "vscripts"					"creap_ai.lua"
 
@@ -6250,6 +6317,7 @@
 		"SoundSet"		             "Hero_WitchDoctor"
 		"Level"						"4"
 		"ModelScale" 				"0.85"
+		"HasInventory"				"1"
         
         "nElement"                  "6"
         "nDecay"                    "6"
@@ -6316,6 +6384,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"ModelScale"				"1"
 		"Level"						"4"
+		"HasInventory"				"1"
 
         "vscripts"					"creap_ai.lua"
         "nFury"                     "2"
@@ -6387,9 +6456,10 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/lane_creeps/creep_bad_ranged/lane_dire_ranged_mega.vmdl"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"Creep_Bad_Range"
 		"Level"						"4"
 		"ModelScale" 				"1.0"
+		"HasInventory"				"1"
 
         "vscripts"					"creap_ai.lua"
         "nFury"                     "2"
@@ -6458,6 +6528,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"4"
 		"ModelScale" 				"1.0"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
 
@@ -6531,6 +6602,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"4"
 		"ModelScale" 				"0.9"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nElement"                  "6"
@@ -6603,6 +6675,7 @@
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"4"
 		"ModelScale" 				"0.9"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nMystery"                  "12"
@@ -6681,6 +6754,7 @@
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"4"
 		"ModelScale" 				"0.8"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nElement"                  "12"
@@ -6757,9 +6831,10 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_c/n_creep_satyr_c.vmdl"
-		"SoundSet"					"Creep_Good_Range"
+		"SoundSet"					"n_creep_Melee"
 		"Level"						"4"
 		"ModelScale" 				"0.8"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nHunt"                     "6"
@@ -6827,9 +6902,10 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/ice_biome/relict/relict.vmdl"
-		"SoundSet"					"Creep_Good_Range"
+		"SoundSet"					"Hero_Ursa"
 		"Level"						"4"
 		"ModelScale" 				"0.8"
+		"HasInventory"				"1"
         
          "vscripts"					"creap_ai.lua"
 
@@ -6847,7 +6923,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"32"		// Damage range min.
 		"AttackDamageMax"			"37"		// Damage range max.
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -6897,9 +6973,11 @@
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/heroes/visage/rubick_visage_familiar.vmdl"
 		"SoundSet"					"Visage_Familiar"
+		"HasInventory"				"1"
 
 		"Level"						"5"
 		"ModelScale" 				"1"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
 
@@ -6979,6 +7057,7 @@
 		"SoundSet"					"Hero_Venomancer"
 		"Level"						"5"
 		"ModelScale" 				"1.1"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
 
@@ -7051,6 +7130,7 @@
 		"ModelScale"				"1.0"
 		"Level"						"5"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
         "nHunt"                     "8"
         "nMystery"                  "8"
@@ -7130,6 +7210,7 @@
 		"ModelScale"				"1.0"
 		"Level"						"5"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nFury"                     "3"
         "nDurable"                  "8"
@@ -7159,8 +7240,8 @@
 		"AttackDamageMax"			"67"		// Damage range max.
 		"AttackRate"				"1.5"		// Speed of attack.
 		"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"300"		// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"110"		// Range within a target can be attacked.
 		"ProjectileModel"			""	// Particle system model for projectile.
 		"ProjectileSpeed"			"0"		// Speed of projectile.		     
 
@@ -7210,6 +7291,7 @@
 		"ModelScale"				"1"
 		"Level"						"5"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nElement"                  "2"
         "nFury"                     "2"
@@ -7288,6 +7370,7 @@
 		"Level"						"5"
 		"ModelScale" 				"0.85"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nFury"                     "8"
         "nElement"                  "8"
@@ -7359,6 +7442,8 @@
 		"SoundSet"					"Hero_VenomancerWard"
 		"Level"						"5"
 		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
         
 
         "nHunt"                     "8"  
@@ -7428,6 +7513,8 @@
 		"SoundSet"					"Hero_VenomancerWard"
 		"Level"						"5"
 		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
         
         "nHunt"                     "2"  
 		"nDecay"                    "2"
@@ -7497,6 +7584,7 @@
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"5"
 		"ModelScale" 				"0.85"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nElement"                  "8"
@@ -7577,6 +7665,7 @@
 		"IdleSoundLoop"				"Hero_WarlockGolem.Spawn_Loop"
 		"Level"						"5"
 		"ModelScale" 				"1"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nHunt"                     "8"
@@ -7646,6 +7735,7 @@
 		"SoundSet"					"Furion_Treant"					// Name of sound set.
 		"Level"						"5"
 		"ModelScale" 				"1.2"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
 
@@ -7714,6 +7804,8 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"5"
 		"ModelScale" 				"0.85"
+        "HasInventory"				"1"
+
         
         "vscripts"					"creap_ai.lua"
         "nElement"                  "5"
@@ -7781,9 +7873,11 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/items/warlock/archivist_golem/archivist_golem.vmdl"
-		"SoundSet"					"Creep_Good_Range"
+		"SoundSet"					"Hero_WarlockGolem"			// Name of sound set.
+		"IdleSoundLoop"				"Hero_WarlockGolem.Spawn_Loop"
 		"Level"						"5"
 		"ModelScale" 				"0.7"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nFury"                     "8"
@@ -7861,9 +7955,10 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/item_creeps/i_creep_necro_warrior/necro_warrior.vmdl"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"Creep_Good_Melee"
 		"Level"						"5"
-		"ModelScale" 				"1.0"
+		"ModelScale" 				"0.8"
+		"HasInventory"				"1"
         
         "nFury"                     "8"
         "nDecay"                    "8"
@@ -7883,13 +7978,13 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"59"
 		"AttackDamageMax"			"72"
 		"AttackRate"				"0.75"		// Speed of attack.
 		"AttackAnimationPoint"		"0.56"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
+		"AttackRange"				"110"		// Range within a target can be attacked.
 		"ProjectileModel"			""			// Particle system model for projectile.
 		"ProjectileSpeed"			""			// Speed of projectile.
 
@@ -7936,6 +8031,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"5"
 		"ModelScale" 				"1.0"
+		"HasInventory"				"1"
         
         "nMystery"                  "8"
         "nDecay"                    "8"
@@ -8007,9 +8103,10 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/ice_biome/frostbitten/n_creep_frostbitten_shaman01.vmdl"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"Hero_WitchDoctor"
 		"Level"						"5"
 		"ModelScale" 				"1.0"
+		"HasInventory"				"1"
         
         "nElement"                  "8"
         "nDecay"                    "8"
@@ -8079,9 +8176,11 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/lane_creeps/creep_good_siege/creep_good_siege.vmdl"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"Creep_Good_Engine"
+		"MinimapIcon"				"minimap_siege"
 		"Level"						"5"
 		"ModelScale" 				"1.0"
+		"HasInventory"				"1"
      
         "vscripts"					"creap_ai.lua"
 
@@ -8152,6 +8251,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"5"
 		"ModelScale" 				"0.8"
+		"HasInventory"				"1"
 
 		"vscripts"					"creap_ai.lua"
        
@@ -8223,6 +8323,8 @@
 		"SoundSet"					"Hero_Broodmother"
 		"Level"						"5"
 		"ModelScale" 				"0.7"
+        "HasInventory"				"1"
+
 
 		"vscripts"					"creap_ai.lua"
        
@@ -8295,6 +8397,8 @@
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"5"
 		"ModelScale" 				"1.1"
+        "HasInventory"				"1"
+
         
         "vscripts"					"creap_ai.lua"
         "nMystery"                  "16"
@@ -8373,6 +8477,7 @@
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"5"
 		"ModelScale" 				"0.85"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nElement"                  "16"
@@ -8448,11 +8553,12 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/creeps/neutral_creeps/n_creep_ghost_a/n_creep_ghost_a.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"n_creep_Ranged"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"5"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nDecay"                     "16"
 		
@@ -8531,6 +8637,7 @@
 		"ModelScale"				"1"
 		"Level"						"5"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nFury"                     "2"
 		"nDurable"                  "2"
@@ -8610,6 +8717,7 @@
 		"ModelScale"				"0.7"
 		"Level"						"5"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nFury"                     "2"
 		"nHunt"                     "8"
@@ -8691,6 +8799,8 @@
 		"ModelScale"				"1"
 		"Level"						"5"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+
 
 		"nFury"                     "2"
 		"nDurable"                  "2"
@@ -8769,6 +8879,7 @@
 		"ModelScale"				"1"
 		"Level"						"5"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nDecay"                     "8"
 		"nDurable"                   "3"
@@ -8843,11 +8954,12 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/creeps/dire_hound/dire_hound_boss.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Lycan_Wolf"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"1"
+		"ModelScale"				"0.9"
 		"Level"						"5"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nFury"                     "16"
 		
@@ -8923,11 +9035,12 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/heroes/tiny_02/tiny_02_head.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Tiny"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"5"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nDurable"                  "16"
 		
@@ -9000,6 +9113,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"5"
 		"ModelScale" 				"1"
+		"HasInventory"				"1"
 
         "vscripts"					"creap_ai.lua"
 		"nFury"                     "4"
@@ -9069,6 +9183,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"5"
 		"ModelScale" 				"1.1"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nElement"                  "8"
@@ -9140,6 +9255,7 @@
 		"Level"						"5"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
         "nDurable"                  "4"
         "nHunt"                     "8"
@@ -9211,6 +9327,7 @@
 		"Level"						"5"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
         "nFury"                     "8"
         "nHunt"                     "8"
@@ -9294,6 +9411,7 @@
 		"ModelScale"				"0.8"
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nHunt"                     "5"
 		"nMystery"                  "10"
@@ -9383,9 +9501,10 @@
 		"SoundSet"					"n_creep_Melee"
 
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.6"
+		"ModelScale"				"0.65"
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -9457,6 +9576,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"6"
 		"ModelScale" 				"1.1"
+		"HasInventory"				"1"
         
         "nMystery"                  "10"
         "nDecay"                    "10"
@@ -9529,9 +9649,10 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/ice_biome/frostbitten/n_creep_frostbitten_shaman01.vmdl"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"Hero_WitchDoctor"
 		"Level"						"6"
 		"ModelScale" 				"1.15"
+		"HasInventory"				"1"
         
         "nElement"                  "10"
         "nDecay"                    "10"
@@ -9601,9 +9722,10 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_spawn_a/n_creep_satyr_spawn_b.vmdl"
-		"SoundSet"					"Creep_Good_Range"
+		"SoundSet"					"n_creep_Melee"
 		"Level"						"6"
 		"ModelScale" 				"1"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nMystery"                  "10"
@@ -9675,6 +9797,7 @@
 		"Level"						"6"
 		"ModelScale" 				"1.0"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDurable"                  "10"
         "nElement"                  "10"
@@ -9758,6 +9881,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"6"
 		"ModelScale" 				"1.05"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
 
@@ -9828,6 +9952,8 @@
 		"SoundSet"					"Hero_VenomancerWard"
 		"Level"						"6"
 		"ModelScale" 				"1.3"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
         
         "nHunt"                     "10"  
 		"nDecay"                    "10"           
@@ -9899,6 +10025,7 @@
 		"ModelScale"				"1.0"
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nDurable"                  "20"
 		
@@ -9974,6 +10101,7 @@
 		"Level"						"6"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nFury"                     "10"
         "nElement"                  "10"
@@ -10042,6 +10170,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/items/visage/immortal_familiar/immortal_familiar.vmdl"
 		"SoundSet"					"Visage_Familiar"
+		"HasInventory"				"1"
 
 		"Level"						"6"
 		"ModelScale" 				"1"
@@ -10121,9 +10250,11 @@
 		//----------------------------------------------------------------
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/items/warlock/golem/doom_of_ithogoaki/doom_of_ithogoaki.vmdl"
-		"SoundSet"					"Creep_Good_Range"
+		"SoundSet"					"Hero_WarlockGolem"			// Name of sound set.
+		"IdleSoundLoop"				"Hero_WarlockGolem.Spawn_Loop"
 		"Level"						"6"
 		"ModelScale" 				"0.8"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nFury"                     "10"
@@ -10204,6 +10335,7 @@
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"6"
 		"ModelScale" 				"0.9"
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nElement"                  "20"
@@ -10284,6 +10416,8 @@
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
 		"nDecay"                    "10"
 		"nFury"                     "10"
 
@@ -10360,6 +10494,7 @@
 		"ModelScale"				"1"
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nDecay"                    "20"
 
@@ -10435,6 +10570,7 @@
 		"Level"						"6"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nHunt"                     "10"
 		"nFury"                     "10"
@@ -10501,11 +10637,13 @@
 		// 
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/creeps/ice_biome/tuskfolk/tuskfolk001a_f.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Tusk"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -10576,11 +10714,14 @@
 		// 
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/creeps/ice_biome/undeadtusk/undead_tuskskeleton_armor01.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Tusk"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
+
 
 		"nDurable"                  "5"
         "nDecay"                    "12"
@@ -12243,6 +12384,7 @@
 		"SoundSet"					"Hero_VenomancerWard"
 		"Level"						"7"
 		"ModelScale" 				"1.5"
+		"vscripts"					"creap_ai.lua"
         
         "nHunt"                     "12"  
 		"nDecay"                    "12"           
@@ -13049,7 +13191,7 @@
 		"SoundSet"					"n_creep_Melee"
 
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.7"
+		"ModelScale"				"0.75"
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
 		
@@ -13077,7 +13219,7 @@
 		"AttackRate"				"1.8"		// Speed of attack.
 		"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"300"		// Range within a target can be attacked.
+		"AttackRange"				"118"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/neutral_fx/thunderlizard_base_attack.vpcf"	// Particle system model for projectile.
 		"ProjectileSpeed"			"1500"		// Speed of projectile.		
 
@@ -13421,7 +13563,7 @@
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/ice_biome/frostbitten/n_creep_frostbitten_swollen01.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_ElderTitan"
 		"Level"						"7"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
@@ -13432,10 +13574,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"frostbitten_icicle"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -13443,15 +13587,15 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"92"		// Damage range min.
 		"AttackDamageMax"			"105"		// Damage range max.
 		"AttackRate"				"1.7"		// Speed of attack.
 		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
-		"AttackRange"				"250"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
-		"ProjectileSpeed"			"1200"		// Speed of projectile.		     
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			"" // Particle system model for projectile.
+		"ProjectileSpeed"			""		// Speed of projectile.		     
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -13779,11 +13923,11 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"broodmother_insatiable_hunger"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
-
+        "AbilitiesLevel"            "1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -14253,6 +14397,10 @@
 				{
 					"ItemDef"			"334"
 				}
+				"Wearable5"
+				{
+					"ItemDef"			"506"
+				}
 			}
 		}
 	}
@@ -14573,6 +14721,8 @@
 		"IdleSoundLoop"		        "Hero_Razor.IdleLoop"
 		"Level"						"8"
 		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+
         
         "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_razor.vsndevts"
@@ -14655,6 +14805,10 @@
 				"Wearable5"
 				{
 					"ItemDef"			"344"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"513"
 				}
 	        }
 		}
@@ -14759,16 +14913,14 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
-		"Model"						"models/heroes/tiny_03/tiny_03_head.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Melee"
+		"Model"						"models/heroes/tiny_04/tiny_04_head.vmdl"	// Model.
+		"SoundSet"					"Hero_Tiny"
 		"Level"						"8"
-		"ModelScale" 				"1.1"
+		"ModelScale" 				"1.05"
 		"vscripts"					"creap_ai.lua"
 
 		"nDurable"                  "28"
          
-
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					""			// Ability 1
@@ -14928,9 +15080,12 @@
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/ice_biome/frostbitten/n_creep_frostbitten_swollen01.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_ElderTitan"
+
+		"GameSoundsFile"	 	"soundevents/game_sounds_heroes/game_sounds_elder_titan.vsndevts"
+		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_elder_titan.vsndevts"
 		"Level"						"8"
-		"ModelScale" 				"1"
+		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
          
         "nDecay"                   "5"
@@ -14939,10 +15094,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"frostbitten_icicle"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -15317,6 +15474,8 @@
 		"Level"						"8"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
          
         "nMystery"                  "8"
         "nDurable"                  "14"
@@ -15768,10 +15927,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"enigma_midnight_pulse"			// Ability 1
 		"Ability2"					""	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -16302,8 +16463,8 @@
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
 
-		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_lich.vsndevts"
-		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+		"VoiceFile"		          "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
+		"GameSoundsFile"		  "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
          
         "nElement"                  "16"
         "nDecay"                    "16"
@@ -16385,6 +16546,10 @@
 				"Wearable5"
 				{
 					"ItemDef"			"12638"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"506"
 				}
 			}
 		}
@@ -16712,6 +16877,7 @@
 		"IdleSoundLoop"	         	"Hero_Razor.IdleLoop"
 		"Level"						"9"
 		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
         
         "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_razor.vsndevts"
@@ -16795,6 +16961,15 @@
 				{
 					"ItemDef"			"9353"
 				}
+				"Wearable6"
+				{
+					"ItemDef"			"340"
+				}
+                "Wearable7"
+				{
+					"ItemDef"			"513"
+				}
+
 	        }
 		}
 	}
@@ -16810,6 +16985,7 @@
 		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
 		"Level"						"9"
 		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
         
         "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
         "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
@@ -16903,6 +17079,7 @@
 		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
 		"Level"						"9"
 		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
         
         "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
         "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
@@ -17795,10 +17972,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"broodmother_insatiable_hunger"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "2"
 
 
 		// Armor
@@ -18277,10 +18456,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"enigma_midnight_pulse"			// Ability 1
 		"Ability2"					""	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -18666,6 +18847,10 @@
 				{
 					"ItemDef"			"12638"
 				}
+				"Wearable6"
+				{
+					"ItemDef"			"506"
+				}
 			}
 		}
 	}
@@ -18984,6 +19169,7 @@
 		"IdleSoundLoop"		        "Hero_Razor.IdleLoop"
 		"Level"						"10"
 		"ModelScale" 				"1.3"
+		"vscripts"					"creap_ai.lua"
         
         "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_razor.vsndevts"
@@ -19067,6 +19253,14 @@
 				{
 					"ItemDef"			"8608"
 				}
+				"Wearable6"
+				{
+					"ItemDef"			"340"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"513"
+				}
 	        }
 		}
 	}
@@ -19082,6 +19276,7 @@
 		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
 		"Level"						"10"
 		"ModelScale" 				"1.3"
+		"vscripts"					"creap_ai.lua"
         
         "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
         "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
@@ -19768,12 +19963,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"broodmother_insatiable_hunger"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "8"
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -19853,8 +20048,8 @@
 		"Model"						"models/heroes/centaur/centaur.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_Centaur"
-		"GameSoundsFile"		   "soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts"
-		"VoiceFile"		           "soundevents/voscripts/game_sounds_vo_centaur.vsndevts"
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_centaur.vsndevts"
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
@@ -19884,7 +20079,7 @@
 		"AttackRate"				"1.4"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRange"				"148"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
 
@@ -20374,10 +20569,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"enigma_midnight_pulse"			// Ability 1
 		"Ability2"					""	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -20826,7 +21023,7 @@
 		"SoundSet"		            "Hero_DarkSeer"
 
 		"Level"						"11"
-		"ModelScale" 				"1.5"
+		"ModelScale" 				"1.8"
         
 
         "vscripts"					"creap_ai.lua"

@@ -68,8 +68,11 @@ function GameMode:OnEntityKilled(keys)
 
        local nPlayerId = hKillerUnit:GetMainControllingPlayer()
        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
+       
+       --野怪掉落物品
+       ItemController:DropItemByChance(hKilledUnit)
 
-       --消除野怪户籍 (被击杀单位不是野怪的召唤生物)      
+       --消除野怪户口 (先确保被击杀单位不是野怪的召唤生物)      
        if hKilledUnit.nCreatureLevel then
            NeutralSpawner.nCreaturesNumber=NeutralSpawner.nCreaturesNumber-1
            NeutralSpawner.vCreatureLevelMap[hKilledUnit.nCreatureLevel]=NeutralSpawner.vCreatureLevelMap[hKilledUnit.nCreatureLevel]-1
@@ -175,8 +178,12 @@ function GameMode:OnEntityKilled(keys)
    if  hKilledUnit:GetOwner() and not hKilledUnit:IsHero() and hKilledUnit:GetOwner() and hKilledUnit:GetOwner().GetPlayerID then
        local nPlayerId = hKilledUnit:GetOwner():GetPlayerID()
        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
-       -- 保证不是召唤生物
+       -- 保证是玩家的主控生物
        if hHero.hCurrentCreep == hKilledUnit then
+          
+          --记录物品
+          ItemController:RecordItemsInfo(hHero)
+
           local nPlayerId = hKilledUnit:GetOwner():GetPlayerID()
           local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
            hHero.nCustomExp=hHero.nCustomExp-(vEXP_TABLE[hHero.hCurrentCreep:GetLevel()+1]-vEXP_TABLE[hHero.hCurrentCreep:GetLevel()])*0.5

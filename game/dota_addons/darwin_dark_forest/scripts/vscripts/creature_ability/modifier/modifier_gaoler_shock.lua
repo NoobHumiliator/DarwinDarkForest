@@ -20,7 +20,6 @@ function modifier_gaoler_shock:OnCreated( kv )
 	self.radius_step = self:GetAbility():GetSpecialValueFor( "radius_step" )
 	if IsServer() then
 		self.nCurrentRadius = self.start_radius
-
 		self:OnIntervalThink()
 		self:StartIntervalThink( self.shock_interval )
 	end
@@ -35,7 +34,7 @@ function modifier_gaoler_shock:OnIntervalThink()
 		ParticleManager:SetParticleControl( nFXIndex, 1, Vector( 500, self.nCurrentRadius + self.radius_step, 1.0 ) )
 		self:AddParticle( nFXIndex, false, false, -1, false, false )
 
-		local enemies = FindUnitsInRadius( self:GetCaster():GetTeamNumber(), self:GetCaster():GetOrigin(), self:GetCaster(), self.nCurrentRadius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, 0, false )
+		local enemies = FindUnitsInRadius( self:GetCaster():GetTeamNumber(), self:GetCaster():GetOrigin(), self:GetCaster(), self.nCurrentRadius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, 0, false )
 		for _,enemy in pairs( enemies ) do
 			if enemy ~= nil and enemy:IsInvulnerable() == false and enemy:IsMagicImmune() == false then
 				local damageInfo = 

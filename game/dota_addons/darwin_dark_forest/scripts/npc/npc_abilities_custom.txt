@@ -169,7 +169,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "ability_lua"
         "ScriptFile"                    "creature_ability/creature_ogre_melee_smash"
-        "AbilityTextureName"            "ursa_earthshock"
+        "AbilityTextureName"            "brewmaster_thunder_clap"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -290,6 +290,7 @@
         "BaseClass"                     "ability_lua"
         "AbilityTextureName"            "ogreseal_flop"
         "ScriptFile"                    "creature_ability/creature_ogreseal_flop"
+        "AbilityTextureName"            "brewmaster_thunder_clap"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -453,25 +454,23 @@
         "ScriptFile"                    "creature_ability/creature_gaoler_shock"
         "AbilityTextureName"            "razor_plasma_field"
 
-        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
 
-
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
 
         "precache"
         {
-            "soundfile" "soundevents/game_sounds_heroes/game_sounds_HERO.vsndevts"
+            "soundfile"                 "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
         }
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCooldown"               "10"
-        "AbilityChannelTime"            "3.0"
-        "AbilityCastPoint"              "1.5"
+        "AbilityChannelTime"            "2.0"
+        "AbilityCastPoint"              "0.75"
          
          // Special
         //-------------------------------------------------------------------------------------------------------------
@@ -507,22 +506,23 @@
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "ability_lua"
         "ScriptFile"                    "creature_ability/creature_gaoler_melee_smash"
-        "AbilityTextureName"            "centaur_double_edge"
+        "AbilityTextureName"            "creature_gaoler_melee_smash"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
-        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
         
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCastRange"              "450"
+        "AbilityCastRange"              "400"
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"   // Activity
         "AnimationIgnoresModelScale"    "1"
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "3"
+        "AbilityCooldown"               "5"
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -1919,11 +1919,11 @@
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "80 70 60 50 40 30 20 10"
+        "AbilityCooldown"               "24 22 20 18 16 14 12 10"
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityManaCost"               "175"
+        "AbilityManaCost"               "75"
         
         // Special
         //-------------------------------------------------------------------------------------------------------------
@@ -1932,7 +1932,7 @@
             "01"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "cast_delay"                "3.0 2.75 2.5 2.25 2 1.75 1.5 1.25"
+                "cast_delay"                "1.5 1.5 1 1 0.5 0.5 0.1 0.1"
             }
             "02"
             {
@@ -3404,11 +3404,6 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
 
-        "MaxLevel"                      "8"
-
-        "nDurable"                      "4 9 14 19 24 29 34 39"
-        "nDecay"                        "4 9 14 19 24 29 34 39"
-
         "ScriptFile"                    "creature_ability/shrine_passive"
 
         // Special
@@ -3459,12 +3454,12 @@
             }
             "03"
             {
-                "var_type"                          "FIELD_INTEGER"
+                "var_type"                          "FIELD_FLOAT"
                 "recovery_time"                     "6 6 5 5 4 4 3 3"
             }
             "04"
             {
-                "var_type"                          "FIELD_INTEGER"
+                "var_type"                          "FIELD_FLOAT"
                 "minimum_damage"                    "10 10 20 20 30 30 40 40"
             }
             "05"
@@ -4689,6 +4684,99 @@
         "IsOnCastBar"               "0"
 
     }
+
+    "broodmother_insatiable_hunger"
+    {
+        "BaseClass"                     "broodmother_insatiable_hunger"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "FightRecapLevel"               "2"
+        "MaxLevel"                      "3"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0.2 0.2 0.2"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+
+        "AbilityCooldown"               "45.0 45.0 45.0"
+        "AbilityManaCost"               "100 100 100"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_damage"          "60 100 140"
+                "LinkedSpecialBonus"    "special_bonus_unique_broodmother_1"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lifesteal_pct"         "60 100 140"
+                "LinkedSpecialBonus"    "special_bonus_unique_broodmother_1"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "duration"              "14.0 14.0 14.0"
+            }
+        }
+    }
+
+    "enigma_midnight_pulse"
+    {
+        "BaseClass"                     "enigma_midnight_pulse"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"  
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Enigma.Midnight_Pulse"
+
+        "MaxLevel"                      "6"
+
+        "nDecay"                        "5 10 15 20 25 30"
+        "nMystery"                      "5 10 15 20 25 30"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastAnimation"          "ACT_DOTA_MIDNIGHT_PULSE"
+        "AbilityCastGestureSlot"        "DEFAULT"
+        "AbilityCastRange"              "700"
+        "AbilityCastPoint"              "0.1"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "40 35 30 25 20 15"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "50 80 110 140 170 200"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "radius"                    "550"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage_percent"            "3 3.5 4 4.5 5 5.5"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "duration"                  "9 10 11 12 13 14"
+            }
+        }
+    }
+    
     
 
 

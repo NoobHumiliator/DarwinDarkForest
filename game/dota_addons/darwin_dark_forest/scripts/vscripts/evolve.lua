@@ -1,5 +1,4 @@
 --[[进化]]
---LinkLuaModifier( "modifier_hero_adjustment", "modifiers/modifier_hero_adjustment", LUA_MODIFIER_MOTION_NONE )
 
 --技能数量几率表
 --[[
@@ -48,172 +47,27 @@ vAbilityChanceEachLevel={
 }
 ]]
 
---进化（根据当前状态替换单位）
+--进化 
 function Evolve (nPlayerId,hHero)
 
-    -- 遍历kv 加入进化池 key 单位名称 value单位总perk点
-    local vEnvolvePool={}
-    local vEnvolveBlankPool={} --白板池子
     local nLevel=hHero.nCurrentCreepLevel
-    local sUnitToEnvolve =""
+    local sUnitToEnvolve = DetermineNewUnitName(nPlayerId,nLevel)
 
-    --11级 直接根据Perk点选 一个终极进化
-    if nLevel==11 then
-        
-        --进入终极进化阶段
-        if GameRules.bUltimateStage==false then
-          local sPlayerName=PlayerResource:GetPlayerName(nPlayerId)
-          Notifications:TopToAll({text = sPlayerName.." ", duration = 4})
-          Notifications:TopToAll({text = "#UltimateStageNote", duration = 4, style = {color = "Orange"}, continue = true})   
-           
-          --无法复活 关闭战争迷雾
-          GameRules:GetGameModeEntity():SetFixedRespawnTime(99999999999)
-          GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
-          GameRules.bUltimateStage=true     
-        end
-
-         local tempPerksMap = { 
-            {name="element",value=GameMode.vPlayerPerk[nPlayerId][1]},
-            {name="mystery",value=GameMode.vPlayerPerk[nPlayerId][2]},
-            {name="durable",value=GameMode.vPlayerPerk[nPlayerId][3]},
-            {name="fury",value=GameMode.vPlayerPerk[nPlayerId][4]},
-            {name="decay",value=GameMode.vPlayerPerk[nPlayerId][5]},
-            {name="hunt",value=GameMode.vPlayerPerk[nPlayerId][6]}
-         }
-         table.sort(tempPerksMap,function(a,b)
-              return a.value > b.value
-         end)
-
-         if tempPerksMap[1].name=="element" then
-             sUnitToEnvolve="npc_dota_creature_storm_spirit"
-         end
-         if tempPerksMap[1].name=="mystery" then
-             sUnitToEnvolve="npc_dota_creature_dark_seer"
-         end
-         if tempPerksMap[1].name=="durable" then
-             sUnitToEnvolve="npc_dota_creature_storegga_2"
-         end
-         if tempPerksMap[1].name=="fury" then
-             sUnitToEnvolve="npc_dota_creature_ursa_razorwyrm"
-         end
-         if tempPerksMap[1].name=="decay" then
-             sUnitToEnvolve="npc_dota_creature_necrolyte_apostle_of_decay"
-         end
-         if tempPerksMap[1].name=="hunt" then
-             sUnitToEnvolve="npc_dota_creature_nightstalker"
-         end
-
-    else 
-
-        if nLevel==10 and GameRules.bLevelTenStage==false then           
-          local sPlayerName=PlayerResource:GetPlayerName(nPlayerId)
-          Notifications:TopToAll({text = sPlayerName.." ", duration = 4})
-          Notifications:TopToAll({text = "#LevelTenStageNote", duration = 4, style = {color = "Orange"}, continue = true})   
-          GameRules.bLevelTenStage=true
-        end
-
-        local nEnvolvePoolTotalPerk=0 --进化池perk的总量
-
-        for sUnitName, vData in pairs(GameRules.vUnitsKV) do
-
-            if vData and type(vData) == "table" then       
-                 -- 跳过召唤生物
-                if vData.IsSummoned==nil or vData.IsSummoned==0 then
-                 -- 等级相当，perk相符    
-                    if vData.nCreatureLevel ==nLevel then
-                       if  nLevel==1 then --第一级从直接随机选一个
-                           table.insert(vEnvolveBlankPool, sUnitName)
-                       else
-                           local bPerkValid=true  
-                           if vData.nElement>GameMode.vPlayerPerk[nPlayerId][1] then
-                              bPerkValid=false
-                           end
-                           if vData.nMystery>GameMode.vPlayerPerk[nPlayerId][2] then
-                              bPerkValid=false
-                           end
-                           if vData.nDurable>GameMode.vPlayerPerk[nPlayerId][3] then
-                              bPerkValid=false
-                           end
-                           if vData.nFury>GameMode.vPlayerPerk[nPlayerId][4] then
-                              bPerkValid=false
-                           end
-                           if vData.nDecay>GameMode.vPlayerPerk[nPlayerId][5] then
-                              bPerkValid=false
-                           end
-                           if vData.nHunt>GameMode.vPlayerPerk[nPlayerId][6] then
-                              bPerkValid=false
-                           end
-                           --满足条件加入进化池
-                           if bPerkValid then
-                              if vData.nTotalPerk == 0 then
-                                 table.insert(vEnvolveBlankPool, sUnitName)
-                              else
-                                 vEnvolvePool[sUnitName] = vData.nTotalPerk
-                              end
-                              nEnvolvePoolTotalPerk=nEnvolvePoolTotalPerk+vData.nTotalPerk
-                           end
-                        end
-                    end
-                end
-            end
-        end
-        
-        if nEnvolvePoolTotalPerk >0 then
-            local nDice= RandomInt(1,nEnvolvePoolTotalPerk)
-
-            --遍历进化池 确认进化结果
-            local nTemp=0
-            for sUnitName,nPerk in pairs(vEnvolvePool) do
-               nTemp=nTemp+nPerk
-               if nDice<=nTemp then
-                 sUnitToEnvolve=sUnitName
-                 break;
-               end
-            end
-        else
-            local nDice= RandomInt(1,#vEnvolveBlankPool)
-            sUnitToEnvolve=vEnvolveBlankPool[nDice]
-        end
+    --判断游戏阶段
+    if nLevel==11 and GameRules.bUltimateStage==false then       
+        GameEnterUltimateStage(nPlayerId)    
     end
+    if nLevel==10 and GameRules.bLevelTenStage==false then 
+        GameEnterLevelTenStage(nPlayerId)
+    end          
 
+  
     print("To Evolve Creature"..sUnitToEnvolve)
     local hUnit = SpawnUnitToReplaceHero(sUnitToEnvolve,hHero,nPlayerId)
 
     AddAbilityForUnit(hUnit,nPlayerId)
 
     return hUnit
-    --[[ 废弃，直接给玩家一个单位
-    hHero:SetBaseHealthRegen(vUnitToEnvolve.StatusHealthRegen)
-    hHero:SetBaseMaxHealth(vUnitToEnvolve.StatusHealth)
-    hHero:SetMaxHealth(vUnitToEnvolve.StatusHealth)
-    hHero:SetHealth(vUnitToEnvolve.StatusHealth)
-
-    hHero:SetBaseAgility(0)
-    hHero:SetBaseIntellect(0)  
-    hHero:SetBaseStrength(0)  
-
-    hHero:SetBaseManaRegen(vUnitToEnvolve.StatusManaRegen)
-    hHero:SetMana(vUnitToEnvolve.StatusMana)
-    hHero:SetBaseDamageMin(vUnitToEnvolve.AttackDamageMin)
-    hHero:SetBaseDamageMin(vUnitToEnvolve.AttackDamageMax)
-    hHero:SetPhysicalArmorBaseValue(vUnitToEnvolve.ArmorPhysical)
-    hHero:SetBaseMoveSpeed(vUnitToEnvolve.MovementSpeed)
-    hHero:SetAttackCapability(ConvertConstStrToInt(vUnitToEnvolve.AttackCapabilities))
-    hHero:SetModel(vUnitToEnvolve.Model)
-    hHero:SetOriginalModel(vUnitToEnvolve.Model)
-    hHero:SetRangedProjectileName(vUnitToEnvolve.ProjectileModel)
-
-    --弹道速度用modifier修正
-    hHero.flProjectileSpeedModify=vUnitToEnvolve.AttackRate-hHero:GetProjectileSpeed()
-    --attack rate在 modifier处理
-    hHero.flBaseAttackRate=vUnitToEnvolve.AttackRate
-    --用modifier修正攻击距离
-    hHero.flAttackRangeModify=vUnitToEnvolve.AttackRange-hHero:GetBaseAttackRange() --默认128
-    
-    hHero:RemoveModifierByName("modifier_hero_adjustment")
-    hHero:AddNewModifier(hHero, nil, "modifier_hero_adjustment", {})
-    ]]
-    
 
 end
 
@@ -223,11 +77,11 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
   hHero:AddNoDraw()
   hHero:FindAbilityByName("dota_ability_hero_invulnerable"):SetLevel(1)
   --如果已经控制了某个生物 先移除
-
-  --保留生物的当前血量百分比
   local flCurrentHealthRatio = 1
   if  hHero.hCurrentCreep~=nil and not hHero.hCurrentCreep:IsNull() then
     if hHero.hCurrentCreep:IsAlive() then
+        --记录物品 记录血量 （重生的话从死亡事件里面记录物品）
+        ItemController:RecordItemsInfo(hHero)
         flCurrentHealthRatio= hHero.hCurrentCreep:GetHealth()/hHero.hCurrentCreep:GetMaxHealth()
         if flCurrentHealthRatio<=0 then
            flCurrentHealthRatio=0.01
@@ -246,9 +100,9 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
 
   hUnit:SetControllableByPlayer(hHero:GetPlayerID(), true)
   hUnit:SetHealth(hUnit:GetMaxHealth()*flCurrentHealthRatio)
+
   -- evolve island util
-  AddTinyBody(hUnit)
-   
+  AddTinyBody(hUnit) 
   --为死灵法师添加技能（被动技能加给野怪过强）  
   if hUnit:GetUnitName()=="npc_dota_creature_necrolyte_apostle_of_decay" then
      hUnit:AddAbility("necrolyte_heartstopper_aura"):SetLevel(1)
@@ -257,6 +111,7 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
 
   hHero.hCurrentCreep=hUnit
   hHero.nCurrentCreepLevel=hUnit:GetLevel()
+
   
   --设置技能等级
   for i=1,20 do
@@ -270,6 +125,8 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
     end
   end
 
+    -- 还原之前记录的物品
+  ItemController:RestoreItems(hHero)
 
   --放在NetTable送达前台
   CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerId), {creepIndex=hUnit:GetEntityIndex()} )
@@ -404,4 +261,139 @@ function RemoveAbilityFromPoolByName(nAbilityTotalPerks,sNewAbilityName,vAbility
     end
     return nAbilityTotalPerks
 end
+
+
+
+
+function GameEnterUltimateStage  (nPlayerId)
+    local sPlayerName=PlayerResource:GetPlayerName(nPlayerId)
+    Notifications:TopToAll({text = sPlayerName.." ", duration = 4})
+    Notifications:TopToAll({text = "#UltimateStageNote", duration = 4, style = {color = "Orange"}, continue = true})       --无法复活 关闭战争迷雾
+    GameRules:GetGameModeEntity():SetFixedRespawnTime(99999999999)
+    GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
+    GameRules.bUltimateStage=true    
+end
+
+function GameEnterLevelTenStage  (nPlayerId)
+    local sPlayerName=PlayerResource:GetPlayerName(nPlayerId)
+    Notifications:TopToAll({text = sPlayerName.." ", duration = 4})
+    Notifications:TopToAll({text = "#LevelTenStageNote", duration = 4, style = {color = "Orange"}, continue = true})   
+    GameRules.bLevelTenStage=true
+end
+
+
+
+
+-- 挑选新的生物名字
+function DetermineNewUnitName(nPlayerId,nLevel)
+
+    local sUnitToEnvolve=""
+
+    local vEnvolvePool={}  --进化池
+    local vEnvolveBlankPool={} --白板池子
+
+    if nLevel==11 then
+          local tempPerksMap = { 
+              {name="element",value=GameMode.vPlayerPerk[nPlayerId][1]},
+              {name="mystery",value=GameMode.vPlayerPerk[nPlayerId][2]},
+              {name="durable",value=GameMode.vPlayerPerk[nPlayerId][3]},
+              {name="fury",value=GameMode.vPlayerPerk[nPlayerId][4]},
+              {name="decay",value=GameMode.vPlayerPerk[nPlayerId][5]},
+              {name="hunt",value=GameMode.vPlayerPerk[nPlayerId][6]}
+           }
+           table.sort(tempPerksMap,function(a,b)
+                return a.value > b.value
+           end)
+
+           if tempPerksMap[1].name=="element" then
+               sUnitToEnvolve="npc_dota_creature_storm_spirit"
+           end
+           if tempPerksMap[1].name=="mystery" then
+               sUnitToEnvolve="npc_dota_creature_dark_seer"
+           end
+           if tempPerksMap[1].name=="durable" then
+               sUnitToEnvolve="npc_dota_creature_storegga_2"
+           end
+           if tempPerksMap[1].name=="fury" then
+               sUnitToEnvolve="npc_dota_creature_ursa_razorwyrm"
+           end
+           if tempPerksMap[1].name=="decay" then
+               sUnitToEnvolve="npc_dota_creature_necrolyte_apostle_of_decay"
+           end
+           if tempPerksMap[1].name=="hunt" then
+               sUnitToEnvolve="npc_dota_creature_nightstalker"
+           end  
+    else 
+        -- 遍历kv 加入进化池 key 单位名称 value单位总perk点
+
+        local nEnvolvePoolTotalPerk=0 --进化池perk的总量
+
+        for sUnitName, vData in pairs(GameRules.vUnitsKV) do
+
+            if vData and type(vData) == "table" then       
+                 -- 跳过召唤生物
+                if vData.IsSummoned==nil or vData.IsSummoned==0 then
+                 -- 等级相当，perk相符    
+                    if vData.nCreatureLevel ==nLevel then
+                       if  nLevel==1 then --第一级从直接随机选一个
+                           table.insert(vEnvolveBlankPool, sUnitName)
+                       else
+                           local bPerkValid=true  
+                           if vData.nElement>GameMode.vPlayerPerk[nPlayerId][1] then
+                              bPerkValid=false
+                           end
+                           if vData.nMystery>GameMode.vPlayerPerk[nPlayerId][2] then
+                              bPerkValid=false
+                           end
+                           if vData.nDurable>GameMode.vPlayerPerk[nPlayerId][3] then
+                              bPerkValid=false
+                           end
+                           if vData.nFury>GameMode.vPlayerPerk[nPlayerId][4] then
+                              bPerkValid=false
+                           end
+                           if vData.nDecay>GameMode.vPlayerPerk[nPlayerId][5] then
+                              bPerkValid=false
+                           end
+                           if vData.nHunt>GameMode.vPlayerPerk[nPlayerId][6] then
+                              bPerkValid=false
+                           end
+                           --满足条件加入进化池
+                           if bPerkValid then
+                              if vData.nTotalPerk == 0 then
+                                 table.insert(vEnvolveBlankPool, sUnitName)
+                              else
+                                 vEnvolvePool[sUnitName] = vData.nTotalPerk
+                              end
+                              nEnvolvePoolTotalPerk=nEnvolvePoolTotalPerk+vData.nTotalPerk
+                           end
+                        end
+                    end
+                end
+            end
+        end
+        
+        if nEnvolvePoolTotalPerk >0 then
+            local nDice= RandomInt(1,nEnvolvePoolTotalPerk)
+
+            --遍历进化池 确认进化结果
+            local nTemp=0
+            for sUnitName,nPerk in pairs(vEnvolvePool) do
+               nTemp=nTemp+nPerk
+               if nDice<=nTemp then
+                 sUnitToEnvolve=sUnitName
+                 break;
+               end
+            end
+        else
+            local nDice= RandomInt(1,#vEnvolveBlankPool)
+            sUnitToEnvolve=vEnvolveBlankPool[nDice]
+        end
+    end
+
+    return sUnitToEnvolve
+end
+
+
+
+
 

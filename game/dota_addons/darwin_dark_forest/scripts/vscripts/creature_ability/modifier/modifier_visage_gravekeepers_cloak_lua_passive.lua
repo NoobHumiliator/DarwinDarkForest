@@ -32,7 +32,9 @@ function modifier_visage_gravekeepers_cloak_lua_passive:OnIntervalThink()
 		    end
 		else
 			local hModifier = self:GetParent():AddNewModifier(self:GetParent(), self:GetAbility(), "modifier_visage_gravekeepers_cloak_lua_effect", {})
-		    hModifier:SetStackCount(1)
+		    if hModifier then
+		      hModifier:SetStackCount(1)
+		    end
 		end
 	end
 end

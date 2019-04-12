@@ -227,6 +227,8 @@ function NeutralSpawner:SpawnOneCreature()
       AddTinyBody(hUnit)
       hUnit:SetNightTimeVisionRange(1000)
       hUnit:SetDayTimeVisionRange(1800)
+      ItemController:CreateItemForNeutraulByChance(hUnit)
+
       FindClearSpaceForUnit(hUnit, vRandomPos, true)
       --设置生物等级
       hUnit.nCreatureLevel=GameRules.vUnitsKV[sUnitName].nCreatureLevel

@@ -6,7 +6,6 @@ function fury_berserk_lua:OnSpellStart()
 	local duration = self:GetSpecialValueFor( "duration" )
 	self:GetCaster():AddNewModifier( self:GetCaster(), self, "modifier_fury_berserk_lua", { duration = duration }  )
 	EmitSoundOn( "DOTA_Item.MaskOfMadness.Activate", self:GetCaster() )
-	self:GetCaster():StartGesture( ACT_DOTA_ABILITY_4 );
 end
 
 --------------------------------------------------------------------------------

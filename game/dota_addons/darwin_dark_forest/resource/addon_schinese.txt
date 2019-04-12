@@ -499,11 +499,70 @@
     "DOTA_Tooltip_ability_decay_tombstone_zombie_damage"                                  "僵尸伤害："
     "DOTA_Tooltip_ability_decay_tombstone_max_zombie"                                     "同时存在的最大僵尸数量："
 
-    "DOTA_Tooltip_decay_summon_skeleton_mage"                                             "召唤骷髅法师"
-    "DOTA_Tooltip_decay_summon_skeleton_mage_Description"                                 "在身边召唤一个脆弱的骷髅法师，具有幽冥轰爆技能。"
-    "DOTA_Tooltip_decay_summon_skeleton_mage_skeleton_mage_duration"                      "骷髅法师持续时间："
-    "DOTA_Tooltip_decay_summon_skeleton_mage_nether_blast_level"                          "骷髅法师幽冥轰爆等级："
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage"                                             "召唤骷髅法师"
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage_Description"                                 "在身边召唤一个脆弱的骷髅法师，具有幽冥轰爆技能。"
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage_skeleton_mage_duration"                      "骷髅法师持续时间："
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage_nether_blast_level"                          "骷髅法师幽冥轰爆等级："
 
+    "DOTA_Tooltip_ability_creature_ogre_melee_smash"                                              "食人魔重击"
+    "DOTA_Tooltip_ability_creature_ogre_melee_smash_Description"                                  "重击地面，眩晕范围内的敌人并且，造成伤害。"
+    "DOTA_Tooltip_ability_creature_ogre_melee_smash_impact_radius"                                "重击范围："
+    "DOTA_Tooltip_ability_creature_ogre_melee_smash_stun_duration"                                "眩晕时间："
+    "DOTA_Tooltip_ability_creature_ogre_melee_smash_damage"                                       "伤害："
+    
+
+    "DOTA_Tooltip_ability_creature_gaoler_melee_smash"                                            "灯神重击"
+    "DOTA_Tooltip_ability_creature_gaoler_melee_smash_Description"                                "重击地面，眩晕范围内的敌人并且，造成伤害。"
+    "DOTA_Tooltip_ability_creature_gaoler_melee_smash_impact_radius"                              "重击范围："
+    "DOTA_Tooltip_ability_creature_gaoler_melee_smash_stun_duration"                              "眩晕时间："
+    "DOTA_Tooltip_ability_creature_gaoler_melee_smash_damage"                                     "伤害："
+
+    
+    "DOTA_Tooltip_ability_storegga_melee_smash"                                          "重击"
+    "DOTA_Tooltip_ability_storegga_melee_smash_Description"                              "重击地面，眩晕范围内的敌人并且，造成伤害。"
+    "DOTA_Tooltip_ability_storegga_melee_smash_impact_radius"                            "重击范围："
+    "DOTA_Tooltip_ability_storegga_melee_smash_stun_duration"                            "眩晕时间："
+    "DOTA_Tooltip_ability_storegga_melee_smash_damage"                                   "伤害："
+
+    "DOTA_Tooltip_ability_storegga_ground_pound"                                         "拍击地面"
+    "DOTA_Tooltip_ability_storegga_ground_pound_Description"                             "持续施法-拍击地面，对范围内敌人造成伤害，并减速。"
+    "DOTA_Tooltip_ability_storegga_ground_pound_slow_duration"                           "减速持续时间："
+    "DOTA_Tooltip_ability_storegga_ground_pound_damage"                                  "每波伤害："
+    "DOTA_Tooltip_ability_storegga_ground_pound_radius"                                  "范围："
+    "DOTA_Tooltip_ability_storegga_ground_pound_movespeed_slow"                          "减速效果："
+  
+    "DOTA_Tooltip_ability_frostbitten_icicle"                                            "冥界阴寒"
+    "DOTA_Tooltip_ability_frostbitten_icicle_Description"                                "破坏性的寒霜在目标区域爆发，造成范围伤害并冻结区域内敌人。"
+    "DOTA_Tooltip_ability_frostbitten_icicle_radius"                                     "作用范围："
+    "DOTA_Tooltip_ability_frostbitten_icicle_damage"                                     "伤害："
+    "DOTA_Tooltip_ability_frostbitten_icicle_freeze_duration"                            "冻结时间："
+
+    "DOTA_Tooltip_ability_creature_ogreseal_flop"                                        "海象扑击"
+    "DOTA_Tooltip_ability_creature_ogreseal_flop_Description"                            "向前扑打，每次造成%damage%点伤害并眩晕%stun_duration%秒。"
+    
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash"                                      "蹲地猛击"
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash_Description"                          "食人魔督军跳向空中向下猛砸，对附近敌人造成伤害并且眩晕。"
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash_impact_radius"                        "作用范围："
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash_stun_duration"                        "眩晕时间："
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash_damage"                               "伤害："
+
+
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash"                                      "蹲地猛击"
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash_Description"                          "食人魔督军跳向空中向下猛砸，对附近敌人造成伤害并且眩晕。"
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash_impact_radius"                        "作用范围："
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash_stun_duration"                        "眩晕时间："
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash_damage"                               "伤害："
+
+
+    "DOTA_Tooltip_ability_creature_gaoler_shock"                                         "放电"
+    "DOTA_Tooltip_ability_creature_gaoler_shock_Description"                             "短暂引导后，释放多波电能冲击，对附近敌人造成伤害"
+    "DOTA_Tooltip_ability_creature_gaoler_shock_shock_interval"                          "放电间隔："
+    "DOTA_Tooltip_ability_creature_gaoler_shock_shock_damage"                            "每波伤害："
+
+
+    "DOTA_Tooltip_ability_durable_damage_return_lua"                                     "反伤"
+    "DOTA_Tooltip_ability_durable_damage_return_lua_Description"                         "开启后，反弹所有受到的伤害。"
+    "DOTA_Tooltip_ability_durable_damage_return_lua_duration"                            "持续时间："
 
   } 
 
