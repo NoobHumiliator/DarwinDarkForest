@@ -1,6 +1,9 @@
 
 modifier_item_crown_lua = class({})
 
+function modifier_item_crown_lua:IsHidden()
+	return true
+end
 ----------------------------------------
 
 function modifier_item_crown_lua:GetTexture()
@@ -8,10 +11,9 @@ function modifier_item_crown_lua:GetTexture()
 end
 ----------------------------------------
 
-function modifier_item_crown_lua:IsHidden()
-	return true
+function modifier_item_crown_lua:GetAttributes()
+	return MODIFIER_ATTRIBUTE_MULTIPLE
 end
-
 
 ----------------------------------------
 
@@ -19,16 +21,26 @@ function modifier_item_crown_lua:OnCreated( kv )
 	self.spell_amplify = self:GetAbility():GetSpecialValueFor( "spell_amplify" )
 	self.bonus_damage = self:GetAbility():GetSpecialValueFor( "bonus_damage" )
     self.bonus_health = self:GetAbility():GetSpecialValueFor( "bonus_health" )
+    if IsServer() then
+    	AddHealthBonus(self:GetCaster(),self.bonus_health)
+    end
+end
+-------------------------------------------
+
+
+function modifier_item_crown_lua:OnDestroy()
+    if IsServer() then
+    	RemoveHealthBonus(self:GetCaster(),self.bonus_health)
+    end
 end
 
-----------------------------------------
+---------------------------------------------
 
 function modifier_item_crown_lua:DeclareFunctions()
 	local funcs = 
 	{
 		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
-		MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE,
-		MODIFIER_PROPERTY_EXTRA_HEALTH_BONUS
+		MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE
 	}
 
 	return funcs
@@ -45,12 +57,6 @@ end
 
 function modifier_item_crown_lua:GetModifierPreAttack_BonusDamage( params )
 	return self.bonus_damage
-end
-
-----------------------------------------
-
-function modifier_item_crown_lua:GetModifierExtraHealthBonus( params )
-	return self.bonus_health
 end
 
 ----------------------------------------

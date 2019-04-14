@@ -69,7 +69,7 @@ function GameMode:OnEntityKilled(keys)
        local nPlayerId = hKillerUnit:GetMainControllingPlayer()
        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
        
-       --野怪掉落物品
+       --掉落物品
        ItemController:DropItemByChance(hKilledUnit)
 
        --消除野怪户口 (先确保被击杀单位不是野怪的召唤生物)      
@@ -179,8 +179,11 @@ function GameMode:OnEntityKilled(keys)
        local nPlayerId = hKilledUnit:GetOwner():GetPlayerID()
        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
        -- 保证是玩家的主控生物
-       if hHero.hCurrentCreep == hKilledUnit then
-          
+       if hHero.hCurrentCreep == hKilledUnit and true~=hHero.hCurrentCreep.bKillByMech then
+
+          --掉落物品
+          ItemController:DropItemByChance(hKilledUnit)
+                    
           --记录物品
           ItemController:RecordItemsInfo(hHero)
 
@@ -358,6 +361,13 @@ function GameMode:OnPlayerSay(keys)
             local hUnit = SpawnUnitToReplaceHero(sText,hHero,nPlayerId)
             AddAbilityForUnit(hUnit,nPlayerId)
 
+        end
+
+        --添加物品
+        if string.find(sText,"item_") == 1 and hHero and not hHero.hCurrentCreep:IsNull() then
+
+             local hNewItem =  hHero.hCurrentCreep:AddItemByName(sText)
+           
         end
 
     end

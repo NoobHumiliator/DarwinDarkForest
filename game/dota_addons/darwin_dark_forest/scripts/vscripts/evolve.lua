@@ -88,7 +88,11 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
         end
     end
     hHero.hCurrentCreep:AddNoDraw()
-    UTIL_Remove(  hHero.hCurrentCreep )
+    --因为游戏机制移除的
+    hHero.hCurrentCreep.bKillByMech=true
+    hHero.hCurrentCreep:ForceKill(false)
+
+    --UTIL_Remove(  hHero.hCurrentCreep )
   end
 
 

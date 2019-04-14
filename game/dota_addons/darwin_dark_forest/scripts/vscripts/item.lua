@@ -17,6 +17,8 @@ function ItemController:Init()
     self.flItemCarryChance=1
     --掉落物品的概率
     self.flItemDropChance=1
+    --玩家物品的概率
+    self.flPlayerItemDropChance=0.5
 
     --二维数组 k 为1-5级物品
     self.vItemsTieTable = {}
@@ -28,7 +30,7 @@ function ItemController:Init()
     local vItems={}
     for sItemName, vData in pairs(vItemsKV) do
         if vData and type(vData) == "table" then
-            if vData.ItemCost~=nil then
+            if vData.ItemCost~=nil and (1~=vData.ItemRecipe)  then
                 vData.sItemName=sItemName
                 table.insert(vItems,vData)
             end
@@ -83,31 +85,52 @@ end
 
 
 function ItemController:DropItemByChance(hUnit)
-
-    if RandomInt(1, 100)/100 < self.flItemDropChance then
-        
-        for i=0,11 do --遍历物品
-            local hItem = hUnit:GetItemInSlot(i)
-            if hItem then
-              local hNewItem = CreateItem( hItem:GetName(), nil, nil )
-              hNewItem:SetPurchaseTime( 0 )
-              if hNewItem:IsPermanent() and hNewItem:GetShareability() == ITEM_FULLY_SHAREABLE then
-                 hNewItem:SetStacksWithOtherOwners( true )
-              end
-              local hNewWorldItem = CreateItemOnPositionSync( hUnit:GetOrigin(), hNewItem )
-              hNewItem:LaunchLoot( false, RandomFloat( 300, 450 ), 0.5, hUnit:GetOrigin() + RandomVector( RandomFloat( 200, 300 ) ) )
-              Timers:CreateTimer({
-                endTime = 0.5, 
-                callback = function()
-                EmitGlobalSound( "ui.inv_drop_highvalue" )
-                end
-              })             
+       
+    for i=0,11 do --遍历物品
+        local hItem = hUnit:GetItemInSlot(i)
+        if hItem and self:RollDiceToDrop(hUnit) then
+          local hNewItem = CreateItem( hItem:GetName(), nil, nil )
+          hNewItem:SetPurchaseTime( 0 )
+          if hNewItem:IsPermanent() and hNewItem:GetShareability() == ITEM_FULLY_SHAREABLE then
+             hNewItem:SetStacksWithOtherOwners( true )
+          end
+          local hNewWorldItem = CreateItemOnPositionSync( hUnit:GetOrigin(), hNewItem )
+          hNewItem:LaunchLoot( false, RandomFloat( 300, 450 ), 0.5, hUnit:GetOrigin() + RandomVector( RandomFloat( 200, 300 ) ) )
+          Timers:CreateTimer({
+            endTime = 0.5, 
+            callback = function()
+            EmitGlobalSound( "ui.inv_drop_highvalue" )
             end
-            --移除旧物品
-            UTIL_Remove(hItem)
+          })
+          UTIL_Remove(hItem)             
         end
+
     end
+
 end
+
+
+function ItemController:RollDiceToDrop(hUnit)
+
+    local bDropItem = false
+    
+    --玩家与野怪掉率不同
+    if hUnit:GetTeamNumber() == DOTA_TEAM_NEUTRALS then
+       if RandomInt(1, 100)/100 < self.flItemDropChance then
+           bDropItem=true
+       end
+    else
+       if RandomInt(1, 100)/100 < self.flPlayerItemDropChance then
+           bDropItem=true
+       end
+    end
+
+    return bDropItem
+
+end
+
+
+
 
 -- 将当前物品信息 （名，堆叠，冷却）作为数组记录到英雄身上，进化或者退化的时候 重新给单位加上物品
 function ItemController:RecordItemsInfo(hHero)

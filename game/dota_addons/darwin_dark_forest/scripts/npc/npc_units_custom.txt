@@ -3455,8 +3455,8 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"500"		// Base health.
-		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusHealthRegen"			"2.5"		// Health regeneration rate.
+		"StatusMana"				"200"			// Base mana.
 		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -5341,7 +5341,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"650"		// Base health.
 		"StatusHealthRegen"			"1.5"		// Health regeneration rate.
-		"StatusMana"				"200"			// Base mana.
+		"StatusMana"				"250"			// Base mana.
 		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -5391,15 +5391,15 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"35"		// Damage range min.
 		"AttackDamageMax"			"39"		// Damage range max.
 		"AttackRate"				"1.6"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
-		"ProjectileSpeed"			"1200"		// Speed of projectile.		     
+		"AttackRange"				"100"		// Range within a target can be attacked.
+		"ProjectileModel"			"" // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		     
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -6241,7 +6241,9 @@
 
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/ice_biome/tuskfolk/tuskfolk001b_f.vmdl"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"Hero_Tusk"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_tusk.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"4"
 		"HasInventory"				"1"
@@ -10638,7 +10640,8 @@
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/creeps/ice_biome/tuskfolk/tuskfolk001a_f.vmdl"	// Model.
 		"SoundSet"					"Hero_Tusk"
-		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_tusk.vsndevts"
 		"ModelScale"				"1"
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
