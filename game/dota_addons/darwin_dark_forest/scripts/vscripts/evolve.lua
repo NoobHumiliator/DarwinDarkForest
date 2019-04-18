@@ -167,8 +167,6 @@ function AddAbilityForUnit(hUnit,nPlayerId)
        end
    end
    
-   print("Ability number for player"..nPlayerId.." is:"..nAbilityNumber)
-
    local vAbilityPool={}
    local nAbilityTotalPerks=0
 
@@ -254,7 +252,6 @@ function RemoveAbilityFromPoolByName(nAbilityTotalPerks,sNewAbilityName,vAbility
    --将同名技能从技能池移除  
     local i,max=1,#vAbilityPool
     while i<=max do
-        print("i:"..i.."max:"..max)
         if vAbilityPool[i].sAbilityName == sNewAbilityName then
             nAbilityTotalPerks=nAbilityTotalPerks-vAbilityPool[i].nTotalPerk
             table.remove(vAbilityPool,i)

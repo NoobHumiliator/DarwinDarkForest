@@ -286,6 +286,8 @@ end
 function GameMode:InitGameMode()
 
     GameRules:GetGameModeEntity().GameMode = self
+
+    GameRules.bPveMap = false       --此地图只有一个有效玩家，PVE模式（DOTA_GAMERULES_STATE_GAME_IN_PROGRESS时候检查此值）
     GameRules.bUltimateStage=false  --终极进化阶段
     GameRules.bLevelTenStage=false  --有生物到达10级
     
@@ -320,6 +322,9 @@ function GameMode:InitGameMode()
 	self.m_VictoryMessages[DOTA_TEAM_CUSTOM_6] = "#VictoryMessage_Custom6"
 	self.m_VictoryMessages[DOTA_TEAM_CUSTOM_7] = "#VictoryMessage_Custom7"
 	self.m_VictoryMessages[DOTA_TEAM_CUSTOM_8] = "#VictoryMessage_Custom8"
+
+
+
 
     --根据出生点 设置队伍玩家数量
     self:GatherAndRegisterValidTeams()
@@ -400,17 +405,25 @@ function GameMode:GatherAndRegisterValidTeams()
 		table.insert( self.vfoundTeamsList, t )
 	end
 
-	local maxPlayersPerTeam = math.floor( nMAX_PLAYER_NUMBER / numTeams )
+    print( "Setting up teams:" )
+    local nGameTeamMaxPlayers =1 
+    if GetMapName() == "island_1x10" then 
+        nGameTeamMaxPlayers=1
+    elseif GetMapName() == "island_3x4" then
+        nGameTeamMaxPlayers=3
+    end
 
-	print( "Setting up teams:" )
-	for team = 0, (DOTA_TEAM_COUNT-1) do
-		local maxPlayers = 0
-		if ( nil ~= TableFindKey( self.vfoundTeamsList, team ) ) then
-			maxPlayers = maxPlayersPerTeam
-		end
-		print( " - " .. team .. " ( " .. GetTeamName( team ) .. " ) -> max players = " .. tostring(maxPlayers) )
-		GameRules:SetCustomGameTeamMaxPlayers( team, maxPlayers )
-	end
+    for nTeam = 0, (DOTA_TEAM_COUNT-1) do
+        local nTempmaxPlayers = 0
+        --如果没有对应出生点 设置为0
+        if ( nil ~= TableFindKey( self.vfoundTeamsList, nTeam ) ) then
+            nTempmaxPlayers = nGameTeamMaxPlayers
+        end
+        print( " - " .. nTeam .. " ( " .. GetTeamName( nTeam ) .. " ) -> max players = " .. nTempmaxPlayers )
+        GameRules:SetCustomGameTeamMaxPlayers( nTeam, nTempmaxPlayers )
+    end
+
+
 end
 
 ---------------------------------------------------------------------------------

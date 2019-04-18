@@ -76,28 +76,44 @@ end
 function CheckIfHasAggro()
 
 	--如果有追击目标
-	if thisEntity:GetAggroTarget() ~= nil then
-		--尝试释放技能 11级生物技能毁天灭地 所以跳过释放
-		 if thisEntity:GetLevel()<11 then
-		 	CastAbility(thisEntity:GetAggroTarget())
-	     end
-        --切换追击状态 此时视为被玩家捅了一下
-        if not thisEntity.bChasing then
-        	thisEntity.bChasing=true
-        	thisEntity:SetBaseMoveSpeed( thisEntity.nOriginalMovementSpeed )
-            thisEntity.flLastHitTime =  GameRules:GetGameTime();   
-        end
-		--还原移动速度
+
+
+    if thisEntity.hChasingTarget then
+
+    	if thisEntity:GetLevel()<11 then
+		 	local flAbilityCastTime = CastAbility(thisEntity.hChasingTarget)
+		 	if flAbilityCastTime then
+		 		return flAbilityCastTime
+		 	end
+	    end
         --如果四秒不受玩家反击，或者丢失玩家视野
-		if (  thisEntity.flLastHitTime and ( GameRules:GetGameTime() - thisEntity.flLastHitTime >4 ) ) or not thisEntity:CanEntityBeSeenByMyTeam(thisEntity:GetAggroTarget())   then
-	 		thisEntity.bChasing=false
-	 		thisEntity:SetBaseMoveSpeed( nWalkingMoveSpeed )
-	 		return RetreatFromUnit(thisEntity:GetAggroTarget())
+		if (thisEntity.flLastHitTime and ( GameRules:GetGameTime() - thisEntity.flLastHitTime >4 ) ) or not thisEntity:CanEntityBeSeenByMyTeam(thisEntity:GetAggroTarget())   then
+	 		--撤退 并且重置追击状态
+	 		return RetreatFromUnit(thisEntity.hChasingTarget)
 		end
-	else
-		--恢复步行速度
-		thisEntity:SetBaseMoveSpeed(nWalkingMoveSpeed)
-		return nil
+		thisEntity:SetAggroTarget(thisEntity.hChasingTarget)
+		return 0.5
+    else
+    	--新增追击目标
+		if thisEntity:GetAggroTarget() ~= nil then
+	        if not thisEntity.bChasing then
+	        	thisEntity.bChasing=true
+	        	thisEntity.hChasingTarget=thisEntity:GetAggroTarget()
+	        	thisEntity:SetBaseMoveSpeed( thisEntity.nOriginalMovementSpeed )
+	            thisEntity.flLastHitTime =  GameRules:GetGameTime();   
+	        end
+	        --尝试释放技能 11级生物技能毁天灭地 跳过
+			 if thisEntity:GetLevel()<11 then
+			 	local flAbilityCastTime = CastAbility(thisEntity:GetAggroTarget())
+			 	if flAbilityCastTime then
+			 		return flAbilityCastTime
+			 	end
+		     end
+		else
+			--恢复步行速度
+			thisEntity:SetBaseMoveSpeed(nWalkingMoveSpeed)
+			return nil
+		end
 	end
 end
 -------------------------------------------------------------------
@@ -177,6 +193,8 @@ end
 --------------------------------------------------------------------
 
 function RetreatFromUnit(hUnit)
+    
+    thisEntity:SetBaseMoveSpeed( nWalkingMoveSpeed )
 
 	local vAwayFromEnemy = thisEntity:GetOrigin() - hUnit:GetOrigin()
 	vAwayFromEnemy = vAwayFromEnemy:Normalized()
@@ -196,6 +214,8 @@ function RetreatFromUnit(hUnit)
 	})
  
     thisEntity:SetAggroTarget(nil)
+	thisEntity.bChasing=false
+	thisEntity.hChasingTarget=nil
 
 	return 1.75
 end

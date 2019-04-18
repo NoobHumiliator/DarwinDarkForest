@@ -14,8 +14,20 @@ function GameMode:OnGameRulesStateChange()
 	if nNewState == DOTA_GAMERULES_STATE_PRE_GAME then
 
 	end
-
+  
+  -- 统计有效玩家个数
 	if nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+      
+     local nValidPlayerNumber= 0
+     for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
+       if PlayerResource:IsValidPlayer( nPlayerID ) then
+          nValidPlayerNumber = nValidPlayerNumber+1
+       end
+     end
+    
+     if nValidPlayerNumber==1 then
+         GameRules.bPveMap=true
+     end
 
 	end
 end
@@ -154,18 +166,8 @@ function GameMode:OnEntityKilled(keys)
        
        --如果升级了 进化
        if nNewLevel~=hHero.nCurrentCreepLevel then
-          
-          --播放进化声音
-          EmitSoundOn('General.LevelUp.Bonus',hHero) 
-
-          GameMode:PutStartPositionToLocation(hHero,hHero:GetAbsOrigin())
           hHero.nCurrentCreepLevel=nNewLevel
-          Evolve(nPlayerId,hHero)
-
-          --进化完了播放升级粒子特效
-          local nLevelUpParticleIndex = ParticleManager:CreateParticle("particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", PATTACH_ABSORIGIN_FOLLOW, hHero.hCurrentCreep)
-          ParticleManager:ReleaseParticleIndex(nLevelUpParticleIndex)
-
+          LevelUpAndEvolve(nPlayerId,hHero)
        end
        --更新UI显示
        CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
@@ -231,9 +233,28 @@ function CalculateNewLevel(hHero)
 
 end
 
+function LevelUpAndEvolve(nPlayerId,hHero)
+
+    --播放进化声音
+    EmitSoundOn('General.LevelUp.Bonus',hHero) 
+
+    GameMode:PutStartPositionToLocation(hHero,hHero:GetAbsOrigin())
+    Evolve(nPlayerId,hHero)
+
+    --进化完了播放升级粒子特效
+    local nLevelUpParticleIndex = ParticleManager:CreateParticle("particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", PATTACH_ABSORIGIN_FOLLOW, hHero.hCurrentCreep)
+    ParticleManager:ReleaseParticleIndex(nLevelUpParticleIndex)
+
+
+end
+
+
 --英雄重生
 function GameMode:OnNPCSpawned( event )
+
     local hSpawnedUnit = EntIndexToHScript( event.entindex )
+    print("hSpawnedUnit:GetUnitName()"..hSpawnedUnit:GetUnitName())
+
     --如果已经初始化过 （是复生 而不是第一次选出来）
     if hSpawnedUnit:IsHero() and hSpawnedUnit.nCurrentCreepLevel then
         local nPlayerId = hSpawnedUnit:GetOwner():GetPlayerID()
@@ -252,10 +273,12 @@ function GameMode:OnNPCSpawned( event )
         
         Evolve(nPlayerId,hSpawnedUnit)
     end
-    
+     
     --设置一个随机的位置
     if hSpawnedUnit and hSpawnedUnit.GetUnitName then
-        hSpawnedUnit:SetForwardVector(RandomVector(1))
+        if hSpawnedUnit:GetUnitName()~="npc_dota_thinker"then
+          hSpawnedUnit:SetForwardVector(RandomVector(1))
+        end
     end
 
 end

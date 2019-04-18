@@ -1,11 +1,15 @@
 "AddonInfo"
 {
-	 maps			"forest_solo"
+	 maps			"island_1x10 island_3x4"
 	"IsPlayable"	"1"
 	"HeroGuidesSupported" "1"
 	"PenaltiesEnabled"			"1"
-	"forest_solo"
+	"island_1x10"
 	{
 			"MaxPlayers"                    "10"
+	}
+	"island_3x4"
+	{
+			"MaxPlayers"                    "12"
 	}
 }

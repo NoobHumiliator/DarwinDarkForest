@@ -7878,7 +7878,7 @@
 		"SoundSet"					"Hero_WarlockGolem"			// Name of sound set.
 		"IdleSoundLoop"				"Hero_WarlockGolem.Spawn_Loop"
 		"Level"						"5"
-		"ModelScale" 				"0.7"
+		"ModelScale" 				"0.75"
 		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
@@ -8334,7 +8334,7 @@
         
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"dark_troll_warlord_ensnare"
+		"Ability1"					""
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -15399,8 +15399,8 @@
 		"Model"						"models/heroes/troll_warlord/troll_warlord.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_TrollWarlord" 
-		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_troll_warlord.vsndevts"
-		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_troll_warlord.vsndevts"
+		"GameSoundsFile"	    	"soundevents/game_sounds_heroes/game_sounds_troll_warlord.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_troll_warlord.vsndevts"
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
@@ -15414,6 +15414,7 @@
 		"Ability2"					""	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
+        "Ability5"					""			// Ability 4
 
 		"AbilitiesLevel"            "5"
 
@@ -15424,15 +15425,17 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"182"		// Damage range min.
 		"AttackDamageMax"			"196"		// Damage range max.
 		"AttackRate"				"1.0"
 		"AttackAnimationPoint"		"0.3"
 		"AttackAcquisitionRange"	"1200"
-		"AttackRange"				"128"
-		"ProjectileModel"			""
-		"ProjectileSpeed"			"0"	        
+		"AttackRange"		        "500"
+		"ProjectileModel"		    "particles/units/heroes/hero_troll_warlord/troll_warlord_base_attack.vpcf"
+		"ProjectileSpeed"		    "1200"       
+  
+        "ConsideredHero"			"1"
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -15463,6 +15466,19 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+	    {
+			"AttachWearables"
+	        {
+	            "1"  { "ItemDef"     "373" }
+	            "2"  { "ItemDef"     "374" }
+	            "3"  { "ItemDef"     "379" }
+	            "4"  { "ItemDef"     "380" }
+	            "5"  { "ItemDef"     "410" }
+	            "6"  { "ItemDef"     "411" }
+	            "7"  { "ItemDef"     "412" }
+	        }
+        }
 	}
 
 	
@@ -18406,7 +18422,7 @@
 		"AttackRate"				"1.6"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRange"				"138"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
 
@@ -18473,7 +18489,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"130"		// Damage range min.
 		"AttackDamageMax"			"146"		// Damage range max.
 		"AttackRate"				"1.6"
