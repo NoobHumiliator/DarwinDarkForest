@@ -76,7 +76,21 @@
 	"OvertimeInstructions"	"分获得后胜利"
 	"KillMessageText"	"杀死了先锋"
 	"KillMessageBounty"	"获得了500额外金钱！"
-	"addonname"	"乱战先锋"
+	"addonname"	        "刀塔进化岛"
+
+    "TopMenuIcon_Guide_message"               "游戏指南"
+    "TopMenuIcon_Rank_message"                "天梯排行"
+    "TopMenuIcon_Inventory_message"           "我的收藏"
+    "TopMenuIcon_Shop_message"                "进化商店"
+    "WorldRank"                               "天梯排行"
+    "CurrentSeason"                           "{s:year}年第{d:month}赛季"
+     
+    "PveMode"                                 "单机模式"
+    "SoloMode"                                "单人模式"
+    "ThreePlayerMode"                         "三人模式"
+
+
+
 
     "UltimateStageNote"                                                         "达到11级！游戏进入终极进化阶段，生物死亡后不能复活。游戏结束时根据所获经验结算排名。"
     "LevelTenStageNote"                                                         "率先到达10级，10级生物的强大气息将暴露自己位置。"

@@ -7,6 +7,10 @@ LinkLuaModifier( "modifier_zero_cooldown_and_mana_cost", "modifiers/modifier_zer
 function GameMode:OnGameRulesStateChange()
 	local nNewState = GameRules:State_Get()
 
+  if nNewState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
+        Server:GetRankData()
+  end
+
 	if nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
 
 	end
@@ -19,6 +23,9 @@ function GameMode:OnGameRulesStateChange()
 	if nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
       
      local nValidPlayerNumber= 0
+     --记录游戏开始的时间
+     GameRules.nGameStartTime=GameRules:GetGameTime()
+
      for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
        if PlayerResource:IsValidPlayer( nPlayerID ) then
           nValidPlayerNumber = nValidPlayerNumber+1

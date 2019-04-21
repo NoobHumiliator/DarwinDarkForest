@@ -38,11 +38,23 @@
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_6] = "file://{images}/custom_game/team_icons/team_icon_boar_01.png";
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_7] = "file://{images}/custom_game/team_icons/team_icon_snake_01.png";
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_8] = "file://{images}/custom_game/team_icons/team_icon_horse_01.png";
+
+		function FindDotaHudElement(id){
+		    var hudRoot;
+		    for(panel=$.GetContextPanel();panel!=null;panel=panel.GetParent()){
+		        hudRoot = panel;
+		    }
+		    var comp = hudRoot.FindChildTraverse(id);
+		    return comp;
+		}
+		FindDotaHudElement('ToggleScoreboardButton').style['opacity'] = '0';
 	</script>
 		
 	<Panel>
 	   <CustomUIElement type="HudTopBar" layoutfile="file://{resources}/layout/custom_game/multiteam_top_scoreboard.xml" />
        <CustomUIElement type="Hud"		 layoutfile="file://{resources}/layout/custom_game/perk_radar.xml" />
+       <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/top_menu.xml" />
+       <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/rank_panel.xml" />
 	   <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" />
 	</Panel>
 </root>

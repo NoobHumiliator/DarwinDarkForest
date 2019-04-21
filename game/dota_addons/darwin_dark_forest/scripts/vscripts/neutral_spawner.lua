@@ -55,8 +55,8 @@ function NeutralSpawner:Begin()
     --根据间隔刷怪
     Timers:CreateTimer(1, function()
         NeutralSpawner:SpawnOneCreature()
-        print("NeutralSpawner.nCreaturesNumber"..NeutralSpawner.nCreaturesNumber)
-        print("NeutralSpawner.flTimeInterval"..NeutralSpawner.flTimeInterval)
+        --print("NeutralSpawner.nCreaturesNumber"..NeutralSpawner.nCreaturesNumber)
+        --print("NeutralSpawner.flTimeInterval"..NeutralSpawner.flTimeInterval)
         if NeutralSpawner.nCreaturesNumber<100 then
            NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval/2
            --位置最小刷怪间隔 防止太卡
@@ -189,7 +189,7 @@ function NeutralSpawner:SpawnOneCreature()
         --从队伍平均等级 +4 到 -3 倒叙遍历 (保证高等级怪物的即时补充)
         for i=nAverageLevel+4,nAverageLevel-3,-1 do
              --如果某个等级怪物不足 补足此等级怪物
-             print("Ratio"..self.vCreatureLevelMap[i]/(self.nCreaturesNumber).."i"..i)
+             --print("Ratio"..self.vCreatureLevelMap[i]/(self.nCreaturesNumber).."i"..i)
              if  self.vCreatureLevelMap[i]/(self.nCreaturesNumber) <= vLevelRatio[i-nAverageLevel] then
                  for sUnitName,vData in pairs(GameRules.vUnitsKV) do
                      if vData and type(vData) == "table" then
@@ -201,7 +201,7 @@ function NeutralSpawner:SpawnOneCreature()
                      end
                  end
                  if #vTemp>0 then
-                   print("To Spawn Creature Level:"..i)
+                   --print("To Spawn Creature Level:"..i)
                    break
                  end
              end

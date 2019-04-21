@@ -5,6 +5,7 @@
 		"game_state",
 		"player_perk",
 		"player_creature_index",
-		"team_max_level"
+		"team_max_level",
+		"rank_data"
 	]
 }

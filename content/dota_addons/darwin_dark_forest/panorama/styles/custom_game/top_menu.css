@@ -1,0 +1,39 @@
+#TopMenuPanel{
+  height:50px;
+  width:350px;
+  horizontal-align:left;
+  vertical-align:top;
+  margin-left:105px;
+  margin-top:12px;
+  flow-children:right;
+  transition-property:position;
+  transition-duration:0.5s;
+  position:0px 0px 0px;
+}
+
+.TopMenuIcon{
+  opacity:0.5;
+  height:33px;
+  width:33px;
+  margin-right:17px;
+  background-repeat:no-repeat;
+  background-size:33px 33px;
+  background-position:center center;
+}
+.TopMenuIcon:hover{
+  opacity:1;
+}
+
+#TopMenuIcon_Guide{
+  background-image: url('file://{images}/custom_game/top_menu/question.png');
+}
+#TopMenuIcon_Rank{
+  background-size:30px 30px;
+  background-image: url('file://{images}/custom_game/top_menu/rank.png');
+}
+
+#TopMenuIcon_Inventory{
+  background-size:38px 38px;
+  background-image: url('file://{images}/custom_game/top_menu/inventory.png');
+}
+
