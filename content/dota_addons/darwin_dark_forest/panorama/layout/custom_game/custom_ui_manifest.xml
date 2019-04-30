@@ -55,6 +55,8 @@
        <CustomUIElement type="Hud"		 layoutfile="file://{resources}/layout/custom_game/perk_radar.xml" />
        <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/top_menu.xml" />
        <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/rank_panel.xml" />
+       <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/inventory.xml" />
+       <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/shop.xml" />
 	   <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" />
 	</Panel>
 </root>

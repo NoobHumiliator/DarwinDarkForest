@@ -1,9 +1,11 @@
 <root>
     <styles>
        <include src="file://{resources}/styles/custom_game/rank_panel.css" />
+       <include src="s2r://panorama/styles/dotastyles.css" />
     </styles>
 
     <scripts>
+        <include src="file://{resources}/scripts/custom_game/util.js" />
         <include src="file://{resources}/scripts/custom_game/rank_panel.js" />
     </scripts>
 
@@ -28,9 +30,12 @@
 
      <Panel style="width:100%;height:100%;" hittest="false">
         <Panel class="MenuPage Rank Hidden" id="page_rank">
-            <Panel class="RankTitleAndSeason">
-                <Label class="WorldRankTitle" text="#WorldRank" id="world_rank_title" />
-                <Label class="WorldRankSeason" text="#CurrentSeason" id="current_season" />
+            <Panel class="RankTop">
+                <Panel class="RankTitleAndSeason">
+                    <Label class="WorldRankTitle" text="#WorldRank" id="world_rank_title" />
+                    <Label class="WorldRankSeason" text="#CurrentSeason" id="current_season" />
+                </Panel>
+                <Button class="RankCloseButton" onactivate="CloseRank()" />
             </Panel>
             <Panel class="WorldRanks">
                 <Panel class="WorldRankPanel" id="pve_mode_panel">

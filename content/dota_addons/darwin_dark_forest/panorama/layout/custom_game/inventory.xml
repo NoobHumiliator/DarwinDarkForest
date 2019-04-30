@@ -1,0 +1,80 @@
+<root>
+    <styles>
+       <include src="file://{resources}/styles/custom_game/inventory.css" />
+       <include src="s2r://panorama/styles/dotastyles.css" />
+    </styles>
+
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/util.js" />
+        <include src="file://{resources}/scripts/custom_game/inventory.js" />
+    </scripts>
+    
+    <snippets>
+      <snippet name="CollectionItem">
+          <Panel class="CollectionItemRoot">
+              <Panel class="CollectionItemTitlePanel">
+                  <Label id="collection_item_title" class="CollectionItemTitle" />
+              </Panel>
+              <Panel class="CollectionItemImagePanel">
+                  <Image id="collection_item_image" class="CollectionItemImage" />
+              </Panel>
+              <Panel class="CollectionButtonsPanel">
+                  <Button class="ButtonBevel ButtonEquip" id="button_equip">
+                      <Label text="#Equip" />
+                  </Button>
+                  <Button class="ButtonBevel ButtonRemove" id="button_remove">
+                      <Label text="#Remove" />
+                  </Button>
+              </Panel>
+          </Panel>
+      </snippet>
+     </snippets>
+     <Panel style="width:100%;height:100%;" hittest="false">
+        <Panel class="Inventory Hidden" id="page_inventory">
+            <Panel class="InventoryTop">                  
+                <Label text = "#EvolveInventory" class="InventoryTitle"></Label>
+                <Panel id="DnaStoragePanel">
+                    <Image id="DnaStorageImg" src="file://{images}/custom_game/inventory/dna.png"/>
+                    <Label id = "DnaStorageLabel" text = "× ?"/>
+                    <Panel id = "TaobaoPlusIcon" class = "" hittest = "true" />
+                    <TextEntry id="DnaStorageKeyEntry" maxchars="17" placeholder="" oninputsubmit="OnCdkeySubmitted()" />
+                    <Button id="DnaStorageKeyButton" onactivate="SubmitKey()" class="EvolveButton">
+                        <Label id="DnaStorageKeyButtonLabel"  text="#ExchangeKey"/>
+                    </Button>                            
+                </Panel>
+                <Button class="InventoryCloseButton" onactivate="CloseInventory()" />
+            </Panel>
+
+            <Panel class="InventoryMain">
+                <Panel class="InventoryLeft">
+                      <Panel class="InventoryLeftPic">              
+                      </Panel>
+                      <Button id="DrawMutationButton" onactivate="DrawMutation()">
+                          <Panel class="DrawMutationButtonIconAndText" >
+                              <Panel class="DrawMutationButtonIcon" />
+                              <Label class="DrawMutationButtonText"  text="  X  50" />
+                          </Panel>
+                      </Button>         
+                </Panel>
+                <Panel class="InventoryRight" id="InventoryRight">
+                    <Panel class="InventoryClassTitle" id="InventorySkinTitle">
+                       <Label class="DrawMutationButtonText"  text="#Skin" />
+                    </Panel>
+                    <Panel class="InventoryClassPanel" id="InventorySkinPanel"/>
+                    <Panel class="InventoryClassTitle" id="InventoryImmortalTitle">
+                       <Label text="#Immortal" />
+                    </Panel>
+                    <Panel class="InventoryClassPanel" id="InventoryImmortalPanel"/>
+                    <Panel class="InventoryClassTitle" id="InventoryParticleTitle">
+                       <Label text="#Particle" />
+                    </Panel>
+                    <Panel class="InventoryClassPanel" id="InventoryParticlePanel"/> 
+                    <Panel class="InventoryClassTitle" id="InventoryKillEffectTitle">
+                       <Label text="#KillEffect" />
+                    </Panel>
+                    <Panel class="InventoryClassPanel" id="InventoryKillEffectPanel"/>         
+                </Panel>            
+             </Panel>
+        </Panel>
+    </Panel>
+</root>

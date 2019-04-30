@@ -10804,6 +10804,8 @@
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
 		"nElement"                  "4"
         "nFury"                     "4"
         "nDurable"                  "4"
@@ -10883,6 +10885,8 @@
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
 		"nElement"                  "10"
         "nDurable"                  "10"
 
@@ -10960,6 +10964,8 @@
 		"ModelScale"				"1.1"
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
 
 		"nFury"                     "4"
         "nDurable"                  "10"
@@ -11041,6 +11047,8 @@
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
 		"nFury"                     "4"
 		"nHunt"                     "4"
         "nDurable"                  "3"
@@ -11120,6 +11128,8 @@
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
 		"nFury"                     "5"
         "nHunt"                     "10"
 
@@ -11197,6 +11207,8 @@
 		"ModelScale"				"0.8"
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
 
 		"nElement"                  "4"
         "nHunt"                     "10"
@@ -11278,6 +11290,8 @@
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
         "nHunt"                     "20"
 
 		// Abilities
@@ -11357,6 +11371,8 @@
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
         "nHunt"                     "10"
         "nMystery"                  "10"
 
@@ -11435,6 +11451,8 @@
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
         "nFury"                     "10"
         "nDurable"                  "10"
 
@@ -11510,6 +11528,8 @@
 		"ModelScale"				"1.0"
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
 
         "nFury"                     "20"
 
@@ -11590,6 +11610,8 @@
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
         "nFury"                     "10"
         "nDecay"                    "6"
 
@@ -11666,6 +11688,8 @@
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"6"
 		"ModelScale" 				"1.25"
+
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nMystery"                  "20"
@@ -11750,6 +11774,8 @@
 		"Level"						"8"
 		"ModelScale" 				"1.0"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
          
         "nHunt"                     "24"
 
@@ -11824,6 +11850,8 @@
 		"ModelScale"				"0.9"
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
 
 		"nHunt"                     "6"
 		"nMystery"                  "12"
@@ -11930,6 +11958,8 @@
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
 		"nElement"                  "4"
         "nHunt"                     "12"
 
@@ -12006,6 +12036,8 @@
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"7"
 		"ModelScale" 				"1.1"
+
+		"HasInventory"				"1"
         
         "nElement"                  "12"
         "nDecay"                    "12"
@@ -12081,6 +12113,8 @@
 		"Level"						"7"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
          
         "nDurable"                  "12"
         "nElement"                  "12"
@@ -12165,6 +12199,8 @@
 		"Level"						"7"
 		"ModelScale" 				"0.9"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
          
         "nDurable"                  "12"
         "nFury"                     "6"
@@ -12239,6 +12275,8 @@
 		"ModelScale"				"0.7"
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
 
 		"nDurable"                  "6"
         "nDecay"                    "12"
@@ -12317,6 +12355,8 @@
 		"Level"						"7"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
          
         "nFury"                     "12"
         "nElement"                  "12"
@@ -12388,6 +12428,8 @@
 		"Level"						"7"
 		"ModelScale" 				"1.5"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
         
         "nHunt"                     "12"  
 		"nDecay"                    "12"           
@@ -12456,6 +12498,8 @@
 		"ModelScale" 				"0.85"
         
         "vscripts"					"creap_ai.lua"
+
+        "HasInventory"				"1"
 
         "nFury"                     "12"
         "nMystery"                  "12"
@@ -12539,6 +12583,8 @@
         
         "vscripts"					"creap_ai.lua"
 
+        "HasInventory"				"1"
+
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					""
@@ -12601,6 +12647,8 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"7"
 		"ModelScale" 				"1.1"
+
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nMystery"                  "12"
@@ -12671,6 +12719,8 @@
 		"SoundSet"					"Visage_Familiar"
 		"Level"						"7"
 		"ModelScale" 				"1"
+
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nMystery"                  "12"
@@ -12738,6 +12788,8 @@
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"7"
 		"ModelScale" 				"0.95"
+
+		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
         "nElement"                  "24"
@@ -12817,6 +12869,9 @@
 		"ModelScale" 				"1"
         
         "vscripts"					"creap_ai.lua"
+
+        "HasInventory"				"1"
+
         "nMystery"                  "20"
 
 		// Abilities
@@ -12897,6 +12952,8 @@
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
 		"nElement"                  "4"
 		"nFury"                     "4"
 		"nDurable"                  "4"
@@ -12966,6 +13023,8 @@
 		"ModelScale"				"1"
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
 
 		"nElement"                  "8"
 		"nFury"                     "12"
@@ -13038,6 +13097,8 @@
 		"ModelScale"				"1"
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
 
 		"nDurable"                  "12"
 		"nFury"                     "12"
@@ -13121,6 +13182,8 @@
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
 		"nMystery"                  "6"
 		"nDurable"                  "6"
 		"nFury"                     "6"
@@ -13197,6 +13260,8 @@
 		"ModelScale"				"0.75"
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -13270,6 +13335,8 @@
 		"ModelScale"				"0.9"
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
 
 		"nHunt"                     "12"
 		"nDurable"                  "4"
@@ -13349,6 +13416,8 @@
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
 		"nElement"                  "12"
 		"nDurable"                  "12"
 		
@@ -13427,6 +13496,8 @@
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
 
+		"HasInventory"				"1"
+
 		"nDurable"                  "24"
 		
 		// Abilities
@@ -13503,6 +13574,8 @@
 		"Level"						"7"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
          
         "nDecay"                   "24"
 
@@ -13570,6 +13643,8 @@
 		"Level"						"7"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
          
         "nDecay"                   "4"
         "nElement"                 "2"
@@ -13642,6 +13717,8 @@
 		"Level"						"7"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
          
         "nDecay"                    "6"
         "nFury"                     "10"
@@ -13711,6 +13788,8 @@
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
          
+        "HasInventory"				"1"
+
         "nElement"                  "6"
         "nFury"                     "6"
         "nDurable"                  "6"
@@ -13779,6 +13858,8 @@
 		"Level"						"7"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
          
         "nDecay"                   "6"
         "nHunt"                    "10"
@@ -13847,6 +13928,8 @@
 		"Level"						"7"
 		"ModelScale" 				"1.15"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
          
         "nHunt"                    "10"
         "nFury"                    "10"
@@ -13921,6 +14004,8 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
          
         "nHunt"                     "28"
 
@@ -14021,6 +14106,8 @@
 		"ModelScale"				"1.1"
 		"Level"						"8"
 		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
 
 		"nHunt"                     "14"
 		"nDurable"                  "14"
@@ -14135,6 +14222,7 @@
 		"ModelScale"				"1.0"
 		"Level"						"8"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nHunt"                     "7"
 		"nMystery"                  "14"
@@ -14240,6 +14328,7 @@
 		"ModelScale"				"0.8"
 		"Level"						"8"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nDurable"                  "7"
         "nDecay"                    "14"
@@ -14319,6 +14408,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
@@ -14418,6 +14508,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
@@ -14520,6 +14611,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nMystery"                  "14"
         "nDurable"                  "14"
@@ -14615,6 +14707,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDecay"                    "14"
         "nDurable"                  "14"
@@ -14725,6 +14818,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
         
         "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
@@ -14828,6 +14922,7 @@
 		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
 		"Level"						"8"
 		"ModelScale" 				"1.1"
+		"HasInventory"				"1"
         
         "nHunt"                     "14"  
 		"nDecay"                    "14"           
@@ -14921,6 +15016,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.05"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nDurable"                  "28"
          
@@ -14990,6 +15086,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDecay"                   "14"
         "nFury"                    "14"
@@ -15090,6 +15187,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDecay"                   "5"
         "nElement"                 "3"
@@ -15161,6 +15259,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nFury"                    "14"
         "nElement"                 "14"
@@ -15231,6 +15330,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDurable"                  "14"
         "nFury"                     "8"
@@ -15304,6 +15404,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.0"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDurable"                  "14"
         "nElement"                  "14"
@@ -15404,6 +15505,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nFury"                     "14"
         "nHunt"                     "14"
@@ -15564,6 +15666,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nElement"                  "6"
         "nDurable"                  "6"
@@ -15637,6 +15740,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDecay"                    "28"
 
@@ -15727,6 +15831,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
 
 		// Abilities
@@ -15796,6 +15901,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nDurable"                 "14"
 		"nFury"                    "14"
@@ -15870,6 +15976,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nFury"                     "28"
          
@@ -15941,6 +16048,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nMystery"                  "28"
 
@@ -16033,6 +16141,7 @@
 		"Level"						"8"
 		"ModelScale" 				"0.9"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nMystery"                  "14"
 		"nFury"                     "14"
@@ -16115,6 +16224,7 @@
 		"Level"						"8"
 		"ModelScale" 				"0.9"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nElement"                  "28"
 
@@ -16194,6 +16304,7 @@
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nMystery"                  "14"
         "nHunt"                     "14"
@@ -16294,6 +16405,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_Visage"
 		"IdleSoundLoop"		        "Hero_Visage.IdleLoop"
+		"HasInventory"				"1"
 
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_visage.vsndevts"
 		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_visage.vsndevts"
@@ -16375,6 +16487,7 @@
 		"ModelScale"				"1.2"
 		"Level"						"9"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nHunt"                     "16"
 		"nDurable"                  "16"
@@ -16481,6 +16594,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"VoiceFile"		          "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
 		"GameSoundsFile"		  "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
@@ -16585,6 +16699,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
@@ -16688,6 +16803,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nMystery"                  "16"
         "nDurable"                  "16"
@@ -16790,6 +16906,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDecay"                    "16"
         "nDurable"                  "16"
@@ -16897,6 +17014,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
         
         "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_razor.vsndevts"
@@ -17005,6 +17123,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
         
         "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
         "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
@@ -17099,7 +17218,8 @@
 		"Level"						"9"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
-        
+        "HasInventory"				"1"
+
         "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
         "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
 
@@ -17191,6 +17311,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_ancient_apparition"
 		"IdleSoundLoop"		        "Hero_Ancient_Apparition.IdleLoop"
+		"HasInventory"				"1"
 
 	    "GameSoundsFile"		   "soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts"
 		"VoiceFile"		           "soundevents/voscripts/game_sounds_vo_ancient_apparition.vsndevts"
@@ -17290,6 +17411,7 @@
 		"Model"						"models/heroes/life_stealer/life_stealer.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_LifeStealer"
+		"HasInventory"				"1"
 
 
 		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_life_stealer.vsndevts"
@@ -17388,6 +17510,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_Undying"
 		"IdleSoundLoop"		        "Hero_Undying.IdleLoop"
+		"HasInventory"				"1"
 
 		"Level"						"9"
 		"ModelScale" 				"1.2"
@@ -17483,6 +17606,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDurable"                  "9"
         "nElement"                  "9"
@@ -17554,6 +17678,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"VoiceFile" 				"soundevents/voscripts/game_sounds_vo_warlock_golem.vsndevts"
   
@@ -17639,6 +17764,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nFury"                     "16"
         "nElement"                  "16"
@@ -17710,6 +17836,8 @@
 
 		"GameSoundsFile"		   "soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts"
 		"VoiceFile"		           "soundevents/voscripts/game_sounds_vo_ogre_magi.vsndevts"
+
+		"HasInventory"				"1"
 
 		"Level"						"9"
 		"ModelScale" 				"1.1"
@@ -17816,6 +17944,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nHunt"                    "16"
         "nFury"                    "16"
@@ -17913,6 +18042,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDurable"                  "32"
   
@@ -17982,6 +18112,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nHunt"                     "32"
 
@@ -18079,6 +18210,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nFury"                     "16"
         "nDurable"                  "16"
@@ -18192,6 +18324,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDecay"                    "32"
 
@@ -18261,6 +18394,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.9"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nMystery"                  "16"
         "nDecay"                    "16"
@@ -18330,6 +18464,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
 
 		// Abilities
@@ -18397,6 +18532,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nFury"                     "32"
          
@@ -18470,6 +18606,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nMystery"                  "32"
 
@@ -18570,6 +18707,7 @@
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nHunt"                     "16"
 		"nMystery"                  "16"
@@ -18676,6 +18814,7 @@
 		"ModelScale"				"1.3"
 		"Level"						"10"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nHunt"                     "18"
 		"nDurable"                  "18"
@@ -18781,6 +18920,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"VoiceFile"		          "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
 		"GameSoundsFile"		  "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
@@ -18884,6 +19024,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
@@ -18982,6 +19123,7 @@
 		"Model"						"models/heroes/spectre/spectre.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_Spectre"
+		"HasInventory"				"1"
 
         "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_spectre.vsndevts" 
@@ -19087,6 +19229,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDecay"                    "18"
         "nFury"                     "18"
@@ -19189,6 +19332,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
         
         "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_razor.vsndevts"
@@ -19296,6 +19440,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
         
         "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
         "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
@@ -19389,6 +19534,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.4"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nHunt"                     "18"
 		"nMystery"                  "18"
@@ -19485,6 +19631,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nFury"                     "18"
         "nElement"                  "18"
@@ -19555,6 +19702,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nMystery"                  "18"
         "nFury"                     "18"
@@ -19637,6 +19785,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
 
 		// Abilities
@@ -19706,6 +19855,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDurable"                  "36"
   
@@ -19777,6 +19927,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDurable"                  "18"
         "nElement"                  "18"
@@ -19881,6 +20032,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nHunt"                     "18"
         "nFury"                     "18"
@@ -19974,6 +20126,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_broodmother.vsndevts"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_broodmother.vsndevts"
@@ -20072,6 +20225,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nFury"                     "18"
         "nDurable"                  "18"
@@ -20175,6 +20329,7 @@
 		//----------------------------------------------------------------
 		"Model"						"models/items/undying/flesh_golem/corrupted_scourge_corpse_hive/corrupted_scourge_corpse_hive.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
+		"HasInventory"				"1"
 		
         "SoundSet"		            "Hero_Undying"
 		"IdleSoundLoop"		        "Hero_Undying.IdleLoop"
@@ -20250,6 +20405,7 @@
 		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_Pudge"
+		"HasInventory"				"1"
 		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
 		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_pudge.vsndevts"
 
@@ -20366,6 +20522,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDecay"                    "18"
         "nMystery"                  "18"
@@ -20440,6 +20597,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nDecay"                    "10"
         "nElement"                  "10"
@@ -20510,6 +20668,7 @@
 		"Level"						"10"
 		"ModelScale" 				"2"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nFury"                     "36"
 
@@ -20583,6 +20742,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
 
 		"nMystery"                  "32"
 
@@ -20687,6 +20847,7 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
          
         "nElement"                  "36"
 
@@ -20786,6 +20947,7 @@
 		"ModelScale" 				"1.8"
          
         "vscripts"					"creap_ai.lua"
+        "HasInventory"				"1"
         "nElement"                  "40"
 
 		// Abilities
@@ -20877,6 +21039,7 @@
 		"ModelScale" 				"1.5"
          
         "vscripts"					"creap_ai.lua"
+        "HasInventory"				"1"
         "nHunt"                     "40"
 
 		// Abilities
@@ -20973,6 +21136,7 @@
 		"ModelScale" 				"1.7"
          
         "vscripts"					"creap_ai.lua"
+        "HasInventory"				"1"
         "nDurable"                  "40"
 
 		// Abilities
@@ -21046,6 +21210,7 @@
         
 
         "vscripts"					"creap_ai.lua"
+        "HasInventory"				"1"
         "nMystery"                  "40"
 
 		// Abilities
@@ -21146,6 +21311,7 @@
 		"ModelScale" 				"1.5"
         
         "vscripts"					"creap_ai.lua"
+        "HasInventory"				"1"
         "nDecay"                    "40"
 
 		// Abilities
@@ -21242,6 +21408,7 @@
 		"ModelScale" 				"1.5"
         
         "vscripts"					"creap_ai.lua"
+        "HasInventory"				"1"
         "nFury"                     "40"
 
 		// Abilities

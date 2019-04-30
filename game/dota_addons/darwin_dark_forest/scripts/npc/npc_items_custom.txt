@@ -727,6 +727,11 @@
 				"var_type"				"FIELD_INTEGER"
 				"bonus_health_regen"    "2.5"
 			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "10"
+			}
 		}
 	}
 
@@ -1430,7 +1435,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"15"
+				"bonus_damage"			"10"
 			}
 			"03"
 			{
@@ -2068,16 +2073,10 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_regen_bonus"		"3 4 5 6 7"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"damage"				"400 500 600 700 800"
 			}
 		}
 	}
-
 
     "item_dagon_2_lua"
 	{

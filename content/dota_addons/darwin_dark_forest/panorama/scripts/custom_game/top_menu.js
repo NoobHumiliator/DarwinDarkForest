@@ -16,7 +16,7 @@ function OpenRank(){
 }
 
 function OpenInventory(){
-
+    FindDotaHudElement("page_inventory").ToggleClass("Hidden");  
 }
 
 

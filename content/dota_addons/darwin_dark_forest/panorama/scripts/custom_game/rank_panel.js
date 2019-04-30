@@ -1,4 +1,6 @@
-
+function CloseRank(){
+     $( "#page_rank" ).ToggleClass("Hidden");
+}
 
 
 function refreshTopPanel(gamemode, data) {
@@ -26,29 +28,6 @@ function refreshTopPanel(gamemode, data) {
 	}
 }
 
-function FormatSeconds(value) {
-    var theTime = parseInt(value);// 秒
-    var theTime1 = 0;// 分
-    var theTime2 = 0;// 小时
-    if(theTime > 60) {
-        theTime1 = parseInt(theTime/60);
-        theTime = parseInt(theTime%60);
-            if(theTime1 > 60) {
-            theTime2 = parseInt(theTime1/60);
-            theTime1 = parseInt(theTime1%60);
-            }
-    }
-        var result = ""+parseInt(theTime)+"\"";
-        if(theTime1 > 0) {
-           result = ""+parseInt(theTime1)+"\'"+result;
-        }
-        if(theTime2 > 0) {
-          result = ""+parseInt(theTime2)+":"+result;
-        }
-    return result;
-}
-
-
 function RebuildRank(){
 	var rank_data = CustomNetTables.GetTableValue("rank_data", "rank_data");
 	if (rank_data === undefined) return;
@@ -61,7 +40,7 @@ function RebuildRank(){
 	RebuildRank();
 	var now = new Date();
 	var currentSeason = $("#current_season");
-	currentSeason.SetDialogVariable ("year", toString(now.getFullYear()));
+	currentSeason.SetDialogVariable ("year", now.getFullYear().toString());
 	currentSeason.SetDialogVariableInt("month",now.getMonth() + 1);
 
 	CustomNetTables.SubscribeNetTableListener("rank_data", RebuildRank);

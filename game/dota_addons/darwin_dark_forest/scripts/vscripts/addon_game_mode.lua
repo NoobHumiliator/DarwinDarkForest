@@ -55,6 +55,7 @@ require( "evolve" )
 require( "neutral_spawner" )
 require( "item" )
 require( "server" )
+require( "econ" )
 require( "item_ability/item_util" )
 require( "utils/utility_functions" )
 require( "utils/timers" )
@@ -290,6 +291,7 @@ function GameMode:InitGameMode()
     GameRules:GetGameModeEntity().GameMode = self
 
     GameRules.bPveMap = false       --此地图只有一个有效玩家，PVE模式（DOTA_GAMERULES_STATE_GAME_IN_PROGRESS时候检查此值）
+    GameRules.sValidePlayerSteamIds="" --有效玩家的steamId队列
     GameRules.bUltimateStage=false  --终极进化阶段
     GameRules.bLevelTenStage=false  --有生物到达10级
 
@@ -297,6 +299,8 @@ function GameMode:InitGameMode()
     ItemController:Init()
     Timers:start()
     NeutralSpawner:Init()
+    Econ:Init()
+
     GameMode.vStartPointLocation={} --key是teamnumber value坐标
     
 

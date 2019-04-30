@@ -4,6 +4,24 @@ Label{
     text-shadow: 1px 1px 1px 1.0 #000000ff;
 }
 
+@keyframes 'links-and-more-button-focus'
+{
+    from
+    {
+        background-color: gradient( linear, 0% 0%, 0% 100%, from( #a9c8daee ), to( #000000ee ) ); 
+    }
+
+    50%
+    {
+        background-color: gradient( linear, 0% 0%, 0% 100%, from( #272d2eee ), to( #131617ee ) ); 
+    }
+
+    to
+    {
+        background-color: gradient( linear, 0% 0%, 0% 100%, from( #272d2eee ), to( #131617ee ) ); 
+    }
+}
+
 .MenuPage.Rank {
     width: 1200px;
     height: 900px;
@@ -44,6 +62,12 @@ Label{
     horizontal-align: center;
     margin-bottom: 20px;
 }
+
+.RankTop {
+   width: 100%;
+}
+
+
 
 .WorldRankSeason {
     margin-left: 20px;
@@ -130,7 +154,7 @@ Label{
 }
 
 .RankRating {
-    width: 70px;
+    width: 100px;
     border: 1px solid black;
     margin-right: 15px;
 }
@@ -139,4 +163,33 @@ Label{
     font-size: 25px;
     horizontal-align: center;
     vertical-align: center;
+}
+
+
+.RankCloseButton
+{
+  horizontal-align:right;
+  background-color:#333333;
+  wash-color:white;
+  border-radius:50%;
+  border:1px solid #333333;
+  width:50px;
+  height:50px;
+  box-shadow:#000000 -3px -3px 6px 6px;
+  z-index:555;
+  background-image:url("s2r://panorama/images/control_icons/x_close_png.vtex");
+  background-size:40px 40px;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  margin:4px;
+  margin-top:6px;
+  transition-property:wash-color, pre-transform-scale2d, background-color;
+  transition-duration:0.1s;
+  transition-timing-function:ease-in;
+}
+
+.RankCloseButton:active
+{
+  background-size:36px 36px;
+  sound:"ui_friends_slide_in"; 
 }

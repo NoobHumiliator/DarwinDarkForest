@@ -15,6 +15,7 @@ end
 function modifier_item_reaver_lua:OnCreated( kv )
 	self.bonus_health = self:GetAbility():GetSpecialValueFor( "bonus_health" )
 	self.bonus_health_regen = self:GetAbility():GetSpecialValueFor( "bonus_health_regen" )
+    self.bonus_damage = self:GetAbility():GetSpecialValueFor( "bonus_damage" )
 
     if IsServer() then
     	AddHealthBonus(self:GetCaster(),self.bonus_health)
@@ -44,3 +45,10 @@ function modifier_item_reaver_lua:OnDestroy()
 end
 
 ---------------------------------------------
+
+
+function modifier_item_reaver_lua:GetModifierPreAttack_BonusDamage( params )
+	return self.bonus_damage
+end
+
+----------------------------------------

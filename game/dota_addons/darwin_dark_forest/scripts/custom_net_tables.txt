@@ -6,6 +6,7 @@
 		"player_perk",
 		"player_creature_index",
 		"team_max_level",
-		"rank_data"
+		"rank_data",
+		"econ_data"
 	]
 }

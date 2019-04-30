@@ -29,12 +29,19 @@ function GameMode:OnGameRulesStateChange()
      for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
        if PlayerResource:IsValidPlayer( nPlayerID ) then
           nValidPlayerNumber = nValidPlayerNumber+1
+          local nPlayerSteamId = PlayerResource:GetSteamAccountID(nPlayerID)
+          GameRules.sValidePlayerSteamIds=GameRules.sValidePlayerSteamIds..nPlayerSteamId..","
        end
      end
-    
+     
+     if string.sub(GameRules.sValidePlayerSteamIds,string.len(GameRules.sValidePlayerSteamIds))=="," then   --去掉最后一个逗号
+        GameRules.sValidePlayerSteamIds=string.sub(GameRules.sValidePlayerSteamIds,0,string.len(GameRules.sValidePlayerSteamIds)-1)
+     end
+
      if nValidPlayerNumber==1 then
          GameRules.bPveMap=true
      end
+     Server:GetPlayerEconData()
 
 	end
 end

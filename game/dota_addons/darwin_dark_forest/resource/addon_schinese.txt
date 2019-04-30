@@ -80,14 +80,38 @@
 
     "TopMenuIcon_Guide_message"               "游戏指南"
     "TopMenuIcon_Rank_message"                "天梯排行"
-    "TopMenuIcon_Inventory_message"           "我的收藏"
+    "TopMenuIcon_Inventory_message"           "突变库"
     "TopMenuIcon_Shop_message"                "进化商店"
     "WorldRank"                               "天梯排行"
     "CurrentSeason"                           "{s:year}年第{d:month}赛季"
-     
+    //UI 
     "PveMode"                                 "单机模式"
     "SoloMode"                                "单人模式"
     "ThreePlayerMode"                         "三人模式"
+    "EvolveInventory"                         "突变库"
+    "ExchangeKey"                             "兑换激活码"
+    "Equip"                                   "装备"
+    "Remove"                                  "卸下"
+
+    "Skin"                                    "皮肤"
+    "Immortal"                                "不朽"
+    "Particle"                                "粒子特效"
+    "KillEffect"                              "击杀特效"
+
+ 
+    "econ_green"                              "幸福之赐"
+    "econ_lava_trail"                         "熔岩之径"
+    "econ_paltinum_baby_roshan"               "离子之气"
+    "econ_legion_wings"                       "军团之翼"
+    "econ_legion_wings_vip"                   "军团之翼·土豪金"
+    "econ_legion_wings_pink"                  "军团之翼·粉色"
+    "econ_darkmoon"                           "暗月腐化"
+    "econ_sf_wings"                           "恶魔之翼"
+    "econ_sakura_trail"                       "樱花之经"
+
+    "econ_gold_crawl_zombie"                  "黄金爬行僵尸"
+    "econ_gold_zombie"                        "黄金僵尸"
+
 
 
 
@@ -577,6 +601,117 @@
     "DOTA_Tooltip_ability_durable_damage_return_lua"                                     "反伤"
     "DOTA_Tooltip_ability_durable_damage_return_lua_Description"                         "开启后，反弹所有受到的伤害。"
     "DOTA_Tooltip_ability_durable_damage_return_lua_duration"                            "持续时间："
+
+    "DOTA_Tooltip_ability_item_robe_lua"                                                "法师长袍"
+    "DOTA_Tooltip_ability_item_robe_lua_spell_amplify"                                  "%+技能增强"
+    "DOTA_Tooltip_ability_item_robe_lua_mana_regen_bonus"                               "+$mana_regen"
+
+    "DOTA_Tooltip_ability_item_crown_lua"                                                "王冠"
+    "DOTA_Tooltip_ability_item_crown_lua_spell_amplify"                                  "%+技能增强"
+    "DOTA_Tooltip_ability_item_crown_lua_bonus_damage"                                   "+$damage"
+    "DOTA_Tooltip_ability_item_crown_lua_bonus_health"                                   "+$health"
+
+    "DOTA_Tooltip_ability_item_staff_of_wizardry_lua"                                   "魔力法杖"
+    "DOTA_Tooltip_ability_item_staff_of_wizardry_lua_spell_amplify"                     "%+技能增强"
+    "DOTA_Tooltip_ability_item_staff_of_wizardry_lua_mana_regen_bonus"                  "+$mana_regen"
+
+    "DOTA_Tooltip_ability_item_vitality_booster_lua"                                     "活力之球"
+    "DOTA_Tooltip_ability_item_vitality_booster_lua_bonus_health"                        "+$health"
+
+    "DOTA_Tooltip_ability_item_reaver_lua"                                               "掠夺者之斧"
+    "DOTA_Tooltip_ability_item_reaver_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_reaver_lua_bonus_health_regen"                            "+$hp_regen"
+    "DOTA_Tooltip_ability_item_reaver_lua_bonus_damage"                                  "+$damage"
+
+    "DOTA_Tooltip_ability_item_kaya_lua"                                                 "慧光"
+    "DOTA_Tooltip_ability_item_kaya_lua_manacost_reduction"                              "%+降低魔法消耗和损失"
+    "DOTA_Tooltip_ability_item_kaya_lua_spell_amplify"                                   "%+技能增强"
+    "DOTA_Tooltip_ability_item_kaya_lua_mana_regen_bonus"                                "+$mana_regen"
+
+
+    "DOTA_Tooltip_ability_item_vanguard_lua"                                             "先锋盾"
+    "DOTA_Tooltip_ability_item_vanguard_lua_Description"                                "<h1>被动：伤害格挡</h1> 拥有%block_chance%%%的概率格挡伤害，近战英雄可格挡%block_damage_melee%点伤害，远程英雄可格挡%block_damage_ranged%点。"
+    "DOTA_Tooltip_ability_item_vanguard_lua_bonus_health_regen"                         "+$hp_regen"
+    "DOTA_Tooltip_ability_item_vanguard_lua_bonus_health"                               "+$health"
+
+    "DOTA_Tooltip_ability_item_sheepstick_lua"                                          "邪恶镰刀"
+    "DOTA_Tooltip_ability_item_sheepstick_Description"                                   "<h1>主动：妖术</h1>将一个单位变成无害的小动物，持续%sheep_duration%秒。目标的基础移速变为140，并且被沉默、锁闭和缴械。<br>幻象会被立刻消灭。<br><br>施法距离：%tooltip_range%"
+    "DOTA_Tooltip_ability_item_sheepstick_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_sheepstick_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_sheepstick_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_sheepstick_spell_amplify"                                 "%+技能增强"
+    "DOTA_Tooltip_ability_item_sheepstick_bonus_mana_regen"                              "+$mana_regen"
+
+    "DOTA_Tooltip_ability_item_heart_lua"                                               "恐鳌之心"
+    "DOTA_Tooltip_ability_item_heart_lua_Description"                                   "<h1>被动：生命恢复</h1>每秒恢复最大生命值的%health_regen_rate%%%。<br><br>如果受到任何伤害，此被动将失效。"
+    "DOTA_Tooltip_ability_item_heart_lua_bonus_health"                                  "+$health"
+
+
+    "DOTA_Tooltip_ability_item_ring_of_tarrasque_lua"                                   "恐鳌之戒"
+    "DOTA_Tooltip_ability_item_ring_of_tarrasque_lua_bonus_health"                      "+$health"
+    "DOTA_Tooltip_ability_item_ring_of_tarrasque_lua_bonus_health_regen"                "+$hp_regen"
+
+    "DOTA_Tooltip_ability_item_dagon_lua"                                               "达贡之神力"
+    "DOTA_Tooltip_ability_item_dagon_lua_Description"                                   "<h1>主动：能量冲击</h1> 释放高伤害的魔法爆发冲击敌方目标单位。可以升级。<br><br>伤害：%damage%"
+    "DOTA_Tooltip_ability_item_dagon_lua_spell_amplify"                                 "%+技能增强"
+    "DOTA_Tooltip_ability_item_dagon_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_dagon_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_dagon_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_dagon_lua_mana_regen_bonus"                              "+$mana_regen"
+
+
+    "DOTA_Tooltip_ability_item_dagon_2_lua"                                               "达贡之神力（2级）"
+    "DOTA_Tooltip_ability_item_dagon_2_lua_Description"                                   "<h1>主动：能量冲击</h1> 释放高伤害的魔法爆发冲击敌方目标单位。可以升级。<br><br>伤害：%damage%"
+    "DOTA_Tooltip_ability_item_dagon_2_lua_spell_amplify"                                 "%+技能增强"
+    "DOTA_Tooltip_ability_item_dagon_2_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_dagon_2_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_dagon_2_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_dagon_2_lua_mana_regen_bonus"                              "+$mana_regen"
+
+    "DOTA_Tooltip_ability_item_dagon_3_lua"                                               "达贡之神力（3级）"
+    "DOTA_Tooltip_ability_item_dagon_3_lua_Description"                                   "<h1>主动：能量冲击</h1> 释放高伤害的魔法爆发冲击敌方目标单位。可以升级。<br><br>伤害：%damage%"
+    "DOTA_Tooltip_ability_item_dagon_3_lua_spell_amplify"                                 "%+技能增强"
+    "DOTA_Tooltip_ability_item_dagon_3_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_dagon_3_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_dagon_3_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_dagon_3_lua_mana_regen_bonus"                              "+$mana_regen"
+
+    "DOTA_Tooltip_ability_item_dagon_4_lua"                                               "达贡之神力（4级）"
+    "DOTA_Tooltip_ability_item_dagon_4_lua_Description"                                   "<h1>主动：能量冲击</h1> 释放高伤害的魔法爆发冲击敌方目标单位。可以升级。<br><br>伤害：%damage%"
+    "DOTA_Tooltip_ability_item_dagon_4_lua_spell_amplify"                                 "%+技能增强"
+    "DOTA_Tooltip_ability_item_dagon_4_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_dagon_4_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_dagon_4_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_dagon_4_lua_mana_regen_bonus"                              "+$mana_regen"
+
+
+    "DOTA_Tooltip_ability_item_dagon_5_lua"                                               "达贡之神力（5级）"
+    "DOTA_Tooltip_ability_item_dagon_5_lua_Description"                                   "<h1>主动：能量冲击</h1> 释放高伤害的魔法爆发冲击敌方目标单位。可以升级。<br><br>伤害：%damage%"
+    "DOTA_Tooltip_ability_item_dagon_5_lua_spell_amplify"                                 "%+技能增强"
+    "DOTA_Tooltip_ability_item_dagon_5_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_dagon_5_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_dagon_5_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_dagon_5_lua_mana_regen_bonus"                              "+$mana_regen"
+
+
+    "DOTA_Tooltip_ability_item_mystic_staff_lua"                                                  "神秘法杖"
+    "DOTA_Tooltip_ability_item_mystic_staff_lua_spell_amplify"                                    "%+技能增强"
+    "DOTA_Tooltip_ability_item_mystic_staff_lua_mana_regen_bonus"                                 "+$mana_regen"
+
+
+    "DOTA_Tooltip_ability_item_gauntlets_lua"                                                      "力量手套"
+    "DOTA_Tooltip_ability_item_gauntlets_lua_bonus_health"                                         "+$health"
+    "DOTA_Tooltip_ability_item_gauntlets_lua_bonus_damage"                                         "+$damage"
+    "DOTA_Tooltip_ability_item_gauntlets_lua_bonus_health_regen"                                   "+$hp_regen"
+
+
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua"                                               "知识之书"
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_Description"                                   "<h1>使用：启迪</h1>直接获得%xp_bonus%点经验值。"
+
+
+    "DOTA_Tooltip_ability_item_enchanted_mango_lua"                                                "魔法芒果"
+    "DOTA_Tooltip_ability_item_enchanted_mango_lua_Description"                                    "<h1>使用：吞食芒果</h1>立刻回复%replenish_amount%点魔法。<br>"
+    "DOTA_Tooltip_ability_item_enchanted_mango_hp_regen"                                           "+$hp_regen"
 
   } 
 

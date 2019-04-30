@@ -1,0 +1,327 @@
+Label{
+    color:#939da0;
+    font-family:Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    text-shadow: 1px 1px 1px 1.0 #000000ff;
+}
+
+@keyframes 'links-and-more-button-focus'
+{
+    from
+    {
+        background-color: gradient( linear, 0% 0%, 0% 100%, from( #a9c8daee ), to( #000000ee ) ); 
+    }
+
+    50%
+    {
+        background-color: gradient( linear, 0% 0%, 0% 100%, from( #272d2eee ), to( #131617ee ) ); 
+    }
+
+    to
+    {
+        background-color: gradient( linear, 0% 0%, 0% 100%, from( #272d2eee ), to( #131617ee ) ); 
+    }
+}
+
+.Inventory {
+    width: 1300px;
+    height: 900px;
+    vertical-align: center;
+    horizontal-align: center;
+
+    animation-name: links-and-more-button-focus;
+    animation-duration: 0.6s;
+    animation-delay: 0.0s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+
+    /*transition-property: transform, pre-transform-scale2d, opacity, background-color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.0s;*/
+
+    box-shadow: #172a2f -4px -4px 8px 8px;
+    background-color:gradient( linear, 0% 0%, 0% 100%, from( #272d2e ), to( #121212 ) );
+
+    padding: 20px;
+
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    flow-children: down;
+}
+
+.Inventory.Hidden{
+    transform: translatex(-1000px);
+    opacity:0.0;
+}
+
+.InventoryTop {
+    width:100%;
+    height: 15%;
+}
+
+.InventoryTop {
+    width:100%;
+    height: 15%;
+}
+
+.InventoryMain {
+    width:100%;
+    height: 85%;
+    flow-children: right;
+}
+
+
+.InventoryLeft {
+    width: 20%;
+    height: 100%;
+    flow-children: down;
+}
+
+
+.DrawMutationButtonIcon {
+   background-image: url("file://{images}/custom_game/inventory/dna.png");
+   background-size: 100% 100%;
+   width: 30px;
+   height: 30px;
+   vertical-align: center;
+}
+
+
+.DrawMutationButtonIconAndText {
+
+   horizontal-align: center;
+   vertical-align: center;
+   flow-children: right;
+}
+
+
+
+#DrawMutationButton {
+    horizontal-align: center;
+    vertical-align: center;
+    width: 200px;
+    height: 50px;
+    border: 1px solid #000;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #5Aa15E ), to( #87d69533 ) )  ;
+    box-shadow: inset #ffffff50 1px 1px 2px 2px;
+    background-image:url("s2r://panorama/images/backgrounds/background_play_button_2x_png.vtex");
+    background-size:320px 120px;
+
+}
+
+#DrawMutationButton:active {
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #5Aa15E ), to( #87d695ff ) );
+    box-shadow:fill #00000066 -4px -4px 8px 8px;
+    width: 192px;
+    height: 48px;
+}
+
+#DrawMutationButton Label {
+    horizontal-align: center;
+    vertical-align: center;
+    font-size: 40;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#DrawMutationButton:hover{
+    background-color:gradient( linear, 0% 0%, 0% 100%, from( #7Ac17E ), to( #a7f6b533 ) );
+}
+
+
+
+.InventoryTitle {
+
+   horizontal-align:left;
+   height:50px;
+   margin-top:20px;
+   text-align:center;
+   font-size:50px;
+   color:#ddd;
+   margin-left:30px;
+
+}
+
+#DnaStoragePanel{
+    z-index:55;
+    horizontal-align:right;
+    width:800px;
+    height:40px;
+    font-family:Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    margin-right:60px;
+    margin-top:30px;
+    color:#ffffff;
+    flow-children: right;
+}
+
+#DnaStorageLabel{
+    font-family:Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    width:100px;
+    text-align:left;
+    text-shadow: 2px 2px 2px #330000;
+    z-index:100;
+    margin-left:20px;
+    font-size:32px;
+}
+
+#DnaStorageKeyEntry{
+    height:35px;
+    width:250px;
+    background-color: rgba(0,0,0,0.5);
+    vertical-align: center;
+    line-height:25px;
+    font-size:20px;
+    padding:5px;
+}
+
+#DnaStorageKeyButton{
+    height:35px;
+    width:150px;
+    vertical-align: center;
+}
+
+#DnaStorageKeyButton:active{
+    height:33px;
+    width:142px;
+    margin-left: 4px;
+    margin-top: 1px;
+}
+
+
+.EvolveButton Label {
+    horizontal-align: center;
+    vertical-align: center;
+    font-size: 40;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.EvolveButton{
+    background-image:url("s2r://panorama/images/backgrounds/background_play_button_2x_png.vtex");
+    background-color:gradient( linear, 0% 0%, 0% 100%, from( #5Aa15E ), to( #87d69533 ) );
+    background-size: 100% 100%;
+    box-shadow: fill #00000066 -4px -4px 8px 8px;
+    border-top:1px solid #ffffff44;
+    border-right:1px solid #00000088;
+    border-left:1px solid #ffffff44;
+    border-bottom:1px solid #00000088;
+}
+.EvolveButton:hover{
+    background-color:gradient( linear, 0% 0%, 0% 100%, from( #7Ac17E ), to( #a7f6b533 ) );
+}
+
+#DnaStorageKeyButtonLabel{
+    font-size:22px;
+    horizontal-align:center;
+    vertical-align:center;
+}
+
+#DnaStorageImg {
+    width:40px;
+    height:40px;
+    z-index:40;
+    margin-left:80px;
+}
+
+#TaobaoPlusIcon{
+    z-index:99999;
+    margin-left:20px;
+    width:35px;
+    height:35px;
+    vertical-align: center;
+    background-image: url("file://{images}/custom_game/inventory/taobao_plus_icon.png");
+    background-size: 100% 100%;
+}
+
+.InventoryCloseButton
+{
+  horizontal-align:right;
+  background-color:#333333;
+  wash-color:white;
+  border-radius:50%;
+  border:1px solid #333333;
+  width:50px;
+  height:50px;
+  box-shadow:#000000 -3px -3px 6px 6px;
+  z-index:555;
+  background-image:url("s2r://panorama/images/control_icons/x_close_png.vtex");
+  background-size:40px 40px;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  margin:4px;
+  margin-top:6px;
+  transition-property:wash-color, pre-transform-scale2d, background-color;
+  transition-duration:0.1s;
+  transition-timing-function:ease-in;
+}
+
+.InventoryCloseButton:active
+{
+  background-size:36px 36px;
+  sound:"ui_friends_slide_in"; 
+}
+
+#button_equip {
+    background-color:gradient( linear, 0% 0%, 0% 100%, from( #60862d ), to( #3d5f1c ) );
+}
+
+#button_remove {
+    background-color:gradient( linear, 0% 0%, 0% 100%, from( #88270d ), to( #99170d ) );
+}
+
+.InventoryRight {
+    width: 100%;
+    flow-children: down;
+    overflow: squish scroll;
+}
+
+.InventoryClassTitle {
+    width: 100%;
+    height: 50px;
+}
+
+.InventoryClassTitle.Hidden{
+    transform: translatex(-1000px);
+    opacity:0.0;
+}
+
+.InventoryClassTitle Label {
+    font-size: 40px;
+    width: 100%;
+    margin-left: 12px;
+}
+
+.InventoryClassPanel {
+    width: 100%;
+    flow-children: right-wrap;
+}
+
+
+.CollectionItemRoot {
+    width: 180px;
+    margin: 10px;
+    flow-children: down;
+    background-color: #000000dd;
+    border: 1px solid #7bacff;
+    padding: 4px;
+}
+
+.CollectionItemTitlePanel {
+    width: 100%;
+    height: 30px;
+}
+
+.CollectionItemTitlePanel Label {
+    vertical-align: center;
+    horizontal-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.CollectionItemImagePanel {
+    width: 180px;
+    height: 180px;
+}
