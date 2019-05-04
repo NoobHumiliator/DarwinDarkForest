@@ -111,9 +111,13 @@
 
     "econ_gold_crawl_zombie"                  "黄金爬行僵尸"
     "econ_gold_zombie"                        "黄金僵尸"
+    
+    "econ_huaji"                              "滑稽涂鸦"
+    "econ_jibururen_mark"                     "技不如人涂鸦"
+    "econ_question_mark"                      "问号涂鸦"
 
-
-
+    "econ_shearing_deposition"                "碎冰之积"
+    "econ_glare_of_the_tyrant"                "暴君之视"
 
 
     "UltimateStageNote"                                                         "达到11级！游戏进入终极进化阶段，生物死亡后不能复活。游戏结束时根据所获经验结算排名。"
@@ -362,6 +366,11 @@
     "npc_dota_creature_slark_3"                                                     "暗黑之礁逃犯"
     "npc_dota_creature_ogreseal_undead_2"                                           "鬼灵海象"
     "npc_dota_creature_lich"                                                        "巫妖"
+
+    "npc_dota_creature_lich_shearing_deposition"                                    "碎冰之积"
+    "npc_dota_creature_lich_glare_of_the_tyrant"                                    "暴君之视"
+    "npc_dota_creature_lich_glare_of_the_tyrant_shearing_deposition"                "碎冰之暴君"
+
     "npc_dota_creature_faceless_void"                                               "虚空假面"
     "npc_dota_creature_spectre"                                                     "幽鬼"
     "npc_dota_creature_pudge"                                                       "屠夫"

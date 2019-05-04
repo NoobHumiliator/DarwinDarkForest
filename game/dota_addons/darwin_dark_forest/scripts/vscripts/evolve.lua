@@ -51,7 +51,7 @@ vAbilityChanceEachLevel={
 function Evolve (nPlayerId,hHero)
 
     local nLevel=hHero.nCurrentCreepLevel
-    local sUnitToEnvolve = DetermineNewUnitName(nPlayerId,nLevel)
+    local sUnitToEnvolve = DetermineNewUnitName(nPlayerId,hHero,nLevel)
 
     --判断游戏阶段
     if nLevel==11 and GameRules.bUltimateStage==false then       
@@ -66,6 +66,16 @@ function Evolve (nPlayerId,hHero)
     local hUnit = SpawnUnitToReplaceHero(sUnitToEnvolve,hHero,nPlayerId)
 
     AddAbilityForUnit(hUnit,nPlayerId)
+     
+    --继承粒子特效
+    if hHero.sCurrentParticleEconItemName then
+         Econ:EquipParticleEcon(hHero.sCurrentParticleEconItemName,nPlayerId)
+    end
+
+    --修改模型
+    if hHero.vSkinInfo and hHero.vSkinInfo[sUnitToEnvolve]~=nil then
+         Econ:ReplaceUnitModel(hUnit,hHero.vSkinInfo[sUnitToEnvolve])
+    end
 
     return hUnit
 
@@ -286,7 +296,7 @@ end
 
 
 -- 挑选新的生物名字
-function DetermineNewUnitName(nPlayerId,nLevel)
+function DetermineNewUnitName(nPlayerId,hHero,nLevel)
 
     local sUnitToEnvolve=""
 
@@ -332,8 +342,8 @@ function DetermineNewUnitName(nPlayerId,nLevel)
         for sUnitName, vData in pairs(GameRules.vUnitsKV) do
 
             if vData and type(vData) == "table" then       
-                 -- 跳过召唤生物
-                if vData.IsSummoned==nil or vData.IsSummoned==0 then
+                 -- 跳过召唤生物 跳过饰品生物
+                if (vData.IsSummoned==nil or vData.IsSummoned==0) and (vData.EconUnitFlag==nil or vData.EconUnitFlag==0)  then
                  -- 等级相当，perk相符    
                     if vData.nCreatureLevel ==nLevel then
                        if  nLevel==1 then --第一级从直接随机选一个
@@ -389,6 +399,10 @@ function DetermineNewUnitName(nPlayerId,nLevel)
             local nDice= RandomInt(1,#vEnvolveBlankPool)
             sUnitToEnvolve=vEnvolveBlankPool[nDice]
         end
+    end
+
+    if hHero.vImmortalReplaceMap and  hHero.vImmortalReplaceMap[sUnitToEnvolve]  then
+         sUnitToEnvolve=hHero.vImmortalReplaceMap[sUnitToEnvolve]
     end
 
     return sUnitToEnvolve

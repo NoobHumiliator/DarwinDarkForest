@@ -210,3 +210,17 @@ function RemoveRepeated(a)
         end
     end
 end
+
+function RemoveItemFromList(vList,item)
+   --将同名技能从技能池移除  
+    local i,max=1,#vList
+    while i<=max do
+        if vList[i] == item then
+            table.remove(vList,i)
+            i = i-1
+            max = max-1
+        end
+        i= i+1
+    end
+    return vList
+end

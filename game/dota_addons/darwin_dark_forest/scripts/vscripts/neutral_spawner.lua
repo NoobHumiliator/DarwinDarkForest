@@ -193,7 +193,8 @@ function NeutralSpawner:SpawnOneCreature()
              if  self.vCreatureLevelMap[i]/(self.nCreaturesNumber) <= vLevelRatio[i-nAverageLevel] then
                  for sUnitName,vData in pairs(GameRules.vUnitsKV) do
                      if vData and type(vData) == "table" then
-                         if vData.IsSummoned==nil or vData.IsSummoned==0 then
+                         --非召唤生物 非饰品生物
+                         if (vData.IsSummoned==nil or vData.IsSummoned==0) and (vData.EconUnitFlag==nil or vData.EconUnitFlag==0)  then
                              if vData.nCreatureLevel==i then
                                 table.insert(vTemp, sUnitName)
                              end

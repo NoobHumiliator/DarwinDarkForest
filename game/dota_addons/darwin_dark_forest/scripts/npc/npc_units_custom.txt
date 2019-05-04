@@ -14419,7 +14419,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"lich_chain_frost"			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability2"					"lich_frost_nova"			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
@@ -14485,6 +14485,316 @@
 				"Wearable3"
 				{
 					"ItemDef"			"333"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"334"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"506"
+				}
+			}
+		}
+	}
+
+	"npc_dota_creature_lich_shearing_deposition"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/lich/lich.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Lich"
+		"IdleSoundLoop"		        "Hero_Lich.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+		"EconUnitFlag"              "1"
+
+		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+         
+        "nElement"                  "14"
+        "nDecay"                    "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"lich_chain_frost"			// Ability 1
+		"Ability2"					"lich_frost_nova"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"144"		// Damage range max.
+		"AttackRate"				"1.4"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"		        "550"
+		"ProjectileModel"		    "particles/units/heroes/hero_lich/lich_base_attack.vpcf"     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2300"		// Base health.
+		"StatusHealthRegen"			"11"		     // Health regeneration rate.
+		"StatusMana"				"1250"	    // Base mana.
+		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"331"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7576"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"333"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"334"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"506"
+				}
+			}
+		}
+	}
+
+	"npc_dota_creature_lich_glare_of_the_tyrant"
+	{
+
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/lich/lich.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Lich"
+		"IdleSoundLoop"		        "Hero_Lich.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+        "EconUnitFlag"              "1"
+
+		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+         
+        "nElement"                  "14"
+        "nDecay"                    "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"lich_chain_frost"			// Ability 1
+		"Ability2"					"lich_frost_nova"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"144"		// Damage range max.
+		"AttackRate"				"1.4"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"		        "550"
+		"ProjectileModel"		    "particles/units/heroes/hero_lich/lich_base_attack.vpcf"     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2300"		// Base health.
+		"StatusHealthRegen"			"11"		     // Health regeneration rate.
+		"StatusMana"				"1250"	    // Base mana.
+		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"331"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"332"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"9756"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"334"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"506"
+				}
+			}
+		}
+	}
+
+	"npc_dota_creature_lich_glare_of_the_tyrant_shearing_deposition"
+	{
+
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/lich/lich.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Lich"
+		"IdleSoundLoop"		        "Hero_Lich.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+
+		"EconUnitFlag"              "1"
+
+		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+         
+        "nElement"                  "14"
+        "nDecay"                    "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"lich_chain_frost"			// Ability 1
+		"Ability2"					"lich_frost_nova"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"144"		// Damage range max.
+		"AttackRate"				"1.4"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"		        "550"
+		"ProjectileModel"		    "particles/units/heroes/hero_lich/lich_base_attack.vpcf"     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2300"		// Base health.
+		"StatusHealthRegen"			"11"		     // Health regeneration rate.
+		"StatusMana"				"1250"	    // Base mana.
+		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"331"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7576"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"9756"
 				}
 				"Wearable4"
 				{

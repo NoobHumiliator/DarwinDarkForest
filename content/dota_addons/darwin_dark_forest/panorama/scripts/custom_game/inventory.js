@@ -1,19 +1,26 @@
 
 var typeMap = { 
     
-    "gold_crawl_zombie":"skin",
-    "gold_zombie":"skin",
+    "gold_crawl_zombie":"Skin",
+    "gold_zombie":"Skin",
 
-    "green":"particle",
-    "lava_trail":"particle",
-    "paltinum_baby_roshan":"particle",
-    "legion_wings":"particle",
-    "legion_wings_vip":"particle",
-    "legion_wings_pink":"particle",
-    "darkmoon":"particle",
-    "sakura_trail":"particle",
 
-    "sf_wings":"kill_effect",
+    "shearing_deposition":"Immortal",
+    "glare_of_the_tyrant":"Immortal",
+
+    "green":"Particle",
+    "lava_trail":"Particle",
+    "paltinum_baby_roshan":"Particle",
+    "legion_wings":"Particle",
+    "legion_wings_vip":"Particle",
+    "legion_wings_pink":"Particle",
+    "darkmoon":"Particle",
+    "sakura_trail":"Particle",
+
+    "sf_wings":"KillEffect",
+    "huaji":"KillEffect",
+    "jibururen_mark":"KillEffect",
+    "question_mark":"KillEffect",
 }
 
 
@@ -40,6 +47,9 @@ function RebuildCollections(){
     var data = CustomNetTables.GetTableValue("econ_data", "econ_data");
     if (data === undefined) return;
 
+    $( "#LoadingPanel" ).AddClass("Hidden");
+    $( "#InventoryRightContainer" ).RemoveClass("Hidden");
+
     var playerId = Game.GetLocalPlayerInfo().player_id;     //玩家ID
     var steam_id = Game.GetPlayerInfo(playerId).player_steamid;
     steam_id = ConvertToSteamId32(steam_id);
@@ -61,7 +71,10 @@ function RebuildCollections(){
         var itemName=data[index].name;
         var isEquip = (data[index].equip=="true")
 
+
         var parentPanel= $("#Inventory"+typeMap[itemName]+"Panel")
+
+        $.Msg("#Inventory"+typeMap[itemName]+"Title")
         $("#Inventory"+typeMap[itemName]+"Title").RemoveClass("Hidden")
 
         var newItemPanel = $.CreatePanel("Panel", parentPanel, itemName);
@@ -79,11 +92,14 @@ function RebuildCollections(){
         newItemPanel.FindChildTraverse("button_equip").SetPanelEvent("onactivate", 
            function(){
                 
-                for (var i = thisItemPanel.GetParent().FindChildrenWithClassTraverse("ButtonEquip").length - 1; i >= 0; i--) {
-                    thisItemPanel.GetParent().FindChildrenWithClassTraverse("ButtonEquip")[i].visible=true;
-                }                
-                for (var i = thisItemPanel.GetParent().FindChildrenWithClassTraverse("ButtonRemove").length - 1; i >= 0; i--) {
-                    thisItemPanel.GetParent().FindChildrenWithClassTraverse("ButtonRemove")[i].visible=false;
+                if (typeMap[thisItemName]=="Particle" || typeMap[thisItemName]=="KillEffect")
+                {
+                    for (var i = thisItemPanel.GetParent().FindChildrenWithClassTraverse("ButtonEquip").length - 1; i >= 0; i--) {
+                        thisItemPanel.GetParent().FindChildrenWithClassTraverse("ButtonEquip")[i].visible=true;
+                    }                
+                    for (var i = thisItemPanel.GetParent().FindChildrenWithClassTraverse("ButtonRemove").length - 1; i >= 0; i--) {
+                        thisItemPanel.GetParent().FindChildrenWithClassTraverse("ButtonRemove")[i].visible=false;
+                    }
                 }
 
 	            thisItemPanel.FindChildTraverse("button_equip").visible=false;

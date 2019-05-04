@@ -26,11 +26,14 @@ function GameMode:OnGameRulesStateChange()
      --记录游戏开始的时间
      GameRules.nGameStartTime=GameRules:GetGameTime()
 
+     GameRules.vPlayerSteamIdMap={}
+
      for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
        if PlayerResource:IsValidPlayer( nPlayerID ) then
           nValidPlayerNumber = nValidPlayerNumber+1
           local nPlayerSteamId = PlayerResource:GetSteamAccountID(nPlayerID)
           GameRules.sValidePlayerSteamIds=GameRules.sValidePlayerSteamIds..nPlayerSteamId..","
+          GameRules.vPlayerSteamIdMap[nPlayerSteamId]=nPlayerID
        end
      end
      
@@ -94,6 +97,11 @@ function GameMode:OnEntityKilled(keys)
 
        local nPlayerId = hKillerUnit:GetMainControllingPlayer()
        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
+
+       --Todo 播放击杀特效，到时候挪走
+       if hHero.sCurrentKillEffect then
+            Econ:PlayKillEffect(hHero.sCurrentKillEffect,hHero)
+       end
        
        --掉落物品
        ItemController:DropItemByChance(hKilledUnit)
@@ -397,6 +405,27 @@ function GameMode:OnPlayerSay(keys)
             -- 替换模型
             local hUnit = SpawnUnitToReplaceHero(sText,hHero,nPlayerId)
             AddAbilityForUnit(hUnit,nPlayerId)
+
+            local hModel = hUnit:FirstMoveChild()
+            local vWearables={}
+
+            while hModel ~= nil do
+
+                  if hModel ~= nil and hModel:GetClassname() == "dota_item_wearable"then
+                      table.insert(vWearables, hModel)
+                  end
+                  hModel = hModel:NextMovePeer()
+            end
+
+            for _,v in pairs(vWearables) do
+                  print(v:GetModelName())
+                  v:RemoveSelf()
+            end
+            
+            local hTorso = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/lich/lich_immortal/lich_immortal.vmdl"})
+            hTorso:FollowEntity(hUnit, true)
+
+            
 
         end
 

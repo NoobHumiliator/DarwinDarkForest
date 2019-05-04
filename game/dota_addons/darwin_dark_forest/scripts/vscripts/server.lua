@@ -29,7 +29,7 @@ function Server:GetRankData()
     local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "getrankdata")
     request:Send(function(result)
         print("Rank Data Arrive")
-        if result.StatusCode == 200 then
+        if result.StatusCode == 200 and result.Body~=nil then
             local body = JSON:decode(JSON:decode(result.Body))
             print(body)
             if body ~= nil then
@@ -51,6 +51,24 @@ function Server:GetPlayerEconData()
             local body = JSON:decode(JSON:decode(result.Body))
             if body ~= nil then
                 CustomNetTables:SetTableValue("econ_data", "econ_data", stringTable(body))
+                --遍历物品 给玩家装上
+                for sPlayerSteamID,vPlayerInfo in pairs(body) do
+                    for nIndex,v in pairs(vPlayerInfo) do
+                        local nPlayerID = GameRules.vPlayerSteamIdMap[tonumber(sPlayerSteamID)]
+                        if v.type=="Particle" and v.equip==true then
+                            Econ:EquipParticleEcon(v.name,nPlayerID)
+                        end
+                        if v.type=="KillEffect" and v.equip==true then
+                            Econ:EquipKillEffectEcon(v.name,nPlayerID)
+                        end
+                        if v.type=="Immortal" and v.equip==true then
+                            Econ:EquipImmortalEcon(v.name,nPlayerID,1)
+                        end
+                        if v.type=="Skin" and v.equip==true then
+                            Econ:EquipSkinEcon(v.name,nPlayerID)
+                        end
+                    end
+                end
             end
         end
     end)
@@ -61,13 +79,14 @@ function Server:UpdatePlayerEquip(nPlayerID,sItemName,sType,nEquip)
 
     local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "updateplayerequip")
     local nPlayerSteamId = PlayerResource:GetSteamAccountID(nPlayerID)
-    request:SetHTTPRequestGetOrPostParameter("player_steam_id",GameRules.nPlayerSteamId);
+    
+    request:SetHTTPRequestGetOrPostParameter("player_steam_id",tostring(nPlayerSteamId));
     request:SetHTTPRequestGetOrPostParameter("item_name",sItemName);
-    request:SetHTTPRequestGetOrPostParameter("type",sType);
-    request:SetHTTPRequestGetOrPostParameter("equip",nEquip);
+    request:SetHTTPRequestGetOrPostParameter("item_type",sType);
+    request:SetHTTPRequestGetOrPostParameter("equip",tostring(nEquip));
 
     request:Send(function(result)
-        print("Econ Data Arrive")
+        print("Update Player Equip")
         if result.StatusCode == 200 then
             print(result.Body)
         end

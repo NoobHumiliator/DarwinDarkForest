@@ -56,24 +56,35 @@
                           </Panel>
                       </Button>         
                 </Panel>
-                <Panel class="InventoryRight" id="InventoryRight">
-                    <Panel class="InventoryClassTitle" id="InventorySkinTitle">
-                       <Label class="DrawMutationButtonText"  text="#Skin" />
+
+                <Panel class="InventoryRight" id="InventoryRight">      
+                    <Panel id="LoadingPanel">
+                        <Panel id="LoadingPanelSpinner" class="Spinner"/>
                     </Panel>
-                    <Panel class="InventoryClassPanel" id="InventorySkinPanel"/>
-                    <Panel class="InventoryClassTitle" id="InventoryImmortalTitle">
-                       <Label text="#Immortal" />
+                    <Panel class="InventoryRightContainer Hidden" id="InventoryRightContainer">
+                        
+                        <Panel class="InventoryClassTitle" id="InventorySkinTitle">
+                           <Label class="DrawMutationButtonText"  text="#Skin" />
+                        </Panel>
+                        <Panel class="InventoryClassPanel" id="InventorySkinPanel"/>
+
+                        <Panel class="InventoryClassTitle" id="InventoryImmortalTitle">
+                           <Label text="#Immortal" />
+                        </Panel>
+                        <Panel class="InventoryClassPanel" id="InventoryImmortalPanel"/>
+
+                        <Panel class="InventoryClassTitle" id="InventoryParticleTitle">
+                           <Label text="#Particle" />
+                        </Panel>
+                        <Panel class="InventoryClassPanel" id="InventoryParticlePanel"/> 
+                        
+                        <Panel class="InventoryClassTitle" id="InventoryKillEffectTitle">
+                           <Label text="#KillEffect" />
+                        </Panel>
+                        <Panel class="InventoryClassPanel" id="InventoryKillEffectPanel"/>         
                     </Panel>
-                    <Panel class="InventoryClassPanel" id="InventoryImmortalPanel"/>
-                    <Panel class="InventoryClassTitle" id="InventoryParticleTitle">
-                       <Label text="#Particle" />
-                    </Panel>
-                    <Panel class="InventoryClassPanel" id="InventoryParticlePanel"/> 
-                    <Panel class="InventoryClassTitle" id="InventoryKillEffectTitle">
-                       <Label text="#KillEffect" />
-                    </Panel>
-                    <Panel class="InventoryClassPanel" id="InventoryKillEffectPanel"/>         
-                </Panel>            
+
+                </Panel>        
              </Panel>
         </Panel>
     </Panel>
