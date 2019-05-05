@@ -35,7 +35,7 @@
                    <Panel class="LotteryCell" id="LotteryCell_14"/>
                    <Panel class="LotteryCellMiddle" style="position:250.600037px 230.0px 0.0px;">
 
-                      <Button id="LotteryActiveButton">
+                      <Button id="LotteryActiveButton" onactivate="Start()">
                           <Panel class="LotteryActiveButtonIconAndText" >
                               <Panel class="LotteryActiveButtonIcon" />
                               <Label class="LotteryActiveButtonText"  text="  X  50" />

@@ -7,7 +7,6 @@ function BuildLottery(){
 
         var itemName = "green";
 		var parentPanel= $("#LotteryCell_"+i)
-		$.Msg(i)
 		var newItemPanel = $.CreatePanel("Panel", parentPanel, itemName);
 
         newItemPanel.BLoadLayoutSnippet("LotteryItem");
@@ -34,9 +33,15 @@ var options = {
  };
 
 
+var LotteryInitSpeed=0.4
+var LotteryCircle = 0
+var LotteryCircleStep = 0
+var IsLotteryFinish= false;
+
+
 function Start(){
-
-
+    
+    //正在滚动，不进行触发
 	if(LotteryCircleStep !=0 ) {
         return false;
     }
@@ -46,20 +51,13 @@ function Start(){
 
 function Scroll () {
 
-
-    if(!LotteryFinish){
-        //开始滚动
-        LotteryFinish=true;
-    }
-    
-    if(LotteryTimeout){
-        //恢复初始化参数   
+    if(IsLotteryFinish){
+        //结束定时任务 恢复初始化参数   
         LotteryCircle=0;
         LotteryCircleStep=0;
         options.speed = LotteryInitSpeed;
-        LotteryTimeout = false;			
-        LotteryFinish= false;
-        return false;
+        IsLotteryFinish = false;			
+        return;
     }
 
 
@@ -77,7 +75,7 @@ function SpeedDown () {
     var tmp1 = options.stopPosition-options.speedDownPosition;
     var tmp2 = options.totalCircle+1;
     if(tmp1<=0){
-        tmp1 = domNumber + tmp1;
+        tmp1 = 14 + tmp1;
         tmp2 = tmp2-1;
     }
 
@@ -108,20 +106,16 @@ function ChangeNext() {
 
     LotteryCircleStep++;
 
-    if(options.totalCircle==0 && options.startPosition==options.stopPosition){
-        LotteryTimeout = true
-    }
-    
+    //完成一圈
     if(options.startPosition==domNumber+1){
         options.startPosition=1;
         LotteryCircle++;
     }
 
     if(LotteryCircle==options.totalCircle+1 && options.startPosition==options.stopPosition){
-        LotteryTimeout = true;
+        IsLotteryFinish = true;
     }
 
-    //速度变化
     SpeedUp();
     SpeedDown();
     ChangeDomClass();
