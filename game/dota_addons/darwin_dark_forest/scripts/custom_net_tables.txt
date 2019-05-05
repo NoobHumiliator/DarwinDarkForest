@@ -7,6 +7,7 @@
 		"player_creature_index",
 		"team_max_level",
 		"rank_data",
-		"econ_data"
+		"econ_data",
+		"econ_rarity"
 	]
 }

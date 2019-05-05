@@ -93,3 +93,18 @@ function Server:UpdatePlayerEquip(nPlayerID,sItemName,sType,nEquip)
     end)
 end
 
+
+
+
+function Server:GetEconRarity()
+    local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "geteconrarity")
+    request:Send(function(result)
+        print("Rarity Data Arrive")
+        if result.StatusCode == 200 and result.Body~=nil then
+            local body = JSON:decode(JSON:decode(result.Body))
+            if body ~= nil then
+                CustomNetTables:SetTableValue("econ_rarity", "econ_rarity", stringTable(body))
+            end
+        end
+    end)
+end
