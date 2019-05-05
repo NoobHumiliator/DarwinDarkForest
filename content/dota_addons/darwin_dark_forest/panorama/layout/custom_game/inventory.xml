@@ -49,7 +49,7 @@
                 <Panel class="InventoryLeft">
                       <Panel class="InventoryLeftPic">              
                       </Panel>
-                      <Button id="DrawMutationButton" onactivate="DrawMutation()">
+                      <Button id="DrawMutationButton" onactivate="ShowLotteryPage()">
                           <Panel class="DrawMutationButtonIconAndText" >
                               <Panel class="DrawMutationButtonIcon" />
                               <Label class="DrawMutationButtonText"  text="  X  50" />

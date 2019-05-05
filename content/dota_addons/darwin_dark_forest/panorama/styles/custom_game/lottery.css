@@ -1,0 +1,202 @@
+Label{
+    color:#939da0;
+    font-family:Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    text-shadow: 1px 1px 1px 1.0 #000000ff;
+}
+
+@keyframes 'links-and-more-button-focus'
+{
+    from
+    {
+        background-color: gradient( linear, 0% 0%, 0% 100%, from( #a9c8daee ), to( #000000ee ) ); 
+    }
+
+    50%
+    {
+        background-color: gradient( linear, 0% 0%, 0% 100%, from( #272d2eee ), to( #131617ee ) ); 
+    }
+
+    to
+    {
+        background-color: gradient( linear, 0% 0%, 0% 100%, from( #272d2eee ), to( #131617ee ) ); 
+    }
+}
+
+.Lottery {
+    width: 1010px;
+    height: 970px;
+    vertical-align: center;
+    horizontal-align: center;
+
+    animation-name: links-and-more-button-focus;
+    animation-duration: 0.6s;
+    animation-delay: 0.0s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+
+    /*transition-property: transform, pre-transform-scale2d, opacity, background-color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.0s;*/
+
+    box-shadow: #172a2f -4px -4px 8px 8px;
+    background-color:gradient( linear, 0% 0%, 0% 100%, from( #272d2e ), to( #121212 ) );
+
+    padding: 20px;
+
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    flow-children: down;
+}
+
+
+.Lottery.Hidden {
+    opacity:0.0;
+}
+
+.LotteryCellRow {
+
+    flow-children: right;
+    height: 25%;
+    width: 100%;
+
+}
+
+.LotteryCellRowMiddle {
+    height: 50%;
+    width: 100%;
+}
+
+
+.LotteryCell{
+
+   width:194px;
+}
+
+.LotteryCell .Active{
+ 
+    background-color: gradient( linear, 0% 0%, 100% 100%, from( #568e2658 ), to( #24420a58 ) );
+    box-shadow: #7fe22a 0px 0px 10px 0px;
+
+}
+
+
+
+
+.LotteryItemRoot {
+    width: 180px;
+    margin: 10px;
+    flow-children: down;
+    background-color: #000000dd;
+    border: 1px solid #7bacff;
+    padding: 4px;
+}
+
+.LotteryItemTitlePanel {
+    width: 100%;
+    height: 30px;
+}
+
+.LotteryItemTitlePanel Label {
+    vertical-align: center;
+    horizontal-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.LotteryItemImagePanel {
+    width: 180px;
+    height: 180px;
+}
+
+
+.LotteryCellMiddle{
+
+    width: 60%;
+    flow-children: right;
+}
+
+.LotteryActiveButtonIcon {
+   background-image: url("file://{images}/custom_game/inventory/dna.png");
+   background-size: 100% 100%;
+   width: 30px;
+   height: 30px;
+   vertical-align: center;
+}
+
+
+.LotteryActiveButtonIconAndText {
+
+   horizontal-align: center;
+   vertical-align: center;
+   flow-children: right;
+}
+
+
+
+#LotteryActiveButton {
+    horizontal-align: center;
+    vertical-align: center;
+    width: 200px;
+    height: 50px;
+    border: 1px solid #000;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #5Aa15E ), to( #87d69533 ) )  ;
+    box-shadow: inset #ffffff50 1px 1px 2px 2px;
+    background-image:url("s2r://panorama/images/backgrounds/background_play_button_2x_png.vtex");
+    background-size:320px 120px;
+
+}
+
+#LotteryActiveButton:active {
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #5Aa15E ), to( #87d695ff ) );
+    box-shadow:fill #00000066 -4px -4px 8px 8px;
+    width: 192px;
+    height: 48px;
+    margin-left: 6px;
+    margin-right: 4px;
+}
+
+#LotteryActiveButton Label {
+    horizontal-align: center;
+    vertical-align: center;
+    font-size: 40;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#LotteryActiveButton:hover{
+    background-color:gradient( linear, 0% 0%, 0% 100%, from( #7Ac17E ), to( #a7f6b533 ) );
+}
+
+
+
+#LotteryCloseButton {
+    horizontal-align: center;
+    vertical-align: center;
+    width: 200px;
+    height: 50px;
+    border: 1px solid #000;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from(#a50a04), to(#670303) );
+    box-shadow: inset #ffffff50 1px 1px 2px 2px;
+    background-image:url("s2r://panorama/images/backgrounds/background_play_button_2x_png.vtex");
+    background-size:320px 120px;
+
+}
+
+#LotteryCloseButton:active {
+    background-color: gradient( linear, 0% 0%, 0% 100%, from(#880303), to(#b80803) );
+    box-shadow:fill #00000066 -4px -4px 8px 8px;
+    width: 192px;
+    height: 48px;
+}
+
+#LotteryCloseButton Label {
+    horizontal-align: center;
+    vertical-align: center;
+    font-size: 40;
+    color: #fff;
+    text-transform: uppercase;
+}

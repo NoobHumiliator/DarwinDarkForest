@@ -74,7 +74,6 @@ function RebuildCollections(){
 
         var parentPanel= $("#Inventory"+typeMap[itemName]+"Panel")
 
-        $.Msg("#Inventory"+typeMap[itemName]+"Title")
         $("#Inventory"+typeMap[itemName]+"Title").RemoveClass("Hidden")
 
         var newItemPanel = $.CreatePanel("Panel", parentPanel, itemName);
@@ -123,7 +122,8 @@ function CloseInventory(){
 	$( "#page_inventory" ).ToggleClass("Hidden");
 }
 
-function DrawMutation(){
+function ShowLotteryPage(){
+    FindDotaHudElement("page_lottery").ToggleClass("Hidden");
 }
 
 

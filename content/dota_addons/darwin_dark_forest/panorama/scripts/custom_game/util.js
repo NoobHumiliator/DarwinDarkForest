@@ -1,3 +1,14 @@
+function FindDotaHudElement(id){
+    var hudRoot;
+    for(panel=$.GetContextPanel();panel!=null;panel=panel.GetParent()){
+        hudRoot = panel;
+    }
+    var comp = hudRoot.FindChildTraverse(id);
+    return comp;
+}
+
+
+
 function ConvertToSteamid64(steamid32)  //32位转64位
 {
     var steamid64 = '765' + (parseInt(steamid32) + 61197960265728).toString();
