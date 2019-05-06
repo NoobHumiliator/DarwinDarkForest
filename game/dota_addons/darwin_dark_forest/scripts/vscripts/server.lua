@@ -1,5 +1,5 @@
+--持久化服务器 交互Service
 if Server == nil then Server = class({}) end
---持久化服务器ip 端口
 sServerAddress="http://106.13.43.157:8080/"
 
 
@@ -30,7 +30,7 @@ function Server:GetRankData()
     request:Send(function(result)
         print("Rank Data Arrive")
         if result.StatusCode == 200 and result.Body~=nil then
-            local body = JSON:decode(JSON:decode(result.Body))
+            local body = JSON:decode(result.Body)
             print(body)
             if body ~= nil then
                 CustomNetTables:SetTableValue("rank_data", "rank_data", stringTable(body))
@@ -101,9 +101,25 @@ function Server:GetEconRarity()
     request:Send(function(result)
         print("Rarity Data Arrive")
         if result.StatusCode == 200 and result.Body~=nil then
-            local body = JSON:decode(JSON:decode(result.Body))
+            local body = JSON:decode(result.Body)
             if body ~= nil then
                 CustomNetTables:SetTableValue("econ_rarity", "econ_rarity", stringTable(body))
+            end
+        end
+    end)
+end
+
+function Server:DrawLottery(nPlayerID)
+
+    local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "drawlottery")
+    local nPlayerSteamId = PlayerResource:GetSteamAccountID(nPlayerID)
+    request:SetHTTPRequestGetOrPostParameter("player_steam_id",tostring(nPlayerSteamId));
+
+    request:Send(function(result)
+        if result.StatusCode == 200 and result.Body~=nil then
+            local body = JSON:decode(result.Body)
+            if body ~= nil then
+               CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerID),"DrawLotteryResultArrive",body)
             end
         end
     end)

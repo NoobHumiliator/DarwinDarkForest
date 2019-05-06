@@ -42,10 +42,27 @@ Econ.vImmortalUnitMap ={
 
 
 function Econ:Init()
+
     CustomGameEventManager:RegisterListener("ChangeEquip",function(_, keys)
         self:ChangeEquip(keys)
     end)
+    
+    CustomGameEventManager:RegisterListener("DrawLottery",function(_, keys)
+        self:DrawLottery(keys)
+    end)
+
 end
+
+function Econ:DrawLottery(keys)
+
+    local nPlayerID = keys.playerId
+
+    Server:DrawLottery(nPlayerID)
+
+
+end
+
+
 
 
 function Econ:ChangeEquip(keys)

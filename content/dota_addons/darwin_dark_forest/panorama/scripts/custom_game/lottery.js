@@ -26,8 +26,8 @@ function BuildLottery(){
 		var newItemPanel = $.CreatePanel("Panel", parentPanel, itemName);
 
         newItemPanel.BLoadLayoutSnippet("LotteryItem");
-        newItemPanel.FindChildTraverse("lottery_item_title").text = $.Localize("econ_" + itemName);
-        newItemPanel.FindChildTraverse("lottery_item_image").SetImage("file://{resources}/images/custom_game/econ/" + itemName + ".png");
+        newItemPanel.FindChildTraverse("lottery_item_title").text = $.Localize("econ_unknow");
+        newItemPanel.FindChildTraverse("lottery_item_image").SetImage("file://{resources}/images/custom_game/econ/blank.png");
 
 	}
 
@@ -48,6 +48,8 @@ function StartLottery(){
 	if(LotteryCircleStep !=0 ) {
         return false;
     }
+    var playerId = Game.GetLocalPlayerInfo().player_id;
+    GameEvents.SendCustomGameEventToServer( "DrawLottery", {playerId:playerId} );
 
     Scroll();
 }
@@ -130,9 +132,63 @@ function ChangeNext() {
 }
 
 
+function SetFakeCells(number,level,array){
+
+    var indexs = DrawRandomFromArray(array,number)
+
+    for (var i = indexs.length - 1; i >= 0; i--) {
+        var panel = $("#LotteryCell_"+indexs[i])
+        var econ_rarity = CustomNetTables.GetTableValue("econ_rarity", "econ_rarity");
+        
+        var temp=[]
+        for(var key in econ_rarity){
+          if (econ_rarity[key]==level)
+          {
+            temp.push(key)
+          }
+        }
+        var item_name = temp[Math.floor((Math.random()*temp.length))]
+        panel.FindChildTraverse("lottery_item_title").text = $.Localize("econ_"+item_name);
+        panel.FindChildTraverse("lottery_item_image").SetImage("file://{resources}/images/custom_game/econ/"+item_name+".png");
+    }
+
+}
+
+
+function DrawLotteryResultArrive(data)
+{   
+
+   $.Msg(data)
+   if (data.type==1 || data.type==2)
+   {
+        var arrayObj = new Object();
+        arrayObj.array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]; 
+        
+        //设置目标位置
+        var targetIndex = DrawRandomFromArray(arrayObj.array,1)[0]       
+        var targetPanel = $("#LotteryCell_"+targetIndex)
+        targetPanel.FindChildTraverse("lottery_item_title").text = $.Localize("econ_"+data.item_name);
+        targetPanel.FindChildTraverse("lottery_item_image").SetImage("file://{resources}/images/custom_game/econ/"+data.item_name+".png");
+        
+        var econ_rarity = CustomNetTables.GetTableValue("econ_rarity", "econ_rarity");
+        var targetLevel=econ_rarity[data.item_name]        
+        $.Msg(arrayObj.array)
+        //设置假砖块位置 根据真砖块等级 减少假砖块数量
+        SetFakeCells(targetLevel==4?0:1,4,arrayObj.array)
+        $.Msg(arrayObj.array)
+        SetFakeCells(targetLevel==3?1:2,3,arrayObj.array)
+        $.Msg(arrayObj.array)
+        SetFakeCells(targetLevel==2?3:4,2,arrayObj.array)
+        $.Msg(arrayObj.array)
+        SetFakeCells(targetLevel==1?6:7,1,arrayObj.array)
+        $.Msg(arrayObj.array)
+   }
+}
+
 
 
 (function()
 {
     BuildLottery();
+    GameEvents.Subscribe( "DrawLotteryResultArrive", DrawLotteryResultArrive ); //持久化服务器对于抽奖处理完毕
 })();

@@ -9,6 +9,7 @@ function GameMode:OnGameRulesStateChange()
 
   if nNewState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
         Server:GetRankData()
+        Server:GetEconRarity()
   end
 
 	if nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then

@@ -40,3 +40,16 @@ function FormatSeconds(value) {
         }
     return result;
 }
+
+function DrawRandomFromArray (arr,num){
+
+    var result = [];
+
+    for (var i = 0; i < num; i++) {
+        var ran = Math.floor(Math.random() * arr.length);
+        result.push(arr.splice(ran, 1)[0]);
+    }
+
+    return result;
+
+};
