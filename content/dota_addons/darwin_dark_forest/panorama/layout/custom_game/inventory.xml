@@ -12,11 +12,14 @@
     <snippets>
       <snippet name="CollectionItem">
           <Panel class="CollectionItemRoot">
-              <Panel class="CollectionItemTitlePanel">
-                  <Label id="collection_item_title" class="CollectionItemTitle" />
+              <Panel id="collection_item_title_panel" class="CollectionItemTitlePanel">
+                  <Panel class="CollectionItemTitlePanelInner">
+                      <Label id="collection_item_title" class="CollectionItemTitle" />
+                  </Panel>
               </Panel>
               <Panel class="CollectionItemImagePanel">
                   <Image id="collection_item_image" class="CollectionItemImage" />
+                  <Label id="collection_item_rarity" class="CollectionItemRarity" />
               </Panel>
               <Panel class="CollectionButtonsPanel">
                   <Button class="ButtonBevel ButtonEquip" id="button_equip">

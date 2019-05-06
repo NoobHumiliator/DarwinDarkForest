@@ -93,6 +93,11 @@
     "Equip"                                   "装备"
     "Remove"                                  "卸下"
 
+    "rarity_normal"                           "普通"
+    "rarity_rare"                             "稀有"
+    "rarity_mythical"                         "神话"
+    "rarity_immortal"                         "不朽"
+
     "Skin"                                    "皮肤"
     "Immortal"                                "不朽"
     "Particle"                                "粒子特效"

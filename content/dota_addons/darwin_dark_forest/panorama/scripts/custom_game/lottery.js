@@ -3,8 +3,8 @@ var options = {
     scrollDom:null,                         //滚动显示的dom  这里是使用class选择器
     scrollId:null,                          //滚动的dom上的属性号，是用来标记滚动结束获得的id号对应的奖项
     startPosition:1,                        //开始位置
-    stopPosition:5,                         //停止位置
-    totalCircle:3,                          //滚动的圈数
+    stopPosition:1,                         //停止位置
+    totalCircle:1000,                       //滚动的圈数 (设置为无限大，滚动期间等待服务器回传)
     speed:0.4,                              //正常速度  （这里的速度就是定时器的时间间隔，间隔越短，速度越快）
     speedUp:0.1,                            //加速的时候速度
     speedDown:0.6,                          //减速的时候速度
@@ -21,16 +21,37 @@ function BuildLottery(){
 
 	for (var i=1;i<=options.domNumber;i++){
 
-        var itemName = "green";
 		var parentPanel= $("#LotteryCell_"+i)
-		var newItemPanel = $.CreatePanel("Panel", parentPanel, itemName);
+        var id = "lottery_cell_container_"+i;
+		var newItemPanel = $.CreatePanel("Panel", parentPanel,id);
 
         newItemPanel.BLoadLayoutSnippet("LotteryItem");
         newItemPanel.FindChildTraverse("lottery_item_title").text = $.Localize("econ_unknow");
         newItemPanel.FindChildTraverse("lottery_item_image").SetImage("file://{resources}/images/custom_game/econ/blank.png");
-
 	}
+}
 
+
+
+function ResetLottery(){
+
+
+    for (var i=1;i<=options.domNumber;i++){
+        var panel= $("#LotteryCell_"+i)
+        panel.FindChildTraverse("lottery_item_title").text = $.Localize("econ_unknow");
+        panel.FindChildTraverse("lottery_item_image").SetImage("file://{resources}/images/custom_game/econ/blank.png");
+        
+        //重置稀有度
+        panel.FindChildTraverse("lottery_item_rarity").RemoveClass("Rarity_Rare")
+        panel.FindChildTraverse("lottery_item_title_panel").RemoveClass("TitleRare")
+        
+        panel.FindChildTraverse("lottery_item_rarity").RemoveClass("Rarity_Mythical")
+        panel.FindChildTraverse("lottery_item_title_panel").RemoveClass("TitleMythical")
+
+        panel.FindChildTraverse("lottery_item_rarity").RemoveClass("Rarity_Immortal")
+        panel.FindChildTraverse("lottery_item_title_panel").RemoveClass("TitleImmortal")
+
+    }
 
 }
 
@@ -48,11 +69,23 @@ function StartLottery(){
 	if(LotteryCircleStep !=0 ) {
         return false;
     }
-    var playerId = Game.GetLocalPlayerInfo().player_id;
-    GameEvents.SendCustomGameEventToServer( "DrawLottery", {playerId:playerId} );
+    
+    ResetLottery()
+     
+    //等2秒再发 服务器请求
+    $.Schedule(2,DrawLotteryFromServer);
 
     Scroll();
 }
+
+function DrawLotteryFromServer() {
+    
+     var playerId = Game.GetLocalPlayerInfo().player_id;
+    GameEvents.SendCustomGameEventToServer( "DrawLottery", {playerId:playerId} );
+    
+}
+
+
 
 
 function CloseLottery(){
@@ -148,6 +181,8 @@ function SetFakeCells(number,level,array){
           }
         }
         var item_name = temp[Math.floor((Math.random()*temp.length))]
+        
+        SetPanelRarity(econ_rarity[item_name],panel)
         panel.FindChildTraverse("lottery_item_title").text = $.Localize("econ_"+item_name);
         panel.FindChildTraverse("lottery_item_image").SetImage("file://{resources}/images/custom_game/econ/"+item_name+".png");
     }
@@ -157,7 +192,6 @@ function SetFakeCells(number,level,array){
 
 function DrawLotteryResultArrive(data)
 {   
-
    $.Msg(data)
    if (data.type==1 || data.type==2)
    {
@@ -169,21 +203,54 @@ function DrawLotteryResultArrive(data)
         var targetPanel = $("#LotteryCell_"+targetIndex)
         targetPanel.FindChildTraverse("lottery_item_title").text = $.Localize("econ_"+data.item_name);
         targetPanel.FindChildTraverse("lottery_item_image").SetImage("file://{resources}/images/custom_game/econ/"+data.item_name+".png");
-        
+
         var econ_rarity = CustomNetTables.GetTableValue("econ_rarity", "econ_rarity");
-        var targetLevel=econ_rarity[data.item_name]        
-        $.Msg(arrayObj.array)
+        var targetLevel=econ_rarity[data.item_name]  
+        SetPanelRarity(targetLevel,targetPanel)
+
         //设置假砖块位置 根据真砖块等级 减少假砖块数量
         SetFakeCells(targetLevel==4?0:1,4,arrayObj.array)
-        $.Msg(arrayObj.array)
         SetFakeCells(targetLevel==3?1:2,3,arrayObj.array)
-        $.Msg(arrayObj.array)
         SetFakeCells(targetLevel==2?3:4,2,arrayObj.array)
-        $.Msg(arrayObj.array)
         SetFakeCells(targetLevel==1?6:7,1,arrayObj.array)
-        $.Msg(arrayObj.array)
+
+        //服务器返回了 当前圈数 + 2 圈滚动结束
+        options.totalCircle = LotteryCircle+ 2;
+        //停止位置为真砖块的位置
+        options.stopPosition = targetIndex
+        //减速点 随机4-7之间一个值
+        options.speedDownPosition = Math.floor(Math.random()*(7-4+1)+4);
+        $.Msg("options.speedDownPosition"+options.speedDownPosition)
    }
+
 }
+
+//设置砖块的稀有度
+function SetPanelRarity(rarityLevel,panel) {
+
+
+    if (rarityLevel==1) {
+        panel.FindChildTraverse("lottery_item_rarity").text = $.Localize("rarity_normal");
+    }
+
+   if (rarityLevel==2) {
+        panel.FindChildTraverse("lottery_item_rarity").text = $.Localize("rarity_rare");
+        panel.FindChildTraverse("lottery_item_rarity").AddClass("Rarity_Rare")
+        panel.FindChildTraverse("lottery_item_title_panel").AddClass("TitleRare")
+    }
+    if (rarityLevel==3) {
+        panel.FindChildTraverse("lottery_item_rarity").text = $.Localize("rarity_mythical");
+        panel.FindChildTraverse("lottery_item_rarity").AddClass("Rarity_Mythical")
+        panel.FindChildTraverse("lottery_item_title_panel").AddClass("TitleMythical")
+    }
+    if (rarityLevel==4) {
+        panel.FindChildTraverse("lottery_item_rarity").text = $.Localize("rarity_immortal");
+        panel.FindChildTraverse("lottery_item_rarity").AddClass("Rarity_Immortal")
+        panel.FindChildTraverse("lottery_item_title_panel").AddClass("TitleImmortal")
+    }
+
+}
+
 
 
 

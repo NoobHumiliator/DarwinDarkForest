@@ -65,6 +65,7 @@ function RebuildCollections(){
     $("#InventoryKillEffectTitle").AddClass("Hidden")
 
     data=data[steam_id]
+    var econRarity = CustomNetTables.GetTableValue("econ_rarity", "econ_rarity");
 
     for (var index in data){
         
@@ -78,7 +79,30 @@ function RebuildCollections(){
 
         var newItemPanel = $.CreatePanel("Panel", parentPanel, itemName);
         newItemPanel.BLoadLayoutSnippet("CollectionItem");
+        
+        var rarityLevel = econRarity[itemName]
+        
+        if (rarityLevel==1) {
+            newItemPanel.FindChildTraverse("collection_item_rarity").text = $.Localize("rarity_normal");
+        }
+        if (rarityLevel==2) {
+            newItemPanel.FindChildTraverse("collection_item_rarity").text = $.Localize("rarity_rare");
+            newItemPanel.FindChildTraverse("collection_item_rarity").AddClass("Rarity_Rare")
+            newItemPanel.FindChildTraverse("collection_item_title_panel").AddClass("TitleRare")
+        }
+        if (rarityLevel==3) {
+            newItemPanel.FindChildTraverse("collection_item_rarity").text = $.Localize("rarity_mythical");
+            newItemPanel.FindChildTraverse("collection_item_rarity").AddClass("Rarity_Mythical")
+            newItemPanel.FindChildTraverse("collection_item_title_panel").AddClass("TitleMythical")
+        }
+        if (rarityLevel==4) {
+            newItemPanel.FindChildTraverse("collection_item_rarity").text = $.Localize("rarity_immortal");
+            newItemPanel.FindChildTraverse("collection_item_rarity").AddClass("Rarity_Immortal")
+            newItemPanel.FindChildTraverse("collection_item_title_panel").AddClass("TitleImmortal")
+        }
+
         newItemPanel.FindChildTraverse("collection_item_title").text = $.Localize("econ_" + itemName);
+
         newItemPanel.FindChildTraverse("collection_item_image").SetImage("file://{resources}/images/custom_game/econ/" + itemName + ".png");
 
         if (isEquip){

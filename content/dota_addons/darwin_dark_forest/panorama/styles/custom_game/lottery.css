@@ -101,6 +101,44 @@ Label{
     height: 30px;
 }
 
+.LotteryItemTitlePanelInner {
+    width: 100%;
+    height: 30px;
+    background-color : gradient( linear, 0% 50%, 100% 100%, from( #2b2e2faa ), color-stop( 0.5, #00ff0002 ), to( #2b2e2f ) );
+}
+
+.TitleRare {
+    background-color: #4b69ff;
+}
+.TitleMythical {
+    background-color: #8847ff;
+}
+.TitleImmortal {
+    background-color: #e4ae39;
+}
+
+
+.Rarity_Rare {
+     color: #4b69ff;
+}
+
+.Rarity_Mythical {
+     color: #8847ff;
+}
+
+.Rarity_Immortal {
+     color: #e4ae39;
+}
+
+.LotteryItemRarity {
+
+    horizontal-align: right;
+    vertical-align: top;
+    font-size: 18px;
+}
+
+
+
 .LotteryItemTitlePanel Label {
     vertical-align: center;
     horizontal-align: center;

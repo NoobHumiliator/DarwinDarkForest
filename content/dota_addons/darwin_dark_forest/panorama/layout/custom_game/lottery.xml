@@ -12,11 +12,14 @@
     <snippets>
       <snippet name="LotteryItem">
           <Panel class="LotteryItemRoot">
-              <Panel class="LotteryItemTitlePanel">
-                  <Label id="lottery_item_title"/>
+              <Panel id="lottery_item_title_panel"  class="LotteryItemTitlePanel">
+                  <Panel class="LotteryItemTitlePanelInner">
+                        <Label id="lottery_item_title"/>
+                  </Panel>
               </Panel>
               <Panel class="LotteryItemImagePanel">
                   <Image id="lottery_item_image"/>
+                  <Label id="lottery_item_rarity" class="LotteryItemRarity" />
               </Panel>
           </Panel>
       </snippet>
