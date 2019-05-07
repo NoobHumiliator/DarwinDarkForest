@@ -42,9 +42,16 @@ function OnChangeEquip(itemName,isEquip) {
 }
 
 
-function RebuildCollections(){
+function RebuildCollections(data){
+     
 
-    var data = CustomNetTables.GetTableValue("econ_data", "econ_data");
+    $.Msg(data)
+
+    if (data === undefined) return;
+    if (data==undefined)
+    {
+        data = CustomNetTables.GetTableValue("econ_data", "econ_data");
+    }
     if (data === undefined) return;
 
     $( "#LoadingPanel" ).AddClass("Hidden");
@@ -155,5 +162,6 @@ function ShowLotteryPage(){
 
 (function()
 {   RebuildCollections();
+    GameEvents.Subscribe( "RebuildCollections1", RebuildCollections ); //订阅刷新物品消息
     CustomNetTables.SubscribeNetTableListener("econ_data", RebuildCollections);
 })();

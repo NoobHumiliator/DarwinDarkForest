@@ -5,6 +5,7 @@
     </styles>
 
     <scripts>
+        <include src="file://{resources}/scripts/custom_game/inventory.js" />
         <include src="file://{resources}/scripts/custom_game/lottery.js" />
         <include src="file://{resources}/scripts/custom_game/util.js" />
     </scripts>
@@ -60,6 +61,32 @@
                    <Panel class="LotteryCell" id="LotteryCell_9"/>
                    <Panel class="LotteryCell" id="LotteryCell_8"/>
               </Panel>  
+        </Panel>
+        <Panel class="NewItemNotify Hidden" id="new_item_notify">
+             <Label id="new_item_notify_label" class="NewItemNotifyLabel" />
+             <Panel id="new_item_notify_container" class="NewItemNotifyContainer">
+                 <Panel class="LotteryItemRoot">
+                    <Panel id="lottery_item_title_panel"  class="LotteryItemTitlePanel">
+                        <Panel class="LotteryItemTitlePanelInner">
+                              <Label id="lottery_new_item_title"/>
+                        </Panel>
+                    </Panel>
+                    <Panel class="LotteryItemImagePanel">
+                        <Image id="lottery_new_item_image"/>
+                        <Label id="lottery_item_rarity" class="LotteryItemRarity" />
+                    </Panel>
+                  </Panel>
+
+                  <Panel class="NewItemNotifyRight">
+                      <Panel id="refund_container" class="NewItemNotifyRightIconAndText Hidden" >
+                              <Panel class="LotteryActiveButtonIcon" />
+                              <Label id="lottery_refund_text"  class="LotteryActiveButtonText"  text="  X  50" />
+                      </Panel>
+                      <Button class="ButtonBevel NewItemNotifyConfirm" id="new_item_confirm" onactivate="HideNotify()">
+                                <Label text="#Confirm" />
+                      </Button>
+                  </Panel>
+             </Panel> 
         </Panel>
     </Panel>
 </root>

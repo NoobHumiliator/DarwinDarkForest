@@ -1,7 +1,5 @@
 
 var options = {
-    scrollDom:null,                         //滚动显示的dom  这里是使用class选择器
-    scrollId:null,                          //滚动的dom上的属性号，是用来标记滚动结束获得的id号对应的奖项
     startPosition:1,                        //开始位置
     stopPosition:1,                         //停止位置
     totalCircle:1000,                       //滚动的圈数 (设置为无限大，滚动期间等待服务器回传)
@@ -63,6 +61,9 @@ var LotteryCircleStep = 0
 var IsLotteryFinish= false;
 
 
+
+
+
 function StartLottery(){
     
     //正在滚动，不进行触发
@@ -73,7 +74,7 @@ function StartLottery(){
     ResetLottery()
      
     //等2秒再发 服务器请求
-    $.Schedule(2,DrawLotteryFromServer);
+    $.Schedule(1.5,DrawLotteryFromServer);
 
     Scroll();
 }
@@ -85,6 +86,13 @@ function DrawLotteryFromServer() {
     
 }
 
+function PopOutNotify() {
+    $("#new_item_notify").RemoveClass("Hidden")
+}
+
+function HideNotify() {
+    $("#new_item_notify").AddClass("Hidden")
+}
 
 
 
@@ -95,7 +103,8 @@ function CloseLottery(){
 function Scroll () {
 
     if(IsLotteryFinish){
-        //结束定时任务 恢复初始化参数   
+        //结束定时任务 恢复初始化参数
+        PopOutNotify();
         LotteryCircle=0;
         LotteryCircleStep=0;
         options.speed = LotteryInitSpeed;
@@ -192,21 +201,56 @@ function SetFakeCells(number,level,array){
 
 function DrawLotteryResultArrive(data)
 {   
-   $.Msg(data)
    if (data.type==1 || data.type==2)
    {
         var arrayObj = new Object();
         arrayObj.array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]; 
         
+        var econ_rarity = CustomNetTables.GetTableValue("econ_rarity", "econ_rarity");
+        var targetLevel=econ_rarity[data.item_name]  
+
+
+        var playerId = Game.GetLocalPlayerInfo().player_id;     //玩家ID
+        var steam_id = Game.GetPlayerInfo(playerId).player_steamid;
+         steam_id = ConvertToSteamId32(steam_id);
+
         //设置目标位置
         var targetIndex = DrawRandomFromArray(arrayObj.array,1)[0]       
         var targetPanel = $("#LotteryCell_"+targetIndex)
         targetPanel.FindChildTraverse("lottery_item_title").text = $.Localize("econ_"+data.item_name);
         targetPanel.FindChildTraverse("lottery_item_image").SetImage("file://{resources}/images/custom_game/econ/"+data.item_name+".png");
-
-        var econ_rarity = CustomNetTables.GetTableValue("econ_rarity", "econ_rarity");
-        var targetLevel=econ_rarity[data.item_name]  
         SetPanelRarity(targetLevel,targetPanel)
+
+
+        //设置通告版
+        var notifyPanel = $("#new_item_notify_container")
+        notifyPanel.FindChildTraverse("lottery_new_item_title").text = $.Localize("econ_"+data.item_name);
+        notifyPanel.FindChildTraverse("lottery_new_item_image").SetImage("file://{resources}/images/custom_game/econ/"+data.item_name+".png");
+        SetPanelRarity(targetLevel,notifyPanel)
+        if (data.type==1)
+        {
+            notifyPanel.FindChildTraverse("refund_container").RemoveClass("Hidden")
+            notifyPanel.FindChildTraverse("lottery_refund_text").text = "  X  "+data.refund;
+             $("#new_item_notify_label").text=$.Localize("RefundItem");
+        }
+         if (data.type==2)
+        {
+            notifyPanel.FindChildTraverse("refund_container").AddClass("Hidden")
+            $("#new_item_notify_label").text=$.Localize("CongratulationNewItem");
+            
+            var econ_data = CustomNetTables.GetTableValue("econ_data", "econ_data");
+            var playerData=econ_data[steam_id]
+            var length=Object.keys(playerData).length;
+
+            var newData={}
+            newData.name=data.item_name
+            newData.equip="false"
+
+            playerData[length+1]=newData;
+
+            GameEvents.SendCustomGameEventToServer  ( "EconDataRefresh",playerId,econ_data); //订阅刷新物品消息
+           
+        }
 
         //设置假砖块位置 根据真砖块等级 减少假砖块数量
         SetFakeCells(targetLevel==4?0:1,4,arrayObj.array)
@@ -220,7 +264,6 @@ function DrawLotteryResultArrive(data)
         options.stopPosition = targetIndex
         //减速点 随机4-7之间一个值
         options.speedDownPosition = Math.floor(Math.random()*(7-4+1)+4);
-        $.Msg("options.speedDownPosition"+options.speedDownPosition)
    }
 
 }
@@ -250,7 +293,6 @@ function SetPanelRarity(rarityLevel,panel) {
     }
 
 }
-
 
 
 

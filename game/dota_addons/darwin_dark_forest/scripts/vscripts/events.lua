@@ -15,19 +15,13 @@ function GameMode:OnGameRulesStateChange()
 	if nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
 
 	end
-
+  
+   -- 统计有效玩家个数
 	if nNewState == DOTA_GAMERULES_STATE_PRE_GAME then
 
-	end
-  
-  -- 统计有效玩家个数
-	if nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-      
-     local nValidPlayerNumber= 0
-     --记录游戏开始的时间
-     GameRules.nGameStartTime=GameRules:GetGameTime()
-
      GameRules.vPlayerSteamIdMap={}
+   
+     local nValidPlayerNumber= 0
 
      for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
        if PlayerResource:IsValidPlayer( nPlayerID ) then
@@ -46,6 +40,35 @@ function GameMode:OnGameRulesStateChange()
          GameRules.bPveMap=true
      end
      Server:GetPlayerEconData()
+
+	end
+
+	if nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+      
+     --记录游戏开始的时间
+     GameRules.nGameStartTime=GameRules:GetGameTime()
+     
+     local econData = CustomNetTables:GetTableValue("econ_data", "econ_data")
+
+     PrintTable(econData)
+     --给玩家装上饰品
+     for sPlayerSteamID,vPlayerInfo in pairs(econData) do
+          for nIndex,v in pairs(vPlayerInfo) do
+              local nPlayerID = GameRules.vPlayerSteamIdMap[tonumber(sPlayerSteamID)]
+              if v.type=="Particle" and v.equip=="true" then
+                  Econ:EquipParticleEcon(v.name,nPlayerID)
+              end
+              if v.type=="KillEffect" and v.equip=="true" then
+                  Econ:EquipKillEffectEcon(v.name,nPlayerID)
+              end
+              if v.type=="Immortal" and v.equip=="true" then
+                  Econ:EquipImmortalEcon(v.name,nPlayerID,1)
+              end
+              if v.type=="Skin" and v.equip=="true" then
+                  Econ:EquipSkinEcon(v.name,nPlayerID)
+              end
+          end
+      end
 
 	end
 end

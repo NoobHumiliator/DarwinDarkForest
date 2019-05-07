@@ -53,6 +53,77 @@ Label{
 }
 
 
+
+.NewItemNotify {
+    width: 400px;
+    height: 300px;
+    vertical-align: center;
+    horizontal-align: center;
+
+    animation-name: links-and-more-button-focus;
+    animation-duration: 0.6s;
+    animation-delay: 0.0s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+
+    box-shadow: #172a2f -4px -4px 8px 8px;
+    background-color:gradient( linear, 0% 0%, 0% 100%, from( #272d2e ), to( #121212 ) );
+
+    padding: 20px;
+
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    z-index:60;
+
+    flow-children: down;
+}
+
+.Hidden {
+    opacity:0.0;
+}
+
+.NewItemNotifyLabel {
+
+    font-size: 30px;
+}
+
+.NewItemNotifyContainer{
+   
+   height: 250px;
+   flow-children: right;
+
+}
+
+.NewItemNotifyRight{
+
+    height: 100%;
+    flow-children: down;
+
+}
+
+.NewItemNotifyRightIconAndText{
+    width: 100%;
+    flow-children: right;
+    padding: 60px 20px;
+
+}
+
+.LotteryActiveButtonText{
+
+    font-size: 30px;
+}
+
+
+.NewItemNotifyConfirm{
+
+    margin-top: 18px;
+}
+
+
+
 .Lottery.Hidden {
     opacity:0.0;
 }

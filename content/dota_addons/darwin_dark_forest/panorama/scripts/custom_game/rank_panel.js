@@ -10,8 +10,6 @@ function refreshTopPanel(gamemode, data) {
 		var player = data[index];
 		var rating = player.rating;
         
-        //将秒数转为 时分秒
-        $.Msg("rating"+rating)
         if (gamemode=="pve_mode_players")
         {
         	rating=FormatSeconds(rating)

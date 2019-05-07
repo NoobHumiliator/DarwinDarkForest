@@ -80,15 +80,14 @@
 
     "TopMenuIcon_Guide_message"               "游戏指南"
     "TopMenuIcon_Rank_message"                "天梯排行"
-    "TopMenuIcon_Inventory_message"           "突变库"
-    "TopMenuIcon_Shop_message"                "进化商店"
+    "TopMenuIcon_Inventory_message"           "基因进化库"
     "WorldRank"                               "天梯排行"
     "CurrentSeason"                           "{s:year}年第{d:month}赛季"
     //UI 
     "PveMode"                                 "单机模式"
     "SoloMode"                                "单人模式"
     "ThreePlayerMode"                         "三人模式"
-    "EvolveInventory"                         "突变库"
+    "EvolveInventory"                         "基因进化库"
     "ExchangeKey"                             "兑换激活码"
     "Equip"                                   "装备"
     "Remove"                                  "卸下"
@@ -97,6 +96,11 @@
     "rarity_rare"                             "稀有"
     "rarity_mythical"                         "神话"
     "rarity_immortal"                         "不朽"
+
+    "CongratulationNewItem"                   "您获得了新的进化："
+    "RefundItem"                              "已经拥有进化，自动分解："
+
+    "Confirm"                                 "确认"
 
     "Skin"                                    "皮肤"
     "Immortal"                                "不朽"
