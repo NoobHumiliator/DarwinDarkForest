@@ -239,7 +239,7 @@ function DrawLotteryResultArrive(data)
             $("#new_item_notify_label").text=$.Localize("CongratulationNewItem");
             
             var econ_data = CustomNetTables.GetTableValue("econ_data", "econ_data");
-            var playerData=econ_data[steam_id]
+            var playerData=econ_data["econ_info"][steam_id]
             var length=Object.keys(playerData).length;
 
             var newData={}

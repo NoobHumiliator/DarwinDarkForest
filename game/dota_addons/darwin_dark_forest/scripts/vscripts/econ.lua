@@ -73,7 +73,7 @@ function Econ:EconDataRefresh(keys)
 
     local econ_data = CustomNetTables:GetTableValue("econ_data", "econ_data")
     
-    econ_data[tostring(nPlayerSteamId)]=keys
+    econ_data["econ_info"][tostring(nPlayerSteamId)]=keys
     
     CustomNetTables:SetTableValue("econ_data", "econ_data",econ_data)
 

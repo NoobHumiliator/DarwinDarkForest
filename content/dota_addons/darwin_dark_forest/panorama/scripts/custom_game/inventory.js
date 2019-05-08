@@ -50,19 +50,10 @@ function EconDataArrive(){
     var steam_id = Game.GetPlayerInfo(playerId).player_steamid;
     steam_id = ConvertToSteamId32(steam_id);
 
-    playerData=data[steam_id]
+    playerData=data["econ_info"][steam_id]
 
     RebuildCollections(playerData)
 }
-
-function RefreshCollections(keys){
-    RebuildCollections(keys)
-}
-
-
-
-
-
 
 
 function RebuildCollections(playerData){
@@ -177,6 +168,5 @@ function ShowLotteryPage(){
 
 (function()
 {   RebuildCollections();
-    GameEvents.Subscribe( "RefreshCollections", RefreshCollections ); //订阅刷新物品消息
     CustomNetTables.SubscribeNetTableListener("econ_data", EconDataArrive);
 })();
