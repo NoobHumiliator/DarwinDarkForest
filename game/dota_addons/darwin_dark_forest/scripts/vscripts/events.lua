@@ -50,7 +50,6 @@ function GameMode:OnGameRulesStateChange()
      
      local econData = CustomNetTables:GetTableValue("econ_data", "econ_data")
 
-     PrintTable(econData)
      --给玩家装上饰品
      for sPlayerSteamID,vPlayerInfo in pairs(econData) do
           for nIndex,v in pairs(vPlayerInfo) do

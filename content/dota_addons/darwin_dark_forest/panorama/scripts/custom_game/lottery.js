@@ -247,9 +247,10 @@ function DrawLotteryResultArrive(data)
             newData.equip="false"
 
             playerData[length+1]=newData;
+            playerData.playerId=playerId
 
-            GameEvents.SendCustomGameEventToServer  ( "EconDataRefresh",playerId,econ_data); //订阅刷新物品消息
-           
+            GameEvents.SendCustomGameEventToServer ( "EconDataRefresh",playerData); //通知前台更新NetTable
+            
         }
 
         //设置假砖块位置 根据真砖块等级 减少假砖块数量

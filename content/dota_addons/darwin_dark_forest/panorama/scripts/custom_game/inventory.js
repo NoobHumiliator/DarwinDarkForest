@@ -42,17 +42,32 @@ function OnChangeEquip(itemName,isEquip) {
 }
 
 
-function RebuildCollections(data){
+function EconDataArrive(){
+
+    var data = CustomNetTables.GetTableValue("econ_data", "econ_data");
+
+    var playerId = Game.GetLocalPlayerInfo().player_id;     //玩家ID
+    var steam_id = Game.GetPlayerInfo(playerId).player_steamid;
+    steam_id = ConvertToSteamId32(steam_id);
+
+    playerData=data[steam_id]
+
+    RebuildCollections(playerData)
+}
+
+function RefreshCollections(keys){
+    RebuildCollections(keys)
+}
+
+
+
+
+
+
+
+function RebuildCollections(playerData){
      
-
-    $.Msg(data)
-
-    if (data === undefined) return;
-    if (data==undefined)
-    {
-        data = CustomNetTables.GetTableValue("econ_data", "econ_data");
-    }
-    if (data === undefined) return;
+    if (playerData === undefined) return;
 
     $( "#LoadingPanel" ).AddClass("Hidden");
     $( "#InventoryRightContainer" ).RemoveClass("Hidden");
@@ -71,7 +86,7 @@ function RebuildCollections(data){
     $("#InventoryParticleTitle").AddClass("Hidden")
     $("#InventoryKillEffectTitle").AddClass("Hidden")
 
-    data=data[steam_id]
+    data=playerData
     var econRarity = CustomNetTables.GetTableValue("econ_rarity", "econ_rarity");
 
     for (var index in data){
@@ -162,6 +177,6 @@ function ShowLotteryPage(){
 
 (function()
 {   RebuildCollections();
-    GameEvents.Subscribe( "RebuildCollections1", RebuildCollections ); //订阅刷新物品消息
-    CustomNetTables.SubscribeNetTableListener("econ_data", RebuildCollections);
+    GameEvents.Subscribe( "RefreshCollections", RefreshCollections ); //订阅刷新物品消息
+    CustomNetTables.SubscribeNetTableListener("econ_data", EconDataArrive);
 })();

@@ -51,6 +51,10 @@ function Econ:Init()
         self:DrawLottery(keys)
     end)
 
+    CustomGameEventManager:RegisterListener("EconDataRefresh",function(_, keys)
+        self:EconDataRefresh(keys)
+    end)
+
 end
 
 function Econ:DrawLottery(keys)
@@ -59,6 +63,19 @@ function Econ:DrawLottery(keys)
 
     Server:DrawLottery(nPlayerID)
 
+
+end
+
+function Econ:EconDataRefresh(keys)
+    
+    local nPlayerID = keys.playerId
+    local nPlayerSteamId = PlayerResource:GetSteamAccountID(nPlayerID)
+
+    local econ_data = CustomNetTables:GetTableValue("econ_data", "econ_data")
+    
+    econ_data[tostring(nPlayerSteamId)]=keys
+    
+    CustomNetTables:SetTableValue("econ_data", "econ_data",econ_data)
 
 end
 
