@@ -44,29 +44,31 @@ function OnChangeEquip(itemName,isEquip) {
 
 function EconDataArrive(){
 
-    var data = CustomNetTables.GetTableValue("econ_data", "econ_data");
+    var econ_data = CustomNetTables.GetTableValue("econ_data", "econ_data");
 
-    var playerId = Game.GetLocalPlayerInfo().player_id;     //玩家ID
-    var steam_id = Game.GetPlayerInfo(playerId).player_steamid;
-    steam_id = ConvertToSteamId32(steam_id);
-
-    playerData=data["econ_info"][steam_id]
-
-    RebuildCollections(playerData)
+    RebuildCollections(econ_data)
 }
 
 
-function RebuildCollections(playerData){
-     
-    if (playerData === undefined) return;
+function RebuildCollections(econ_data){
 
-    $( "#LoadingPanel" ).AddClass("Hidden");
-    $( "#InventoryRightContainer" ).RemoveClass("Hidden");
+
+    if (econ_data === undefined) return;
 
     var playerId = Game.GetLocalPlayerInfo().player_id;     //玩家ID
     var steam_id = Game.GetPlayerInfo(playerId).player_steamid;
     steam_id = ConvertToSteamId32(steam_id);
+
+    var playerData = econ_data["econ_info"][steam_id]
+    var dnaValue = econ_data["dna"][steam_id]
+
+    if (playerData === undefined) return;
+
+    if ( $( "#LoadingPanel" ) == undefined) return;
     
+    $( "#LoadingPanel" ).AddClass("Hidden");
+    $( "#InventoryRightContainer" ).RemoveClass("Hidden");
+
     $("#InventorySkinPanel").RemoveAndDeleteChildren();
     $("#InventoryImmortalPanel").RemoveAndDeleteChildren();
     $("#InventoryParticlePanel").RemoveAndDeleteChildren();
@@ -76,13 +78,30 @@ function RebuildCollections(playerData){
     $("#InventoryImmortalTitle").AddClass("Hidden")
     $("#InventoryParticleTitle").AddClass("Hidden")
     $("#InventoryKillEffectTitle").AddClass("Hidden")
+    
+    $("#DrawMutationButton").enabled=false;
+
+    $( "#DnaStorageLabel" ).text=" X "+dnaValue;
+    
+    if (dnaValue>=50)
+    {
+        $("#DrawMutationButton").enabled=true;
+    }
 
     data=playerData
+
     var econRarity = CustomNetTables.GetTableValue("econ_rarity", "econ_rarity");
 
     for (var index in data){
         
         var itemName=data[index].name;
+        
+        //过滤没有name的数据
+        if (data[index].name == undefined)
+        {
+            continue;
+        }
+
         var isEquip = (data[index].equip=="true")
 
 
@@ -167,6 +186,6 @@ function ShowLotteryPage(){
 
 
 (function()
-{   RebuildCollections();
+{   
     CustomNetTables.SubscribeNetTableListener("econ_data", EconDataArrive);
 })();

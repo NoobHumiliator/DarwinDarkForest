@@ -131,6 +131,8 @@
 
     "Close"                                   "关闭"
 
+    "DrawMutate"                                        "抽取进化("
+
 
     "UltimateStageNote"                                                         "达到11级！游戏进入终极进化阶段，生物死亡后不能复活。游戏结束时根据所获经验结算排名。"
     "LevelTenStageNote"                                                         "率先到达10级，10级生物的强大气息将暴露自己位置。"

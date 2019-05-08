@@ -51,24 +51,25 @@ function GameMode:OnGameRulesStateChange()
      local econData = CustomNetTables:GetTableValue("econ_data", "econ_data")
 
      --给玩家装上饰品
-     for sPlayerSteamID,vPlayerInfo in pairs(econData) do
-          for nIndex,v in pairs(vPlayerInfo) do
-              local nPlayerID = GameRules.vPlayerSteamIdMap[tonumber(sPlayerSteamID)]
-              if v.type=="Particle" and v.equip=="true" then
-                  Econ:EquipParticleEcon(v.name,nPlayerID)
-              end
-              if v.type=="KillEffect" and v.equip=="true" then
-                  Econ:EquipKillEffectEcon(v.name,nPlayerID)
-              end
-              if v.type=="Immortal" and v.equip=="true" then
-                  Econ:EquipImmortalEcon(v.name,nPlayerID,1)
-              end
-              if v.type=="Skin" and v.equip=="true" then
-                  Econ:EquipSkinEcon(v.name,nPlayerID)
+     if econData and econData["econ_data"] then
+         for sPlayerSteamID,vPlayerInfo in pairs(econData["econ_info"]) do
+              for nIndex,v in pairs(vPlayerInfo) do
+                  local nPlayerID = GameRules.vPlayerSteamIdMap[tonumber(sPlayerSteamID)]
+                  if v.type=="Particle" and v.equip=="true" then
+                      Econ:EquipParticleEcon(v.name,nPlayerID)
+                  end
+                  if v.type=="KillEffect" and v.equip=="true" then
+                      Econ:EquipKillEffectEcon(v.name,nPlayerID)
+                  end
+                  if v.type=="Immortal" and v.equip=="true" then
+                      Econ:EquipImmortalEcon(v.name,nPlayerID,1)
+                  end
+                  if v.type=="Skin" and v.equip=="true" then
+                      Econ:EquipSkinEcon(v.name,nPlayerID)
+                  end
               end
           end
       end
-
 	end
 end
 

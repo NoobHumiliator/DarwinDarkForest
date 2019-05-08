@@ -74,6 +74,8 @@ function Econ:EconDataRefresh(keys)
     local econ_data = CustomNetTables:GetTableValue("econ_data", "econ_data")
     
     econ_data["econ_info"][tostring(nPlayerSteamId)]=keys
+    print("keys.dnaValue"..keys.dnaValue)
+    econ_data["dna"][tostring(nPlayerSteamId)]=keys.dnaValue
     
     CustomNetTables:SetTableValue("econ_data", "econ_data",econ_data)
 

@@ -106,9 +106,9 @@ Label{
 
 #DrawMutationButton {
     horizontal-align: center;
-    vertical-align: center;
     width: 200px;
     height: 50px;
+    margin-top: 25px;
     border: 1px solid #000;
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #5Aa15E ), to( #87d69533 ) )  ;
     box-shadow: inset #ffffff50 1px 1px 2px 2px;
@@ -127,15 +127,19 @@ Label{
 #DrawMutationButton Label {
     horizontal-align: center;
     vertical-align: center;
-    font-size: 40;
+    font-size: 25px;
     color: #fff;
+    padding-top: 5px;
     text-transform: uppercase;
 }
 
-#DrawMutationButton:hover{
+#DrawMutationButton:active :hover{
     background-color:gradient( linear, 0% 0%, 0% 100%, from( #7Ac17E ), to( #a7f6b533 ) );
 }
 
+#DrawMutationButton:disabled {
+    saturation: 0;
+}
 
 
 .InventoryTitle {
@@ -434,6 +438,15 @@ Label{
     vertical-align:middle;
 }
 
+
+.InventoryLeftPic{
+
+   horizontal-align:middle;
+   margin-top:150px;
+   width: 200px;
+   height: 200px;
+
+}
 
 .Temp{
     background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_lich_glare_of_the_tyrant.png");

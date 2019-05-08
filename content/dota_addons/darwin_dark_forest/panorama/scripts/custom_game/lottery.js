@@ -37,6 +37,7 @@ function ResetLottery(){
     for (var i=1;i<=options.domNumber;i++){
         var panel= $("#LotteryCell_"+i)
         panel.FindChildTraverse("lottery_item_title").text = $.Localize("econ_unknow");
+        panel.FindChildTraverse("lottery_item_rarity").text = "";
         panel.FindChildTraverse("lottery_item_image").SetImage("file://{resources}/images/custom_game/econ/blank.png");
         
         //重置稀有度
@@ -232,6 +233,13 @@ function DrawLotteryResultArrive(data)
             notifyPanel.FindChildTraverse("refund_container").RemoveClass("Hidden")
             notifyPanel.FindChildTraverse("lottery_refund_text").text = "  X  "+data.refund;
              $("#new_item_notify_label").text=$.Localize("RefundItem");
+
+            var econ_data = CustomNetTables.GetTableValue("econ_data", "econ_data");
+            var playerData=econ_data["econ_info"][steam_id]
+            playerData.playerId=playerId
+            $.Msg(data.refund)
+            playerData.dnaValue= parseInt(econ_data["dna"][steam_id])-50+parseInt(data.refund)
+            GameEvents.SendCustomGameEventToServer ( "EconDataRefresh",playerData); //通知前台更新NetTable
         }
          if (data.type==2)
         {
@@ -248,9 +256,9 @@ function DrawLotteryResultArrive(data)
 
             playerData[length+1]=newData;
             playerData.playerId=playerId
+            playerData.dnaValue= parseInt(econ_data["dna"][steam_id])-50
 
             GameEvents.SendCustomGameEventToServer ( "EconDataRefresh",playerData); //通知前台更新NetTable
-            
         }
 
         //设置假砖块位置 根据真砖块等级 减少假砖块数量
@@ -271,6 +279,16 @@ function DrawLotteryResultArrive(data)
 
 //设置砖块的稀有度
 function SetPanelRarity(rarityLevel,panel) {
+
+
+    panel.FindChildTraverse("lottery_item_rarity").RemoveClass("Rarity_Rare")
+    panel.FindChildTraverse("lottery_item_title_panel").RemoveClass("TitleRare")
+    
+    panel.FindChildTraverse("lottery_item_rarity").RemoveClass("Rarity_Mythical")
+    panel.FindChildTraverse("lottery_item_title_panel").RemoveClass("TitleMythical")
+
+    panel.FindChildTraverse("lottery_item_rarity").RemoveClass("Rarity_Immortal")
+    panel.FindChildTraverse("lottery_item_title_panel").RemoveClass("TitleImmortal")
 
 
     if (rarityLevel==1) {

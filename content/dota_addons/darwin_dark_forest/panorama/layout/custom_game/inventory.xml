@@ -50,12 +50,14 @@
 
             <Panel class="InventoryMain">
                 <Panel class="InventoryLeft">
-                      <Panel class="InventoryLeftPic">              
+                      <Panel class="InventoryLeftPic"> 
+                          <Image id="InventoryLeftImg" src="file://{images}/custom_game/econ/lottery.png"/>
                       </Panel>
                       <Button id="DrawMutationButton" onactivate="ShowLotteryPage()">
                           <Panel class="DrawMutationButtonIconAndText" >
+                              <Label class="DrawMutationButtonText"  text="#DrawMutate" />
                               <Panel class="DrawMutationButtonIcon" />
-                              <Label class="DrawMutationButtonText"  text="  X  50" />
+                              <Label class="DrawMutationButtonText"  text="X50)" />
                           </Panel>
                       </Button>         
                 </Panel>

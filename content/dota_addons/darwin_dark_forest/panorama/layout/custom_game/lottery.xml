@@ -16,6 +16,7 @@
               <Panel id="lottery_item_title_panel"  class="LotteryItemTitlePanel">
                   <Panel class="LotteryItemTitlePanelInner">
                         <Label id="lottery_item_title"/>
+                        <Label id="lottery_item_title"/>
                   </Panel>
               </Panel>
               <Panel class="LotteryItemImagePanel">
