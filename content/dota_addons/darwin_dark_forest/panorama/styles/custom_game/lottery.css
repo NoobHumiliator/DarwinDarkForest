@@ -277,10 +277,13 @@ Label{
     text-transform: uppercase;
 }
 
-#LotteryActiveButton:hover{
+#LotteryActiveButton :active :hover{
     background-color:gradient( linear, 0% 0%, 0% 100%, from( #7Ac17E ), to( #a7f6b533 ) );
 }
 
+#LotteryActiveButton:disabled {
+    saturation: 0;
+}
 
 
 #LotteryCloseButton {

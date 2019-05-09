@@ -313,10 +313,30 @@ function SetPanelRarity(rarityLevel,panel) {
 
 }
 
+function PlayerDNAChanged(){
+
+    var econ_data = CustomNetTables.GetTableValue("econ_data", "econ_data");
+
+    var playerId = Game.GetLocalPlayerInfo().player_id;
+    var steam_id = Game.GetPlayerInfo(playerId).player_steamid;
+    steam_id = ConvertToSteamId32(steam_id);
+    var dnaValue = econ_data["dna"][steam_id]
+
+    if (dnaValue>=50)
+    {
+        $("#LotteryActiveButton").enabled=true;
+    }
+    else
+    {
+        $("#LotteryActiveButton").enabled=false;
+    }
+
+}
 
 
 (function()
 {
     BuildLottery();
+    CustomNetTables.SubscribeNetTableListener("econ_data", PlayerDNAChanged);
     GameEvents.Subscribe( "DrawLotteryResultArrive", DrawLotteryResultArrive ); //持久化服务器对于抽奖处理完毕
 })();
