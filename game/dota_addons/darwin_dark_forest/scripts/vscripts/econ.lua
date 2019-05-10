@@ -36,6 +36,8 @@ Econ.vSkinUnitMap ={
 Econ.vImmortalUnitMap ={
     shearing_deposition={"npc_dota_creature_lich","npc_dota_creature_lich_rime_lord","npc_dota_creature_lich_serakund_tyrant"},
     glare_of_the_tyrant={"npc_dota_creature_lich","npc_dota_creature_lich_rime_lord","npc_dota_creature_lich_serakund_tyrant"}
+    golden_scavenging_guttleslug={"npc_dota_creature_pudge","npc_dota_creature_pudge_plague_champion","npc_dota_creature_pudge_surgical_precision"}
+
 }
 
 

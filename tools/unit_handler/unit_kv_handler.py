@@ -7,7 +7,8 @@ lines = f.readlines()
 
 
 map={
-   'npc_dota_creature_lich':{'glare_of_the_tyrant':('333','9756'),'shearing_deposition':('332','7576')}
+   'npc_dota_creature_lich':{'glare_of_the_tyrant':('333','9756'),'shearing_deposition':('332','7576')},
+   'npc_dota_creature_pudge':{'dragonclaw_hook':('5955','4007'),'feast_of_abscession':('5950','7756'),'golden_rippers_reel':('5955','8038'),'golden_scavenging_guttleslug':('5954','7742')}
 }
 
 

@@ -14498,315 +14498,6 @@
 		}
 	}
 
-	"npc_dota_creature_lich_shearing_deposition"
-	{
-        // General
-		//----------------------------------------------------------------
-		"Model"						"models/heroes/lich/lich.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creature"
-		"SoundSet"		            "Hero_Lich"
-		"IdleSoundLoop"		        "Hero_Lich.IdleLoop"
-		"Level"						"8"
-		"ModelScale" 				"1.1"
-		"vscripts"					"creap_ai.lua"
-		"HasInventory"				"1"
-		"EconUnitFlag"              "1"
-
-		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
-		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
-         
-        "nElement"                  "14"
-        "nDecay"                    "14"
-
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"lich_chain_frost"			// Ability 1
-		"Ability2"					"lich_frost_nova"			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
-
-		"AbilitiesLevel"            "3"
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"4"			// Physical protection.
-		"MagicalResistance"         "0"
-
-		// Attack
-		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"135"		// Damage range min.
-		"AttackDamageMax"			"144"		// Damage range max.
-		"AttackRate"				"1.4"		// Speed of attack.
-		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"		        "550"
-		"ProjectileModel"		    "particles/units/heroes/hero_lich/lich_base_attack.vpcf"     
-
-		// Bounds
-		//----------------------------------------------------------------
-		"RingRadius"				"80"
-		"HealthBarOffset"			"190"
-
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"340"		// Speed.			
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"2300"		// Base health.
-		"StatusHealthRegen"			"11"		     // Health regeneration rate.
-		"StatusMana"				"1250"	    // Base mana.
-		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
-		
-		// Vision
-		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"800"		// Range of vision during day light.
-		"VisionNighttimeRange"		"800"		// Range of vision at night time.
-
-		// Team
-		//----------------------------------------------------------------
-		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-		"Creature"
-		{
-			"AttachWearables"
-			{
-				"Wearable1"
-				{
-					"ItemDef"			"331"
-				}
-				"Wearable2"
-				{
-					"ItemDef"			"7576"
-				}
-				"Wearable3"
-				{
-					"ItemDef"			"333"
-				}
-				"Wearable4"
-				{
-					"ItemDef"			"334"
-				}
-				"Wearable5"
-				{
-					"ItemDef"			"506"
-				}
-			}
-		}
-	}
-
-	"npc_dota_creature_lich_glare_of_the_tyrant"
-	{
-
-		// General
-		//----------------------------------------------------------------
-		"Model"						"models/heroes/lich/lich.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creature"
-		"SoundSet"		            "Hero_Lich"
-		"IdleSoundLoop"		        "Hero_Lich.IdleLoop"
-		"Level"						"8"
-		"ModelScale" 				"1.1"
-		"vscripts"					"creap_ai.lua"
-		"HasInventory"				"1"
-        "EconUnitFlag"              "1"
-
-		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
-		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
-         
-        "nElement"                  "14"
-        "nDecay"                    "14"
-
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"lich_chain_frost"			// Ability 1
-		"Ability2"					"lich_frost_nova"			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
-
-		"AbilitiesLevel"            "3"
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"4"			// Physical protection.
-		"MagicalResistance"         "0"
-
-		// Attack
-		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"135"		// Damage range min.
-		"AttackDamageMax"			"144"		// Damage range max.
-		"AttackRate"				"1.4"		// Speed of attack.
-		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"		        "550"
-		"ProjectileModel"		    "particles/units/heroes/hero_lich/lich_base_attack.vpcf"     
-
-		// Bounds
-		//----------------------------------------------------------------
-		"RingRadius"				"80"
-		"HealthBarOffset"			"190"
-
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"340"		// Speed.			
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"2300"		// Base health.
-		"StatusHealthRegen"			"11"		     // Health regeneration rate.
-		"StatusMana"				"1250"	    // Base mana.
-		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
-		
-		// Vision
-		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"800"		// Range of vision during day light.
-		"VisionNighttimeRange"		"800"		// Range of vision at night time.
-
-		// Team
-		//----------------------------------------------------------------
-		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-
-		"Creature"
-		{
-			"AttachWearables"
-			{
-				"Wearable1"
-				{
-					"ItemDef"			"331"
-				}
-				"Wearable2"
-				{
-					"ItemDef"			"332"
-				}
-				"Wearable3"
-				{
-					"ItemDef"			"9756"
-				}
-				"Wearable4"
-				{
-					"ItemDef"			"334"
-				}
-				"Wearable5"
-				{
-					"ItemDef"			"506"
-				}
-			}
-		}
-	}
-
-	"npc_dota_creature_lich_glare_of_the_tyrant_shearing_deposition"
-	{
-
-		//----------------------------------------------------------------
-		"Model"						"models/heroes/lich/lich.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creature"
-		"SoundSet"		            "Hero_Lich"
-		"IdleSoundLoop"		        "Hero_Lich.IdleLoop"
-		"Level"						"8"
-		"ModelScale" 				"1.1"
-		"vscripts"					"creap_ai.lua"
-		"HasInventory"				"1"
-
-		"EconUnitFlag"              "1"
-
-		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
-		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
-         
-        "nElement"                  "14"
-        "nDecay"                    "14"
-
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"lich_chain_frost"			// Ability 1
-		"Ability2"					"lich_frost_nova"			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
-
-		"AbilitiesLevel"            "3"
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"4"			// Physical protection.
-		"MagicalResistance"         "0"
-
-		// Attack
-		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"135"		// Damage range min.
-		"AttackDamageMax"			"144"		// Damage range max.
-		"AttackRate"				"1.4"		// Speed of attack.
-		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"		        "550"
-		"ProjectileModel"		    "particles/units/heroes/hero_lich/lich_base_attack.vpcf"     
-
-		// Bounds
-		//----------------------------------------------------------------
-		"RingRadius"				"80"
-		"HealthBarOffset"			"190"
-
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"340"		// Speed.			
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"2300"		// Base health.
-		"StatusHealthRegen"			"11"		     // Health regeneration rate.
-		"StatusMana"				"1250"	    // Base mana.
-		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
-		
-		// Vision
-		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"800"		// Range of vision during day light.
-		"VisionNighttimeRange"		"800"		// Range of vision at night time.
-
-		// Team
-		//----------------------------------------------------------------
-		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-
-		"Creature"
-		{
-			"AttachWearables"
-			{
-				"Wearable1"
-				{
-					"ItemDef"			"331"
-				}
-				"Wearable2"
-				{
-					"ItemDef"			"7576"
-				}
-				"Wearable3"
-				{
-					"ItemDef"			"9756"
-				}
-				"Wearable4"
-				{
-					"ItemDef"			"334"
-				}
-				"Wearable5"
-				{
-					"ItemDef"			"506"
-				}
-			}
-		}
-	}
 
 	 "npc_dota_creature_faceless_void"
 	{
@@ -21803,5 +21494,1976 @@
 	        }
 		}
 	}
+
+
+
+
+		"npc_dota_creature_lich_glare_of_the_tyrant"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/lich/lich.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Lich"
+		"IdleSoundLoop"		        "Hero_Lich.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+
+		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+         
+        "nElement"                  "14"
+        "nDecay"                    "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"lich_chain_frost"			// Ability 1
+		"Ability2"					"lich_frost_nova"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"144"		// Damage range max.
+		"AttackRate"				"1.4"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"		        "550"
+		"ProjectileModel"		    "particles/units/heroes/hero_lich/lich_base_attack.vpcf"     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2300"		// Base health.
+		"StatusHealthRegen"			"11"		     // Health regeneration rate.
+		"StatusMana"				"1250"	    // Base mana.
+		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"331"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"332"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"9756"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"334"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"506"
+				}
+			}
+		}
+
+	"npc_dota_creature_lich_shearing_deposition"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/lich/lich.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Lich"
+		"IdleSoundLoop"		        "Hero_Lich.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+
+		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+         
+        "nElement"                  "14"
+        "nDecay"                    "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"lich_chain_frost"			// Ability 1
+		"Ability2"					"lich_frost_nova"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"144"		// Damage range max.
+		"AttackRate"				"1.4"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"		        "550"
+		"ProjectileModel"		    "particles/units/heroes/hero_lich/lich_base_attack.vpcf"     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2300"		// Base health.
+		"StatusHealthRegen"			"11"		     // Health regeneration rate.
+		"StatusMana"				"1250"	    // Base mana.
+		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"331"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7576"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"333"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"334"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"506"
+				}
+			}
+		}
+
+	"npc_dota_creature_lich_glare_of_the_tyrant_shearing_deposition"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/lich/lich.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Lich"
+		"IdleSoundLoop"		        "Hero_Lich.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+
+		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+         
+        "nElement"                  "14"
+        "nDecay"                    "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"lich_chain_frost"			// Ability 1
+		"Ability2"					"lich_frost_nova"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"144"		// Damage range max.
+		"AttackRate"				"1.4"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"		        "550"
+		"ProjectileModel"		    "particles/units/heroes/hero_lich/lich_base_attack.vpcf"     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2300"		// Base health.
+		"StatusHealthRegen"			"11"		     // Health regeneration rate.
+		"StatusMana"				"1250"	    // Base mana.
+		"StatusManaRegen"			"3.1"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"331"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7576"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"9756"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"334"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"506"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_dragonclaw_hook"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"4007"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"5954"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"5950"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_feast_of_abscession"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"5955"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"5954"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"7756"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_golden_rippers_reel"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8038"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"5954"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"5950"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_golden_scavenging_guttleslug"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"5955"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7742"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"5950"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_dragonclaw_hook_feast_of_abscession"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"4007"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"5954"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"7756"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_dragonclaw_hook_golden_rippers_reel"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8038"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"5954"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"5950"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_dragonclaw_hook_golden_scavenging_guttleslug"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"4007"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7742"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"5950"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_feast_of_abscession_golden_rippers_reel"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8038"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"5954"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"7756"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_feast_of_abscession_golden_scavenging_guttleslug"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"5955"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7742"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"7756"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_golden_rippers_reel_golden_scavenging_guttleslug"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8038"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7742"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"5950"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_dragonclaw_hook_feast_of_abscession_golden_rippers_reel"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8038"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"5954"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"7756"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_dragonclaw_hook_feast_of_abscession_golden_scavenging_guttleslug"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"4007"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7742"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"7756"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_dragonclaw_hook_golden_rippers_reel_golden_scavenging_guttleslug"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8038"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7742"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"5950"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_feast_of_abscession_golden_rippers_reel_golden_scavenging_guttleslug"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8038"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7742"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"7756"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
+
+	"npc_dota_creature_pudge_dragonclaw_hook_feast_of_abscession_golden_rippers_reel_golden_scavenging_guttleslug"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_Pudge"
+		"IdleSoundLoop"		        "Hero_Pudge.IdleLoop"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"HasInventory"				"1"
+         
+        "nDecay"                    "14"
+        "nDurable"                  "14"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"pudge_meat_hook"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"         "25"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"99"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""          // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"330"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"13"		// Health regeneration rate.
+		"StatusMana"				"500"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1"
+				{
+					"ItemDef"			"10405"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8038"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7742"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"5953"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"5952"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"5951"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"7756"
+				}
+				"Wearable8"
+				{
+					"ItemDef"			"5949"
+				}
+			}
+		}
 
 }	

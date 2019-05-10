@@ -7,6 +7,9 @@ var typeMap = {
 
     "shearing_deposition":"Immortal",
     "glare_of_the_tyrant":"Immortal",
+    "golden_scavenging_guttleslug":"Immortal",
+    
+
 
     "green":"Particle",
     "lava_trail":"Particle",
