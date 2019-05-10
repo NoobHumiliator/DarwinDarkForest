@@ -428,28 +428,7 @@ function GameMode:OnPlayerSay(keys)
 
             -- 替换模型
             local hUnit = SpawnUnitToReplaceHero(sText,hHero,nPlayerId)
-            AddAbilityForUnit(hUnit,nPlayerId)
-
-            local hModel = hUnit:FirstMoveChild()
-            local vWearables={}
-
-            while hModel ~= nil do
-
-                  if hModel ~= nil and hModel:GetClassname() == "dota_item_wearable"then
-                      table.insert(vWearables, hModel)
-                  end
-                  hModel = hModel:NextMovePeer()
-            end
-
-            for _,v in pairs(vWearables) do
-                  print(v:GetModelName())
-                  v:RemoveSelf()
-            end
-            
-            local hTorso = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/lich/lich_immortal/lich_immortal.vmdl"})
-            hTorso:FollowEntity(hUnit, true)
-
-            
+            AddAbilityForUnit(hUnit,nPlayerId)            
 
         end
 

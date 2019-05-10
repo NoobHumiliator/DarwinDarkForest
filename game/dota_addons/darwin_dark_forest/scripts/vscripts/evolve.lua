@@ -52,6 +52,13 @@ function Evolve (nPlayerId,hHero)
 
     local nLevel=hHero.nCurrentCreepLevel
     local sUnitToEnvolve = DetermineNewUnitName(nPlayerId,hHero,nLevel)
+    local sOriginalUnitName=""
+
+
+    if hHero.vImmortalReplaceMap and  hHero.vImmortalReplaceMap[sUnitToEnvolve]  then
+         sOriginalUnitName=sUnitToEnvolve
+         sUnitToEnvolve=hHero.vImmortalReplaceMap[sUnitToEnvolve]
+    end
 
     --判断游戏阶段
     if nLevel==11 and GameRules.bUltimateStage==false then       
@@ -401,9 +408,7 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
         end
     end
 
-    if hHero.vImmortalReplaceMap and  hHero.vImmortalReplaceMap[sUnitToEnvolve]  then
-         sUnitToEnvolve=hHero.vImmortalReplaceMap[sUnitToEnvolve]
-    end
+
 
     return sUnitToEnvolve
 end

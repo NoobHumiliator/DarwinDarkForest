@@ -34,8 +34,8 @@ Econ.vSkinUnitMap ={
 
 
 Econ.vImmortalUnitMap ={
-    shearing_deposition="npc_dota_creature_lich",
-    glare_of_the_tyrant="npc_dota_creature_lich"
+    shearing_deposition={"npc_dota_creature_lich","npc_dota_creature_lich_rime_lord","npc_dota_creature_lich_serakund_tyrant"},
+    glare_of_the_tyrant={"npc_dota_creature_lich","npc_dota_creature_lich_rime_lord","npc_dota_creature_lich_serakund_tyrant"}
 }
 
 
@@ -199,44 +199,36 @@ function Econ:EquipImmortalEcon(sItemName,nPlayerID,nIsEquip)
     
     local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
     if  hHero then
-        local sUnitName = self.vImmortalUnitMap[sItemName]
-        
+        local vUnitNames = self.vImmortalUnitMap[sItemName]
+        for _,sUnitName in ipairs(vUnitNames) do
+            if hHero.vImmortalInfo==nil then
+               hHero.vImmortalInfo={}
+            end       
+            -- key为 原生物名称 value 为替换后的生物名称
+            if hHero.vImmortalReplaceMap==nil then
+               hHero.vImmortalReplaceMap={}
+            end
+            if hHero.vImmortalInfo[sUnitName]==nil then
+               hHero.vImmortalInfo[sUnitName] = {}
+            end
+            if nIsEquip==0 then
+                hHero.vImmortalInfo[sUnitName]=RemoveItemFromList(hHero.vImmortalInfo[sUnitName],sItemName)
+            else
+                table.insert(hHero.vImmortalInfo[sUnitName],sItemName)
+                RemoveRepeated(hHero.vImmortalInfo[sUnitName])
 
-        
-        if hHero.vImmortalInfo==nil then
-           hHero.vImmortalInfo={}
+                table.sort(hHero.vImmortalInfo[sUnitName],function(a,b) return b>a end )
+            end
+
+            local sUnitNameResult=sUnitName
+            for i,v in ipairs(hHero.vImmortalInfo[sUnitName]) do
+              sUnitNameResult=sUnitNameResult.."_"..v
+            end
+            
+            -- key为 原生物名称 value 为替换后的生物名称
+            hHero.vImmortalReplaceMap[sUnitName]=sUnitNameResult
         end
-        
-        -- key为 原生物名称 value 为替换后的生物名称
-        if hHero.vImmortalReplaceMap==nil then
-           hHero.vImmortalReplaceMap={}
-        end
-
-        if hHero.vImmortalInfo[sUnitName]==nil then
-           hHero.vImmortalInfo[sUnitName] = {}
-        end
-
-        if nIsEquip==0 then
-            hHero.vImmortalInfo[sUnitName]=RemoveItemFromList(hHero.vImmortalInfo[sUnitName],sItemName)
-        else
-            table.insert(hHero.vImmortalInfo[sUnitName],sItemName)
-            RemoveRepeated(hHero.vImmortalInfo[sUnitName])
-
-            table.sort(hHero.vImmortalInfo[sUnitName],function(a,b) return b>a end )
-        end
-
-        local sUnitNameResult=sUnitName
-        for i,v in ipairs(hHero.vImmortalInfo[sUnitName]) do
-          sUnitNameResult=sUnitNameResult.."_"..v
-        end
-        
-        -- key为 原生物名称 value 为替换后的生物名称
-        print("sUnitNameResult"..sUnitNameResult)
-        hHero.vImmortalReplaceMap[sUnitName]=sUnitNameResult
-        
-
     end
-    
 end
 
 
