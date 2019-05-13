@@ -1,33 +1,3 @@
-
-var typeMap = { 
-    
-    "gold_crawl_zombie":"Skin",
-    "gold_zombie":"Skin",
-
-
-    "shearing_deposition":"Immortal",
-    "glare_of_the_tyrant":"Immortal",
-    "golden_scavenging_guttleslug":"Immortal",
-    
-
-
-    "green":"Particle",
-    "lava_trail":"Particle",
-    "paltinum_baby_roshan":"Particle",
-    "legion_wings":"Particle",
-    "legion_wings_vip":"Particle",
-    "legion_wings_pink":"Particle",
-    "darkmoon":"Particle",
-    "sakura_trail":"Particle",
-
-    "sf_wings":"KillEffect",
-    "huaji":"KillEffect",
-    "jibururen_mark":"KillEffect",
-    "question_mark":"KillEffect",
-}
-
-
-
 function SubmitKey(){
 
 	
@@ -39,6 +9,10 @@ function OnChangeEquip(itemName,isEquip) {
     if ( !playerInfo )
         return;
     var playerId = playerInfo.player_id;
+    
+    var econ_type = CustomNetTables.GetTableValue("econ_type", "econ_type");
+    var typeMap=econ_type;
+
     GameEvents.SendCustomGameEventToServer('ChangeEquip', {
         playerId:playerId, itemName:itemName, isEquip:isEquip, type:typeMap[itemName]
     })
@@ -51,8 +25,6 @@ function EconDataArrive(){
 
     RebuildCollections(econ_data)
 }
-
-
 
 
 
@@ -71,14 +43,16 @@ function RebuildCollections(econ_data){
     if (playerData === undefined) return;
 
     if ( $( "#LoadingPanel" ) == undefined) return;
+
+    $.Msg("12345")
+    $.Msg(playerData)
+
+    var econ_type = CustomNetTables.GetTableValue("econ_type", "econ_type");
+    var typeMap=econ_type;
+
     
     $( "#LoadingPanel" ).AddClass("Hidden");
     $( "#InventoryRightContainer" ).RemoveClass("Hidden");
-
-    $("#InventorySkinPanel").RemoveAndDeleteChildren();
-    $("#InventoryImmortalPanel").RemoveAndDeleteChildren();
-    $("#InventoryParticlePanel").RemoveAndDeleteChildren();
-    $("#InventoryKillEffectPanel").RemoveAndDeleteChildren();
 
     $("#InventorySkinTitle").AddClass("Hidden")
     $("#InventoryImmortalTitle").AddClass("Hidden")
@@ -115,8 +89,15 @@ function RebuildCollections(econ_data){
 
         $("#Inventory"+typeMap[itemName]+"Title").RemoveClass("Hidden")
 
+        //如果已经有此物品，跳过不处理
+        if (parentPanel.FindChildTraverse(itemName))
+        {
+            continue;
+        }
+
         var newItemPanel = $.CreatePanel("Panel", parentPanel, itemName);
         newItemPanel.BLoadLayoutSnippet("CollectionItem");
+
         
         var rarityLevel = econRarity[itemName]
         
@@ -194,4 +175,5 @@ function ShowLotteryPage(){
 (function()
 {   
     CustomNetTables.SubscribeNetTableListener("econ_data", EconDataArrive);
+
 })();

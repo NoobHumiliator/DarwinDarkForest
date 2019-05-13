@@ -448,13 +448,71 @@ Label{
 
 }
 
+
 .Temp{
-    background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_lich_glare_of_the_tyrant.png");
+    background-image: url("file://{images}/custom_game/econ/bracers_of_aeons_of_the_crimson_witness.png");
 }
 .Temp{
-    background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_lich_glare_of_the_tyrant_shearing_deposition.png");
+    background-image: url("file://{images}/custom_game/econ/cult_of_aktok.png");
+}
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/jewel_of_aeons.png");
+}
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/mace_of_aeons.png");
+}
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/timebreaker.png");
+}
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/soul_diffuser.png");
 }
 
 .Temp{
-    background-image: url("file://{images}/custom_game/econ/blank.png");
+    background-image: url("file://{images}/custom_game/econ/transversant_soul.png");
 }
+
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/transversant_soul_of_the_crimson_witness.png");
+}
+
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/shatterblast_core.png");
+}
+
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/shatterblast_crown.png");
+}
+
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/world_chasm_artifact.png");
+}
+
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/lycosidae_brood.png");
+}
+
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/severing_lash.png");
+}
+
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/golden_severing_crest.png");
+}
+
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/crimson_edict_of_shadows.png");
+}
+
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/golden_edict_of_shadows.png");
+}
+
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/shadow_masquerade.png");
+}
+
+.Temp{
+    background-image: url("file://{images}/custom_game/econ/golden_shadow_masquerade.png");
+}
+

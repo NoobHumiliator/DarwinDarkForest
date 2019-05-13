@@ -51,7 +51,7 @@ function GameMode:OnGameRulesStateChange()
      local econData = CustomNetTables:GetTableValue("econ_data", "econ_data")
 
      --给玩家装上饰品
-     if econData and econData["econ_data"] then
+     if econData and econData["econ_info"] then
          for sPlayerSteamID,vPlayerInfo in pairs(econData["econ_info"]) do
               for nIndex,v in pairs(vPlayerInfo) do
                   local nPlayerID = GameRules.vPlayerSteamIdMap[tonumber(sPlayerSteamID)]

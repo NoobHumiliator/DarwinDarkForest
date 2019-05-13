@@ -8,6 +8,8 @@
 		"team_max_level",
 		"rank_data",
 		"econ_data",
-		"econ_rarity"
+		"econ_rarity",
+		"econ_type",
+		"econ_unit_replace"
 	]
 }

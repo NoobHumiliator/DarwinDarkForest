@@ -133,7 +133,6 @@ vAbilityPerksTotal["nDecay"]=0
 vAbilityPerksTotal["nHunt"]=0
 
 
-
 -- 处理一下 计算一下总进化度 计算一下怪物等级 
 for sUnitName, vData in pairs(GameRules.vUnitsKV) do
 
@@ -180,7 +179,7 @@ for sUnitName, vData in pairs(GameRules.vUnitsKV) do
         vCreaturePerksTotal[vData.nCreatureLevel]["nFury"]=vCreaturePerksTotal[vData.nCreatureLevel]["nFury"]+vData.nFury
         vCreaturePerksTotal[vData.nCreatureLevel]["nDecay"]=vCreaturePerksTotal[vData.nCreatureLevel]["nDecay"]+vData.nDecay
         vCreaturePerksTotal[vData.nCreatureLevel]["nHunt"]=vCreaturePerksTotal[vData.nCreatureLevel]["nHunt"]+vData.nHunt
-
+        
 
     end
 end

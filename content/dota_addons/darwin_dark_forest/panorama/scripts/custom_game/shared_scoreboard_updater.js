@@ -47,7 +47,7 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 		playerPanel.SetHasClass( "player_dead", ( playerInfo.player_respawn_seconds >= 0 ) );
 		playerPanel.SetHasClass( "local_player_teammate", isTeammate && ( playerId != Game.GetLocalPlayerID() ) );
 
-		_ScoreboardUpdater_SetTextSafe( playerPanel, "RespawnTimer", ( playerInfo.player_respawn_seconds + 1 ) ); // value is rounded down so just add one for rounded-up
+		_ScoreboardUpdater_SetTextSafe( playerPanel, "RespawnTimer", ( playerInfo.player_respawn_seconds + 1 ) ); // value is rounded down so just add one for rofd-up
 		_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerName", playerInfo.player_name );
 		_ScoreboardUpdater_SetTextSafe( playerPanel, "Level", playerInfo.player_level );
 		_ScoreboardUpdater_SetTextSafe( playerPanel, "Kills", playerInfo.player_kills );
@@ -62,6 +62,12 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 				var creepIndex = CustomNetTables.GetTableValue( "player_creature_index",playerId).creepIndex
 				var unitName = Entities.GetUnitName(creepIndex)
 				//设置 头像
+                //如果是因为至宝替换了单位，头像使用原单位
+				var original = CustomNetTables.GetTableValue( "econ_unit_replace",unitName)
+				if (original!= null && original!= undefined)
+				{
+					unitName=original.sOriginalUnitName;
+				}
 				playerPortrait.SetImage( "file://{images}/custom_game/creature_portrait/"+unitName+".png" );
 				//playerPortrait.SetImage( "file://{images}/heroes/" + playerInfo.player_selected_hero + ".png" );
 			}

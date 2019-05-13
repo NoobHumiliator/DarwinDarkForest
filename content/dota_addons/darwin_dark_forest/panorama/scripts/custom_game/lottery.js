@@ -237,7 +237,6 @@ function DrawLotteryResultArrive(data)
             var econ_data = CustomNetTables.GetTableValue("econ_data", "econ_data");
             var playerData=econ_data["econ_info"][steam_id]
             playerData.playerId=playerId
-            $.Msg(data.refund)
             playerData.dnaValue= parseInt(econ_data["dna"][steam_id])-50+parseInt(data.refund)
             GameEvents.SendCustomGameEventToServer ( "EconDataRefresh",playerData); //通知前台更新NetTable
         }

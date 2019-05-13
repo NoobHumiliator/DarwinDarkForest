@@ -35,8 +35,41 @@ Econ.vSkinUnitMap ={
 
 Econ.vImmortalUnitMap ={
     shearing_deposition={"npc_dota_creature_lich","npc_dota_creature_lich_rime_lord","npc_dota_creature_lich_serakund_tyrant"},
-    glare_of_the_tyrant={"npc_dota_creature_lich","npc_dota_creature_lich_rime_lord","npc_dota_creature_lich_serakund_tyrant"}
-    golden_scavenging_guttleslug={"npc_dota_creature_pudge","npc_dota_creature_pudge_plague_champion","npc_dota_creature_pudge_surgical_precision"}
+    glare_of_the_tyrant={"npc_dota_creature_lich","npc_dota_creature_lich_rime_lord","npc_dota_creature_lich_serakund_tyrant"},
+    
+
+    dragonclaw_hook={"npc_dota_creature_pudge","npc_dota_creature_pudge_plague_champion","npc_dota_creature_pudge_surgical_precision"},
+    feast_of_abscession={"npc_dota_creature_pudge","npc_dota_creature_pudge_plague_champion","npc_dota_creature_pudge_surgical_precision"},
+    golden_rippers_reel={"npc_dota_creature_pudge","npc_dota_creature_pudge_plague_champion","npc_dota_creature_pudge_surgical_precision"},
+    golden_scavenging_guttleslug={"npc_dota_creature_pudge","npc_dota_creature_pudge_plague_champion","npc_dota_creature_pudge_surgical_precision"},
+
+    cult_of_aktok={"npc_dota_creature_venomancer","npc_dota_creature_venomancer_deathbringer","npc_dota_creature_venomancer_stalker","npc_dota_creature_venomancer_ferocious_toxicant"},
+    
+    bracers_of_aeons_of_the_crimson_witness={"npc_dota_creature_faceless_void","npc_dota_creature_faceless_void_endless_plane","npc_dota_creature_faceless_void_nezzureem"},
+    jewel_of_aeons={"npc_dota_creature_faceless_void","npc_dota_creature_faceless_void_endless_plane","npc_dota_creature_faceless_void_nezzureem"},
+    mace_of_aeons={"npc_dota_creature_faceless_void","npc_dota_creature_faceless_void_endless_plane","npc_dota_creature_faceless_void_nezzureem"},
+    timebreaker={"npc_dota_creature_faceless_void","npc_dota_creature_faceless_void_endless_plane","npc_dota_creature_faceless_void_nezzureem"},
+
+        
+    soul_diffuser={"npc_dota_creature_spectre","npc_dota_creature_spectre_enduring_solitude","npc_dota_creature_spectre_conservator"},
+    transversant_soul={"npc_dota_creature_spectre","npc_dota_creature_spectre_enduring_solitude","npc_dota_creature_spectre_conservator"},
+    transversant_soul_of_the_crimson_witness={"npc_dota_creature_spectre","npc_dota_creature_spectre_enduring_solitude","npc_dota_creature_spectre_conservator"},
+
+    shatterblast_core={"npc_dota_creature_ancient_apparition","npc_dota_creature_old_element"},
+    shatterblast_crown={"npc_dota_creature_ancient_apparition","npc_dota_creature_old_element"},
+    
+    world_chasm_artifact={"npc_dota_creature_enigma","npc_dota_creature_primal_void","npc_dota_creature_void_overlord"},
+    lycosidae_brood={"npc_dota_creature_broodmother","npc_dota_creature_broodmother_glutton_larder","npc_dota_creature_spider_queen"},
+
+    
+    severing_lash={"npc_dota_creature_razor","npc_dota_creature_razor_lightning_lord","npc_dota_creature_razor_affront_of_the_overseer"},
+    golden_severing_crest={"npc_dota_creature_razor","npc_dota_creature_razor_lightning_lord","npc_dota_creature_razor_affront_of_the_overseer"},
+    
+
+    crimson_edict_of_shadows={"npc_dota_creature_riki","npc_dota_creature_dream_secret","npc_dota_creature_nightmare_hunter"},
+    golden_edict_of_shadows={"npc_dota_creature_riki","npc_dota_creature_dream_secret","npc_dota_creature_nightmare_hunter"},
+    shadow_masquerade={"npc_dota_creature_riki","npc_dota_creature_dream_secret","npc_dota_creature_nightmare_hunter"},
+    golden_shadow_masquerade={"npc_dota_creature_riki","npc_dota_creature_dream_secret","npc_dota_creature_nightmare_hunter"},
 
 }
 
@@ -76,7 +109,6 @@ function Econ:EconDataRefresh(keys)
     local econ_data = CustomNetTables:GetTableValue("econ_data", "econ_data")
     
     econ_data["econ_info"][tostring(nPlayerSteamId)]=keys
-    print("keys.dnaValue"..keys.dnaValue)
     econ_data["dna"][tostring(nPlayerSteamId)]=keys.dnaValue
     
     CustomNetTables:SetTableValue("econ_data", "econ_data",econ_data)
@@ -138,8 +170,6 @@ function Econ:ChangeEquip(keys)
     if keys.type=="Immortal" then
           Econ:EquipImmortalEcon(keys.itemName,nPlayerID,keys.isEquip)
     end
-
-
     
     Server:UpdatePlayerEquip(nPlayerID,keys.itemName,keys.type,keys.isEquip)
 

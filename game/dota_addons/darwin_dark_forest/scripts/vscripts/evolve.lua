@@ -54,10 +54,11 @@ function Evolve (nPlayerId,hHero)
     local sUnitToEnvolve = DetermineNewUnitName(nPlayerId,hHero,nLevel)
     local sOriginalUnitName=""
 
-
+    --如果装备不朽物品 需要替换单位
     if hHero.vImmortalReplaceMap and  hHero.vImmortalReplaceMap[sUnitToEnvolve]  then
          sOriginalUnitName=sUnitToEnvolve
          sUnitToEnvolve=hHero.vImmortalReplaceMap[sUnitToEnvolve]
+         CustomNetTables:SetTableValue("econ_unit_replace",sUnitToEnvolve,{sOriginalUnitName=sOriginalUnitName})
     end
 
     --判断游戏阶段

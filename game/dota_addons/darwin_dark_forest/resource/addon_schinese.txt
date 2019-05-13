@@ -129,9 +129,40 @@
     "econ_shearing_deposition"                "碎冰之积"
     "econ_glare_of_the_tyrant"                "暴君之视"
 
+
+    "econ_dragonclaw_hook"                    "龙钩"
+    "econ_feast_of_abscession"                "千劫神屠"
+    "econ_golden_rippers_reel"                "纯金开膛手卷勾"
+    "econ_golden_scavenging_guttleslug"       "纯金食腐婪虫"
+    "econ_cult_of_aktok"                      "夷族祭礼"
+
+    "econ_bracers_of_aeons_of_the_crimson_witness"   "猩红见证者万世战腕"
+    "econ_jewel_of_aeons"                            "万世珍奇"
+    "econ_mace_of_aeons"                             "万世权杖"
+    "econ_timebreaker"                               "时间撕裂之棍"
+
+    "econ_soul_diffuser"                             "净魂之刃"
+    "econ_transversant_soul"                         "横裂之魄"
+    "econ_transversant_soul_of_the_crimson_witness"  "猩红见证者横裂之魄"
+
+    "econ_shatterblast_core"                         "轰晶之心"
+    "econ_shatterblast_crown"                        "轰晶之冠"
+
+    "econ_world_chasm_artifact"                      "世界之渊珍宝"
+    "econ_lycosidae_brood"                           "狼蛛之母"
+
+    "econ_golden_severing_crest"                     "纯金断绝之冠"
+    "econ_severing_lash"                             "断绝之鞭"
+
+
+    "econ_crimson_edict_of_shadows"                  "猩红谍影敕令"
+    "econ_golden_edict_of_shadows"                   "纯金谍影敕令"
+    "econ_shadow_masquerade"                         "谍影潜藏"
+    "econ_golden_shadow_masquerade"                  "纯金谍影潜藏"
+ 
     "Close"                                   "关闭"
 
-    "DrawMutate"                                        "抽取进化("
+    "DrawMutate"                               "抽取进化("
 
 
     "UltimateStageNote"                                                         "达到11级！游戏进入终极进化阶段，生物死亡后不能复活。游戏结束时根据所获经验结算排名。"
@@ -448,8 +479,6 @@
     "npc_dota_creature_faceless_void_nezzureem"                                     "奥玄岩晶"
     "npc_dota_creature_spirit_breaker_elemental_realms"                             "黑钢杀戮者"
     "npc_dota_creature_lich_serakund_tyrant"                                        "寒域暴君"
-    "npc_dota_creature_faceless_void_witness"                                       "猩红见证者"
-    "npc_dota_creature_spectre_transversant_soul"                                   "横裂之魄"
     "npc_dota_creature_life_stealer_profane_union"                                  "异端之盟"
     "npc_dota_creature_razor_severing"                                              "断绝者"
     "npc_dota_creature_venomancer_ferocious_toxicant"                               "极恶猛毒"
@@ -468,7 +497,7 @@
     "npc_dota_creature_undying_night_king"                                          "夜王"
     "npc_dota_creature_lucius_longclaw"                                             "卢修兕·长牙"
     "npc_dota_creature_void_overlord"                                               "虚空大君"
-    "npc_dota_creature_old_element"                                                 "上古元素"
+    "npc_dota_creature_old_element"                                                 "衡势晶体"
 
 
     //Level-11
@@ -735,6 +764,46 @@
     "DOTA_Tooltip_ability_item_enchanted_mango_lua"                                                "魔法芒果"
     "DOTA_Tooltip_ability_item_enchanted_mango_lua_Description"                                    "<h1>使用：吞食芒果</h1>立刻回复%replenish_amount%点魔法。<br>"
     "DOTA_Tooltip_ability_item_enchanted_mango_hp_regen"                                           "+$hp_regen"
+
+    
+    //EconUnit
+    "npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
+    "npc_dota_creature_lich_shearing_deposition"                  "巫妖"
+    "npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
+    "npc_dota_creature_lich_glare_of_the_tyrant_shearing_deposition"                  "巫妖"
+    "npc_dota_creature_pudge_dragonclaw_hook"                  "屠夫"
+    "npc_dota_creature_pudge_feast_of_abscession"                  "屠夫"
+    "npc_dota_creature_pudge_golden_rippers_reel"                  "屠夫"
+    "npc_dota_creature_pudge_golden_scavenging_guttleslug"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook_feast_of_abscession"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook_golden_rippers_reel"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook_golden_scavenging_guttleslug"                  "屠夫"
+    "npc_dota_creature_pudge_feast_of_abscession"                  "屠夫"
+    "npc_dota_creature_pudge_feast_of_abscession_golden_rippers_reel"                  "屠夫"
+    "npc_dota_creature_pudge_feast_of_abscession"                  "屠夫"
+    "npc_dota_creature_pudge_feast_of_abscession_golden_scavenging_guttleslug"                  "屠夫"
+    "npc_dota_creature_pudge_golden_rippers_reel"                  "屠夫"
+    "npc_dota_creature_pudge_golden_rippers_reel_golden_scavenging_guttleslug"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook_feast_of_abscession"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook_feast_of_abscession_golden_rippers_reel"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook_feast_of_abscession"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook_feast_of_abscession_golden_scavenging_guttleslug"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook_golden_rippers_reel"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook_golden_rippers_reel_golden_scavenging_guttleslug"                  "屠夫"
+    "npc_dota_creature_pudge_feast_of_abscession"                  "屠夫"
+    "npc_dota_creature_pudge_feast_of_abscession_golden_rippers_reel"                  "屠夫"
+    "npc_dota_creature_pudge_feast_of_abscession_golden_rippers_reel_golden_scavenging_guttleslug"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook_feast_of_abscession"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook_feast_of_abscession_golden_rippers_reel"                  "屠夫"
+    "npc_dota_creature_pudge_dragonclaw_hook_feast_of_abscession_golden_rippers_reel_golden_scavenging_guttleslug"                  "屠夫"
+     
 
   } 
 

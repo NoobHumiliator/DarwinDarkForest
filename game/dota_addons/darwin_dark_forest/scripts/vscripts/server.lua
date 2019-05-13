@@ -85,7 +85,9 @@ function Server:GetEconRarity()
         if result.StatusCode == 200 and result.Body~=nil then
             local body = JSON:decode(result.Body)
             if body ~= nil then
-                CustomNetTables:SetTableValue("econ_rarity", "econ_rarity", stringTable(body))
+                print(result.Body)
+                CustomNetTables:SetTableValue("econ_rarity", "econ_rarity", stringTable(body.econ_rarity))
+                CustomNetTables:SetTableValue("econ_type", "econ_type", stringTable(body.econ_type))
             end
         end
     end)
