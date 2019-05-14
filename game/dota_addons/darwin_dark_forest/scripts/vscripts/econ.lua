@@ -71,6 +71,16 @@ Econ.vImmortalUnitMap ={
     shadow_masquerade={"npc_dota_creature_riki","npc_dota_creature_dream_secret","npc_dota_creature_nightmare_hunter"},
     golden_shadow_masquerade={"npc_dota_creature_riki","npc_dota_creature_dream_secret","npc_dota_creature_nightmare_hunter"},
 
+    golden_infernal_chieftain={"npc_dota_creature_centaur_khan","npc_dota_creature_centaur_warchief"},
+    infernal_chieftain_of_the_crimson_witness={"npc_dota_creature_centaur_khan","npc_dota_creature_centaur_warchief"},
+    infernal_menace={"npc_dota_creature_centaur_khan","npc_dota_creature_centaur_warchief"},
+
+    golden_dread_requisition={"npc_dota_creature_life_stealer","npc_dota_creature_life_stealer_bond_of_madness","npc_dota_creature_life_stealer_chainbreaker"},
+    golden_profane_union={"npc_dota_creature_life_stealer","npc_dota_creature_life_stealer_bond_of_madness","npc_dota_creature_life_stealer_chainbreaker"},
+    profane_union={"npc_dota_creature_life_stealer","npc_dota_creature_life_stealer_bond_of_madness","npc_dota_creature_life_stealer_chainbreaker"},
+
+    iron_surge={"npc_dota_creature_spirit_breaker","npc_dota_creature_spirit_breaker_ironbarde_charger","npc_dota_creature_spirit_breaker_elemental_realms"},
+    savage_mettle={"npc_dota_creature_spirit_breaker","npc_dota_creature_spirit_breaker_ironbarde_charger","npc_dota_creature_spirit_breaker_elemental_realms"},
 }
 
 

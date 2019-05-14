@@ -159,6 +159,17 @@
     "econ_golden_edict_of_shadows"                   "纯金谍影敕令"
     "econ_shadow_masquerade"                         "谍影潜藏"
     "econ_golden_shadow_masquerade"                  "纯金谍影潜藏"
+
+    "econ_golden_infernal_chieftain"                 "纯金谍影潜藏"
+    "econ_infernal_chieftain_of_the_crimson_witness" "猩红见证者的地狱酋魁"
+    "econ_infernal_menace"                           "地狱威吓"
+
+    "econ_golden_dread_requisition"                  "纯金邪戾之役"
+    "econ_golden_profane_union"                      "纯金异端之盟"
+    "econ_profane_union"                             "异端之盟"
+
+    "econ_iron_surge"                                "奔腾寒铁"
+    "econ_savage_mettle"                             "悍戾之魄"
  
     "Close"                                   "关闭"
 

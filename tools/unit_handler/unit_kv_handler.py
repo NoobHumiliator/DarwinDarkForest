@@ -50,6 +50,14 @@ map={
    'npc_dota_creature_centaur_khan':{'golden_infernal_chieftain':('6497','8039'),'infernal_chieftain_of_the_crimson_witness':('6497','8036'),'infernal_menace':('6500','12945')},
    'npc_dota_creature_centaur_warchief':{'golden_infernal_chieftain':('8481','8039'),'infernal_chieftain_of_the_crimson_witness':('8481','8036'),'infernal_menace':('8485','12945')},
 
+   'npc_dota_creature_life_stealer':{'golden_dread_requisition':('444','12998'),'golden_profane_union':('8659','9215'),'profane_union':('8659','9199')},
+   'npc_dota_creature_life_stealer_bond_of_madness':{'golden_dread_requisition':('6476','12998'),'golden_profane_union':('6478','9215'),'profane_union':('6478','9199')},
+   'npc_dota_creature_life_stealer_chainbreaker':{'golden_dread_requisition':('9106','12998'),'golden_profane_union':('9107','9215'),'profane_union':('9107','9199')},
+   
+   'npc_dota_creature_spirit_breaker':{'iron_surge':('111','8234'),'savage_mettle':('113','9744')},
+   'npc_dota_creature_spirit_breaker_ironbarde_charger':{'iron_surge':('9551','8234'),'savage_mettle':('9546','9744')},
+   'npc_dota_creature_spirit_breaker_elemental_realms':{'iron_surge':('7456','8234'),'savage_mettle':('7455','9744')},
+
 }
 
 
@@ -86,7 +94,10 @@ localizeMap={
    'npc_dota_creature_nightmare_hunter':'梦魇猎杀者',
    'npc_dota_creature_centaur_khan':'半人马可汗',
    'npc_dota_creature_centaur_warchief':'半人马大酋长',
-
+   'npc_dota_creature_life_stealer':'噬魂鬼',
+   'npc_dota_creature_life_stealer_bond_of_madness':'癫狂之缚',
+   'npc_dota_creature_life_stealer_chainbreaker':'破链之刑',
+   
 }
 
 
