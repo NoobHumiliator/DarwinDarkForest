@@ -9,7 +9,12 @@ Econ.vParticleMap ={
     legion_wings_vip={"particles/econ/legion_wings/legion_wings_vip.vpcf"},
     legion_wings_pink={"particles/econ/legion_wings/legion_wings_pink.vpcf"},
     darkmoon={"particles/econ/courier/courier_roshan_darkmoon/courier_roshan_darkmoon.vpcf"},
-    sakura_trail={"particles/econ/courier/courier_axolotl_ambient/courier_axolotl_ambient.vpcf","particles/econ/sakura_trail.vpcf"}
+    ethereal_flame_white={"particles/econ/ethereal_flame.vpcf"},
+    ethereal_flame_golden={"particles/econ/ethereal_flame.vpcf"},
+    ethereal_flame_pink={"particles/econ/ethereal_flame.vpcf"},
+    sakura_trail={"particles/econ/courier/courier_axolotl_ambient/courier_axolotl_ambient.vpcf","particles/econ/sakura_trail.vpcf"},
+    golden_ti7={"particles/econ/golden_ti7.vpcf"},
+    rich={"particles/econ/rich.vpcf"},
 }
 
 
@@ -195,8 +200,13 @@ function Econ:EquipParticleEcon(sItemName,nPlayerID)
 
     for _,sParticle in pairs(self.vParticleMap[sItemName]) do
         if hHero.hCurrentCreep and hHero.hCurrentCreep:IsAlive() then
-            local nParticleIndex = ParticleManager:CreateParticle(sParticle,PATTACH_ABSORIGIN_FOLLOW,hHero.hCurrentCreep)
-            ParticleManager:SetParticleControlEnt(nParticleIndex,0,hHero.hCurrentCreep,PATTACH_ABSORIGIN_FOLLOW,"follow_origin",hHero.hCurrentCreep:GetAbsOrigin(),true)
+
+            local nParticleAttach = Econ:ChooseParticleAttach(sItemName)
+            print("nParticleAttach"..nParticleAttach)
+            local nParticleIndex = ParticleManager:CreateParticle(sParticle,nParticleAttach,hHero.hCurrentCreep)
+            ParticleManager:SetParticleControlEnt(nParticleIndex,0,hHero.hCurrentCreep,nParticleAttach,"follow_origin",hHero.hCurrentCreep:GetAbsOrigin(),true)
+            
+            Econ:SetControllPoints(nParticleIndex,sItemName)
             table.insert(vCurrentEconParticleIndexs,nParticleIndex)
         end
     end
@@ -204,6 +214,35 @@ function Econ:EquipParticleEcon(sItemName,nPlayerID)
     hHero.sCurrentParticleEconItemName=sItemName
     hHero.vCurrentEconParticleIndexs=vCurrentEconParticleIndexs
 end
+
+--根据类型微调附着点
+function Econ:ChooseParticleAttach(sItemName)
+    if  sItemName == "rich" then
+        return PATTACH_OVERHEAD_FOLLOW
+    end
+    return PATTACH_ABSORIGIN_FOLLOW
+end
+
+
+--根据类型微调控制点
+function Econ:SetControllPoints(nParticleIndex,sItemName)
+    if  sItemName == "ethereal_flame_white" then
+        ParticleManager:SetParticleControl(nParticleIndex, 15, Vector(200, 200, 200))
+        ParticleManager:SetParticleControl(nParticleIndex, 2, Vector(255, 255, 255))
+        ParticleManager:SetParticleControl(nParticleIndex, 16, Vector(1, 0, 0))
+    end
+    if  sItemName == "ethereal_flame_golden" then
+        ParticleManager:SetParticleControl(nParticleIndex, 15, Vector(217, 191, 89))
+        ParticleManager:SetParticleControl(nParticleIndex, 2, Vector(255, 255, 255))
+        ParticleManager:SetParticleControl(nParticleIndex, 16, Vector(1, 0, 0))
+    end
+    if  sItemName == "ethereal_flame_pink" then
+        ParticleManager:SetParticleControl(nParticleIndex, 15, Vector(210, 0, 210))
+        ParticleManager:SetParticleControl(nParticleIndex, 2, Vector(255, 255, 255))
+        ParticleManager:SetParticleControl(nParticleIndex, 16, Vector(1, 0, 0))
+    end
+end
+
 
 
 function Econ:EquipKillEffectEcon(sItemName,nPlayerID)
@@ -220,6 +259,19 @@ function Econ:PlayKillEffect(sParticle,hHero)
     end
     
 end
+
+
+function Econ:PlayKillSound(sSound,hHero)
+
+    if hHero.hCurrentCreep and hHero.hCurrentCreep:IsAlive() then
+        EmitSoundOnLocationWithCaster( hHero.hCurrentCreep:GetOrigin(), "soundboard.bai_tuo_shei_qu", hHero.hCurrentCreep )
+    end
+    
+end
+
+
+
+
 
 
 function Econ:EquipSkinEcon(sItemName,nPlayerID)

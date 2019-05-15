@@ -125,6 +125,7 @@ function GameMode:OnEntityKilled(keys)
        --Todo 播放击杀特效，到时候挪走
        if hHero.sCurrentKillEffect then
             Econ:PlayKillEffect(hHero.sCurrentKillEffect,hHero)
+            Econ:PlayKillSound("",hHero)
        end
        
        --掉落物品
