@@ -1,11 +1,6 @@
 # -*- coding:utf-8 -*-
 from itertools import combinations,permutations
 
-
-f = open("../../game/dota_addons/darwin_dark_forest/scripts/npc/npc_units_custom.txt","r",encoding='UTF-8') 
-lines = f.readlines()
-
-
 map={
    'npc_dota_creature_lich':{'glare_of_the_tyrant':('333','9756'),'shearing_deposition':('332','7576')},
    'npc_dota_creature_lich_rime_lord':{'glare_of_the_tyrant':('12636','9756'),'shearing_deposition':('12637','7576')},
@@ -57,6 +52,10 @@ map={
    'npc_dota_creature_spirit_breaker':{'iron_surge':('111','8234'),'savage_mettle':('113','9744')},
    'npc_dota_creature_spirit_breaker_ironbarde_charger':{'iron_surge':('9551','8234'),'savage_mettle':('9546','9744')},
    'npc_dota_creature_spirit_breaker_elemental_realms':{'iron_surge':('7456','8234'),'savage_mettle':('7455','9744')},
+    
+   'npc_dota_creature_ogre_double_head_mage':{'auspice_of_the_whyrlegyge':('133','7910'),'gimlek_decanter':('105','12318')},
+   'npc_dota_creature_ogre_double_head_antipodeans':{'auspice_of_the_whyrlegyge':('7845','7910'),'gimlek_decanter':('7848','12318')},
+   'npc_dota_creature_ogre_imperator':{'auspice_of_the_whyrlegyge':('7612','7910'),'gimlek_decanter':('7611','12318')},
 
 }
 
@@ -97,7 +96,14 @@ localizeMap={
    'npc_dota_creature_life_stealer':'噬魂鬼',
    'npc_dota_creature_life_stealer_bond_of_madness':'癫狂之缚',
    'npc_dota_creature_life_stealer_chainbreaker':'破链之刑',
-   
+   'npc_dota_creature_spirit_breaker':'裂魂人',
+   'npc_dota_creature_spirit_breaker_ironbarde_charger':'钢甲冲锋者',
+   'npc_dota_creature_spirit_breaker_elemental_realms':'黑钢杀戮者',
+
+   'npc_dota_creature_ogre_double_head_mage':'双头食人魔法师',
+   'npc_dota_creature_ogre_double_head_antipodeans':'双头食人战争魔法师',
+   'npc_dota_creature_ogre_imperator':'食人魔帝国元首',
+
 }
 
 
@@ -108,12 +114,38 @@ reLines=[]
 econLines=[]
 
 
+f = open("../../game/dota_addons/darwin_dark_forest/scripts/npc/npc_units_custom.txt","r",encoding='UTF-8') 
+lines = f.readlines()
+
+
 for line in lines:
   
   if econUnitBeginsFlag==False:
      reLines.append(line)
   if "EconUnitBegins" in line:
      econUnitBeginsFlag=True
+
+f.close()
+
+econUnitBeginsFlag=False
+#国际化文件原版部分
+lReLines=[]
+#国际化文件后面部分
+lEconLines=[]
+
+
+lf = open("../../game/dota_addons/darwin_dark_forest/resource/addon_schinese.txt","r",encoding='UTF-8') 
+lLines = lf.readlines()
+
+for line in lLines:
+  
+  if econUnitBeginsFlag==False:
+     lReLines.append(line)
+  if "EconUnitBegins" in line:
+     econUnitBeginsFlag=True
+
+lf.close()
+
 
 
 
@@ -158,8 +190,8 @@ def createNewUnit(originalUnitName,suffix,map):
 
 
 def printNewLocalize(originalUnitName,suffix):
-
- print('"'+originalUnitName+suffix+'"                  "'+localizeMap[originalUnitName]+'"')
+ 
+ lEconLines.append('\t"'+originalUnitName+suffix+'"                  "'+localizeMap[originalUnitName]+'"\n')
 
 
 
@@ -175,7 +207,6 @@ for key in map:
         createNewUnit(key,result,map[key])
         printNewLocalize(key,result)
 
-f.close()
 
 with open('../../game/dota_addons/darwin_dark_forest/scripts/npc/npc_units_custom.txt','w',encoding='UTF-8') as f:
   for line in reLines:
@@ -183,3 +214,13 @@ with open('../../game/dota_addons/darwin_dark_forest/scripts/npc/npc_units_custo
   for line in econLines:
     f.write(line)
   f.write('}')
+f.close()
+
+with open('../../game/dota_addons/darwin_dark_forest/resource/addon_schinese.txt','w',encoding='UTF-8') as lf:
+  for line in lReLines:
+    lf.write(line)
+  for line in lEconLines:
+    lf.write(line)
+  lf.write('\t}\n')
+  lf.write('}')
+lf.close()

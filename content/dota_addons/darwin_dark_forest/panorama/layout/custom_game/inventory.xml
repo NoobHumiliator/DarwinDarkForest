@@ -73,20 +73,27 @@
                         </Panel>
                         <Panel class="InventoryClassPanel" id="InventorySkinPanel"/>
 
-                        <Panel class="InventoryClassTitle" id="InventoryImmortalTitle">
-                           <Label text="#Immortal" />
-                        </Panel>
-                        <Panel class="InventoryClassPanel" id="InventoryImmortalPanel"/>
-
                         <Panel class="InventoryClassTitle" id="InventoryParticleTitle">
                            <Label text="#Particle" />
                         </Panel>
                         <Panel class="InventoryClassPanel" id="InventoryParticlePanel"/> 
-                        
+
+                        <Panel class="InventoryClassTitle" id="InventoryKillSoundTitle">
+                           <Label text="#KillSound" />
+                        </Panel>
+                        <Panel class="InventoryClassPanel" id="InventoryKillSoundPanel"/>
+
                         <Panel class="InventoryClassTitle" id="InventoryKillEffectTitle">
                            <Label text="#KillEffect" />
                         </Panel>
-                        <Panel class="InventoryClassPanel" id="InventoryKillEffectPanel"/>         
+                        <Panel class="InventoryClassPanel" id="InventoryKillEffectPanel"/>   
+                        
+                        <Panel class="InventoryClassTitle" id="InventoryImmortalTitle">
+                           <Label text="#Immortal" />
+                        </Panel>
+                        <Panel class="InventoryClassPanel" id="InventoryImmortalPanel"/> 
+
+
                     </Panel>
 
                 </Panel>        

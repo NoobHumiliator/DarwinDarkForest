@@ -44,9 +44,6 @@ function RebuildCollections(econ_data){
 
     if ( $( "#LoadingPanel" ) == undefined) return;
 
-    $.Msg("12345")
-    $.Msg(playerData)
-
     var econ_type = CustomNetTables.GetTableValue("econ_type", "econ_type");
     var typeMap=econ_type;
 
@@ -58,6 +55,7 @@ function RebuildCollections(econ_data){
     $("#InventoryImmortalTitle").AddClass("Hidden")
     $("#InventoryParticleTitle").AddClass("Hidden")
     $("#InventoryKillEffectTitle").AddClass("Hidden")
+    $("#InventoryKillSoundTitle").AddClass("Hidden")
     
     $("#DrawMutationButton").enabled=false;
 
@@ -134,7 +132,7 @@ function RebuildCollections(econ_data){
         newItemPanel.FindChildTraverse("button_equip").SetPanelEvent("onactivate", 
            function(){
                 
-                if (typeMap[thisItemName]=="Particle" || typeMap[thisItemName]=="KillEffect")
+                if (typeMap[thisItemName]=="Particle" || typeMap[thisItemName]=="KillEffect" || typeMap[thisItemName]=="KillSound")
                 {
                     for (var i = thisItemPanel.GetParent().FindChildrenWithClassTraverse("ButtonEquip").length - 1; i >= 0; i--) {
                         thisItemPanel.GetParent().FindChildrenWithClassTraverse("ButtonEquip")[i].visible=true;

@@ -26,6 +26,19 @@ Econ.vKillEffectMap ={
 }
 
 
+Econ.vKillSoundMap ={
+    bai_tuo_shei_qu="soundboard.bai_tuo_shei_qu",
+    duiyou_ne="soundboard.duiyou_ne",
+    ni_qi_bu_qi="soundboard.ni_qi_bu_qi",
+    liu_liu_liu="soundboard.liu_liu_liu",
+    ta_daaaa="soundboard.ta_daaaa",
+    zou_hao_bu_song="soundboard.zou_hao_bu_song",
+    zai_jian_le_bao_bei="soundboard.zai_jian_le_bao_bei",
+    gan_ma_ne_xiong_di="soundboard.gan_ma_ne_xiong_di",
+    lian_dou_xiu_wai_la="soundboard.lian_dou_xiu_wai_la"
+}
+
+
 Econ.vSkinModelMap ={
     gold_crawl_zombie="models/items/undying/idol_of_ruination/ruin_wight_minion_torso_gold.vmdl",
     gold_zombie="models/items/undying/idol_of_ruination/ruin_wight_minion_gold.vmdl",
@@ -167,6 +180,14 @@ function Econ:ChangeEquip(keys)
         end
     end
 
+    --如果是击杀音效
+    if keys.type=="KillSound" then
+        hHero.sCurrentKillSound = nil
+        if keys.isEquip==1 then
+           Econ:EquipKillSoundEcon(keys.itemName,nPlayerID)
+        end
+    end
+
      --如果是皮肤
     if keys.type=="Skin" then
 
@@ -261,16 +282,17 @@ function Econ:PlayKillEffect(sParticle,hHero)
 end
 
 
-function Econ:PlayKillSound(sSound,hHero)
-
-    if hHero.hCurrentCreep and hHero.hCurrentCreep:IsAlive() then
-        EmitSoundOnLocationWithCaster( hHero.hCurrentCreep:GetOrigin(), "soundboard.bai_tuo_shei_qu", hHero.hCurrentCreep )
-    end
-    
+function Econ:EquipKillSoundEcon(sItemName,nPlayerID)
+    local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
+    hHero.sCurrentKillSound=self.vKillSoundMap[sItemName]
 end
 
 
-
+function Econ:PlayKillSound(sSound,hHero)
+    if hHero.hCurrentCreep and hHero.hCurrentCreep:IsAlive() then
+        EmitSoundOnLocationWithCaster( hHero.hCurrentCreep:GetOrigin(), sSound, hHero.hCurrentCreep )
+    end    
+end
 
 
 
