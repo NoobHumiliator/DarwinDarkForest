@@ -32,6 +32,9 @@
 	"KillMessageBounty"	"获得了500额外金钱！"
 	"addonname"	        "刀塔进化岛"
 
+    "congrates_first_place"  "大吉大利，晚上吃鸡！"
+    "encourage_runner_ups"   "不抛弃，不放弃，下次一定得第一"
+
     "TopMenuIcon_Guide_message"               "游戏指南"
     "TopMenuIcon_Rank_message"                "天梯排行"
     "TopMenuIcon_Inventory_message"           "基因进化库"
@@ -126,6 +129,8 @@
     "econ_iron_surge"                                "奔腾寒铁"
     "econ_savage_mettle"                             "悍戾之魄"
 
+    "econ_bitter_lineage"                            "愤恨血脉"
+
     "econ_bai_tuo_shei_qu"                                "拜托谁去"
     "econ_duiyou_ne"                                      "队友呢"
     "econ_ni_qi_bu_qi"                                    "你气不气"
@@ -142,7 +147,9 @@
     "econ_golden_ti7"                                     "Ti7勇士令状"
     "econ_rich"                                           "富可敌国"
 
-    "Close"                                   "关闭"
+    "custom_end_screen_legend_ratings"                    "天梯积分"
+
+    "Close"                                               "关闭"
 
     "DrawMutate"                               "抽取进化("
 
@@ -409,7 +416,7 @@
     "npc_dota_creature_black_dragon_large"                                          "巨型黑龙"
     "npc_dota_creature_ogre_warchief"                                               "食人魔督军"
     "npc_dota_creature_ogre_double_head_mage"                                       "双头食人魔法师"
-    "npc_dota_creature_troll_war_lord"                                               "巨魔战将"
+    "npc_dota_creature_troll_warlord"                                               "巨魔战将"
     "npc_dota_creature_gaoler"                                                      "灯神怪"
     "npc_dota_creature_element_truefom"                                             "冰霜巨熊"
     "npc_dota_creature_undying"                                                     "不朽尸王"

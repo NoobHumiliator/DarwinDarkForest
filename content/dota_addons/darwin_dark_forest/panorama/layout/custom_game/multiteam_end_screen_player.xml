@@ -1,0 +1,31 @@
+<root>
+    <styles>
+ 		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+        <include src="file://{resources}/styles/custom_game/multiteam_end_screen.css" />
+        <include src="file://{resources}/styles/custom_game/multiteam_end_screen_extra.css" />
+    </styles>
+    
+	<Panel class="PlayerRow">
+		<Panel id="PlayerRowContainer">
+			<Panel id="Hero" class="ScoreCol_Hero ScoreboardPanel">
+				<Image id="HeroIcon" heroimagestyle="landscape" scaling="stretch-to-fit-preserve-aspect" />
+			</Panel>
+			<Panel id="PlayerDetailsContainer" class="ScoreCol_PlayerDetails ScoreboardPanel">
+				<Panel id="PlayerAndHeroName">
+					<Label id="PlayerName" text="AAAAA" />
+				</Panel>
+			</Panel>
+			<Panel id="KillsContainer" class="ScoreCol_Kills ScoreboardPanel">
+				<Label id="Kills" text="999" />
+			</Panel>
+			<Panel id="DeathsContainer" class="ScoreCol_Deaths ScoreboardPanel">
+				<Label id="Deaths" text="999" />
+			</Panel>
+			<Panel id="PlayerItemsContainer" class="ScoreCol_Items ScoreboardPanel" />
+			<Panel id="AbilitiesContainer" class="ScoreCol_Abilities" />
+			<Panel id="RatingsContainer" class="ScoreCol_Ratings">
+				<Label id="PlayerRating" text="0000+00" />
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

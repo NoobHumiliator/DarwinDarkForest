@@ -15624,7 +15624,7 @@
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/darkreef/gaoler/darkreef_gaoler.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Rattletrap"
 		"Level"						"8"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"

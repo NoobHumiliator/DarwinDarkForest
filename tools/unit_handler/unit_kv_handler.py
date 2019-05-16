@@ -56,6 +56,10 @@ map={
    'npc_dota_creature_ogre_double_head_mage':{'auspice_of_the_whyrlegyge':('133','7910'),'gimlek_decanter':('105','12318')},
    'npc_dota_creature_ogre_double_head_antipodeans':{'auspice_of_the_whyrlegyge':('7845','7910'),'gimlek_decanter':('7848','12318')},
    'npc_dota_creature_ogre_imperator':{'auspice_of_the_whyrlegyge':('7612','7910'),'gimlek_decanter':('7611','12318')},
+   
+   'npc_dota_creature_troll_warlord':{'bitter_lineage':('373','7818')},
+   'npc_dota_creature_troll_warlord_icewrack_marauder':{'bitter_lineage':('9597','7818')},
+   'npc_dota_creature_troll_plunder_of_the_savage_monger':{'bitter_lineage':('12561','7818')},
 
 }
 
@@ -103,7 +107,10 @@ localizeMap={
    'npc_dota_creature_ogre_double_head_mage':'双头食人魔法师',
    'npc_dota_creature_ogre_double_head_antipodeans':'双头食人战争魔法师',
    'npc_dota_creature_ogre_imperator':'食人魔帝国元首',
-
+   
+   'npc_dota_creature_troll_warlord':'巨魔战将',
+   'npc_dota_creature_troll_warlord_icewrack_marauder':'巨魔劫掠者',
+   'npc_dota_creature_troll_plunder_of_the_savage_monger':'巨魔竞技场冠军',
 }
 
 

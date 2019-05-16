@@ -99,6 +99,8 @@ Econ.vImmortalUnitMap ={
 
     iron_surge={"npc_dota_creature_spirit_breaker","npc_dota_creature_spirit_breaker_ironbarde_charger","npc_dota_creature_spirit_breaker_elemental_realms"},
     savage_mettle={"npc_dota_creature_spirit_breaker","npc_dota_creature_spirit_breaker_ironbarde_charger","npc_dota_creature_spirit_breaker_elemental_realms"},
+    
+    bitter_lineage={"npc_dota_creature_troll_warlord","npc_dota_creature_troll_warlord_icewrack_marauder","npc_dota_creature_troll_plunder_of_the_savage_monger"},
 }
 
 

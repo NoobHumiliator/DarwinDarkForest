@@ -142,10 +142,10 @@ function NeutralSpawner:SpawnOneCreature()
      vLevelRatio[-3]=0.05
      vLevelRatio[-2]=0.09
      vLevelRatio[-1]=0.13
-     vLevelRatio[0]=0.09
+     vLevelRatio[0]=0.10
      vLevelRatio[1]=0.05
      vLevelRatio[2]=0.02
-     vLevelRatio[3]=0.01
+     vLevelRatio[3]=0.00
      vLevelRatio[4]=0.00
    end
 
@@ -164,8 +164,8 @@ function NeutralSpawner:SpawnOneCreature()
       vLevelRatio[-3]=0.05
       vLevelRatio[-2]=0.13
       vLevelRatio[-1]=0.17
-      vLevelRatio[0]=0.07
-      vLevelRatio[1]=0.03
+      vLevelRatio[0]=0.08
+      vLevelRatio[1]=0.02
       vLevelRatio[2]=0.00
       vLevelRatio[3]=0.00
       vLevelRatio[4]=0.00
