@@ -63,6 +63,8 @@ require( "utils/bit" )
 require( "utils/json" )
 require( "utils/evolve_island_util" )
 require( "utils/notifications" )
+require('libraries/activity_modifier')
+require('libraries/animations')
 
 
 
@@ -170,6 +172,9 @@ for sUnitName, vData in pairs(GameRules.vUnitsKV) do
             vData.nCreatureLevel=0
         else
             vData.nCreatureLevel=vData.Level
+        end
+        if vData.nCreatureLevel==nil then
+            vData.nCreatureLevel=1
         end
         print("sUnitName"..sUnitName)
         --计算总perk
@@ -364,7 +369,7 @@ function GameMode:InitGameMode()
 
     --为测试模式设置
     if bTEST_MODE and not IsDedicatedServer() then
-        GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
+        --GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
     end
 
     --[[

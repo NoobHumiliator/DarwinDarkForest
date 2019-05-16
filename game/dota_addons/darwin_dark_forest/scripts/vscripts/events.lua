@@ -67,6 +67,9 @@ function GameMode:OnGameRulesStateChange()
                   if v.type=="Skin" and v.equip=="true" then
                       Econ:EquipSkinEcon(v.name,nPlayerID)
                   end
+                  if v.type=="KillSound" and v.equip=="true" then
+                      Econ:EquipKillSoundEcon(v.name,nPlayerID)
+                  end
               end
           end
       end
@@ -324,7 +327,11 @@ function GameMode:OnNPCSpawned( event )
         
         Evolve(nPlayerId,hSpawnedUnit)
     end
-     
+    
+    if not hSpawnedUnit:IsHero() then
+    --修正模型动作
+       ActivityModifier:AddActivityModifierThink(hSpawnedUnit)
+    end
     --设置一个随机的位置
     if hSpawnedUnit and hSpawnedUnit.GetUnitName then
         if hSpawnedUnit:GetUnitName()~="npc_dota_thinker"then

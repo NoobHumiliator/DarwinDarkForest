@@ -84,6 +84,9 @@ function Evolve (nPlayerId,hHero)
     if hHero.vSkinInfo and hHero.vSkinInfo[sUnitToEnvolve]~=nil then
          Econ:ReplaceUnitModel(hUnit,hHero.vSkinInfo[sUnitToEnvolve])
     end
+    
+    --修正模型动作
+    ActivityModifier:AddActivityModifierThink(hUnit)
 
     return hUnit
 

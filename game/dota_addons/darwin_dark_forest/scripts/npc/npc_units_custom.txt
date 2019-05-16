@@ -10567,7 +10567,7 @@
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_troll_dark_a/n_creep_troll_dark_a.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"n_creep_Melee"
 		"Level"						"6"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
@@ -10591,15 +10591,15 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"75"		// Damage range min.
 		"AttackDamageMax"			"80"		// Damage range max.
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
 		"AttackRange"				"250"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
-		"ProjectileSpeed"			"1200"		// Speed of projectile.		     
+		"ProjectileModel"			"" // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		     
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -10616,8 +10616,8 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"1200"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		"StatusMana"				"400"	    // Base mana.
+		"StatusManaRegen"			"1.5"		// Mana regeneration rate.	 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -13090,7 +13090,7 @@
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/creeps/centaurs/centaur_002.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
+		"SoundSet"					"Hero_Centaur"
 
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
@@ -13923,7 +13923,7 @@
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_troll_dark_a/n_creep_troll_dark_a.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"n_creep_Melee"
 		"Level"						"7"
 		"ModelScale" 				"1.15"
 		"vscripts"					"creap_ai.lua"
@@ -14418,7 +14418,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"lich_chain_frost"			// Ability 1
-		"Ability2"					"lich_frost_nova"			// Ability 2
+		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
@@ -15501,7 +15501,7 @@
 		}
 	}
 
-	"npc_dota_creature_troll_elite"	
+	"npc_dota_creature_troll_warlord"	
 	{
 		// General
 		//----------------------------------------------------------------
@@ -15543,7 +15543,14 @@
 		"AttackAcquisitionRange"	"1200"
 		"AttackRange"		        "500"
 		"ProjectileModel"		    "particles/units/heroes/hero_troll_warlord/troll_warlord_base_attack.vpcf"
-		"ProjectileSpeed"		    "1200"       
+		"ProjectileSpeed"		    "1200"   
+
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"200"
+			"faster"	"320"
+			"fastest"	"430"
+		}    
   
         "ConsideredHero"			"1"
 
@@ -15552,11 +15559,19 @@
 		"RingRadius"				"80"
 		"HealthBarOffset"			"360"
 
-
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"350"		// Speed.			
+		"MovementSpeed"				"350"		// Speed.		
+
+
+		"MovementSpeedActivityModifiers"
+		{
+			"walk"		"0"
+			"run"		"350"
+			"run_fast"	"400"
+		}
+	
 
 		// Status
 		//----------------------------------------------------------------
@@ -15578,15 +15593,25 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 		"Creature"
 	    {
-			"AttachWearables"
+
+	    	"AttachWearables"
 	        {
-	            "1"  { "ItemDef"     "373" }
-	            "2"  { "ItemDef"     "374" }
-	            "3"  { "ItemDef"     "379" }
-	            "4"  { "ItemDef"     "380" }
-	            "5"  { "ItemDef"     "410" }
-	            "6"  { "ItemDef"     "411" }
-	            "7"  { "ItemDef"     "412" }
+	           "Wearable1"
+				{
+					"ItemDef"			"373"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"410"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"411"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"412"
+				}
 	        }
         }
 	}
@@ -17939,7 +17964,7 @@
 		}
 	}
 
-	"npc_dota_creature_troll_warlord"
+	"npc_dota_creature_troll_warlord_icewrack_marauder"
 	{
         // General
 		//----------------------------------------------------------------
@@ -17962,7 +17987,7 @@
 		"Ability1"					"troll_warlord_battle_trance"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
+		"Ability4"					""			// Ability 4.
 
 		"AbilitiesLevel"            "6"
 
@@ -17980,7 +18005,14 @@
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
 		"AttackRange"				"128"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
-		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		
+
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"200"
+			"faster"	"320"
+			"fastest"	"430"
+		}     
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -17991,7 +18023,14 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"400"		// Speed.			
+		"MovementSpeed"				"400"		// Speed.
+
+		"MovementSpeedActivityModifiers"
+		{
+			"walk"		"0"
+			"run"		"350"
+			"run_fast"	"400"
+		}			
 
 		// Status
 		//----------------------------------------------------------------
@@ -18470,7 +18509,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"9"
-		"ModelScale" 				"1.1"
+		"ModelScale" 				"0.5"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -20028,7 +20067,7 @@
 		}
 	}
 
-	"npc_dota_creature_troll_champion"
+	"npc_dota_creature_troll_plunder_of_the_savage_monger"
 	{
         // General
 		//----------------------------------------------------------------
@@ -20068,7 +20107,13 @@
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
 	    "AttackRange"				"600"								// Range within a target can be attacked.
 	    "ProjectileModel"			"particles/units/heroes/hero_troll_warlord/troll_warlord_base_attack.vpcf"				// Particle system model for projectile.
-	    "ProjectileSpeed"			"800"	     
+	    "ProjectileSpeed"			"800"
+	    "AttackSpeedActivityModifiers"
+		{
+			"fast"		"200"
+			"faster"	"320"
+			"fastest"	"430"
+		}   
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -20079,7 +20124,13 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"405"		// Speed.			
+		"MovementSpeed"				"405"		// Speed.
+		"MovementSpeedActivityModifiers"
+		{
+			"walk"		"0"
+			"run"		"350"
+			"run_fast"	"400"
+		}		
 
 		// Status
 		//----------------------------------------------------------------

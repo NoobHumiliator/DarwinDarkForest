@@ -24,7 +24,7 @@ function modifier_item_vanguard_lua:OnCreated( kv )
     self.block_damage_melee = self:GetAbility():GetSpecialValueFor( "block_damage_melee" )
     self.block_damage_ranged = self:GetAbility():GetSpecialValueFor( "block_damage_ranged" )
     
-    if self:GetCaster():GetAttackCapability()==1 then
+    if self:GetCaster().GetAttackCapability and self:GetCaster():GetAttackCapability()==1 then
         self.block_damage = self.block_damage_melee
     else
         self.block_damage = self.block_damage_ranged

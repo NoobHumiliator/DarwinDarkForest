@@ -450,5 +450,11 @@ Label{
 
 
 .Temp{
-    background-image: url("file://{images}/custom_game/econ/golden_edict_of_shadows.png");
+    background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_troll_warlord.png");
+}
+.Temp{
+    background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_troll_warlord_icewrack_marauder.png");
+}
+.Temp{
+    background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_troll_plunder_of_the_savage_monger.png");
 }
