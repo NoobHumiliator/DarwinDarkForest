@@ -294,7 +294,9 @@ function GameMode:InitGameMode()
 
     GameRules:GetGameModeEntity().GameMode = self
 
-    GameRules.bPveMap = false       --此地图只有一个有效玩家，PVE模式（DOTA_GAMERULES_STATE_GAME_IN_PROGRESS时候检查此值）
+    GameRules.bPveMap = false       --此地图只有一个有效玩家，PVE模式（DOTA_GAMERULES_STATE_GAME_IN_PROGRESS时候定义此值）
+    GameRules.bSendEndToSever = false   --已经向服务器发送 结束请求
+
     GameRules.sValidePlayerSteamIds="" --有效玩家的steamId队列
     GameRules.bUltimateStage=false  --终极进化阶段
     GameRules.bLevelTenStage=false  --有生物到达10级
@@ -489,12 +491,6 @@ function GameMode:ColorForTeam( teamID )
 	return color
 end
 
----------------------------------------------------------------------------
----------------------------------------------------------------------------
-function GameMode:EndGame( victoryTeam )
-	GameRules:SetGameWinner( victoryTeam )
-end
-
 
 ---------------------------------------------------------------------------
 -- Put a label over a player's hero so people know who is on what team
@@ -520,7 +516,7 @@ end
 ---------------------------------------------------------------------------
 function GameMode:UpdateScoreboardAndVictory()
 
-	local sortedTeams = {}
+	local vSortedTeams = {}
     local vAliveTeams = {}
 
 	for _, nTeamID in pairs( self.vfoundTeamsList ) do
@@ -542,19 +538,29 @@ function GameMode:UpdateScoreboardAndVictory()
         sortedTeam.teamScore=nTeamMaxLevel
         CustomNetTables:SetTableValue( "team_max_level",tostring(nTeamID), {team_max_level=nTeamMaxLevel} )
 
-		table.insert( sortedTeams,sortedTeam)
+		table.insert( vSortedTeams,sortedTeam)
 	end
     
+    -- reverse-sort by score
+    table.sort( vSortedTeams, function(a,b) return ( a.teamScore > b.teamScore ) end )
+
     RemoveRepeated(vAliveTeams)
 
     --终极进化阶段 只剩唯一队伍
-    if GameRules.bUltimateStage and #vAliveTeams==1 then
-      --获胜
-      GameRules:SetGameWinner(vAliveTeams[1])
+    if GameRules.bUltimateStage and #vAliveTeams==1  then
+      --结束PVE游戏
+      --[[
+      if GameRules.bPveMap  and not GameRules.bSendEndToSever  then
+          GameRules.bSendEndToSever=true
+          Server:EndPveGame(vAliveTeams[1])
+      end
+      ]]
+      if GetMapName() == "island_1x10" and not GameRules.bSendEndToSever then
+          GameRules.bSendEndToSever=true
+          Server:EndPvpGame(vSortedTeams,"PVE")
+      end
     end
  
-	-- reverse-sort by score
-	table.sort( sortedTeams, function(a,b) return ( a.teamScore > b.teamScore ) end )
 
 end
 ---------------------------------------------------------------------------

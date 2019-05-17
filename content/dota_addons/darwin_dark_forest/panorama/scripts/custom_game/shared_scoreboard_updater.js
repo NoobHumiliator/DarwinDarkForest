@@ -129,54 +129,38 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 		}
 	}
 	
-	var playerItemsContainer = playerPanel.FindChildInLayoutFile( "PlayerItemsContainer" );
-	if ( playerItemsContainer )
-	{
-		var playerItems = Game.GetPlayerItems( playerId );
-		if ( playerItems )
-		{
-	//		$.Msg( "playerItems = ", playerItems );
-			for ( var i = playerItems.inventory_slot_min; i < playerItems.inventory_slot_max; ++i )
-			{
-				var itemPanelName = "_dynamic_item_" + i;
-				var itemPanel = playerItemsContainer.FindChild( itemPanelName );
-				if ( itemPanel === null )
-				{
-					itemPanel = $.CreatePanel( "Image", playerItemsContainer, itemPanelName );
-					itemPanel.AddClass( "PlayerItem" );
-				}
+	var PlayerPerkContainer = playerPanel.FindChildInLayoutFile( "PlayerPerkContainer" );
+	if ( PlayerPerkContainer )
+	{     
+		var player_perk = CustomNetTables.GetTableValue("player_perk", ""+playerId);
+        var end_game_rank_data = CustomNetTables.GetTableValue("end_game_rank_data", "end_game_rank_data");
 
-				var itemInfo = playerItems.inventory[i];
-				if ( itemInfo )
-				{
-					var item_image_name = "file://{images}/items/" + itemInfo.item_name.replace( "item_", "" ) + ".png"
-					if ( itemInfo.item_name.indexOf( "recipe" ) >= 0 )
-					{
-						item_image_name = "file://{images}/items/recipe.png"
-					}
-					itemPanel.SetImage( item_image_name );
-				}
-				else
-				{
-					itemPanel.SetImage( "" );
-				}
+		for ( var i = 1; i <= 6; i++ )
+		{
+			var perkPanelName = "_dynamic_perk_" + i;
+			var perkPanel = PlayerPerkContainer.FindChild( perkPanelName );
+			if ( perkPanel === null )
+			{
+				perkPanel = $.CreatePanel( "Label", PlayerPerkContainer, perkPanelName );
+				perkPanel.AddClass( "EndPerkLabel" );
+				perkPanel.text=parseInt(player_perk[""+i])
 			}
+		}
+
+		if (end_game_rank_data['type']=='pve')
+		{
+			  $( "#rating_label" ).text=$.Localize("custom_end_screen_legend_time_cost")
+			   var steam_id = playerInfo.player_steamid;
+               steam_id = ConvertToSteamId32(steam_id);
+               var time_cost=end_game_rank_data['player_data'][steam_id]
+			  _ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerRating", FormatSeconds(time_cost) );
+
+		} else{
+
+			  $( "#rating_label" ).text=$.Localize("custom_end_screen_legend_ratings")
 		}
 	}
 
-	if ( isTeammate )
-	{
-		_ScoreboardUpdater_SetTextSafe( playerPanel, "TeammateGoldAmount", goldValue );
-	}
-
-	_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerGoldAmount", goldValue );
-
-	playerPanel.SetHasClass( "player_ultimate_ready", ( ultStateOrTime == PlayerUltimateStateOrTime_t.PLAYER_ULTIMATE_STATE_READY ) );
-	playerPanel.SetHasClass( "player_ultimate_no_mana", ( ultStateOrTime == PlayerUltimateStateOrTime_t.PLAYER_ULTIMATE_STATE_NO_MANA) );
-	playerPanel.SetHasClass( "player_ultimate_not_leveled", ( ultStateOrTime == PlayerUltimateStateOrTime_t.PLAYER_ULTIMATE_STATE_NOT_LEVELED) );
-	playerPanel.SetHasClass( "player_ultimate_hidden", ( ultStateOrTime == PlayerUltimateStateOrTime_t.PLAYER_ULTIMATE_STATE_HIDDEN) );
-	playerPanel.SetHasClass( "player_ultimate_cooldown", ( ultStateOrTime > 0 ) );
-	_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerUltimateCooldown", ultStateOrTime );
 }
 
 

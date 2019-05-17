@@ -148,6 +148,7 @@
     "econ_rich"                                           "富可敌国"
 
     "custom_end_screen_legend_ratings"                    "天梯积分"
+    "custom_end_screen_legend_time_cost"                  "通关用时"
 
     "Close"                                               "关闭"
 

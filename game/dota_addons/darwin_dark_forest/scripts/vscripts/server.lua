@@ -15,14 +15,71 @@ local function stringTable(t)
 end
 
 
-function Server:EndPveGame(nPlayerID)
-    local nPlayerSteamId = PlayerResource:GetSteamAccountID(nPlayerID)
+function Server:EndPveGame(iTeam)
     local nTimeCost=GameRules:GetGameTime() - GameRules.nGameStartTime
-    local request = CreateHTTPRequestScriptVM("POST", sServerAddress .. "endpvegame")
+    local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "endpvegame")
     request:SetHTTPRequestGetOrPostParameter("dedicated_server_key",GetDedicatedServerKey("K4gN+u422RN2X4DubcLylw=="));
-    request:SetHTTPRequestGetOrPostParameter("player_steam_id",nPlayerSteamId);
-    request:SetHTTPRequestGetOrPostParameter("time_cost",nTimeCost);
+    request:SetHTTPRequestGetOrPostParameter("player_steam_id",GameRules.sValidePlayerSteamIds);
+
+    print("GameRules.sValidePlayerSteamIds"..GameRules.sValidePlayerSteamIds)
+    request:SetHTTPRequestGetOrPostParameter("time_cost",tostring(math.floor(nTimeCost)));
+    request:Send(function(result)
+        print("End Pve Game Finish"..result.StatusCode)
+        if result.StatusCode == 200 and result.Body~=nil then
+            local body = JSON:decode(result.Body)
+            print(body)
+            if body ~= nil then
+                CustomNetTables:SetTableValue("end_game_rank_data", "end_game_rank_data", stringTable(body))
+                GameRules:SetGameWinner(iTeam)
+            end
+        end
+    end)
+
+
 end
+
+
+
+function Server:EndPvpGame(vSortedTeams,sType)
+
+    local request = CreateHTTPRequestScriptVM("POST", sServerAddress .. "endpvpgame")
+    request:SetHTTPRequestGetOrPostParameter("dedicated_server_key",GetDedicatedServerKey("K4gN+u422RN2X4DubcLylw=="));
+    
+    --整理表单数据
+    local vFormData = {}
+    for k,vTeam in ipairs(vSortedTeams) do
+      for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
+        if PlayerResource:IsValidPlayer( nPlayerID ) and PlayerResource:GetSelectedHeroEntity (nPlayerID) and PlayerResource:GetSelectedHeroEntity(nPlayerID):GetTeamNumber()==vTeam.teamID then
+           print("nPlayerID"..nPlayerID)
+           print("vTeam.teamID"..vTeam.teamID)
+
+           local nPlayerSteamId = PlayerResource:GetSteamAccountID(nPlayerID)
+           vFormData[""..nPlayerSteamId]=""..k
+        end
+      end
+    end
+    vFormData["88765184"]="2"
+    print("vFormData: "..tostring(JSON:encode(vFormData)))
+
+    --PrintTable(vFormData)
+    --request:SetHTTPRequestGetOrPostParameter("form_data",tostring(JSON:encode(vFormData)));
+    request:SetHTTPRequestGetOrPostParameter("type",sType);
+
+    request:Send(function(result)
+        print("End Pvp Game Finish"..result.StatusCode)
+        if result.StatusCode == 200 and result.Body~=nil then
+            local body = JSON:decode(result.Body)
+            print(body)
+            if body ~= nil then
+                CustomNetTables:SetTableValue("end_game_rank_data", "end_game_rank_data", stringTable(body))
+                GameRules:SetGameWinner(iTeam)
+            end
+        end
+    end)
+end
+
+
+
 
 
 function Server:GetRankData()

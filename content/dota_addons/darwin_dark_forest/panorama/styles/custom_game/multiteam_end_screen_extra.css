@@ -189,7 +189,6 @@
 
 .ScoreboardPanel Label
 {
-	font-size: 30px;
 	text-shadow: 2px 2px 2px black;
 }
 
@@ -314,7 +313,7 @@
 
 .ScoreCol_PlayerDetails
 {
-	width: 170px;
+	width: 130px;
 }
 
 .ScoreCol_Hero
