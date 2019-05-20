@@ -40,7 +40,7 @@ end
 
 
 
-function Server:EndPvpGame(vSortedTeams,sType)
+function Server:EndPvpGame(vSortedTeams,sType,iTeam)
 
     local request = CreateHTTPRequestScriptVM("POST", sServerAddress .. "endpvpgame")
     request:SetHTTPRequestGetOrPostParameter("dedicated_server_key",GetDedicatedServerKey("K4gN+u422RN2X4DubcLylw=="));
@@ -58,18 +58,14 @@ function Server:EndPvpGame(vSortedTeams,sType)
         end
       end
     end
-    vFormData["88765184"]="2"
-    print("vFormData: "..tostring(JSON:encode(vFormData)))
-
     --PrintTable(vFormData)
-    --request:SetHTTPRequestGetOrPostParameter("form_data",tostring(JSON:encode(vFormData)));
+    request:SetHTTPRequestGetOrPostParameter("form_data",tostring(JSON:encode(vFormData)));
     request:SetHTTPRequestGetOrPostParameter("type",sType);
 
     request:Send(function(result)
         print("End Pvp Game Finish"..result.StatusCode)
         if result.StatusCode == 200 and result.Body~=nil then
             local body = JSON:decode(result.Body)
-            print(body)
             if body ~= nil then
                 CustomNetTables:SetTableValue("end_game_rank_data", "end_game_rank_data", stringTable(body))
                 GameRules:SetGameWinner(iTeam)
@@ -161,6 +157,33 @@ function Server:DrawLottery(nPlayerID)
             local body = JSON:decode(result.Body)
             if body ~= nil then
                CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerID),"DrawLotteryResultArrive",body)
+            end
+        end
+    end)
+end
+
+function Server:SubmitTaobaoCode(keys)
+
+    local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "submittaobaocode")
+
+    PrintTable(keys)
+    local nPlayerSteamId = PlayerResource:GetSteamAccountID(keys.playerId)
+
+    request:SetHTTPRequestGetOrPostParameter("player_steam_id",tostring(nPlayerSteamId));
+    request:SetHTTPRequestGetOrPostParameter("code",tostring(keys.code));
+
+    request:Send(function(result)
+        if result.StatusCode == 200 and result.Body~=nil then
+            local body = JSON:decode(result.Body)
+            if body ~= nil then
+                PrintTable(body)
+                --如果成功
+                if body.type=='1' then
+                    local econ_data = CustomNetTables:GetTableValue("econ_data", "econ_data")
+                    econ_data["dna"][tostring(nPlayerSteamId)]=body.dna
+                    CustomNetTables:SetTableValue("econ_data", "econ_data",econ_data)
+                end
+                CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(keys.playerId),"TaobaoCodeResult",{type=body.type,dna_bonus=body.dna_bonus})
             end
         end
     end)

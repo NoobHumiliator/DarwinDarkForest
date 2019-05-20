@@ -14,6 +14,18 @@ function _ScoreboardUpdater_SetTextSafe( panel, childName, textValue )
 	childPanel.text = textValue;
 }
 
+function _ScoreboardUpdater_SetHtmlSafe( panel, childName, textValue )
+{
+	if ( panel === null )
+		return;
+	var childPanel = panel.FindChildInLayoutFile( childName )
+	if ( childPanel === null )
+		return;
+	
+	childPanel.html=true;
+	childPanel.text = textValue;
+}
+
 
 //=============================================================================
 //=============================================================================
@@ -155,9 +167,28 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
                var time_cost=end_game_rank_data['player_data'][steam_id]
 			  _ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerRating", FormatSeconds(time_cost) );
 
-		} else{
+		} else  {
 
 			  $( "#rating_label" ).text=$.Localize("custom_end_screen_legend_ratings")
+			  var steam_id = playerInfo.player_steamid;
+               steam_id = ConvertToSteamId32(steam_id);
+               var score=end_game_rank_data['player_data'][steam_id]['score']
+               var score_change=end_game_rank_data['player_data'][steam_id]['score_change']
+               var score_change_type=end_game_rank_data['player_data'][steam_id]['score_change_type'] //1加 2减 0平
+               if (score_change_type=='0')
+               {
+               	  _ScoreboardUpdater_SetHtmlSafe( playerPanel, "PlayerRating", score+"("+score_change+")" );
+               }
+               if (score_change_type=='1')
+               {
+               	  //红
+               	  _ScoreboardUpdater_SetHtmlSafe( playerPanel, "PlayerRating", score+"(<font color='#EA7070'>"+score_change+"</font>)" );
+               }
+			   if (score_change_type=='2')
+               {
+               	  //绿
+               	  _ScoreboardUpdater_SetHtmlSafe( playerPanel, "PlayerRating", score+"(<font color='#70EA72'>"+score_change+"</font>)" );
+               }
 		}
 	}
 

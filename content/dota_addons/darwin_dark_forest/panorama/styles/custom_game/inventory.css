@@ -222,7 +222,7 @@ Label{
     background-color:gradient( linear, 0% 0%, 0% 100%, from( #7Ac17E ), to( #a7f6b533 ) );
 }
 
-#DnaStorageKeyButtonLabel{
+#SubmitTaobaoCodeButtonLabel{
     font-size:22px;
     horizontal-align:center;
     vertical-align:center;
@@ -272,6 +272,25 @@ Label{
   background-size:36px 36px;
   sound:"ui_friends_slide_in"; 
 }
+
+.RedAlert{
+  color: red;
+}
+
+.GreenAlert{
+  color: green;
+}
+
+
+
+
+#TaobaoCodeNotify
+{
+  horizontal-align:right;
+  margin-top: 80px;
+  margin-right: 80px;
+}
+
 
 #button_equip {
     background-color:gradient( linear, 0% 0%, 0% 100%, from( #60862d ), to( #3d5f1c ) );
@@ -439,6 +458,22 @@ Label{
 }
 
 
+
+#SubmitTaobaoCodeButtonLoading {
+    horizontal-align:center;
+    vertical-align:middle;
+    margin:10px 0px;
+    width: 50px;
+    height: 50px;
+}
+
+#SubmitTaobaoCodeButtonLoading .Spinner
+{
+    vertical-align:middle;
+}
+
+
+
 .InventoryLeftPic{
 
    horizontal-align:middle;
@@ -448,13 +483,7 @@ Label{
 
 }
 
+.Temp{
+   background-image: url("file://{images}/custom_game/econ/bitter_lineage.png");
+}
 
-.Temp{
-    background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_troll_warlord.png");
-}
-.Temp{
-    background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_troll_warlord_icewrack_marauder.png");
-}
-.Temp{
-    background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_troll_plunder_of_the_savage_monger.png");
-}

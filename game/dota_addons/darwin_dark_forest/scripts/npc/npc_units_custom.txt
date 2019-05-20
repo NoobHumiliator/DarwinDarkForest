@@ -12,7 +12,7 @@
 		"SoundSet"					"Creep_Good_Melee"					// Name of sound set.
 		"MinimapIcon"				"minimap_ward_obs"
 		"MinimapIconSize"			"1"
-		
+			
 		// Abilities
 		//----------------------------------------------------------------
 		
@@ -6088,7 +6088,7 @@
 		"Model"						"models/items/broodmother/spiderling/virulent_matriarchs_spiderling/virulent_matriarchs_spiderling.vmdl"	// Model.
 		"SoundSet"					"Hero_Broodmother"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.6"
+		"ModelScale"				"0.45"
 		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
@@ -7375,6 +7375,7 @@
          
         "nFury"                     "8"
         "nElement"                  "8"
+        "nHunt"                     "8"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -8031,7 +8032,7 @@
 		"Model"						"models/creeps/item_creeps/i_creep_necro_archer/necro_archer.vmdl"
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"5"
-		"ModelScale" 				"1.0"
+		"ModelScale" 				"0.8"
 		"HasInventory"				"1"
         
         "nMystery"                  "8"
@@ -9576,7 +9577,7 @@
 		"Model"						"models/creeps/item_creeps/i_creep_necro_archer/necro_archer.vmdl"
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"6"
-		"ModelScale" 				"1.1"
+		"ModelScale" 				"0.9"
 		"HasInventory"				"1"
         
         "nMystery"                  "10"
@@ -10106,6 +10107,8 @@
          
         "nFury"                     "10"
         "nElement"                  "10"
+        "nHunt"                     "10"
+
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -10259,7 +10262,7 @@
         
         "vscripts"					"creap_ai.lua"
         "nFury"                     "10"
-        "nMystery"                  "10"
+        "nElement"                  "10"
 
 
 		// Abilities
@@ -12359,6 +12362,7 @@
          
         "nFury"                     "12"
         "nElement"                  "12"
+        "nHunt"                     "12"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -12501,7 +12505,7 @@
         "HasInventory"				"1"
 
         "nFury"                     "12"
-        "nMystery"                  "12"
+        "nElement"                  "12"
 
 
 		// Abilities
@@ -15267,6 +15271,7 @@
          
         "nFury"                    "14"
         "nElement"                 "14"
+        "nHunt"                    "14"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -16176,7 +16181,7 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nMystery"                  "14"
+		"nElement"                  "14"
 		"nFury"                     "14"
 
 		// Abilities
@@ -17716,7 +17721,7 @@
 		"VoiceFile" 				"soundevents/voscripts/game_sounds_vo_warlock_golem.vsndevts"
   
         "nFury"                     "16"
-        "nMystery"                  "16"
+        "nElement"                  "16"
 
 
 		// Abilities
@@ -17801,13 +17806,17 @@
          
         "nFury"                     "16"
         "nElement"                  "16"
+        "nHunt"                     "16"
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability1"					"elder_red_dragon_passive_lua"// Ability 1
+		"Ability2"					"dragon_knight_breathe_fire"			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+
+
+		"AbilitiesLevel"            "1 5"
 
 
 		// Armor
@@ -19686,14 +19695,17 @@
          
         "nFury"                     "18"
         "nElement"                  "18"
+        "nHunt"                     "18"
 
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability1"					"elder_red_dragon_passive_lua"          // Ability 1
+		"Ability2"					"dragon_knight_breathe_fire"			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "7 1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -19755,7 +19767,7 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nMystery"                  "18"
+        "nElement"                  "18"
         "nFury"                     "18"
 
 		// Abilities

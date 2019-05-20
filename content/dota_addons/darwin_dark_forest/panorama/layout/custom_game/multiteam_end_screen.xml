@@ -22,12 +22,12 @@
 				<Label class="LegendPanel ScoreCol_Kills" text="#custom_end_screen_legend_kills" />
 				<Label class="LegendPanel ScoreCol_Deaths" text="#custom_end_screen_legend_deaths" />
 				<Panel class="ScoreCol_Perks">
-					<Label class="LegendPanel ScoreCol_Perks_Item" text="#fury" />
-					<Label class="LegendPanel ScoreCol_Perks_Item" text="#durable" />
 					<Label class="LegendPanel ScoreCol_Perks_Item" text="#element" />
-					<Label class="LegendPanel ScoreCol_Perks_Item" text="#hunt" />
-					<Label class="LegendPanel ScoreCol_Perks_Item" text="#decay" />
 					<Label class="LegendPanel ScoreCol_Perks_Item" text="#mystery" />
+					<Label class="LegendPanel ScoreCol_Perks_Item" text="#durable" />
+					<Label class="LegendPanel ScoreCol_Perks_Item" text="#fury" />
+					<Label class="LegendPanel ScoreCol_Perks_Item" text="#decay" />
+					<Label class="LegendPanel ScoreCol_Perks_Item" text="#hunt" />
 			    </Panel>
 				<Label class="LegendPanel ScoreCol_Ratings" id="rating_label"  text="#custom_end_screen_legend_ratings" />
 			</Panel>

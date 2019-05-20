@@ -209,7 +209,32 @@ end
 for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
     if vData and type(vData) == "table" then
         
-        --保证是进化类型的技能 而不是其他
+        if vData.AbilitySpecial then
+            for _, special in pairs(vData.AbilitySpecial) do
+                for k,v in pairs(special) do
+                    if k=="nMystery" then
+                        vData.nMystery=v
+                    end
+                    if k=="nElement" then
+                        vData.nElement=v
+                    end
+                    if k=="nDurable" then
+                        vData.nDurable=v
+                    end
+                    if k=="nFury" then
+                        vData.nFury=v
+                    end
+                    if k=="nDecay" then
+                        vData.nDecay=v
+                    end
+                    if k=="nHunt" then
+                        vData.nHunt=v
+                    end
+                end
+            end
+        end
+
+
         if vData.nMystery~=nil or vData.nElement~=nil or vData.nDurable~=nil or vData.nFury~=nil or vData.nDecay~=nil or vData.nHunt~=nil  then
             
             local vLevel=1
@@ -218,8 +243,6 @@ for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
                vLevel=tonumber(vData.MaxLevel)
             end
             
-            print("Adding "..sAbilityName)       
-
             -- 构造数据
             for i=1,vLevel do
                 
@@ -548,16 +571,18 @@ function GameMode:UpdateScoreboardAndVictory()
 
     --终极进化阶段 只剩唯一队伍
     if GameRules.bUltimateStage and #vAliveTeams==1  then
-      --结束PVE游戏
-      --[[
+      --结束各种类型游戏，记录天梯分数
       if GameRules.bPveMap  and not GameRules.bSendEndToSever  then
           GameRules.bSendEndToSever=true
           Server:EndPveGame(vAliveTeams[1])
       end
-      ]]
       if GetMapName() == "island_1x10" and not GameRules.bSendEndToSever then
           GameRules.bSendEndToSever=true
-          Server:EndPvpGame(vSortedTeams,"PVE")
+          Server:EndPvpGame(vSortedTeams,"solo",vAliveTeams[1])
+      end
+      if GetMapName() == "island_3x4" and not GameRules.bSendEndToSever then
+          GameRules.bSendEndToSever=true
+          Server:EndPvpGame(vSortedTeams,"three_player",vAliveTeams[1])
       end
     end
  

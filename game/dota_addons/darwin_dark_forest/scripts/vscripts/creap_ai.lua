@@ -195,9 +195,15 @@ end
 function RetreatFromUnit(hUnit)
     
     thisEntity:SetBaseMoveSpeed( nWalkingMoveSpeed )
+    
 
-	local vAwayFromEnemy = thisEntity:GetOrigin() - hUnit:GetOrigin()
+    local vAwayFromEnemy= thisEntity:GetOrigin() - RandomVector(100)
+
+    if hUnit and  hUnit:IsAlive() then
+	   vAwayFromEnemy = thisEntity:GetOrigin() - hUnit:GetOrigin()
+    end
 	vAwayFromEnemy = vAwayFromEnemy:Normalized()
+
 	local vMoveToPos = thisEntity:GetOrigin() + vAwayFromEnemy * nWalkingMoveSpeed*1.75
 
 	-- if away from enemy is an unpathable area, find a new direction to run to

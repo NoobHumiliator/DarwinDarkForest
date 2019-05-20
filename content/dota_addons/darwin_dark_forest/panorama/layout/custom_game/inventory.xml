@@ -40,14 +40,15 @@
                     <Image id="DnaStorageImg" src="file://{images}/custom_game/inventory/dna.png"/>
                     <Label id = "DnaStorageLabel" text = "× ?"/>
                     <Panel id = "TaobaoPlusIcon" class = "" hittest = "true" />
-                    <TextEntry id="DnaStorageKeyEntry" maxchars="17" placeholder="" oninputsubmit="OnCdkeySubmitted()" />
-                    <Button id="DnaStorageKeyButton" onactivate="SubmitKey()" class="EvolveButton">
-                        <Label id="DnaStorageKeyButtonLabel"  text="#ExchangeKey"/>
-                    </Button>                            
+                    <TextEntry id="TaobaoCodeEntry" maxchars="25" placeholder="请输入激活码" oninputsubmit="OnCdkeySubmitted()" />
+                    <Button id="SubmitTaobaoCodeButton" onactivate="SubmitTaobaoCode()" class="EvolveButton">
+                        <Label id="SubmitTaobaoCodeButtonLabel"  text="#ExchangeKey"/>
+                        <Panel id="SubmitTaobaoCodeButtonLoading" class="Spinner Hidden"/>/>
+                    </Button>
                 </Panel>
                 <Button class="InventoryCloseButton" onactivate="CloseInventory()" />
+                <Label id="TaobaoCodeNotify" Class="Hidden" text=""/>
             </Panel>
-
             <Panel class="InventoryMain">
                 <Panel class="InventoryLeft">
                       <Panel class="InventoryLeftPic"> 

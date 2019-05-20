@@ -42,12 +42,18 @@ Econ.vKillSoundMap ={
 Econ.vSkinModelMap ={
     gold_crawl_zombie="models/items/undying/idol_of_ruination/ruin_wight_minion_torso_gold.vmdl",
     gold_zombie="models/items/undying/idol_of_ruination/ruin_wight_minion_gold.vmdl",
+    third_awakening="models/items/dragon_knight/ti8_dk_third_awakening_dragon/ti8_dk_third_awakening_dragon.vmdl",
+    dragon_immortal="models/items/dragon_knight/dragon_immortal_1/dragon_immortal_1.vmdl",
+    legacy_of_the_winterwyrm="models/items/dragon_knight/legacy_of_the_winterwyrm_form_of_the_winterwyrm/legacy_of_the_winterwyrm_form_of_the_winterwyrm.vmdl"
 }
 
 
 Econ.vSkinUnitMap ={
-    gold_crawl_zombie="npc_dota_creature_crawl_zombie",
-    gold_zombie="npc_dota_creature_basic_zombie",
+    gold_crawl_zombie={"npc_dota_creature_crawl_zombie"},
+    gold_zombie={"npc_dota_creature_basic_zombie"},
+    third_awakening={"npc_dota_creature_red_dragon","npc_dota_creature_red_dragon_elder"},
+    dragon_immortal={"npc_dota_creature_red_dragon","npc_dota_creature_red_dragon_elder"},
+    legacy_of_the_winterwyrm={"npc_dota_creature_red_dragon","npc_dota_creature_red_dragon_elder"},
 }
 
 
@@ -120,6 +126,10 @@ function Econ:Init()
         self:EconDataRefresh(keys)
     end)
 
+    CustomGameEventManager:RegisterListener("SubmitTaobaoCode",function(_, keys)
+        self:SubmitTaobaoCode(keys)
+    end)
+
 end
 
 function Econ:DrawLottery(keys)
@@ -130,6 +140,21 @@ function Econ:DrawLottery(keys)
 
 
 end
+
+
+
+function Econ:SubmitTaobaoCode(keys)
+
+    Server:SubmitTaobaoCode(keys)
+
+end
+
+
+
+
+
+
+
 
 function Econ:EconDataRefresh(keys)
     
@@ -193,11 +218,15 @@ function Econ:ChangeEquip(keys)
      --如果是皮肤
     if keys.type=="Skin" then
 
+      --key是单位名称 value是单位新模型
       if hHero.vSkinInfo==nil then
            hHero.vSkinInfo={}
       end
 
-      hHero.vSkinInfo[self.vSkinUnitMap[keys.itemName]]=nil
+      for _,v in pairs(self.vSkinUnitMap[keys.itemName]) do
+            hHero.vSkinInfo[v] = nil
+      end
+
       if keys.isEquip==1 then
            Econ:EquipSkinEcon(keys.itemName,nPlayerID)
       end
@@ -225,7 +254,6 @@ function Econ:EquipParticleEcon(sItemName,nPlayerID)
         if hHero.hCurrentCreep and hHero.hCurrentCreep:IsAlive() then
 
             local nParticleAttach = Econ:ChooseParticleAttach(sItemName)
-            print("nParticleAttach"..nParticleAttach)
             local nParticleIndex = ParticleManager:CreateParticle(sParticle,nParticleAttach,hHero.hCurrentCreep)
             ParticleManager:SetParticleControlEnt(nParticleIndex,0,hHero.hCurrentCreep,nParticleAttach,"follow_origin",hHero.hCurrentCreep:GetAbsOrigin(),true)
             
@@ -307,7 +335,9 @@ function Econ:EquipSkinEcon(sItemName,nPlayerID)
     end
 
     if  hHero then
-        hHero.vSkinInfo[self.vSkinUnitMap[sItemName]] = self.vSkinModelMap[sItemName]
+        for _,v in pairs(self.vSkinUnitMap[sItemName]) do
+            hHero.vSkinInfo[v] = self.vSkinModelMap[sItemName]
+        end
     end
     
 end

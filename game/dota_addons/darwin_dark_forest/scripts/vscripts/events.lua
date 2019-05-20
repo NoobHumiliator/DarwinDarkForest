@@ -381,6 +381,11 @@ function GameMode:OnPlayerSay(keys)
         if sText=="unwtf" and hHero and not hHero.hCurrentCreep:IsNull() then
            hHero.hCurrentCreep:RemoveModifierByName("modifier_zero_cooldown_and_mana_cost")
         end
+
+         -- 自杀
+        if sText=="suicide" and hHero and not hHero.hCurrentCreep:IsNull() then
+           hHero.hCurrentCreep:ForceKill(true)
+        end
         
         -- 进化 换模型
         if sText=="evolve" and hHero and not hHero.hCurrentCreep:IsNull() then
@@ -440,8 +445,7 @@ function GameMode:OnPlayerSay(keys)
 
             -- 替换模型
             local hUnit = SpawnUnitToReplaceHero(sText,hHero,nPlayerId)
-            AddAbilityForUnit(hUnit,nPlayerId)            
-
+            AddAbilityForUnit(hUnit,nPlayerId)
         end
 
         --添加物品

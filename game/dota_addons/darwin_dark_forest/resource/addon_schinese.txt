@@ -48,6 +48,9 @@
     "ExchangeKey"                             "兑换激活码"
     "Equip"                                   "装备"
     "Remove"                                  "卸下"
+    "InvalideTaobaoCode"                      "无效激活码"
+    "TaobaoCodeOccupied"                      "激活码已经被使用"
+    "TaobaoCodeSuccess"                       "恭喜您激活成功 DNA + "
 
     "rarity_normal"                           "普通"
     "rarity_rare"                             "稀有"
@@ -343,7 +346,7 @@
     "npc_dota_creature_dragonspawn"                                                 "龙卵守护者"
     "npc_dota_creature_small_thunder_lizard"                                        "雷肤兽"
     "npc_dota_creature_large_brute"                                                 "食人魔巨蛮兵"
-    "npc_dota_creature_ithogoaki"                                                   "炼狱潘神"
+    "npc_dota_creature_ithogoaki"                                                   "异界恶魔"
     "npc_dota_creature_prism_forge_spirit"                                          "深渊之火"
     "npc_dota_creature_dark_troll"                                                  "巨魔狂战士"
     "npc_dota_creature_furbolg_disrupter"                                           "地狱熊怪粉碎者"
@@ -447,7 +450,7 @@
     "npc_dota_creature_undying_shambling_draug"                                     "凛冬异鬼"
     "npc_dota_creature_wildkin_boss"                                                "远古枭兽"
     "npc_dota_creature_lost_ores"                                                   "渊狱惩击者"
-    "npc_dota_creature_red_dragon"                                                  "狂怒赤龙"
+    "npc_dota_creature_red_dragon"                                                  "远古巨龙"
     "npc_dota_creature_troll_warlord_icewrack_marauder"                             "巨魔劫掠者"
     "npc_dota_creature_tiny_04"                                                     "岩石巨人"
     "npc_dota_creature_centaur_khan"                                                "半人马可汗"
@@ -473,7 +476,7 @@
     "npc_dota_creature_razor_severing"                                              "断绝者"
     "npc_dota_creature_venomancer_ferocious_toxicant"                               "极恶猛毒"
     "npc_dota_creature_nightmare_hunter"                                            "梦魇猎杀者"
-    "npc_dota_creature_red_dragon_elder"                                            "上古巨龙"
+    "npc_dota_creature_red_dragon_elder"                                            "始祖巨龙"
     "npc_dota_creature_abyssal_tyrant"                                              "深渊主宰"
     "npc_dota_creature_roshan"                                                      "肉山"
     "npc_dota_creature_storegga_1"                                                  "磐石巨人"
@@ -506,6 +509,9 @@
 	"DOTA_Tooltip_ability_zuus_cloud_lua_cloud_bolt_interval"	                    "雷击间隔:"
     "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_bolt_damage"	                        "雷击伤害:"
     "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_radius"	                            "雷击范围:"
+    "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_nMystery"                            "<font color='#aa89bd'>神秘：</font>"
+    "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_nElement"                            "<font color='#aa89bd'>元素：</font>"
+
 
     "DOTA_Tooltip_ability_hunt_thirst_lua"	                                        "焦渴"
 	"DOTA_Tooltip_ability_hunt_thirst_lua_Description"	                            "血魔能够感知到敌人的伤口中涌出的鲜血，只要敌方单位的生命值低于%speed_bonus_threshold%%%，他的移动速度和攻击速度就会提升，而且生命值越低，提升效果越大。如果生命值低于%vision_bonus_threshold%%%，他还将获得该英雄的视野和真实视域。焦渴的效果可以叠加。"
@@ -513,12 +519,22 @@
     "DOTA_Tooltip_ability_hunt_thirst_lua_bonus_attack_speed"					    "最大攻击速度："
     "DOTA_Tooltip_ability_hunt_thirst_lua_speed_bonus_threshold"					"%触发焦渴临界生命值："
     "DOTA_Tooltip_ability_hunt_thirst_lua_vision_bonus_threshold"				    "%获得视野血量临界值："
+    "DOTA_Tooltip_ability_hunt_thirst_lua_nHunt"                                    "猎杀："
 
     "DOTA_Tooltip_ability_decay_summon_wraith_warrior"                              "召唤冥界士兵"
     "DOTA_Tooltip_ability_decay_summon_wraith_warrior_Description"                  "召唤强大的冥界士兵前来助战。"
     "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_duration"      "持续时间："
     "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_health"        "血量："
     "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_damage"        "攻击力："
+    "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_nDecay"        "<font color='#f8b551'>腐朽：</font>"
+   
+    "DOTA_Tooltip_ability_spirit_breaker_charge_of_darkness_nFury"                  "<font color='#eb6877'>狂怒:</font>"
+    "DOTA_Tooltip_ability_spirit_breaker_charge_of_darkness_nHunt"                  "猎杀:"
+  
+    "DOTA_Tooltip_ability_black_dragon_fireball_nFury"                              "<font color='#eb6877'>狂怒:</font>"
+    "DOTA_Tooltip_ability_black_dragon_fireball_nElement"                           "<font color='#eb6877'>元素:</font>"
+    
+    "DOTA_Tooltip_ability_lich_chain_frost_nElement"                                "<font color='#eb6877'>元素:</font>"
 
 
     "DOTA_Tooltip_modifier_forged_spirit_melting_strike_effect"                     "灼烧攻击"
@@ -526,6 +542,66 @@
     "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_Description"             "当熔炉精灵有足够魔法值时，其攻击将熔化敌方英雄的护甲。每次攻击命中后效果会叠加。"
     "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_armor_removed"           "每次攻击减甲："
     "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_duration"                "持续时间："
+    "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_nElement"                "<font color='#00a0e9'>元素：</font>"
+
+    
+    "DOTA_Tooltip_ability_centaur_khan_war_stomp_nFury"                             "<font color='#eb6877'>狂怒：</font>"
+    "DOTA_Tooltip_ability_centaur_khan_war_stomp_nDurable"                          "<font color='#f8b551'>坚韧：</font>"
+
+    "DOTA_Tooltip_ability_dark_troll_warlord_ensnare_nHunt"                         "猎杀："
+    
+    "DOTA_Tooltip_ability_ogre_magi_frost_armor_nElement"                           "<font color='#00a0e9'>元素：</font>"
+    "DOTA_Tooltip_ability_ogre_magi_frost_armor_nDurable"                           "<font color='#f8b551'>坚韧：</font>"
+
+    "DOTA_Tooltip_ability_lich_frost_shield_nElement"                               "<font color='#00a0e9'>元素：</font>"
+    "DOTA_Tooltip_ability_lich_frost_shield_nDurable"                               "<font color='#f8b551'>坚韧：</font>"
+
+    "DOTA_Tooltip_ability_gnoll_assassin_envenomed_weapon_nDecay"                   "<font color='#f8b551'>腐朽：</font>"
+    "DOTA_Tooltip_ability_gnoll_assassin_envenomed_weapon_nHunt"                    "猎杀："
+     
+
+    "DOTA_Tooltip_ability_spawnlord_master_freeze_nMystery"                         "<font color='#aa89bd'>神秘：</font>"
+    "DOTA_Tooltip_ability_spawnlord_master_freeze_nHunt"                            "猎杀:"     
+
+    "DOTA_Tooltip_ability_granite_golem_hp_aura_nDurable"                           "<font color='#f8b551'>坚韧:</font>"     
+    
+    "DOTA_Tooltip_ability_crystal_maiden_crystal_nova_nElement"                     "<font color='#00a0e9'>元素:</font>"     
+    "DOTA_Tooltip_ability_morphling_waveform_nElement"                              "<font color='#00a0e9'>元素:</font>"     
+    
+    "DOTA_Tooltip_ability_troll_warlord_battle_trance_nFury"                        "<font color='#eb6877'>狂怒:</font>"     
+    "DOTA_Tooltip_ability_troll_warlord_battle_trance_nHunt"                        "猎杀:"     
+
+    "DOTA_Tooltip_ability_venomancer_poison_nova_nHunt"                             "猎杀:" 
+    "DOTA_Tooltip_ability_venomancer_poison_nova_nDecay"                            "<font color='#f8b551'>腐朽:</font>" 
+    
+
+    "DOTA_Tooltip_ability_razor_eye_of_the_storm_nElement"                          "<font color='#00a0e9'>元素:</font>" 
+    "DOTA_Tooltip_ability_razor_eye_of_the_storm_nHunt"                             "猎杀:" 
+
+    "DOTA_Tooltip_ability_life_stealer_rage_nDecay"                                 "<font color='#f8b551'>腐朽：</font>" 
+    "DOTA_Tooltip_ability_life_stealer_rage_nFury"                                  "<font color='#eb6877'>狂怒:</font>" 
+    
+    
+    "DOTA_Tooltip_ability_pudge_meat_hook_nDecay"                                   "<font color='#f8b551'>腐朽：</font>" 
+    "DOTA_Tooltip_ability_pudge_meat_hook_nFury"                                    "<font color='#eb6877'>狂怒:</font>" 
+    
+        
+    "DOTA_Tooltip_ability_spectre_dispersion_nMystery"                              "<font color='#aa89bd'>神秘：</font>" 
+    "DOTA_Tooltip_ability_spectre_dispersion_nDurable"                              "<font color='#f8b551'>坚韧:</font>" 
+    
+    "DOTA_Tooltip_ability_faceless_void_chronosphere_nMystery"                      "<font color='#aa89bd'>神秘：</font>" 
+    "DOTA_Tooltip_ability_faceless_void_chronosphere_nFury"                         "<font color='#eb6877'>狂怒:</font>" 
+    
+    "DOTA_Tooltip_ability_dark_seer_surge_nMystery"                                  "<font color='#aa89bd'>神秘：</font>" 
+    "DOTA_Tooltip_ability_spectre_spectral_dagger_nMystery"                          "<font color='#aa89bd'>神秘：</font>" 
+
+    "DOTA_Tooltip_ability_wisp_relocate_nMystery"                                   "<font color='#aa89bd'>神秘：</font>" 
+
+    "DOTA_Tooltip_ability_ursa_fury_swipes_nFury"                                   "<font color='#eb6877'>狂怒:</font>" 
+    
+    "DOTA_Tooltip_ability_ursa_overpower_nFury"                                     "<font color='#eb6877'>狂怒:</font>" 
+
+    
 
 
     "DOTA_Tooltip_modifier_slark_shadow_dance_lua_invisible"                        "暗影之舞"
@@ -557,6 +633,8 @@
     "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_Description"                          "朝目标投掷巨石，造成伤害并眩晕。"
     "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_damage"                               "伤害："
     "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_duration"                             "眩晕时间："
+    "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_nDurable"                             "<font color='#f8b551'>坚韧</font>"     
+
 
     "DOTA_Tooltip_ability_durable_shard_split"                                            "碎土傀儡"
     "DOTA_Tooltip_ability_durable_shard_split_Description"                                "死亡时，泥土傀儡破碎成2个碎土傀儡,存活60秒。"
@@ -570,6 +648,8 @@
     "DOTA_Tooltip_ability_fury_berserk_lua_attack_damage_bonus"                           "额外攻击力："
     "DOTA_Tooltip_ability_fury_berserk_lua_attack_speed_bonus"                            "攻击速度提升："
     "DOTA_Tooltip_ability_fury_berserk_lua_movement_speed_bonus"                          "移动速度提升："
+    "DOTA_Tooltip_ability_fury_berserk_lua_nFury"                                         "<font color='#eb6877'>狂怒:</font>"
+
 
     "DOTA_Tooltip_ability_decay_tombstone"                                                "墓碑"
     "DOTA_Tooltip_ability_decay_tombstone_Description"                                    "在目标位置召唤一座墓碑。墓碑会不断在其附近的产生僵尸。"
@@ -578,11 +658,27 @@
     "DOTA_Tooltip_ability_decay_tombstone_zombie_health"                                  "僵尸血量："
     "DOTA_Tooltip_ability_decay_tombstone_zombie_damage"                                  "僵尸伤害："
     "DOTA_Tooltip_ability_decay_tombstone_max_zombie"                                     "同时存在的最大僵尸数量："
+    "DOTA_Tooltip_ability_decay_tombstone_nDecay"                                         "<font color='#f8b551'>腐朽：</font>"
+
+    
+    "DOTA_Tooltip_ability_clinkz_death_pact_nDecay"                                       "<font color='#f8b551'>腐朽：</font>"
+    "DOTA_Tooltip_ability_skeleton_king_mortal_strike_nDecay"                             "<font color='#f8b551'>腐朽：</font>"
+    "DOTA_Tooltip_ability_skeleton_king_mortal_strike_nFury"                              "<font color='#f8b551'>狂怒：</font>"
+
+
 
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage"                                             "召唤骷髅法师"
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_Description"                                 "在身边召唤一个脆弱的骷髅法师，具有幽冥轰爆技能。"
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_skeleton_mage_duration"                      "骷髅法师持续时间："
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_nether_blast_level"                          "骷髅法师幽冥轰爆等级："
+
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage_nDecay"                                      "<font color='#f8b551'>腐朽：</font>"
+    
+
+    "DOTA_Tooltip_ability_pugna_nether_blast_nDecay"                                             "<font color='#f8b551'>腐朽：</font>"
+    "DOTA_Tooltip_ability_pugna_nether_blast_nElement"                                           "<font color='#00a0e9'>元素：</font>"
+    
+
 
     "DOTA_Tooltip_ability_creature_ogre_melee_smash"                                              "食人魔重击"
     "DOTA_Tooltip_ability_creature_ogre_melee_smash_Description"                                  "重击地面，眩晕范围内的敌人并且，造成伤害。"
@@ -612,10 +708,15 @@
     "DOTA_Tooltip_ability_storegga_ground_pound_movespeed_slow"                          "减速效果："
   
     "DOTA_Tooltip_ability_frostbitten_icicle"                                            "冥界阴寒"
+    "DOTA_Tooltip_ability_frostbitten_icicle_nElement"                                   "<font color='#00a0e9'>元素</font>"
+    "DOTA_Tooltip_ability_frostbitten_icicle_nDecay"                                     "<font color='#b3d465'>腐朽</font>"
     "DOTA_Tooltip_ability_frostbitten_icicle_Description"                                "破坏性的寒霜在目标区域爆发，造成范围伤害并冻结区域内敌人。"
     "DOTA_Tooltip_ability_frostbitten_icicle_radius"                                     "作用范围："
     "DOTA_Tooltip_ability_frostbitten_icicle_damage"                                     "伤害："
     "DOTA_Tooltip_ability_frostbitten_icicle_freeze_duration"                            "冻结时间："
+
+    "DOTA_Tooltip_ability_harpy_storm_chain_lightning_nElement"                          "<font color='#00a0e9'>元素</font>"
+
 
     "DOTA_Tooltip_ability_creature_ogreseal_flop"                                        "海象扑击"
     "DOTA_Tooltip_ability_creature_ogreseal_flop_Description"                            "向前扑打，每次造成%damage%点伤害并眩晕%stun_duration%秒。"
@@ -643,6 +744,7 @@
     "DOTA_Tooltip_ability_durable_damage_return_lua"                                     "反伤"
     "DOTA_Tooltip_ability_durable_damage_return_lua_Description"                         "开启后，反弹所有受到的伤害。"
     "DOTA_Tooltip_ability_durable_damage_return_lua_duration"                            "持续时间："
+    "DOTA_Tooltip_ability_durable_damage_return_lua_nDurable"                            "<font color='#f8b551'>坚韧:</font>"
 
     "DOTA_Tooltip_ability_item_robe_lua"                                                "法师长袍"
     "DOTA_Tooltip_ability_item_robe_lua_spell_amplify"                                  "%+技能增强"
@@ -753,7 +855,10 @@
 
     "DOTA_Tooltip_ability_item_enchanted_mango_lua"                                                "魔法芒果"
     "DOTA_Tooltip_ability_item_enchanted_mango_lua_Description"                                    "<h1>使用：吞食芒果</h1>立刻回复%replenish_amount%点魔法。<br>"
-    "DOTA_Tooltip_ability_item_enchanted_mango_hp_regen"                                           "+$hp_regen"
+    "DOTA_Tooltip_ability_item_enchanted_mango_lua_hp_regen"                                       "+$hp_regen"
+
+    "DOTA_Tooltip_ability_elder_red_dragon_passive_lua"                                            "溅射攻击"
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"

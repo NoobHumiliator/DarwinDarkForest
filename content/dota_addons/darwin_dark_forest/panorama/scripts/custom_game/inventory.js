@@ -1,6 +1,20 @@
-function SubmitKey(){
+function SubmitTaobaoCode(){
+    
+    $("#SubmitTaobaoCodeButtonLabel").AddClass("Hidden")
+    $("#SubmitTaobaoCodeButtonLoading").RemoveClass("Hidden")
+    $("#SubmitTaobaoCodeButton").enabled=false;
 
-	
+
+    var playerInfo = Game.GetPlayerInfo( Players.GetLocalPlayer() );
+    if ( !playerInfo )
+        return;
+    var playerId = playerInfo.player_id;
+
+    var code= $("#TaobaoCodeEntry").text;
+
+    GameEvents.SendCustomGameEventToServer('SubmitTaobaoCode', {
+        playerId:playerId, code:code
+    })
 }
 
 
@@ -168,10 +182,47 @@ function ShowLotteryPage(){
 }
 
 
+function TaobaoCodeResult (keys) {
+
+    
+    if ($("#SubmitTaobaoCodeButtonLabel")==undefined)
+    {
+       return;
+    }
+
+    $("#SubmitTaobaoCodeButtonLabel").RemoveClass("Hidden")
+    $("#SubmitTaobaoCodeButtonLoading").AddClass("Hidden")
+    $("#SubmitTaobaoCodeButton").enabled=true;
+    
+    $("#TaobaoCodeNotify").RemoveClass("GreenAlert")
+    $("#TaobaoCodeNotify").RemoveClass("RedAlert")
+
+    if (keys.type=="1") {
+        
+
+        $("#TaobaoCodeNotify").text=$.Localize("TaobaoCodeSuccess")+keys.dna_bonus;
+        $("#TaobaoCodeNotify").AddClass("GreenAlert")
+    }
+
+    if (keys.type=="2") { 
+
+        $("#TaobaoCodeNotify").text=$.Localize("InvalideTaobaoCode");
+        $("#TaobaoCodeNotify").AddClass("RedAlert")
+    }
+    
+    if (keys.type=="3") {
+
+        $("#TaobaoCodeNotify").text=$.Localize("TaobaoCodeOccupied");
+        $("#TaobaoCodeNotify").AddClass("RedAlert")
+    }
+}
+
 
 
 (function()
 {   
     CustomNetTables.SubscribeNetTableListener("econ_data", EconDataArrive);
+    GameEvents.Subscribe( "TaobaoCodeResult", TaobaoCodeResult ); //返回充值信息
+
 
 })();
