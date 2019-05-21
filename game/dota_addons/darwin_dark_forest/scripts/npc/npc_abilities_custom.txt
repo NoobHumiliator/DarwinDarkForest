@@ -880,8 +880,6 @@
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"   
 
-        "nMystery"                      "6 12 18 24 30"
-         
         // Stats
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "600"
@@ -897,6 +895,11 @@
             {
                 "var_type"              "FIELD_INTEGER"
                 "burn_amount"           "100 130 160 190 220"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "nMystery"              "6 12 18 24 30"
             }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
@@ -3027,9 +3030,6 @@
         "AbilitySound"                  "Hero_Riki.Blink_Strike"
         
         "MaxLevel"                      "5"
-        
-        "nMystery"                      "10 20 30 40 50"
-        "nHunt"                         "10 20 30 40 50"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -3059,6 +3059,16 @@
                 "var_type"                  "FIELD_INTEGER"
                 "bonus_damage"              "75 90 105 120 135"
             }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nMystery"                  "10 20 30 40 50"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nHunt"                     "10 20 30 40 50"
+            }
         }
         "AbilityCastAnimation"              "ACT_DOTA_CAST_ABILITY_2"
     }
@@ -3068,7 +3078,6 @@
         "BaseClass"                     "shredder_reactive_armor"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
-        "nDurable"                      "5 13 21 29 37 45 53 61 69 77"
         "MaxLevel"                      "10"
         
         // Special
@@ -3096,6 +3105,11 @@
                 "var_type"                          "FIELD_FLOAT"
                 "stack_duration"                    "4 6 8 10 12 14 16 18 20 22"
             }
+            "05"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "nDurable"                          "4 6 8 10 12 14 16 18 20 22"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
     }
@@ -3109,7 +3123,7 @@
         "BaseClass"                     "mars_bulwark"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "MaxLevel"                      "8"
-        "nDurable"                      "10 20 30 40 50 60 70 80"
+
         // Special
         //-------------------------------------------------------------------------------------------------------------
         "AbilitySpecial"
@@ -3133,6 +3147,11 @@
             {
                 "var_type"                      "FIELD_INTEGER"
                 "side_angle"                    "240"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "nDurable"                      "10 20 30 40 50 60 70 80"
             }
         }
     }
@@ -3210,8 +3229,6 @@
         "AbilitySound"                  "Hero_Bristleback.Bristleback"
         "MaxLevel"                      "8"
 
-        "nDurable"                      "10 20 30 40 50 60 70 80"
-        
         // Special
         //-------------------------------------------------------------------------------------------------------------
         "AbilitySpecial"
@@ -3241,6 +3258,11 @@
                 "var_type"                      "FIELD_INTEGER"
                 "quill_release_threshold"        "210"
             }
+            "06"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "nDurable"                      "10 20 30 40 50 60 70 80"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
     }
@@ -3255,7 +3277,6 @@
 
         "AbilityTextureName"            "slark_shadow_dance"
         "MaxLevel"                      "8"
-        "nHunt"                         "5 13 21 29 37 45 53 61"
 
         "AbilityCooldown"               "33 30 27 24 21 18 15 12"
         "precache"
@@ -3276,6 +3297,16 @@
             {
                 "var_type"                  "FIELD_INTEGER"
                 "bonus_movement_speed"      "30 40 50 60 70 80 90 100"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "bonus_movement_speed"      "30 40 50 60 70 80 90 100"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nHunt"                     "5 13 21 29 37 45 53 61"
             }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
@@ -3304,7 +3335,6 @@
 
         "AbilityCastRange"              "1000"
         "MaxLevel"                      "8"
-        "nHunt"                         "8 16 24 32 40 48 56 64"
 
         "AbilityCastPoint"              "0.3"
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
@@ -3331,6 +3361,11 @@
                 "var_type"              "FIELD_INTEGER"
                 "bonus_move_speed_pct"  "16 18 20 22 24 26 28 30"
             }
+           "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "nHunt"                 "8 16 24 32 40 48 56 64"
+            }
         }
     }
 
@@ -3341,8 +3376,6 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "MaxLevel"                      "9"
 
-        "nHunt"                         "8 16 24 32 40 48 56 64 99"
-            
         // Special
         //-------------------------------------------------------------------------------------------------------------
         "AbilitySpecial"
@@ -3358,6 +3391,11 @@
                 "bonus_attack_speed_night"          "30 55 80 105 130 155 180 205 1000"
                 "LinkedSpecialBonus"                "special_bonus_unique_night_stalker_2"
             }
+            "03"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "nHunt"                             "8 16 24 32 40 48 56 64 99"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
     }
@@ -3371,8 +3409,6 @@
         "AbilitySound"                  "Hero_Nightstalker.Darkness"
 
         "MaxLevel"                      "9"
-         "nHunt"                        "8 16 24 32 40 48 56 64 99"
-
 
         // Stats
         //-------------------------------------------------------------------------------------------------------------
@@ -3396,6 +3432,11 @@
                 "var_type"              "FIELD_INTEGER"
                 "bonus_damage"          "75 100 125 150 175 200 225 250 300"
             }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "nHunt"                 "8 16 24 32 40 48 56 64 99"
+            }
         }
     }
 
@@ -3417,9 +3458,6 @@
 
         "MaxLevel"                      "6"
       
-
-        "nFury"                         "4 8 12 16 20 24"
-        "nDurable"                      "4 8 12 16 20 24"
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastPoint"              "0.3"
@@ -3496,6 +3534,16 @@
                 "var_type"                  "FIELD_FLOAT"
                 "cooldown_scepter"          "4"
             }
+            "11"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nFury"                     "4 8 12 16 20 24"
+            }
+            "12"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nDurable"                  "4 8 12 16 20 24"
+            }
         }
     }
 
@@ -3507,7 +3555,6 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         
         "MaxLevel"                      "8"
-        "nFury"                         "8 16 24 32 40 48 56 64"
 
         // Special
         //-------------------------------------------------------------------------------------------------------------
@@ -3528,6 +3575,11 @@
                 "var_type"                      "FIELD_INTEGER"
                 "hp_threshold_max"              "10"
             }
+            "04"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "nFury"                         "8 16 24 32 40 48 56 64"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
     }
@@ -3545,9 +3597,6 @@
         "AbilitySound"                  "Hero_Warlock.ShadowWordCastGood"
 
         "MaxLevel"                      "8"
-
-        "nDurable"                      "4 9 14 19 24 29 34 39"
-        "nDecay"                        "4 9 14 19 24 29 34 39"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -3592,6 +3641,16 @@
                 "var_type"                  "FIELD_INTEGER"
                 "range_tooltip"             "450 500 550 600 650 700 750 800"
             }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nDurable"                  "4 9 14 19 24 29 34 39"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nDecay"                    "4 9 14 19 24 29 34 39"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
     }   
@@ -3632,9 +3691,6 @@
         "AbilityTextureName"            "visage_gravekeepers_cloak"
         "MaxLevel"                      "8"
 
-        "nDurable"                      "4 9 14 19 24 29 34 39"
-        "nDecay"                        "4 9 14 19 24 29 34 39"
-
         "ScriptFile"                    "creature_ability/visage_gravekeepers_cloak_lua"
 
         // Special
@@ -3666,6 +3722,16 @@
                 "var_type"                          "FIELD_INTEGER"
                 "radius"                            "1200"
             }
+            "06"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "nDurable"                           "4 9 14 19 24 29 34 39"
+            }
+            "07"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "nDecay"                            "4 9 14 19 24 29 34 39"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
     }
@@ -3682,9 +3748,6 @@
         "FightRecapLevel"               "1"
         "AbilitySound"                  "Hero_DeathProphet.CarrionSwarm"
         "MaxLevel"                      "8"
-
-        "nDecay"                        "4 7 10 13 16 19 22 25"
-        "nElement"                      "4 7 10 13 16 19 22 25"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -3727,6 +3790,16 @@
                 "var_type"                  "FIELD_INTEGER"
                 "speed"                     "1100"
             }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nDecay"                    "4 7 10 13 16 19 22 25"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nElement"                  "4 7 10 13 16 19 22 25"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
     }
@@ -3761,9 +3834,6 @@
 
         "MaxLevel"                      "5"
 
-        "nMystery"                      "20 30 40 50 60"
-        "nDecay"                        "20 30 40 50 60"
-
         "AbilityCastPoint"              "0"
         // Time     
         //-------------------------------------------------------------------------------------------------------------
@@ -3797,6 +3867,16 @@
                 "var_type"                  "FIELD_INTEGER"
                 "familiar_number"           "2 2 3 3 4"
             }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nMystery"                  "20 30 40 50 60"
+            }
+           "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nDecay"                    "20 30 40 50 60"
+            }
         }
     }
 
@@ -3813,10 +3893,6 @@
         "FightRecapLevel"               "1"
         "MaxLevel"                      "8"
         "AbilitySound"                  "Hero_DragonKnight.BreathFire"
-
-        
-        "nFury"                         "3 7 11 15 19 23 27 31"
-        "nElement"                      "3 7 11 15 19 23 27 31"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -3870,6 +3946,16 @@
                 "var_type"              "FIELD_FLOAT"
                 "duration"              "11"
             }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "nFury"                  "3 7 11 15 19 23 27 31"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "nElement"              "3 7 11 15 19 23 27 31"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
     }
@@ -3888,9 +3974,6 @@
         "AbilitySound"                  "Ability.GushCast"
 
         "MaxLevel"                      "8"
-
-        "nHunt"                         "3 7 11 15 19 23 27 31"
-        "nElement"                      "3 7 11 15 19 23 27 31"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -3952,6 +4035,16 @@
                 "var_type"          "FIELD_INTEGER"
                 "cast_range_scepter"        "1800"
             }
+            "09"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "nHunt"             "3 7 11 15 19 23 27 31"
+            }
+            "10"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "nElement"          "3 7 11 15 19 23 27 31"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
     }
@@ -3965,9 +4058,6 @@
         "AbilitySound"                  "Hero_Spirit_Breaker.EmpoweringHaste.Cast"
         
         "MaxLevel"                      "4"
-        "nDurable"                      "5 11 17 23"
-        "nHunt"                         "5 11 17 23"
-
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         
@@ -3996,6 +4086,16 @@
                 "var_type"                      "FIELD_FLOAT"
                 "duration"                      "8"
             }
+            "04"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "nDurable"                      "5 11 17 23"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "nHunt"                         "5 11 17 23"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
         "AbilityCastGestureSlot"        "DEFAULT"
@@ -4011,9 +4111,6 @@
         "AbilitySound"                  "Hero_Spirit_Breaker.GreaterBash"
 
         "MaxLevel"                      "8"
-
-        "nHunt"                         "3 7 11 15 19 23 27 31"
-        "nDurable"                      "3 7 11 15 19 23 27 31"
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
@@ -4069,6 +4166,16 @@
                 "var_type"              "FIELD_FLOAT"
                 "movespeed_duration"    "3.0"
             }
+            "09"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "nHunt"                 "3 7 11 15 19 23 27 31"
+            }
+            "10"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "nDurable"              "3 7 11 15 19 23 27 31"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
     }
@@ -4082,9 +4189,6 @@
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
         "AbilitySound"                  "Hero_TemplarAssassin.Refraction"
-        
-        "nMystery"                      "2 8 14 20 26 32 38 44"
-        "nDurable"                      "2 8 14 20 26 32 38 44"   
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -4123,6 +4227,16 @@
                 "var_type"                  "FIELD_FLOAT"
                 "duration"                  "17.0"
             }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nMystery"                  "2 8 14 20 26 32 38 44"
+            }
+           "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nDurable"                  "2 8 14 20 26 32 38 44"   
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
     }
@@ -4141,9 +4255,6 @@
         "HasScepterUpgrade"             "1"
 
         "MaxLevel"                      "6"
-
-        "nMystery"                      "6 13 20 27 34 41"
-        "nElement"                      "6 13 20 27 34 41"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -4218,6 +4329,16 @@
                 "var_type"              "FIELD_FLOAT"
                 "frostbite_duration_scepter"    "17"
             }
+            "11"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "nMystery"               "6 13 20 27 34 41"
+            }
+            "12"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "nElement"              "6 13 20 27 34 41"
+            }
         }
     }
 
@@ -4268,7 +4389,6 @@
         "AbilityTextureName"            "durable_shard_split"
 
         "MaxLevel"                      "8"
-        "nDurable"                      "4 8 12 16 20 24 28 32"
 
         // Special
         //-------------------------------------------------------------------------------------------------------------
@@ -4293,6 +4413,11 @@
             {
                 "var_type"                     "FIELD_FLOAT"
                 "duration"                     "60"
+            }
+            "05"
+            {
+                "var_type"                     "FIELD_INTEGER"
+                "nDurable"                     "4 8 12 16 20 24 28 32"
             }
         }
     }
@@ -4646,9 +4771,6 @@
         "AbilitySound"                  "Hero_Dark_Seer.Vacuum"
 
         "MaxLevel"                      "8"
-        
-        "nMystery"                      "4 8 12 16 20 24 28 32"
-        "nElement"                      "4 8 12 16 20 24 28 32"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -4693,6 +4815,16 @@
                 "var_type"              "FIELD_INTEGER"
                 "cast_range_tooltip"    "450 500 550 600 650 700 750 800"
             }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                 "nMystery"             "4 8 12 16 20 24 28 32"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "nElement"              "4 8 12 16 20 24 28 32"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
     }
@@ -4710,10 +4842,6 @@
         "FightRecapLevel"               "1"
         "MaxLevel"                      "8"
         "AbilitySound"                  "Hero_Dark_Seer.Ion_Shield_Start"
-
-
-        "nMystery"                      "4 8 12 16 20 24 28 32"
-        "nDurable"                      "4 8 12 16 20 24 28 32"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -4751,6 +4879,16 @@
             {
                 "var_type"              "FIELD_FLOAT"
                 "duration"              "25"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "nMystery"              "4 8 12 16 20 24 28 32"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "nDurable"              "4 8 12 16 20 24 28 32"
             }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
@@ -4817,11 +4955,8 @@
         "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
         "FightRecapLevel"               "2"
         "AbilitySound"                  "Hero_Dazzle.Weave"
-
-        "nDecay"                        "4 8 16 20 24 28 32 36"
-        "nMystery"                      "4 8 16 20 24 28 32 36"
-
-        
+        "MaxLevel"                      "6"
+     
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "1200"
@@ -4834,12 +4969,12 @@
             "01"
             {   
                 "var_type"                  "FIELD_INTEGER"
-                "cooldown_reduction"        "20 30 40 50 60 70 80 90"
+                "cooldown_reduction"        "30 40 50 60 70 80"
             }
             "02"
             {   
                 "var_type"                  "FIELD_FLOAT"
-                "armor_reduction"           "2 2.25 2.5 2.75 3 3.25 3.5 3.75"
+                "armor_reduction"           "2 2.5 3 3.5 4 4.5"
                 "LinkedSpecialBonus"        "special_bonus_unique_dazzle_4"
             }
             "03"
@@ -4851,6 +4986,16 @@
             {
                 "var_type"                  "FIELD_INTEGER"
                 "radius"                    "1200"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nDecay"                    "6 12 18 24 30 36"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nMystery"                  "6 12 18 24 30 36"
             }
         }
     }
@@ -4937,9 +5082,6 @@
 
         "MaxLevel"                      "6"
 
-        "nDecay"                        "5 10 15 20 25 30"
-        "nMystery"                      "5 10 15 20 25 30"
-
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastAnimation"          "ACT_DOTA_MIDNIGHT_PULSE"
@@ -4974,6 +5116,16 @@
                 "var_type"                  "FIELD_FLOAT"
                 "duration"                  "9 10 11 12 13 14"
             }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nDecay"                    "5 10 15 20 25 30"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nMystery"                  "5 10 15 20 25 30"
+            }
         }
     }
 
@@ -4988,6 +5140,20 @@
         "precache"
         {
             "particle"                  "particles/units/heroes/hero_dragon_knight/dragon_knight_transform_red.vpcf"
+        }
+    }
+
+    "elder_green_dragon_passive_lua"
+    {
+        "BaseClass"                     "ability_lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "MaxLevel"                      "1"
+        "AbilityTextureName"            "dragon_knight_elder_dragon_form"
+        "ScriptFile"                    "creature_ability/elder_green_dragon_passive_lua"
+        "precache"
+        {
+            "particle"                  "particles/units/heroes/hero_dragon_knight/dragon_knight_transform_green.vpcf"
         }
     }
     

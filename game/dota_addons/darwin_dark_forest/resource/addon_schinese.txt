@@ -134,6 +134,10 @@
 
     "econ_bitter_lineage"                            "愤恨血脉"
 
+    "econ_third_awakening"                                "三度觉醒"
+    "econ_dragon_immortal"                                "铁龙血脉"
+    "econ_legacy_of_the_winterwyrm"                       "寒翼之遗"
+
     "econ_bai_tuo_shei_qu"                                "拜托谁去"
     "econ_duiyou_ne"                                      "队友呢"
     "econ_ni_qi_bu_qi"                                    "你气不气"
@@ -451,6 +455,7 @@
     "npc_dota_creature_wildkin_boss"                                                "远古枭兽"
     "npc_dota_creature_lost_ores"                                                   "渊狱惩击者"
     "npc_dota_creature_red_dragon"                                                  "远古巨龙"
+    "npc_dota_creature_green_dragon"                                                "腐蚀巨龙"
     "npc_dota_creature_troll_warlord_icewrack_marauder"                             "巨魔劫掠者"
     "npc_dota_creature_tiny_04"                                                     "岩石巨人"
     "npc_dota_creature_centaur_khan"                                                "半人马可汗"
@@ -477,6 +482,7 @@
     "npc_dota_creature_venomancer_ferocious_toxicant"                               "极恶猛毒"
     "npc_dota_creature_nightmare_hunter"                                            "梦魇猎杀者"
     "npc_dota_creature_red_dragon_elder"                                            "始祖巨龙"
+    "npc_dota_creature_green_dragon_elder"                                          "始祖腐蚀龙"
     "npc_dota_creature_abyssal_tyrant"                                              "深渊主宰"
     "npc_dota_creature_roshan"                                                      "肉山"
     "npc_dota_creature_storegga_1"                                                  "磐石巨人"
@@ -592,8 +598,8 @@
     "DOTA_Tooltip_ability_faceless_void_chronosphere_nMystery"                      "<font color='#aa89bd'>神秘：</font>" 
     "DOTA_Tooltip_ability_faceless_void_chronosphere_nFury"                         "<font color='#eb6877'>狂怒:</font>" 
     
-    "DOTA_Tooltip_ability_dark_seer_surge_nMystery"                                  "<font color='#aa89bd'>神秘：</font>" 
-    "DOTA_Tooltip_ability_spectre_spectral_dagger_nMystery"                          "<font color='#aa89bd'>神秘：</font>" 
+    "DOTA_Tooltip_ability_dark_seer_surge_nMystery"                                 "<font color='#aa89bd'>神秘：</font>" 
+    "DOTA_Tooltip_ability_spectre_spectral_dagger_nMystery"                         "<font color='#aa89bd'>神秘：</font>" 
 
     "DOTA_Tooltip_ability_wisp_relocate_nMystery"                                   "<font color='#aa89bd'>神秘：</font>" 
 
@@ -601,7 +607,18 @@
     
     "DOTA_Tooltip_ability_ursa_overpower_nFury"                                     "<font color='#eb6877'>狂怒:</font>" 
 
+    "DOTA_Tooltip_ability_satyr_soulstealer_mana_burn_nMystery"                     "<font color='#aa89bd'>神秘：</font>" 
+
     
+    "DOTA_Tooltip_ability_riki_blink_strike_nMystery"                               "<font color='#aa89bd'>神秘：</font>"
+    "DOTA_Tooltip_ability_riki_blink_strike_nHunt"                                  "猎杀："
+
+
+    "DOTA_Tooltip_ability_shredder_reactive_armor_nDurable"                         "<font color='#f8b551'>坚韧:</font>"
+    "DOTA_Tooltip_ability_mars_bulwark_nDurable"                                    "<font color='#f8b551'>坚韧:</font>"
+   
+    "DOTA_Tooltip_ability_bristleback_bristleback_nDurable"                         "<font color='#f8b551'>坚韧:</font>"
+
 
 
     "DOTA_Tooltip_modifier_slark_shadow_dance_lua_invisible"                        "暗影之舞"
@@ -609,7 +626,8 @@
     "DOTA_Tooltip_ability_slark_shadow_dance_lua_Description"                       "斯拉克将自己藏进暗影之云，变成隐身状态，提高移动速度，不会被反隐手段发现。攻击、施法、使用物品都不会使斯拉克显形。"
     "DOTA_Tooltip_ability_slark_shadow_dance_lua_duration"                          "持续时间："
     "DOTA_Tooltip_ability_slark_shadow_dance_lua_bonus_movement_speed"              "移动速度加成："
-    
+    "DOTA_Tooltip_ability_slark_shadow_dance_lua_nHunt"                             "猎杀："
+
 
     "DOTA_Tooltip_modifier_bounty_hunter_track_lua_debuff"                           "追踪术"
     "DOTA_Tooltip_modifier_bounty_hunter_track_lua_speed"                            "速度提升"
@@ -618,6 +636,19 @@
     "DOTA_Tooltip_ability_bounty_hunter_track_lua_target_crit_multiplier"            "%自身致命一击："
     "DOTA_Tooltip_ability_bounty_hunter_track_lua_duration"                          "持续时间："
     "DOTA_Tooltip_ability_bounty_hunter_track_lua_bonus_move_speed_pct"              "自身移动速度提升："
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua_nHunt"                             "猎杀："
+
+
+    "DOTA_Tooltip_ability_night_stalker_hunter_in_the_night_nHunt"                    "猎杀："
+    "DOTA_Tooltip_ability_night_stalker_darkness_nHunt"                               "猎杀："
+
+    "DOTA_Tooltip_ability_huskar_life_break_nFury"                                     "<font color='#eb6877'>狂怒：</font>"
+    "DOTA_Tooltip_ability_huskar_life_break_nDurable"                                  "<font color='#f8b551'>坚韧：</font>"
+    
+
+    "DOTA_Tooltip_ability_huskar_berserkers_blood_nDurable"                            "<font color='#f8b551'>坚韧：</font>"
+    "DOTA_Tooltip_ability_warlock_shadow_word_nDurable"                                "<font color='#f8b551'>坚韧：</font>"
+    "DOTA_Tooltip_ability_warlock_shadow_word_nDecay"                                  "<font color='#f8b551'>腐朽：</font>"
 
 
     "DOTA_Tooltip_modifier_visage_gravekeepers_cloak_lua_effect"                           "陵卫斗篷"
@@ -628,12 +659,18 @@
     "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_recovery_time"                     "每层恢复时间："
     "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_minimum_damage"                    "最低伤害："
 
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_nDurable"                          "<font color='#f8b551'>坚韧：</font>"
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_nDecay"                            "<font color='#f8b551'>腐朽：</font>"
+
+    "DOTA_Tooltip_ability_death_prophet_carrion_swarm_nDecay"                              "<font color='#f8b551'>腐朽：</font>"
+    "DOTA_Tooltip_ability_death_prophet_carrion_swarm_nElement"                            "<font color='#00a0e9'>元素:</font>"
+ 
     
     "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua"                                      "投石"
     "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_Description"                          "朝目标投掷巨石，造成伤害并眩晕。"
     "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_damage"                               "伤害："
     "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_duration"                             "眩晕时间："
-    "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_nDurable"                             "<font color='#f8b551'>坚韧</font>"     
+    "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_nDurable"                             "<font color='#f8b551'>坚韧：</font>"     
 
 
     "DOTA_Tooltip_ability_durable_shard_split"                                            "碎土傀儡"
@@ -641,6 +678,7 @@
     "DOTA_Tooltip_ability_durable_shard_split_shard_damage"                               "碎土傀儡攻击力："
     "DOTA_Tooltip_ability_durable_shard_split_shard_health"                               "碎土傀儡血量："
     "DOTA_Tooltip_ability_durable_shard_split_hurl_boulder_level"                         "碎土傀儡投石技能等级："
+    "DOTA_Tooltip_ability_durable_shard_split_nDurable"                                   "<font color='#f8b551'>坚韧：</font>"
 
     "DOTA_Tooltip_ability_fury_berserk_lua"                                               "狂暴"
     "DOTA_Tooltip_ability_fury_berserk_lua_Description"                                   "大幅提升攻击，攻击速度，移动速度。但是受到的伤害加深，并且被沉默，持续8秒。"
@@ -649,6 +687,20 @@
     "DOTA_Tooltip_ability_fury_berserk_lua_attack_speed_bonus"                            "攻击速度提升："
     "DOTA_Tooltip_ability_fury_berserk_lua_movement_speed_bonus"                          "移动速度提升："
     "DOTA_Tooltip_ability_fury_berserk_lua_nFury"                                         "<font color='#eb6877'>狂怒:</font>"
+    
+
+    "DOTA_Tooltip_dark_seer_vacuum_nMystery"                                              "<font color='#aa89bd'>神秘：</font>"
+    "DOTA_Tooltip_dark_seer_vacuum_nElement"                                              "<font color='#00a0e9'>元素:</font>"
+
+    
+    "DOTA_Tooltip_dark_seer_ion_shell_nMystery"                                           "<font color='#aa89bd'>神秘：</font>"
+    "DOTA_Tooltip_dark_seer_ion_shell_nDurable"                                           "<font color='#f8b551'>坚韧：</font>"
+
+    "DOTA_Tooltip_dazzle_bad_juju_nMystery"                                              "<font color='#aa89bd'>神秘：</font>"
+    "DOTA_Tooltip_dazzle_bad_juju_nDecay"                                                "<font color='#f8b551'>腐朽：</font>"
+
+    "DOTA_Tooltip_enigma_midnight_pulse_nMystery"                                         "<font color='#aa89bd'>神秘：</font>"
+    "DOTA_Tooltip_enigma_midnight_pulse_nDecay"                                           "<font color='#f8b551'>腐朽：</font>"
 
 
     "DOTA_Tooltip_ability_decay_tombstone"                                                "墓碑"
@@ -672,12 +724,43 @@
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_skeleton_mage_duration"                      "骷髅法师持续时间："
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_nether_blast_level"                          "骷髅法师幽冥轰爆等级："
 
-    "DOTA_Tooltip_ability_decay_summon_skeleton_mage_nDecay"                                      "<font color='#f8b551'>腐朽：</font>"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar"                                          "召唤佣兽"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_Description"                              "召唤%familiar_number%只盲眼的佣兽为维萨吉作战。佣兽拥有石像形态技能，可以化为石像，在落地时使敌人眩晕。在石像形态中的佣兽无敌，并且迅速回复生命值。佣兽被击杀时给予高额奖励。"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_number"                          "佣兽数量"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_hp"                              "佣兽血量"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_armor"                           "佣兽护甲"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_attack_damage"                   "佣兽攻击力"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_nMystery"                        "<font color='#aa89bd'>神秘：</font>"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_nDecay"                          "<font color='#f8b551'>腐朽：</font>"
+
+
+    
+    "DOTA_Tooltip_ability_dragon_knight_breathe_fire_nFury"                                      "<font color='#f8b551'>狂怒：</font>"
+    "DOTA_Tooltip_ability_dragon_knight_breathe_fire_nElement"                                   "<font color='#00a0e9'>元素:</font>"
+
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage_nDecay"                                     "<font color='#f8b551'>腐朽：</font>"
     
 
     "DOTA_Tooltip_ability_pugna_nether_blast_nDecay"                                             "<font color='#f8b551'>腐朽：</font>"
     "DOTA_Tooltip_ability_pugna_nether_blast_nElement"                                           "<font color='#00a0e9'>元素：</font>"
+     
+    "DOTA_Tooltip_ability_tidehunter_gush_nElement"                                              "<font color='#00a0e9'>元素：</font>"
+    "DOTA_Tooltip_ability_tidehunter_gush_nHunt"                                                 "猎杀："
+
+    "DOTA_Tooltip_ability_spirit_breaker_bulldoze_nDurable"                                       "<font color='#f8b551'>坚韧：</font>"
+    "DOTA_Tooltip_ability_spirit_breaker_bulldoze_nHunt"                                          "猎杀："
     
+
+    "DOTA_Tooltip_ability_spirit_breaker_greater_bash_nDurable"                                   "<font color='#f8b551'>坚韧：</font>"
+    "DOTA_Tooltip_ability_spirit_breaker_greater_bash_nHunt"                                      "猎杀："
+     
+
+    "DOTA_Tooltip_ability_templar_assassin_refraction_nDurable"                                   "<font color='#f8b551'>坚韧：</font>"
+    "DOTA_Tooltip_ability_templar_assassin_refraction_nMystery"                                   "<font color='#aa89bd'>神秘：</font>"
+
+    "DOTA_Tooltip_ability_ancient_apparition_ice_blast_nElement"                                  "<font color='#00a0e9'>元素：</font>"
+    "DOTA_Tooltip_ability_ancient_apparition_ice_blast_nMystery"                                  "<font color='#aa89bd'>神秘：</font>"
+
 
 
     "DOTA_Tooltip_ability_creature_ogre_melee_smash"                                              "食人魔重击"
@@ -858,6 +941,8 @@
     "DOTA_Tooltip_ability_item_enchanted_mango_lua_hp_regen"                                       "+$hp_regen"
 
     "DOTA_Tooltip_ability_elder_red_dragon_passive_lua"                                            "溅射攻击"
+    "DOTA_Tooltip_ability_elder_red_dragon_passive_lua_Description"                                "溅射攻击：攻击时伤害将溅射到300范围内所有单位。"
+
 
 
     //EconUnitBegins
@@ -997,15 +1082,15 @@
 	"npc_dota_creature_broodmother_lycosidae_brood"                  "育母蜘蛛"
 	"npc_dota_creature_broodmother_glutton_larder_lycosidae_brood"                  "饕餮蛛母"
 	"npc_dota_creature_spider_queen_lycosidae_brood"                  "蜘蛛女皇"
-	"npc_dota_creature_razor_severing_lash"                  "闪电幽魂"
 	"npc_dota_creature_razor_golden_severing_crest"                  "闪电幽魂"
-	"npc_dota_creature_razor_severing_lash_golden_severing_crest"                  "闪电幽魂"
-	"npc_dota_creature_razor_lightning_lord_severing_lash"                  "闪电帝国领主"
+	"npc_dota_creature_razor_severing_lash"                  "闪电幽魂"
+	"npc_dota_creature_razor_golden_severing_crest_severing_lash"                  "闪电幽魂"
 	"npc_dota_creature_razor_lightning_lord_golden_severing_crest"                  "闪电帝国领主"
-	"npc_dota_creature_razor_lightning_lord_severing_lash_golden_severing_crest"                  "闪电帝国领主"
-	"npc_dota_creature_razor_affront_of_the_overseer_severing_lash"                  "监察之蔑"
+	"npc_dota_creature_razor_lightning_lord_severing_lash"                  "闪电帝国领主"
+	"npc_dota_creature_razor_lightning_lord_golden_severing_crest_severing_lash"                  "闪电帝国领主"
 	"npc_dota_creature_razor_affront_of_the_overseer_golden_severing_crest"                  "监察之蔑"
-	"npc_dota_creature_razor_affront_of_the_overseer_severing_lash_golden_severing_crest"                  "监察之蔑"
+	"npc_dota_creature_razor_affront_of_the_overseer_severing_lash"                  "监察之蔑"
+	"npc_dota_creature_razor_affront_of_the_overseer_golden_severing_crest_severing_lash"                  "监察之蔑"
 	"npc_dota_creature_riki_crimson_edict_of_shadows"                  "隐形刺客"
 	"npc_dota_creature_riki_golden_edict_of_shadows"                  "隐形刺客"
 	"npc_dota_creature_riki_golden_shadow_masquerade"                  "隐形刺客"
@@ -1104,5 +1189,8 @@
 	"npc_dota_creature_ogre_imperator_auspice_of_the_whyrlegyge"                  "食人魔帝国元首"
 	"npc_dota_creature_ogre_imperator_gimlek_decanter"                  "食人魔帝国元首"
 	"npc_dota_creature_ogre_imperator_auspice_of_the_whyrlegyge_gimlek_decanter"                  "食人魔帝国元首"
+	"npc_dota_creature_troll_warlord_bitter_lineage"                  "巨魔战将"
+	"npc_dota_creature_troll_warlord_icewrack_marauder_bitter_lineage"                  "巨魔劫掠者"
+	"npc_dota_creature_troll_plunder_of_the_savage_monger_bitter_lineage"                  "巨魔竞技场冠军"
 	}
 }

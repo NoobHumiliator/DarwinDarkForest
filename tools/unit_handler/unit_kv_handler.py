@@ -34,9 +34,9 @@ map={
    'npc_dota_creature_broodmother_glutton_larder':{'lycosidae_brood':('8565','9090')},
    'npc_dota_creature_spider_queen':{'lycosidae_brood':('9797','9090')},
 
-   'npc_dota_creature_razor':{'severing_lash':('340','8000'),'golden_severing_crest':('341','6916')},
-   'npc_dota_creature_razor_lightning_lord':{'severing_lash':('340','8000'),'golden_severing_crest':('9353','6916')},
-   'npc_dota_creature_razor_affront_of_the_overseer':{'severing_lash':('340','8000'),'golden_severing_crest':('8608','6916')},
+   'npc_dota_creature_razor':{'golden_severing_crest':('341','6916'),'severing_lash':('340','8000')},
+   'npc_dota_creature_razor_lightning_lord':{'golden_severing_crest':('9353','6916'),'severing_lash':('340','8000')},
+   'npc_dota_creature_razor_affront_of_the_overseer':{'golden_severing_crest':('8608','6916'),'severing_lash':('340','8000')},
  
    'npc_dota_creature_riki':{'crimson_edict_of_shadows':('163','12418'),'golden_edict_of_shadows':('163','9773'),'golden_shadow_masquerade':('164','7990'),'shadow_masquerade':('164','7976')},
    'npc_dota_creature_dream_secret':{'crimson_edict_of_shadows':('6549','12418'),'golden_edict_of_shadows':('6549','9773'),'golden_shadow_masquerade':('6550','7990'),'shadow_masquerade':('6550','7976')},
