@@ -944,6 +944,27 @@
     "DOTA_Tooltip_ability_elder_red_dragon_passive_lua_Description"                                "溅射攻击：攻击时伤害将溅射到300范围内所有单位。"
 
 
+    "DOTA_Tooltip_Ability_lycan_boss_claw_attack"                                "爪击"
+    "DOTA_Tooltip_Ability_lycan_boss_claw_attack_Description"                    "爪击敌人，造成伤害与眩晕。"
+    "DOTA_Tooltip_Ability_lycan_boss_claw_attack_damage"                         "伤害："
+    "DOTA_Tooltip_Ability_lycan_boss_claw_attack_stun_duration"                  "眩晕时间："
+
+ 
+    "DOTA_Tooltip_Ability_lycan_boss_rupture_ball"                       "撕裂球"
+    "DOTA_Tooltip_Ability_lycan_boss_rupture_ball_Description"           "发射一个缓慢飘行的撕裂球，对触碰到的敌人施加撕裂效果。"
+    "DOTA_Tooltip_Ability_lycan_boss_rupture_ball_movement_damage_pct"   "%每移动100距离当前生命值伤害："
+     
+
+    "DOTA_Tooltip_Ability_nian_leap_lua"                        "撕咬"
+    "DOTA_Tooltip_Ability_nian_leap_lua_Description"            "撕咬一个敌方单位，使其失去行动能力，并受到持续伤害。"
+    "DOTA_Tooltip_Ability_nian_leap_lua_dismember_damage"       "每秒伤害："
+    "DOTA_Tooltip_Ability_nian_leap_lua_duration"               "持续时间："
+
+    "DOTA_Tooltip_Ability_nian_leap_lua"                        "扑击"
+    "DOTA_Tooltip_Ability_nian_leap_lua_Description"            "跃向目标位置，伤害并击晕落点附近的敌人。"
+    "DOTA_Tooltip_Ability_nian_leap_lua_stun_duration"          "眩晕时间："
+    "DOTA_Tooltip_Ability_nian_leap_lua_damage"                 "伤害："
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"

@@ -5,6 +5,9 @@ function modifier_elder_green_dragon_passive_lua_passive:IsHidden()
 end
 
 function modifier_elder_green_dragon_passive_lua_passive:OnCreated()
+    
+   if IsServer() and self:GetParent() then
 	 self:GetParent():AddNewModifier(self:GetParent(), self, "modifier_dragon_knight_corrosive_breath", {})
      self:GetParent():SetMaterialGroup("0")
+    end
 end

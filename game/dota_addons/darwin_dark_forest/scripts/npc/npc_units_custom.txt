@@ -18591,19 +18591,18 @@
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/nian/nian_creep.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"
+		"SoundSet"					"cny_beast"
 		"Level"						"9"
-		"ModelScale" 				"0.5"
+		"ModelScale" 				"0.65"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
-		"Ability2"					""			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
+		"Ability1"					"nian_pin_lua" 	 // Ability 1
+		"Ability2"					"nian_leap_lua"  // Ability 2
+
 
 		// Armor
 		//----------------------------------------------------------------
@@ -18618,7 +18617,7 @@
 		"AttackRate"				"1.6"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRange"				"138"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
 
@@ -20894,12 +20893,11 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"giant_wolf_critical_strike"			// Ability 1
-		"Ability2"					""			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
+		"Ability1"					"lycan_boss_claw_attack"			// Ability 2
+		"Ability2"					"lycan_boss_rupture_ball"			// Ability 3
+		"Ability3"					""                          		// Ability 4
 
-		"AbilitiesLevel"            "9"
+		"AbilitiesLevel"            "1 1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -20914,7 +20912,7 @@
 		"AttackRate"				"1.2"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"138"		// Range within a target can be attacked.
+		"AttackRange"				"148"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
 
