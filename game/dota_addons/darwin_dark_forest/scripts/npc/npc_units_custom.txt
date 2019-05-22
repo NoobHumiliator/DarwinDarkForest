@@ -4722,9 +4722,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nFury"                     "3"
-		"nDurable"                  "3"
-		"nMystery"                  "3"
+		"nFury"                     "4"
+		"nDurable"                  "4"
+		"nMystery"                  "4"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -8722,9 +8722,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nFury"                     "4"
-		"nDurable"                  "4"
-		"nMystery"                  "4"
+		"nFury"                     "5"
+		"nDurable"                  "5"
+		"nMystery"                  "5"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -9479,6 +9479,85 @@
 	//-----------------------------------------
 	//   Level-6
 	//-----------------------------------------
+
+	"npc_dota_creature_ocean_salve"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"						"models/creeps/darkreef/prisoner_swoledar/prisoner_swoledar03.vmdl"	// Model.
+		"SoundSet"					"Hero_Slardar"
+
+		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"ModelScale"				"0.85"
+		"Level"						"6"
+		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
+
+		"nMystery"                  "6"
+		"nDurable"                  "6"
+		"nFury"                     "6"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			
+		"Ability2"					""
+		"Ability3"					""			
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+		"MagicalResistance"			"20"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"72"		// Damage range min.
+		"AttackDamageMax"			"79"		// Damage range max.
+		"AttackRate"				"1.4"		// Speed of attack.
+		"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"120"		// Range within a target can be attacked.
+		"ProjectileModel"			""	// Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"160"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"340"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1750"		// Base health.
+		"StatusHealthRegen"			"7"		    // Health regeneration rate.
+		"StatusMana"				"550"		// Base mana.
+		"StatusManaRegen"			"6"			// Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+		
+		// Creature Data
+		//----------------------------------------------------------------------------------------------------------------------
+	}
     
     "npc_dota_creature_slark_1"
 	{
@@ -13253,12 +13332,12 @@
 		}
 	}
 
-    "npc_dota_creature_swoledar"
+    "npc_dota_creature_ocean_salve_master"
 	{
 		// General
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
-		"Model"						"models/creeps/darkreef/prisoner_swoledar/prisoner_swoledar03.vmdl"	// Model.
+		"Model"						"models/creeps/darkreef/prisoner_swoledar/prisoner_swoledar02.vmdl"	// Model.
 		"SoundSet"					"Hero_Slardar"
 
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
@@ -13268,9 +13347,9 @@
 
 		"HasInventory"				"1"
 
-		"nMystery"                  "6"
-		"nDurable"                  "6"
-		"nFury"                     "6"
+		"nMystery"                  "7"
+		"nDurable"                  "7"
+		"nFury"                     "7"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -13286,19 +13365,19 @@
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"4"			// Physical protection.
-		"MagicalResistance"			"20"		// Magical protection.
+		"MagicalResistance"			"15"		// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"68"		// Damage range min.
-		"AttackDamageMax"			"72"		// Damage range max.
-		"AttackRate"				"1.8"		// Speed of attack.
-		"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
+		"AttackDamageMin"			"97"		// Damage range min.
+		"AttackDamageMax"			"105"		// Damage range max.
+		"AttackRate"				"1.3"		// Speed of attack.
+		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
 		"AttackRange"				"300"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/neutral_fx/thunderlizard_base_attack.vpcf"	// Particle system model for projectile.
-		"ProjectileSpeed"			"1500"		// Speed of projectile.		
+		"ProjectileModel"			""	// Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -13313,7 +13392,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1750"		// Base health.
+		"StatusHealth"				"1850"		// Base health.
 		"StatusHealthRegen"			"7"		    // Health regeneration rate.
 		"StatusMana"				"550"		// Base mana.
 		"StatusManaRegen"			"6"			// Mana regeneration rate.
@@ -14175,6 +14254,110 @@
 	        }
 		}
 	}
+
+	"npc_dota_creature_slardar"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"	                	"models/heroes/slardar/slardar.vmdl"
+		"SoundSet"		            "Hero_Slardar"
+
+		"GameSoundsFile"	     	"soundevents/game_sounds_heroes/game_sounds_slardar.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_slardar.vsndevts"
+
+		"ModelScale"				"1.0"
+		"Level"						"8"
+		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
+
+		"nMystery"                  "8"
+		"nDurable"                  "8"
+		"nFury"                     "8"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"slardar_bash"			
+		"Ability2"					"slardar_amplify_damage"
+		"Ability3"					""			
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+        "AbilitiesLevel"            "6 2"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"			"10"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"137"		// Damage range min.
+		"AttackDamageMax"			"146"		// Damage range max.
+		"AttackRate"				"1.3"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+		"AttackRange"				"140"		// Range within a target can be attacked.
+		"ProjectileModel"			""	// Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"160"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"380"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2600"		// Base health.
+		"StatusHealthRegen"			"13"		    // Health regeneration rate.
+		"StatusMana"				"500"		// Base mana.
+		"StatusManaRegen"			"1.8"	    // Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+	
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"273"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"274"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"275"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"276"
+				}
+	        }
+		}
+	}
+
 
     "npc_dota_creature_spirit_breaker"
 	{
@@ -16592,6 +16775,111 @@
 	}
 
 	//Level-9
+    
+    "npc_dota_creature_slardar_vanguard"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"	                	"models/heroes/slardar/slardar.vmdl"
+		"SoundSet"		            "Hero_Slardar"
+
+		"GameSoundsFile"	     	"soundevents/game_sounds_heroes/game_sounds_slardar.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_slardar.vsndevts"
+
+		"ModelScale"				"1.1"
+		"Level"						"9"
+		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
+
+		"nMystery"                  "10"
+		"nDurable"                  "10"
+		"nFury"                     "10"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"slardar_bash"			
+		"Ability2"					"slardar_amplify_damage"
+		"Ability3"					""			
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+        "AbilitiesLevel"            "8 4"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"10"			// Physical protection.
+		"MagicalResistance"			"15"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"182"		// Damage range min.
+		"AttackDamageMax"			"206"		// Damage range max.
+		"AttackRate"				"1.3"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"140"		// Range within a target can be attacked.
+		"ProjectileModel"			""	// Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"160"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"380"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3400"		// Base health.
+		"StatusHealthRegen"			"17"		    // Health regeneration rate.
+		"StatusMana"				"550"		// Base mana.
+		"StatusManaRegen"			"6"	    // Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+	
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"12661"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"12662"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"12663"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"12664"
+				}
+	        }
+		}
+	}
+
+
 	"npc_dota_creature_spirit_breaker_ironbarde_charger"
 	{
 		// General
@@ -19082,6 +19370,85 @@
 
 
 	//Level-10
+
+    "npc_dota_creature_siltbreaker"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"	                	"models/heroes/siltbreaker/siltbreaker.vmdl"
+		"SoundSet"		            "Roshan"
+
+		"ModelScale"				"2.6"
+		"Level"						"10"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+
+		"nFury"                     "12"
+		"nDurable"                  "12"
+		"nMystery"                  "12"
+	
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"siltbreaker_mouth_beam"			
+		"Ability2"					"siltbreaker_waves"
+		"Ability3"					"siltbreaker_tail_spin_ccw"
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+        "AbilitiesLevel"            "1 1 1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"14"			// Physical protection.
+		"MagicalResistance"			"25"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"304"		// Damage range min.
+		"AttackDamageMax"			"324"		// Damage range max.
+		"AttackRate"				"1.3"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+		"AttackRange"				"160"		// Range within a target can be attacked.
+		"ProjectileModel"			""	        // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"100"
+		"HealthBarOffset"			"160"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"410"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"4500"		// Base health.
+		"StatusHealthRegen"			"22"		    // Health regeneration rate.
+		"StatusMana"				"650"		// Base mana.
+		"StatusManaRegen"			"3"	    // Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+	}
+
+
+
     "npc_dota_creature_spirit_breaker_elemental_realms"
 	{
 		// General
