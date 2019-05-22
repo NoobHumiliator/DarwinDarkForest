@@ -5377,7 +5377,7 @@
         "AbilityCastRange"              "160"
         "AbilityCastPoint"              "0.3"
 
-        "AbilityCooldown"               "30.0"
+        "AbilityCooldown"               "25.0 20.0"
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -5418,11 +5418,11 @@
         "AbilityTextureName"            "mirana_leap"
         "ScriptFile"                    "creature_ability/nian_leap_lua"
 
-        "MaxLevel"                      "1"
+        "MaxLevel"                      "2"
         
         // Casting
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCastRange"              "1300"
+        "AbilityCastRange"              "1100 1300"
         "AbilityCastPoint"              "0.4"
 
         "AbilityCooldown"               "10.0"
@@ -5441,7 +5441,7 @@
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "damage"                "600"
+                "damage"                "600 850"
             }
             "03"
             {

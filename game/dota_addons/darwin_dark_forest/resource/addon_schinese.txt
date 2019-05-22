@@ -290,6 +290,7 @@
     "npc_dota_creature_satyr_trickster_2"                                           "萨特放逐者"
     "npc_dota_creature_eidelon_2"                                                   "虚空行者"
     "npc_dota_creature_familiar"                                                    "佣兽"
+    "npc_dota_creature_meranth_guard"                                               "鱼人斥候"
 
     //Level-5
     "npc_dota_creature_frostbitten_necromancer_1"                                   "霜牙死灵法师"
@@ -311,7 +312,7 @@
     "npc_dota_creature_perceptive_spiderling"                                       "邪眼蜘蛛"
     "npc_dota_creature_arsenal_magus_forged_spirit"                                 "占星烈焰"
     "npc_dota_creature_ghost"                                                       "幽魂"
-    "npc_dota_creature_meranth_guard"                                               "鱼人斥候"
+    "npc_dota_creature_meranth_guard_2"                                             "鱼人斥候"
     "npc_dota_creature_thistle_crawler"                                             "蛛巢卫士"
     "npc_dota_creature_forest_bear"                                                 "熊"
     "npc_dota_creature_tusk_skeleton"                                               "海象人骷髅"
@@ -360,7 +361,7 @@
     "npc_dota_creature_satyr_hellcaller_2"                                           "萨特折磨者"
     "npc_dota_creature_centaur_champion"                                            "半人马勇士"
     "npc_dota_creature_flame_wolf"                                                  "烈焰狂狼"
-    "npc_dota_creature_madness_wolf"                                                "狂狼"
+    "npc_dota_creature_madness_wolf"                                                "血月子嗣"
     "npc_dota_creature_disease_wolf"                                                "瘟疫之狼"
     "npc_dota_creature_mystery_wolf"                                                "神秘狼灵"
     "npc_dota_creature_tentacular_conqueror_2"                                      "虚空信徒"
@@ -386,7 +387,7 @@
     "npc_dota_creature_updated_eidolon"                                             "虚空领主碎片"
     "npc_dota_creature_mystery_warg"                                                "凶暴狼灵"
     "npc_dota_creature_element_bear"                                                "元素巨熊"
-    "npc_dota_creature_brutal_wolve"                                                "暴虐狂狼"
+    "npc_dota_creature_blood_moon_shapeshift"                                       "血月狂狼"
     "npc_dota_creature_snow_wolf"                                                   "雪山狼灵"
     "npc_dota_creature_centaur_champion"                                            "半人马勇士"
     "npc_dota_creature_swoledar"                                                    "深海来客"
@@ -462,6 +463,7 @@
     "npc_dota_creature_undying_flesh_golem"                                         "血肉傀儡"
     "npc_dota_creature_oldone_sentinel"                                             "古神近卫"
     "npc_dota_creature_nian"                                                        "年兽"
+    "npc_dota_creature_roshan"                                                      "肉山"
     "npc_dota_creature_doom_icewrack"                                               "灾厄雪狼"
     "npc_dota_creature_bloodteeth"                                                  "血牙"
     "npc_dota_creature_primal_void"                                                 "虚空尊者"
@@ -470,7 +472,8 @@
 
 
     //Level-10
-
+    "npc_dota_creature_nian_2"                                                      "年兽"
+    "npc_dota_creature_roshan_2"                                                    "肉山"
     "npc_dota_creature_razor_affront_of_the_overseer"                               "监察之蔑"
     "npc_dota_creature_life_stealer_chainbreaker"                                   "破链之刑"
     "npc_dota_creature_spectre_conservator"                                         "汇聚幽魂"
@@ -484,7 +487,6 @@
     "npc_dota_creature_red_dragon_elder"                                            "始祖巨龙"
     "npc_dota_creature_green_dragon_elder"                                          "始祖腐蚀龙"
     "npc_dota_creature_abyssal_tyrant"                                              "深渊主宰"
-    "npc_dota_creature_roshan"                                                      "肉山"
     "npc_dota_creature_storegga_1"                                                  "磐石巨人"
     "npc_dota_creature_ogre_imperator"                                              "食人魔帝国元首"
     "npc_dota_creature_troll_plunder_of_the_savage_monger"                          "巨魔竞技场冠军"
