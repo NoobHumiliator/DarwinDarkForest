@@ -992,8 +992,19 @@
     "DOTA_Tooltip_Ability_siltbreaker_mouth_beam_Description"           "破泞之主口中喷吐死光，并且缓慢随着身体旋转，对触碰到的敌人造成大量伤害，"
     "DOTA_Tooltip_Ability_siltbreaker_mouth_beam_damage_per_tick"       "每跳伤害："
     "DOTA_Tooltip_Ability_siltbreaker_mouth_beam_tick_interval"         "每跳间隔："
+    
 
- 
+    "DOTA_Tooltip_Ability_sandking_caustic_finale_nDecay"               "<font color='#b3d465'>腐朽：</font>"
+    "DOTA_Tooltip_Ability_sandking_epicenter_nElement"                  "<font color='#00a0e9'>元素：</font>"
+    "DOTA_Tooltip_Ability_sandking_epicenter_nDurable"                  "<font color='#f8b551'>坚韧：</font>"
+
+    "npc_dota_creature_sand_king"                                       "沙王"
+    "npc_dota_creature_sand_king_scouring_dunes"                        "沙丘之蚀"
+    "npc_dota_creature_sand_king_kray_legions"                          "鳌虾之王"
+    "npc_dota_creature_rhyzik"                                          "莱兹克"
+
+
+
 
 
     //EconUnitBegins
