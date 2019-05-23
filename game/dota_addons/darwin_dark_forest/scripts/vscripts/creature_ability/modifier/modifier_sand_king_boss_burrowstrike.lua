@@ -34,7 +34,7 @@ function modifier_sand_king_boss_burrowstrike:OnCreated( kv )
 		self.nFXIndex = -1
 		self.nFXIndex2 = -1
 		self.nFXIndex3 = -1
-		self:OnIntervalThink()
+		--self:OnIntervalThink()
 		self:StartIntervalThink( 0.33 )
 		if self:ApplyHorizontalMotionController() == false then 
 			self:Destroy()

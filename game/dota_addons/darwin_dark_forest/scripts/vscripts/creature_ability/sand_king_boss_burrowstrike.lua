@@ -20,13 +20,13 @@ end
 --------------------------------------------------------------------------------
 
 function sand_king_boss_burrowstrike:GetCastPoint()
-	return 1.0625 - ( 0.53125 * ( 1 - ( self:GetCaster():GetHealthPercent() / 100 ) ) )
+	return 0.53125
 end
 
 --------------------------------------------------------------------------------
 
 function sand_king_boss_burrowstrike:GetPlaybackRateOverride()
-	return 0.3045 + ( 0.3045 * ( 1 - ( self:GetCaster():GetHealthPercent() / 100 ) ) )
+	return 0.609
 end
 
 --------------------------------------------------------------------------------

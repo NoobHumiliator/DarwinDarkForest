@@ -52,93 +52,52 @@ function modifier_sand_king_tail_swipe:OnIntervalThink()
 		table.insert( Locations, vLocation3 )
 		table.insert( Locations, vLocation4 )
 			
-		if self:GetParent():FindModifierByName( "modifier_sand_king_boss_burrow" ) ~= nil then
-			for _,vPos in pairs ( Locations ) do
-				local nFXIndex = ParticleManager:CreateParticle( "particles/test_particle/ogre_melee_smash.vpcf", PATTACH_WORLDORIGIN,  self:GetCaster()  )
-				ParticleManager:SetParticleControl( nFXIndex, 0, vPos )
-				ParticleManager:SetParticleControl( nFXIndex, 1, Vector( self.damage_radius, self.damage_radius, self.damage_radius ) )
-				ParticleManager:ReleaseParticleIndex( nFXIndex )
+		self:StartIntervalThink( 0.01 )
+		for _,vPos in pairs( Locations ) do
+			--DebugDrawCircle( vPos, Vector( 0, 255, 0 ), 255, self.damage_radius, false, 1.0 )
+			local enemies = FindUnitsInRadius( self:GetParent():GetTeamNumber(), vPos, self:GetParent(), self.damage_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, 0, false )
+			for _,enemy in pairs( enemies ) do
+				if enemy ~= nil and enemy:IsInvulnerable() == false and self:HasHitTarget( enemy ) == false then
+					self:AddHitTarget( enemy )
 
-				local enemies = FindUnitsInRadius( self:GetParent():GetTeamNumber(), vPos, self:GetParent(), self.damage_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, 0, false )
-				for _,enemy in pairs( enemies ) do
-					if enemy ~= nil and enemy:IsInvulnerable() == false and self:HasHitTarget( enemy ) == false then
-						self:AddHitTarget( enemy )
-						
-						local passive = self:GetCaster():FindAbilityByName( "sand_king_boss_passive" )
-						local caustic_duration = passive:GetSpecialValueFor( "caustic_duration" )
-						local hCausticBuff = enemy:FindModifierByName( "modifier_sand_king_boss_caustic_finale" )
-						if hCausticBuff == nil then
-							hCausticBuff = enemy:AddNewModifier( self:GetCaster(), passive, "modifier_sand_king_boss_caustic_finale", { duration = caustic_duration } )
-							hCausticBuff:SetStackCount( 0 )
-						end
-						hCausticBuff:SetStackCount( hCausticBuff:GetStackCount() + 1 )  
-						hCausticBuff:SetDuration( caustic_duration, true )
-
-						local damageInfo = 
-						{
-							victim = enemy,
-							attacker = self:GetCaster(),
-							damage = self.damage,
-							damage_type = DAMAGE_TYPE_PHYSICAL,
-							ability = self,
-						}
-
-						ApplyDamage( damageInfo )
-						enemy:AddNewModifier( self:GetCaster(), self:GetAbility(), "modifier_stunned", { duration = self.stun_duration } )
-						enemy:AddNewModifier( self:GetCaster(), self:GetAbility(), "modifier_polar_furbolg_ursa_warrior_thunder_clap", { duration = self.slow_duration } )
+					local passive = self:GetCaster():FindAbilityByName( "sand_king_boss_passive" )
+					local caustic_duration = passive:GetSpecialValueFor( "caustic_duration" )
+					local hCausticBuff = enemy:FindModifierByName( "modifier_sand_king_boss_caustic_finale" )
+					if hCausticBuff == nil then
+						hCausticBuff = enemy:AddNewModifier( self:GetCaster(), passive, "modifier_sand_king_boss_caustic_finale", { duration = caustic_duration } )
+						hCausticBuff:SetStackCount( 0 )
 					end
-				end
-			end
+					hCausticBuff:SetStackCount( hCausticBuff:GetStackCount() + 1 )  
+					hCausticBuff:SetDuration( caustic_duration, true )
 
-			EmitSoundOnLocationWithCaster( vLocation4, "OgreTank.GroundSmash", self:GetCaster() )
-			self:StartIntervalThink( -1 )
-		else
-			self:StartIntervalThink( 0.01 )
-			for _,vPos in pairs( Locations ) do
-				--DebugDrawCircle( vPos, Vector( 0, 255, 0 ), 255, self.damage_radius, false, 1.0 )
-				local enemies = FindUnitsInRadius( self:GetParent():GetTeamNumber(), vPos, self:GetParent(), self.damage_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, 0, false )
-				for _,enemy in pairs( enemies ) do
-					if enemy ~= nil and enemy:IsInvulnerable() == false and self:HasHitTarget( enemy ) == false then
-						self:AddHitTarget( enemy )
+					local damageInfo = 
+					{
+						victim = enemy,
+						attacker = self:GetParent(),
+						damage = self.damage,
+						damage_type = DAMAGE_TYPE_PHYSICAL,
+						ability = self,
+					}
 
-						local passive = self:GetCaster():FindAbilityByName( "sand_king_boss_passive" )
-						local caustic_duration = passive:GetSpecialValueFor( "caustic_duration" )
-						local hCausticBuff = enemy:FindModifierByName( "modifier_sand_king_boss_caustic_finale" )
-						if hCausticBuff == nil then
-							hCausticBuff = enemy:AddNewModifier( self:GetCaster(), passive, "modifier_sand_king_boss_caustic_finale", { duration = caustic_duration } )
-							hCausticBuff:SetStackCount( 0 )
-						end
-						hCausticBuff:SetStackCount( hCausticBuff:GetStackCount() + 1 )  
-						hCausticBuff:SetDuration( caustic_duration, true )
-
-						local damageInfo = 
-						{
-							victim = enemy,
-							attacker = self:GetParent(),
-							damage = self.damage,
-							damage_type = DAMAGE_TYPE_PHYSICAL,
-							ability = self,
-						}
-
-						ApplyDamage( damageInfo )
-						local kv =
-						{
-							center_x = self:GetParent():GetOrigin().x,
-							center_y = self:GetParent():GetOrigin().y,
-							center_z = self:GetParent():GetOrigin().z,
-							should_stun = true, 
-							duration = self.stun_duration,
-							knockback_duration = self.stun_duration,
-							knockback_distance = self.knockback_distance,
-							knockback_height = self.knockback_height,
-						}
-						enemy:AddNewModifier( self:GetCaster(), self:GetAbility(), "modifier_knockback", kv )
-						enemy:AddNewModifier( self:GetCaster(), self:GetAbility(), "modifier_polar_furbolg_ursa_warrior_thunder_clap", { duration = self.slow_duration } )
-						EmitSoundOn( "DOTA_Item.Maim", enemy )
-					end
+					ApplyDamage( damageInfo )
+					local kv =
+					{
+						center_x = self:GetParent():GetOrigin().x,
+						center_y = self:GetParent():GetOrigin().y,
+						center_z = self:GetParent():GetOrigin().z,
+						should_stun = true, 
+						duration = self.stun_duration,
+						knockback_duration = self.stun_duration,
+						knockback_distance = self.knockback_distance,
+						knockback_height = self.knockback_height,
+					}
+					enemy:AddNewModifier( self:GetCaster(), self:GetAbility(), "modifier_knockback", kv )
+					enemy:AddNewModifier( self:GetCaster(), self:GetAbility(), "modifier_polar_furbolg_ursa_warrior_thunder_clap", { duration = self.slow_duration } )
+					EmitSoundOn( "DOTA_Item.Maim", enemy )
 				end
 			end
 		end
+
 	end
 end
 

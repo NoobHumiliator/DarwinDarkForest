@@ -1003,10 +1003,24 @@
     "npc_dota_creature_sand_king_kray_legions"                          "鳌虾之王"
     "npc_dota_creature_rhyzik"                                          "莱兹克"
 
+    "DOTA_Tooltip_Ability_sand_king_tail_swipe_left"                    "左扫尾"
+    "DOTA_Tooltip_Ability_sand_king_tail_swipe_left_Description"        "莱兹克向左扫尾，对敌人造成伤害，击退，减速并且叠加腐蚀毒。"
+    "DOTA_Tooltip_Ability_sand_king_tail_swipe_left_damage"             "伤害："
 
-
-
-
+    "DOTA_Tooltip_Ability_sand_king_tail_swipe_right"                    "右扫尾"
+    "DOTA_Tooltip_Ability_sand_king_tail_swipe_right_Description"        "莱兹克向右扫尾，对敌人造成伤害，击退，减速并且叠加腐蚀毒。"
+    "DOTA_Tooltip_Ability_sand_king_tail_swipe_right_damage"             "伤害："
+    
+    "DOTA_Tooltip_Ability_sand_king_boss_passive"                       "终极腐尸毒"
+    "DOTA_Tooltip_Ability_sand_king_boss_passive_Description"           "沙王的攻击会给敌方单位注入毒液，每层减少一半敌方护甲，持续时间结束或中毒单位死亡时发生剧烈爆炸。"
+    "DOTA_Tooltip_Ability_sand_king_boss_passive_caustic_damage"        "爆炸伤害："
+    "DOTA_Tooltip_Ability_sand_king_boss_passive_caustic_armor_reduction_pct"        "%每层减少护甲："
+    
+    "DOTA_Tooltip_Ability_sand_king_boss_burrowstrike"                       "掘地穿刺"
+    "DOTA_Tooltip_Ability_sand_king_boss_burrowstrike_Description"           "沙王钻入地面挖掘隧道前进，穿出地面时伤害并击退附近的敌方单位。"
+    "DOTA_Tooltip_Ability_sand_king_boss_burrowstrike_damage"                "伤害："
+ 
+    
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
 	"npc_dota_creature_lich_shearing_deposition"                  "巫妖"

@@ -5584,7 +5584,7 @@
         "AbilityCastRange"              "1200"
         "AbilityCastPoint"              "0.5"
         "AnimationIgnoresModelScale"    "1"
-        "AnimationPlaybackRate"         "2.0"
+        "AnimationPlaybackRate"         "1.0"
         
         // Time     
         //-------------------------------------------------------------------------------------------------------------
@@ -5622,7 +5622,7 @@
             "05"
             {
                 "var_type"              "FIELD_FLOAT"
-                "turn_rate"             "9"
+                "turn_rate"             "18"
             }
             "06"
             {
@@ -5650,7 +5650,7 @@
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "0"
-        "AbilityCastPoint"              "0.5"
+        "AbilityCastPoint"              "0.1"
         "AnimationIgnoresModelScale"    "1"
         "AnimationPlaybackRate"         "2.0"
         
@@ -5724,13 +5724,13 @@
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "450"
-        "AbilityCastPoint"              "2.2"
+        "AbilityCastPoint"              "1.1"
         "AnimationIgnoresModelScale"    "1"
-        "AnimationPlaybackRate"         "1.1" // 1.0
+        "AnimationPlaybackRate"         "2.2" // 1.0
         
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "20.0"
+        "AbilityCooldown"               "15.0"
     
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -5753,12 +5753,12 @@
             "03"
             {
                 "var_type"              "FIELD_FLOAT"
-                "animation_time"        "3.3333" // 3.6666
+                "animation_time"        "1.65"
             }
             "04"
             {
                 "var_type"              "FIELD_FLOAT"
-                "initial_delay"         "1.82" // 2.0
+                "initial_delay"         "0.9" 
             }
             "05"
             {
@@ -5963,7 +5963,7 @@
             "02"
             {
                 "var_type"                          "FIELD_INTEGER"
-                "damage"                            "1500"
+                "damage"                            "1000"
             }
             "03"
             {
@@ -5973,7 +5973,7 @@
             "04"
             {
                 "var_type"                          "FIELD_FLOAT"
-                "delay"                              "1.0"
+                "delay"                             "0.7"
             }
             "05"
             {
@@ -6016,7 +6016,7 @@
             "01"
             {
                 "var_type"                                       "FIELD_INTEGER"
-                "caustic_armor_reduction_pct"                    "33"
+                "caustic_armor_reduction_pct"                    "50"
             }
             "02"
             {
@@ -6046,7 +6046,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "ability_lua"
-        "AbilityTextureName"            "bloodseeker_bloodrage"
+        "AbilityTextureName"            "nevermore_shadowraze2"
         "ScriptFile"                    "creature_ability/sand_king_tail_swipe_left"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -6057,12 +6057,13 @@
 
 
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_5"
-        "AnimationPlaybackRate"          "8.0"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "450"
-        "AbilityCastPoint"              "0.66"
+        "AnimationIgnoresModelScale"     "1"
+        "AbilityCastPoint"              "0.495"
+
         
         // Time     
         //-------------------------------------------------------------------------------------------------------------
@@ -6079,7 +6080,7 @@
             "01"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "damage"                    "3500"
+                "damage"                    "2000"
             }
             "02"
             {
@@ -6089,12 +6090,12 @@
             "03"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "animation_time"            "0.66"
+                "animation_time"            "0.495"
             }
             "04"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "initial_delay"             "0.5"
+                "initial_delay"             "0.375"
             }
             "05"
             {
@@ -6104,7 +6105,7 @@
             "06"
             {
                 "var_type"                          "FIELD_INTEGER"
-                "knockback_distance"                "600"
+                "knockback_distance"                "450"
             }
             "07"
             {
@@ -6137,7 +6138,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "ability_lua"
-        "AbilityTextureName"            "bloodseeker_bloodrage"
+        "AbilityTextureName"            "nevermore_shadowraze1"
         "ScriptFile"                    "creature_ability/sand_king_tail_swipe_right"
 
 
@@ -6149,17 +6150,15 @@
 
 
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_5"
-        "AnimationPlaybackRate"          "8.0"
-
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "450"
-        "AbilityCastPoint"              "0.66"
-        
+        "AbilityCastPoint"              "0.495"
+        "AnimationIgnoresModelScale"     "1"
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "10"
+        "AbilityCooldown"               "6"
     
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -6172,7 +6171,7 @@
             "01"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "damage"                    "3500"
+                "damage"                    "2000"
             }
             "02"
             {
@@ -6182,12 +6181,12 @@
             "03"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "animation_time"            "0.66"
+                "animation_time"            "0.495"
             }
             "04"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "initial_delay"             "0.5"
+                "initial_delay"             "0.375"
             }
             "05"
             {

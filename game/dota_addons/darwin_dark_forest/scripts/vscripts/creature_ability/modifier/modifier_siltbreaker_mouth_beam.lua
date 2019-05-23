@@ -157,3 +157,12 @@ function modifier_siltbreaker_mouth_beam:CheckState()
 	return state
 end
 
+function TableContainsValue( t, value )
+	for _, v in pairs( t ) do
+		if v == value then
+			return true
+		end
+	end
+
+	return false
+end

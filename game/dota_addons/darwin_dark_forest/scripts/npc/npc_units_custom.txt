@@ -19769,7 +19769,6 @@
     "npc_dota_creature_siltbreaker"
 	{
 		// General
-		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"	                	"models/heroes/siltbreaker/siltbreaker.vmdl"
 		"SoundSet"		            "Roshan"
