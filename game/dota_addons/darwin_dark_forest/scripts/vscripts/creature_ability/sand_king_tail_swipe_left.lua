@@ -15,6 +15,12 @@ function sand_king_tail_swipe_left:OnAbilityPhaseStart()
 	end
 	return true
 end
+----------------------------------------------------------------------------------
+function sand_king_tail_swipe_left:OnSpellStart()
+	if IsServer() then
+		self:GetCaster():FindAbilityByName("sand_king_tail_swipe_right"):StartCooldown(8)
+	end
+end
 
 --------------------------------------------------------------------------------
 

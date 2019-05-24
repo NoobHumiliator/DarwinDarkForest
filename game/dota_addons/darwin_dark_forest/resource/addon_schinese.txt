@@ -1020,7 +1020,10 @@
     "DOTA_Tooltip_Ability_sand_king_boss_burrowstrike_Description"           "沙王钻入地面挖掘隧道前进，穿出地面时伤害并击退附近的敌方单位。"
     "DOTA_Tooltip_Ability_sand_king_boss_burrowstrike_damage"                "伤害："
  
-    
+    "DOTA_Tooltip_Ability_invoker_tornado_nElement"                          "<font color='#00a0e9'>元素：</font>"
+
+
+
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
 	"npc_dota_creature_lich_shearing_deposition"                  "巫妖"

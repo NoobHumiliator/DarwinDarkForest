@@ -7362,86 +7362,7 @@
 		}
 	}
 
-	"npc_dota_creature_dragonspawn_samll"
-	{
-		// General
-		// 
-		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
-		"Model"						"models/creeps/neutral_creeps/n_creep_dragonspawn_a/n_creep_dragonspawn_a.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
-		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"1"
-		"Level"						"5"
-		"vscripts"					"creap_ai.lua"
-		"HasInventory"				"1"
-
-		"nElement"                  "2"
-        "nFury"                     "2"
-        "nDurable"                  "2"
-
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
-		"Ability4"					""			// Ability 4.
-		"Ability5"					""			// Ability 5.
-		"Ability6"					""			// Ability 6 - Extra.
-		"Ability7"					""			// Ability 7 - Extra.
-		"Ability8"					""			// Ability 8 - Extra.
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"			// Physical protection.
-		"MagicalResistance"			"0"		// Magical protection.
-
-		// Attack
-		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"52"		// Damage range min.
-		"AttackDamageMax"			"59"		// Damage range max.
-		"AttackRate"				"1.1"		// Speed of attack.
-		"AttackAnimationPoint"		"0.35"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
-		"ProjectileModel"			"" // Particle system model for projectile.
-		"ProjectileSpeed"			"0"		// Speed of projectile.		     
-
-		// Bounds
-		//----------------------------------------------------------------
-		"RingRadius"				"60"
-		"HealthBarOffset"			"160"
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
-		"MovementSpeed"				"310"		// Speed
-		"MovementTurnRate"			"0.5"		// Turning rate.
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"1150"		// Base health.
-		"StatusHealthRegen"			"5.5"		    // Health regeneration rate.
-		"StatusMana"				"700"	    // Base mana.
-		"StatusManaRegen"			"2.0"		// Mana regeneration rate.
-
-
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-		
-		// Vision
-		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
-		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
-		
-		// Creature Data
-		//----------------------------------------------------------------------------------------------------------------------
-		"Creature"
-		{
-		}
-	}
-    
+	
     "npc_dota_creature_black_drake_small"	
 	{
 		// General
@@ -10047,9 +9968,9 @@
         
         "vscripts"					"creap_ai.lua"
 
-        "nElement"                  "7"
-        "nDurable"                  "7"
-        "nFury"                     "7"
+        "nElement"                  "6"
+        "nDurable"                  "6"
+        "nFury"                     "6"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -10959,7 +10880,7 @@
 		// General
 		// 
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
-		"Model"						"models/creeps/neutral_creeps/n_creep_dragonspawn_a/n_creep_dragonspawn_a.vmdl"	// Model.
+		"Model"						"models/creeps/neutral_creeps/n_creep_dragonspawn_b/n_creep_dragonspawn_b.vmdl"	// Model.
 		"SoundSet"					"n_creep_Melee"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"1"
@@ -10968,13 +10889,13 @@
 
 		"HasInventory"				"1"
 
-		"nElement"                  "4"
-        "nFury"                     "4"
-        "nDurable"                  "4"
+		"nElement"                  "5"
+        "nFury"                     "5"
+        "nDurable"                  "5"
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1.
+		"Ability1"					"dragon_knight_breathe_fire"			// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -10982,6 +10903,8 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+
+		"AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -11934,7 +11857,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_SandKing"
 		"Level"						"7"
-		"ModelScale" 				"1.0"
+		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
 
 		"HasInventory"				"1"
@@ -13219,9 +13142,9 @@
 
 		"HasInventory"				"1"
 
-		"nElement"                  "4"
-		"nFury"                     "4"
-		"nDurable"                  "4"
+		"nElement"                  "7"
+		"nFury"                     "7"
+		"nDurable"                  "7"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -14063,10 +13986,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"dragon_knight_breathe_fire"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -14128,8 +14053,8 @@
 
 		"HasInventory"				"1"
          
-        "nDecay"                   "6"
-        "nHunt"                    "10"
+        "nDecay"                    "6"
+        "nHunt"                     "10"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -14272,7 +14197,7 @@
 		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
 		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_sandking.vsndevts"
 
-		"ModelScale"				"1.0"
+		"ModelScale"				"1.2"
 		"Level"						"8"
 		"vscripts"					"creap_ai.lua"
 
@@ -16181,9 +16106,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nElement"                  "6"
-        "nDurable"                  "6"
-        "nFury"                     "6"
+        "nElement"                  "8"
+        "nDurable"                  "8"
+        "nFury"                     "8"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -16998,7 +16923,7 @@
 		"GameSoundsFile"		   "soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
 		"VoiceFile"		           "soundevents/voscripts/game_sounds_vo_sandking.vsndevts"
 
-		"ModelScale"				"1.1"
+		"ModelScale"				"1.4"
 		"Level"						"9"
 		"vscripts"					"creap_ai.lua"
 
@@ -18330,20 +18255,22 @@
 		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_lone_druid.vsndevts"
 
 		"Level"						"9"
-		"ModelScale" 				"1.2"
+		"ModelScale" 				"1.0"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDurable"                  "9"
-        "nElement"                  "9"
-        "nFury"                     "9"
+        "nDurable"                  "10"
+        "nElement"                  "10"
+        "nFury"                     "10"
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability1"					"invoker_tornado"			// Ability 1
+		"Ability2"					"enraged_wildkin_toughness_aura"			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "7 1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -19689,6 +19616,81 @@
 
 
 	//Level-10
+	"npc_dota_creature_wildkin_boss_2"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/items/lone_druid/true_form/frostivus2018_lone_druid_inuit_trueform/frostivus2018_lone_druid_inuit_trueform.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_LoneDruid"
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_lone_druid.vsndevts"
+
+		"Level"						"10"
+		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+         
+        "nDurable"                  "12"
+        "nElement"                  "12"
+        "nFury"                     "12"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"invoker_tornado"			// Ability 1
+		"Ability2"					"enraged_wildkin_toughness_aura"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "8 1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"6"			// Physical protection.
+		"MagicalResistance"         "20"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"304"		// Damage range min.
+		"AttackDamageMax"			"355"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
+		"AttackRange"				"180"		// Range within a target can be attacked.
+		"ProjectileModel"			 ""         // Particle system model for projectile.
+		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"90"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"370"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"4500"		// Base health.
+		"StatusHealthRegen"			"21"		// Health regeneration rate.
+		"StatusMana"				"1200"	    // Base mana.
+		"StatusManaRegen"			"3"		    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
 
 	"npc_dota_creature_rhyzik"
 	{
