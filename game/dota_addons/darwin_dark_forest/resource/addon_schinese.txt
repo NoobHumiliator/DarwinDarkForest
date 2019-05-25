@@ -1021,7 +1021,8 @@
     "DOTA_Tooltip_Ability_sand_king_boss_burrowstrike_damage"                "伤害："
  
     "DOTA_Tooltip_Ability_invoker_tornado_nElement"                          "<font color='#00a0e9'>元素：</font>"
-
+    "DOTA_Tooltip_Ability_crystal_maiden_frostbite_nElement"                 "<font color='#00a0e9'>元素：</font>"
+    
 
 
     //EconUnitBegins

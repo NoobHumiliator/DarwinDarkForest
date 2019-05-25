@@ -6304,10 +6304,73 @@
     }
 
 
+    "crystal_maiden_frostbite"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "crystal_maiden_frostbite"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "hero_Crystal.frostbite"
 
-    
-    
-    
+        "MaxLevel"                      "8"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "550"
+        "AbilityCastPoint"              "0.3"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "9 8.5 8 7.5 7 6.5 6 5.5"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "140 145 150 155"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityModifierSupportValue"   "0.5"   // Applies multiple modifiers
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "total_damage"          "150 200 250 300 360 430 510 600"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "creep_total_damage"            "1000"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "duration"              "1.5 1.9 2.3 2.7 3.1 3.5 3.9 4.3"
+                "LinkedSpecialBonus"    "special_bonus_unique_crystal_maiden_1"
+            }
+            "04"
+            {
+                "var_type"               "FIELD_FLOAT"
+                "creep_duration"         "10.0"
+            }
+            "05"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "nElement"               "5 10 15 20 25 30 35 40"
+            }  
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }   
 
 
 
