@@ -12996,10 +12996,12 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"crystal_maiden_frostbite"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
+
+		"AbilitiesLevel"            "4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -15962,10 +15964,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"crystal_maiden_frostbite"			// Ability 1
 		"Ability2"					""	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
 
 		// Armor
 		//----------------------------------------------------------------
