@@ -2,7 +2,7 @@
 elder_green_dragon_passive_lua = class({})
 
 LinkLuaModifier( "modifier_elder_green_dragon_passive_lua_passive", "creature_ability/modifier/modifier_elder_green_dragon_passive_lua_passive", LUA_MODIFIER_MOTION_NONE )
-
+LinkLuaModifier( "modifier_dragon_knight_corrosive_breath_debuff_lua", "creature_ability/modifier/modifier_dragon_knight_corrosive_breath_debuff_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 

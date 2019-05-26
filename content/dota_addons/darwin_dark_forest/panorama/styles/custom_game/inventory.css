@@ -552,3 +552,21 @@ Label{
 .Temp{
    background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_rhyzik.png");
 }
+
+.Temp{
+   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_slark_1.png");
+}
+.Temp{
+   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_slark_2.png");
+}
+.Temp{
+   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_slark_3.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_green_dragon_elder.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_green_dragon.png");
+}

@@ -275,7 +275,6 @@
     "npc_dota_creature_mole_lamp"                                                   "鼹鼠工头"
     "npc_dota_creature_virulent_spider"                                             "脓液蜘蛛"
     "npc_dota_creature_araknarok"                                                   "甲壳蜘蛛"
-    "npc_dota_creature_tusk_folk"                                                   "海象人"
     "npc_dota_creature_frostbitten_ranged"                                          "霜牙死灵法师"
     "npc_dota_creature_good_melee_3"                                                "天辉中路近战兵"
     "npc_dota_creature_good_ranged_3"                                               "天辉中路远程兵"
@@ -346,7 +345,6 @@
     "npc_dota_creature_black_drake"                                                 "黑龙蜉蝣"
     "npc_dota_creature_skeleton_crimson_soldier"                                    "冥界愤怒士兵"
     "npc_dota_creature_skeleton_green_soldier"                                      "冥界士兵"
-    "npc_dota_creature_tusk_folk_2"                                                 "海象原住民"
     "npc_dota_creature_tusk_skeleton_armor"                                         "海象人尸鬼"
     "npc_dota_creature_dragonspawn"                                                 "龙卵守护者"
     "npc_dota_creature_small_thunder_lizard"                                        "雷肤兽"
@@ -429,7 +427,7 @@
     "npc_dota_creature_gaoler"                                                      "灯神怪"
     "npc_dota_creature_element_truefom"                                             "冰霜巨熊"
     "npc_dota_creature_undying"                                                     "不朽尸王"
-    "npc_dota_creature_radiant_hulk"                                                "天辉巨人"
+    "npc_dota_creature_radiant_hulk"                                                "天辉南瓜巨人"
     "npc_dota_creature_centaur_elder"                                               "半人马长老"
     "npc_dota_creature_ambry"                                                       "暴虐恐狼"
     "npc_dota_creature_icewrack"                                                    "冰霜巨狼"
@@ -509,6 +507,8 @@
     "npc_dota_creature_nightstalker"                                                "暗夜魔王"
     "npc_dota_creature_storm_spirit"                                                "风暴之灵"
 
+    "DOTA_Tooltip_modifier_fountain_aura_effect_lua"                                "泉水光环"
+    "DOTA_Tooltip_modifier_fountain_aura_effect_lua_Description"                    "治疗中"
 
 
     "DOTA_Tooltip_ability_zuus_cloud_lua"	                                        "雷云"
@@ -701,8 +701,8 @@
     "DOTA_Tooltip_dazzle_bad_juju_nMystery"                                              "<font color='#e9c2ff'>神秘：</font>"
     "DOTA_Tooltip_dazzle_bad_juju_nDecay"                                                "<font color='#b3d465'>腐朽：</font>"
 
-    "DOTA_Tooltip_enigma_midnight_pulse_nMystery"                                         "<font color='#e9c2ff'>神秘：</font>"
-    "DOTA_Tooltip_enigma_midnight_pulse_nDecay"                                           "<font color='#b3d465'>腐朽：</font>"
+    "DOTA_Tooltip_ability_enigma_midnight_pulse_nMystery"                                "<font color='#e9c2ff'>神秘：</font>"
+    "DOTA_Tooltip_ability_enigma_midnight_pulse_nDecay"                                  "<font color='#b3d465'>腐朽：</font>"
 
 
     "DOTA_Tooltip_ability_decay_tombstone"                                                "墓碑"
@@ -943,7 +943,8 @@
     "DOTA_Tooltip_ability_item_enchanted_mango_lua_hp_regen"                                       "+$hp_regen"
 
     "DOTA_Tooltip_ability_elder_red_dragon_passive_lua"                                            "溅射攻击"
-    "DOTA_Tooltip_ability_elder_red_dragon_passive_lua_Description"                                "溅射攻击：攻击时伤害将溅射到300范围内所有单位。"
+    "DOTA_Tooltip_ability_elder_red_dragon_passive_lua_Description"                                "溅射攻击：攻击时伤害将溅射到范围内所有单位。"
+    "DOTA_Tooltip_ability_elder_red_dragon_passive_lua_radius"                                     "溅射范围："
 
 
     "DOTA_Tooltip_Ability_lycan_boss_claw_attack"                                "爪击"
@@ -1022,7 +1023,20 @@
  
     "DOTA_Tooltip_Ability_invoker_tornado_nElement"                          "<font color='#00a0e9'>元素：</font>"
 
+    "DOTA_Tooltip_Ability_undead_tusk_bone_ball"                             "骨球"
+    "DOTA_Tooltip_Ability_undead_tusk_bone_ball_Description"                 "海象骷髅卷成骨球。发动骨球后，骨球会裹挟周围的友方单位，骨球经过的敌方单位将会被眩晕并受到伤害。"
+    "DOTA_Tooltip_Ability_undead_tusk_bone_ball_damage"                      "伤害："
 
+    "DOTA_Tooltip_Ability_visage_summon_familiars_stone_form_nDurable"        "<font color='#f8b551'>坚韧：</font>"
+    "DOTA_Tooltip_Ability_visage_summon_familiars_stone_form_nDecay"          "<font color='#f8b551'>腐朽：</font>"
+   
+
+    "DOTA_Tooltip_Ability_elder_green_dragon_passive_lua"                                 "腐蚀吐息"
+    "DOTA_Tooltip_Ability_elder_green_dragon_passive_lua_Description"                     "被动：普通攻击喷涂腐蚀性毒素，对目标造成持续毒素伤害。"
+    "DOTA_Tooltip_Ability_elder_green_dragon_passive_lua_duration"                        "持续时间："
+    "DOTA_Tooltip_Ability_elder_green_dragon_passive_lua_damage_per_tick"                 "每跳伤害："
+
+    "DOTA_Tooltip_modifier_elder_green_dragon_passive_lua_passive"                         "腐蚀吐息"
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"

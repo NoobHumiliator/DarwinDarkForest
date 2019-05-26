@@ -1,5 +1,6 @@
 slark_shadow_dance_lua = class({})
 LinkLuaModifier( "modifier_slark_shadow_dance_lua_invisible","creature_ability/modifier/modifier_slark_shadow_dance_lua_invisible", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_dummy_thinker","creature_ability/modifier/modifier_dummy_thinker", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------
 --[[

@@ -126,11 +126,11 @@ function GameMode:OnEntityKilled(keys)
        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
 
        --Todo 播放击杀特效，到时候挪走
-       if hHero.sCurrentKillEffect then
+       if hHero and hHero.sCurrentKillEffect then
             Econ:PlayKillEffect(hHero.sCurrentKillEffect,hHero)
        end
 
-       if hHero.sCurrentKillSound then
+       if hHero and hHero.sCurrentKillSound then
             Econ:PlayKillSound(hHero.sCurrentKillSound,hHero)
        end
        

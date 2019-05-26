@@ -229,7 +229,7 @@
     {
         "BaseClass"                     "ability_lua"
         "ScriptFile"                    "creature_ability/frostbitten_icicle"
-        "AbilityTextureName"            "lich_frost_nova"
+        "AbilityTextureName"            "frostbitten_icicle"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
@@ -242,15 +242,15 @@
         "AbilityCastRange"              "700"
         "AbilityCastPoint"              "0.5"
 
-        "MaxLevel"                      "6"
+        "MaxLevel"                      "8"
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "10 9 8 7 6 5"
+        "AbilityCooldown"               "11 10 9 8 7 6 5 4"
        
         // Cost
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityManaCost"               "100 125 150 175 200 225"
+        "AbilityManaCost"               "100 125 150 175 200 225 250 275"
 
         // Special
         //-------------------------------------------------------------------------------------------------------------
@@ -269,7 +269,7 @@
             "03"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "damage"                    "250 350 450 550 650 750"
+                "damage"                    "250 350 450 550 650 750 850 950"
             }
             "04"
             {
@@ -279,12 +279,12 @@
             "05"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "nElement"                  "4 6 10 14 18 22"
+                "nElement"                  "4 6 10 14 18 22 26 30"
             }
             "06"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "nDecay"                    "4 6 10 14 18 22"
+                "nDecay"                    "4 6 10 14 18 22 26 30"
             }
         }
     }
@@ -572,7 +572,7 @@
         "BaseClass"                                      "ability_lua"
         "ScriptFile"                                     "creature_ability/forged_spirit_melting_strike_lua"
         "AbilityTextureName"                             "forged_spirit_melting_strike"
-        "AbilityManaCost"                                "10 15 20 25 30"
+        "AbilityManaCost"                                "10 15 20 25 30 35"
         
         "MaxLevel"                                       "5"
 
@@ -586,12 +586,12 @@
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "armor_removed"         "1 2 3 4 5"
+                "armor_removed"         "1 2 3 4 5 6"
             }
             "03"
             {
                 "var_type"              "FIELD_INTEGER"
-                "nElement"              "2 10 18 26 34"
+                "nElement"              "3 6 9 12 15 18"
             }
         }
     }
@@ -1649,7 +1649,7 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "attack_speed_bonus"    "50 60 70 80 90 100"
+                "attack_speed_bonus"    "50 60 75 95 120 150"
             }
             "02"
             {
@@ -1660,12 +1660,12 @@
            "03"
             {
                 "var_type"              "FIELD_INTEGER"
-                "nDecay"                 "2 8 14 20 26 32"
+                "nDecay"                "6 12 18 24 30 36"
             }
            "04"
             {
                 "var_type"              "FIELD_INTEGER"
-                "nFury"                 "2 8 14 20 26 32"
+                "nFury"                 "6 12 18 24 30 36"
             }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
@@ -2269,7 +2269,7 @@
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "85 80 75 70 65 60 55 50"
+        "AbilityCooldown"               "60 55 50 45 40 35 30 25"
         
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -4074,7 +4074,7 @@
             "01"
             {
                 "var_type"                      "FIELD_INTEGER"
-                "movement_speed"                "12 24 36 48"
+                "movement_speed"                "24 36 48 60"
             }
             "02"
             {
@@ -5134,12 +5134,20 @@
         "BaseClass"                     "ability_lua"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
-        "MaxLevel"                      "1"
+        "MaxLevel"                      "2"
         "AbilityTextureName"            "dragon_knight_elder_dragon_form"
         "ScriptFile"                    "creature_ability/elder_red_dragon_passive_lua"
         "precache"
         {
             "particle"                  "particles/units/heroes/hero_dragon_knight/dragon_knight_transform_red.vpcf"
+        }
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                 "FIELD_INTEGER"
+                "radius"                   "300 400"
+            }
         }
     }
 
@@ -5148,13 +5156,28 @@
         "BaseClass"                     "ability_lua"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
-        "MaxLevel"                      "1"
+        "MaxLevel"                      "2"
         "AbilityTextureName"            "dragon_knight_elder_dragon_form"
         "ScriptFile"                    "creature_ability/elder_green_dragon_passive_lua"
         "precache"
         {
             "particle"                  "particles/units/heroes/hero_dragon_knight/dragon_knight_transform_green.vpcf"
         }
+        
+         "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "duration"                  "5"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "damage_per_tick"            "75 150"
+            }
+        }
+
     }
 
     "lycan_boss_claw_attack"
@@ -5490,12 +5513,12 @@
                 "var_type"              "FIELD_INTEGER"
                 "nDurable"              "3 5 7 9 11 13 15 17"
             }
-            "04"
+            "05"
             {
                 "var_type"              "FIELD_INTEGER"
                 "nFury"                 "3 5 7 9 11 13 15 17"
             }
-            "05"
+            "06"
             {
                 "var_type"              "FIELD_INTEGER"
                 "nMystery"              "3 5 7 9 11 13 15 17"
@@ -6302,6 +6325,172 @@
             }
         }
     }
+
+
+    "undead_tusk_bone_ball"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "tusk_snowball"
+        "ScriptFile"                    "creature_ability/undead_tusk_bone_ball"
+
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Tusk.Snowball.Cast"
+
+        "MaxLevel"                      "8"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "1250"
+        "AbilityCastPoint"              "0.1"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "20 19 18 17 16 15 14 13"
+
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "75 90 105 120 135 150 165 180"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "damage"                    "200 300 400 500 600 700 800 900"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "speed"                     "350"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "stun_duration"             "1.0"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "windup_radius"             "100"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "duration"                  "4.0"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "radius"                    "200"
+            }           
+            "08"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "grow_rate"                 "25"
+            }
+            "09"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "windup"                    "1.5"
+            }
+            "10"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "grab_radius"               "350"
+            }
+            "11"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "additional_speed"          "15 20 25 30 35 40 45 50"
+            }
+            "12"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nDecay"                    "4 8 12 16 20 24 28 32"
+            }
+        }
+    }
+
+    
+
+    "visage_summon_familiars_stone_form"
+    {
+        "BaseClass"                     "visage_summon_familiars_stone_form"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES_STRONG"
+        "AbilityCastRange"              "160"
+        "AbilityCastPoint"              "0.0"
+        "MaxLevel"                      "3"
+        "AbilitySound"                  "Visage_Familiar.StoneForm.Cast"
+
+        "MaxLevel"                       "6"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "14.0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "stun_radius"                       "350"
+            }
+            "02"
+            {
+                "var_type"                          "FIELD_FLOAT"
+                "stun_delay"                        "0.55"
+            }           
+            "03"
+            {
+                "var_type"                          "FIELD_INTEGER"
+                "stun_damage"                       "60 100 150 210 280 360"
+            }
+            "04"
+            {
+                "var_type"                          "FIELD_FLOAT"
+                "stun_duration"                     "1.0 1.25 1.5 1.75 2.0 2.25"
+            }
+            "05"
+            {
+                "var_type"                          "FIELD_FLOAT"
+                "stone_duration"                    "6.0"
+            }
+            "06"
+            {
+                "var_type"                          "FIELD_FLOAT"
+                "hp_regen"                          "50 100 150 200 250 300"
+            }
+            "07"
+            {
+                "var_type"                          "FIELD_FLOAT"
+                "nDurable"                          "8 16 24 32 40 48"
+            }
+            "08"
+            {
+                "var_type"                          "FIELD_FLOAT"
+                "nDecay"                            "8 16 24 32 40 48"
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+
 
 
 
