@@ -1026,6 +1026,7 @@
     "DOTA_Tooltip_Ability_undead_tusk_bone_ball"                             "骨球"
     "DOTA_Tooltip_Ability_undead_tusk_bone_ball_Description"                 "海象骷髅卷成骨球。发动骨球后，骨球会裹挟周围的友方单位，骨球经过的敌方单位将会被眩晕并受到伤害。"
     "DOTA_Tooltip_Ability_undead_tusk_bone_ball_damage"                      "伤害："
+    "DOTA_Tooltip_Ability_undead_tusk_bone_ball_nDecay"                      "<font color='#f8b551'>腐朽：</font>"
 
     "DOTA_Tooltip_Ability_crystal_maiden_frostbite_nElement"                 "<font color='#00a0e9'>元素：</font>"
     
