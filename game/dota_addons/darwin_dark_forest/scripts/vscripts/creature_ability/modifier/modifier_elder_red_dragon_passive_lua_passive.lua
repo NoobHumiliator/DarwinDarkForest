@@ -7,7 +7,7 @@ end
 function modifier_elder_red_dragon_passive_lua_passive:OnCreated()
 	 --会导致闪退
 	 --self:GetParent():AddNewModifier(self:GetParent(), self, "modifier_dragon_knight_splash_attack", {})
-     self:GetParent():SetMaterialGroup("1")
+     self:GetParent():SetMaterialGroup("3")
      self.radius = self:GetAbility():GetSpecialValueFor("radius")
 
 end

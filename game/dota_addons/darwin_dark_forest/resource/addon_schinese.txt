@@ -226,7 +226,7 @@
     "npc_dota_creature_giant_wolf"                                                  "巨狼"
     "npc_dota_creature_small_mud_golem"                                             "黏土傀儡"
     "npc_dota_creature_ogre_mage_1"                                                 "食人魔学徒"
-    "npc_dota_creature_amoeba_1"                                                    "神秘元素"
+    "npc_dota_creature_amoeba_1"                                                    "气泡怪"
 
 
     //Level-3
@@ -258,7 +258,7 @@
 
 
     //Level-4
-    "npc_dota_creature_amoeba_2"                                                    "神秘元素聚合体"
+    "npc_dota_creature_amoeba_2"                                                    "大型气泡怪"
     "npc_dota_creature_frostbitten_necromancer_1"                                   "霜牙死灵法师"
     "npc_dota_creature_frostbitten_acolyte_2"                                       "霜牙助祭"
     "npc_dota_creature_ogre_mauler_2"                                               "食人魔拳手"
@@ -325,13 +325,15 @@
     "npc_dota_creature_satyr_hellcaller_1"                                          "萨特折磨者"
     "npc_dota_creature_tentacular_conqueror_1"                                      "虚空信徒"
     "npc_dota_creature_plague_familiar"                                             "瘟疫佣兽"
+    "npc_dota_creature_amoeba_3"                                                    "活体海沫"
 
 
 
     //Level-6
+    "npc_dota_creature_oldone_sentinel_1"                                           "黑金元素"
     "npc_dota_creature_slark_1"                                                     "近海刺杀者"
     "npc_dota_creature_element_spider_1"                                            "元素蜘蛛"
-    "npc_dota_creature_amoeba_3"                                                    "神秘元素巨怪"
+    "npc_dota_creature_amoeba_4"                                                    "大型活体海沫"
     "npc_dota_creature_necro_archer_2"                                              "死灵书弓箭手"
     "npc_dota_creature_centaur_elite_2"                                             "半人马精锐"
     "npc_dota_creature_frostbitten_elder_1"                                         "霜牙死灵长老"
@@ -369,6 +371,7 @@
 
    
     //Level-7
+    "npc_dota_creature_oldone_sentinel_2"                                           "黑金灭杀者"
     "npc_dota_creature_ogreseal_2"                                                  "海象"
     "npc_dota_creature_slark_2"                                                     "鱼人夜行者"
     "npc_dota_creature_element_spider_2"                                            "元素蜘蛛"
@@ -401,6 +404,8 @@
     "npc_dota_creature_dark_troll_warlord"                                          "黑暗巨魔召唤法师"
     "npc_dota_creature_dark_troll_berserker"                                        "丛林巨魔狂战士"
     "npc_dota_creature_satyr_dreamer"                                               "萨特梦者"
+    "npc_dota_creature_morphling"                                                   "水元素"
+
 
     //Level-8
     "npc_dota_creature_spirit_breaker"                                              "裂魂人"
@@ -437,8 +442,10 @@
     "npc_dota_creature_riki"                                                        "隐形刺客"
     "npc_dota_creature_visage"                                                      "死灵飞龙"
     "npc_dota_creature_broodmother"                                                 "育母蜘蛛"
+    "npc_dota_creature_morphling_2"                                                 "变体精灵"
 
     //Level-9
+    "npc_dota_creature_undying_seablight_procession"                                "深海信徒"
     "npc_dota_creature_ogre_double_head_antipodeans"                                "双头食人战争魔法师"
     "npc_dota_creature_spirit_breaker_ironbarde_charger"                            "钢甲冲锋者"
     "npc_dota_creature_lich_rime_lord"                                              "雾凇领主"
@@ -459,7 +466,6 @@
     "npc_dota_creature_tiny_04"                                                     "岩石巨人"
     "npc_dota_creature_centaur_khan"                                                "半人马可汗"
     "npc_dota_creature_undying_flesh_golem"                                         "血肉傀儡"
-    "npc_dota_creature_oldone_sentinel"                                             "古神近卫"
     "npc_dota_creature_nian"                                                        "年兽"
     "npc_dota_creature_roshan"                                                      "肉山"
     "npc_dota_creature_doom_icewrack"                                               "灾厄雪狼"
@@ -467,6 +473,8 @@
     "npc_dota_creature_primal_void"                                                 "虚空尊者"
     "npc_dota_creature_dream_secret"                                                "梦魇王子"
     "npc_dota_creature_broodmother_glutton_larder"                                  "饕餮蛛母"
+    "npc_dota_creature_visage_soul_keeper"                                          "灵魂守卫"
+    "npc_dota_creature_morphling_lost_star"                                         "迷星元素"
 
 
     //Level-10
@@ -492,11 +500,13 @@
     "npc_dota_creature_centaur_warchief"                                            "半人马大酋长"
     "npc_dota_creature_undying_flesh_baal"                                          "血肉邪神"
     "npc_dota_creature_pudge_surgical_precision"                                    "恐怖外科医生"
-    "npc_dota_creature_undying_old_one"                                             "旧日支配者"
+    "npc_dota_creature_undying_old_one"                                             "深海支配者"
     "npc_dota_creature_undying_night_king"                                          "夜王"
     "npc_dota_creature_lucius_longclaw"                                             "卢修兕·长牙"
     "npc_dota_creature_void_overlord"                                               "虚空大君"
     "npc_dota_creature_old_element"                                                 "衡势晶体"
+    "npc_dota_creature_visage_winged_harvest"                                       "空灵收割者"
+    "npc_dota_creature_morphling_protean_emperor"                                   "千变之王"
 
 
     //Level-11
