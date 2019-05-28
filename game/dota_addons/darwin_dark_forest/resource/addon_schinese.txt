@@ -292,6 +292,7 @@
     "npc_dota_creature_meranth_guard"                                               "鱼人斥候"
 
     //Level-5
+    "npc_dota_creature_small_thunder_lizard_1"                                      "小雷肤兽"
     "npc_dota_creature_frostbitten_necromancer_1"                                   "霜牙死灵法师"
     "npc_dota_creature_brute_1"                                                     "食人魔蛮兵"
     "npc_dota_creature_dragonspawn_samll"                                           "小型龙人"
@@ -330,6 +331,7 @@
 
 
     //Level-6
+     "npc_dota_creature_small_thunder_lizard_2"                                      "雷肤兽"
     "npc_dota_creature_oldone_sentinel_1"                                           "黑金元素"
     "npc_dota_creature_slark_1"                                                     "近海刺杀者"
     "npc_dota_creature_element_spider_1"                                            "元素蜘蛛"
@@ -349,7 +351,6 @@
     "npc_dota_creature_skeleton_green_soldier"                                      "冥界士兵"
     "npc_dota_creature_tusk_skeleton_armor"                                         "海象人尸鬼"
     "npc_dota_creature_dragonspawn"                                                 "龙卵守护者"
-    "npc_dota_creature_small_thunder_lizard"                                        "雷肤兽"
     "npc_dota_creature_large_brute"                                                 "食人魔巨蛮兵"
     "npc_dota_creature_ithogoaki"                                                   "异界恶魔"
     "npc_dota_creature_prism_forge_spirit"                                          "深渊之火"
@@ -395,7 +396,7 @@
     "npc_dota_creature_ogreseal"                                                    "海象"
     "npc_dota_creature_amber_queen_spiderling"                                      "琥珀蜘蛛"
     "npc_dota_creature_arachne_spider"                                              "阿克涅蜘蛛"
-    "npc_dota_creature_large_thunder_lizard"                                        "大型雷肤兽"
+    "npc_dota_creature_large_thunder_lizard"                                        "雷肤兽首领"
     "npc_dota_creature_gaint_granite_golem"                                         "大型花岗岩傀儡"
     "npc_dota_creature_tusk_skeleton_ghost"                                         "海象人幽灵"
     "npc_dota_creature_frostbitten_swollen"                                         "霜牙肿胀者"
@@ -443,6 +444,7 @@
     "npc_dota_creature_visage"                                                      "死灵飞龙"
     "npc_dota_creature_broodmother"                                                 "育母蜘蛛"
     "npc_dota_creature_morphling_2"                                                 "变体精灵"
+    "npc_dota_creature_slardar"                                                     "鱼人战士"
 
     //Level-9
     "npc_dota_creature_undying_seablight_procession"                                "深海信徒"
@@ -475,6 +477,7 @@
     "npc_dota_creature_broodmother_glutton_larder"                                  "饕餮蛛母"
     "npc_dota_creature_visage_soul_keeper"                                          "灵魂守卫"
     "npc_dota_creature_morphling_lost_star"                                         "迷星元素"
+    "npc_dota_creature_slardar_vanguard"                                            "鱼人先锋"
 
 
     //Level-10
@@ -947,6 +950,14 @@
     "DOTA_Tooltip_ability_item_tome_of_knowledge_lua"                                               "知识之书"
     "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_Description"                                   "<h1>使用：启迪</h1>直接获得%xp_bonus%点经验值。"
 
+    
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_2"                                               "知识之书Ⅱ"
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_2_Description"                                   "<h1>使用：启迪</h1>直接获得%xp_bonus%点经验值。"
+
+
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_3"                                               "知识之书Ⅲ"
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_3_Description"                                   "<h1>使用：启迪</h1>直接获得%xp_bonus%点经验值。"
+
 
     "DOTA_Tooltip_ability_item_enchanted_mango_lua"                                                "魔法芒果"
     "DOTA_Tooltip_ability_item_enchanted_mango_lua_Description"                                    "<h1>使用：吞食芒果</h1>立刻回复%replenish_amount%点魔法。<br>"
@@ -968,10 +979,10 @@
     "DOTA_Tooltip_Ability_lycan_boss_rupture_ball_movement_damage_pct"   "%每移动100距离当前生命值伤害："
      
 
-    "DOTA_Tooltip_Ability_nian_leap_lua"                        "撕咬"
-    "DOTA_Tooltip_Ability_nian_leap_lua_Description"            "撕咬一个敌方单位，使其失去行动能力，并受到持续伤害。"
-    "DOTA_Tooltip_Ability_nian_leap_lua_dismember_damage"       "每秒伤害："
-    "DOTA_Tooltip_Ability_nian_leap_lua_duration"               "持续时间："
+    "DOTA_Tooltip_Ability_nian_pin_lua"                        "撕咬"
+    "DOTA_Tooltip_Ability_nian_pin_lua_Description"            "撕咬一个敌方单位，使其失去行动能力，并受到持续伤害。"
+    "DOTA_Tooltip_Ability_nian_pin_lua_dismember_damage"       "每秒伤害："
+    "DOTA_Tooltip_Ability_nian_pin_lua_duration"               "持续时间："
 
     "DOTA_Tooltip_Ability_nian_leap_lua"                        "扑击"
     "DOTA_Tooltip_Ability_nian_leap_lua_Description"            "跃向目标位置，伤害并击晕落点附近的敌人。"

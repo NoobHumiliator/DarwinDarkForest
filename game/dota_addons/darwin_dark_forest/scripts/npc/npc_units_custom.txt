@@ -7106,7 +7106,7 @@
 
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
 		"MovementSpeed"				"280"
 
 		// Status
@@ -7158,7 +7158,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"morphling_waveform "
+		"Ability1"					"morphling_waveform"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -9422,7 +9422,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"morphling_waveform "
+		"Ability1"					"morphling_waveform"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -9485,7 +9485,7 @@
 		"Model"						"models/items/invoker/forge_spirit/nightlord_crypt_sentinel/nightlord_crypt_sentinel.vmdl"
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"6"
-		"ModelScale" 				"0.9"
+		"ModelScale" 				"1.8"
 		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
@@ -10453,7 +10453,7 @@
 
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
 		"MovementSpeed"				"295"
 
 		// Status
@@ -11939,7 +11939,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_Morphling"
 		"Level"						"7"
-		"ModelScale" 				"1.0"
+		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -12020,7 +12020,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"7"
-		"ModelScale" 				"1.0"
+		"ModelScale" 				"2.0"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -13188,7 +13188,7 @@
 
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
 		"MovementSpeed"				"285"
 
 		// Status
@@ -14442,7 +14442,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_Morphling"
 		"Level"						"8"
-		"ModelScale" 				"1.1"
+		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -14750,7 +14750,7 @@
 		"GameSoundsFile"	     	"soundevents/game_sounds_heroes/game_sounds_slardar.vsndevts"
 		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_slardar.vsndevts"
 
-		"ModelScale"				"1.0"
+		"ModelScale"				"1.1"
 		"Level"						"8"
 		"vscripts"					"creap_ai.lua"
 
@@ -17276,7 +17276,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_Morphling"
 		"Level"						"9"
-		"ModelScale" 				"1.2"
+		"ModelScale" 				"1.4"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -17579,7 +17579,7 @@
 		"GameSoundsFile"	     	"soundevents/game_sounds_heroes/game_sounds_slardar.vsndevts"
 		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_slardar.vsndevts"
 
-		"ModelScale"				"1.1"
+		"ModelScale"				"1.2"
 		"Level"						"9"
 		"vscripts"					"creap_ai.lua"
 
@@ -19697,7 +19697,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_Visage"
 		"Level"						"9"
-		"ModelScale" 				"1.2"
+		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -20199,7 +20199,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_Morphling"
 		"Level"						"10"
-		"ModelScale" 				"1.3"
+		"ModelScale" 				"1.5"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -20295,7 +20295,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_Visage"
 		"Level"						"10"
-		"ModelScale" 				"1.3"
+		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -21805,7 +21805,7 @@
 		"SoundSet"					"Hero_Tiny"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_tiny.vsndevts"
 		"Level"						"10"
-		"ModelScale" 				"1.1"
+		"ModelScale" 				"1.25"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -22084,7 +22084,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_Broodmother"
 		"Level"						"10"
-		"ModelScale" 				"1.3"
+		"ModelScale" 				"1.5"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
@@ -22115,7 +22115,7 @@
 		"AttackRate"				"0.8"		// Speed of attack.
 		"AttackAnimationPoint"		"0.2"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRange"				"200"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
 

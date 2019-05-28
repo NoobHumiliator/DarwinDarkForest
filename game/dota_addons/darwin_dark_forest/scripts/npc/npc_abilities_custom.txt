@@ -6539,7 +6539,7 @@
             "02"
             {
                 "var_type"          "FIELD_INTEGER"
-                "creep_total_damage"            "1000"
+                "creep_total_damage"           "150 200 250 300 360 430 510 600"
             }
             "03"
             {

@@ -124,13 +124,18 @@ function GameMode:OnEntityKilled(keys)
 
        local nPlayerId = hKillerUnit:GetMainControllingPlayer()
        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
+        
+       --如果是生物自然死亡，不做处理
+       if hHero==nil then
+           return
+       end
 
        --Todo 播放击杀特效，到时候挪走
-       if hHero and hHero.sCurrentKillEffect then
+       if hHero.sCurrentKillEffect then
             Econ:PlayKillEffect(hHero.sCurrentKillEffect,hHero)
        end
 
-       if hHero and hHero.sCurrentKillSound then
+       if hHero.sCurrentKillSound then
             Econ:PlayKillSound(hHero.sCurrentKillSound,hHero)
        end
        
@@ -199,7 +204,7 @@ function GameMode:OnEntityKilled(keys)
             return a.value > b.value
        end)
 
-       --排序选出最大的两个
+       --播放吸收特效
        for _,v in pairs(tempPerksColorMap) do
          if v.value>0 then 
            local nSoulParticle = ParticleManager:CreateParticle("particles/absorb_particle/absorb_"..v.color..".vpcf", PATTACH_POINT_FOLLOW, hKillerUnit)

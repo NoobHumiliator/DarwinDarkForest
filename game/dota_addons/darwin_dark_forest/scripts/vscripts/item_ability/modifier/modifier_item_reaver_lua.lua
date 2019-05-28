@@ -25,7 +25,8 @@ end
 function modifier_item_reaver_lua:DeclareFunctions()
 	local funcs = 
 	{
-		MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT
+		MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
+		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE
 	}
 
 	return funcs
