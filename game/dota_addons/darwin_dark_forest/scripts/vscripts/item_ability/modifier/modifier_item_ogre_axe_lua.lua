@@ -1,18 +1,18 @@
 
-modifier_item_gauntlets_lua = class({})
+modifier_item_ogre_axe_lua = class({})
 
-function modifier_item_gauntlets_lua:IsHidden()
+function modifier_item_ogre_axe_lua:IsHidden()
 	return true
 end
 ----------------------------------------
 
-function modifier_item_gauntlets_lua:GetAttributes()
+function modifier_item_ogre_axe_lua:GetAttributes()
 	return MODIFIER_ATTRIBUTE_MULTIPLE
 end
 ----------------------------------------
 
 
-function modifier_item_gauntlets_lua:OnCreated( kv )
+function modifier_item_ogre_axe_lua:OnCreated( kv )
 	self.bonus_health = self:GetAbility():GetSpecialValueFor( "bonus_health" )
 	self.bonus_health_regen = self:GetAbility():GetSpecialValueFor( "bonus_health_regen" )
     self.bonus_damage = self:GetAbility():GetSpecialValueFor( "bonus_damage" )
@@ -24,7 +24,7 @@ function modifier_item_gauntlets_lua:OnCreated( kv )
     end
 end
 -------------------------------------------
-function modifier_item_gauntlets_lua:DeclareFunctions()
+function modifier_item_ogre_axe_lua:DeclareFunctions()
 	local funcs = 
 	{
 		MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
@@ -35,17 +35,17 @@ function modifier_item_gauntlets_lua:DeclareFunctions()
 	return funcs
 end
 ------------------------------------------
-function modifier_item_gauntlets_lua:GetModifierConstantHealthRegen(kv)
+function modifier_item_ogre_axe_lua:GetModifierConstantHealthRegen(kv)
 	return self.bonus_health_regen
 end
 
 -------------------------------------------
-function modifier_item_gauntlets_lua:GetModifierPreAttack_BonusDamage(kv)
+function modifier_item_ogre_axe_lua:GetModifierPreAttack_BonusDamage(kv)
 	return self.bonus_damage
 end
 
 -------------------------------------------
-function modifier_item_gauntlets_lua:OnDestroy()
+function modifier_item_ogre_axe_lua:OnDestroy()
     if IsServer() then
     	RemoveHealthBonus(self:GetCaster(),self.bonus_health)
     end
@@ -53,6 +53,6 @@ end
 
 ---------------------------------------------
 
-function modifier_item_gauntlets_lua:GetModifierMagicalResistanceBonus( params )
+function modifier_item_ogre_axe_lua:GetModifierMagicalResistanceBonus( params )
 	return self.magic_resistance
 end

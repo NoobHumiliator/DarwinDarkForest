@@ -218,6 +218,11 @@
 				"var_type"				"FIELD_INTEGER"
 				"mana_regen_bonus"		"0.3"
 			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"	    	"2"
+			}
 		}
 	}
 
@@ -343,17 +348,47 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_amplify"		    "4"
+				"bonus_health"		    "80"
 			}
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"		    "4"
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "0.4"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"		    "80"
+				"bonus_damage"          "4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "4"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "0.4"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "4"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.32"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "0.64"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.2"
 			}
 		}
 	}
@@ -497,8 +532,13 @@
 			}
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
+				"var_type"				"FIELD_FLOAT"
 				"mana_regen_bonus"		"0.5"
+			}
+		    "03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"	     	"4"
 			}
 		}
 	}
@@ -3343,6 +3383,11 @@
 				"var_type"				"FIELD_FLOAT"
 				"bonus_health_regen"	"0.3"
 			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"	        "0.24"
+			}
 		}
 	}
 
@@ -4293,16 +4338,13 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"20035"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NONE"
 		"Model"							"models/props_gameplay/branch.vmdl"
 
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"400"
-		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"0.0"
-		
-		
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"item_ability/item_branches_lua"
+		"AbilityTextureName" 		    "item_branches"
+
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"50"
@@ -4318,24 +4360,752 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"1"
+				"bonus_health"		    "20"
 			}
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"tree_duration"		"20"
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "0.1"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"range_tooltip"	"200"
+				"bonus_damage"          "1"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "1"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "0.1"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "1"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.08"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "0.16"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.05"
+			}
+		}
+	}
+    
+
+	"item_circlet_lua"
+	{
+		"ID"							"20040"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 		    "item_circlet"
+		"ScriptFile"					"item_ability/item_circlet_lua"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"165"
+		"ItemShopTags"					"agi;int;str"
+		"ItemQuality"					"component"
+		"ItemAliases"					"circlet"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "40"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "0.2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "2"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "2"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "0.2"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "2"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.16"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "0.32"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.1"
 			}
 		}
 	}
 
+	"item_mantle_lua"
+	{
+		"ID"							"20045"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 		    "item_mantle"
+		"ScriptFile"					"item_ability/item_mantle_lua"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"135"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"component"
+		"ItemAliases"					"mantle of intelligence"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "0.3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_damage"          "1"
+			}
+		}
+	}
+
+
+	"item_slippers_lua"
+	{
+		"ID"							"20050"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 		    "item_slippers"
+		"ScriptFile"					"item_ability/item_slippers_lua"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"135"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"component"
+		"ItemAliases"					"mantle of intelligence"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "1"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "0.46"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.15"
+			}
+		}
+	}
+
+	"item_boots_of_elves_lua"
+	{
+		"ID"							"20055"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 		    "item_boots_of_elves"
+		"ScriptFile"					"item_ability/item_boots_of_elves_lua"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"135"
+		"ItemShopTags"					"int"
+		"ItemQuality"					"component"
+		"ItemAliases"					"mantle of intelligence"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "6"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "0.96"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.3"
+			}
+		}
+	}
+
+	"item_belt_of_strength_lua"
+	{
+		"ID"							"20060"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 		    "item_belt_of_strength"
+		"ScriptFile"					"item_ability/item_belt_of_strength_lua"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"450"
+		"ItemShopTags"					"str"
+		"ItemQuality"					"component"
+		"ItemAliases"					"belt of strength"
+		"SideShop"						"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "60"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"		    "1"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"0.3"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"	        "0.24"
+			}
+		}
+	}
+
+
+	"item_blade_of_alacrity_lua"
+	{
+		"ID"							"20065"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 		    "item_blade_of_alacrity"
+		"ScriptFile"					"item_ability/item_blade_of_alacrity_lua"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					"agi"
+		"ItemQuality"					"component"
+		"ItemAliases"					"blade of alacrity"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "4"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "10"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "1.6"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.5"
+			}
+		}
+	}
+
+	"item_ogre_axe_lua"
+	{
+		"ID"							"20070"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 		    "item_ogre_axe"
+		"ScriptFile"					"item_ability/item_ogre_axe_lua"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					"str"
+		"ItemQuality"					"component"
+		"ItemAliases"					"ogre club"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"		    "4"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"1"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"	        "0.8"
+			}
+		}
+	}
+
+	"item_magic_stick_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20075"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_magic_stick"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/magic_wand.mdl"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13.0"
+		"AbilitySharedCooldown"			"magicwand"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"200"
+		"ItemShopTags"					"regen_health;regen_mana;boost_health;boost_mana"
+		"ItemQuality"					"component"
+		"ItemAliases"					"magic stick"
+		"ItemInitialCharges"			"0"
+		"ItemPermanent"					"1"
+		"ItemRequiresCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"SideShop"						"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_charges"			"10"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_radius"			"1200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"restore_per_charge"	"15"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"item_ability/item_stick.lua"
+				"Function"				"MagicStick"
+
+				"sound_cast"			"DOTA_Item.MagicStick.Activate"
+				"particle_cast"			"particles/items2_fx/magic_stick.vpcf"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_magic_stick_aura_datadriven"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"IsBuff"				"1"
+				"IsPurgable"			"0"
+
+				"Aura"					"modifier_item_magic_stick_effect_datadriven"
+				"Aura_Radius"			"%charge_radius"
+				"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"			"DOTA_UNIT_TARGET_ALL"
+				"Aura_Flags"			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster"	"0"
+			}
+
+			"modifier_item_magic_stick_effect_datadriven"
+			{
+				"Passive"				"0"
+				"IsHidden"				"1"
+				"IsDebuff"				"1"
+				"IsPurgable"			"0"
+
+				"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE"
+
+				"OnSpentMana"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"item_ability/item_stick.lua"
+						"Function"		"MagicStickCharge"
+					}
+				}
+			}
+		}
+	}
+
+	"item_recipe_magic_wand_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20080"
 	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					""
 
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"					"1"
+		"ItemResult"					"item_magic_wand_datadriven"
+		"ItemRequirements"
+		{
+			"01"						"item_branches_lua;item_branches_lua;item_magic_stick_datadriven"
+		}
+	}
 
+    
+    "item_magic_wand_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20085"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_magic_wand"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/magic_wand.mdl"
 
-	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13"
+		"AbilitySharedCooldown"			"magicwand"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"450"
+		"ItemShopTags"					"regen_health;regen_mana;boost_health;boost_mana;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"magic wand"
+		"ItemPermanent"					"1"
+		"ItemRequiresCharges"			"1"
+		"ItemDisplayCharges"			"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_charges"			"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_radius"			"1200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"restore_per_charge"	"15"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.15"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "60"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "0.3"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "3"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "3"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "0.3"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "3"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.24"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "0.48"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"item_ability/item_stick.lua"
+				"Function"				"MagicStick"
+
+				"sound_cast"			"DOTA_Item.MagicStick.Activate"
+				"particle_cast"			"particles/items2_fx/magic_stick.vpcf"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_imba_magic_wand"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"IsBuff"				"1"
+				"IsPurgable"			"0"
+
+				"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_PERMANENT"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
+				}
+				
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"item_ability/item_stick.lua"
+						"Function"		"CreateAttributeModifier"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"item_ability/item_stick.lua"
+						"Function"		"RemoveAttributeModifier"
+					}
+				}
+			}
+
+			"modifier_item_imba_magic_stick_aura"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"IsBuff"				"1"
+				"IsPurgable"			"0"
+
+				"Aura"					"modifier_item_imba_magic_stick_effect"
+				"Aura_Radius"			"%charge_radius"
+				"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
+				"Aura_Flags"			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster"	"0"
+			}
+
+			"modifier_item_imba_magic_stick_effect"
+			{
+				"Passive"				"0"
+				"IsHidden"				"1"
+				"IsDebuff"				"1"
+				"IsPurgable"			"0"
+
+				"Attributes"			"MODIFIER_ATTRIBUTE_MULTIPLE"
+
+				"OnSpentMana"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"components/items/item_stick.lua"
+						"Function"		"MagicStickCharge"
+					}
+				}
+			}
+		}
+	}
+
+	"item_ghost_lua"
+	{
+
+		"BaseClass"                     "item_lua"
+        "ScriptFile"					"item_ability/item_ghost_lua"
+		"AbilityTextureName" 		    "item_ghost"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"FightRecapLevel"				"1"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0"		 
+		"AbilitySharedCooldown"			"ethereal"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1500"
+		"ItemShopTags"					"int;agi;str;hard_to_tag"
+		"ItemQuality"					"component"
+		"ItemAliases"					"ghost scepter"
+		"ShouldBeSuggested"				"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"4.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"extra_spell_damage_percent"	"-40"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "100"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "0.5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "5"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "5"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "0.5"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "5"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.4"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "0.8"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.25"
+			}
+		}
+	}
+
 }
