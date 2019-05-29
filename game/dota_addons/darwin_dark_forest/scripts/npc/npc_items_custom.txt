@@ -653,12 +653,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_amplify"		    "12"
+				"spell_amplify"		    "25"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"mana_regen_bonus"	    "1.25"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_damage"	        "9"
 			}
 		}
 	}
@@ -3912,7 +3917,7 @@
 		"ItemResult"					"item_solar_crest"
 		"ItemRequirements"
 		{
-			"01"						"item_medallion_of_courage;item_ultimate_orb;item_wind_lace"
+			"01"						"item_medallion_of_courage;item_ultimate_orb_lua;item_wind_lace"
 		}
 	}
 
@@ -5024,7 +5029,7 @@
 
 	"item_ghost_lua"
 	{
-
+        "ID"							"20090"
 		"BaseClass"                     "item_lua"
         "ScriptFile"					"item_ability/item_ghost_lua"
 		"AbilityTextureName" 		    "item_ghost"
@@ -5107,5 +5112,245 @@
 			}
 		}
 	}
+
+
+	"item_energy_booster_lua"
+	{
+		"ID"                            "20095"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"                     "item_lua"
+        "ScriptFile"					"item_ability/item_energy_booster_lua"
+		"AbilityTextureName" 		    "item_energy_booster"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"900"
+		"ItemShopTags"					"mana_pool"
+		"ItemQuality"					"secret_shop"
+		"ItemAliases"					"energy booster"
+		"SecretShop"					"1"		
+		"SideShop"						"1"		
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				    "FIELD_FLOAT"
+				"bonus_mana_regen"			"2.0"
+			}
+		}
+	}
+
+	"item_ultimate_orb_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20100"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NONE"
+
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"item_ability/item_ultimate_orb_lua"
+		"AbilityTextureName" 		    "item_ultimate_orb"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2150"
+		"ItemShopTags"					"agi;int;str"
+		"ItemQuality"					"secret_shop"
+		"ItemAliases"					"ultimate orb"
+		"SecretShop"					"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "1"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "10"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "10"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "1"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "10"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.8"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "1.6"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.5"
+			}
+		}
+	}
+
+
+	"item_eagle_lua"
+	{
+
+		"ID"							"20105"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"item_ability/item_eagle_lua"
+		"AbilityTextureName" 		    "item_eagle"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3200"
+		"ItemShopTags"					"agi"
+		"ItemQuality"					"secret_shop"
+		"ItemAliases"					"eaglesong"
+		"SecretShop"					"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "9"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"    "25"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "1.25"
+			}
+		}
+	}
+
+	"item_recipe_bracer_lua"
+	{
+		"ID"							"20110"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_bracer_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_circlet_lua;item_gauntlets_lua"
+		}
+	}
+	
+
+	"item_bracer_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20115"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+        "BaseClass"						"item_lua"
+		"ScriptFile"					"item_ability/item_bracer_lua"
+		"AbilityTextureName" 		    "item_bracer"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"515"
+		"ItemShopTags"					"damage;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"bracer"
+		"ShouldBeInitiallySuggested"	"1"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "120"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "0.6"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "3"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "0.3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "3"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "6.45"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "0.48"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.15"
+			}
+		}
+	}
+	
+    
 
 }
