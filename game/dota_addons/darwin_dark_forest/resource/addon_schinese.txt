@@ -847,7 +847,7 @@
     "DOTA_Tooltip_ability_item_robe_lua"                                                "法师长袍"
     "DOTA_Tooltip_ability_item_robe_lua_spell_amplify"                                  "%+技能增强"
     "DOTA_Tooltip_ability_item_robe_lua_mana_regen_bonus"                               "+$mana_regen"
-
+    "DOTA_Tooltip_ability_item_robe_lua_bonus_damage"                                   "+$damage"
 
     "DOTA_Tooltip_ability_item_crown_lua"                                               "王冠"
     "DOTA_Tooltip_ability_item_crown_lua_spell_amplify"                                 "%+技能增强"
@@ -1161,6 +1161,74 @@
     "DOTA_Tooltip_ability_item_magic_stick_datadriven_max_charges"                        "最大能量点数"
     "DOTA_Tooltip_ability_item_magic_stick_datadriven_charge_radius"                      "充能范围"
     "DOTA_Tooltip_ability_item_magic_stick_datadriven_restore_per_charge"                 "每点能量回复生命/魔法："
+
+
+    "DOTA_Tooltip_ability_item_ghost_lua"                                    "幽魂权杖"
+    "DOTA_Tooltip_ability_item_ghost_lua_Description"                        "<h1>主动：幽灵形态</h1> 进入幽灵形态，持续%duration%秒，期间无法进行普通攻击也不会受到物理伤害，但会受到%extra_spell_damage_percent%%%的额外魔法伤害。"
+    "DOTA_Tooltip_ability_item_ghost_lua_spell_amplify"                      "%+技能增强"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_health"                       "+$health"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_damage"                       "+$damage"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_attack_speed"                 "+$attack"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_mana_regen"                   "+$mana_regen"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_health_regen"                 "+$hp_regen"
+    "DOTA_Tooltip_ability_item_ghost_lua_magic_resist"                       "%+魔法抗性："
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_armor"                        "护甲提升："
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_move_speed_pct"               "%+移动速度："
+
+    
+    "DOTA_Tooltip_ability_item_energy_booster_lua"                          "能量之球"
+    "DOTA_Tooltip_ability_item_energy_booster_lua_bonus_mana_regen"         "+$mana_regen"
+
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua"                                    "极限法球"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_spell_amplify"                      "%+技能增强"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_health"                       "+$health"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_damage"                       "+$damage"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_attack_speed"                 "+$attack"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_mana_regen"                   "+$mana_regen"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_health_regen"                 "+$hp_regen"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_magic_resist"                       "%+魔法抗性："
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_armor"                        "护甲提升："
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_move_speed_pct"               "%+移动速度："
+
+    "DOTA_Tooltip_ability_item_bracer_lua"                                          "护腕"
+    "DOTA_Tooltip_ability_item_bracer_lua_spell_amplify"                            "%+技能增强"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_health"                             "+$health"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_damage"                             "+$damage"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_attack_speed"                       "+$attack"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_mana_regen"                         "+$mana_regen"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_health_regen"                       "+$hp_regen"
+    "DOTA_Tooltip_ability_item_bracer_lua_magic_resist"                             "%+魔法抗性："
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_armor"                              "护甲提升："
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_move_speed_pct"                     "%+移动速度："
+
+    "DOTA_Tooltip_ability_item_wraith_band_lua"                                          "怨灵系带"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_spell_amplify"                            "%+技能增强"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_health"                             "+$health"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_damage"                             "+$damage"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_attack_speed"                       "+$attack"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_mana_regen"                         "+$mana_regen"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_health_regen"                       "+$hp_regen"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_magic_resist"                             "%+魔法抗性："
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_armor"                              "护甲提升："
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_move_speed_pct"                     "%+移动速度："
+
+    "DOTA_Tooltip_ability_item_null_talisman_lua"                                          "空灵挂件"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_spell_amplify"                            "%+技能增强"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_health"                             "+$health"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_damage"                             "+$damage"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_attack_speed"                       "+$attack"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_mana_regen"                         "+$mana_regen"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_health_regen"                       "+$hp_regen"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_magic_resist"                             "%+魔法抗性："
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_armor"                              "护甲提升："
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_move_speed_pct"                     "%+移动速度："
+
+    "DOTA_Tooltip_ability_item_power_treads_lua"                                           "动力鞋"
+    "DOTA_Tooltip_ability_item_power_treads_lua_Description"                               "<h1>主动：属性切换</h1>将附加属性在力量，敏捷以及智力三者间切换。\n多个鞋类物品提供的移动速度加成不叠加。"
+    "DOTA_Tooltip_ability_item_power_treads_lua_bonus_movement_speed_passive"              "%+移动速度："
+    "DOTA_Tooltip_ability_item_power_treads_lua_bonus_attack_speed_passive"                "+$attack"
+
+
 
 
     //EconUnitBegins
