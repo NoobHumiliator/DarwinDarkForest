@@ -5351,6 +5351,99 @@
 		}
 	}
 	
+
+	"item_recipe_wraith_band_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20120"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"215"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_wraith_band_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_circlet_lua;item_slippers_lua"
+		}
+	}
+
+	"item_wraith_band_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20125"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+        "BaseClass"						"item_lua"
+		"ScriptFile"					"item_ability/item_wraith_band_lua"
+		"AbilityTextureName" 		    "item_wraith_band"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"515"
+		"ItemShopTags"					"damage;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"wraith band"
+		"ShouldBeInitiallySuggested"	"1"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "60"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "0.3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "11"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "0.3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "3"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.48"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "0.96"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.3"
+			}
+		}
+	}
     
 
 }
