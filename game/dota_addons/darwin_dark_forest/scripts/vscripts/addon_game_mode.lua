@@ -63,6 +63,7 @@ require( "utils/bit" )
 require( "utils/json" )
 require( "utils/evolve_island_util" )
 require( "utils/notifications" )
+require( "rune_spawner" )
 require('libraries/activity_modifier')
 require('libraries/animations')
 
@@ -77,6 +78,9 @@ end
 function Precache( context )
      PrecacheResource( "particle", "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_necro_souls_hero.vpcf", context )    
      PrecacheResource( "particle", "particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", context )
+     PrecacheResource( "particle", "particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", context )
+
+
      --如果 unit 里面写过的技能不需要 其他直接拿来用的技能都需要预加载
      PrecacheResource( "soundfile", "soundevents/game_sounds_dungeon.vsndevts", context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_dungeon_enemies.vsndevts", context )
@@ -329,6 +333,7 @@ function GameMode:InitGameMode()
     Timers:start()
     NeutralSpawner:Init()
     Econ:Init()
+    RuneSpawner:Init()
 
     GameMode.vStartPointLocation={} --key是teamnumber value坐标
     

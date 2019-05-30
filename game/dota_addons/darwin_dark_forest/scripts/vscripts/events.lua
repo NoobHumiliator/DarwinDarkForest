@@ -459,6 +459,14 @@ function GameMode:OnPlayerSay(keys)
              local hNewItem =  hHero.hCurrentCreep:AddItemByName(sText)
            
         end
+        --开全图
+        if string.find(sText,"vision") == 1 then
+          GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
+        end
+        --关闭全图
+        if string.find(sText,"novision") == 2 then
+          GameRules:GetGameModeEntity():SetFogOfWarDisabled(false)
+        end
 
     end
 

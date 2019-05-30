@@ -1134,7 +1134,6 @@
     "DOTA_Tooltip_ability_item_boots_of_elves_lua_bonus_move_speed_pct"                            "%+移动速度"
     
      
-
     "DOTA_Tooltip_ability_item_slippers_lua"                                                    "敏捷便鞋"
     "DOTA_Tooltip_ability_item_slippers_lua_bonus_attack_speed"                                 "+$attack"
     "DOTA_Tooltip_ability_item_slippers_lua_bonus_damage"                                       "+$damage"
@@ -1234,7 +1233,12 @@
     "DOTA_Tooltip_ability_item_power_treads_lua_bonus_movement_speed_passive"              "%+移动速度"
     "DOTA_Tooltip_ability_item_power_treads_lua_bonus_attack_speed_passive"                "+$attack"
 
-
+    "DOTA_Tooltip_ability_item_rune_element"                                               "元素神符"
+    "DOTA_Tooltip_ability_item_rune_mystery"                                               "神秘神符"
+    "DOTA_Tooltip_ability_item_rune_durable"                                               "坚韧神符"
+    "DOTA_Tooltip_ability_item_rune_fury"                                                  "狂怒神符"
+    "DOTA_Tooltip_ability_item_rune_decay"                                                 "腐朽神符"
+    "DOTA_Tooltip_ability_item_rune_hunt"                                                  "猎杀神符"
 
 
     //EconUnitBegins
