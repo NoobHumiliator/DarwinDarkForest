@@ -704,15 +704,15 @@
     "DOTA_Tooltip_ability_fury_berserk_lua_nFury"                                         "<font color='#eb6877'>狂怒:</font>"
     
 
-    "DOTA_Tooltip_dark_seer_vacuum_nMystery"                                              "<font color='#e9c2ff'>神秘：</font>"
-    "DOTA_Tooltip_dark_seer_vacuum_nElement"                                              "<font color='#00a0e9'>元素:</font>"
+    "DOTA_Tooltip_ability_dark_seer_vacuum_nMystery"                                              "<font color='#e9c2ff'>神秘：</font>"
+    "DOTA_Tooltip_ability_dark_seer_vacuum_nElement"                                              "<font color='#00a0e9'>元素:</font>"
 
     
-    "DOTA_Tooltip_dark_seer_ion_shell_nMystery"                                           "<font color='#e9c2ff'>神秘：</font>"
-    "DOTA_Tooltip_dark_seer_ion_shell_nDurable"                                           "<font color='#f8b551'>坚韧：</font>"
+    "DOTA_Tooltip_ability_dark_seer_ion_shell_nMystery"                                           "<font color='#e9c2ff'>神秘：</font>"
+    "DOTA_Tooltip_ability_dark_seer_ion_shell_nDurable"                                           "<font color='#f8b551'>坚韧：</font>"
 
-    "DOTA_Tooltip_dazzle_bad_juju_nMystery"                                              "<font color='#e9c2ff'>神秘：</font>"
-    "DOTA_Tooltip_dazzle_bad_juju_nDecay"                                                "<font color='#b3d465'>腐朽：</font>"
+    "DOTA_Tooltip_ability_dazzle_bad_juju_nMystery"                                              "<font color='#e9c2ff'>神秘：</font>"
+    "DOTA_Tooltip_ability_dazzle_bad_juju_nDecay"                                                "<font color='#b3d465'>腐朽：</font>"
 
     "DOTA_Tooltip_ability_enigma_midnight_pulse_nMystery"                                "<font color='#e9c2ff'>神秘：</font>"
     "DOTA_Tooltip_ability_enigma_midnight_pulse_nDecay"                                  "<font color='#b3d465'>腐朽：</font>"
@@ -856,9 +856,9 @@
     "DOTA_Tooltip_ability_item_crown_lua_bonus_attack_speed"                            "+$attack"
     "DOTA_Tooltip_ability_item_crown_lua_bonus_mana_regen"                              "+$mana_regen"
     "DOTA_Tooltip_ability_item_crown_lua_bonus_health_regen"                            "+$hp_regen"
-    "DOTA_Tooltip_ability_item_crown_lua_magic_resist"                                  "%+魔法抗性："
-    "DOTA_Tooltip_ability_item_crown_lua_bonus_armor"                                   "护甲提升："
-    "DOTA_Tooltip_ability_item_crown_lua_bonus_move_speed_pct"                          "%+移动速度："
+    "DOTA_Tooltip_ability_item_crown_lua_magic_resist"                                  "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_crown_lua_bonus_armor"                                   "+护甲提升"
+    "DOTA_Tooltip_ability_item_crown_lua_bonus_move_speed_pct"                          "%+移动速度"
 
 
     "DOTA_Tooltip_ability_item_circlet_lua"                                               "圆环"
@@ -868,9 +868,9 @@
     "DOTA_Tooltip_ability_item_circlet_lua_bonus_attack_speed"                            "+$attack"
     "DOTA_Tooltip_ability_item_circlet_lua_bonus_mana_regen"                              "+$mana_regen"
     "DOTA_Tooltip_ability_item_circlet_lua_bonus_health_regen"                            "+$hp_regen"
-    "DOTA_Tooltip_ability_item_circlet_lua_magic_resist"                                  "%+魔法抗性："
-    "DOTA_Tooltip_ability_item_circlet_lua_bonus_armor"                                   "护甲提升："
-    "DOTA_Tooltip_ability_item_circlet_lua_bonus_move_speed_pct"                          "%+移动速度："
+    "DOTA_Tooltip_ability_item_circlet_lua_magic_resist"                                  "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_circlet_lua_bonus_armor"                                   "+护甲提升"
+    "DOTA_Tooltip_ability_item_circlet_lua_bonus_move_speed_pct"                          "%+移动速度"
 
 
     "DOTA_Tooltip_ability_item_staff_of_wizardry_lua"                                   "魔力法杖"
@@ -970,9 +970,9 @@
     "DOTA_Tooltip_ability_item_branches_lua_bonus_attack_speed"                            "+$attack"
     "DOTA_Tooltip_ability_item_branches_lua_bonus_mana_regen"                              "+$mana_regen"
     "DOTA_Tooltip_ability_item_branches_lua_bonus_health_regen"                            "+$hp_regen"
-    "DOTA_Tooltip_ability_item_branches_lua_magic_resist"                                  "%+魔法抗性："
-    "DOTA_Tooltip_ability_item_branches_lua_bonus_armor"                                   "护甲提升："
-    "DOTA_Tooltip_ability_item_branches_lua_bonus_move_speed_pct"                          "%+移动速度："
+    "DOTA_Tooltip_ability_item_branches_lua_magic_resist"                                  "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_branches_lua_bonus_armor"                                   "+护甲提升"
+    "DOTA_Tooltip_ability_item_branches_lua_bonus_move_speed_pct"                          "%+移动速度"
 
 
     "DOTA_Tooltip_ability_item_mystic_staff_lua"                                                  "神秘法杖"
@@ -984,7 +984,7 @@
     "DOTA_Tooltip_ability_item_gauntlets_lua_bonus_health"                                         "+$health"
     "DOTA_Tooltip_ability_item_gauntlets_lua_bonus_damage"                                         "+$damage"
     "DOTA_Tooltip_ability_item_gauntlets_lua_bonus_health_regen"                                   "+$hp_regen"
-    "DOTA_Tooltip_ability_item_gauntlets_lua_magic_resist"                                         "%+魔法抗性："
+    "DOTA_Tooltip_ability_item_gauntlets_lua_magic_resist"                                         "%+魔法抗性"
 
 
     "DOTA_Tooltip_ability_item_tome_of_knowledge_lua"                                               "知识之书"
@@ -1087,13 +1087,13 @@
     "DOTA_Tooltip_Ability_undead_tusk_bone_ball"                             "骨球"
     "DOTA_Tooltip_Ability_undead_tusk_bone_ball_Description"                 "海象骷髅卷成骨球。发动骨球后，骨球会裹挟周围的友方单位，骨球经过的敌方单位将会被眩晕并受到伤害。"
     "DOTA_Tooltip_Ability_undead_tusk_bone_ball_damage"                      "伤害："
-    "DOTA_Tooltip_Ability_undead_tusk_bone_ball_nDecay"                      "<font color='#f8b551'>腐朽：</font>"
+    "DOTA_Tooltip_Ability_undead_tusk_bone_ball_nDecay"                      "<font color='#b3d465'>腐朽：</font>"
 
     "DOTA_Tooltip_Ability_crystal_maiden_frostbite_nElement"                 "<font color='#00a0e9'>元素：</font>"
     
 
     "DOTA_Tooltip_Ability_visage_summon_familiars_stone_form_nDurable"        "<font color='#f8b551'>坚韧：</font>"
-    "DOTA_Tooltip_Ability_visage_summon_familiars_stone_form_nDecay"          "<font color='#f8b551'>腐朽：</font>"
+    "DOTA_Tooltip_Ability_visage_summon_familiars_stone_form_nDecay"          "<font color='#b3d465'>腐朽：</font>"
    
 
     "DOTA_Tooltip_Ability_elder_green_dragon_passive_lua"                                 "腐蚀吐息"
@@ -1109,37 +1109,43 @@
     "DOTA_Tooltip_ability_item_ogre_axe_lua_bonus_health"                                  "+$health"
     "DOTA_Tooltip_ability_item_ogre_axe_lua_bonus_damage"                                  "+$damage"
     "DOTA_Tooltip_ability_item_ogre_axe_lua_bonus_health_regen"                            "+$hp_regen"
-    "DOTA_Tooltip_ability_item_ogre_axe_lua_magic_resist"                                  "%+魔法抗性："
+    "DOTA_Tooltip_ability_item_ogre_axe_lua_magic_resist"                                  "%+魔法抗性"
 
               
     "DOTA_Tooltip_ability_item_belt_of_strength_lua"                                               "力量腰带"
     "DOTA_Tooltip_ability_item_belt_of_strength_lua_bonus_health"                                  "+$health"
     "DOTA_Tooltip_ability_item_belt_of_strength_lua_bonus_damage"                                  "+$damage"
     "DOTA_Tooltip_ability_item_belt_of_strength_lua_bonus_health_regen"                            "+$hp_regen"
-    "DOTA_Tooltip_ability_item_belt_of_strength_lua_magic_resist"                                  "%+魔法抗性："
+    "DOTA_Tooltip_ability_item_belt_of_strength_lua_magic_resist"                                  "%+魔法抗性"
 
                    
     "DOTA_Tooltip_ability_item_blade_of_alacrity_lua"                                               "欢欣之刃"
     "DOTA_Tooltip_ability_item_blade_of_alacrity_lua_bonus_attack_speed"                            "+$attack"
     "DOTA_Tooltip_ability_item_blade_of_alacrity_lua_bonus_damage"                                  "+$damage"
-    "DOTA_Tooltip_ability_item_blade_of_alacrity_lua_bonus_armor"                                   "护甲提升："
-    "DOTA_Tooltip_ability_item_blade_of_alacrity_lua_bonus_move_speed_pct"                          "%+移动速度："
+    "DOTA_Tooltip_ability_item_blade_of_alacrity_lua_bonus_armor"                                   "+护甲提升"
+    "DOTA_Tooltip_ability_item_blade_of_alacrity_lua_bonus_move_speed_pct"                          "%+移动速度"
     
 
 
     "DOTA_Tooltip_ability_item_boots_of_elves_lua"                                                 "精灵布带"
     "DOTA_Tooltip_ability_item_boots_of_elves_lua_bonus_attack_speed"                              "+$attack"
     "DOTA_Tooltip_ability_item_boots_of_elves_lua_bonus_damage"                                    "+$damage"
-    "DOTA_Tooltip_ability_item_boots_of_elves_lua_bonus_armor"                                     "护甲提升："
-    "DOTA_Tooltip_ability_item_boots_of_elves_lua_bonus_move_speed_pct"                            "%+移动速度："
+    "DOTA_Tooltip_ability_item_boots_of_elves_lua_bonus_armor"                                     "+护甲提升"
+    "DOTA_Tooltip_ability_item_boots_of_elves_lua_bonus_move_speed_pct"                            "%+移动速度"
     
      
 
     "DOTA_Tooltip_ability_item_slippers_lua"                                                    "敏捷便鞋"
     "DOTA_Tooltip_ability_item_slippers_lua_bonus_attack_speed"                                 "+$attack"
     "DOTA_Tooltip_ability_item_slippers_lua_bonus_damage"                                       "+$damage"
-    "DOTA_Tooltip_ability_item_slippers_lua_bonus_armor"                                        "护甲提升："
-    "DOTA_Tooltip_ability_item_slippers_lua_bonus_move_speed_pct"                               "%+移动速度："
+    "DOTA_Tooltip_ability_item_slippers_lua_bonus_armor"                                        "+护甲提升"
+    "DOTA_Tooltip_ability_item_slippers_lua_bonus_move_speed_pct"                               "%+移动速度"
+
+    "DOTA_Tooltip_ability_item_eagle_lua"                                                       "鹰角弓"
+    "DOTA_Tooltip_ability_item_eagle_lua_bonus_attack_speed"                                    "+$attack"
+    "DOTA_Tooltip_ability_item_eagle_lua_bonus_damage"                                          "+$damage"
+    "DOTA_Tooltip_ability_item_eagle_lua_bonus_armor"                                           "+护甲提升"
+    "DOTA_Tooltip_ability_item_eagle_lua_bonus_move_speed_pct"                                  "%+移动速度"
     
     "DOTA_Tooltip_ability_item_magic_wand_datadriven"                                    "魔杖"
     "DOTA_Tooltip_ability_item_magic_wand_datadriven_Description"                        "立刻根据能量点数回复相应的生命和魔法。每当周围有敌人施放技能都会自动充能"
@@ -1152,9 +1158,9 @@
     "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_attack_speed"                 "+$attack"
     "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_mana_regen"                   "+$mana_regen"
     "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_health_regen"                 "+$hp_regen"
-    "DOTA_Tooltip_ability_item_magic_wand_datadriven_magic_resist"                       "%+魔法抗性："
-    "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_armor"                        "护甲提升："
-    "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_move_speed_pct"               "%+移动速度："
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_magic_resist"                       "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_armor"                        "+护甲提升"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_move_speed_pct"               "%+移动速度"
 
     "DOTA_Tooltip_ability_item_magic_stick_datadriven"                                    "魔杖"
     "DOTA_Tooltip_ability_item_magic_stick_datadriven_Description"                        "立刻根据能量点数回复相应的生命和魔法。每当周围有敌人施放技能都会自动充能"
@@ -1171,9 +1177,9 @@
     "DOTA_Tooltip_ability_item_ghost_lua_bonus_attack_speed"                 "+$attack"
     "DOTA_Tooltip_ability_item_ghost_lua_bonus_mana_regen"                   "+$mana_regen"
     "DOTA_Tooltip_ability_item_ghost_lua_bonus_health_regen"                 "+$hp_regen"
-    "DOTA_Tooltip_ability_item_ghost_lua_magic_resist"                       "%+魔法抗性："
-    "DOTA_Tooltip_ability_item_ghost_lua_bonus_armor"                        "护甲提升："
-    "DOTA_Tooltip_ability_item_ghost_lua_bonus_move_speed_pct"               "%+移动速度："
+    "DOTA_Tooltip_ability_item_ghost_lua_magic_resist"                       "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_armor"                        "+护甲提升"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_move_speed_pct"               "%+移动速度"
 
     
     "DOTA_Tooltip_ability_item_energy_booster_lua"                          "能量之球"
@@ -1186,9 +1192,9 @@
     "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_attack_speed"                 "+$attack"
     "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_mana_regen"                   "+$mana_regen"
     "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_health_regen"                 "+$hp_regen"
-    "DOTA_Tooltip_ability_item_ultimate_orb_lua_magic_resist"                       "%+魔法抗性："
-    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_armor"                        "护甲提升："
-    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_move_speed_pct"               "%+移动速度："
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_magic_resist"                       "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_armor"                        "+护甲提升"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_move_speed_pct"               "%+移动速度"
 
     "DOTA_Tooltip_ability_item_bracer_lua"                                          "护腕"
     "DOTA_Tooltip_ability_item_bracer_lua_spell_amplify"                            "%+技能增强"
@@ -1197,9 +1203,9 @@
     "DOTA_Tooltip_ability_item_bracer_lua_bonus_attack_speed"                       "+$attack"
     "DOTA_Tooltip_ability_item_bracer_lua_bonus_mana_regen"                         "+$mana_regen"
     "DOTA_Tooltip_ability_item_bracer_lua_bonus_health_regen"                       "+$hp_regen"
-    "DOTA_Tooltip_ability_item_bracer_lua_magic_resist"                             "%+魔法抗性："
-    "DOTA_Tooltip_ability_item_bracer_lua_bonus_armor"                              "护甲提升："
-    "DOTA_Tooltip_ability_item_bracer_lua_bonus_move_speed_pct"                     "%+移动速度："
+    "DOTA_Tooltip_ability_item_bracer_lua_magic_resist"                             "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_armor"                              "+护甲提升"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_move_speed_pct"                     "%+移动速度"
 
     "DOTA_Tooltip_ability_item_wraith_band_lua"                                          "怨灵系带"
     "DOTA_Tooltip_ability_item_wraith_band_lua_spell_amplify"                            "%+技能增强"
@@ -1208,9 +1214,9 @@
     "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_attack_speed"                       "+$attack"
     "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_mana_regen"                         "+$mana_regen"
     "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_health_regen"                       "+$hp_regen"
-    "DOTA_Tooltip_ability_item_wraith_band_lua_magic_resist"                             "%+魔法抗性："
-    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_armor"                              "护甲提升："
-    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_move_speed_pct"                     "%+移动速度："
+    "DOTA_Tooltip_ability_item_wraith_band_lua_magic_resist"                             "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_armor"                              "+护甲提升"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_move_speed_pct"                     "%+移动速度"
 
     "DOTA_Tooltip_ability_item_null_talisman_lua"                                          "空灵挂件"
     "DOTA_Tooltip_ability_item_null_talisman_lua_spell_amplify"                            "%+技能增强"
@@ -1219,13 +1225,13 @@
     "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_attack_speed"                       "+$attack"
     "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_mana_regen"                         "+$mana_regen"
     "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_health_regen"                       "+$hp_regen"
-    "DOTA_Tooltip_ability_item_null_talisman_lua_magic_resist"                             "%+魔法抗性："
-    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_armor"                              "护甲提升："
-    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_move_speed_pct"                     "%+移动速度："
+    "DOTA_Tooltip_ability_item_null_talisman_lua_magic_resist"                             "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_armor"                              "+护甲提升"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_move_speed_pct"                     "%+移动速度"
 
     "DOTA_Tooltip_ability_item_power_treads_lua"                                           "动力鞋"
     "DOTA_Tooltip_ability_item_power_treads_lua_Description"                               "<h1>主动：属性切换</h1>将附加属性在力量，敏捷以及智力三者间切换。\n多个鞋类物品提供的移动速度加成不叠加。"
-    "DOTA_Tooltip_ability_item_power_treads_lua_bonus_movement_speed_passive"              "%+移动速度："
+    "DOTA_Tooltip_ability_item_power_treads_lua_bonus_movement_speed_passive"              "%+移动速度"
     "DOTA_Tooltip_ability_item_power_treads_lua_bonus_attack_speed_passive"                "+$attack"
 
 

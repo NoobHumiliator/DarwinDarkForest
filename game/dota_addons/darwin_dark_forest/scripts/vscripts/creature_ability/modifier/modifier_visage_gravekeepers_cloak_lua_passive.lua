@@ -6,10 +6,13 @@ end
 
 
 function modifier_visage_gravekeepers_cloak_lua_passive:OnCreated()
+	self.recovery_time = self:GetAbility():GetSpecialValueFor("recovery_time")
+	self.max_layers = self:GetAbility():GetSpecialValueFor("max_layers")
+	self.minimum_damage = self:GetAbility():GetSpecialValueFor("minimum_damage")
 	if IsServer() then
-		self.recovery_time = self:GetAbility():GetSpecialValueFor("recovery_time")
-		self.max_layers = self:GetAbility():GetSpecialValueFor("max_layers")
-		self.minimum_damage = self:GetAbility():GetSpecialValueFor("minimum_damage")
+		if (self.recovery_time==nil) or (self.recovery_time<2) then
+			self.recovery_time = 2
+		end
 		self:StartIntervalThink(self.recovery_time)
     end
 end

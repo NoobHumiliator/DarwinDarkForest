@@ -64,6 +64,12 @@ function CreepThink()
 	if GameRules:IsGamePaused() then
 		return 0.1
 	end
+
+    --如果正在施法，先等一等
+    if thisEntity:IsChanneling() then
+		return 0.1
+	end
+
 	local agro = CheckIfHasAggro()
 	if agro then
 		return agro
@@ -78,7 +84,7 @@ function CheckIfHasAggro()
 	--如果有追击目标
 
 
-    if thisEntity.hChasingTarget then
+    if thisEntity.hChasingTarget and not thisEntity.hChasingTarget:IsNull()  then
 
     	if thisEntity:GetLevel()<11 then
 		 	local flAbilityCastTime = CastAbility(thisEntity.hChasingTarget)
@@ -132,7 +138,7 @@ end
 -------------------------------------------------------------------
 
 function CastAbility(hTarget)
-
+    
     for i=1,20 do
         local hAbility=thisEntity:GetAbilityByIndex(i-1)
         if  hAbility and not hAbility:IsPassive() and hAbility:IsFullyCastable() then
@@ -199,7 +205,7 @@ function RetreatFromUnit(hUnit)
 
     local vAwayFromEnemy= thisEntity:GetOrigin() - RandomVector(100)
 
-    if hUnit and  hUnit:IsAlive() then
+    if not hUnit:IsNull() and  hUnit:IsAlive() then
 	   vAwayFromEnemy = thisEntity:GetOrigin() - hUnit:GetOrigin()
     end
 	vAwayFromEnemy = vAwayFromEnemy:Normalized()

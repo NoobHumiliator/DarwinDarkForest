@@ -43,7 +43,7 @@ end
 
 function modifier_creature_passive:GetModifierProvidesFOWVision()
        
-     if self:GetParent():GetLevel()==10 then
+     if self:GetParent():GetLevel()>=10 then
         return 1
      else
      	return 0

@@ -22,7 +22,7 @@ function ItemController:Init()
 
     --二维数组 k 为1-5级物品
     self.vItemsTieTable = {}
-    for i=1,5 do
+    for i=1,6 do
         self.vItemsTieTable[i]={}
     end
 
@@ -40,14 +40,14 @@ function ItemController:Init()
     table.sort(vItems,function(a,b) return a.ItemCost<b.ItemCost end )       
 
     -- 按照分组加入 
-    for i=1,5 do
-        local nPerTieNum= math.floor(#vItems/5)
+    for i=1,6 do
+        local nPerTieNum= math.floor(#vItems/6)
         local nTemp=1+(i-1)*nPerTieNum
         for j=nTemp,nTemp+nPerTieNum-1 do
               table.insert(self.vItemsTieTable[i],vItems[j].sItemName)
         end
-        -- 将多余出来的一并加入Tie5
-        if i ==5 then
+        -- 将多余出来的一并加入Tie6
+        if i ==6 then
           for j=1+i*nPerTieNum,#vItems do
              table.insert(self.vItemsTieTable[i],vItems[j].sItemName)
           end
@@ -75,7 +75,7 @@ function ItemController:CreateItemForNeutraulByChance(hUnit)
     if RandomInt(1, 100)/100 < self.flItemCarryChance then
         
         local nTieNum =  math.ceil(hUnit:GetLevel()/2)
-        if nTieNum >5 then nTieNum=5 end
+        if nTieNum >6 then nTieNum=6 end
         local sItemName = self.vItemsTieTable[nTieNum][RandomInt(1, #self.vItemsTieTable[nTieNum])]
         hUnit:AddItemByName( sItemName )
 

@@ -25,13 +25,25 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_fountain_aura_effect_lua:GetModifierHealthRegenPercentage( params )
-	return self:GetAbility():GetSpecialValueFor( "heal_percent" )
+
+	if self and self:GetAbility() then
+	  return self:GetAbility():GetSpecialValueFor( "heal_percent" )
+    else 
+      return 0 
+    end
+
 end
 
 --------------------------------------------------------------------------------
 
 function modifier_fountain_aura_effect_lua:GetModifierTotalPercentageManaRegen( params )
-	return self:GetAbility():GetSpecialValueFor( "mana_percent" )
+
+	if self and self:GetAbility() then
+	  return self:GetAbility():GetSpecialValueFor( "mana_percent" )
+	else 
+      return 0 
+    end
+
 end
 
 

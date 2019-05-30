@@ -1388,9 +1388,8 @@
 		"Model"						"models/heroes/invoker/forge_spirit.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Creep_Good_Range"					// Name of sound set.
-		"ModelScale"				"1.0"
 		"Level"						"1"
-		"ModelScale" 			    ".65"
+		"ModelScale" 			    "0.65"
 		
         "vscripts"					"creap_ai.lua"
 		"nElement"                  "1"
@@ -1937,9 +1936,8 @@
 		"Model"						"models/items/invoker/forge_spirit/iceforged_spirit/iceforged_spirit.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Creep_Good_Range"					// Name of sound set.
-		"ModelScale"				"1.0"
 		"Level"						"2"
-		"ModelScale" 			    ".7"
+		"ModelScale" 			    "0.7"
 		"HasInventory"				"1"
 		
         "vscripts"					"creap_ai.lua"
@@ -3480,7 +3478,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Creep_Good_Range"					// Name of sound set.
 		"Level"						"3"
-		"ModelScale" 			    ".75"
+		"ModelScale" 			    "0.8"
 		"HasInventory"				"1"
 		
         "vscripts"					"creap_ai.lua"
@@ -6763,7 +6761,7 @@
 		"Model"						"models/items/invoker/forge_spirit/esl_relics_forge_spirit/esl_relics_forge_spirit.vmdl"
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"4"
-		"ModelScale" 				"0.8"
+		"ModelScale" 				"0.9"
 		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
@@ -7599,7 +7597,7 @@
 		"Model"						"models/items/invoker/forge_spirit/infernus/infernus.vmdl"
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"5"
-		"ModelScale" 				"0.85"
+		"ModelScale" 				"1.0"
 		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
@@ -8492,7 +8490,7 @@
 		"Model"						"models/items/invoker/forge_spirit/arsenal_magus_forged_spirit/arsenal_magus_forged_spirit.vmdl"
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"5"
-		"ModelScale" 				"0.85"
+		"ModelScale" 				"1.0"
 		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
@@ -8902,7 +8900,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1.
+		"Ability1"					"undead_tusk_bone_ball"			// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -8910,6 +8908,8 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -9578,7 +9578,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			
+		"Ability1"					"slardar_bash"			
 		"Ability2"					""
 		"Ability3"					""			
 		"Ability4"					""			// Ability 4.
@@ -9586,6 +9586,8 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+
+		"AbilitiesLevel"            "4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -10577,7 +10579,7 @@
 		"Model"						"models/items/invoker/forge_spirit/ti8_invoker_prism_forge_spirit/ti8_invoker_prism_forge_spirit.vmdl"
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"6"
-		"ModelScale" 				"0.9"
+		"ModelScale" 				"1.1"
 		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
@@ -11939,7 +11941,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_Morphling"
 		"Level"						"7"
-		"ModelScale" 				"1.2"
+		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -13219,7 +13221,7 @@
 		"Model"						"models/items/invoker/forge_spirit/frostivus2018_invoker_keeper_of_magic_spirit/frostivus2018_invoker_keeper_of_magic_spirit.vmdl"
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"7"
-		"ModelScale" 				"0.95"
+		"ModelScale" 				"1.2"
 
 		"HasInventory"				"1"
         
@@ -13624,7 +13626,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			
+		"Ability1"					"slardar_bash"			
 		"Ability2"					""
 		"Ability3"					""			
 		"Ability4"					""			// Ability 4.
@@ -13632,6 +13634,8 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+
+		"AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -14035,9 +14039,9 @@
 		"AttackDamageMax"			"80"		// Damage range max.
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
-		"AttackRange"				"250"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"350"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_visage/visage_base_attack.vpcf" // Particle system model for projectile.
 		"ProjectileSpeed"			"1200"		// Speed of projectile.		     
 
 		// Bounds
@@ -14442,7 +14446,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_Morphling"
 		"Level"						"8"
-		"ModelScale" 				"1.3"
+		"ModelScale" 				"1.4"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -17276,7 +17280,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_Morphling"
 		"Level"						"9"
-		"ModelScale" 				"1.4"
+		"ModelScale" 				"1.5"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -17600,7 +17604,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-        "AbilitiesLevel"            "8 4"
+        "AbilitiesLevel"            "7 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -20199,9 +20203,12 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_Morphling"
 		"Level"						"10"
-		"ModelScale" 				"1.5"
+		"ModelScale" 				"1.6"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nElement"                  "18"
         "nMystery"                  "18"
@@ -20298,6 +20305,9 @@
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nMystery"                  "18"
         "nDecay"                    "18"
@@ -20388,6 +20398,9 @@
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nDurable"                  "12"
         "nElement"                  "12"
@@ -20463,6 +20476,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
+
 		"nDecay"                    "12"
 		"nDurable"                  "12"
 		"nHunt"                     "12"
@@ -20537,6 +20553,9 @@
 		"Level"						"10"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
 
 		"nFury"                     "12"
 		"nDurable"                  "12"
@@ -20618,6 +20637,9 @@
 		"Level"						"10"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
 
 		"nHunt"                     "18"
 		"nDurable"                  "18"
@@ -20731,6 +20753,9 @@
         "nElement"                  "18"
         "nDecay"                    "18"
 
+        "MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
+
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"lich_chain_frost"			// Ability 1
@@ -20835,6 +20860,9 @@
         "nMystery"                  "18"
         "nFury"                     "18"
 
+        "MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
+
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"faceless_void_chronosphere"			// Ability 1
@@ -20934,6 +20962,9 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nMystery"                  "18"
         "nDurable"                  "18"
@@ -21037,6 +21068,9 @@
         "nDecay"                    "18"
         "nFury"                     "18"
 
+        "MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
+
         "VoiceFile"		        "soundevents/voscripts/game_sounds_vo_life_stealer.vsndevts"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_life_stealer.vsndevts"
 
@@ -21136,6 +21170,9 @@
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
         
         "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_razor.vsndevts"
@@ -21244,6 +21281,10 @@
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
         
         "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
         "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
@@ -21341,6 +21382,9 @@
 
 		"nHunt"                     "18"
 		"nMystery"                  "18"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
 
 		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_riki.vsndevts"
 		"VoiceFile"	            	"soundevents/voscripts/game_sounds_vo_riki.vsndevts"
@@ -21445,6 +21489,10 @@
         "nHunt"                     "12"
 
 
+        "MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
+
+
 		"Ability1"					"elder_red_dragon_passive_lua"// Ability 1
 		"Ability2"					"dragon_knight_breathe_fire"			// Ability 2
 		"Ability3"					""			// Ability 3
@@ -21512,6 +21560,10 @@
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nDecay"                    "12"
         "nElement"                  "12"
@@ -21586,6 +21638,10 @@
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nElement"                  "18"
         "nFury"                     "18"
@@ -21669,6 +21725,10 @@
 		"ModelScale" 				"0.7"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
 
 		// Abilities
@@ -21740,6 +21800,9 @@
 		"HasInventory"				"1"
          
 
+        "MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
+
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"roshan_spell_block"	// Ability 1.
@@ -21808,6 +21871,10 @@
 		"ModelScale" 				"1.25"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
+
          
         "nDurable"                  "36"
   
@@ -21880,6 +21947,9 @@
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nDurable"                  "18"
         "nElement"                  "18"
@@ -21981,6 +22051,9 @@
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nHunt"                     "18"
         "nFury"                     "18"
@@ -22088,6 +22161,10 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
+
 		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_broodmother.vsndevts"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_broodmother.vsndevts"
          
@@ -22186,6 +22263,10 @@
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nFury"                     "18"
         "nDurable"                  "18"
@@ -22299,6 +22380,9 @@
 		"Level"						"10"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nDecay"                    "36"
 
@@ -22374,6 +22458,9 @@
 		"Level"						"10"
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nDecay"                    "18"
         "nDurable"                  "18"
@@ -22485,6 +22572,9 @@
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nDecay"                    "12"
         "nMystery"                  "12"
@@ -22563,6 +22653,9 @@
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nDecay"                    "10"
         "nElement"                  "10"
@@ -22636,6 +22729,10 @@
 		"ModelScale" 				"2"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nFury"                     "36"
 
@@ -22709,6 +22806,10 @@
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+        
+        "MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
+
 
 		"nMystery"                  "32"
 
@@ -22806,6 +22907,10 @@
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
+
+
+		"MinimapIcon"				"minimap_ancient"
+		"MinimapIconSize"			"350"
          
         "nElement"                  "36"
 
@@ -22904,11 +23009,14 @@
 		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_stormspirit.vsndevts"
 
 		"Level"						"11"
-		"ModelScale" 				"1.8"
+		"ModelScale" 				"2.5"
          
         "vscripts"					"creap_ai.lua"
         "HasInventory"				"1"
         "nElement"                  "40"
+
+        "MinimapIcon"					"minimap_roshancamp"
+		"MinimapIconSize"				"450"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -22997,6 +23105,9 @@
 
 		"Level"						"11"
 		"ModelScale" 				"1.5"
+
+		"MinimapIcon"					"minimap_roshancamp"
+		"MinimapIconSize"				"450"
          
         "vscripts"					"creap_ai.lua"
         "HasInventory"				"1"
@@ -23094,6 +23205,9 @@
 
 		"Level"						"11"
 		"ModelScale" 				"1.7"
+
+		"MinimapIcon"					"minimap_roshancamp"
+		"MinimapIconSize"				"450"
          
         "vscripts"					"creap_ai.lua"
         "HasInventory"				"1"
@@ -23167,6 +23281,9 @@
 
 		"Level"						"11"
 		"ModelScale" 				"1.8"
+
+		"MinimapIcon"					"minimap_roshancamp"
+		"MinimapIconSize"				"450"
         
 
         "vscripts"					"creap_ai.lua"
@@ -23268,7 +23385,10 @@
         "IdleSoundLoop"		        "Hero_Necrolyte.IdleLoop"
 
 		"Level"						"11"
-		"ModelScale" 				"1.5"
+		"ModelScale" 				"2.5"
+
+		"MinimapIcon"			    "minimap_roshancamp"
+		"MinimapIconSize"			"450"
         
         "vscripts"					"creap_ai.lua"
         "HasInventory"				"1"
@@ -23366,6 +23486,9 @@
 
 		"Level"						"11"
 		"ModelScale" 				"1.5"
+
+		"MinimapIcon"			    "minimap_roshancamp"
+		"MinimapIconSize"			"450"
         
         "vscripts"					"creap_ai.lua"
         "HasInventory"				"1"
