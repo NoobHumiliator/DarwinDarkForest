@@ -32,6 +32,14 @@
 	"KillMessageBounty"	"获得了500额外金钱！"
 	"addonname"	        "刀塔进化岛"
 
+    "rune_spawn_element"          "元素神符刷新"
+    "rune_spawn_mystery"          "神秘神符刷新"
+    "rune_spawn_durable"          "坚韧神符刷新"
+    "rune_spawn_fury"             "狂怒神符刷新"
+    "rune_spawn_decay"            "腐朽神符刷新"
+    "rune_spawn_hunt"             "猎杀神符刷新"
+
+
     "congrates_first_place"  "大吉大利，晚上吃鸡！"
     "encourage_runner_ups"   "不抛弃，不放弃，下次一定得第一"
 
@@ -67,6 +75,8 @@
     "Particle"                                "粒子特效"
     "KillEffect"                              "击杀特效"
     "KillSound"                               "击杀播音"
+    
+    "Rune_Spawned"                            "神符已经刷新"
 
     "econ_unknow"                             "神秘变异"
     

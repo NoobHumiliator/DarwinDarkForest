@@ -76,6 +76,12 @@ function RuneSpawner:SpawnOneRune()
    local hVisionRevealer = CreateUnitByName( "npc_rune_revealer_"..sType, vVector, false, nil, nil, DOTA_TEAM_NEUTRALS )
    hRune.hVisionRevealer=hVisionRevealer
 
+   local data =
+   {
+      rune_type = sType
+   }
+   CustomGameEventManager:Send_ServerToAllClients( "rune_spawned", data )
+
    Timers:CreateTimer(0.1, function()
         if hVisionRevealer and hVisionRevealer:IsAlive() then
           for nTeam = 0, (DOTA_TEAM_COUNT-1) do
@@ -94,7 +100,7 @@ function RuneSpawner:OnItemPickUp(event)
    local hItem = EntIndexToHScript( event.ItemEntityIndex )
    local hOwner = EntIndexToHScript( event.UnitEntityIndex )
    
-   --处理神符拾取
+   --神符拾取
    if  hItem.hVisionRevealer and not hItem.hVisionRevealer:IsNull() and hItem.hVisionRevealer:IsAlive() then
 
        local nPlayerId = hOwner:GetOwner():GetPlayerID()
@@ -110,6 +116,16 @@ function RuneSpawner:OnItemPickUp(event)
 
        CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[hHero.nCurrentCreepLevel],next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
        CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+       
+       local data =
+       {
+          rune_type = nType,
+          unit_name = hOwner:GetUnitName()
+       }
+
+       CustomGameEventManager:Send_ServerToAllClients( "rune_pick_up", data )
+
+
        UTIL_Remove ( hItem )
        UTIL_Remove ( hItem.hVisionRevealer )
    end
