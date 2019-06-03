@@ -28,7 +28,7 @@ function decay_mystery_summon_familiar:OnSpellStart()
 	            ParticleManager:ReleaseParticleIndex( ParticleManager:CreateParticle( "particles/neutral_fx/skeleton_spawn.vpcf", PATTACH_ABSORIGIN, hSkeletonMage ) )
 
 	            hFamiliar:SetControllableByPlayer(self:GetCaster():GetMainControllingPlayer(), false)
-				hFamiliar:SetOwner( self:GetCaster() )
+			    hFamiliar:SetOwner( PlayerResource:GetSelectedHeroEntity(self:GetCaster():GetMainControllingPlayer()) )
 				hFamiliar:SetDeathXP( 0 )
 				hFamiliar:SetMinimumGoldBounty( 0 )
 				hFamiliar:SetMaximumGoldBounty( 0 )

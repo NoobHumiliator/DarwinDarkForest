@@ -23,7 +23,7 @@ function decay_summon_wraith_warrior:OnSpellStart()
 
 			hWraithWarrior:AddNewModifier( self:GetCaster(), self, "modifier_kill", { duration = wraith_warrior_duration } )
             hWraithWarrior:SetControllableByPlayer(self:GetCaster():GetMainControllingPlayer(), false)
-			hWraithWarrior:SetOwner( self:GetCaster() )
+			hWraithWarrior:SetOwner( PlayerResource:GetSelectedHeroEntity(self:GetCaster():GetMainControllingPlayer()) )
 			hWraithWarrior:SetDeathXP( 0 )
 			hWraithWarrior:SetMinimumGoldBounty( 0 )
 			hWraithWarrior:SetMaximumGoldBounty( 0 )

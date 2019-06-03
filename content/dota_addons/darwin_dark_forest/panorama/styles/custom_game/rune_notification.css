@@ -14,13 +14,18 @@
 {
     flow-children: right;
     horizontal-align: center;
-    opacity: 0;
-    transform: scaleX(2) scaleY(2);
     margin-top: 64px;
     transition-property: transform, opacity;
     transition-duration: 0.3s;
-    visibility: collapse;
     border: 0px solid blue;
+    transform: scaleX(1) scaleY(1);
+    visibility: visible;
+}
+
+#AlertMessage_Icon
+{
+    width: 48px;
+    height: 48px;
 }
 
 #AlertMessage_Label
@@ -28,22 +33,22 @@
     color: white;
     horizontal-align: center;
     text-shadow: 4px 4px 4px #121212;
-    font-size: 24px;
+    font-size: 48px;
     font-weight: bold;
 }
 
 #PickupMessage
 {
-  flow-children: down;
+    flow-children: down;
 
     horizontal-align: center;
-    margin-top: 64px;
-    opacity: 0;
-    transform: scaleX(2) scaleY(2);
-    visibility: collapse;
+    margin-top: 20px;
     transition-property: transform, opacity;
     transition-duration: 0.3s;
     border: 0px solid green;
+
+    transform: scaleX(1) scaleY(1);
+    visibility: visible;
 }
 
 #PickupImages
@@ -53,12 +58,14 @@
     border: 2px solid #5e686966;
     background-color: #292e2e;
     margin: 0px;
+
 }
 
 #PickupMessage_Rune
 {
-  height: 32px;
-  width: 44px;
+  height: 60px;
+  width: 60px;
+  margin-top: 12px;
   margin: 4px;
 }
 
@@ -76,12 +83,19 @@
   margin: 4px;
 }
 
+#PickupMessage_Unit{
+   
+  height: 72px;
+  width: 128px;
+
+}
+
 #PickupMessage_Unit_Text
 {
     color: red;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: bold;
-  margin: 0px;
+    margin: 4px;
     horizontal-align: center;
     text-shadow: 4px 4px 4px #121212;
 }
@@ -90,17 +104,14 @@
 #PickupMessage_Rune_Text
 {
     color: white;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
-    margin: 0px;
+    margin: 4px;
     horizontal-align: center;
     text-shadow: 4px 4px 4px #121212;
 }
 
 
-.ShowMessage
-{
-    opacity: 1;
-    transform: scaleX(1) scaleY(1);
-    visibility: visible;
+.Hidden{
+    opacity:0.0;
 }

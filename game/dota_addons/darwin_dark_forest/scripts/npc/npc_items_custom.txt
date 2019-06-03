@@ -1121,7 +1121,7 @@
 		"ItemResult"					"item_kaya_lua"
 		"ItemRequirements"
 		{
-			"01"						"item_staff_of_wizardry;item_robe"
+			"01"						"item_staff_of_wizardry_lua;item_robe_lua"
 		}
 	}
 	
@@ -1131,7 +1131,7 @@
 		"ID"							"20007"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass"						"item_lua"
-		"AbilityTextureName" 		    "item_kaya_lua"
+		"AbilityTextureName" 		    "item_kaya"
 		"ScriptFile"					"item_ability/item_kaya_lua"
 		
 		// Item Info
@@ -1150,12 +1150,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"manacost_reduction"	"20"
+				"manacost_reduction"	"12"
 			}			
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_amplify"			"10"
+				"spell_amplify"			"24"
 			}
 			"03"
 			{
@@ -1183,7 +1183,7 @@
 		"ItemResult"					"item_vanguard_lua"
 		"ItemRequirements"
 		{
-			"01"						"item_ring_of_health;item_vitality_booster;item_stout_shield"
+			"01"						"item_ring_of_health;item_vitality_booster_lua;item_stout_shield"
 		}
 	}
 
@@ -1535,7 +1535,7 @@
 		"ItemResult"					"item_heart_lua"
 		"ItemRequirements"
 		{
-			"01"						"item_ring_of_tarrasque_lua;item_vitality_booster;item_reaver"
+			"01"						"item_ring_of_tarrasque_lua;item_vitality_booster_lua;item_reaver"
 		}
 	}
 
@@ -4526,22 +4526,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"		    "60"
+				"bonus_health"		    "120"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"		    "1"
+				"bonus_damage"		    "2"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_health_regen"	"0.3"
+				"bonus_health_regen"	"0.6"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"magic_resist"	        "0.24"
+				"magic_resist"	        "0.48"
 			}
 		}
 	}
@@ -7512,6 +7512,525 @@
 		"IsTempestDoubleClonable"		"0"
 
 	}
+
+	//=================================================================================================================
+	// Recipe: Dragon Lance
+	//=================================================================================================================
+	"item_recipe_dragon_lance_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20180"
+		"BaseClass"                     "item_datadriven"										
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dragon_lance_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_ogre_axe_lua;item_boots_of_elves_lua;item_boots_of_elves_lua"
+		}
+	}
+	
+	//=================================================================================================================
+	// Dragon Lance
+	//=================================================================================================================
+	"item_dragon_lance_lua"
+	{
+        
+		"ID"							"20185"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"item_ability/item_dragon_lance_lua"
+		"AbilityTextureName" 		    "item_dragon_lance"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1900"
+		"ItemShopTags"					"damage"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"dragon lance"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "240"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "1.2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "8"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "12"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.96"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "1.92"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.6"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_range"    "140"
+			}
+		}
+	}
+
+
+    "item_recipe_urn_of_shadows_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20190"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_urn_of_shadows_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_infused_raindrop;item_circlet_lua;item_ring_of_protection"
+		}
+	}
+	
+	//=================================================================================================================
+	// Urn of Shadows
+	//=================================================================================================================
+	"item_urn_of_shadows_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20195"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"item_ability/item_urn_of_shadows_lua"
+		"AbilityTextureName" 		    "item_urn_of_shadows"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"950"
+		"AbilityCastPoint"				"0.0"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0"
+		"AbilitySharedCooldown"			"urn"
+
+		// Items
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemStackable"					"0"
+		"ItemPermanent"					"1"
+		"ItemDisassembleRule"				"DOTA_ITEM_DISASSEMBLE_NEVER"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"875"
+		"ItemShopTags"					"regen_mana;str;boost_health"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"urn of shadows"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "40"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "0.2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "2"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "2"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "1.7"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "2"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.16"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "2.32"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.1"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"soul_heal_amount"		"30"
+			}			
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"soul_damage_amount"	"25"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"	            "8.0"
+			}
+		}
+	}
+
+	"item_recipe_spirit_vessel_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20200"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_spirit_vessel_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_urn_of_shadows_lua;item_vitality_booster_lua;item_wind_lace"
+		}
+	}
+	
+	//=================================================================================================================
+	// Spirit Vessel
+	//=================================================================================================================
+	"item_spirit_vessel_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20205"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+
+        "BaseClass"						"item_lua"
+		"ScriptFile"					"item_ability/item_spirit_vessel_lua"
+		"AbilityTextureName" 		    "item_spirit_vessel"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"950"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0"
+		"AbilitySharedCooldown"			"urn"
+
+		// Items
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemStackable"					"0"
+		"ItemPermanent"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2975"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"sv;spirit vessel"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+           "01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "290"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "0.2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "2"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "2"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "1.7"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "2"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.16"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "2.32"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "8"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"soul_heal_amount"		"30"
+			}			
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"soul_damage_amount"	"25"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"soul_damage_percentage"	"4"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen_reduction_enemy"	"60"
+			}
+			"14"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"	            "8.0"
+			}
+
+		}
+	}
+
+
+	"item_recipe_yasha_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20210"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+        "BaseClass"                     "item_datadriven"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_yasha_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_blade_of_alacrity_lua;item_boots_of_elves_lua"
+		}
+	}
+	
+
+	"item_yasha_lua"
+	{
+		"ID"							"20215"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 		    "item_yasha"
+		"ScriptFile"					"item_ability/item_yasha_lua"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2050"
+		"ItemShopTags"					"agi;attack_speed;move_speed"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"yasha"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"           "6"
+			}			
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"			"2.56"
+			}
+		    "03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"28"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"	"0.8"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"	    "20"
+			}
+		}
+	}
+
+	"item_recipe_sange_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20220"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		"BaseClass"                     "item_datadriven"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_sange_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_ogre_axe_lua;item_belt_of_strength_lua"
+		}
+	}
+	
+	//=================================================================================================================
+	// Sange
+	//=================================================================================================================
+	"item_sange_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20225"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 		    "item_yasha"
+		"ScriptFile"					"item_ability/item_sange_lua"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2050"
+		"ItemShopTags"					"damage;str;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"sange"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{	
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "320"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"		    "14"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"1.6"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"	        "1.28"
+			}			
+		}
+	}
+
+	
 
 
 	

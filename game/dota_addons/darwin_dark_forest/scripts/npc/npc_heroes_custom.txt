@@ -30,8 +30,12 @@
 		"Ability23"	"empty_special_7"
 		"Ability24"	"empty_special_8"
 
+		"MinimapIcon"				"minimap_creep"
+		"MinimapIconSize"			"150"
+		"ModelScale"		        "0.1"
+		"VersusScale"		        "0.1"
+
 		"VisionNighttimeRange"	"384"
-		"ModelScale"	"1"
 		"MovementSpeed"	"500"
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
 		"VisionDaytimeRange"	"512"
@@ -54,14 +58,24 @@
 		"MagicalResistance"	"0"
 		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_FLY"
 
+		"ProjectileModel"		""
+		"ProjectileSpeed"		"0"
+
+		"BountyXP"		    "0"
+		"BountyGoldMin"		"0"
+		"BountyGoldMax"		"0"
+
 		"HasAggressiveStance"	"0"
 		"FollowRange"	       "100"
 		"HealthBarOffset"	   "150"
 		"HasInventory"	        "1"
-		"Model"	"models/props_gameplay/donkey.vmdl"
-		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_wisp.vsndevts"
-		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_wisp.vsndevts"
-		"SoundSet"	"Hero_Wisp"
+		"Model"	                 "models/development/invisiblebox.vmdl"
+		"GameSoundsFile"	    ""
+		"VoiceFile"	            ""
+		"SoundSet"	            ""
 		"RingRadius"	"60"
+		"ItemSlots"
+		{
+		}
 	}
 }

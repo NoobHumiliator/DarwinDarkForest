@@ -338,4 +338,5 @@ function PlayerDNAChanged(){
     BuildLottery();
     CustomNetTables.SubscribeNetTableListener("econ_data", PlayerDNAChanged);
     GameEvents.Subscribe( "DrawLotteryResultArrive", DrawLotteryResultArrive ); //持久化服务器对于抽奖处理完毕
+    
 })();

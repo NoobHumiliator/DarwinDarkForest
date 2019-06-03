@@ -3,6 +3,7 @@
 {
 	"Version"	"1"
 
+
 	"npc_rune_revealer_element"
 	{
 		"BaseClass"					"npc_dota_creature"
@@ -168,10 +169,7 @@
 		"AttributeBaseAgility"		"0"			// Base agility
 		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
-		// Bounty
-		//----------------------------------------------------------------
-		"BountyGoldMin"				"75"		// Gold earned min.
-		"BountyGoldMax"				"75"		// Gold earned max.
+
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -259,9 +257,6 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -342,9 +337,6 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -532,11 +524,6 @@
 		"AttributeBaseAgility"		"0"			// Base agility
 		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
-		// Bounty
-		//----------------------------------------------------------------
-		"BountyGoldMin"				"100"			// Gold earned min.
-		"BountyGoldMax"				"100"			// Gold earned max.
-
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
@@ -607,11 +594,6 @@
 		"RingRadius"				"40"
 		"HealthBarOffset"			"135"
 
-		// Bounty
-		//----------------------------------------------------------------
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -681,11 +663,6 @@
 		"RingRadius"				"40"
 		"HealthBarOffset"			"135"
 
-		// Bounty
-		//----------------------------------------------------------------
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -754,11 +731,7 @@
 		"RingRadius"				"40"
 		"HealthBarOffset"			"135"
 
-		// Bounty
-		//----------------------------------------------------------------
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
+
 
 		// Movement
 		//----------------------------------------------------------------
@@ -852,11 +825,6 @@
 		"RingRadius"				"40"
 		"HealthBarOffset"			"135"
 
-		// Bounty
-		//----------------------------------------------------------------
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -910,11 +878,6 @@
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 
-		// Bounty
-		//----------------------------------------------------------------
-		"BountyXP"					"0"
-		"BountyGoldMin"				"0"
-		"BountyGoldMax"				"0"
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -1483,8 +1446,8 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"380"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"100"		// Base mana.
-		"StatusManaRegen"			"1"			// Mana regeneration rate.
+		"StatusMana"				"180"		// Base mana.
+		"StatusManaRegen"			"0.45"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -1550,8 +1513,8 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"220"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"600"		// Base mana.
-		"StatusManaRegen"			"1.5"			// Mana regeneration rate.		 
+		"StatusMana"				"540"		// Base mana.
+		"StatusManaRegen"			"1.35"			// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -1634,9 +1597,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"320"		// Base health.
-		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.6"		// Health regeneration rate.
+		"StatusMana"				"180"			// Base mana.
+		"StatusManaRegen"			"0.45"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -1715,9 +1678,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"220"	    	// Base health.
-		"StatusHealthRegen"			"0.25"		    // Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.1"		    // Health regeneration rate.
+		"StatusMana"				"180"			// Base mana.
+		"StatusManaRegen"			"0.45"			// Mana regeneration rate.
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
@@ -1794,9 +1757,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"220"	    	// Base health.
-		"StatusHealthRegen"			"0.25"		    // Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.1"		    // Health regeneration rate.
+		"StatusMana"				"180"			// Base mana.
+		"StatusManaRegen"			"1.8"			// Mana regeneration rate.
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
@@ -1868,9 +1831,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"260"	    	// Base health.
-		"StatusHealthRegen"			"0.25"		    // Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.3"		    // Health regeneration rate.
+		"StatusMana"				"180"			// Base mana.
+		"StatusManaRegen"			"0.45"			// Mana regeneration rate.
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
@@ -1947,9 +1910,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"160"	    	// Base health.
-		"StatusHealthRegen"			"0.25"		    // Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"0.8"		    // Health regeneration rate.
+		"StatusMana"				"180"			// Base mana.
+		"StatusManaRegen"			"0.45"			// Mana regeneration rate.
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
@@ -2024,9 +1987,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"310"	    	// Base health.
-		"StatusHealthRegen"			"1.5"		    // Health regeneration rate.
-		"StatusMana"				"200"			// Base mana.
-		"StatusManaRegen"			"2"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.55"		    // Health regeneration rate.
+		"StatusMana"				"210"			// Base mana.
+		"StatusManaRegen"			"2.1"			// Mana regeneration rate.
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
@@ -2096,9 +2059,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"500"		// Base health.
-		"StatusHealthRegen"			"1.5"		// Health regeneration rate.
-		"StatusMana"				"500"		// Base mana.
-		"StatusManaRegen"			"1"			// Mana regeneration rate.		 
+		"StatusHealthRegen"			"2.5"		// Health regeneration rate.
+		"StatusMana"				"630"		// Base mana.
+		"StatusManaRegen"			"1.6"			// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -2178,9 +2141,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"320"		// Base health.
-		"StatusHealthRegen"			"1"		    // Health regeneration rate.
-		"StatusMana"				"150"	    // Base mana.
-		"StatusManaRegen"			"1"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.6"		    // Health regeneration rate.
+		"StatusMana"				"210"	    // Base mana.
+		"StatusManaRegen"			"0.53"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -2234,7 +2197,7 @@
 		"AttackRate"				"1.6"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
-		"AttackRange"				"128"		// Range within a target can be attacked.
+		"AttackRange"				"110"		// Range within a target can be attacked.
 		"ProjectileModel"			""			// Particle system model for projectile.
 		"ProjectileSpeed"			""			// Speed of projectile.
 
@@ -2253,9 +2216,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"460"		// Base health.
-		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"2.3"		// Health regeneration rate.
+		"StatusMana"				"210"			// Base mana.
+		"StatusManaRegen"			"0.53"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -2329,9 +2292,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"230"		// Base health.
-		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.15"		// Health regeneration rate.
+		"StatusMana"				"210"			// Base mana.
+		"StatusManaRegen"			"0.53"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -2400,9 +2363,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"325"		// Base health.
-		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		"StatusHealthRegen"			"1.6"		// Health regeneration rate.
+		"StatusMana"				"210"			// Base mana.
+		"StatusManaRegen"			"0.53"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -2414,7 +2377,6 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}		
 
-    //鬼灵蜘蛛
    "npc_dota_creature_small_spider"
 	{
 		// General
@@ -2432,7 +2394,7 @@
 		"vscripts"					"creap_ai.lua"
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1.
+		"Ability1"					"broodmother_poison_sting"			// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -2440,6 +2402,8 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+
+		"AbilitiesLevel"            "1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -2473,9 +2437,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"380"		// Base health.
-		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.9"		// Health regeneration rate.
+		"StatusMana"				"210"		// Base mana.
+		"StatusManaRegen"			"0.53"		// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -2552,9 +2516,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"240"		// Base health.
-		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.2"		// Health regeneration rate.
+		"StatusMana"				"420"			// Base mana.
+		"StatusManaRegen"			"1.1"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -2632,9 +2596,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"320"	    	// Base health.
-		"StatusHealthRegen"			"0.75"		    // Health regeneration rate.
-		"StatusMana"				"200"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.6"		    // Health regeneration rate.
+		"StatusMana"				"210"			// Base mana.
+		"StatusManaRegen"			"0.53"			// Mana regeneration rate.
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
@@ -2785,9 +2749,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"330"		// Base health.
-		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"200"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.6"		// Health regeneration rate.
+		"StatusMana"				"210"			// Base mana.
+		"StatusManaRegen"			"0.53"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -2867,9 +2831,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"280"		// Base health.
-		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"100"		// Base mana.
-		"StatusManaRegen"			"1"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.4"		// Health regeneration rate.
+		"StatusMana"				"210"		// Base mana.
+		"StatusManaRegen"			"0.53"		// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -2948,9 +2912,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"500"		// Base health.
-		"StatusHealthRegen"			"2"		// Health regeneration rate.
-		"StatusMana"				"100"		// Base mana.
-		"StatusManaRegen"			"1"			// Mana regeneration rate.
+		"StatusHealthRegen"			"2.5"		// Health regeneration rate.
+		"StatusMana"				"210"		// Base mana.
+		"StatusManaRegen"			"0.53"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -3030,7 +2994,7 @@
 		"StatusHealth"				"500"
 		"StatusHealthRegen"			"2.5"
 		"StatusMana"				"250"
-		"StatusManaRegen"			"2.5"
+		"StatusManaRegen"			"1.9"
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -3268,7 +3232,7 @@
 		"StatusHealth"				"450"	    	// Base health.
 		"StatusHealthRegen"			"0.75"		    // Health regeneration rate.
 		"StatusMana"				"250"			// Base mana.
-		"StatusManaRegen"			"0.28"			// Mana regeneration rate.
+		"StatusManaRegen"			"0.63"			// Mana regeneration rate.
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
@@ -3343,9 +3307,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"480"	    	// Base health.
-		"StatusHealthRegen"			"0.75"		    // Health regeneration rate.
-		"StatusMana"				"200"			// Base mana.
-		"StatusManaRegen"			"0.5"			// Mana regeneration rate.
+		"StatusHealthRegen"			"2.4"		    // Health regeneration rate.
+		"StatusMana"				"250"			// Base mana.
+		"StatusManaRegen"			"0.63"			// Mana regeneration rate.
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
@@ -3418,9 +3382,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"430"		// Base health.
-		"StatusHealthRegen"			"1"		// Health regeneration rate.
+		"StatusHealthRegen"			"2.1"		// Health regeneration rate.
 		"StatusMana"				"250"			// Base mana.
-		"StatusManaRegen"			"0.28"			// Mana regeneration rate.
+		"StatusManaRegen"			"0.63"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -3495,9 +3459,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"480"		    // Base health.
-		"StatusHealthRegen"			"1"		        // Health regeneration rate.
+		"StatusHealthRegen"			"2.4"		        // Health regeneration rate.
 		"StatusMana"				"250"			// Base mana.
-		"StatusManaRegen"			"0.28"			// Mana regeneration rate.
+		"StatusManaRegen"			"0.63"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -3568,8 +3532,8 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"500"		// Base health.
 		"StatusHealthRegen"			"2.5"		// Health regeneration rate.
-		"StatusMana"				"200"			// Base mana.
-		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		"StatusMana"				"250"			// Base mana.
+		"StatusManaRegen"			"0.63"			// Mana regeneration rate.	 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -3638,9 +3602,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"450"		// Base health.
-		"StatusHealthRegen"			"2.0"		// Health regeneration rate.
-		"StatusMana"				"250"		// Base mana.
-		"StatusManaRegen"			"2"			// Mana regeneration rate.		 
+		"StatusHealthRegen"			"2.2"		// Health regeneration rate.
+		"StatusMana"				"750"			// Base mana.
+		"StatusManaRegen"			"1.9"			// Mana regeneration rate.	 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -3715,9 +3679,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"500"		// Base health.
-		"StatusHealthRegen"			"1.5"	    // Health regeneration rate.
+		"StatusHealthRegen"			"2.5"	    // Health regeneration rate.
 		"StatusMana"				"250"		// Base mana.
-		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		"StatusManaRegen"			"0.65"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -3785,9 +3749,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"680"		// Base health.
-		"StatusHealthRegen"			"2"		    // Health regeneration rate.
+		"StatusHealthRegen"			"2.9"		    // Health regeneration rate.
 		"StatusMana"				"350"		// Base mana.
-		"StatusManaRegen"			"1.5"		// Mana regeneration rate.		 
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -3854,9 +3818,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"500"		// Base health.
-		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"150"			// Base mana.
-		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		"StatusHealthRegen"			"2.5"		// Health regeneration rate.
+		"StatusMana"				"250"		// Base mana.
+		"StatusManaRegen"			"0.63"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -3932,9 +3896,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"650"		// Base health.
-		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"3.25"		// Health regeneration rate.
+		"StatusMana"				"250"			// Base mana.
+		"StatusManaRegen"			"0.65"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -4013,9 +3977,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"570"		// Base health.
-		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"2.9"		// Health regeneration rate.
+		"StatusMana"				"250"			// Base mana.
+		"StatusManaRegen"			"0.65"			// Mana regeneration rate.
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
@@ -4092,9 +4056,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"570"		// Base health.
-		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"2.9"		// Health regeneration rate.
+		"StatusMana"				"250"			// Base mana.
+		"StatusManaRegen"			"0.65"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -4133,11 +4097,11 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nHunt"                    "8"
+		"nHunt"                     "8"
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"dark_troll_warlord_ensnare"			// Ability 1.
+		"Ability1"					"broodmother_poison_sting"			// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -4146,7 +4110,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-		"AbilitiesLevel"           "1"
+		"AbilitiesLevel"           "2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -4180,9 +4144,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"220"		// Base health.
-		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"1.1"		// Health regeneration rate.
+		"StatusMana"				"250"			// Base mana.
+		"StatusManaRegen"			"0.64"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -4262,9 +4226,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"420"		// Base health.
-		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"100"		// Base mana.
-		"StatusManaRegen"			"1"			// Mana regeneration rate.
+		"StatusHealthRegen"			"2.1"		// Health regeneration rate.
+		"StatusMana"				"250"		// Base mana.
+		"StatusManaRegen"			"0.64"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -4344,9 +4308,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"680"		// Base health.
-		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"3.4"		// Health regeneration rate.
+		"StatusMana"				"250"			// Base mana.
+		"StatusManaRegen"			"0.64"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -4427,9 +4391,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"600"		// Base health.
-		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"3"		// Health regeneration rate.
+		"StatusMana"				"250"			// Base mana.
+		"StatusManaRegen"			"0.64"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -4508,9 +4472,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"570"		// Base health.
-		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
+		"StatusHealthRegen"			"2.9"		// Health regeneration rate.
 		"StatusMana"				"500"		// Base mana.
-		"StatusManaRegen"			"1"			// Mana regeneration rate.
+		"StatusManaRegen"			"1.2"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -4588,9 +4552,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"620"		// Base health.
-		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0.25"			// Mana regeneration rate.
+		"StatusHealthRegen"			"3.1"		// Health regeneration rate.
+		"StatusMana"				"250"			// Base mana.
+		"StatusManaRegen"			"0.64"			// Mana regeneration rate.
 
 
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
@@ -4661,7 +4625,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"670"		// Base health.
-		"StatusHealthRegen"			"1.2"		// Health regeneration rate.
+		"StatusHealthRegen"			"3.3"		// Health regeneration rate.
 		"StatusMana"				"250"			// Base mana.
 		"StatusManaRegen"			"0.7"			// Mana regeneration rate.		 
 		
@@ -4731,7 +4695,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"400"		// Base health.
-		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusHealthRegen"			"2"		// Health regeneration rate.
 		"StatusMana"				"400"		// Base mana.
 		"StatusManaRegen"			"8"			// Mana regeneration rate.		 
 		
@@ -4801,7 +4765,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"450"		// Base health.
-		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusHealthRegen"			"2.2"		// Health regeneration rate.
 		"StatusMana"				"400"		// Base mana.
 		"StatusManaRegen"			"1"		// Mana regeneration rate.		 
 		
@@ -4831,7 +4795,7 @@
 		"SoundSet"					"Hero_Slardar"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"ModelScale"				"0.85"
-		"Level"						"5"
+		"Level"						"4"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
@@ -4841,7 +4805,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1.
+		"Ability1"					"slardar_bash"			// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -4849,6 +4813,8 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+
+		"AbilitiesLevel"            "2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -6293,7 +6259,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"dark_troll_warlord_ensnare"			// Ability 1.
+		"Ability1"					"broodmother_poison_sting"			// Ability 1.
 		"Ability2"					""		    // Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -6302,7 +6268,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-        "AbilitiesLevel"            "2"
+        "AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -6371,7 +6337,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1.
+		"Ability1"					"broodmother_spin_web"			// Ability 1.
 		"Ability2"					""		    // Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -6379,6 +6345,8 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+
+		"AbilitiesLevel"           "1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -6447,7 +6415,7 @@
      
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"frostbitten_freezing_blast"
+		"Ability1"					""
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -8461,12 +8429,12 @@
         
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"broodmother_spin_web"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
 
-		"AbilitiesLevel"            "3"
+		"AbilitiesLevel"            "1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -8774,7 +8742,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1.
+		"Ability1"					"slardar_bash"			// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -8782,6 +8750,8 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -8854,7 +8824,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1.
+		"Ability1"					"broodmother_spin_web"			// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -8862,6 +8832,8 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+
+		"AbilitiesLevel"            "1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -9177,7 +9149,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1.
+		"Ability1"					"tiny_grow"	// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -9186,6 +9158,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
+        "AbilitiesLevel"            "1"
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"6"			// Physical protection.
@@ -10387,8 +10360,8 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"granite_golem_hp_aura"			// Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability1"					"tiny_grow"			            // Ability 1.
+		"Ability2"					"granite_golem_hp_aura"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -10396,7 +10369,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.\
 
-		"AbilitiesLevel"            "2"
+		"AbilitiesLevel"            "2 2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -11419,7 +11392,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"broodmother_spin_web"
 		"Ability2"					""
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -11427,6 +11400,8 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+
+		"AbilitiesLevel"            "2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -11499,7 +11474,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"broodmother_spin_web"
 		"Ability2"					""          
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -11507,6 +11482,8 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+
+		"AbilitiesLevel"            "2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -11580,7 +11557,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"dark_troll_warlord_ensnare"
+		"Ability1"					"broodmother_spin_web"
 		"Ability2"					""          
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -11589,7 +11566,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -12327,12 +12304,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"dark_troll_warlord_ensnare"			// Ability 1
+		"Ability1"					"broodmother_spin_web"			// Ability 1
 		"Ability2"					""	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "6"
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -12511,7 +12488,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"broodmother_spin_web"
 		"Ability2"					""          
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -12519,6 +12496,8 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -13898,7 +13877,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"dark_troll_warlord_ensnare"			// Ability 1.
+		"Ability1"					"sandking_caustic_finale"			// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -13907,7 +13886,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-		"AbilitiesLevel"            "5"
+		"AbilitiesLevel"            "1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -14057,8 +14036,8 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"granite_golem_hp_aura"			// Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability1"					"tiny_grow"			            // Ability 1.
+		"Ability2"					"granite_golem_hp_aura"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -14066,7 +14045,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-		"AbilitiesLevel"            "3"
+		"AbilitiesLevel"           "3 3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -14777,11 +14756,11 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"broodmother_insatiable_hunger"			// Ability 1
+		"Ability1"					"broodmother_spin_web"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
-        "AbilitiesLevel"            "1"
+        "AbilitiesLevel"            "4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -14993,7 +14972,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-        "AbilitiesLevel"            "3 5"
+        "AbilitiesLevel"            "2 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -15897,10 +15876,12 @@
          
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"tiny_grow"			// Ability 1
 		"Ability2"					""	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"           "4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -17821,7 +17802,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-        "AbilitiesLevel"            "4 6"
+        "AbilitiesLevel"            "3 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -18648,11 +18629,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"ancient_apparition_ice_blast"			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability2"					"ancient_apparition_ice_blast_release"			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "5"
+		"AbilitiesLevel"            "5 1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -19470,10 +19451,12 @@
   
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"tiny_grow"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -19544,12 +19527,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"broodmother_insatiable_hunger"			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability1"					"broodmother_spin_web"			// Ability 1
+		"Ability2"					"broodmother_insatiable_hunger"			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "2"
+		"AbilitiesLevel"            "5 1"
 
 
 		// Armor
@@ -21983,7 +21966,7 @@
 		"SoundSet"					"Hero_Tiny"
 		"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_tiny.vsndevts"
 		"Level"						"10"
-		"ModelScale" 				"1.25"
+		"ModelScale" 				"1.35"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
@@ -23032,11 +23015,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"ancient_apparition_ice_blast"			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability2"					"ancient_apparition_ice_blast_release"			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "6"
+		"AbilitiesLevel"            "6 1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -23319,10 +23302,10 @@
 		"SoundSet"		            "Hero_Tiny"
 
 		"Level"						"11"
-		"ModelScale" 				"1.7"
+		"ModelScale" 				"1.85"
 
-		"MinimapIcon"					"minimap_roshancamp"
-		"MinimapIconSize"				"450"
+		"MinimapIcon"				"minimap_roshancamp"
+		"MinimapIconSize"			"450"
          
         "vscripts"					"creap_ai.lua"
         "HasInventory"				"1"
@@ -37521,11 +37504,11 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"broodmother_insatiable_hunger"			// Ability 1
+		"Ability1"					"broodmother_spin_web"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
-        "AbilitiesLevel"            "1"
+        "AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -37719,12 +37702,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"broodmother_insatiable_hunger"			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability1"					"broodmother_spin_web"			// Ability 1
+		"Ability2"					"broodmother_insatiable_hunger"			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "3"
+		"AbilitiesLevel"            "6 2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -37739,7 +37722,7 @@
 		"AttackRate"				"0.8"		// Speed of attack.
 		"AttackAnimationPoint"		"0.2"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRange"				"150"		// Range within a target can be attacked.
 		"ProjectileModel"			""          // Particle system model for projectile.
 		"ProjectileSpeed"			"0"		    // Speed of projectile.		     
 

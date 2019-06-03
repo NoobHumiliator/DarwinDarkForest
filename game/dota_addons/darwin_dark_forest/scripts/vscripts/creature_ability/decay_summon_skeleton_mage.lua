@@ -22,7 +22,7 @@ function decay_summon_skeleton_mage:OnSpellStart()
 
 			hSkeletonMage:AddNewModifier( self:GetCaster(), self, "modifier_kill", { duration = flDuration } )
             hSkeletonMage:SetControllableByPlayer(self:GetCaster():GetMainControllingPlayer(), false)
-			hSkeletonMage:SetOwner( self:GetCaster() )
+			hSkeletonMage:SetOwner( PlayerResource:GetSelectedHeroEntity(self:GetCaster():GetMainControllingPlayer()) )
 			hSkeletonMage:SetDeathXP( 0 )
 			hSkeletonMage:SetMinimumGoldBounty( 0 )
 			hSkeletonMage:SetMaximumGoldBounty( 0 )

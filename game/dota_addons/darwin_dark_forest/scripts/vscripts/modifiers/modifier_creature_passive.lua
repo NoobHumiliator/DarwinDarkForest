@@ -23,6 +23,7 @@ function modifier_creature_passive:DeclareFunctions()
 	}
 	return funcs
 end
+
 ---------------------------------------------------------------------------------
 function modifier_creature_passive:OnTakeDamage (event)
 

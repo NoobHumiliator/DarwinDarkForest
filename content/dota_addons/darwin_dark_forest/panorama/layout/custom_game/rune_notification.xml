@@ -6,17 +6,19 @@
   <scripts>
     <include src="file://{resources}/scripts/custom_game/rune_notification.js" />
   </scripts>
+
   <Panel hittest="false" class="Notification">
     <Panel hittest="false" class="RuneNotification">
-      <Panel hittest="false" id="AlertMessage" text="">
+      <Panel hittest="false" id="AlertMessage" class="Hidden" >
         <Image hittest="false" id="AlertMessage_Icon" />
         <Label hittest="false" id="AlertMessage_Label" class="TitleFont" text="" html="true" />
       </Panel>
-      <Panel hittest="false" id="PickupMessage" text="">
-        <Panel hittest="false" id="PickupImages" text="">
+      <Panel hittest="false" id="PickupMessage" class="Hidden">
+        <Panel hittest="false" id="PickupImages">
           <Image hittest="false" id="PickupMessage_Unit" />
           <Image hittest="false" id="PickupMessage_Rune" />
         </Panel>
+        
         <Label hittest="false" id="PickupMessage_Unit_Text" class="TitleFont" text="#UnitPickup" />
         <Label hittest="false" id="PickupMessage_Rune_Text" class="TitleFont" text="#RunePickup" />
       </Panel>

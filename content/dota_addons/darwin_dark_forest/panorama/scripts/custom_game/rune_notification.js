@@ -1,20 +1,52 @@
 "use strict";
 
 
-
-
 function OnRuneSpawned( key )
 {
-	$( "#AlertMessage" ).SetHasClass( "ShowMessage", true );
+	$( "#AlertMessage" ).RemoveClass( "Hidden");
 	$( "#AlertMessage_Icon" ).SetImage( "file://{images}/custom_game/rune/"+key.rune_type+".png" );
-    $( "#AlertMessage_Label" ).text = $.Localize("rune_spawn_" + itemName);
-	$.Schedule( 3, ClearRuneSpawnMessage );
+    $( "#AlertMessage_Label" ).text = $.Localize("rune_spawn_" + key.rune_type);
+	$.Schedule( 4, ClearRuneSpawnMessage );
 }
 
 
 function ClearRuneSpawnMessage()
 {
-	$( "#AlertMessage" ).SetHasClass( "ShowMessage", false );
+	$("#AlertMessage").AddClass( "Hidden" );
+
+}
+
+function OnRunePickUp(key)
+{
+	$( "#PickupMessage").RemoveClass( "Hidden");
+    
+    var unitName = key.unit_name
+    var original = CustomNetTables.GetTableValue( "econ_unit_replace",unitName)
+	if (original!= null && original!= undefined)
+	{
+		unitName=original.sOriginalUnitName;
+	}
+
+	$( "#PickupMessage_Unit" ).SetImage( "file://{images}/custom_game/creature_portrait/"+unitName+".png" );
+   	$( "#PickupMessage_Rune" ).SetImage( "file://{images}/custom_game/rune/"+key.rune_type+".png" );
+    
+    var teamId=Players.GetTeam(key.player_id)
+    var teamColor = GameUI.CustomUIConfig().team_colors[ teamId ];
+
+    $( "#PickupMessage_Unit_Text" ).style.color = teamColor;
+
+    var palyerName =  Players.GetPlayerName( key.player_id) 
+
+    $( "#PickupMessage_Unit_Text" ).text=palyerName+"("+$.Localize("" + key.unit_name)+")";
+    $( "#PickupMessage_Rune_Text" ).text=$.Localize("rune_pickup_" + key.rune_type);
+    
+    $.Schedule( 3, ClearRunePickUpMessage );
+
+}
+
+function ClearRunePickUpMessage()
+{
+	$( "#PickupMessage" ).AddClass( "Hidden");   
 }
 
 

@@ -39,6 +39,13 @@
     "rune_spawn_decay"            "腐朽神符刷新"
     "rune_spawn_hunt"             "猎杀神符刷新"
 
+    "rune_pickup_element"          "拾取了元素神符"
+    "rune_pickup_mystery"          "拾取了神秘神符"
+    "rune_pickup_durable"          "拾取了坚韧神符"
+    "rune_pickup_fury"             "拾取了狂怒神符"
+    "rune_pickup_decay"            "拾取了腐朽神符"
+    "rune_pickup_hunt"             "拾取了猎杀神符"
+
 
     "congrates_first_place"  "大吉大利，晚上吃鸡！"
     "encourage_runner_ups"   "不抛弃，不放弃，下次一定得第一"
@@ -178,7 +185,7 @@
 	"fury"                                                                      "狂怒"
 	"durable"                                                                   "坚韧"
 	"element"                                                                   "元素"
-	"hunt"                                                                      "狡诈"
+	"hunt"                                                                      "猎杀"
 	"decay"                                                                     "腐朽"
 	"mystery"                                                                   "神秘"
 	"exp"                                                                       "经验"
@@ -188,7 +195,7 @@
 	"ui_detail_element"                                                         "驾驭元素毁灭敌人"
 	"ui_detail_hunt"                                                            "隐藏于阴影的狡诈猎手"
 	"ui_detail_decay"                                                           "散播瘟疫与剧毒"
-	"ui_detail_mystery"                                                         "虚空与不可名状之力"
+	"ui_detail_mystery"                                                         "虚空与深海之力"
 
 
     //召唤
@@ -1250,6 +1257,54 @@
     "DOTA_Tooltip_ability_item_rune_decay"                                                 "腐朽神符"
     "DOTA_Tooltip_ability_item_rune_hunt"                                                  "猎杀神符"
 
+
+    "DOTA_Tooltip_ability_item_dragon_lance_lua"                                    "魔龙枪"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_Description"                        "<h1>被动：魔龙之能</h1> 攻击距离增加%bonus_attack_range%。"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_bonus_health"                       "+$health"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_bonus_damage"                       "+$damage"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_attack_speed"                       "+$attack"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_health_regen"                       "+$hp_regen"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_magic_resist"                       "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_bonus_armor"                        "+护甲提升"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_bonus_move_speed_pct"               "%+移动速度"
+
+    
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua"                                  "影之灵龛"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_Description"                      "<h1>主动：灵魂释放</h1> 对友方单位施放时提供%soul_heal_amount%点/秒生命恢复，对敌方单位则造成%soul_damage_amount%点每秒伤害。<br><br>持续%duration%秒。"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_health"                     "+$health"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_damage"                     "+$damage"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_attack_speed"               "+$attack"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_mana_regen"                 "+$mana_regen"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_health_regen"               "+$hp_regen"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_magic_resist"                     "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_armor"                       "+护甲提升"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_move_speed_pct"              "%+移动速度"
+
+  
+
+
+    "DOTA_Tooltip_modifier_item_urn_of_shadows_lua_debuff"                           "影之灵龛"
+    "DOTA_Tooltip_modifier_item_urn_of_shadows_lua_buff"                             "影之灵龛"
+     
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua"                                  "魂之灵瓮"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_Description"                      "<h1>主动：灵魂释放</h1> 对敌人使用时，每秒减少%soul_damage_percentage%%%当前生命值，并且生命恢复和治疗效果降低%hp_regen_reduction_enemy%%%。每秒造成%soul_damage_amount%点伤害。对友方目标释放时，每秒恢复%soul_heal_amount%点生命值。"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_health"                     "+$health"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_damage"                     "+$damage"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_attack_speed"               "+$attack"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_mana_regen"                 "+$mana_regen"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_health_regen"               "+$hp_regen"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_magic_resist"                     "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_armor"                       "+护甲提升"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_move_speed_pct"              "%+移动速度"
+
+    "DOTA_Tooltip_modifier_item_spirit_vessel_lua_debuff"                           "魂之灵瓮"
+    "DOTA_Tooltip_modifier_item_spirit_vessel_lua_buff"                             "魂之灵瓮"
+    
+    "npc_dota_hero_wisp"                                                            "进化岛生物"
+
+    "DOTA_Tooltip_ability_tiny_grow_nDurable"                              "<font color='#f8b551'>坚韧：</font>"
+    "DOTA_Tooltip_ability_warlock_golem_flaming_fists_nElement"            "<font color='#00a0e9'>元素：</font>"
+    "DOTA_Tooltip_ability_warlock_golem_flaming_fists_nFury"               "<font color='#eb6877'>狂怒：</font>"
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"

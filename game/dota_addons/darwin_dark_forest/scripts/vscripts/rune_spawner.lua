@@ -5,7 +5,7 @@ end
 
 function RuneSpawner:Init()
   
-  RuneSpawner.flTimeInterval=3
+  RuneSpawner.flTimeInterval=120
   ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(RuneSpawner, "OnGameRulesStateChange"), self)
   ListenToGameEvent( "dota_item_picked_up", Dynamic_Wrap( RuneSpawner, "OnItemPickUp"), self )
 
@@ -83,7 +83,7 @@ function RuneSpawner:SpawnOneRune()
    CustomGameEventManager:Send_ServerToAllClients( "rune_spawned", data )
 
    Timers:CreateTimer(0.1, function()
-        if hVisionRevealer and hVisionRevealer:IsAlive() then
+        if  hVisionRevealer and not hVisionRevealer:IsNull() and hVisionRevealer:IsAlive() then
           for nTeam = 0, (DOTA_TEAM_COUNT-1) do
               AddFOWViewer(nTeam, vVector, 600, 0.5, false)
           end
@@ -119,8 +119,9 @@ function RuneSpawner:OnItemPickUp(event)
        
        local data =
        {
-          rune_type = nType,
-          unit_name = hOwner:GetUnitName()
+          rune_type = RuneSpawner.vTypeMap[nType],
+          unit_name = hOwner:GetUnitName(),
+          player_id = nPlayerId
        }
 
        CustomGameEventManager:Send_ServerToAllClients( "rune_pick_up", data )

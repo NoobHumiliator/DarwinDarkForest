@@ -62,7 +62,7 @@ function modifier_decay_tombstone:OnIntervalThink()
 			if hSkeleton ~= nil then
 				table.insert( self.hSkeletons, hSkeleton )
                 hSkeleton:SetControllableByPlayer(self:GetParent().nPlayerId, false)
-				hSkeleton:SetOwner( self:GetParent() )
+                hSkeleton:SetOwner( PlayerResource:GetSelectedHeroEntity(self:GetParent().nPlayerId) )
 				hSkeleton:SetDeathXP( 0 )
 				hSkeleton:SetMinimumGoldBounty( 0 )
 				hSkeleton:SetMaximumGoldBounty( 0 )

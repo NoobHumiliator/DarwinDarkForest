@@ -117,7 +117,8 @@ function GameMode:OnEntityKilled(keys)
    local hKillerUnit = EntIndexToHScript(keys.entindex_attacker)
    
 
-   local flPercentage=0.5 --进化点数 比例
+   local flPercentage=0.5 --野怪进化点数 比例
+   local flPlayerPercentage=0.3 --玩家进化点数 吸取比例
 
    --如果玩家击杀野怪，把野怪的进化点赋给玩家
    if  hKilledUnit:GetTeamNumber() == DOTA_TEAM_NEUTRALS then
@@ -130,18 +131,13 @@ function GameMode:OnEntityKilled(keys)
            return
        end
 
-       --Todo 播放击杀特效，到时候挪走
-       if hHero.sCurrentKillEffect then
-            Econ:PlayKillEffect(hHero.sCurrentKillEffect,hHero)
-       end
-
-       if hHero.sCurrentKillSound then
-            Econ:PlayKillSound(hHero.sCurrentKillSound,hHero)
-       end
-       
-       
        --掉落物品
        ItemController:DropItemByChance(hKilledUnit)
+   
+       --被击杀的时大怪，播放
+       if hKilledUnit:GetLevel()>hHero.nCurrentCreepLevel then
+            PlayKillEffectAndSound(hHero)
+       end
 
        --消除野怪户口 (先确保被击杀单位不是野怪的召唤生物)      
        if hKilledUnit.nCreatureLevel then
@@ -183,35 +179,8 @@ function GameMode:OnEntityKilled(keys)
                  end
              end
        end
-        --收割灵魂例子特效 白色特效
-       if flTotalPerks ==0 then
-           local nSoulParticle = ParticleManager:CreateParticle("particles/absorb_particle/absorb_white.vpcf", PATTACH_POINT_FOLLOW, hKillerUnit)
-           ParticleManager:SetParticleControlEnt(nSoulParticle, 0, hKilledUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
-           ParticleManager:SetParticleControlEnt(nSoulParticle, 1, hKillerUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
-       end
-
-         
-       local tempPerksColorMap = { 
-          {color="blue",value=tempPerksMap[1]},
-          {color="purple",value=tempPerksMap[2]},
-          {color="yellow",value=tempPerksMap[3]},
-          {color="red",value=tempPerksMap[4]},
-          {color="green",value=tempPerksMap[5]},
-          {color="black",value=tempPerksMap[6]}
-       }     
        
-       table.sort(tempPerksColorMap,function(a,b)
-            return a.value > b.value
-       end)
-
-       --播放吸收特效
-       for _,v in pairs(tempPerksColorMap) do
-         if v.value>0 then 
-           local nSoulParticle = ParticleManager:CreateParticle("particles/absorb_particle/absorb_"..v.color..".vpcf", PATTACH_POINT_FOLLOW, hKillerUnit)
-           ParticleManager:SetParticleControlEnt(nSoulParticle, 0, hKilledUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
-           ParticleManager:SetParticleControlEnt(nSoulParticle, 1, hKillerUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
-         end
-       end
+       PlayAbsorbParticle(tempPerksMap,hKillerUnit,hKilledUnit)
 
        --给玩家经验
        if hKilledUnit.nCreatureLevel then
@@ -235,12 +204,28 @@ function GameMode:OnEntityKilled(keys)
 
    end
 
-    --如果玩家生物被击杀，损失经验 换出生点 换模型
-   if  hKilledUnit:GetOwner() and not hKilledUnit:IsHero() and hKilledUnit:GetOwner() and hKilledUnit:GetOwner().GetPlayerID then
+    --如果玩家生物被击杀
+   if  hKilledUnit:GetOwner() and not hKilledUnit:IsHero() and hKilledUnit:GetOwner().GetPlayerID then
        local nPlayerId = hKilledUnit:GetOwner():GetPlayerID()
        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
+
+       local nKillerPlayerId
+       local hKillerHero 
+
+       --玩家被 其他队伍的玩家所击杀 标志位
+       local bKilledByOtherTeam = false
+       
+       if hKillerUnit:GetOwner()  then
+          nKillerPlayerId = hKillerUnit:GetOwner():GetPlayerID()
+          if nKillerPlayerId~=-1 and PlayerResource:GetTeam(nKillerPlayerId)~=PlayerResource:GetTeam(nPlayerId) then
+            hKillerHero =  PlayerResource:GetSelectedHeroEntity(nKillerPlayerId)
+            bKilledByOtherTeam=true
+          end
+       end
+
+       print("nPlayerId"..nPlayerId)
        -- 保证是玩家的主控生物
-       if hHero.hCurrentCreep == hKilledUnit and true~=hHero.hCurrentCreep.bKillByMech then
+       if hHero and hHero.hCurrentCreep == hKilledUnit and true~=hHero.hCurrentCreep.bKillByMech then
 
           --掉落物品
           ItemController:DropItemByChance(hKilledUnit)
@@ -248,16 +233,50 @@ function GameMode:OnEntityKilled(keys)
           --记录物品
           ItemController:RecordItemsInfo(hHero)
 
-          local nPlayerId = hKilledUnit:GetOwner():GetPlayerID()
-          local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
-           hHero.nCustomExp=hHero.nCustomExp-(vEXP_TABLE[hHero.hCurrentCreep:GetLevel()+1]-vEXP_TABLE[hHero.hCurrentCreep:GetLevel()])*0.5
+          hHero.nCustomExp=hHero.nCustomExp-(vEXP_TABLE[hHero.hCurrentCreep:GetLevel()+1]-vEXP_TABLE[hHero.hCurrentCreep:GetLevel()])*0.5
            --保证不是负数
-           if hHero.nCustomExp<1 then
+          if hHero.nCustomExp<1 then
               hHero.nCustomExp=1
-           end
-           --击杀英雄
-           hHero:Kill(nil, hKillerUnit)
-           GameMode:PutStartPositionToRandomPosForTeam(hHero:GetTeamNumber());
+          end
+           
+          -- 处理被其他队伍玩家击杀的情况 
+          if bKilledByOtherTeam then
+             local tempPerksMap = {0,0,0,0,0,0}
+   
+            for i=1,6 do
+                --按比例给予 击杀者perk
+                GameMode.vPlayerPerk[nKillerPlayerId][i]=GameMode.vPlayerPerk[nKillerPlayerId][i]+ GameMode.vPlayerPerk[nPlayerId][i] * flPlayerPercentage
+                tempPerksMap[i]=GameMode.vPlayerPerk[nPlayerId][i] * flPlayerPercentage
+            end
+
+            PlayAbsorbParticle(tempPerksMap,hKillerUnit,hKilledUnit)
+
+            --给击杀者经验
+            hKillerHero.nCustomExp=hKillerHero.nCustomExp+vCREEP_EXP_TABLE[hKilledUnit:GetLevel()] 
+
+            PlayKillEffectAndSound(hKillerHero)
+            --给击杀者 英雄换模型
+            hKillerHero:SetOriginalModel(hKillerUnit:GetModelName())
+            hKillerHero:SetModel(hKillerUnit:GetModelName())
+
+            local nKillerNewLevel=CalculateNewLevel(hKillerHero)
+       
+             --如果升级了 进化
+            if nKillerNewLevel~=hKillerHero.nCurrentCreepLevel then
+                hKillerHero.nCurrentCreepLevel=nKillerNewLevel
+                LevelUpAndEvolve(nKillerPlayerId,hKillerHero)
+            end
+            
+
+
+            --更新击杀者雷达
+            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nKillerPlayerId),"UpdateRadar", {current_exp=hKillerHero.nCustomExp-vEXP_TABLE[nKillerNewLevel],next_level_need=vEXP_TABLE[nKillerNewLevel+1]-vEXP_TABLE[nKillerNewLevel],perk_table=GameMode.vPlayerPerk[nKillerPlayerId] } )
+            CustomNetTables:SetTableValue( "player_perk", tostring(nKillerPlayerId), GameMode.vPlayerPerk[nKillerPlayerId] )
+
+          end
+
+          hHero:Kill(nil, hKillerUnit)
+          GameMode:PutStartPositionToRandomPosForTeam(hHero:GetTeamNumber());
 
            -- 终极进化阶段不能再重生
            if GameRules.bUltimateStage then
@@ -305,6 +324,56 @@ function LevelUpAndEvolve(nPlayerId,hHero)
     ParticleManager:ReleaseParticleIndex(nLevelUpParticleIndex)
 
 
+end
+
+--播放击杀 吸收特效
+function PlayAbsorbParticle(tempPerksMap,hKillerUnit,hKilledUnit)
+
+
+     --收割灵魂例子特效 白色特效
+       local flTotalPerks=0
+
+       for _,v in ipairs(tempPerksMap) do
+         flTotalPerks=v+flTotalPerks
+       end
+
+       --如果没有可以吸的 播放白色特效
+       if flTotalPerks ==0 then
+           local nSoulParticle = ParticleManager:CreateParticle("particles/absorb_particle/absorb_white.vpcf", PATTACH_POINT_FOLLOW, hKillerUnit)
+           ParticleManager:SetParticleControlEnt(nSoulParticle, 0, hKilledUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
+           ParticleManager:SetParticleControlEnt(nSoulParticle, 1, hKillerUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
+       end
+
+         
+       local tempPerksColorMap = { 
+          {color="blue",value=tempPerksMap[1]},
+          {color="purple",value=tempPerksMap[2]},
+          {color="yellow",value=tempPerksMap[3]},
+          {color="red",value=tempPerksMap[4]},
+          {color="green",value=tempPerksMap[5]},
+          {color="black",value=tempPerksMap[6]}
+       }     
+       
+       table.sort(tempPerksColorMap,function(a,b)
+            return a.value > b.value
+       end)
+
+       --播放吸收特效
+       local timePause=FrameTime()
+       for _,v in pairs(tempPerksColorMap) do
+         if v.value>0 then 
+            Timers:CreateTimer(timePause, function()
+                local nSoulParticle = ParticleManager:CreateParticle("particles/absorb_particle/absorb_"..v.color..".vpcf", PATTACH_POINT_FOLLOW, hKillerUnit)
+                ParticleManager:SetParticleControlEnt(nSoulParticle, 0, hKilledUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
+                ParticleManager:SetParticleControlEnt(nSoulParticle, 1, hKillerUnit, PATTACH_POINT_FOLLOW, "attach_hitloc", hKillerUnit:GetAbsOrigin(), true)
+                return nil
+              end
+            )
+            timePause=timePause+0.3
+         end
+       end
+
+     
 end
 
 
@@ -427,30 +496,43 @@ function GameMode:OnPlayerSay(keys)
         --强制进化到某生物
         if string.find(sText,"npc_dota_creature_") == 1 and hHero and not hHero.hCurrentCreep:IsNull() then
             
+            
+            local hHandlingHero=hHero
+            local nHandlingPlayerId=nPlayerId
+
+            if string.find(sText,"enemy") ~= nil then
+                
+                hHandlingHero = PlayerResource:GetPlayer(1):GetAssignedHero()
+                nHandlingPlayerId = 1
+                sText = SpliteStr(sText)[1]
+            end
+
             if GameRules.vUnitsKV[sText]==nil then
                print("Invalid creature"..sText)     
                return          
             end
+
+
             --经验/基因 设置过去
             local nLevel = GameRules.vUnitsKV[sText].nCreatureLevel
 
-            hHero.nCustomExp=vEXP_TABLE[nLevel]+1
+            hHandlingHero.nCustomExp=vEXP_TABLE[nLevel]+1
 
-            GameMode.vPlayerPerk[nPlayerId][1] = GameRules.vUnitsKV[sText].nElement
-            GameMode.vPlayerPerk[nPlayerId][2] = GameRules.vUnitsKV[sText].nMystery
-            GameMode.vPlayerPerk[nPlayerId][3] = GameRules.vUnitsKV[sText].nDurable
-            GameMode.vPlayerPerk[nPlayerId][4] = GameRules.vUnitsKV[sText].nFury
-            GameMode.vPlayerPerk[nPlayerId][5] = GameRules.vUnitsKV[sText].nDecay
-            GameMode.vPlayerPerk[nPlayerId][6] = GameRules.vUnitsKV[sText].nHunt
+            GameMode.vPlayerPerk[nHandlingPlayerId][1] = GameRules.vUnitsKV[sText].nElement
+            GameMode.vPlayerPerk[nHandlingPlayerId][2] = GameRules.vUnitsKV[sText].nMystery
+            GameMode.vPlayerPerk[nHandlingPlayerId][3] = GameRules.vUnitsKV[sText].nDurable
+            GameMode.vPlayerPerk[nHandlingPlayerId][4] = GameRules.vUnitsKV[sText].nFury
+            GameMode.vPlayerPerk[nHandlingPlayerId][5] = GameRules.vUnitsKV[sText].nDecay
+            GameMode.vPlayerPerk[nHandlingPlayerId][6] = GameRules.vUnitsKV[sText].nHunt
     
-            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[nLevel+1]-vEXP_TABLE[nLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
-            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nHandlingPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[nLevel+1]-vEXP_TABLE[nLevel],perk_table=GameMode.vPlayerPerk[nHandlingPlayerId] } )
+            CustomNetTables:SetTableValue( "player_perk", tostring(nHandlingPlayerId), GameMode.vPlayerPerk[nHandlingPlayerId] )
             
-            GameMode:PutStartPositionToLocation(hHero,hHero:GetAbsOrigin())
+            GameMode:PutStartPositionToLocation(hHandlingHero,hHandlingHero:GetAbsOrigin())
 
             -- 替换模型
-            local hUnit = SpawnUnitToReplaceHero(sText,hHero,nPlayerId)
-            AddAbilityForUnit(hUnit,nPlayerId)
+            local hUnit = SpawnUnitToReplaceHero(sText,hHandlingHero,nHandlingPlayerId)
+            AddAbilityForUnit(hUnit,nHandlingPlayerId)
         end
 
         --添加物品
@@ -470,5 +552,18 @@ function GameMode:OnPlayerSay(keys)
 
     end
 
+
+end
+
+
+function PlayKillEffectAndSound (hHero)
+
+     if hHero.sCurrentKillEffect then
+          Econ:PlayKillEffect(hHero.sCurrentKillEffect,hHero)
+     end
+
+     if hHero.sCurrentKillSound then
+          Econ:PlayKillSound(hHero.sCurrentKillSound,hHero)
+     end
 
 end

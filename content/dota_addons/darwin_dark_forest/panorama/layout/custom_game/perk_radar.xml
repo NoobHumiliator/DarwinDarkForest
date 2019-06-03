@@ -6,6 +6,7 @@
     <scripts>
         <include src="file://{resources}/scripts/custom_game/perk_radar.js" />
         <include src="file://{resources}/scripts/custom_game/selection_filter.js" />
+        <include src="file://{resources}/scripts/custom_game/kill_event_filter.js" />
     </scripts>
     
     <Panel hittest="false" class="PerkRadarPanelHud">

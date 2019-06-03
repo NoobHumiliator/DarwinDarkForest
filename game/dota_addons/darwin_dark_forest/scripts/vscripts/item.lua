@@ -16,8 +16,8 @@ function ItemController:Init()
     -- 携带物品的概率
     self.flItemCarryChance=1
     --掉落物品的概率
-    self.flItemDropChance=1
-    --玩家物品的概率
+    self.flItemDropChance=0.5
+    --玩家掉落物品的概率
     self.flPlayerItemDropChance=0.5
 
     --二维数组 k 为1-5级物品
@@ -145,6 +145,10 @@ function ItemController:RecordItemsInfo(hHero)
                vItemInfo.flRemainingCoolDown = hItem:GetCooldownTimeRemaining()
                vItemInfo.nCurrentCharges=hItem:GetCurrentCharges()
                table.insert(vItemInfos,vItemInfo)
+               --圣剑移除掉
+               if hItem:GetName()=="item_rapier" then
+                     UTIL_Remove(hItem)     
+               end
             end
         end
     end

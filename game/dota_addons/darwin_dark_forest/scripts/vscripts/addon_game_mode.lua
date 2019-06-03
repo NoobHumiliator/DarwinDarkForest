@@ -387,7 +387,11 @@ function GameMode:InitGameMode()
     
 	GameRules:SetSameHeroSelectionEnabled(true)
     GameRules:SetUseUniversalShopMode(true)
-
+    --使用自定义的金币奖励
+    GameRules:SetGoldPerTick(0)
+    GameRules:SetGoldTickTime(0)
+    GameRules:SetStartingGold(0)
+    GameRules:SetUseBaseGoldBountyOnHeroes(true)
 
     GameRules:GetGameModeEntity():SetRemoveIllusionsOnDeath(true)
     GameRules:GetGameModeEntity():SetFogOfWarDisabled(false)
@@ -401,14 +405,14 @@ function GameMode:InitGameMode()
     if bTEST_MODE and not IsDedicatedServer() then
         --GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
     end
-
-    --[[
-    GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, "DamageFilter"), self)
-    GameRules:GetGameModeEntity():SetExecuteOrderFilter(Dynamic_Wrap(GameMode, "OrderFilter"), self)
-    GameRules:GetGameModeEntity():SetModifierGainedFilter(Dynamic_Wrap(GameMode, 'ModifierFilter'), self)
+    
+    
+    --GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, "DamageFilter"), self)
+    --GameRules:GetGameModeEntity():SetExecuteOrderFilter(Dynamic_Wrap(GameMode, "OrderFilter"), self)
+    --GameRules:GetGameModeEntity():SetModifierGainedFilter(Dynamic_Wrap(GameMode, 'ModifierFilter'), self)
     GameRules:GetGameModeEntity():SetModifyGoldFilter(Dynamic_Wrap(GameMode, "ModifyGoldFilter"), self)
-    GameRules:GetGameModeEntity():SetModifyExperienceFilter(Dynamic_Wrap(GameMode, "ModifyExpFilter"), self)
-    ]]
+    --GameRules:GetGameModeEntity():SetModifyExperienceFilter(Dynamic_Wrap(GameMode, "ModifyExpFilter"), self)
+    
     SendToServerConsole("dota_max_physical_items_purchase_limit 9999")
     
 
@@ -429,6 +433,17 @@ function GameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, 1 ) 
 
 end
+
+
+--本游戏 直接禁止一切获取金币的手段
+function GameMode:ModifyGoldFilter(filterTable)
+    local reason = filterTable.reason_const
+    print("[GameMode:ModifyGoldFilter]: Attempt to call default dota gold modify func... FIX IT - Reason: " .. filterTable.reason_const .."  --  Amount: " .. filterTable.gold)
+    filterTable.gold = 0
+    return false
+end
+
+
 
 -- 根据出生点，设定队伍玩家数量 nMAX_PLAYER_NUMBER
 function GameMode:GatherAndRegisterValidTeams()

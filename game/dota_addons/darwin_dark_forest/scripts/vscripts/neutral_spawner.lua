@@ -95,7 +95,7 @@ function NeutralSpawner:SpawnOneCreature()
    end
 
    local nAverageLevel = math.floor(nTotalLevel/nTotalHero + 0.5) --四舍五入
-   
+  
    --比例
    local vLevelRatio ={}
    vLevelRatio["courier"]=0.55 --这是信使的比例
@@ -125,6 +125,8 @@ function NeutralSpawner:SpawnOneCreature()
       vLevelRatio["courier"]=0.60
    end
 
+    
+  --基本比例正确，大于100个生物的时候 会比比例多一个生物
 
    if nAverageLevel==7 then
      vLevelRatio[-3]=0.05
