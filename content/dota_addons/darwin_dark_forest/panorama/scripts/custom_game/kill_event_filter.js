@@ -16,8 +16,10 @@ function DotaPlayerKill(keys)
        var eventListLabel= eventListLabels[eventListLabels.length-1];
        eventListLabel.style['text-overflow'] = 'clip';
        //$.Msg(eventListLabel.FindChildrenWithClassTraverse ("CombatEventGoldIcon"))
-       eventListLabel.style.width=(eventListLabel.FindChildrenWithClassTraverse ("CombatEventGoldIcon")[0].actualxoffset+70)+"px";
-
+       if (eventListLabel.FindChildrenWithClassTraverse ("CombatEventGoldIcon")[0] != undefined )
+       {
+           eventListLabel.style.width=(eventListLabel.FindChildrenWithClassTraverse ("CombatEventGoldIcon")[0].actualxoffset+70)+"px";
+       }
        var eventListLabels=FindDotaHudElements("CombatEventHeroIcon");
        for (var i = eventListLabels.length-1; i >= 0; i--) {
            var eventListLabel= eventListLabels[i];

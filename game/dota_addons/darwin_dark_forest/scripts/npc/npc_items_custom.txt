@@ -7992,7 +7992,7 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 
 		"BaseClass"						"item_lua"
-		"AbilityTextureName" 		    "item_yasha"
+		"AbilityTextureName" 		    "item_sange"
 		"ScriptFile"					"item_ability/item_sange_lua"
 
 		// Item Info
@@ -8026,7 +8026,27 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"magic_resist"	        "1.28"
-			}			
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maim_chance"	        "40"
+			}	
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maim_duration"	        "5"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"movement_speed_slow_pct"	        "-26"
+			}	
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_speed_slow"	        "-26"
+			}	
 		}
 	}
 

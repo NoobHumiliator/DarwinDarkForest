@@ -489,17 +489,13 @@ Label{
 
 
 .Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_amoeba_1.png");
+   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_green_troll_warlord.png");
 }
+
 .Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_amoeba_2.png");
+   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_wildkin_boss_2.png");
 }
-.Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_amoeba_3.png");
-}
-.Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_amoeba_4.png");
-}
+
 
 .Temp{
    background-image: url("file://{images}/custom_game/rune/decay.png");

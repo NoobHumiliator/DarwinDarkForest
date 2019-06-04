@@ -385,6 +385,7 @@
     "npc_dota_creature_tentacular_conqueror_2"                                      "虚空信徒"
     "npc_dota_creature_satyr_prowler"                                               "萨特潜行先锋"
     "npc_dota_creature_ogreseal_1"                                                  "海象"
+    "npc_dota_creature_green_troll_warlord"                                         "丛林巨魔召唤法师"
 
 
    
@@ -527,6 +528,7 @@
     "npc_dota_creature_old_element"                                                 "衡势晶体"
     "npc_dota_creature_visage_winged_harvest"                                       "空灵收割者"
     "npc_dota_creature_morphling_protean_emperor"                                   "千变之王"
+    "npc_dota_creature_wildkin_boss_02"                                             "远古枭兽王者"
 
 
     //Level-11
@@ -1305,6 +1307,24 @@
     "DOTA_Tooltip_ability_tiny_grow_nDurable"                              "<font color='#f8b551'>坚韧：</font>"
     "DOTA_Tooltip_ability_warlock_golem_flaming_fists_nElement"            "<font color='#00a0e9'>元素：</font>"
     "DOTA_Tooltip_ability_warlock_golem_flaming_fists_nFury"               "<font color='#eb6877'>狂怒：</font>"
+
+    "DOTA_Tooltip_ability_item_sange_lua"                                    "散华"
+    "DOTA_Tooltip_ability_item_sange_lua_Description"                        "<h1>被动：残废</h1> 每次攻击有%maim_chance%%几率致残目标，使其移动速度降低%movement_speed_slow_pct%%，攻击速度降低%attack_speed_slow%，持续%maim_duration%秒"
+    "DOTA_Tooltip_ability_item_sange_lua_bonus_health"                       "+$health"
+    "DOTA_Tooltip_ability_item_sange_lua_bonus_damage"                       "+$damage"
+    "DOTA_Tooltip_ability_item_sange_lua_bonus_health_regen"                 "+$hp_regen"
+    "DOTA_Tooltip_ability_item_sange_lua_magic_resist"                       "%+魔法抗性"
+
+    "DOTA_Tooltip_modifier_item_sange_lua_debuff"                            "残废"
+
+
+    "DOTA_Tooltip_ability_item_yasha_lua"                                   "夜叉"
+    "DOTA_Tooltip_ability_item_yasha_lua_bonus_damage"                      "+$damage"
+    "DOTA_Tooltip_ability_item_yasha_lua_bonus_attack_speed"                "+$attack"
+    "DOTA_Tooltip_ability_item_yasha_lua_bonus_armor"                       "+护甲提升"
+    "DOTA_Tooltip_ability_item_yasha_lua_bonus_move_speed_pct"              "%+移动速度"
+    "DOTA_Tooltip_ability_item_yasha_lua_bonus_armor"                       "+护甲提升"
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"

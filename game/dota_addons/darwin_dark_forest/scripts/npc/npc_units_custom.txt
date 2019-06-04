@@ -5539,12 +5539,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"troll_warlord_battle_trance"			// Ability 1
+		"Ability1"					"dark_troll_warlord_ensnare"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "1"
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -9432,12 +9432,12 @@
         "nHunt"                     "8"
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"troll_warlord_battle_trance"			// Ability 1
+		"Ability1"					"dark_troll_warlord_ensnare"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "2"
+		"AbilitiesLevel"            "4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -9490,6 +9490,76 @@
 	//-----------------------------------------
 	//   Level-6
 	//-----------------------------------------
+
+	 "npc_dota_creature_green_troll_warlord"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/neutral_creeps/n_creep_troll_dark_b/n_creep_troll_dark_b.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Ranged"
+		"Level"						"6"
+		"ModelScale" 				"1"
+		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
+         
+        "nDecay"                    "3"
+        "nHunt"                     "8"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"dark_troll_warlord_ensnare"			// Ability 1
+		"Ability2"					"dark_troll_warlord_raise_dead"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4 1"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"54"		// Damage range min.
+		"AttackDamageMax"			"60"		// Damage range max.
+		"AttackRate"				"1.35"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"250"		// Range within a target can be acquired.
+		"AttackRange"				"300"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1200"		// Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"190"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"345"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"950"		// Base health.
+		"StatusHealthRegen"			"4.0"		// Health regeneration rate.
+		"StatusMana"				"400"			// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
 
 	"npc_dota_creature_amoeba_4"
 	{
@@ -10910,12 +10980,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"troll_warlord_battle_trance"			// Ability 1
+		"Ability1"					"dark_troll_warlord_ensnare"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "3"
+		"AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -14411,7 +14481,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"2"			// Physical protection.
+		"ArmorPhysical"				"5 1"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -19070,7 +19140,7 @@
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/dragon_knight/dragon_knight_dragon.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"		            "Hero_DragonKnight"
+		"SoundSet"		            "Hero_Winter_Wyvern"
 		"Level"						"9"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
@@ -19145,7 +19215,7 @@
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/dragon_knight/dragon_knight_dragon.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"		            "Hero_DragonKnight"
+		"SoundSet"		            "Hero_Winter_Wyvern"
 		"Level"						"9"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
@@ -21576,7 +21646,7 @@
 		//----------------------------------------------------------------
 		"Model"						"models/items/dragon_knight/oblivion_blazer_dragon/oblivion_blazer_dragon.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"		            "Hero_DragonKnight"
+		"SoundSet"		            "Hero_Winter_Wyvern"
 		"Level"						"10"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
@@ -21653,7 +21723,7 @@
 		//----------------------------------------------------------------
 		"Model"						"models/items/dragon_knight/oblivion_blazer_dragon/oblivion_blazer_dragon.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"		            "Hero_DragonKnight"
+		"SoundSet"		            "Hero_Winter_Wyvern"
 		"Level"						"10"
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
@@ -23107,7 +23177,7 @@
 		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_stormspirit.vsndevts"
 
 		"Level"						"11"
-		"ModelScale" 				"2.5"
+		"ModelScale" 				"3.0"
          
         "vscripts"					"creap_ai.lua"
         "HasInventory"				"1"
