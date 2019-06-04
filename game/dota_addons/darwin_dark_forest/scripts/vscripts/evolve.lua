@@ -305,9 +305,145 @@ function GameEnterLevelTenStage  (nPlayerId)
 end
 
 
+function DetermineNewUnitName(nPlayerId,hHero,nLevel)
+
+    local sUnitToEnvolve=""
+
+    local vEnvolvePool={}  --进化池
+    local vEnvolveBlankPool={} --白板池子
+
+    if nLevel==11 then
+          local tempPerksMap = { 
+              {name="element",value=GameMode.vPlayerPerk[nPlayerId][1]},
+              {name="mystery",value=GameMode.vPlayerPerk[nPlayerId][2]},
+              {name="durable",value=GameMode.vPlayerPerk[nPlayerId][3]},
+              {name="fury",value=GameMode.vPlayerPerk[nPlayerId][4]},
+              {name="decay",value=GameMode.vPlayerPerk[nPlayerId][5]},
+              {name="hunt",value=GameMode.vPlayerPerk[nPlayerId][6]}
+           }
+           table.sort(tempPerksMap,function(a,b)
+                return a.value > b.value
+           end)
+
+           if tempPerksMap[1].name=="element" then
+               sUnitToEnvolve="npc_dota_creature_storm_spirit"
+           end
+           if tempPerksMap[1].name=="mystery" then
+               sUnitToEnvolve="npc_dota_creature_dark_seer"
+           end
+           if tempPerksMap[1].name=="durable" then
+               sUnitToEnvolve="npc_dota_creature_storegga_2"
+           end
+           if tempPerksMap[1].name=="fury" then
+               sUnitToEnvolve="npc_dota_creature_ursa_razorwyrm"
+           end
+           if tempPerksMap[1].name=="decay" then
+               sUnitToEnvolve="npc_dota_creature_necrolyte_apostle_of_decay"
+           end
+           if tempPerksMap[1].name=="hunt" then
+               sUnitToEnvolve="npc_dota_creature_nightstalker"
+           end  
+    else 
+        -- 遍历kv 加入进化池 key 单位名称 value单位总perk点
+
+        local nEnvolvePoolTotalPerk=0 --进化池perk的总量
+
+        for sUnitName, vData in pairs(GameRules.vUnitsKV) do
+
+            if vData and type(vData) == "table" then       
+                 -- 跳过召唤生物 跳过饰品生物
+                if (vData.IsSummoned==nil or vData.IsSummoned==0) and (vData.EconUnitFlag==nil or vData.EconUnitFlag==0)  then
+                 -- 等级相当，perk相符    
+                    if vData.nCreatureLevel ==nLevel then
+                       if  nLevel==1 then --第一级从直接随机选一个
+                           table.insert(vEnvolveBlankPool, sUnitName)
+                       else
+                           local bPerkValid=true
+                           --玩家Perk与生物需要的Perk的差值，差值越大越好
+                           local nPerkVariance =0
+
+                           if vData.nElement>GameMode.vPlayerPerk[nPlayerId][1] then
+                              bPerkValid=false
+                           else
+                              nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][1])-vData.nElement
+                           end
+
+                           if vData.nMystery>GameMode.vPlayerPerk[nPlayerId][2] then
+                              bPerkValid=false
+                           else
+                              nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][2])-vData.nMystery
+                           end
+
+                           if vData.nDurable>GameMode.vPlayerPerk[nPlayerId][3] then
+                              bPerkValid=false
+                           else
+                              nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][3])-vData.nDurable
+                           end
+
+                           if vData.nFury>GameMode.vPlayerPerk[nPlayerId][4] then
+                              bPerkValid=false
+                           else
+                              nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][4])-vData.nFury
+                           end
+
+                           if vData.nDecay>GameMode.vPlayerPerk[nPlayerId][5] then
+                              bPerkValid=false
+                           else
+                              nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][5])-vData.nDecay
+                           end
+
+                           if vData.nHunt>GameMode.vPlayerPerk[nPlayerId][6] then
+                              bPerkValid=false
+                           else
+                              nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][6])-vData.nHunt
+                           end
+
+                           --满足条件加入进化池
+                           if bPerkValid then
+                              if vData.nTotalPerk == 0 then
+                                 table.insert(vEnvolveBlankPool, sUnitName)
+                              else
+                                 local vUnitData = {}
+                                 vUnitData.sUnitName=sUnitName
+                                 vUnitData.nTotalPerk=vData.nTotalPerk
+                                 vUnitData.nPerkVariance=nPerkVariance
+                                 table.insert(vEnvolvePool, vUnitData)   
+                              end
+                              nEnvolvePoolTotalPerk=nEnvolvePoolTotalPerk+vData.nTotalPerk
+                           end
+                        end
+                    end
+                end
+            end
+        end
+        
+        if nEnvolvePoolTotalPerk >0 then
+           
+           --双重排序 确定进化结果
+           table.sort(vEnvolvePool,function(a,b)
+                if a.nTotalPerk == b.nTotalPerk then
+                     return a.nPerkVariance>b.nPerkVariance
+                else
+                     return a.nTotalPerk > b.nTotalPerk
+                end
+           end)
+           
+           sUnitToEnvolve=vEnvolvePool[1].sUnitName
+
+        else
+            local nDice= RandomInt(1,#vEnvolveBlankPool)
+            sUnitToEnvolve=vEnvolveBlankPool[nDice]
+        end
+    end
+
+
+    return sUnitToEnvolve
+end
+
 
 
 -- 挑选新的生物名字
+--[[
 function DetermineNewUnitName(nPlayerId,hHero,nLevel)
 
     local sUnitToEnvolve=""
@@ -418,7 +554,7 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
     return sUnitToEnvolve
 end
 
-
+]]
 
 
 

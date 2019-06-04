@@ -1149,17 +1149,22 @@
 		{
 			"01"
 			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_damage"	    	"6"
+			}
+			"02"
+			{
 				"var_type"				"FIELD_INTEGER"
 				"manacost_reduction"	"12"
 			}			
-			"02"
+			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"spell_amplify"			"24"
 			}
-			"03"
+			"04"
 			{
-				"var_type"				"FIELD_INTEGER"
+				"var_type"				"FIELD_FLOAT"
 				"mana_regen_bonus"		"0.8"
 			}
 		}
@@ -8043,6 +8048,119 @@
 				"movement_speed_slow_pct"	        "-26"
 			}	
 			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_speed_slow"	        "-26"
+			}	
+		}
+	}
+
+
+	"item_recipe_sange_and_yasha_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20230"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		"BaseClass"                     "item_datadriven"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_recipe_sange_and_yasha"
+		"ItemRequirements"
+		{
+			"01"						"item_sange_lua;item_yasha_lua"
+		}
+	}
+
+	"item_sange_and_yasha_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20235"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 		    "item_sange_and_yasha"
+		"ScriptFile"					"item_ability/item_sange_and_yasha_lua"
+
+    	// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4100"
+		"ItemShopTags"					"damage;str;agi;attack_speed;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"sny;s&y;sy;sange and yasha"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{	
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "320"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"		    "22"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"1.6"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"	        "1.28"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"			"2.56"
+			}
+		    "06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"32"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"	"0.8"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"	    "30"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maim_chance"	        "40"
+			}	
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maim_duration"	        "5"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"movement_speed_slow_pct"	        "-26"
+			}	
+			"12"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"attack_speed_slow"	        "-26"

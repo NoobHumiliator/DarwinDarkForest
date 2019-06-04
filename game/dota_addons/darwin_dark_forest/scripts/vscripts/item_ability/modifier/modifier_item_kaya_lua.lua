@@ -15,6 +15,7 @@ function modifier_item_kaya_lua:OnCreated( kv )
 	self.spell_amplify = self:GetAbility():GetSpecialValueFor( "spell_amplify" )
     self.mana_regen_bonus = self:GetAbility():GetSpecialValueFor( "mana_regen_bonus" )
     self.manacost_reduction = self:GetAbility():GetSpecialValueFor( "manacost_reduction" )
+    self.bonus_damage = self:GetAbility():GetSpecialValueFor( "bonus_damage" )
 
 end
 
@@ -23,6 +24,7 @@ end
 function modifier_item_kaya_lua:DeclareFunctions()
 	local funcs = 
 	{
+		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
 		MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE,
 		MODIFIER_PROPERTY_MANA_REGEN_CONSTANT,
 		MODIFIER_PROPERTY_MANACOST_PERCENTAGE
@@ -31,6 +33,11 @@ function modifier_item_kaya_lua:DeclareFunctions()
 	return funcs
 end
 
+----------------------------------------
+
+function modifier_item_kaya_lua:GetModifierPreAttack_BonusDamage( params )
+	return self.bonus_damage
+end
 ----------------------------------------
 
 function modifier_item_kaya_lua:GetModifierSpellAmplify_Percentage( params )
