@@ -10,13 +10,15 @@ end
 
 function ItemController:Init()
     
+    ListenToGameEvent("dota_item_picked_up", Dynamic_Wrap(ItemController, "OnItemPickUp"), self)
+
     --载入物品
     local vItemsKV = LoadKeyValues('scripts/npc/npc_items_custom.txt')
 
     -- 携带物品的概率
     self.flItemCarryChance=1
     --掉落物品的概率
-    self.flItemDropChance=0.5
+    self.flItemDropChance=1
     --玩家掉落物品的概率
     self.flPlayerItemDropChance=0.5
 
@@ -72,7 +74,7 @@ function ItemController:CreateItemForNeutraulByChance(hUnit)
         return
     end
 
-    if RandomInt(1, 100)/100 < self.flItemCarryChance then
+    if RandomInt(1, 100)/100 <= self.flItemCarryChance then
         
         local nTieNum =  math.ceil(hUnit:GetLevel()/2)
         if nTieNum >6 then nTieNum=6 end
@@ -171,4 +173,18 @@ function ItemController:RestoreItems(hHero)
         end
     end
     
+end
+
+
+-- 物品谁捡起来就是谁的
+function ItemController:OnItemPickUp(event)
+
+  local hItem = EntIndexToHScript( event.ItemEntityIndex )
+  if event.UnitEntityIndex then 
+      local hUnit=EntIndexToHScript( event.UnitEntityIndex )
+      local sItemName=hItem:GetName()
+      UTIL_Remove(hItem)
+      hUnit:AddItemByName(sItemName)
+  end
+  
 end

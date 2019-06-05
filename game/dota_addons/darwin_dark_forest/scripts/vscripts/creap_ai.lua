@@ -92,8 +92,8 @@ function CheckIfHasAggro()
 		 		return flAbilityCastTime
 		 	end
 	    end
-        --如果四秒不受玩家反击，或者丢失玩家视野
-		if (thisEntity.flLastHitTime and ( GameRules:GetGameTime() - thisEntity.flLastHitTime >4 ) ) or not thisEntity:CanEntityBeSeenByMyTeam(thisEntity:GetAggroTarget())   then
+        --如果四秒不受玩家反击，或者丢失玩家视野 (保证其能移动，不能移动的单位不撤退)
+		if (thisEntity.flLastHitTime and ( GameRules:GetGameTime() - thisEntity.flLastHitTime >4 ) ) or not thisEntity:CanEntityBeSeenByMyTeam(thisEntity:GetAggroTarget()) and  not thisEntity:IsRooted() then
 	 		--撤退 并且重置追击状态
 	 		return RetreatFromUnit(thisEntity.hChasingTarget)
 		end
@@ -108,7 +108,7 @@ function CheckIfHasAggro()
 	        	thisEntity:SetBaseMoveSpeed( thisEntity.nOriginalMovementSpeed )
 	            thisEntity.flLastHitTime =  GameRules:GetGameTime();   
 	        end
-	        --尝试释放技能 11级生物技能毁天灭地 跳过
+	        --尝试释放技能 11级生物跳过
 			 if thisEntity:GetLevel()<11 then
 			 	local flAbilityCastTime = CastAbility(thisEntity:GetAggroTarget())
 			 	if flAbilityCastTime then

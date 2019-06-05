@@ -293,7 +293,7 @@ function GameMode:OnEntityKilled(keys)
             CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
        end
    end
-
+   DoCleanForDeadUnit(hKilledUnit)
 end
 
 
@@ -553,6 +553,8 @@ function GameMode:OnPlayerSay(keys)
     end
 
 
+
+
 end
 
 
@@ -566,4 +568,15 @@ function PlayKillEffectAndSound (hHero)
           Econ:PlayKillSound(hHero.sCurrentKillSound,hHero)
      end
 
+end
+
+--清理死亡生物留下的
+function DoCleanForDeadUnit(hUnit)
+    -- 清理蜘蛛网
+    local vWebs = Entities:FindAllByName("npc_dota_broodmother_web")
+    for _, hWeb in pairs(vWebs) do
+      if hWeb:GetOwner() == hUnit then
+        UTIL_Remove(hWeb)
+      end
+    end
 end

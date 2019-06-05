@@ -7371,7 +7371,6 @@
 		"Model"							"models/props_gameplay/rune_doubledamage01.vmdl"
 		"Effect"						"particles/generic_gameplay/rune_doubledamage.vpcf"
 		
-		"ItemCost"                      "0"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
@@ -7396,7 +7395,6 @@
 		"Model"							"models/props_gameplay/rune_arcane.vmdl"
 		"Effect"						"particles/generic_gameplay/rune_arcane.vpcf"
 		
-		"ItemCost"                      "0"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
@@ -7421,7 +7419,6 @@
 		"Model"							"models/props_gameplay/rune_illusion01.vmdl"
 		"Effect"						"particles/generic_gameplay/rune_illusion.vpcf"
 		
-		"ItemCost"                      "0"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
@@ -7446,7 +7443,6 @@
 		"Model"							"models/props_gameplay/rune_haste01.vmdl"
 		"Effect"						"particles/generic_gameplay/rune_haste.vpcf"
 		
-		"ItemCost"                      "0"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
@@ -7472,7 +7468,6 @@
 		"Model"							"models/props_gameplay/rune_regeneration01.vmdl"
 		"Effect"						"particles/generic_gameplay/rune_regeneration.vpcf"
 		
-		"ItemCost"                      "0" 
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
@@ -7501,7 +7496,6 @@
 		"MinimapIconSize"				"450"
 
 		
-		"ItemCost"                      "0" 
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"

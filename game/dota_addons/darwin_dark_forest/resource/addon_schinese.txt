@@ -1339,6 +1339,12 @@
     "DOTA_Tooltip_ability_item_sange_and_yasha_lua_bonus_armor"                       "+护甲提升"
 
 
+    "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike"                     "钻地突进"
+    "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_Description"         "瘟疫守卫钻入地下，向目标地点突进，钻出时击飞附近敌人并且造成伤害。"
+    "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_damage"              "伤害："
+    "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_speed"               "突进速度："
+    "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_stun_duration"       "击飞时间："
+    "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_knockback_distance"  "击飞距离："
 
 
     //EconUnitBegins

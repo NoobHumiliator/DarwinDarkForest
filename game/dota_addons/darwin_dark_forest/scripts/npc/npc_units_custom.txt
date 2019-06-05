@@ -7063,7 +7063,7 @@
 		"Model"						"models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_small.vmdl"	// Model.
 		"SoundSet"					"n_creep_Ranged"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.5"
+		"ModelScale"				"0.65"
 		"Level"						"5"
 		"vscripts"					"creap_ai.lua"
 
@@ -9643,7 +9643,7 @@
 		"Model"						"models/items/invoker/forge_spirit/nightlord_crypt_sentinel/nightlord_crypt_sentinel.vmdl"
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"6"
-		"ModelScale" 				"1.8"
+		"ModelScale" 				"1.5"
 		"HasInventory"				"1"
         
         "vscripts"					"creap_ai.lua"
@@ -11208,7 +11208,7 @@
 		"Model"						"models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_small.vmdl"	// Model.
 		"SoundSet"					"n_creep_Ranged"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.65"
+		"ModelScale"				"0.8"
 		"Level"						"6"
 		"vscripts"					"creap_ai.lua"
 
@@ -12184,7 +12184,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Creep_Good_Range"
 		"Level"						"7"
-		"ModelScale" 				"2.0"
+		"ModelScale" 				"1.7"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
@@ -22340,17 +22340,17 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"broodmother_insatiable_hunger"			// Ability 1
-		"Ability2"					""			// Ability 2
+		"Ability1"					"broodmother_spin_web"			// Ability 1
+		"Ability2"					"broodmother_insatiable_hunger"			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "3"
+		"AbilitiesLevel"            "6 2"
 
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"			// Physical protection.
-		"MagicalResistance"         "90"
+		"MagicalResistance"         "0"
 
 		// Attack
 		//----------------------------------------------------------------

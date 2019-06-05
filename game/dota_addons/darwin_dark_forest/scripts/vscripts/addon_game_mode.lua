@@ -422,7 +422,7 @@ function GameMode:InitGameMode()
     ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( GameMode, 'OnGameRulesStateChange' ), self )
     ListenToGameEvent( "entity_killed", Dynamic_Wrap( GameMode, 'OnEntityKilled' ), self )
     ListenToGameEvent( "npc_spawned", Dynamic_Wrap( GameMode, "OnNPCSpawned" ), self )
-    ListenToGameEvent("player_chat", Dynamic_Wrap(GameMode, "OnPlayerSay"), self) 
+    ListenToGameEvent("player_chat", Dynamic_Wrap(GameMode, "OnPlayerSay"), self)
     --[[
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( GameMode, "OnNPCSpawned" ), self )
 	ListenToGameEvent( "dota_team_kill_credit", Dynamic_Wrap( GameMode, 'OnTeamKillCredit' ), self )
