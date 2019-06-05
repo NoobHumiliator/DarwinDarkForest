@@ -8162,6 +8162,204 @@
 		}
 	}
 
+	"item_recipe_kaya_and_sange_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20240"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+        "BaseClass"                     "item_datadriven"		
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_kaya_and_sange_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_sange_lua;item_kaya_lua"
+		}
+	}
+
+	"item_kaya_and_sange_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20245"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 		    "item_kaya_and_sange"
+		"ScriptFile"					"item_ability/item_kaya_and_sange_lua"
+
+    	// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4100"
+		"ItemShopTags"					"damage;str;agi;attack_speed;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"snk;s&k;sk;sange and kaya"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{	
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "320"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"		    "22"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"1.6"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"	        "1.28"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"manacost_reduction"	"16"
+			}			
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amplify"			"24"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_regen_bonus"		"0.8"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maim_chance"	        "40"
+			}	
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maim_duration"	        "5"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"movement_speed_slow_pct"	        "-26"
+			}	
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_speed_slow"	        "-26"
+			}	
+		}
+	}
+
+	"item_recipe_yasha_and_kaya_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20250"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+        "BaseClass"                     "item_datadriven"		
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_yasha_and_kaya_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_yasha_lua;item_kaya_lua"
+		}
+	}
+
+	"item_yasha_and_kaya_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20255"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 		    "item_yasha_and_kaya"
+		"ScriptFile"					"item_ability/item_yasha_and_kaya_lua"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4100"
+		"ItemShopTags"					"damage;str;agi;attack_speed;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"ynk;y&k;sk;yasha and kaya"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{	
+		    "01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"	        "22"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"manacost_reduction"	"16"
+			}			
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amplify"			"24"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_regen_bonus"		"0.8"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"			"2.56"
+			}
+		    "06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"32"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"	"0.8"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"	    "30"
+			}
+		}
+	}
+
 	
 
 

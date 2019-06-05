@@ -165,6 +165,9 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
     end
   })
 
+  --清除周围树木,防止卡在树里面
+  GridNav:DestroyTreesAroundPoint( hUnit:GetOrigin(), 300, false )
+
   return hUnit
 
 end

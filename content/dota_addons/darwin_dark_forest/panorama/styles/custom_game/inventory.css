@@ -487,7 +487,11 @@ Label{
    background-image: url("file://{images}/custom_game/econ/bitter_lineage.png");
 }
 
-
 .Temp{
    background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_green_troll_warlord.png");
 }
+
+.Temp{
+   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_ferocious_toxicants.png");
+}
+

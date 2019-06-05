@@ -1339,6 +1339,29 @@
     "DOTA_Tooltip_ability_item_sange_and_yasha_lua_bonus_armor"                       "+护甲提升"
 
 
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua"                                   "散慧对剑"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_Description"                       "<h1>被动：残废</h1> 每次攻击有%maim_chance%%几率致残目标，使其移动速度降低%movement_speed_slow_pct%%，攻击速度降低%attack_speed_slow%，持续%maim_duration%秒"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_bonus_health"                      "+$health"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_bonus_damage"                      "+$damage"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_bonus_health_regen"                "+$hp_regen"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_manacost_reduction"                "%+降低魔法消耗和损失"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_spell_amplify"                     "%+技能增强"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_mana_regen_bonus"                  "+$mana_regen"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_bonus_damage"                      "+$damage"
+
+ 
+    
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua"                                   "慧夜对剑"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_manacost_reduction"                "%+降低魔法消耗和损失"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_spell_amplify"                     "%+技能增强"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_mana_regen_bonus"                  "+$mana_regen"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_bonus_damage"                      "+$damage"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_bonus_attack_speed"                "+$attack"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_bonus_armor"                       "+护甲提升"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_bonus_move_speed_pct"              "%+移动速度"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_bonus_armor"                       "+护甲提升"
+
+
     "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike"                     "钻地突进"
     "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_Description"         "瘟疫守卫钻入地下，向目标地点突进，钻出时击飞附近敌人并且造成伤害。"
     "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_damage"              "伤害："

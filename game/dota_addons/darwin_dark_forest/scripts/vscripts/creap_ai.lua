@@ -93,7 +93,7 @@ function CheckIfHasAggro()
 		 	end
 	    end
         --如果四秒不受玩家反击，或者丢失玩家视野 (保证其能移动，不能移动的单位不撤退)
-		if (thisEntity.flLastHitTime and ( GameRules:GetGameTime() - thisEntity.flLastHitTime >4 ) ) or not thisEntity:CanEntityBeSeenByMyTeam(thisEntity:GetAggroTarget()) and  not thisEntity:IsRooted() then
+		if (thisEntity.flLastHitTime and ( GameRules:GetGameTime() - thisEntity.flLastHitTime >4 ) ) or not thisEntity:CanEntityBeSeenByMyTeam(thisEntity:GetAggroTarget())  then
 	 		--撤退 并且重置追击状态
 	 		return RetreatFromUnit(thisEntity.hChasingTarget)
 		end
@@ -202,34 +202,43 @@ function RetreatFromUnit(hUnit)
     
     thisEntity:SetBaseMoveSpeed( nWalkingMoveSpeed )
     
+    --如果单位被定身，只放弃攻击 不撤退
+    if not thisEntity:IsRooted() then
 
-    local vAwayFromEnemy= thisEntity:GetOrigin() - RandomVector(100)
+		    local vAwayFromEnemy= thisEntity:GetOrigin() - RandomVector(100)
 
-    if not hUnit:IsNull() and  hUnit:IsAlive() then
-	   vAwayFromEnemy = thisEntity:GetOrigin() - hUnit:GetOrigin()
-    end
-	vAwayFromEnemy = vAwayFromEnemy:Normalized()
+		    if not hUnit:IsNull() and  hUnit:IsAlive() then
+			   vAwayFromEnemy = thisEntity:GetOrigin() - hUnit:GetOrigin()
+		    end
+			vAwayFromEnemy = vAwayFromEnemy:Normalized()
 
-	local vMoveToPos = thisEntity:GetOrigin() + vAwayFromEnemy * nWalkingMoveSpeed*1.75
+			local vMoveToPos = thisEntity:GetOrigin() + vAwayFromEnemy * nWalkingMoveSpeed*1.75
 
-	-- if away from enemy is an unpathable area, find a new direction to run to
-	local nAttempts = 0
-	while ( ( not GridNav:CanFindPath( thisEntity:GetOrigin(), vMoveToPos ) ) and ( nAttempts < 5 ) ) do
-		vMoveToPos = thisEntity:GetOrigin() + RandomVector( nWalkingMoveSpeed*1.75 )
-		nAttempts = nAttempts + 1
+			-- if away from enemy is an unpathable area, find a new direction to run to
+			local nAttempts = 0
+			while ( ( not GridNav:CanFindPath( thisEntity:GetOrigin(), vMoveToPos ) ) and ( nAttempts < 5 ) ) do
+				vMoveToPos = thisEntity:GetOrigin() + RandomVector( nWalkingMoveSpeed*1.75 )
+				nAttempts = nAttempts + 1
+			end
+
+			ExecuteOrderFromTable({
+				UnitIndex = thisEntity:entindex(),
+				OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION,
+				Position = vMoveToPos,
+			})
+
+			thisEntity:SetAggroTarget(nil)
+			thisEntity.bChasing=false
+			thisEntity.hChasingTarget=nil
+
+			return 1.75
+	else
+	        thisEntity:SetAggroTarget(nil)
+			thisEntity.bChasing=false
+			thisEntity.hChasingTarget=nil
+            return 0.2
 	end
-
-	ExecuteOrderFromTable({
-		UnitIndex = thisEntity:entindex(),
-		OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION,
-		Position = vMoveToPos,
-	})
  
-    thisEntity:SetAggroTarget(nil)
-	thisEntity.bChasing=false
-	thisEntity.hChasingTarget=nil
-
-	return 1.75
 end
 --------------------------------------------------------------------------------
 -- RoamBetweenWaypoints

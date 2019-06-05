@@ -1,17 +1,17 @@
 
-modifier_item_sange_and_yasha = class({})
+modifier_item_sange_and_yasha_lua = class({})
 
-function modifier_item_sange_and_yasha:IsHidden()
+function modifier_item_sange_and_yasha_lua:IsHidden()
 	return true
 end
 ----------------------------------------
-function modifier_item_sange_and_yasha:GetAttributes()
+function modifier_item_sange_and_yasha_lua:GetAttributes()
 	return MODIFIER_ATTRIBUTE_MULTIPLE
 end
 
 ----------------------------------------
 
-function modifier_item_sange_and_yasha:OnCreated( kv )
+function modifier_item_sange_and_yasha_lua:OnCreated( kv )
 
 	self.bonus_damage = self:GetAbility():GetSpecialValueFor( "bonus_damage" )
     self.bonus_health = self:GetAbility():GetSpecialValueFor( "bonus_health" )
@@ -33,14 +33,14 @@ function modifier_item_sange_and_yasha:OnCreated( kv )
 
 end
 --------------------------------------------
-function modifier_item_sange_and_yasha:OnDestroy()
+function modifier_item_sange_and_yasha_lua:OnDestroy()
     if IsServer() then
     	RemoveHealthBonus(self:GetCaster(),self.bonus_health)
     end
 end
 --------------------------------------------
 
-function modifier_item_sange_and_yasha:DeclareFunctions()
+function modifier_item_sange_and_yasha_lua:DeclareFunctions()
 	local funcs = 
 	{
 		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
@@ -60,37 +60,37 @@ end
 
 ----------------------------------------
 
-function modifier_item_sange_and_yasha:GetModifierPreAttack_BonusDamage( params )
+function modifier_item_sange_and_yasha_lua:GetModifierPreAttack_BonusDamage( params )
 	return self.bonus_damage
 end
 ----------------------------------------
-function modifier_item_sange_and_yasha:GetModifierMagicalResistanceBonus( params )
+function modifier_item_sange_and_yasha_lua:GetModifierMagicalResistanceBonus( params )
 	return self.magic_resist
 end
 -----------------------------------------
-function modifier_item_sange_and_yasha:GetModifierConstantHealthRegen( params )
+function modifier_item_sange_and_yasha_lua:GetModifierConstantHealthRegen( params )
 	return self.bonus_health_regen
 end
 -----------------------------------------
 
-function modifier_item_sange_and_yasha:GetModifierAttackSpeedBonus_Constant( params )
+function modifier_item_sange_and_yasha_lua:GetModifierAttackSpeedBonus_Constant( params )
 	return self.bonus_attack_speed
 end
 -------------------------------------------
-function modifier_item_sange_and_yasha:GetModifierPhysicalArmorBonus( params )
+function modifier_item_sange_and_yasha_lua:GetModifierPhysicalArmorBonus( params )
 	return self.bonus_armor
 end
 -------------------------------------------
-function modifier_item_sange_and_yasha:GetModifierMoveSpeedBonus_Percentage( params )
+function modifier_item_sange_and_yasha_lua:GetModifierMoveSpeedBonus_Percentage( params )
 	return self.bonus_move_speed_pct
 end
 -------------------------------------------
-function modifier_item_sange_and_yasha:GetModifierMoveSpeedBonus_Constant( params )
+function modifier_item_sange_and_yasha_lua:GetModifierMoveSpeedBonus_Constant( params )
 	return self.bonus_move_speed
 end
 
 
-function modifier_item_sange_and_yasha:OnAttackLanded( params )
+function modifier_item_sange_and_yasha_lua:OnAttackLanded( params )
 	if IsServer() then
 		local hAttacker = params.attacker
 		local hTarget = params.target
@@ -101,7 +101,7 @@ function modifier_item_sange_and_yasha:OnAttackLanded( params )
 
 		if RandomInt(1, 100) < self.maim_chance then
 
-			hTarget:AddNewModifier( self:GetParent(), self:GetAbility(), "modifier_item_sange_and_yasha_debuff", { duration = self.maim_duration } )
+			hTarget:AddNewModifier( self:GetParent(), self:GetAbility(), "modifier_item_sange_and_yasha_lua_debuff", { duration = self.maim_duration } )
 
 		end
 

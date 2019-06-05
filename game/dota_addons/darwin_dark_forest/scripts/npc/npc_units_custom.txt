@@ -2883,7 +2883,7 @@
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"3"			// Physical protection.
-		"MagicalResistance"			"20"		// Magical protection.
+		"MagicalResistance"			"10"		// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3867,7 +3867,7 @@
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"4"			// Physical protection.
-		"MagicalResistance"			"30"		// Magical protection.
+		"MagicalResistance"			"10"		// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -5939,10 +5939,12 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
+		"AbilitiesLevel"            ""
+
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"5"			// Physical protection.
-		"MagicalResistance"			"40"		// Magical protection.
+		"MagicalResistance"			"15"		// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -9149,7 +9151,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"tiny_grow"	// Ability 1.
+		"Ability1"					""	// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -9158,11 +9160,10 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-        "AbilitiesLevel"            "1"
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"6"			// Physical protection.
-		"MagicalResistance"			"50"		// Magical protection.
+		"MagicalResistance"			"20"		// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -10439,12 +10440,12 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.\
 
-		"AbilitiesLevel"            "2 2"
+		"AbilitiesLevel"            "1 2"
 
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"10"			// Physical protection.
-		"MagicalResistance"			"60"		// Magical protection.
+		"MagicalResistance"			"25"		// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -14115,12 +14116,12 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-		"AbilitiesLevel"           "3 3"
+		"AbilitiesLevel"           "2 3"
 
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"10"			// Physical protection.
-		"MagicalResistance"			"70"		// Magical protection.
+		"MagicalResistance"			"30"		// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -15951,12 +15952,12 @@
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "4"
+		"AbilitiesLevel"           "3"
 
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"14"			// Physical protection.
-		"MagicalResistance"         "80"
+		"MagicalResistance"         "35"
 
 		// Attack
 		//----------------------------------------------------------------
@@ -19526,12 +19527,12 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "5"
+		"AbilitiesLevel"            "4"
 
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"			// Physical protection.
-		"MagicalResistance"         "90"
+		"MagicalResistance"         "40"
 
 		// Attack
 		//----------------------------------------------------------------

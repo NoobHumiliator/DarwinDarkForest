@@ -546,7 +546,7 @@ function GameMode:OnPlayerSay(keys)
           GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
         end
         --关闭全图
-        if string.find(sText,"novision") == 2 then
+        if string.find(sText,"novision") == 1 then
           GameRules:GetGameModeEntity():SetFogOfWarDisabled(false)
         end
 

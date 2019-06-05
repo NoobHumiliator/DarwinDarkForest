@@ -18,7 +18,7 @@ function ItemController:Init()
     -- 携带物品的概率
     self.flItemCarryChance=1
     --掉落物品的概率
-    self.flItemDropChance=1
+    self.flItemDropChance=0.6
     --玩家掉落物品的概率
     self.flPlayerItemDropChance=0.5
 
@@ -176,15 +176,19 @@ function ItemController:RestoreItems(hHero)
 end
 
 
--- 物品谁捡起来就是谁的
+-- 物品捡起 重新添加 这样才能触发合成
 function ItemController:OnItemPickUp(event)
 
   local hItem = EntIndexToHScript( event.ItemEntityIndex )
   if event.UnitEntityIndex then 
       local hUnit=EntIndexToHScript( event.UnitEntityIndex )
       local sItemName=hItem:GetName()
-      UTIL_Remove(hItem)
-      hUnit:AddItemByName(sItemName)
+      
+      --不处理 神符
+      if string.find(sItemName,"item_rune_") ~= 1 then
+          UTIL_Remove(hItem)
+          hUnit:AddItemByName(sItemName)
+      end
   end
   
 end
