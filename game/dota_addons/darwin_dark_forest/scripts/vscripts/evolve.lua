@@ -30,7 +30,9 @@ vAbilityChanceEachLevel={
 }
 
 vPairedAbility={bristleback_bristleback="bristleback_quill_spray",
-ancient_apparition_ice_blast="ancient_apparition_ice_blast_release"}
+ancient_apparition_ice_blast="ancient_apparition_ice_blast_release",
+ancient_apparition_ice_blast="ancient_apparition_ice_blast_release"
+}
 
 --[[
 vAbilityChanceEachLevel={

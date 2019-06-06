@@ -690,6 +690,73 @@
 	}
 
 
+    "npc_dota_creature_ghost_seal"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/ice_biome/ogreseal/ogreseal_undead.vmdl"
+		"SoundSet"		            "Hero_SkeletonKing"
+		"Level"						"1"
+		"ModelScale" 				"0.8"
+		"IsSummoned"                "1"
+
+		"SoundSet"					"n_creep_Melee"
+		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"creature_ogreseal_flop"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"25"
+		"AttackDamageMax"			"25"
+		"AttackRate"				"1.0"
+		"AttackAnimationPoint"		"0.36"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"120"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"40"
+		"HealthBarOffset"			"135"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"260"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"1"
+		"StatusMana"				"500"
+		"StatusManaRegen"			"2"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"
+		"VisionNighttimeRange"		"800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+
+
     "npc_dota_creature_skeleton_mage"
 	{
 		// General
@@ -12888,6 +12955,8 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
+		"AbilitiesLevel"            "1"
+
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"1"			// Physical protection.
@@ -13876,6 +13945,7 @@
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
+		"AbilitiesLevel"            "2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -23194,6 +23264,8 @@
 		"Ability3"					""			                            // Ability 3
 		"Ability4"					""			                            // Ability 4
 
+		"AbilitiesLevel"            "1 8"
+
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"6"			// Physical protection.
@@ -23462,11 +23534,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"dark_seer_surge"
-		"Ability2"					"dark_seer_vacuum"
-		"Ability3"					"dark_seer_ion_shell" 
+		"Ability2"					"dark_seer_ion_shell"
+		"Ability3"					"" 
 		"Ability4"					""
 
-        "AbilitiesLevel"            "9 8 8"
+        "AbilitiesLevel"            "9 8"
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"16"			// Physical protection.
