@@ -1370,6 +1370,18 @@
     "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_knockback_distance"  "击飞距离："
 
 
+    "DOTA_Tooltip_Ability_phantom_assassin_blur_nDurable"                     "<font color='#f8b551'>坚韧：</font>"
+    "DOTA_Tooltip_Ability_phantom_assassin_blur_nHunt"                        "猎杀"
+
+
+    "DOTA_Tooltip_Ability_riki_smoke_screen_nMystery"                          "<font color='#e9c2ff'>神秘：</font>"
+    "DOTA_Tooltip_Ability_riki_smoke_screen_nHunt"                             "猎杀"
+
+    "DOTA_Tooltip_Ability_ember_spirit_searing_chains_nElement"               "<font color='#00a0e9'>元素：</font>"
+    "DOTA_Tooltip_Ability_ember_spirit_searing_chains_nHunt"                  "猎杀"
+
+
+
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
 	"npc_dota_creature_lich_shearing_deposition"                  "巫妖"

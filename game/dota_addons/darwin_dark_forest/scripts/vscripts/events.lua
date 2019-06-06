@@ -550,6 +550,14 @@ function GameMode:OnPlayerSay(keys)
           GameRules:GetGameModeEntity():SetFogOfWarDisabled(false)
         end
 
+        for i,v in ipairs(GameRules.vAbilitiesTable) do
+           if sText==v.sAbilityName then
+                local hAbility = hHero.hCurrentCreep:AddAbility(sText)
+                hAbility:SetLevel(hAbility:GetMaxLevel())
+                break
+           end
+        end
+
     end
 
 

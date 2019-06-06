@@ -1625,7 +1625,7 @@
         "HasScepterUpgrade"             "1"
         "AbilitySound"                  "Hero_Razor.Storm.Cast"
 
-        "MaxLevel"                      "4"
+        "MaxLevel"                      "5"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -1635,11 +1635,11 @@
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "90 80 70 60"
+        "AbilityCooldown"               "80 70 60 50 40"
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityManaCost"               "50 100 150 200"
+        "AbilityManaCost"               "50 100 150 200 250"
 
         // Stats
         //-------------------------------------------------------------------------------------------------------------
@@ -1662,34 +1662,34 @@
             "03"
             {
                 "var_type"              "FIELD_FLOAT"
-                "strike_interval"       "0.8 0.7 0.6 0.5"   
+                "strike_interval"       "0.8 0.7 0.6 0.5 0.4"   
                 "LinkedSpecialBonus"    "special_bonus_unique_razor_2"
             }
             "04"
             {
                 "var_type"          "FIELD_INTEGER"
-                "armor_reduction"   "1 1 1 1"     
+                "armor_reduction"   "1"     
             }
             "05"
             {
                 "var_type"          "FIELD_INTEGER"
-                "damage"            "25 40 55 70"      
+                "damage"            "25 40 55 70 85"      
             }
             "06"
             {
                 "var_type"          "FIELD_FLOAT"
-                "strike_interval_scepter"   "0.7 0.6 0.5 0.4"   
+                "strike_interval_scepter"   "0.7 0.6 0.5 0.4 0.3"   
                 "LinkedSpecialBonus"    "special_bonus_unique_razor_2"  
             }
             "07"
             {
                 "var_type"          "FIELD_INTEGER"
-                "nElement"           "8 16 24 32"      
+                "nElement"          "8 16 24 32 40"      
             }
             "08"
             {
                 "var_type"          "FIELD_INTEGER"
-                "nHunt"             "8 16 24 32"      
+                "nHunt"             "8 16 24 32 40"      
             }
         }
     }
@@ -2950,7 +2950,7 @@
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "1000"
-        "AbilityCastPoint"              "0.3 0.3 0.3 0.3"
+        "AbilityCastPoint"              "0.3"
         
         // Time     
         //-------------------------------------------------------------------------------------------------------------
@@ -2972,7 +2972,7 @@
             "02"
             {
                 "var_type"          "FIELD_INTEGER"
-                "damage"            "25 45 65 85 115 145 175 205"
+                "damage"            "25 45 65 85 105 125 145 165"
             }
             "03"
             {
@@ -2982,18 +2982,13 @@
             "04"
             {
                 "var_type"          "FIELD_FLOAT"
-                "burn_interval"         "0.5"
+                "burn_interval"      "0.5"
             }
             "05"
             {
-                "var_type"           "FIELD_FLOAT"
-                "nFury"              "4 8 12 16 20 24 28 32"
-            }
-            "06"
-            {
                 "var_type"          "FIELD_FLOAT"
-                "nElement"          "4 8 12 16 20 24 28 32"
-             }
+                "nElement"          "5 10 15 20 25 30 35 40"
+            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
     }   
@@ -4026,12 +4021,7 @@
             "07"
             {
                 "var_type"              "FIELD_INTEGER"
-                "nFury"                  "3 7 11 15 19 23 27 31"
-            }
-            "08"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "nElement"              "3 7 11 15 19 23 27 31"
+                "nElement"              "4 8 12 16 20 24 28 32"
             }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
@@ -6858,7 +6848,7 @@
             "02"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "duration"                  "5"
+                "duration"                  "4"
             }
             "03"
             {
@@ -6887,6 +6877,202 @@
             }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+    }
+
+ 
+
+    "riki_smoke_screen"
+    {
+        "BaseClass"                     "riki_smoke_screen"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "AbilitySound"                  "Hero_Riki.Smoke_Screen"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "550"
+        "AbilityCastPoint"              "0.2"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "17 15 13 11 9 8"
+        "AbilityDuration"               "6"
+
+        "MaxLevel"                      "6"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "90"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "radius"                    "325"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "miss_rate"                 "10 30 50 70 90 100"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "movement_speed_reduction"  "8 12 16 20 24 28"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "turn_reduction"            "0"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "duration"                  "6"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nMystery"                  "5 10 15 20 25"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nHunt"                     "5 10 15 20 25"
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+    
+
+    "ember_spirit_searing_chains"
+    {
+        
+        "BaseClass"                     "ember_spirit_searing_chains"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_EmberSpirit.SearingChains.Target"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "400"
+        "AbilityCastPoint"              "0"
+        "MaxLevel"                      "6"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "14 13 12 11 10 9"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "110"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "duration"                      "1.5 2.0 2.5 3.0 3.5 4.0"
+                "LinkedSpecialBonus"            "special_bonus_unique_ember_spirit_2"
+            }           
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "radius"                        "400"
+            }   
+            "03"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "total_damage"                  "90 160 240 330 430 540"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "tick_interval"                 "0.5"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "unit_count"                    "2"
+            }       
+            "06"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "radius_scepter"                "500"
+            }
+            "07"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "nElement"                      "3 6 9 12 15 18"
+            }  
+            "08"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "nHunt"                         "3 6 9 12 15 18"
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+
+
+    "clinkz_searing_arrows"
+    {
+
+        "BaseClass"                     "clinkz_searing_arrows"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "AbilitySound"                  "Hero_Clinkz.SearingArrows.Impact"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "650"
+        "AbilityCastPoint"              "0.0 0.0 0.0 0.0"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "0.0 0.0 0.0 0.0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "6 8 10 12 14 16 18 20"
+
+        "MaxLevel"                      "8"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "damage_bonus"                  "20 30 45 65 90 120 155 195"
+                "LinkedSpecialBonus"            "special_bonus_unique_clinkz_1"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "nElement"                      "3 6 9 12 15 18 21 24"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "nFury"                         "3 6 9 12 15 18 21 24"
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
     }
 
 
