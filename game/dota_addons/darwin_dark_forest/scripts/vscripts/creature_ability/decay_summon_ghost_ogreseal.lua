@@ -14,7 +14,7 @@ function decay_summon_ghost_ogreseal:OnSpellStart()
 		if hGhostSeal ~= nil then
 
 			local ghost_seal_duration = self:GetSpecialValueFor( "ghost_seal_duration" )
-			local ghost_seal_health = self:GetSpecialValueFor( "ghost_seal_health" )
+			self.ghost_seal_health = self:GetSpecialValueFor( "ghost_seal_health" )
             local ghost_seal_damage = self:GetSpecialValueFor( "ghost_seal_damage" )
             local flop_level = self:GetSpecialValueFor( "flop_level" )
 
@@ -29,7 +29,7 @@ function decay_summon_ghost_ogreseal:OnSpellStart()
 			hGhostSeal:SetMinimumGoldBounty( 0 )
 			hGhostSeal:SetMaximumGoldBounty( 0 )
 			Timers:CreateTimer({
-				    endTime = 0.05,
+				    endTime = FrameTime(),
 				    callback = function()
 				       	hGhostSeal:SetMaxHealth(self.ghost_seal_health)
 				        hGhostSeal:Heal(self.ghost_seal_health,hGhostSeal)

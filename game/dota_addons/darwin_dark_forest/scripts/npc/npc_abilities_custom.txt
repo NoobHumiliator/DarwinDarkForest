@@ -4107,12 +4107,12 @@
             "09"
             {
                 "var_type"          "FIELD_INTEGER"
-                "nHunt"             "3 7 11 15 19 23 27 31"
+                "nHunt"             "2 4 6 8 10 12 14 16"
             }
             "10"
             {
                 "var_type"          "FIELD_INTEGER"
-                "nElement"          "3 7 11 15 19 23 27 31"
+                "nElement"          "2 4 6 8 10 12 14 16"
             }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
@@ -7650,7 +7650,7 @@
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "33 30 27 24 21 18 15 12"
+        "AbilityCooldown"               "52 48 44 40 36 32 28 24"
         
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -7663,7 +7663,7 @@
             "01"
             {
                 "var_type"                     "FIELD_FLOAT"
-                "ghost_seal_duration"           "15"
+                "ghost_seal_duration"           "30"
             }
             "02"
             {
@@ -7672,17 +7672,17 @@
             }
             "03"
             {
-                "var_type"                     "FIELD_FLOAT"
+                "var_type"                     "FIELD_INTEGER"
                 "ghost_seal_health"            "400 500 600 700 800 900 1000 1100"
             }
             "04"
             {
-                "var_type"                     "FIELD_FLOAT"
+                "var_type"                     "FIELD_INTEGER"
                 "ghost_seal_damage"            "70 90 110 130 150 170 190 210"
             }
             "05"
             {
-                "var_type"                     "FIELD_FLOAT"
+                "var_type"                     "FIELD_INTEGER"
                 "nDecay"                       "7 14 21 28 35 42 49 56"
             }
         }

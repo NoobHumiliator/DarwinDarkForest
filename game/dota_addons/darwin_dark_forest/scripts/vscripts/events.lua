@@ -183,10 +183,15 @@ function GameMode:OnEntityKilled(keys)
        PlayAbsorbParticle(tempPerksMap,hKillerUnit,hKilledUnit)
 
        --给玩家经验
+       local flExpRatio=1
+       if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_item_creed_of_omniscience") then
+           flExpRatio=1.2
+       end
+
        if hKilledUnit.nCreatureLevel then
-         hHero.nCustomExp=hHero.nCustomExp+vCREEP_EXP_TABLE[hKilledUnit.nCreatureLevel] 
+         hHero.nCustomExp=hHero.nCustomExp+ math.ceil(vCREEP_EXP_TABLE[hKilledUnit.nCreatureLevel]*flExpRatio)
        else
-         hHero.nCustomExp=hHero.nCustomExp+vCREEP_EXP_TABLE[hKilledUnit:GetLevel()] 
+         hHero.nCustomExp=hHero.nCustomExp+ math.ceil(vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio)
        end
        
        --计算等级
@@ -252,7 +257,13 @@ function GameMode:OnEntityKilled(keys)
             PlayAbsorbParticle(tempPerksMap,hKillerUnit,hKilledUnit)
 
             --给击杀者经验
-            hKillerHero.nCustomExp=hKillerHero.nCustomExp+vCREEP_EXP_TABLE[hKilledUnit:GetLevel()] 
+           
+            local flExpRatio=1
+            if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_item_creed_of_omniscience") then
+                 flExpRatio=1.2
+            end
+
+            hKillerHero.nCustomExp=hKillerHero.nCustomExp+ math.ceil(vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio) 
 
             PlayKillEffectAndSound(hKillerHero)
             --给击杀者 英雄换模型

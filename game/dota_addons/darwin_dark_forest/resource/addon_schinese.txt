@@ -190,12 +190,12 @@
 	"mystery"                                                                   "神秘"
 	"exp"                                                                       "经验"
 
-	"ui_detail_fury"                                                            "释放狂怒撕碎敌人"
-	"ui_detail_durable"                                                         "坚韧与恢复"
+	"ui_detail_fury"                                                            "以尖牙利爪强化攻击"
+	"ui_detail_durable"                                                         "坚不可摧的强悍防御"
 	"ui_detail_element"                                                         "驾驭元素毁灭敌人"
 	"ui_detail_hunt"                                                            "隐藏于阴影的狡诈猎手"
-	"ui_detail_decay"                                                           "散播瘟疫与剧毒"
-	"ui_detail_mystery"                                                         "虚空与深海之力"
+	"ui_detail_decay"                                                           "掌控死亡和腐败黑暗力量"
+	"ui_detail_mystery"                                                         "来自虚空与深海的未知能力"
 
 
     //召唤
@@ -559,7 +559,7 @@
     "DOTA_Tooltip_ability_hunt_thirst_lua_bonus_attack_speed"					    "最大攻击速度："
     "DOTA_Tooltip_ability_hunt_thirst_lua_speed_bonus_threshold"					"%触发焦渴临界生命值："
     "DOTA_Tooltip_ability_hunt_thirst_lua_vision_bonus_threshold"				    "%获得视野血量临界值："
-    "DOTA_Tooltip_ability_hunt_thirst_lua_nHunt"                                    "猎杀："
+    "DOTA_Tooltip_ability_hunt_thirst_lua_nHunt"                                    "<font color='#999999'>猎杀：</font>"
 
     "DOTA_Tooltip_ability_decay_summon_wraith_warrior"                              "召唤冥界士兵"
     "DOTA_Tooltip_ability_decay_summon_wraith_warrior_Description"                  "召唤强大的冥界士兵前来助战。"
@@ -588,7 +588,7 @@
     "DOTA_Tooltip_ability_centaur_khan_war_stomp_nFury"                             "<font color='#eb6877'>狂怒：</font>"
     "DOTA_Tooltip_ability_centaur_khan_war_stomp_nDurable"                          "<font color='#f8b551'>坚韧：</font>"
 
-    "DOTA_Tooltip_ability_dark_troll_warlord_ensnare_nHunt"                         "猎杀："
+    "DOTA_Tooltip_ability_dark_troll_warlord_ensnare_nHunt"                         "<font color='#999999'>猎杀：</font>"
     
     "DOTA_Tooltip_ability_ogre_magi_frost_armor_nElement"                           "<font color='#00a0e9'>元素：</font>"
     "DOTA_Tooltip_ability_ogre_magi_frost_armor_nDurable"                           "<font color='#f8b551'>坚韧：</font>"
@@ -597,7 +597,7 @@
     "DOTA_Tooltip_ability_lich_frost_shield_nDurable"                               "<font color='#f8b551'>坚韧：</font>"
 
     "DOTA_Tooltip_ability_gnoll_assassin_envenomed_weapon_nDecay"                   "<font color='#b3d465'>腐朽：</font>"
-    "DOTA_Tooltip_ability_gnoll_assassin_envenomed_weapon_nHunt"                    "猎杀："
+    "DOTA_Tooltip_ability_gnoll_assassin_envenomed_weapon_nHunt"                    "<font color='#999999'>猎杀：</font>"
      
 
     "DOTA_Tooltip_ability_spawnlord_master_freeze_nMystery"                         "<font color='#e9c2ff'>神秘：</font>"
@@ -645,7 +645,7 @@
 
     
     "DOTA_Tooltip_ability_riki_blink_strike_nMystery"                               "<font color='#e9c2ff'>神秘：</font>"
-    "DOTA_Tooltip_ability_riki_blink_strike_nHunt"                                  "猎杀："
+    "DOTA_Tooltip_ability_riki_blink_strike_nHunt"                                  "<font color='#999999'>猎杀：</font>"
 
 
     "DOTA_Tooltip_ability_shredder_reactive_armor_nDurable"                         "<font color='#f8b551'>坚韧:</font>"
@@ -662,7 +662,7 @@
     "DOTA_Tooltip_ability_slark_shadow_dance_lua_Description"                       "斯拉克将自己藏进暗影之云，变成隐身状态，提高移动速度，不会被反隐手段发现。攻击、施法、使用物品都不会使斯拉克显形。"
     "DOTA_Tooltip_ability_slark_shadow_dance_lua_duration"                          "持续时间："
     "DOTA_Tooltip_ability_slark_shadow_dance_lua_bonus_movement_speed"              "移动速度加成："
-    "DOTA_Tooltip_ability_slark_shadow_dance_lua_nHunt"                             "猎杀："
+    "DOTA_Tooltip_ability_slark_shadow_dance_lua_nHunt"                             "<font color='#999999'>猎杀：</font>"
 
 
     "DOTA_Tooltip_modifier_bounty_hunter_track_lua_debuff"                           "追踪术"
@@ -672,11 +672,11 @@
     "DOTA_Tooltip_ability_bounty_hunter_track_lua_target_crit_multiplier"            "%自身致命一击："
     "DOTA_Tooltip_ability_bounty_hunter_track_lua_duration"                          "持续时间："
     "DOTA_Tooltip_ability_bounty_hunter_track_lua_bonus_move_speed_pct"              "%自身移动速度提升："
-    "DOTA_Tooltip_ability_bounty_hunter_track_lua_nHunt"                             "猎杀："
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua_nHunt"                             "<font color='#999999'>猎杀：</font>"
 
 
-    "DOTA_Tooltip_ability_night_stalker_hunter_in_the_night_nHunt"                    "猎杀："
-    "DOTA_Tooltip_ability_night_stalker_darkness_nHunt"                               "猎杀："
+    "DOTA_Tooltip_ability_night_stalker_hunter_in_the_night_nHunt"                    "<font color='#999999'>猎杀：</font>"
+    "DOTA_Tooltip_ability_night_stalker_darkness_nHunt"                               "<font color='#999999'>猎杀：</font>"
 
     "DOTA_Tooltip_ability_huskar_life_break_nFury"                                     "<font color='#eb6877'>狂怒：</font>"
     "DOTA_Tooltip_ability_huskar_life_break_nDurable"                                  "<font color='#f8b551'>坚韧：</font>"
@@ -735,8 +735,8 @@
     "DOTA_Tooltip_ability_dazzle_bad_juju_nMystery"                                              "<font color='#e9c2ff'>神秘：</font>"
     "DOTA_Tooltip_ability_dazzle_bad_juju_nDecay"                                                "<font color='#b3d465'>腐朽：</font>"
 
-    "DOTA_Tooltip_ability_enigma_midnight_pulse_nMystery"                                "<font color='#e9c2ff'>神秘：</font>"
-    "DOTA_Tooltip_ability_enigma_midnight_pulse_nDecay"                                  "<font color='#b3d465'>腐朽：</font>"
+    "DOTA_Tooltip_ability_enigma_midnight_pulse_nMystery"                                        "<font color='#e9c2ff'>神秘：</font>"
+    "DOTA_Tooltip_ability_enigma_midnight_pulse_nDecay"                                          "<font color='#b3d465'>腐朽：</font>"
 
 
     "DOTA_Tooltip_ability_decay_tombstone"                                                "墓碑"
@@ -781,14 +781,14 @@
     "DOTA_Tooltip_ability_pugna_nether_blast_nElement"                                           "<font color='#00a0e9'>元素：</font>"
      
     "DOTA_Tooltip_ability_tidehunter_gush_nElement"                                              "<font color='#00a0e9'>元素：</font>"
-    "DOTA_Tooltip_ability_tidehunter_gush_nHunt"                                                 "猎杀："
+    "DOTA_Tooltip_ability_tidehunter_gush_nHunt"                                                 "<font color='#999999'>猎杀：</font>"
 
     "DOTA_Tooltip_ability_spirit_breaker_bulldoze_nDurable"                                       "<font color='#f8b551'>坚韧：</font>"
-    "DOTA_Tooltip_ability_spirit_breaker_bulldoze_nHunt"                                          "猎杀："
+    "DOTA_Tooltip_ability_spirit_breaker_bulldoze_nHunt"                                          "<font color='#999999'>猎杀：</font>"
     
 
     "DOTA_Tooltip_ability_spirit_breaker_greater_bash_nDurable"                                   "<font color='#f8b551'>坚韧：</font>"
-    "DOTA_Tooltip_ability_spirit_breaker_greater_bash_nHunt"                                      "猎杀："
+    "DOTA_Tooltip_ability_spirit_breaker_greater_bash_nHunt"                                      "<font color='#999999'>猎杀：</font>"
      
 
     "DOTA_Tooltip_ability_templar_assassin_refraction_nDurable"                                   "<font color='#f8b551'>坚韧：</font>"
@@ -1396,7 +1396,7 @@
     "DOTA_Tooltip_Ability_centaur_double_edge_nFury"                        "<font color='#eb6877'>狂怒：</font>"
     "DOTA_Tooltip_Ability_centaur_double_edge_nDurable"                     "<font color='#f8b551'>坚韧：</font>"
 
-    "DOTA_Tooltip_Ability_spectre_desolate_hHunt"                           "猎杀："
+    "DOTA_Tooltip_Ability_spectre_desolate_hHunt"                           "<font color='#999999'>猎杀：</font>"
     "DOTA_Tooltip_Ability_spectre_desolate_nFury"                           "<font color='#eb6877'>狂怒：</font>"
     "DOTA_Tooltip_Ability_spectre_desolate_nMystery"                        "<font color='#e9c2ff'>神秘：</font>"
 
@@ -1407,6 +1407,90 @@
 
     "DOTA_Tooltip_Ability_skeleton_king_hellfire_blast_nElement"            "<font color='#00a0e9'>元素：</font>"
     "DOTA_Tooltip_Ability_skeleton_king_hellfire_blast_nDecay"              "<font color='#b3d465'>腐朽：</font>"
+
+    "DOTA_Tooltip_ability_item_greater_clarity"                             "高级净化药水"
+    "DOTA_Tooltip_ability_item_greater_clarity_Description"                 "<h1>使用：回魔</h1>向目标提供%mana_per_tick%点/秒魔法恢复，持续%buff_duration%秒。"
+    "DOTA_Tooltip_modifier_item_greater_clarity"                            "高级净化药水"
+
+    "DOTA_Tooltip_ability_item_greater_salve"                               "高级治疗药水"
+    "DOTA_Tooltip_ability_item_greater_salve_Description"                   "<h1>使用：药膏</h1>向目标提供%hp_per_tick%点/秒生命恢复，持续%buff_duration%秒。"
+    "DOTA_Tooltip_modifier_item_greater_salve"                              "高级治疗药水"
+
+    "DOTA_Tooltip_ability_item_creed_of_omniscience"                        "全能信条"
+    "DOTA_Tooltip_ability_item_creed_of_omniscience_Description"            "被动：提供额外%bonus_xp_tooltip%%经验值。"
+     
+
+    "DOTA_Tooltip_ability_item_longclaws_amulet"                            "长爪护符"
+    "DOTA_Tooltip_ability_item_longclaws_amulet_Lore"                       "魔法在林地里有点不寻常，它的秘密被牢牢地守护着。"
+    "DOTA_Tooltip_ability_item_longclaws_amulet_spell_lifesteal_pct"        "%技能吸血："
+    "DOTA_Tooltip_ability_item_longclaws_amulet_cooldown_reduction_pct"     "%冷却时间减少："
+    "DOTA_Tooltip_ability_item_longclaws_amulet_mana_cost_reduction_pct"    "%魔法消耗减少："
+
+    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf"                         "暮狼毛皮"
+    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_Lore"                    "野外有时候会相当危险；不要放松警惕。"
+    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_bonus_armor"             "护甲加成："
+    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_bonus_move_speed"        "额外移动速度："
+    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_bonus_evasion"           "%额外闪避："
+
+    "DOTA_Tooltip_ability_item_bogduggs_baldric"                             "波格达格的肩带"
+    "DOTA_Tooltip_ability_item_bogduggs_baldric_Lore"                        "奔跑没有打人爽。根本比不上。"
+    "DOTA_Tooltip_ability_item_bogduggs_baldric_bonus_armor"                 "额外护甲："
+    "DOTA_Tooltip_ability_item_bogduggs_baldric_disable_resist_pct"          "%眩晕时间降低："
+    "DOTA_Tooltip_ability_item_bogduggs_baldric_move_speed_penalty"          "移动速度减少："
+
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur"                         "波格达格的幸运股骨"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_Description"             "被动：好运连连 - 在施放一个技能后，有%refresh_pct%%%的几率马上刷新该技能。"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_Lore"                    "再来一次！"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_mana_regen_penalty"      "魔法恢复速度降低："
+    
+
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur"                         "波格达格的幸运股骨"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_Description"             "被动：好运连连 - 在施放一个技能后，有%refresh_pct%%%的几率马上刷新该技能。"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_Lore"                    "再来一次！"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_mana_regen_penalty"      "魔法恢复速度降低："
+
+    "DOTA_Tooltip_ability_item_paw_of_lucius"   "卢修兕之爪"
+    "DOTA_Tooltip_ability_item_paw_of_lucius_Description"   "被动：普通攻击有%rupture_chance%%%的几率施加割裂效果。"
+    "DOTA_Tooltip_ability_item_paw_of_lucius_Lore"  "这爪能入肉三分。"
+    "DOTA_Tooltip_ability_item_paw_of_lucius_bonus_attack_speed"    "额外攻击速度："
+
+    "DOTA_Tooltip_ability_item_sign_of_the_arachnid"    "蛛形印记"
+    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_Description"    "被动：蛛形光环 - 友军获得额外移动速度和攻击速度。"
+    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_Lore"   "一个授予蛛丝之路追随者的不祥标志。"
+    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_bonus_move_speed_pct"   "%光环额外移动速度："
+    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_attack_speed"   "光环额外攻击速度："
+    "DOTA_Tooltip_modifier_item_sign_of_the_arachnid_effect"    "蛛形光环"
+    "DOTA_Tooltip_modifier_item_sign_of_the_arachnid_effect_Description"    "获得额外的移动和攻击速度。"
+ 
+    "DOTA_Tooltip_ability_item_preserved_skull"                         "坚韧之颅"
+    "DOTA_Tooltip_ability_item_preserved_skull_Description"             "被动：祈灵光环 - 友军获得额外的魔法恢复速率和冷却时间减少。"
+    "DOTA_Tooltip_ability_item_preserved_skull_Lore"                    "你再嘲笑啊？"
+    "DOTA_Tooltip_ability_item_preserved_skull_cooldown_reduction_pct"  "%光环冷却时间减少："
+    "DOTA_Tooltip_ability_item_preserved_skull_aura_mana_regen"         "光环魔法恢复速率："
+    "DOTA_Tooltip_modifier_item_preserved_skull_effect"                 "祈灵光环"
+    "DOTA_Tooltip_modifier_item_preserved_skull_effect_Description"     "获得额外魔法恢复速率和冷却时间减少。"
+
+    "DOTA_Tooltip_ability_item_guardian_shell"                           "卫士之壳"
+    "DOTA_Tooltip_ability_item_guardian_shell_Description"               "被动：坚定不移 - 不受减速和缠绕效果影响。"
+    "DOTA_Tooltip_ability_item_guardian_shell_Lore"                      "一往无前，没有尘世的牵挂。"
+    "DOTA_Tooltip_ability_item_guardian_shell_bonus_armor"               "额外护甲："
+    "DOTA_Tooltip_ability_item_guardian_shell_magic_resistance"          "%额外魔法抗性："
+
+    "DOTA_Tooltip_ability_item_watchers_gaze"                            "守卫之眼"
+    "DOTA_Tooltip_ability_item_watchers_gaze_Description"                "主动：石化凝视 - 前方锥形区域内的敌人将变成石头，并承受额外的物理伤害。"
+    "DOTA_Tooltip_ability_item_watchers_gaze_Lore"                       "看着你的敌人，亲见他们在你面前石化。"
+
+    "DOTA_Tooltip_Ability_item_lifestone"                                "生命之石"
+    "DOTA_Tooltip_Ability_item_lifestone_Description"                    "主动：生命之契-每0.5秒将%pact_hp_cost%点生命值转化为%pact_mana_gained%点魔法。"
+    "DOTA_Tooltip_ability_item_lifestone_Lore"                           "灵石渴求鲜血。"
+    "DOTA_Tooltip_Ability_item_lifestone_hp_regen"                       "生命恢复："
+    "DOTA_Tooltip_modifier_item_lifestone_pact"                          "生命之契"
+    "DOTA_Tooltip_modifier_item_lifestone_pact_Description"              "这个单位正将生命转化为魔法。"
+
+    "DOTA_Tooltip_Ability_item_ogre_seal_totem"                          "食人魔海豹图腾"
+    "DOTA_Tooltip_Ability_item_ogre_seal_totem_Description"              "主动：食人魔海豹扑打</h1>像食人魔海豹一样扑打，每次造成%damage%点伤害并眩晕%stun_duration%秒。"
+    "DOTA_Tooltip_ability_item_ogre_seal_totem_Lore"                     "从食人魔海豹的牙齿雕刻而来的图腾。"
+    "DOTA_Tooltip_Ability_item_ogre_seal_totem_bonus_hp"                 "生命加成："
 
 
     //EconUnitBegins
