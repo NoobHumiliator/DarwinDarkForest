@@ -104,26 +104,14 @@ function Server:GetPlayerEconData()
             local body = JSON:decode(result.Body)
             if body ~= nil then
                 CustomNetTables:SetTableValue("econ_data", "econ_data", stringTable(body))
-                local econData = stringTable(body)
-                --给玩家装上饰品
+                local econData = CustomNetTables:GetTableValue("econ_data", "econ_data")
+                --给玩家装上Skin饰品 其他饰品从游戏开始的event里面装
                 if econData and econData["econ_info"] then
                     for sPlayerSteamID,vPlayerInfo in pairs(econData["econ_info"]) do
                         for nIndex,v in pairs(vPlayerInfo) do
                             local nPlayerID = GameRules.vPlayerSteamIdMap[tonumber(sPlayerSteamID)]
-                            if v.type=="Particle" and v.equip=="true" then
-                                Econ:EquipParticleEcon(v.name,nPlayerID)
-                            end
-                            if v.type=="KillEffect" and v.equip=="true" then
-                                Econ:EquipKillEffectEcon(v.name,nPlayerID)
-                            end
-                            if v.type=="Immortal" and v.equip=="true" then
-                                Econ:EquipImmortalEcon(v.name,nPlayerID,1)
-                            end
                             if v.type=="Skin" and v.equip=="true" then
                                 Econ:EquipSkinEcon(v.name,nPlayerID)
-                            end
-                            if v.type=="KillSound" and v.equip=="true" then
-                                Econ:EquipKillSoundEcon(v.name,nPlayerID)
                             end
                         end
                     end

@@ -54,12 +54,13 @@ function Evolve (nPlayerId,hHero)
 
     local nLevel=hHero.nCurrentCreepLevel
     local sUnitToEnvolve = DetermineNewUnitName(nPlayerId,hHero,nLevel)
+
     local sOriginalUnitName=""
 
-    --如果装备不朽物品 需要替换单位
-    if hHero.vImmortalReplaceMap and  hHero.vImmortalReplaceMap[sUnitToEnvolve]  then
+    --如果装备不朽物品 nPlayerId
+    if Econ.vPlayerData[nPlayerId].vImmortalReplaceMap and  Econ.vPlayerData[nPlayerId].vImmortalReplaceMap[sUnitToEnvolve]  then
          sOriginalUnitName=sUnitToEnvolve
-         sUnitToEnvolve=hHero.vImmortalReplaceMap[sUnitToEnvolve]
+         sUnitToEnvolve=Econ.vPlayerData[nPlayerId].vImmortalReplaceMap[sUnitToEnvolve]
          CustomNetTables:SetTableValue("econ_unit_replace",sUnitToEnvolve,{sOriginalUnitName=sOriginalUnitName})
     end
 

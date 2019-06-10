@@ -202,7 +202,7 @@ function Econ:ChangeEquip(keys)
     
     --如果是击杀特效
     if keys.type=="KillEffect" then
-        Econ.playerData[nPlayerID].sCurrentKillEffect = nil
+        Econ.vPlayerData[nPlayerID].sCurrentKillEffect = nil
         if keys.isEquip==1 then
            Econ:EquipKillEffectEcon(keys.itemName,nPlayerID)
         end
@@ -210,7 +210,7 @@ function Econ:ChangeEquip(keys)
 
     --如果是击杀音效
     if keys.type=="KillSound" then
-        Econ.playerData[nPlayerID].sCurrentKillSound = nil
+        Econ.vPlayerData[nPlayerID].sCurrentKillSound = nil
         if keys.isEquip==1 then
            Econ:EquipKillSoundEcon(keys.itemName,nPlayerID)
         end
@@ -220,12 +220,12 @@ function Econ:ChangeEquip(keys)
     if keys.type=="Skin" then
 
       --key是单位名称 value是单位新模型
-      if Econ.playerData[nPlayerID].vSkinInfo==nil then
-           Econ.playerData[nPlayerID].vSkinInfo={}
+      if Econ.vPlayerData[nPlayerID].vSkinInfo==nil then
+           Econ.vPlayerData[nPlayerID].vSkinInfo={}
       end
 
       for _,v in pairs(self.vSkinUnitMap[keys.itemName]) do
-          Econ.playerData[nPlayerID].vSkinInfo[v] = nil
+          Econ.vPlayerData[nPlayerID].vSkinInfo[v] = nil
       end
 
       if keys.isEquip==1 then
@@ -252,7 +252,7 @@ function Econ:EquipParticleEcon(sItemName,nPlayerID)
     local vCurrentEconParticleIndexs={}
 
     for _,sParticle in pairs(self.vParticleMap[sItemName]) do
-        if hHero.hCurrentCreep and hHero.hCurrentCreep:IsAlive() then
+        if hHero and hHero.hCurrentCreep and hHero.hCurrentCreep:IsAlive() then
 
             local nParticleAttach = Econ:ChooseParticleAttach(sItemName)
             local nParticleIndex = ParticleManager:CreateParticle(sParticle,nParticleAttach,hHero.hCurrentCreep)
@@ -313,7 +313,7 @@ end
 
 
 function Econ:EquipKillSoundEcon(sItemName,nPlayerID)
-    Econ.playerData[nPlayerID].sCurrentKillSound=self.vKillSoundMap[sItemName]
+    Econ.vPlayerData[nPlayerID].sCurrentKillSound=self.vKillSoundMap[sItemName]
 end
 
 

@@ -24,12 +24,7 @@
 	"DOTA_Custom7"	"茶蛇队"
 	"[english]DOTA_Custom7"	"Olive Snake"
 	"DOTA_Custom8"	"紫马队"
-	"OverthrowTextPickup"	"拾取了"
-	"Remaining"	"剩余"
-	"Overtime"	"超时！"
-	"OvertimeInstructions"	"分获得后胜利"
-	"KillMessageText"	"杀死了先锋"
-	"KillMessageBounty"	"获得了500额外金钱！"
+
 	"addonname"	        "刀塔进化岛"
 
     "rune_spawn_element"          "元素神符刷新"
@@ -138,7 +133,7 @@
     "econ_shadow_masquerade"                         "谍影潜藏"
     "econ_golden_shadow_masquerade"                  "纯金谍影潜藏"
 
-    "econ_golden_infernal_chieftain"                 "纯金谍影潜藏"
+    "econ_golden_infernal_chieftain"                 "纯金地狱酋魁"
     "econ_infernal_chieftain_of_the_crimson_witness" "猩红地狱酋魁"
     "econ_infernal_menace"                           "地狱威吓"
 
@@ -242,7 +237,7 @@
     "npc_dota_creature_red_harpy"                                                   "风暴鹰身人"
     "npc_dota_creature_giant_wolf"                                                  "巨狼"
     "npc_dota_creature_small_mud_golem"                                             "黏土傀儡"
-    "npc_dota_creature_ogre_mage_1"                                                 "食人魔学徒"
+    "npc_dota_creature_ogre_mage_1"                                                 "次级食人魔法师"
     "npc_dota_creature_amoeba_1"                                                    "气泡怪"
 
 
@@ -414,16 +409,16 @@
     "npc_dota_creature_ogreseal"                                                    "海象"
     "npc_dota_creature_amber_queen_spiderling"                                      "琥珀蜘蛛"
     "npc_dota_creature_arachne_spider"                                              "阿克涅蜘蛛"
-    "npc_dota_creature_large_thunder_lizard"                                        "雷肤兽首领"
-    "npc_dota_creature_gaint_granite_golem"                                         "大型花岗岩傀儡"
+    "npc_dota_creature_large_thunder_lizard"                                        "远古雷肤兽首领"
+    "npc_dota_creature_gaint_granite_golem"                                         "远古花岗岩傀儡"
     "npc_dota_creature_tusk_skeleton_ghost"                                         "海象人幽灵"
     "npc_dota_creature_frostbitten_swollen"                                         "霜牙肿胀者"
     "npc_dota_creature_disease_bear"                                                "瘟疫巨熊"
-    "npc_dota_creature_large_dragonspawn"                                           "大型龙卵守护者"
+    "npc_dota_creature_large_dragonspawn"                                           "远古龙卵守护者"
     "npc_dota_creature_dark_troll_warlord"                                          "黑暗巨魔召唤法师"
     "npc_dota_creature_dark_troll_berserker"                                        "丛林巨魔狂战士"
     "npc_dota_creature_satyr_dreamer"                                               "萨特梦者"
-    "npc_dota_creature_morphling"                                                   "水元素"
+    "npc_dota_creature_morphling"                                                   "海元素"
 
 
     //Level-8
@@ -1419,7 +1414,6 @@
     "DOTA_Tooltip_ability_item_creed_of_omniscience"                        "全能信条"
     "DOTA_Tooltip_ability_item_creed_of_omniscience_Description"            "被动：提供额外%bonus_xp_tooltip%%经验值。"
      
-
     "DOTA_Tooltip_ability_item_longclaws_amulet"                            "长爪护符"
     "DOTA_Tooltip_ability_item_longclaws_amulet_Lore"                       "魔法在林地里有点不寻常，它的秘密被牢牢地守护着。"
     "DOTA_Tooltip_ability_item_longclaws_amulet_spell_lifesteal_pct"        "%技能吸血："

@@ -48,10 +48,11 @@ function GameMode:OnGameRulesStateChange()
       
      --记录游戏开始的时间
      GameRules.nGameStartTime=GameRules:GetGameTime()
-     --[[
      local econData = CustomNetTables:GetTableValue("econ_data", "econ_data")
+     --这个地方重发一下数据，保证前台数据完整
+     CustomNetTables:SetTableValue("econ_data", "econ_data",econData)
 
-     --给玩家装上饰品
+     --给玩家 Particle,KillEffect,KillSound,Immortal 类型饰品
      if econData and econData["econ_info"] then
          for sPlayerSteamID,vPlayerInfo in pairs(econData["econ_info"]) do
               for nIndex,v in pairs(vPlayerInfo) do
@@ -65,16 +66,12 @@ function GameMode:OnGameRulesStateChange()
                   if v.type=="Immortal" and v.equip=="true" then
                       Econ:EquipImmortalEcon(v.name,nPlayerID,1)
                   end
-                  if v.type=="Skin" and v.equip=="true" then
-                      Econ:EquipSkinEcon(v.name,nPlayerID)
-                  end
                   if v.type=="KillSound" and v.equip=="true" then
                       Econ:EquipKillSoundEcon(v.name,nPlayerID)
                   end
               end
           end
       end
-      ]]
 	end
 end
 
