@@ -78,13 +78,13 @@ function Evolve (nPlayerId,hHero)
     AddAbilityForUnit(hUnit,nPlayerId)
      
     --继承粒子特效
-    if hHero.sCurrentParticleEconItemName then
-         Econ:EquipParticleEcon(hHero.sCurrentParticleEconItemName,nPlayerId)
+    if Econ.vPlayerData[nPlayerId].sCurrentParticleEconItemName then
+         Econ:EquipParticleEcon(Econ.vPlayerData[nPlayerId].sCurrentParticleEconItemName,nPlayerId)
     end
 
     --修改模型
-    if hHero.vSkinInfo and hHero.vSkinInfo[sUnitToEnvolve]~=nil then
-         Econ:ReplaceUnitModel(hUnit,hHero.vSkinInfo[sUnitToEnvolve])
+    if Econ.vPlayerData[nPlayerId].vSkinInfo and Econ.vPlayerData[nPlayerId].vSkinInfo[sUnitToEnvolve]~=nil then
+         Econ:ReplaceUnitModel(hUnit,Econ.vPlayerData[nPlayerId].vSkinInfo[sUnitToEnvolve])
     end
     
     --修正模型动作
@@ -370,37 +370,49 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
                            if vData.nElement>GameMode.vPlayerPerk[nPlayerId][1] then
                               bPerkValid=false
                            else
-                              nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][1])-vData.nElement
+                              if vData.nElement >0 then
+                                 nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][1])-vData.nElement
+                              end
                            end
 
                            if vData.nMystery>GameMode.vPlayerPerk[nPlayerId][2] then
                               bPerkValid=false
                            else
-                              nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][2])-vData.nMystery
+                              if vData.nMystery >0 then 
+                                 nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][2])-vData.nMystery
+                              end
                            end
 
                            if vData.nDurable>GameMode.vPlayerPerk[nPlayerId][3] then
                               bPerkValid=false
                            else
-                              nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][3])-vData.nDurable
+                              if vData.nDurable >0 then 
+                                 nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][3])-vData.nDurable
+                              end
                            end
 
                            if vData.nFury>GameMode.vPlayerPerk[nPlayerId][4] then
                               bPerkValid=false
                            else
-                              nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][4])-vData.nFury
+                              if vData.nFury > 0 then
+                                 nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][4])-vData.nFury
+                              end
                            end
 
                            if vData.nDecay>GameMode.vPlayerPerk[nPlayerId][5] then
                               bPerkValid=false
                            else
-                              nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][5])-vData.nDecay
+                              if vData.nDecay > 0 then
+                                 nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][5])-vData.nDecay
+                              end
                            end
 
                            if vData.nHunt>GameMode.vPlayerPerk[nPlayerId][6] then
                               bPerkValid=false
                            else
-                              nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][6])-vData.nHunt
+                              if vData.nHunt > 0 then
+                                 nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][6])-vData.nHunt
+                              end
                            end
 
                            --满足条件加入进化池
@@ -432,7 +444,8 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
                      return a.nTotalPerk > b.nTotalPerk
                 end
            end)
-           
+          
+           PrintTable(vEnvolvePool)
            sUnitToEnvolve=vEnvolvePool[1].sUnitName
 
         else

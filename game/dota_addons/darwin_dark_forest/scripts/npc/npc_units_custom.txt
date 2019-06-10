@@ -14087,7 +14087,7 @@
 		"SoundSet"					"n_creep_Melee"
 
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"1.15"
+		"ModelScale"				"1.0"
 		"Level"						"7"
 		"vscripts"					"creap_ai.lua"
 

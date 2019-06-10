@@ -41,7 +41,7 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_item_bogduggs_baldric:GetModifierMoveSpeedBonus_Constant( params )
-	return -self.move_speed_penalty
+	return -1*self.move_speed_penalty
 end
 
 --------------------------------------------------------------------------------

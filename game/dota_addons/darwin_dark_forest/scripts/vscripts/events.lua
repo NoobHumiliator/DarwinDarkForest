@@ -17,7 +17,7 @@ function GameMode:OnGameRulesStateChange()
 	end
   
    -- 统计有效玩家个数
-	if nNewState == DOTA_GAMERULES_STATE_PRE_GAME then
+	if nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
 
      GameRules.vPlayerSteamIdMap={}
    
@@ -29,6 +29,7 @@ function GameMode:OnGameRulesStateChange()
           local nPlayerSteamId = PlayerResource:GetSteamAccountID(nPlayerID)
           GameRules.sValidePlayerSteamIds=GameRules.sValidePlayerSteamIds..nPlayerSteamId..","
           GameRules.vPlayerSteamIdMap[nPlayerSteamId]=nPlayerID
+          Econ.vPlayerData[nPlayerID]={}
        end
      end
      
@@ -47,7 +48,7 @@ function GameMode:OnGameRulesStateChange()
       
      --记录游戏开始的时间
      GameRules.nGameStartTime=GameRules:GetGameTime()
-     
+     --[[
      local econData = CustomNetTables:GetTableValue("econ_data", "econ_data")
 
      --给玩家装上饰品
@@ -73,6 +74,7 @@ function GameMode:OnGameRulesStateChange()
               end
           end
       end
+      ]]
 	end
 end
 
@@ -136,7 +138,7 @@ function GameMode:OnEntityKilled(keys)
    
        --被击杀的时大怪，播放
        if hKilledUnit:GetLevel()>hHero.nCurrentCreepLevel then
-            PlayKillEffectAndSound(hHero)
+            PlayKillEffectAndSound(nPlayerId)
        end
 
        --消除野怪户口 (先确保被击杀单位不是野怪的召唤生物)      
@@ -265,7 +267,7 @@ function GameMode:OnEntityKilled(keys)
 
             hKillerHero.nCustomExp=hKillerHero.nCustomExp+ math.ceil(vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio) 
 
-            PlayKillEffectAndSound(hKillerHero)
+            PlayKillEffectAndSound(nKillerPlayerId)
             --给击杀者 英雄换模型
             hKillerHero:SetOriginalModel(hKillerUnit:GetModelName())
             hKillerHero:SetModel(hKillerUnit:GetModelName())
@@ -577,14 +579,16 @@ function GameMode:OnPlayerSay(keys)
 end
 
 
-function PlayKillEffectAndSound (hHero)
+function PlayKillEffectAndSound (nPlayerID)
 
-     if hHero.sCurrentKillEffect then
-          Econ:PlayKillEffect(hHero.sCurrentKillEffect,hHero)
+     local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
+
+     if Econ.vPlayerData[nPlayerID].sCurrentKillEffect then
+          Econ:PlayKillEffect(Econ.vPlayerData[nPlayerID].sCurrentKillEffect,hHero)
      end
 
-     if hHero.sCurrentKillSound then
-          Econ:PlayKillSound(hHero.sCurrentKillSound,hHero)
+     if Econ.vPlayerData[nPlayerID].sCurrentKillSound then
+          Econ:PlayKillSound(Econ.vPlayerData[nPlayerID].sCurrentKillSound,hHero)
      end
 
 end

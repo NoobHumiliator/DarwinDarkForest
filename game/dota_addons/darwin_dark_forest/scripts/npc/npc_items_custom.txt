@@ -4906,7 +4906,7 @@
 				"Aura"					"modifier_item_imba_magic_stick_effect"
 				"Aura_Radius"			"%charge_radius"
 				"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
+				"Aura_Types"			"DOTA_UNIT_TARGET_ALL"
 				"Aura_Flags"			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 				"Aura_ApplyToCaster"	"0"
 			}
@@ -8962,7 +8962,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"100"
 		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"45.0"
+		"AbilityCooldown"				"25.0"
 		"AbilityManaCost"				"75"
 
 		// Item Info
@@ -9026,9 +9026,7 @@
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
 		"ItemKillable"					"0"
-		"ItemDisplayOwnership"			"1"
-		"CustomShop"					"1"
-
+		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"

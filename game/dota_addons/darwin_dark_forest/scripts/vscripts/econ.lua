@@ -130,6 +130,8 @@ function Econ:Init()
         self:SubmitTaobaoCode(keys)
     end)
 
+    Econ.vPlayerData={}
+
 end
 
 function Econ:DrawLottery(keys)
@@ -176,12 +178,11 @@ end
 function Econ:ChangeEquip(keys)
 
     local nPlayerID = keys.playerId
-    local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
     
     -- 如果是特效
     if keys.type=="Particle" then
 
-        local vCurrentEconParticleIndexs=hHero.vCurrentEconParticleIndexs
+        local vCurrentEconParticleIndexs=Econ.vPlayerData[nPlayerID].vCurrentEconParticleIndexs
         
         if vCurrentEconParticleIndexs then
             for _,nParticleIndex in pairs(vCurrentEconParticleIndexs) do
@@ -190,8 +191,8 @@ function Econ:ChangeEquip(keys)
             end
         end
 
-        hHero.vCurrentEconParticleIndexs=nil
-        hHero.sCurrentParticleEconItemName=nil
+        Econ.vPlayerData[nPlayerID].vCurrentEconParticleIndexs=nil
+        Econ.vPlayerData[nPlayerID].sCurrentParticleEconItemName=nil
 
         if keys.isEquip==1 then           
             self:EquipParticleEcon(keys.itemName,nPlayerID)
@@ -201,7 +202,7 @@ function Econ:ChangeEquip(keys)
     
     --如果是击杀特效
     if keys.type=="KillEffect" then
-        hHero.sCurrentKillEffect = nil
+        Econ.playerData[nPlayerID].sCurrentKillEffect = nil
         if keys.isEquip==1 then
            Econ:EquipKillEffectEcon(keys.itemName,nPlayerID)
         end
@@ -209,7 +210,7 @@ function Econ:ChangeEquip(keys)
 
     --如果是击杀音效
     if keys.type=="KillSound" then
-        hHero.sCurrentKillSound = nil
+        Econ.playerData[nPlayerID].sCurrentKillSound = nil
         if keys.isEquip==1 then
            Econ:EquipKillSoundEcon(keys.itemName,nPlayerID)
         end
@@ -219,12 +220,12 @@ function Econ:ChangeEquip(keys)
     if keys.type=="Skin" then
 
       --key是单位名称 value是单位新模型
-      if hHero.vSkinInfo==nil then
-           hHero.vSkinInfo={}
+      if Econ.playerData[nPlayerID].vSkinInfo==nil then
+           Econ.playerData[nPlayerID].vSkinInfo={}
       end
 
       for _,v in pairs(self.vSkinUnitMap[keys.itemName]) do
-            hHero.vSkinInfo[v] = nil
+          Econ.playerData[nPlayerID].vSkinInfo[v] = nil
       end
 
       if keys.isEquip==1 then
@@ -261,9 +262,9 @@ function Econ:EquipParticleEcon(sItemName,nPlayerID)
             table.insert(vCurrentEconParticleIndexs,nParticleIndex)
         end
     end
-    
-    hHero.sCurrentParticleEconItemName=sItemName
-    hHero.vCurrentEconParticleIndexs=vCurrentEconParticleIndexs
+    Econ.vPlayerData[nPlayerID].sCurrentParticleEconItemName=sItemName
+    Econ.vPlayerData[nPlayerID].vCurrentEconParticleIndexs=vCurrentEconParticleIndexs
+
 end
 
 --根据类型微调附着点
@@ -297,8 +298,7 @@ end
 
 
 function Econ:EquipKillEffectEcon(sItemName,nPlayerID)
-    local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
-    hHero.sCurrentKillEffect=self.vKillEffectMap[sItemName]
+    Econ.vPlayerData[nPlayerID].sCurrentKillEffect=self.vKillEffectMap[sItemName]
 end
 
 function Econ:PlayKillEffect(sParticle,hHero)
@@ -313,8 +313,7 @@ end
 
 
 function Econ:EquipKillSoundEcon(sItemName,nPlayerID)
-    local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
-    hHero.sCurrentKillSound=self.vKillSoundMap[sItemName]
+    Econ.playerData[nPlayerID].sCurrentKillSound=self.vKillSoundMap[sItemName]
 end
 
 
@@ -328,55 +327,50 @@ end
 
 function Econ:EquipSkinEcon(sItemName,nPlayerID)
     
-    local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
-
-    if hHero.vSkinInfo==nil then
-       hHero.vSkinInfo={}
+    if Econ.vPlayerData[nPlayerID].vSkinInfo==nil then
+       Econ.vPlayerData[nPlayerID].vSkinInfo={}
     end
 
-    if  hHero then
-        for _,v in pairs(self.vSkinUnitMap[sItemName]) do
-            hHero.vSkinInfo[v] = self.vSkinModelMap[sItemName]
-        end
+    for _,v in pairs(self.vSkinUnitMap[sItemName]) do
+        Econ.vPlayerData[nPlayerID].vSkinInfo[v] = self.vSkinModelMap[sItemName]
     end
-    
+
 end
 
 
 function Econ:EquipImmortalEcon(sItemName,nPlayerID,nIsEquip)
     
-    local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
-    if  hHero then
-        local vUnitNames = self.vImmortalUnitMap[sItemName]
-        for _,sUnitName in ipairs(vUnitNames) do
-            if hHero.vImmortalInfo==nil then
-               hHero.vImmortalInfo={}
-            end       
-            -- key为 原生物名称 value 为替换后的生物名称
-            if hHero.vImmortalReplaceMap==nil then
-               hHero.vImmortalReplaceMap={}
-            end
-            if hHero.vImmortalInfo[sUnitName]==nil then
-               hHero.vImmortalInfo[sUnitName] = {}
-            end
-            if nIsEquip==0 then
-                hHero.vImmortalInfo[sUnitName]=RemoveItemFromList(hHero.vImmortalInfo[sUnitName],sItemName)
-            else
-                table.insert(hHero.vImmortalInfo[sUnitName],sItemName)
-                RemoveRepeated(hHero.vImmortalInfo[sUnitName])
 
-                table.sort(hHero.vImmortalInfo[sUnitName],function(a,b) return b>a end )
-            end
-
-            local sUnitNameResult=sUnitName
-            for i,v in ipairs(hHero.vImmortalInfo[sUnitName]) do
-              sUnitNameResult=sUnitNameResult.."_"..v
-            end
-            
-            -- key为 原生物名称 value 为替换后的生物名称
-            hHero.vImmortalReplaceMap[sUnitName]=sUnitNameResult
+    local vUnitNames = self.vImmortalUnitMap[sItemName]
+    for _,sUnitName in ipairs(vUnitNames) do
+        if Econ.vPlayerData[nPlayerID].vImmortalInfo==nil then
+           Econ.vPlayerData[nPlayerID].vImmortalInfo={}
+        end       
+        -- key为 原生物名称 value 为替换后的生物名称
+        if Econ.vPlayerData[nPlayerID].vImmortalReplaceMap==nil then
+           Econ.vPlayerData[nPlayerID].vImmortalReplaceMap={}
         end
+        if Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName]==nil then
+           Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName] = {}
+        end
+        if nIsEquip==0 then
+            Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName]=RemoveItemFromList(Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName],sItemName)
+        else
+            table.insert(Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName],sItemName)
+            RemoveRepeated(Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName])
+
+            table.sort(Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName],function(a,b) return b>a end )
+        end
+
+        local sUnitNameResult=sUnitName
+        for i,v in ipairs(Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName]) do
+          sUnitNameResult=sUnitNameResult.."_"..v
+        end
+        
+        -- key为 原生物名称 value 为替换后的生物名称
+        Econ.vPlayerData[nPlayerID].vImmortalReplaceMap[sUnitName]=sUnitNameResult
     end
+
 end
 
 
