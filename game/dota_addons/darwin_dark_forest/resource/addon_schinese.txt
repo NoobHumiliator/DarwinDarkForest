@@ -1487,6 +1487,14 @@
     "DOTA_Tooltip_Ability_item_ogre_seal_totem_bonus_hp"                 "生命加成："
 
 
+    "GameInstruction"                                                    "玩法简介"
+    "note_1"                                                             "Note1: 击杀吃掉敌对生物获取经验值以及进化特性。"
+    "note_2"                                                             "Note2: 吃掉生物种类决定进化方向，注意右下方六色雷达图。"
+    "note_3"                                                             "Note3: 捡起随机刷新的神符，快速提高某种进化特性。"
+    "note_4"                                                             "Note4: 任意玩家达到11级时游戏进入死亡模式，存活到最后的生物获得游戏胜利。"
+
+
+
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
 	"npc_dota_creature_lich_shearing_deposition"                  "巫妖"

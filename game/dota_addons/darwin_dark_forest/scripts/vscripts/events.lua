@@ -219,7 +219,7 @@ function GameMode:OnEntityKilled(keys)
        --玩家被 其他队伍的玩家所击杀 标志位
        local bKilledByOtherTeam = false
        
-       if hKillerUnit:GetOwner()  then
+       if hKillerUnit:GetOwner() and  hKillerUnit:GetOwner().GetPlayerID then
           nKillerPlayerId = hKillerUnit:GetOwner():GetPlayerID()
           if nKillerPlayerId~=-1 and PlayerResource:GetTeam(nKillerPlayerId)~=PlayerResource:GetTeam(nPlayerId) then
             hKillerHero =  PlayerResource:GetSelectedHeroEntity(nKillerPlayerId)

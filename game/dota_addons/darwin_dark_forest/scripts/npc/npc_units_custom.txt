@@ -4487,7 +4487,8 @@
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/creeps/ice_biome/giant/ice_giant01.vmdl"	// Model.
 		"SoundSet"		            "Hero_WitchDoctor"
-		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_witchdoctor.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_witchdoctor.vsndevts"
 		"ModelScale"				"0.7"
 		"Level"						"3"
 		"vscripts"					"creap_ai.lua"
@@ -6475,6 +6476,8 @@
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/ice_biome/giant/ice_giant01.vmdl"
 		"SoundSet"		             "Hero_WitchDoctor"
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_witchdoctor.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_witchdoctor.vsndevts"
 		"Level"						"4"
 		"ModelScale" 				"0.85"
 		"HasInventory"				"1"
