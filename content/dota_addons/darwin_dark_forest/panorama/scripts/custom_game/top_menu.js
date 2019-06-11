@@ -7,10 +7,6 @@ function FindDotaHudElement(id){
     return comp;
 }
 
-function OpenGuide(){
-
-}
-
 function OpenRank(){
 	FindDotaHudElement("page_rank").ToggleClass("Hidden");
 }
@@ -18,6 +14,15 @@ function OpenRank(){
 function OpenInventory(){
     FindDotaHudElement("page_inventory").ToggleClass("Hidden");  
 }
+
+function OpenInstruction(){
+    FindDotaHudElement("page_instruction").ToggleClass("Hidden");  
+}
+
+function CloseInstruction(){
+    FindDotaHudElement("page_instruction").AddClass("Hidden")
+}   
+
 
 
 function TipsOver(message, pos){
@@ -29,15 +34,26 @@ function TipsOut(){
     $.DispatchEvent( "DOTAHideTextTooltip");
 }
 
-function OpenGuide()
-{
-    
-
-}
 
 
 
 (function()
 {
+    $.Schedule(4, function(){
+      TipsOver('TopMenuIcon_Guide_message','TopMenuIcon_Guide')
+    });
+
+    $.Schedule(8, function(){
+      TipsOver('TopMenuIcon_Rank_message','TopMenuIcon_Rank')
+    });
+
+    $.Schedule(12, function(){
+      TipsOver('TopMenuIcon_Inventory_message','TopMenuIcon_Inventory')
+    });
+
+    $.Schedule(16, function(){
+      TipsOut()
+    });
+    
     
 })();

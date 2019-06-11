@@ -1,0 +1,72 @@
+#page_instruction{
+    width:1690px;
+    height:1020px;
+    background-image: url("s2r://panorama/images/backgrounds/gallery_background_png.vtex");
+    background-size:100% 100%;
+    box-shadow: fill #00000066 -4px -4px 8px 8px;
+    vertical-align: center;
+    horizontal-align:center;
+    z-index:5000;
+    transition-property: opacity, transform, pre-transform-scale2d, wash-color, position;
+    transition-duration: 0.4s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+.Hidden{
+    opacity:0.0;
+}
+
+.instruction_title{
+    color:#ddd;
+    font-size:55px;
+}
+
+
+.instruction_note{
+    color:#ddd;
+    font-size:30px;
+}
+
+#instruction_close_img{
+    width:30px;
+    height:30px;
+    horizontal-align:right;
+    vertical-align: top;
+    margin-top:30px;
+    margin-right:30px;
+    transition-property:transform;
+    transition-duration:0.2s;
+}
+#instruction_close_img:hover{
+    transform: scale3d( 1.5, 1.5, 1.5);
+}
+
+
+.InstructionCloseButton
+{
+  horizontal-align:right;
+  background-color:#333333;
+  wash-color:white;
+  border-radius:50%;
+  border:1px solid #333333;
+  width:70px;
+  height:70px;
+  box-shadow:#000000 -3px -3px 6px 6px;
+  z-index:555;
+  background-image:url("s2r://panorama/images/control_icons/x_close_png.vtex");
+  background-size:40px 40px;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  margin-right:30px;
+  margin-top:15px;
+  transition-property:wash-color, pre-transform-scale2d, background-color;
+  transition-duration:0.1s;
+  transition-timing-function:ease-in;
+}
+
+.InstructionCloseButton:active
+{
+  background-size:36px 36px;
+  sound:"ui_friends_slide_in"; 
+}

@@ -52,12 +52,14 @@
 		
 	<Panel>
 	   <CustomUIElement type="HudTopBar" layoutfile="file://{resources}/layout/custom_game/multiteam_top_scoreboard.xml" />
-       <CustomUIElement type="Hud"		 layoutfile="file://{resources}/layout/custom_game/perk_radar.xml" />
-       <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/top_menu.xml" />
-       <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/rank_panel.xml" />
-       <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/inventory.xml" />
-       <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/lottery.xml" />
-	   <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" />
+	   
+       <CustomUIElement type="Hud"	layoutfile="file://{resources}/layout/custom_game/perk_radar.xml" />
+       <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/top_menu.xml" />
+       <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/instruction.xml" />
+       <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/rank_panel.xml" />
+       <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/inventory.xml" />
+       <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/lottery.xml" />
+	   <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" />
 	   <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/rune_notification.xml" />
 
        <CustomUIElement type="EndScreen" layoutfile="file://{resources}/layout/custom_game/multiteam_end_screen.xml" />
