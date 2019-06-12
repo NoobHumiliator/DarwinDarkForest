@@ -65,11 +65,15 @@ function modifier_sand_king_tail_swipe:OnIntervalThink()
 					local hCausticBuff = enemy:FindModifierByName( "modifier_sand_king_boss_caustic_finale" )
 					if hCausticBuff == nil then
 						hCausticBuff = enemy:AddNewModifier( self:GetCaster(), passive, "modifier_sand_king_boss_caustic_finale", { duration = caustic_duration } )
-						hCausticBuff:SetStackCount( 0 )
+						if hCausticBuff then
+						  hCausticBuff:SetStackCount( 0 )
+					    end
 					end
-					hCausticBuff:SetStackCount( hCausticBuff:GetStackCount() + 1 )  
-					hCausticBuff:SetDuration( caustic_duration, true )
 
+					if hCausticBuff then
+					  hCausticBuff:SetStackCount( hCausticBuff:GetStackCount() + 1 )  
+					  hCausticBuff:SetDuration( caustic_duration, true )
+                    end
 					local damageInfo = 
 					{
 						victim = enemy,

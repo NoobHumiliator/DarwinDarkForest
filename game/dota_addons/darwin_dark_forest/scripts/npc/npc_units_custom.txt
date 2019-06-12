@@ -15920,6 +15920,7 @@
 		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
 		"Level"						"8"
 		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
         
         "nHunt"                     "14"  
@@ -20791,7 +20792,7 @@
 		"Model"	                	"models/heroes/siltbreaker/siltbreaker.vmdl"
 		"SoundSet"		            "Roshan"
 
-		"ModelScale"				"2.1"
+		"ModelScale"				"2.0"
 		"Level"						"10"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"

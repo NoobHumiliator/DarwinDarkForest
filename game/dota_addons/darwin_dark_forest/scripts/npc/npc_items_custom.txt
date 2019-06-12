@@ -8967,7 +8967,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"420"
+		"ItemCost"						"550"
 		"ItemPurchasable"				"0"
 		"ItemQuality"					""
 		"ItemStackable"					"0"
@@ -8984,7 +8984,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"stone_duration"			"2.5"
+				"stone_duration"			"3.5"
 			}
 			"02"
 			{

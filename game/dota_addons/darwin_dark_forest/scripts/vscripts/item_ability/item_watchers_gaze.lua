@@ -16,12 +16,18 @@ function item_watchers_gaze:OnSpellStart()
 				local flAngle = 180 * math.acos( flDirectionDot ) / math.pi
 				if flAngle < 60 then
 					enemy:AddNewModifier( self:GetCaster(), self, "modifier_medusa_stone_gaze_stone", {duration = self:GetSpecialValueFor( "stone_duration" ) } )
-					EmitSoundOn( "WatchersGaze.Target" ,enemy )
+					EmitSoundOn( "Hero_Medusa.StoneGaze.Stun" ,enemy )
 				end
 			end
 			
 		end
-	--	local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_medusa/medusa_stone_gaze_active.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetCaster() )
-	--	ParticleManager:SetParticleControlEnt( nFXIndex, 1, self:GetCaster(), PATTACH_POINT_FOLLOW, "attach_head", self:GetCaster():GetOrigin(), true )
+		local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_medusa/medusa_stone_gaze_active.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetCaster() )
+	    ParticleManager:SetParticleControlEnt(nFXIndex, 1, self:GetCaster(), PATTACH_POINT_FOLLOW, "attach_head", self:GetCaster():GetOrigin(), true )
+
+        Timers:CreateTimer(0.7, function()
+        	ParticleManager:DestroyParticle(nFXIndex, false)
+        	ParticleManager:ReleaseParticleIndex(nFXIndex)
+        end)
+
 	end
 end

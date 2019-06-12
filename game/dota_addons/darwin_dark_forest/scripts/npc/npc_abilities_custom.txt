@@ -5680,6 +5680,11 @@
         "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
 
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts"
+        }
+
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "1200"
@@ -5812,7 +5817,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "ability_lua"
         "ScriptFile"                    "creature_ability/siltbreaker_tail_spin_ccw"
-        "AbilityTextureName"            "bloodseeker_bloodrage"
+        "AbilityTextureName"            "viper_corrosive_skin"
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
