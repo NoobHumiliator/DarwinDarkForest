@@ -561,10 +561,25 @@
     "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_duration"      "持续时间："
     "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_health"        "血量："
     "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_damage"        "攻击力："
-    "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_nDecay"        "<font color='#b3d465'>腐朽：</font>"
+    "DOTA_Tooltip_ability_decay_summon_wraith_warrior_nDecay"        "<font color='#b3d465'>腐朽：</font>"
    
+
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal"                              "召唤鬼灵海象"
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_Description"                  "召唤强大的鬼灵海象前来助战。"
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_ghost_seal_duration"          "持续时间："
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_ghost_seal_flop_level"        "海象扑击等级："
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_ghost_seal_health"            "海象血量："
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_ghost_seal_damage"            "海象攻击力："
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_nDecay"                       "<font color='#b3d465'>腐朽：</font>"
+   
+    "npc_dota_creature_ghost_seal"                                                  "鬼灵海象"
+
+    "DOTA_Tooltip_ability_broodmother_poison_sting_nHunt"                           "<font color='#999999'>猎杀：</font>"
+    "DOTA_Tooltip_ability_broodmother_poison_sting_nDecay"                          "<font color='#b3d465'>腐朽：</font>"
+
+
     "DOTA_Tooltip_ability_spirit_breaker_charge_of_darkness_nFury"                  "<font color='#eb6877'>狂怒:</font>"
-    "DOTA_Tooltip_ability_spirit_breaker_charge_of_darkness_nHunt"                  "猎杀:"
+    "DOTA_Tooltip_ability_spirit_breaker_charge_of_darkness_nHunt"                  "<font color='#999999'>猎杀：</font>:"
   
     "DOTA_Tooltip_ability_black_dragon_fireball_nFury"                              "<font color='#eb6877'>狂怒:</font>"
     "DOTA_Tooltip_ability_black_dragon_fireball_nElement"                           "<font color='#eb6877'>元素:</font>"

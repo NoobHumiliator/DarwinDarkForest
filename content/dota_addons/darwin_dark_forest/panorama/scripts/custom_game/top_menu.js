@@ -39,19 +39,19 @@ function TipsOut(){
 
 (function()
 {
-    $.Schedule(4, function(){
+    $.Schedule(6, function(){
       TipsOver('TopMenuIcon_Guide_message','TopMenuIcon_Guide')
     });
 
-    $.Schedule(8, function(){
+    $.Schedule(10, function(){
       TipsOver('TopMenuIcon_Rank_message','TopMenuIcon_Rank')
     });
 
-    $.Schedule(12, function(){
+    $.Schedule(14, function(){
       TipsOver('TopMenuIcon_Inventory_message','TopMenuIcon_Inventory')
     });
 
-    $.Schedule(16, function(){
+    $.Schedule(18, function(){
       TipsOut()
     });
     

@@ -395,21 +395,21 @@ function GameMode:OnNPCSpawned( event )
 
     --如果已经初始化过 （是复生 而不是第一次选出来）
     if hSpawnedUnit:IsHero() and hSpawnedUnit.nCurrentCreepLevel then
-        local nPlayerId = hSpawnedUnit:GetOwner():GetPlayerID()
-        --将镜头定位到重生英雄，然后放开
-        PlayerResource:SetCameraTarget(nPlayerId,hSpawnedUnit)
+        local nPlayerId = hSpawnedUnit:GetPlayerID()
 
+        print("Respawning Player Id"..nPlayerId)
+        --计算等级
+        local nNewLevel=CalculateNewLevel(hSpawnedUnit)
+        hSpawnedUnit.nCurrentCreepLevel=nNewLevel
+        Evolve(nPlayerId,hSpawnedUnit)
+
+         --将镜头定位到重生英雄，然后放开
+        PlayerResource:SetCameraTarget(nPlayerId,hSpawnedUnit)
         Timers:CreateTimer({ endTime = 0.5, 
             callback = function()
               PlayerResource:SetCameraTarget(nPlayerId,nil) 
             end
         })
-
-        --计算等级
-        local nNewLevel=CalculateNewLevel(hSpawnedUnit)
-        hSpawnedUnit.nCurrentCreepLevel=nNewLevel
-        
-        Evolve(nPlayerId,hSpawnedUnit)
     end
     
     if not hSpawnedUnit:IsHero() then
