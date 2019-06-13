@@ -68,12 +68,10 @@
 		"HasAggressiveStance"	"0"
 		"FollowRange"	       "100"
 		"HealthBarOffset"	   "150"
-		"HasInventory"	        "1"
-		"Model"	                 "models/development/invisiblebox.vmdl"
-		"GameSoundsFile"	    ""
-		"VoiceFile"	            ""
-		"SoundSet"	            ""
-		"RingRadius"	"60"
+		"HasInventory"	       "1"
+		"Model"	               "models/development/invisiblebox.vmdl"
+		"RingRadius"	       "60"
+		"SoundSet"		       "0"
 		"ItemSlots"
 		{
 		}

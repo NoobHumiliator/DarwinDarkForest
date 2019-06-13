@@ -20354,10 +20354,12 @@
 		"VoiceFile"	           	"soundevents/voscripts/game_sounds_vo_riki.vsndevts"
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"riki_blink_strike"			// Ability 1
 		"Ability2"					""	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "4"
 
 		// Armor
 		//----------------------------------------------------------------
