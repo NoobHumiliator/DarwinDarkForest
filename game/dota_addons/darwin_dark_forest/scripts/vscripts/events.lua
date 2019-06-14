@@ -237,12 +237,16 @@ function GameMode:OnEntityKilled(keys)
           --记录物品
           ItemController:RecordItemsInfo(hHero)
 
-          hHero.nCustomExp=hHero.nCustomExp-(vEXP_TABLE[hHero.hCurrentCreep:GetLevel()+1]-vEXP_TABLE[hHero.hCurrentCreep:GetLevel()])*0.5
+          local flExpLoseRatio = CalculateExpLostRatio(hHero)
+          hHero.nCustomExp=hHero.nCustomExp-(vEXP_TABLE[hHero.hCurrentCreep:GetLevel()+1]-vEXP_TABLE[hHero.hCurrentCreep:GetLevel()])*flExpLoseRatio
+          
            --保证不是负数
           if hHero.nCustomExp<1 then
               hHero.nCustomExp=1
           end
-           
+          --保留一位小数
+          hHero.nCustomExp = FloatKeepOneDecimal(hHero.nCustomExp)
+
           -- 处理被其他队伍玩家击杀的情况 
           if bKilledByOtherTeam then
              local tempPerksMap = {0,0,0,0,0,0}
@@ -262,7 +266,10 @@ function GameMode:OnEntityKilled(keys)
                  flExpRatio=1.2
             end
 
-            hKillerHero.nCustomExp=hKillerHero.nCustomExp+ math.ceil(vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio) 
+            hKillerHero.nCustomExp=hKillerHero.nCustomExp+ vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio 
+            
+            --保留一位小数
+            hHero.nCustomExp = FloatKeepOneDecimal(hHero.nCustomExp)
 
             PlayKillEffectAndSound(nKillerPlayerId)
             --给击杀者 英雄换模型
@@ -577,15 +584,17 @@ end
 
 
 function PlayKillEffectAndSound (nPlayerID)
+    
+     if PlayerResource:GetPlayer(nPlayerID) and PlayerResource:GetPlayer(nPlayerID).GetAssignedHero then
+         local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
 
-     local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
+         if Econ.vPlayerData[nPlayerID].sCurrentKillEffect then
+              Econ:PlayKillEffect(Econ.vPlayerData[nPlayerID].sCurrentKillEffect,hHero)
+         end
 
-     if Econ.vPlayerData[nPlayerID].sCurrentKillEffect then
-          Econ:PlayKillEffect(Econ.vPlayerData[nPlayerID].sCurrentKillEffect,hHero)
-     end
-
-     if Econ.vPlayerData[nPlayerID].sCurrentKillSound then
-          Econ:PlayKillSound(Econ.vPlayerData[nPlayerID].sCurrentKillSound,hHero)
+         if Econ.vPlayerData[nPlayerID].sCurrentKillSound then
+              Econ:PlayKillSound(Econ.vPlayerData[nPlayerID].sCurrentKillSound,hHero)
+         end
      end
 
 end
@@ -599,4 +608,55 @@ function DoCleanForDeadUnit(hUnit)
         UTIL_Remove(hWeb)
       end
     end
+end
+
+
+--计算 生物的经验损失比率
+function CalculateExpLostRatio(hHero)
+              
+    --损失经验率
+    local flExpLoseRatio = 0.5
+
+    if  NeutralSpawner.nAverageLevel then
+        
+        if hHero.hCurrentCreep:GetLevel() >= NeutralSpawner.nAverageLevel+2 then
+           flExpLoseRatio=0.5
+        end
+
+        if hHero.hCurrentCreep:GetLevel() == NeutralSpawner.nAverageLevel+1 then
+           flExpLoseRatio=0.4
+        end
+
+        if hHero.hCurrentCreep:GetLevel() == NeutralSpawner.nAverageLevel then
+           flExpLoseRatio=0.3
+        end
+
+        if hHero.hCurrentCreep:GetLevel() == NeutralSpawner.nAverageLevel-1 then
+           flExpLoseRatio=0.2
+        end
+
+        if hHero.hCurrentCreep:GetLevel() == NeutralSpawner.nAverageLevel-2 then
+           flExpLoseRatio=0.1
+        end
+
+        if hHero.hCurrentCreep:GetLevel() <= NeutralSpawner.nAverageLevel-3 then
+           flExpLoseRatio=0
+        end
+    end
+
+    print("AverageLevel: "..NeutralSpawner.nAverageLevel.."flExpLoseRatio: "..flExpLoseRatio)
+    return  flExpLoseRatio
+end
+
+
+function GameMode:RequestCreatureIndex(keys) 
+    local nPlayerID = keys.playerId
+    local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
+    
+    if hHero and hHero.hCurrentCreep then
+        print("Request Creature Index from Sever"..nPlayerID)
+        CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerID), {creepIndex=hHero.hCurrentCreep:GetEntityIndex()} )
+    end
+    
+
 end

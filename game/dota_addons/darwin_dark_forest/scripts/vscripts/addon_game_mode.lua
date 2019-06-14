@@ -427,6 +427,9 @@ function GameMode:InitGameMode()
     ListenToGameEvent( "entity_killed", Dynamic_Wrap( GameMode, 'OnEntityKilled' ), self )
     ListenToGameEvent( "npc_spawned", Dynamic_Wrap( GameMode, "OnNPCSpawned" ), self )
     ListenToGameEvent("player_chat", Dynamic_Wrap(GameMode, "OnPlayerSay"), self)
+
+    CustomGameEventManager:RegisterListener("RequestCreatureIndex", Dynamic_Wrap(GameMode, 'RequestCreatureIndex'))
+
     --[[
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( GameMode, "OnNPCSpawned" ), self )
 	ListenToGameEvent( "dota_team_kill_credit", Dynamic_Wrap( GameMode, 'OnTeamKillCredit' ), self )

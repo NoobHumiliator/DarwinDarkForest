@@ -85,6 +85,11 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 			}
 			else
 			{
+				//数据异常 再次向后台请求
+				if (CustomNetTables.GetTableValue( "player_creature_index",playerId)==undefined)
+				{
+                    GameEvents.SendCustomGameEventToServer('RequestCreatureIndex', {playerId:playerId})
+				}
 				playerPortrait.SetImage( "file://{images}/custom_game/unassigned.png" );
 			}
 		}

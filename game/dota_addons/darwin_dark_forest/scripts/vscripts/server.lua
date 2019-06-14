@@ -178,7 +178,6 @@ function Server:SubmitTaobaoCode(keys)
 
     local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "submittaobaocode")
 
-    PrintTable(keys)
     local nPlayerSteamId = PlayerResource:GetSteamAccountID(keys.playerId)
 
     request:SetHTTPRequestGetOrPostParameter("player_steam_id",tostring(nPlayerSteamId));

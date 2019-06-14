@@ -18,9 +18,7 @@ function ItemController:Init()
     -- 携带物品的概率
     self.flItemCarryChance=1
     --掉落物品的概率
-    self.flItemDropChance=0.6
-    --玩家掉落物品的概率
-    self.flPlayerItemDropChance=0.5
+    self.flItemDropChance=0.65
 
     --二维数组 k 为1-5级物品
     self.vItemsTieTable = {}
@@ -115,14 +113,17 @@ end
 function ItemController:RollDiceToDrop(hUnit)
 
     local bDropItem = false
-    
+
+
     --玩家与野怪掉率不同
     if hUnit:GetTeamNumber() == DOTA_TEAM_NEUTRALS then
        if RandomInt(1, 100)/100 < self.flItemDropChance then
            bDropItem=true
        end
     else
-       if RandomInt(1, 100)/100 < self.flPlayerItemDropChance then
+       --根据玩家等级 计算掉率
+       local flPlayerItemDropChance = CalculateItemDropChance(hUnit)
+       if RandomInt(1, 100)/100 < flPlayerItemDropChance then
            bDropItem=true
        end
     end
@@ -191,4 +192,38 @@ function ItemController:OnItemPickUp(event)
       end
   end
   
+end
+
+
+
+--计算 生物的物品掉率
+function CalculateItemDropChance(hUnit)
+              
+    local flItemDropChance = 0.4
+
+    if hUnit and hUnit.GetLevel and NeutralSpawner.nAverageLevel then
+        
+        if hUnit:GetLevel() >= NeutralSpawner.nAverageLevel+2 then
+           flItemDropChance=0.45
+        end
+
+        if hUnit:GetLevel() == NeutralSpawner.nAverageLevel+1 then
+           flItemDropChance=0.35
+        end
+
+        if hUnit:GetLevel() == NeutralSpawner.nAverageLevel then
+           flItemDropChance=0.25
+        end
+
+        if hUnit:GetLevel() == NeutralSpawner.nAverageLevel-1 then
+           flItemDropChance=0.15
+        end
+
+        if hUnit:GetLevel() <= NeutralSpawner.nAverageLevel-2 then
+           flItemDropChance=0
+        end
+    end
+
+    print("AverageLevel: "..NeutralSpawner.nAverageLevel.."flItemDropChance: "..flItemDropChance)
+    return  flItemDropChance
 end

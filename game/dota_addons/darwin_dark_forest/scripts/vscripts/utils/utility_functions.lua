@@ -224,3 +224,16 @@ function RemoveItemFromList(vList,item)
     end
     return vList
 end
+
+
+function FloatKeepOneDecimal(flDecimal)
+    flDecimal = flDecimal * 10
+
+    if flDecimal % 1 >= 0.5 then 
+        flDecimal=math.ceil(flDecimal)
+    else
+        flDecimal=math.floor(flDecimal)
+    end
+
+    return  flDecimal * 0.1
+end

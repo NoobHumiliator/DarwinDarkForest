@@ -3,10 +3,18 @@
 function OnUpdateSelectedUnit()
 {
      var unit = Players.GetSelectedEntities(Players.GetLocalPlayer());
-     var creepIndex = CustomNetTables.GetTableValue( "player_creature_index", Players.GetLocalPlayer()).creepIndex
-     if ( Entities.IsValidEntity(creepIndex) && unit[0] ==  Players.GetPlayerHeroEntityIndex(Players.GetLocalPlayer())  )
-     {  
-     	GameUI.SelectUnit(creepIndex, false)
+     var creepData= CustomNetTables.GetTableValue( "player_creature_index", Players.GetLocalPlayer())
+     
+     if (creepData!=undefined &&  creepData.creepIndex!=undefined && Entities.IsValidEntity(creepData.creepIndex))
+     {
+         //如果选中的是自己的英雄（F1）
+         if ( unit[0]  ==  Players.GetPlayerHeroEntityIndex(Players.GetLocalPlayer())  )
+         {  
+            GameUI.SelectUnit(creepData.creepIndex, false)
+         }
+     //数据异常，向后台重新请求数据
+     } else {
+        GameEvents.SendCustomGameEventToServer('RequestCreatureIndex', {playerId:Players.GetLocalPlayer()})
      }
 }
 
@@ -27,6 +35,6 @@ function OnPlayerCreatureChange(tableName,key,value)
     // Built-In Dota client events
     GameEvents.Subscribe( "dota_player_update_selected_unit", OnUpdateSelectedUnit );
     CustomNetTables.SubscribeNetTableListener( "player_creature_index", OnPlayerCreatureChange );
-
+   
 
 })();
