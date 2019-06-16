@@ -5,7 +5,10 @@ function UpdateRadar(keys)
 {
    var currentLevelExp =  keys.current_exp;
    var nextLevelExp =  keys.next_level_need;
-   var text =  keys.current_exp + "/" + keys.next_level_need + $.Localize("#exp");
+   var current_exp= parseFloat(keys.current_exp).toFixed(0);
+
+
+   var text = current_exp + "/" + keys.next_level_need + $.Localize("#exp");
    $("#LevelProgressLable").text=text;
    $("#ProgressBarLeft").style.width= (keys.current_exp/keys.next_level_need*100)+"%";
     

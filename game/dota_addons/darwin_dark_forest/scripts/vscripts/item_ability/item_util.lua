@@ -4,7 +4,6 @@ function AddHealthBonus(hUnit,nHealth)
 	local hMaxHealth=hUnit:GetMaxHealth()
 	local hCurrentHealth = hUnit:GetHealth()
 	local flRatio=hCurrentHealth/hMaxHealth
-	print("hMaxHealth+nHealth"..(hMaxHealth+nHealth))
 	hUnit:SetBaseMaxHealth(hMaxHealth+nHealth)
 	hUnit:SetMaxHealth(hMaxHealth+nHealth)
     hUnit:SetHealth(math.floor(flRatio* (hMaxHealth+nHealth)))

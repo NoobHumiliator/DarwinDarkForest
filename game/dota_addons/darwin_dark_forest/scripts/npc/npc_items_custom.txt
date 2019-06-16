@@ -8066,7 +8066,7 @@
 		// Recipe
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemRecipe"					"1"
-		"ItemResult"					"item_recipe_sange_and_yasha"
+		"ItemResult"					"item_sange_and_yasha_lua"
 		"ItemRequirements"
 		{
 			"01"						"item_sange_lua;item_yasha_lua"

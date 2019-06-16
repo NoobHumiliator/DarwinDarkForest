@@ -26,7 +26,10 @@ function CloseInstruction(){
 
 
 function TipsOver(message, pos){
-    $.DispatchEvent( "DOTAShowTextTooltip", $("#"+pos), $.Localize(message));
+    if ($("#"+pos)!=undefined)
+    {
+       $.DispatchEvent( "DOTAShowTextTooltip", $("#"+pos), $.Localize(message));
+    }
 }
 
 function TipsOut(){
@@ -35,10 +38,21 @@ function TipsOut(){
 }
 
 
-
-
 (function()
 {
+
+    $.Schedule(3, function(){
+        var econ_data = CustomNetTables.GetTableValue("econ_data", "econ_data");
+        var playerId = Game.GetLocalPlayerInfo().player_id;     //玩家ID
+        var steam_id = Game.GetPlayerInfo(playerId).player_steamid;
+        steam_id = ConvertToSteamId32(steam_id);
+        var dnaValue = econ_data["dna"][steam_id]
+        if (dnaValue == 100)
+        {
+            FindDotaHudElement("page_instruction").RemoveClass("Hidden")
+        }
+    });
+
     $.Schedule(6, function(){
       TipsOver('TopMenuIcon_Guide_message','TopMenuIcon_Guide')
     });

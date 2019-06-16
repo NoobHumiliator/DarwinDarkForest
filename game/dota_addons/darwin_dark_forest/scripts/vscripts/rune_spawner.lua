@@ -5,7 +5,7 @@ end
 
 function RuneSpawner:Init()
   
-  RuneSpawner.flTimeInterval=120
+
   ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(RuneSpawner, "OnGameRulesStateChange"), self)
   ListenToGameEvent( "dota_item_picked_up", Dynamic_Wrap( RuneSpawner, "OnItemPickUp"), self )
 
@@ -56,12 +56,12 @@ end
 
 function RuneSpawner:Begin()
          
-    --根据间隔刷符
-    Timers:CreateTimer(RuneSpawner.flTimeInterval, function()
+    --根据人数 调整刷符间隔
+    Timers:CreateTimer(120, function()
         RuneSpawner:SpawnOneRune()
-        return RuneSpawner.flTimeInterval
+        -- 1人8分钟  10人48秒 12人40秒
+        return 480/GameRules.nTotalHeroNumber
     end)
-
 end
 
 
@@ -85,7 +85,7 @@ function RuneSpawner:SpawnOneRune()
    Timers:CreateTimer(0.1, function()
         if  hVisionRevealer and not hVisionRevealer:IsNull() and hVisionRevealer:IsAlive() then
           for nTeam = 0, (DOTA_TEAM_COUNT-1) do
-              AddFOWViewer(nTeam, vVector, 600, 0.5, false)
+              AddFOWViewer(nTeam, vVector, 700, 0.5, false)
           end
           return 0.5
         else

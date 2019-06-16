@@ -10,11 +10,28 @@ function OnRuneSpawned( key )
 }
 
 
+function OnCourierSpawned( key )
+{
+	$( "#CourierMessage" ).RemoveClass( "Hidden");
+	var item_image_name = "file://{images}/items/" + key.item_texture_name.replace( "item_", "" ) + ".png"
+	$( "#CourierMessage_Icon" ).SetImage(item_image_name);
+    $( "#CourierMessage_Label" ).text = $.Localize("courier_spawn");
+	$.Schedule( 4, ClearCourierMessage );
+}
+
+
+
 function ClearRuneSpawnMessage()
 {
 	$("#AlertMessage").AddClass( "Hidden" );
 
 }
+
+function ClearCourierMessage()
+{
+	$("#CourierMessage").AddClass( "Hidden" );
+}
+
 
 function OnRunePickUp(key)
 {
@@ -56,5 +73,6 @@ function ClearRunePickUpMessage()
 (function () {
 	GameEvents.Subscribe( "rune_spawned", OnRuneSpawned );
 	GameEvents.Subscribe( "rune_pick_up", OnRunePickUp );
+	GameEvents.Subscribe( "courier_spawned", OnCourierSpawned );
 })();
 

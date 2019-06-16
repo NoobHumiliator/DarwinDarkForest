@@ -32,6 +32,7 @@ function decay_summon_ghost_ogreseal:OnSpellStart()
 				    endTime = FrameTime(),
 				    callback = function()
 				       	hGhostSeal:SetMaxHealth(self.ghost_seal_health)
+				       	hGhostSeal:SetBaseMaxHealth(self.ghost_seal_health)
 				        hGhostSeal:Heal(self.ghost_seal_health,hGhostSeal)
 				    end
 				})

@@ -1,6 +1,6 @@
 "AddonInfo"
 {
-	 maps			"island_1x10 island_3x4"
+	 maps			"island_1x10"
 	"IsPlayable"	"1"
 	"HeroGuidesSupported" "1"
 	"PenaltiesEnabled"			"1"

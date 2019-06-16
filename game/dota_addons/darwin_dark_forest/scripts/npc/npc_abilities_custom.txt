@@ -3,6 +3,7 @@
 {
 	"Version"       "1"
 
+
    "empty_1"
     {
         "BaseClass"					"ability_datadriven"
@@ -138,6 +139,41 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityType"	    "DOTA_ABILITY_TYPE_ATTRIBUTES"
 	}
+
+    
+    "dota_ability_treasure_courier"
+    {
+        "BaseClass"                         "ability_datadriven"
+        "AbilityName"                       "dota_ability_health_granter"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "IsOnCastBar"                       "0"
+
+        "Modifiers"
+        {
+            "modifier_dota_ability_treasure_courier"
+            {
+                "IsHidden"              "1"
+                "Passive"               "1"
+                
+                "Aura"                  ""
+                "Aura_Radius"           "600"
+                "Aura_Teams"            "DOTA_UNIT_TARGET_TEAM_BOTH"
+                "Aura_Types"            "DOTA_UNIT_TARGET_HERO"
+                "Aura_ApplyToCaster"    "0"
+
+                "States"
+                {
+                    //"MODIFIER_STATE_UNSELECTABLE"       "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NO_HEALTH_BAR"      "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_INVULNERABLE"       "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NO_UNIT_COLLISION"  "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_ATTACK_IMMUNE"      "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_MAGIC_IMMUNE"       "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_OUT_OF_GAME"        "MODIFIER_STATE_VALUE_ENABLED"
+                }
+            }
+        }
+    }
 
     "dota_ability_vision_revealer"
     {
@@ -1357,7 +1393,7 @@
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityManaCost"               "140 145 150 155 160 165 170 175"
+        "AbilityManaCost"               "100 105 110 115 120 125 130 135"
 
         // Special
         //-------------------------------------------------------------------------------------------------------------
@@ -4118,57 +4154,6 @@
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
     }
 
-    "spirit_breaker_bulldoze"
-    {
-
-        "BaseClass"                     "spirit_breaker_bulldoze"
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-        "FightRecapLevel"               "1"
-        "AbilitySound"                  "Hero_Spirit_Breaker.EmpoweringHaste.Cast"
-        
-        "MaxLevel"                      "4"
-        // Casting
-        //-------------------------------------------------------------------------------------------------------------
-        
-        // Time     
-        //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "22"
-        // Cost
-        //-------------------------------------------------------------------------------------------------------------
-        "AbilityManaCost"               "30"
-
-        
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"                      "FIELD_INTEGER"
-                "movement_speed"                "24 36 48 60"
-            }
-            "02"
-            {
-                "var_type"                      "FIELD_INTEGER"
-                "status_resistance"             "55 70 85 100"
-            }
-            "03"
-            {
-                "var_type"                      "FIELD_FLOAT"
-                "duration"                      "8"
-            }
-            "04"
-            {
-                "var_type"                      "FIELD_INTEGER"
-                "nDurable"                      "5 11 17 23"
-            }
-            "05"
-            {
-                "var_type"                      "FIELD_INTEGER"
-                "nHunt"                         "5 11 17 23"
-            }
-        }
-        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
-        "AbilityCastGestureSlot"        "DEFAULT"
-    }
 
    "spirit_breaker_greater_bash"
     {
@@ -5135,16 +5120,6 @@
                 "var_type"              "FIELD_FLOAT"
                 "duration"              "6.0"
             }
-            "05"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "nHunt"                 "1 2 3 4 5 6"
-            }
-            "06"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "nDecay"                "1 2 3 4 5 6"
-            }
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
     }
@@ -5817,7 +5792,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "ability_lua"
         "ScriptFile"                    "creature_ability/siltbreaker_tail_spin_ccw"
-        "AbilityTextureName"            "viper_corrosive_skin"
+        "AbilityTextureName"            "slardar_sprint"
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
 
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -5899,63 +5874,89 @@
         }
     }
 
-    "sandking_caustic_finale"
+    "sandking_burrowstrike"
     {
-        "BaseClass"                     "sandking_caustic_finale"
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"                    "5102"                                                      // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
-        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
-        "AbilitySound"                  "Ability.SandKing_CausticFinale"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES_STRONG"
+        "FightRecapLevel"               "1"
+        "HasScepterUpgrade"             "1"
+        "AbilitySound"                  "Ability.SandKing_BurrowStrike"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "400 500 600 700 800 900 1000 1100"
+        "AbilityCastPoint"              "0.0 0.0 0.0 0.0"
 
         "MaxLevel"                      "8"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "15 14 13 12 11 10 9 8"
 
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "105 110 115 120 125 130 135 140"
+        
+        "AbilityDamage"                 "75 150 250 375 525 700 850 1025"
+        
         // Special
         //-------------------------------------------------------------------------------------------------------------
         "AbilitySpecial"
         {
             "01"
             {
-                "var_type"                  "FIELD_INTEGER"
-                "caustic_finale_radius"     "400"
+                "var_type"          "FIELD_INTEGER"
+                "burrow_width"      "150"
             }
             "02"
             {
-                "var_type"                  "FIELD_INTEGER"
-                "caustic_finale_damage"     "90 130 170 220 280 350 430 520"
+                "var_type"          "FIELD_FLOAT"
+                "burrow_duration"   "1.6 1.8 2.0 2.2 2.4 2.6 2.8 3.0"
             }
             "03"
             {
-                "var_type"                          "FIELD_INTEGER"
-                "caustic_finale_damage_expire"      "20 50 80 110 150 200 260 330"
+                "var_type"          "FIELD_INTEGER"
+                "burrow_speed"      "2000"
             }
             "04"
             {
-                "var_type"                  "FIELD_FLOAT"
-                "caustic_finale_duration"   "6"
+                "var_type"          "FIELD_FLOAT"
+                "burrow_anim_time"  "0.52"
             }
             "05"
             {
-                "var_type"                  "FIELD_INTEGER"
-                "caustic_finale_slow"       "-15 -20 -25 -30 -35 -40 -45 -50"
+                "var_type"          "FIELD_INTEGER"
+                "tooltip_range"     "400 500 600 700 800 900 1000 1100"
             }
             "06"
             {
-                "var_type"                  "FIELD_FLOAT"
-                "caustic_finale_slow_duration"      "3"
-            }       
+                "var_type"          "FIELD_INTEGER"
+                "cast_range_scepter"    "1400"
+            }
             "07"
             {
-                "var_type"                  "FIELD_INTEGER"
-                "caustic_finale_expire_dmg_pct_tooltip"     "50"
+                "var_type"          "FIELD_INTEGER"
+                "burrow_speed_scepter"   "3000"
             }
             "08"
             {
-                "var_type"                  "FIELD_INTEGER"
-                "nDecay"                    "4 8 12 16 20 24 28 32"
-            }               
+                "var_type"            "FIELD_INTEGER"
+                "nHunt"               "3 6 9 12 15 18 21 24"
+            }
+            "09"
+            {
+                "var_type"            "FIELD_INTEGER"
+                "nDurable"            "3 6 9 12 15 18 21 24"
+            }
         }
-        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
     }
 
 
@@ -7202,11 +7203,11 @@
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "16 14 12 10 8 6"
+        "AbilityCooldown"               "9 8 7 6 5 4"
         
         // Cost
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityManaCost"               "60"
+        "AbilityManaCost"               "45"
         
         "AbilitySound"                  "Hero_Antimage.Blink_out"
 
@@ -7217,7 +7218,7 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "blink_range"           "925 1000 1075 1150 1225 1300"
+                "blink_range"           "1000 1150 1300 1450 1600 1750"
                 "LinkedSpecialBonus"    "special_bonus_unique_antimage_3"
             }
             "02"

@@ -21,6 +21,11 @@
     color:#ddd;
     font-size:55px;
 }
+.instruction_title_small{
+    color:#ddd;
+    font-size:30px;
+    vertical-align: bottom;
+}
 
 
 .instruction_note{

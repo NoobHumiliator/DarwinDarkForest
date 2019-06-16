@@ -4,6 +4,7 @@
     </styles>
 
     <scripts>
+        <include src="file://{resources}/scripts/custom_game/util.js" />
         <include src="file://{resources}/scripts/custom_game/top_menu.js" />
     </scripts>
     <Panel style="width:100%;height:100%;" hittest="false">

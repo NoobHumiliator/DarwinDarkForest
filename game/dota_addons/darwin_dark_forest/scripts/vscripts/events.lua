@@ -29,7 +29,9 @@ function GameMode:OnGameRulesStateChange()
           local nPlayerSteamId = PlayerResource:GetSteamAccountID(nPlayerID)
           GameRules.sValidePlayerSteamIds=GameRules.sValidePlayerSteamIds..nPlayerSteamId..","
           GameRules.vPlayerSteamIdMap[nPlayerSteamId]=nPlayerID
-          Econ.vPlayerData[nPlayerID]={}
+          if Econ.vPlayerData[nPlayerID] == nil then
+             Econ.vPlayerData[nPlayerID]={}
+          end
        end
      end
      
@@ -78,7 +80,11 @@ end
 function GameMode:OnPlayerPickHero(keys)
  
     local hHero = EntIndexToHScript(keys.heroindex)
-    local nPlayerId=keys.player-1
+    local nPlayerId=hHero:GetPlayerID()
+
+    if Econ.vPlayerData[nPlayerId] == nil then
+       Econ.vPlayerData[nPlayerId]={}
+    end
 
     --初始化玩家的perk点数
     GameMode.vPlayerPerk[nPlayerId]={0,0,0,0,0,0}
@@ -188,9 +194,9 @@ function GameMode:OnEntityKilled(keys)
        end
 
        if hKilledUnit.nCreatureLevel then
-         hHero.nCustomExp=hHero.nCustomExp+ math.ceil(vCREEP_EXP_TABLE[hKilledUnit.nCreatureLevel]*flExpRatio)
+         hHero.nCustomExp=hHero.nCustomExp+ vCREEP_EXP_TABLE[hKilledUnit.nCreatureLevel]*flExpRatio
        else
-         hHero.nCustomExp=hHero.nCustomExp+ math.ceil(vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio)
+         hHero.nCustomExp=hHero.nCustomExp+ vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio
        end
        
        --计算等级
@@ -244,8 +250,6 @@ function GameMode:OnEntityKilled(keys)
           if hHero.nCustomExp<1 then
               hHero.nCustomExp=1
           end
-          --保留一位小数
-          hHero.nCustomExp = FloatKeepOneDecimal(hHero.nCustomExp)
 
           -- 处理被其他队伍玩家击杀的情况 
           if bKilledByOtherTeam then
@@ -260,7 +264,6 @@ function GameMode:OnEntityKilled(keys)
             PlayAbsorbParticle(tempPerksMap,hKillerUnit,hKilledUnit)
 
             --给击杀者经验
-           
             local flExpRatio=1
             if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_item_creed_of_omniscience") then
                  flExpRatio=1.2
@@ -268,8 +271,6 @@ function GameMode:OnEntityKilled(keys)
 
             hKillerHero.nCustomExp=hKillerHero.nCustomExp+ vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio 
             
-            --保留一位小数
-            hHero.nCustomExp = FloatKeepOneDecimal(hHero.nCustomExp)
 
             PlayKillEffectAndSound(nKillerPlayerId)
             --给击杀者 英雄换模型
@@ -617,34 +618,34 @@ function CalculateExpLostRatio(hHero)
     --损失经验率
     local flExpLoseRatio = 0.5
 
-    if  NeutralSpawner.nAverageLevel then
+    if  GameRules.nAverageLevel then
         
-        if hHero.hCurrentCreep:GetLevel() >= NeutralSpawner.nAverageLevel+2 then
+        if hHero.hCurrentCreep:GetLevel() >= GameRules.nAverageLevel+2 then
            flExpLoseRatio=0.5
         end
 
-        if hHero.hCurrentCreep:GetLevel() == NeutralSpawner.nAverageLevel+1 then
+        if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel+1 then
            flExpLoseRatio=0.4
         end
 
-        if hHero.hCurrentCreep:GetLevel() == NeutralSpawner.nAverageLevel then
+        if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel then
            flExpLoseRatio=0.3
         end
 
-        if hHero.hCurrentCreep:GetLevel() == NeutralSpawner.nAverageLevel-1 then
+        if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-1 then
            flExpLoseRatio=0.2
         end
 
-        if hHero.hCurrentCreep:GetLevel() == NeutralSpawner.nAverageLevel-2 then
+        if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-2 then
            flExpLoseRatio=0.1
         end
 
-        if hHero.hCurrentCreep:GetLevel() <= NeutralSpawner.nAverageLevel-3 then
+        if hHero.hCurrentCreep:GetLevel() <= GameRules.nAverageLevel-3 then
            flExpLoseRatio=0
         end
     end
 
-    print("AverageLevel: "..NeutralSpawner.nAverageLevel.."flExpLoseRatio: "..flExpLoseRatio)
+    print("AverageLevel: "..GameRules.nAverageLevel.."flExpLoseRatio: "..flExpLoseRatio)
     return  flExpLoseRatio
 end
 

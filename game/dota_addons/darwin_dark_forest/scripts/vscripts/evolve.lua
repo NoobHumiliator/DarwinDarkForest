@@ -91,6 +91,9 @@ function Evolve (nPlayerId,hHero)
     --修正模型动作
     ActivityModifier:AddActivityModifierThink(hUnit)
 
+    --计算平均等级
+    CountAverageLevel()
+
     return hUnit
 
 end
@@ -169,7 +172,7 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
   })
 
   --清除周围树木,防止卡在树里面
-  GridNav:DestroyTreesAroundPoint( hUnit:GetOrigin(), 300, false )
+  GridNav:DestroyTreesAroundPoint( hUnit:GetOrigin(), 200, false )
 
   return hUnit
 
@@ -576,4 +579,32 @@ end
 ]]
 
 
+function CountAverageLevel()
 
+     local nTotalLevel = 0
+     local nTotalHeroNumber = 0
+
+     for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
+        if PlayerResource:IsValidPlayer( nPlayerID ) then
+          local hHero = PlayerResource:GetSelectedHeroEntity( nPlayerID )
+          if hHero then
+            if hHero.nCurrentCreepLevel then
+              nTotalLevel=nTotalLevel+hHero.nCurrentCreepLevel 
+            else
+              nTotalLevel=nTotalLevel+1
+            end
+            nTotalHeroNumber=nTotalHeroNumber+1
+          end
+        end
+     end
+     
+     local nAverageLevel =1 
+
+     if nTotalHeroNumber>0 then
+        nAverageLevel = math.floor(nTotalLevel/nTotalHeroNumber + 0.5) --四舍五入
+     end
+     
+     GameRules.nAverageLevel=nAverageLevel
+     GameRules.nTotalHeroNumber=nTotalHeroNumber
+  
+end

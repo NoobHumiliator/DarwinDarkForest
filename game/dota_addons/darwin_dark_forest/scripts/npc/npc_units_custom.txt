@@ -2,7 +2,121 @@
 "DOTAUnits"
 {
 	"Version"	"1"
+    
 
+    "npc_dota_treasure_courier"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_base"	// Class of entity of link to.
+		"Model"						"models/courier/greevil/gold_greevil_flying.vmdl"	// Model.
+		"SoundSet"					""					// Name of sound set.
+		"GameSoundsFile"			""
+		"ModelScale"				"1"
+		"Level"						"1"
+		"CanBeDominated"			"0"
+		"IsSummoned"                "1"
+		"MinimapIcon"				"minimap_loot_greevil"
+		"MinimapIconSize"			"500"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"dota_ability_treasure_courier"			// Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"			"33"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"0"			// Damage range min.
+		"AttackDamageMax"			"0"			// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"0"		// Range within a target can be acquired.
+		"AttackRange"				"0"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			""			// Speed of projectile.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"45"		// Experience earn.
+		"BountyGoldMin"				"18"		// Gold earned min.
+		"BountyGoldMax"				"32"		// Gold earned max.
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"160"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"	
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"			// Type of locomotion - ground, air
+		"MovementSpeed"				"200"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"5000"		// Base health.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"			// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+		"Creature"
+		{
+			"CanRespawn"				"0"
+			
+			//Basic AI State
+			//-----------------------------------------------------------------
+			"DefaultState"				"Invade"
+			
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"0.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+				}
+			}
+
+			//Level Up Parameters
+			//-----------------------------------------------------------------
+			"HPGain"					"40"
+			"DamageGain"				"10"
+			"ArmorGain"					"1"
+			"MagicResistGain"			"1"
+			"MoveSpeedGain"				"1"
+			"BountyGain"				"5"
+			"XPGain"					"20"
+
+			//Ability Usage Parameters
+			//-----------------------------------------------------------------
+		}
+		
+	}
 
 	"npc_rune_revealer_element"
 	{
@@ -6407,7 +6521,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"broodmother_spin_web"			// Ability 1.
+		"Ability1"					"broodmother_poison_sting"			// Ability 1.
 		"Ability2"					""		    // Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
@@ -6416,7 +6530,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-		"AbilitiesLevel"           "1"
+		"AbilitiesLevel"           "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -7127,6 +7241,88 @@
 	//-----------------------------------------
 	//   Level-5
 	//-----------------------------------------
+
+	"npc_dota_creature_amber_queen_spiderling"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"						"models/items/broodmother/spiderling/amber_queen_spiderling_2/amber_queen_spiderling_2.vmdl"	// Model.
+		"SoundSet"					"Hero_Broodmother"
+
+		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"ModelScale"				"0.7"
+		"Level"						"5"
+		"vscripts"					"creap_ai.lua"
+
+		"HasInventory"				"1"
+
+		"nHunt"                     "5"
+		"nDurable"                  "5"
+		"nDecay"                    "5"
+
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"broodmother_poison_sting"			// Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+
+		"AbilitiesLevel"            "4"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"4"			// Physical protection.
+		"MagicalResistance"			"0"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"48"		// Damage range min.
+		"AttackDamageMax"			"55"		// Damage range max.	
+		"AttackRate"				"1.4"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"60"
+		"HealthBarOffset"			"220"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"320"
+     
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"980"
+		"StatusHealthRegen"			"5"
+		"StatusMana"				"350"
+		"StatusManaRegen"			"1.5"
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+		
+		// Creature Data
+		//----------------------------------------------------------------------------------------------------------------------
+	}
 	"npc_dota_creature_small_thunder_lizard_1"
 	{
 		// General
@@ -7316,7 +7512,7 @@
 		"Ability3"					""
 		"Ability4"					""
 
-		"AbilitiesLevel"            "3"
+		"AbilitiesLevel"            "2"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -9656,7 +9852,7 @@
 		"Ability3"					""
 		"Ability4"					""
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -12188,7 +12384,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "6"
+		"AbilitiesLevel"            "4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -12345,12 +12541,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"sandking_caustic_finale"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability1"					"sandking_burrowstrike"			// Ability 1
+		"Ability2"					"sandking_epicenter"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "2"
+		"AbilitiesLevel"            "3 1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -13999,87 +14195,7 @@
 		//----------------------------------------------------------------------------------------------------------------------
 	}
 
-   "npc_dota_creature_amber_queen_spiderling"
-	{
-		// General
-		//
-		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
-		"Model"						"models/items/broodmother/spiderling/amber_queen_spiderling_2/amber_queen_spiderling_2.vmdl"	// Model.
-		"SoundSet"					"Hero_Broodmother"
-
-		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.9"
-		"Level"						"7"
-		"vscripts"					"creap_ai.lua"
-
-		"HasInventory"				"1"
-
-		"nHunt"                     "6"
-		"nDurable"                  "6"
-		"nDecay"                    "6"
-
-		
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"sandking_caustic_finale"			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
-		"Ability4"					""			// Ability 4.
-		"Ability5"					""			// Ability 5.
-		"Ability6"					""			// Ability 6 - Extra.
-		"Ability7"					""			// Ability 7 - Extra.
-		"Ability8"					""			// Ability 8 - Extra.
-
-		"AbilitiesLevel"            "1"
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"10"			// Physical protection.
-		"MagicalResistance"			"90"		// Magical protection.
-
-		// Attack
-		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"108"		// Damage range min.
-		"AttackDamageMax"			"116"		// Damage range max.
-		"AttackRate"				"0.9"		// Speed of attack.
-		"AttackAnimationPoint"		"0.21"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"128"		// Range within a target can be attacked.
-		"ProjectileModel"			""			// Particle system model for projectile.
-		"ProjectileSpeed"			"0"			// Speed of projectile.	
-
-		// Bounds
-		//----------------------------------------------------------------
-		"RingRadius"				"70"
-		"HealthBarOffset"			"160"
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
-		"MovementSpeed"				"330"		// Speed
-		"MovementTurnRate"			"0.5"		// Turning rate.
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"1550"		// Base health.
-		"StatusHealthRegen"			"7"		    // Health regeneration rate.
-		"StatusMana"				"450"			// Base mana.
-		"StatusManaRegen"			"3"			// Mana regeneration rate.
-
-
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-		
-		// Vision
-		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
-		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
-		
-		// Creature Data
-		//----------------------------------------------------------------------------------------------------------------------
-	}
+   
     
     "npc_dota_creature_large_thunder_lizard"
 	{
@@ -14698,7 +14814,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "6"
+		"AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -14799,7 +14915,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"sandking_caustic_finale"			
+		"Ability1"					"sandking_burrowstrike"			
 		"Ability2"					"sandking_epicenter"
 		"Ability3"					""			
 		"Ability4"					""			// Ability 4.
@@ -15107,8 +15223,8 @@
 	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"spirit_breaker_bulldoze"			
-		"Ability2"					"spirit_breaker_greater_bash"
+		"Ability1"					"spirit_breaker_greater_bash"			
+		"Ability2"					""
 		"Ability3"					""			
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -15116,7 +15232,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-        "AbilitiesLevel"            "2 5"
+        "AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -17535,7 +17651,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "7"
+		"AbilitiesLevel"            "6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -17728,7 +17844,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"sandking_caustic_finale"			
+		"Ability1"					"sandking_burrowstrike"			
 		"Ability2"					"sandking_epicenter"
 		"Ability3"					""			
 		"Ability4"					""			// Ability 4.
@@ -17737,7 +17853,7 @@
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-        "AbilitiesLevel"            "7 4"
+        "AbilitiesLevel"            "5 3"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -17938,7 +18054,7 @@
 	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"spirit_breaker_bulldoze"			
+		"Ability1"					"spirit_breaker_charge_of_darkness"			
 		"Ability2"					"spirit_breaker_greater_bash"
 		"Ability3"					""			
 		"Ability4"					""			// Ability 4.
@@ -20465,7 +20581,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "8"
+		"AbilitiesLevel"            "7"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -20891,7 +21007,7 @@
 	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"spirit_breaker_bulldoze"			
+		"Ability1"					"spirit_breaker_charge_of_darkness"			
 		"Ability2"					"spirit_breaker_greater_bash"
 		"Ability3"					""			
 		"Ability4"					""			// Ability 4.

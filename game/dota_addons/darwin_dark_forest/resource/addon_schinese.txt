@@ -486,7 +486,7 @@
     "npc_dota_creature_doom_icewrack"                                               "灾厄雪狼"
     "npc_dota_creature_bloodteeth"                                                  "血牙"
     "npc_dota_creature_primal_void"                                                 "虚空尊者"
-    "npc_dota_creature_dream_secret"                                                "梦魇王子"
+    "npc_dota_creature_dream_secret"                                                "梦魇亲王"
     "npc_dota_creature_broodmother_glutton_larder"                                  "饕餮蛛母"
     "npc_dota_creature_visage_soul_keeper"                                          "灵魂守卫"
     "npc_dota_creature_morphling_lost_star"                                         "迷星元素"
@@ -523,7 +523,7 @@
     "npc_dota_creature_old_element"                                                 "衡势晶体"
     "npc_dota_creature_visage_winged_harvest"                                       "空灵收割者"
     "npc_dota_creature_morphling_protean_emperor"                                   "千变之王"
-    "npc_dota_creature_wildkin_boss_02"                                             "远古枭兽王者"
+    "npc_dota_creature_wildkin_boss_2"                                              "始祖枭兽"
 
 
     //Level-11
@@ -545,7 +545,7 @@
     "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_bolt_damage"	                        "雷击伤害:"
     "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_radius"	                            "雷击范围:"
     "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_nMystery"                            "<font color='#e9c2ff'>神秘：</font>"
-    "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_nElement"                            "<font color='#e9c2ff'>元素：</font>"
+    "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_nElement"                            "<font color='#eb6877'>元素：</font>"
 
 
     "DOTA_Tooltip_ability_hunt_thirst_lua"	                                        "焦渴"
@@ -573,10 +573,6 @@
     "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_nDecay"                       "<font color='#b3d465'>腐朽：</font>"
    
     "npc_dota_creature_ghost_seal"                                                  "鬼灵海象"
-
-    "DOTA_Tooltip_ability_broodmother_poison_sting_nHunt"                           "<font color='#999999'>猎杀：</font>"
-    "DOTA_Tooltip_ability_broodmother_poison_sting_nDecay"                          "<font color='#b3d465'>腐朽：</font>"
-
 
     "DOTA_Tooltip_ability_spirit_breaker_charge_of_darkness_nFury"                  "<font color='#eb6877'>狂怒:</font>"
     "DOTA_Tooltip_ability_spirit_breaker_charge_of_darkness_nHunt"                  "<font color='#999999'>猎杀：</font>:"
@@ -622,7 +618,7 @@
     "DOTA_Tooltip_ability_troll_warlord_battle_trance_nHunt"                        "猎杀:"     
 
     "DOTA_Tooltip_ability_venomancer_poison_nova_nHunt"                             "猎杀:" 
-    "DOTA_Tooltip_ability_venomancer_poison_nova_nDecay"                            "<font color='#f8b551'>腐朽:</font>" 
+    "DOTA_Tooltip_ability_venomancer_poison_nova_nDecay"                            "<font color='#b3d465'>腐朽：</font>" 
     
 
     "DOTA_Tooltip_ability_razor_eye_of_the_storm_nElement"                          "<font color='#00a0e9'>元素:</font>" 
@@ -633,9 +629,9 @@
     
     
     "DOTA_Tooltip_ability_pudge_meat_hook_nDecay"                                   "<font color='#b3d465'>腐朽：</font>" 
-    "DOTA_Tooltip_ability_pudge_meat_hook_nFury"                                    "<font color='#eb6877'>狂怒:</font>" 
+    "DOTA_Tooltip_ability_pudge_meat_hook_nHunt"                                    "<font color='#999999'>猎杀：</font>" 
     
-        
+    
     "DOTA_Tooltip_ability_spectre_dispersion_nMystery"                              "<font color='#e9c2ff'>神秘：</font>" 
     "DOTA_Tooltip_ability_spectre_dispersion_nDurable"                              "<font color='#f8b551'>坚韧:</font>" 
     
@@ -701,7 +697,7 @@
     "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua"                                   "陵卫斗篷"
     "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_Description"                       "维萨吉产生数层屏障来保护他，降低受到的伤害。每当他受到伤害，就会失去一层屏障，失去的屏障需要一定时间才能恢复。"
     "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_max_layers"                        "最大层数："
-    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_damage_reduction"                  "每层伤害减免："
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_damage_reduction"                  "%每层伤害减免："
     "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_recovery_time"                     "每层恢复时间："
     "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_minimum_damage"                    "最低伤害："
 
@@ -771,7 +767,7 @@
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_nether_blast_level"                          "骷髅法师幽冥轰爆等级："
 
     "DOTA_Tooltip_ability_decay_mystery_summon_familiar"                                          "召唤佣兽"
-    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_Description"                              "召唤%familiar_number%只盲眼的佣兽为维萨吉作战。佣兽拥有石像形态技能，可以化为石像，在落地时使敌人眩晕。在石像形态中的佣兽无敌，并且迅速回复生命值。佣兽被击杀时给予高额奖励。"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_Description"                              "召唤%familiar_number%只盲眼的佣兽为维萨吉作战。佣兽拥有石像形态技能，可以化为石像，在落地时使敌人眩晕。在石像形态中的佣兽无敌，并且迅速回复生命值。"
     "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_number"                          "佣兽数量"
     "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_hp"                              "佣兽血量"
     "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_armor"                           "佣兽护甲"
@@ -1383,14 +1379,14 @@
 
 
     "DOTA_Tooltip_Ability_phantom_assassin_blur_nDurable"                     "<font color='#f8b551'>坚韧：</font>"
-    "DOTA_Tooltip_Ability_phantom_assassin_blur_nHunt"                        "猎杀"
+    "DOTA_Tooltip_Ability_phantom_assassin_blur_nHunt"                        "<font color='#999999'>猎杀：</font>"
 
 
     "DOTA_Tooltip_Ability_riki_smoke_screen_nMystery"                          "<font color='#e9c2ff'>神秘：</font>"
-    "DOTA_Tooltip_Ability_riki_smoke_screen_nHunt"                             "猎杀"
+    "DOTA_Tooltip_Ability_riki_smoke_screen_nHunt"                             "<font color='#999999'>猎杀：</font>"
 
     "DOTA_Tooltip_Ability_ember_spirit_searing_chains_nElement"                "<font color='#00a0e9'>元素：</font>"
-    "DOTA_Tooltip_Ability_ember_spirit_searing_chains_nHunt"                   "猎杀"
+    "DOTA_Tooltip_Ability_ember_spirit_searing_chains_nHunt"                   "<font color='#999999'>猎杀：</font>"
 
     "DOTA_Tooltip_Ability_ember_spirit_sleight_of_fist_nElement"               "<font color='#00a0e9'>元素：</font>"
     "DOTA_Tooltip_Ability_ember_spirit_sleight_of_fist_nFury"                  "<font color='#eb6877'>狂怒：</font>"
@@ -1502,13 +1498,20 @@
     "DOTA_Tooltip_Ability_item_ogre_seal_totem_bonus_hp"                 "生命加成："
 
 
+    "DOTA_Tooltip_Ability_sandking_burrowstrike_nDurable"                 "<font color='#f8b551'>坚韧：</font>"
+    "DOTA_Tooltip_Ability_sandking_burrowstrike_nHunt"                    "<font color='#999999'>猎杀：</font>"
+
+
     "GameInstruction"                                                    "玩法简介"
     "note_1"                                                             "Note1: 击杀吃掉敌对生物获取经验值以及进化特性。"
     "note_2"                                                             "Note2: 吃掉的生物种类决定进化方向，请留意右下角雷达图。"
     "note_3"                                                             "Note3: 捡起随机刷新的各色神符神符，快速提高某种进化特性。"
     "note_4"                                                             "Note4: 任意玩家达到11级时游戏进入死亡模式，存活到最后的玩家获得游戏胜利。"
 
+    "npc_dota_treasure_courier"                                          "宝物信使"
 
+    "courier_spawn"                                                      "信使携带宝物  "
+    "GameInstructionSmall"                                               "(左上菜单可重新打开此页面)"
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
@@ -1671,21 +1674,21 @@
 	"npc_dota_creature_riki_crimson_edict_of_shadows_golden_shadow_masquerade_shadow_masquerade"                  "隐形刺客"
 	"npc_dota_creature_riki_golden_edict_of_shadows_golden_shadow_masquerade_shadow_masquerade"                  "隐形刺客"
 	"npc_dota_creature_riki_crimson_edict_of_shadows_golden_edict_of_shadows_golden_shadow_masquerade_shadow_masquerade"                  "隐形刺客"
-	"npc_dota_creature_dream_secret_crimson_edict_of_shadows"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_golden_edict_of_shadows"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_golden_shadow_masquerade"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_shadow_masquerade"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_golden_edict_of_shadows"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_golden_shadow_masquerade"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_shadow_masquerade"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_golden_edict_of_shadows_golden_shadow_masquerade"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_golden_edict_of_shadows_shadow_masquerade"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_golden_shadow_masquerade_shadow_masquerade"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_golden_edict_of_shadows_golden_shadow_masquerade"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_golden_edict_of_shadows_shadow_masquerade"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_golden_shadow_masquerade_shadow_masquerade"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_golden_edict_of_shadows_golden_shadow_masquerade_shadow_masquerade"                  "梦魇王子"
-	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_golden_edict_of_shadows_golden_shadow_masquerade_shadow_masquerade"                  "梦魇王子"
+	"npc_dota_creature_dream_secret_crimson_edict_of_shadows"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_golden_edict_of_shadows"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_golden_shadow_masquerade"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_shadow_masquerade"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_golden_edict_of_shadows"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_golden_shadow_masquerade"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_shadow_masquerade"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_golden_edict_of_shadows_golden_shadow_masquerade"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_golden_edict_of_shadows_shadow_masquerade"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_golden_shadow_masquerade_shadow_masquerade"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_golden_edict_of_shadows_golden_shadow_masquerade"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_golden_edict_of_shadows_shadow_masquerade"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_golden_shadow_masquerade_shadow_masquerade"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_golden_edict_of_shadows_golden_shadow_masquerade_shadow_masquerade"                  "梦魇亲王"
+	"npc_dota_creature_dream_secret_crimson_edict_of_shadows_golden_edict_of_shadows_golden_shadow_masquerade_shadow_masquerade"                  "梦魇亲王"
 	"npc_dota_creature_nightmare_hunter_crimson_edict_of_shadows"                  "梦魇猎杀者"
 	"npc_dota_creature_nightmare_hunter_golden_edict_of_shadows"                  "梦魇猎杀者"
 	"npc_dota_creature_nightmare_hunter_golden_shadow_masquerade"                  "梦魇猎杀者"

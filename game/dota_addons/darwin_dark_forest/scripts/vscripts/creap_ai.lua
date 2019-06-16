@@ -14,7 +14,7 @@ function Spawn( entityKeyValues )
 
     if thisEntity:GetLevel() then
 		local nLevel= thisEntity:GetLevel()     
-		thisEntity:SetHullRadius(10+nLevel*4)  --体型跟随等级线性增加 10到50
+		thisEntity:SetHullRadius(7+nLevel*4)  --体型跟随等级线性增加 6可以通过 7级不可以
 	end
     
 

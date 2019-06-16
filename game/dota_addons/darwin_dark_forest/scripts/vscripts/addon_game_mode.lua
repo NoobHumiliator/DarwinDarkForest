@@ -103,6 +103,7 @@ function Precache( context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts", context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts", context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts", context )
 
 
      
@@ -404,12 +405,6 @@ function GameMode:InitGameMode()
     GameRules:GetGameModeEntity():SetLoseGoldOnDeath(false)
     GameRules:GetGameModeEntity():SetBuybackEnabled(false)
     --在死亡事件里面固定重生时间
-
-    --为测试模式设置
-    if bTEST_MODE and not IsDedicatedServer() then
-        --GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
-    end
-    
     
     --GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, "DamageFilter"), self)
     --GameRules:GetGameModeEntity():SetExecuteOrderFilter(Dynamic_Wrap(GameMode, "OrderFilter"), self)
@@ -445,7 +440,7 @@ end
 --本游戏 直接禁止一切获取金币的手段
 function GameMode:ModifyGoldFilter(filterTable)
     local reason = filterTable.reason_const
-    print("[GameMode:ModifyGoldFilter]: Attempt to call default dota gold modify func... FIX IT - Reason: " .. filterTable.reason_const .."  --  Amount: " .. filterTable.gold)
+    --print("[GameMode:ModifyGoldFilter]: Attempt to call default dota gold modify func... FIX IT - Reason: " .. filterTable.reason_const .."  --  Amount: " .. filterTable.gold)
     filterTable.gold = 0
     return false
 end
@@ -578,7 +573,8 @@ function GameMode:UpdateScoreboardAndVictory()
              if nTeamMaxLevel<nLevel then
              	nTeamMaxLevel=nLevel
              end
-             if PlayerResource:GetSelectedHeroEntity(nPlayerID):IsAlive() or PlayerResource:GetSelectedHeroEntity(nPlayerID):GetRespawnTime() < 10 then
+             local hHero = PlayerResource:GetSelectedHeroEntity (nPlayerID)
+             if (hHero:IsAlive() and hHero.hCurrentCreep and hHero.hCurrentCreep.IsAlive and hHero.hCurrentCreep:IsAlive()  ) or PlayerResource:GetSelectedHeroEntity(nPlayerID):GetRespawnTime() < 10 then
                 table.insert(vAliveTeams, nTeamID)
              end
 		  end

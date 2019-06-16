@@ -1,5 +1,5 @@
 local vMysteryTopLeft= {x=-6830,y=7637 }
-local vMysteryDownRight= {x=2416,y=-1412}
+local vMysteryDownRight= {x=-1544,y=1412}
 local vElementTopLeft= {x=1125,y=-200}
 local vElementDownRight= {x=6000,y=-6000}
 local vDurableTopLeft= {x=-2190,y=7825}
@@ -11,8 +11,8 @@ local vFuryTopLeft_2= {x=5883,y=6909}
 local vFuryDownRight_2= {x=8211,y=-5400}
 
 
-local vDecayTopLeft= {x=-8051,y=1980}
-local vDecayDownRight= {x=476,y=-5165}
+local vDecayTopLeft= {x=-8251,y=3500}
+local vDecayDownRight= {x=-500,y=-5165}
 
 local vHuntTopLeft= {x=-4914,y=2900}
 local vHuntDownRight= {x=3357,y=-2000}
@@ -78,75 +78,73 @@ end
 
 
 function NeutralSpawner:SpawnOneCreature()
+
    -- 先找到队伍平均等级
-   local nTotalLevel = 0
-   local nTotalHero = 0
-
-   for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
-      if PlayerResource:IsValidPlayer( nPlayerID ) then
-        local hHero = PlayerResource:GetSelectedHeroEntity( nPlayerID )
-        if hHero==nil then
-          nTotalLevel=nTotalLevel+1
-        else
-          nTotalLevel=nTotalLevel+hHero.nCurrentCreepLevel 
-        end
-        nTotalHero=nTotalHero+1
-      end
-   end
-
-   local nAverageLevel = math.floor(nTotalLevel/nTotalHero + 0.5) --四舍五入
-   NeutralSpawner.nAverageLevel=nAverageLevel
+   local nAverageLevel = GameRules.nAverageLevel
   
    --比例
    local vLevelRatio ={}
-   vLevelRatio["courier"]=0.80 --这是信使的比例
+   vLevelRatio["courier"]=0.7 --这是信使的比例
   --key是与玩家等级差距 value是比例
    vLevelRatio[-3]=0.02
-   vLevelRatio[-2]=0.03
-   vLevelRatio[-1]=0.055
-   vLevelRatio[0]=0.055
-   vLevelRatio[1]=0.025
-   vLevelRatio[2]=0.01
-   vLevelRatio[3]=0.005
-
+   vLevelRatio[-2]=0.04
+   vLevelRatio[-1]=0.08
+   vLevelRatio[0]=0.08
+   vLevelRatio[1]=0.04
+   vLevelRatio[2]=0.02
+   vLevelRatio[3]=0.011
+   vLevelRatio[4]=0.009
 
    --1级 调高信使比例
    if nAverageLevel==1 then
-      vLevelRatio["courier"]=0.905
+      vLevelRatio["courier"]=0.84
    end
 
    --2级 调高信使比例
    if nAverageLevel==2 then
-      vLevelRatio["courier"]=0.85
+      vLevelRatio["courier"]=0.76
    end
    
    --3级 调高信使比例
    if nAverageLevel==3 then
-      vLevelRatio["courier"]=0.82
+      vLevelRatio["courier"]=0.72
+   end
+   
+
+   if nAverageLevel==8 then
+     vLevelRatio[-3]=0.02
+     vLevelRatio[-2]=0.04
+     vLevelRatio[-1]=0.08
+     vLevelRatio[0]=0.08
+     vLevelRatio[1]=0.04
+     vLevelRatio[2]=0.025
+     vLevelRatio[3]=0.015
+     vLevelRatio[4]=0
    end
 
 
    if nAverageLevel==9 then
      vLevelRatio[-3]=0.02
-     vLevelRatio[-2]=0.03
-     vLevelRatio[-1]=0.055
-     vLevelRatio[0]=0.055
-     vLevelRatio[1]=0.025
-     vLevelRatio[2]=0.015
+     vLevelRatio[-2]=0.04
+     vLevelRatio[-1]=0.08
+     vLevelRatio[0]=0.08
+     vLevelRatio[1]=0.05
+     vLevelRatio[2]=0.03
      vLevelRatio[3]=0
+     vLevelRatio[4]=0
    end
 
    if nAverageLevel==10 then
-      vLevelRatio[-3]=0.02
-      vLevelRatio[-2]=0.03
-      vLevelRatio[-1]=0.06
-      vLevelRatio[0]=0.06
-      vLevelRatio[1]=0.03
-      vLevelRatio[2]=0
-      vLevelRatio[3]=0
+     vLevelRatio[-3]=0.02
+     vLevelRatio[-2]=0.04
+     vLevelRatio[-1]=0.09
+     vLevelRatio[0]=0.09
+     vLevelRatio[1]=0.06
+     vLevelRatio[2]=0
+     vLevelRatio[3]=0
+     vLevelRatio[4]=0
    end 
 
-   --print("Player's Average Level is:"..nAverageLevel)
    local vTemp={} --随机池
 
    --优先保证信使数量
@@ -214,7 +212,6 @@ function NeutralSpawner:SpawnOneCreature()
    end
 
 end
-
 
 
 

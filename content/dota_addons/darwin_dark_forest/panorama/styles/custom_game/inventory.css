@@ -495,3 +495,31 @@ Label{
    background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_ferocious_toxicants.png");
 }
 
+
+.Temp{
+   background-image: url("file://{images}/items/bogduggs_baldric.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/items/bogduggs_lucky_femur.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/items/longclaws_amulet.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/items/watchers_gaze.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/items/pelt_of_the_old_wolf.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/items/paw_of_lucius.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/items/ogre_seal_totem.png");
+}

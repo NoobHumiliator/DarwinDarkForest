@@ -22,11 +22,31 @@
     visibility: visible;
 }
 
+#CourierMessage
+{
+    flow-children: right;
+    horizontal-align: center;
+    margin-top: 64px;
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    border: 0px solid blue;
+    transform: scaleX(1) scaleY(1);
+    visibility: visible;
+}
+
+
 #AlertMessage_Icon
 {
     width: 48px;
     height: 48px;
 }
+
+#CourierMessage_Icon
+{
+    width: 88px;
+    height: 64px;
+}
+
 
 #AlertMessage_Label
 {
@@ -36,6 +56,17 @@
     font-size: 48px;
     font-weight: bold;
 }
+
+
+#CourierMessage_Label
+{
+    color: white;
+    horizontal-align: center;
+    text-shadow: 4px 4px 4px #121212;
+    font-size: 48px;
+    font-weight: bold;
+}
+
 
 #PickupMessage
 {

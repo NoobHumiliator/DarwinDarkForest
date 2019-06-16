@@ -11,8 +11,11 @@
     
     <Panel style="width:100%;height:100%;" hittest="false">
        <Panel id = "page_instruction" class="Hidden" hittest = "true">
-            <Label style="margin-top:30px;horizontal-align:center;" class="instruction_title" text="#GameInstruction" />
 
+            <Panel style="flow-children:right;horizontal-align:center;">
+                <Label style="margin-top:30px;horizontal-align:center;" class="instruction_title" text="#GameInstruction" />
+                <Label style="margin-top:30px;horizontal-align:center;" class="instruction_title_small" text="#GameInstructionSmall" />
+            </Panel>
             <Image style="width:800px;height:376px;margin-left:30px;margin-top:100px;" src="raw://resource/note_gif/note1.gif" />
             <Label style="margin-top:481px;margin-left:30px;width:800px;" class="instruction_note" text="#note_1" />
 

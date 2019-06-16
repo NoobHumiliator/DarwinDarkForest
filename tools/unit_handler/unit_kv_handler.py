@@ -143,7 +143,7 @@ localizeMapEng={
    'npc_dota_creature_razor_lightning_lord':'闪电帝国领主',
    'npc_dota_creature_razor_affront_of_the_overseer':'监察之蔑',
    'npc_dota_creature_riki':'隐形刺客',
-   'npc_dota_creature_dream_secret':'梦魇王子',
+   'npc_dota_creature_dream_secret':'梦魇亲王',
    'npc_dota_creature_nightmare_hunter':'梦魇猎杀者',
    'npc_dota_creature_centaur_khan':'半人马可汗',
    'npc_dota_creature_centaur_warchief':'半人马大酋长',
