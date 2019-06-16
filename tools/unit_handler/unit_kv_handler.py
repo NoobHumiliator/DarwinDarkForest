@@ -114,53 +114,53 @@ localizeMap={
 }
 
 
-localizeMapEng={
+localizeMapEn={
    'npc_dota_creature_lich':'Lich',
-   'npc_dota_creature_lich_rime_lord':'雾凇领主',
-   'npc_dota_creature_lich_serakund_tyrant':'寒域暴君',
-   'npc_dota_creature_pudge':'屠夫',
-   'npc_dota_creature_pudge_plague_champion':'瘟神勇士',
-   'npc_dota_creature_pudge_surgical_precision':'恐怖外科医生',
-   'npc_dota_creature_venomancer':'剧毒术士',
-   'npc_dota_creature_venomancer_deathbringer':'死亡传播者',
-   'npc_dota_creature_venomancer_stalker':'绝岛追猎者',
-   'npc_dota_creature_venomancer_ferocious_toxicant':'极恶猛毒',
-   'npc_dota_creature_faceless_void':'虚空假面',
-   'npc_dota_creature_faceless_void_endless_plane':'无尽平行',
-   'npc_dota_creature_faceless_void_nezzureem':'奥玄岩晶',
-   'npc_dota_creature_spectre':'幽鬼',
-   'npc_dota_creature_spectre_enduring_solitude':'恒久孤寂',
-   'npc_dota_creature_spectre_conservator':'汇聚幽魂',
-   'npc_dota_creature_ancient_apparition':'极寒幽魂',
-   'npc_dota_creature_old_element':'衡势晶体',
-   'npc_dota_creature_enigma':'谜团',
-   'npc_dota_creature_primal_void':'虚空尊者',
-   'npc_dota_creature_void_overlord':'虚空大君',
-   'npc_dota_creature_broodmother':'育母蜘蛛',
-   'npc_dota_creature_broodmother_glutton_larder':'饕餮蛛母',
-   'npc_dota_creature_spider_queen':'蜘蛛女皇',
-   'npc_dota_creature_razor':'闪电幽魂',
-   'npc_dota_creature_razor_lightning_lord':'闪电帝国领主',
-   'npc_dota_creature_razor_affront_of_the_overseer':'监察之蔑',
-   'npc_dota_creature_riki':'隐形刺客',
-   'npc_dota_creature_dream_secret':'梦魇亲王',
-   'npc_dota_creature_nightmare_hunter':'梦魇猎杀者',
-   'npc_dota_creature_centaur_khan':'半人马可汗',
-   'npc_dota_creature_centaur_warchief':'半人马大酋长',
-   'npc_dota_creature_life_stealer':'噬魂鬼',
-   'npc_dota_creature_life_stealer_bond_of_madness':'癫狂之缚',
-   'npc_dota_creature_life_stealer_chainbreaker':'破链之刑',
-   'npc_dota_creature_spirit_breaker':'裂魂人',
-   'npc_dota_creature_spirit_breaker_ironbarde_charger':'钢甲冲锋者',
-   'npc_dota_creature_spirit_breaker_elemental_realms':'黑钢杀戮者',
+   'npc_dota_creature_lich_rime_lord':'Rime Lord',
+   'npc_dota_creature_lich_serakund_tyrant':'Serakund Tyrant',
+   'npc_dota_creature_pudge':'Pudge',
+   'npc_dota_creature_pudge_plague_champion':'Plague Champion',
+   'npc_dota_creature_pudge_surgical_precision':'Surgical Precision',
+   'npc_dota_creature_venomancer':'Venomancer',
+   'npc_dota_creature_venomancer_deathbringer':'Deathbringer',
+   'npc_dota_creature_venomancer_stalker':'Stalker',
+   'npc_dota_creature_venomancer_ferocious_toxicant':'Ferocious Toxicant',
+   'npc_dota_creature_faceless_void':'Faceless Void',
+   'npc_dota_creature_faceless_void_endless_plane':'Endless Plane',
+   'npc_dota_creature_faceless_void_nezzureem':'Nezzureem',
+   'npc_dota_creature_spectre':'spectre',
+   'npc_dota_creature_spectre_enduring_solitude':'Enduring Solitude',
+   'npc_dota_creature_spectre_conservator':'Conservator',
+   'npc_dota_creature_ancient_apparition':'Ancient Apparition',
+   'npc_dota_creature_old_element':'Equilibrium',
+   'npc_dota_creature_enigma':'Enigma',
+   'npc_dota_creature_primal_void':'Primal Void',
+   'npc_dota_creature_void_overlord':'Void Overlord',
+   'npc_dota_creature_broodmother':'Broodmother',
+   'npc_dota_creature_broodmother_glutton_larder':'Glutton Larder',
+   'npc_dota_creature_spider_queen':'Spider Queen',
+   'npc_dota_creature_razor':'Razor',
+   'npc_dota_creature_razor_lightning_lord':'Lightning Lord',
+   'npc_dota_creature_razor_affront_of_the_overseer':'Affront of Overseer',
+   'npc_dota_creature_riki':'Riki',
+   'npc_dota_creature_dream_secret':'Nightmare Prince',
+   'npc_dota_creature_nightmare_hunter':'Nightmare Hunter',
+   'npc_dota_creature_centaur_khan':'Centaur Khan',
+   'npc_dota_creature_centaur_warchief':'Centaur Warchief',
+   'npc_dota_creature_life_stealer':'Life Stealer',
+   'npc_dota_creature_life_stealer_bond_of_madness':'Bond of Madness',
+   'npc_dota_creature_life_stealer_chainbreaker':'Chain Breaker',
+   'npc_dota_creature_spirit_breaker':'Spirit Breaker',
+   'npc_dota_creature_spirit_breaker_ironbarde_charger':'Ironbarde Charger',
+   'npc_dota_creature_spirit_breaker_elemental_realms':'Elemental Realms',
 
-   'npc_dota_creature_ogre_double_head_mage':'双头食人魔法师',
-   'npc_dota_creature_ogre_double_head_antipodeans':'双头食人战争魔法师',
-   'npc_dota_creature_ogre_imperator':'食人魔帝国元首',
+   'npc_dota_creature_ogre_double_head_mage':'Ogre Double Head Mage',
+   'npc_dota_creature_ogre_double_head_antipodeans':'Ogre War Mage',
+   'npc_dota_creature_ogre_imperator':'Ogre Emperor',
    
-   'npc_dota_creature_troll_warlord':'巨魔战将',
-   'npc_dota_creature_troll_warlord_icewrack_marauder':'巨魔劫掠者',
-   'npc_dota_creature_troll_plunder_of_the_savage_monger':'巨魔竞技场冠军',
+   'npc_dota_creature_troll_warlord':'Troll Warlord',
+   'npc_dota_creature_troll_warlord_icewrack_marauder':'Icewrack Marauder',
+   'npc_dota_creature_troll_plunder_of_the_savage_monger':'Troll Arena Champion',
 }
 
 
@@ -202,6 +202,25 @@ for line in lLines:
      econUnitBeginsFlag=True
 
 lf.close()
+
+
+econUnitBeginsFlag=False
+lReLinesEn=[]
+lEconLinesEn=[]
+
+
+lf = open("../../game/dota_addons/darwin_dark_forest/resource/addon_english.txt","r",encoding='UTF-8') 
+lLines = lf.readlines()
+
+for line in lLines:
+  
+  if econUnitBeginsFlag==False:
+     lReLinesEn.append(line)
+  if "EconUnitBegins" in line:
+     econUnitBeginsFlag=True
+
+lf.close()
+
 
 
 
@@ -250,6 +269,7 @@ def createNewUnit(originalUnitName,suffix,map):
 def printNewLocalize(originalUnitName,suffix):
  
  lEconLines.append('\t"'+originalUnitName+suffix+'"                  "'+localizeMap[originalUnitName]+'"\n')
+ lEconLinesEn.append('\t"'+originalUnitName+suffix+'"                  "'+localizeMapEn[originalUnitName]+'"\n')
 
 
 
@@ -278,6 +298,16 @@ with open('../../game/dota_addons/darwin_dark_forest/resource/addon_schinese.txt
   for line in lReLines:
     lf.write(line)
   for line in lEconLines:
+    lf.write(line)
+  lf.write('\t}\n')
+  lf.write('}')
+lf.close()
+
+
+with open('../../game/dota_addons/darwin_dark_forest/resource/addon_english.txt','w',encoding='UTF-8') as lf:
+  for line in lReLinesEn:
+    lf.write(line)
+  for line in lEconLinesEn:
     lf.write(line)
   lf.write('\t}\n')
   lf.write('}')
