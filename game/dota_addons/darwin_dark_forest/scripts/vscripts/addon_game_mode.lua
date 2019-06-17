@@ -104,6 +104,7 @@ function Precache( context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts", context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts", context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts", context )
 
 
      
@@ -333,7 +334,6 @@ function GameMode:InitGameMode()
     GameRules.bUltimateStage=false  --终极进化阶段
     GameRules.bLevelTenStage=false  --有生物到达10级
 
-
     ItemController:Init()
     Timers:start()
     NeutralSpawner:Init()
@@ -404,6 +404,9 @@ function GameMode:InitGameMode()
     GameRules:GetGameModeEntity():SetSelectionGoldPenaltyEnabled(false)
     GameRules:GetGameModeEntity():SetLoseGoldOnDeath(false)
     GameRules:GetGameModeEntity():SetBuybackEnabled(false)
+    
+    --GameRules:GetGameModeEntity():SetAlwaysShowPlayerNames(true)
+
     --在死亡事件里面固定重生时间
     
     --GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, "DamageFilter"), self)
