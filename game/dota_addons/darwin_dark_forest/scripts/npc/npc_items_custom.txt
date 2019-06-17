@@ -4924,7 +4924,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"components/items/item_stick.lua"
+						"ScriptFile"	"item_ability/item_stick.lua"
 						"Function"		"MagicStickCharge"
 					}
 				}

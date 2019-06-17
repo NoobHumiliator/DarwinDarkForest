@@ -15,6 +15,7 @@ vAbilityChanceEachLevel={
    { [4]=10,[5]=70,[6]=20 } --10级
 }
 ]]
+--[[
 vAbilityChanceEachLevel={
    { [0]=100 },  -- 1级
    { [0]=15,[1]=50,[2]=30,[3]=5}, --2级
@@ -28,6 +29,23 @@ vAbilityChanceEachLevel={
    { [2]=5,[3]=30,[4]=50,[5]=15}, --10级
    { [4]=50,[5]=50} --11级
 }
+]]
+
+vAbilityChanceEachLevel={
+   { [0]=50,[1]=50 }, -- 1级
+   { [1]=55,[2]=35,[3]=10}, --2级
+   { [1]=35,[2]=45,[3]=20}, --3级
+   { [1]=15,[2]=55,[3]=30}, --4级
+   { [2]=55,[3]=35,[4]=10}, --5级
+   { [2]=35,[3]=45,[4]=20}, --6级
+   { [2]=15,[3]=55,[4]=30}, --7级
+   { [3]=55,[4]=35,[5]=10}, --8级
+   { [3]=35,[4]=45,[5]=20}, --9级
+   { [3]=15,[4]=55,[5]=30}, --10级
+   { [4]=50,[5]=50} --11级
+}
+
+
 
 vPairedAbility={bristleback_bristleback="bristleback_quill_spray",
 ancient_apparition_ice_blast="ancient_apparition_ice_blast_release",
@@ -449,7 +467,7 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
                 end
            end)
           
-           PrintTable(vEnvolvePool)
+           --PrintTable(vEnvolvePool)
            sUnitToEnvolve=vEnvolvePool[1].sUnitName
 
         else

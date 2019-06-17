@@ -331,8 +331,10 @@ end
 
 function LevelUpAndEvolve(nPlayerId,hHero)
 
-    --播放进化声音
-    EmitSoundOn('General.LevelUp.Bonus',hHero) 
+    --播放进化声音，不能放在这 否则会影响连杀音效 十分诡异？？
+    --EmitSoundOn('General.LevelUp.Bonus',hHero) 
+
+    hHero:EmitSound("General.LevelUp.Bonus")
 
     GameMode:PutStartPositionToLocation(hHero,hHero:GetAbsOrigin())
     Evolve(nPlayerId,hHero)
@@ -387,7 +389,7 @@ function PlayAbsorbParticle(tempPerksMap,hKillerUnit,hKilledUnit)
                 return nil
               end
             )
-            timePause=timePause+0.3
+            timePause=timePause+0.5
          end
        end
 
@@ -495,9 +497,6 @@ function GameMode:OnPlayerSay(keys)
              --如果升级了 并且不是死亡状态（处理召唤生物杀人）
              if nNewLevel~=hHero.nCurrentCreepLevel and hHero:IsAlive() then
                 
-                --播放进化声音
-                EmitSoundOn('General.LevelUp.Bonus',hHero) 
-
                 GameMode:PutStartPositionToLocation(hHero,hHero:GetAbsOrigin())
                 hHero.nCurrentCreepLevel=nNewLevel
                 Evolve(nPlayerId,hHero)

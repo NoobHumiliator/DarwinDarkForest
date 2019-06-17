@@ -40,7 +40,15 @@ function EconDataArrive(){
     RebuildCollections(econ_data)
 }
 
+function ShowTaoBaoQRCode(){
 
+   $("#TaoBaoQRCodeContainer").RemoveClass("Hidden")
+}
+
+function CloseTaoBaoQRCode(){
+
+   $("#TaoBaoQRCodeContainer").AddClass("Hidden")
+}
 
 function RebuildCollections(econ_data){
 

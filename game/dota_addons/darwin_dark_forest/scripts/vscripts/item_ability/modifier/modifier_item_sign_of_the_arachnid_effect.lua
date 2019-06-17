@@ -9,8 +9,10 @@ end
 ----------------------------------------
 
 function modifier_item_sign_of_the_arachnid_effect:OnCreated( kv )
-	self.bonus_move_speed_pct = self:GetAbility():GetSpecialValueFor( "bonus_move_speed_pct" )
-	self.attack_speed = self:GetAbility():GetSpecialValueFor( "attack_speed" )
+	if IsServer() then
+	  self.bonus_move_speed_pct = self:GetAbility():GetSpecialValueFor( "bonus_move_speed_pct" )
+	  self.attack_speed = self:GetAbility():GetSpecialValueFor( "attack_speed" )
+    end
 end
 
 ----------------------------------------

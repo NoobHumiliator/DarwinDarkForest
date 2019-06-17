@@ -33,13 +33,18 @@
       </snippet>
      </snippets>
      <Panel style="width:100%;height:100%;" hittest="false">
+
+        <Panel id="TaoBaoQRCodeContainer" class="Hidden">
+           <Button class="TaoBaoQRCodeCloseButton" onactivate="CloseTaoBaoQRCode()" />
+           <Panel id="TaoBaoQRCode"/>          
+        </Panel>
         <Panel class="Inventory Hidden" id="page_inventory">
             <Panel class="InventoryTop">                  
                 <Label text = "#EvolveInventory" class="InventoryTitle"></Label>
                 <Panel id="DnaStoragePanel">
                     <Image id="DnaStorageImg" src="file://{images}/custom_game/inventory/dna.png"/>
                     <Label id = "DnaStorageLabel" text = "× ?"/>
-                    <Panel id = "TaobaoPlusIcon" class = "" hittest = "true" />
+                    <Panel id = "TaobaoPlusIcon" class = "" hittest = "true" onmouseover="ShowTaoBaoQRCode()" />
                     <TextEntry id="TaobaoCodeEntry" maxchars="25" placeholder="请输入激活码" oninputsubmit="OnCdkeySubmitted()" />
                     <Button id="SubmitTaobaoCodeButton" onactivate="SubmitTaobaoCode()" class="EvolveButton">
                         <Label id="SubmitTaobaoCodeButtonLabel"  text="#ExchangeKey"/>

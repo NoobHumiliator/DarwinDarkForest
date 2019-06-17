@@ -496,30 +496,49 @@ Label{
 }
 
 
-.Temp{
-   background-image: url("file://{images}/items/bogduggs_baldric.png");
+#TaoBaoQRCodeContainer{
+  
+  width: 304px;
+  height: 304px;
+  vertical-align: center;
+  horizontal-align:middle;
+  z-index: 5000;
+
+  transition-property:wash-color, pre-transform-scale2d, background-color;
+  transition-duration:0.1s;
+  transition-timing-function:ease-in;
+
 }
 
-.Temp{
-   background-image: url("file://{images}/items/bogduggs_lucky_femur.png");
+#TaoBaoQRCode{
+  width: 304px;
+  height: 304px;
+  background-image: url("file://{images}/custom_game/taobao_qr_code.png");
 }
 
-.Temp{
-   background-image: url("file://{images}/items/longclaws_amulet.png");
+
+.TaoBaoQRCodeCloseButton
+{
+  horizontal-align:right;
+  background-color:#333333;
+  wash-color:white;
+  border-radius:50%;
+  border:1px solid #333333;
+  width:30px;
+  height:30px;
+  box-shadow:#000000 -3px -3px 6px 6px;
+  z-index:555;
+  background-image:url("s2r://panorama/images/control_icons/x_close_png.vtex");
+  background-size:30px 30px;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  margin-right:1px;
+  margin-top:1px;
+
 }
 
-.Temp{
-   background-image: url("file://{images}/items/watchers_gaze.png");
-}
-
-.Temp{
-   background-image: url("file://{images}/items/pelt_of_the_old_wolf.png");
-}
-
-.Temp{
-   background-image: url("file://{images}/items/paw_of_lucius.png");
-}
-
-.Temp{
-   background-image: url("file://{images}/items/ogre_seal_totem.png");
+.TaoBaoQRCodeCloseButton:active
+{
+  background-size:26px 26px;
+  sound:"ui_friends_slide_in"; 
 }

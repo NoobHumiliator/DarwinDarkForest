@@ -63,11 +63,11 @@ function modifier_item_longclaws_amulet:OnTakeDamage( params )
 		if Attacker ~= self:GetParent() or Ability == nil or Target == nil then
 			return 0
 		end
-
-		if bit._and( params.damage_flags, DOTA_DAMAGE_FLAG_REFLECTION ) == DOTA_DAMAGE_FLAG_REFLECTION then
+        
+		if bit:_and( params.damage_flags, DOTA_DAMAGE_FLAG_REFLECTION ) == DOTA_DAMAGE_FLAG_REFLECTION then
 			return 0
 		end
-		if bit._and( params.damage_flags, DOTA_DAMAGE_FLAG_NO_SPELL_LIFESTEAL ) == DOTA_DAMAGE_FLAG_NO_SPELL_LIFESTEAL then
+		if bit:_and( params.damage_flags, DOTA_DAMAGE_FLAG_NO_SPELL_LIFESTEAL ) == DOTA_DAMAGE_FLAG_NO_SPELL_LIFESTEAL then
 			return 0
 		end
 

@@ -19614,15 +19614,15 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"214"		// Damage range min.
 		"AttackDamageMax"			"230"		// Damage range max.
 		"AttackRate"				"1.0"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"128"		// Range within a target can be attacked.
-		"ProjectileModel"			""          // Particle system model for projectile.
-		"ProjectileSpeed"			"0"		    // Speed of projectile.		
+		"AttackRange"				"500"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_troll_warlord/troll_warlord_base_attack.vpcf"          // Particle system model for projectile.
+		"ProjectileSpeed"			"1200"		    // Speed of projectile.		
 
 		"AttackSpeedActivityModifiers"
 		{

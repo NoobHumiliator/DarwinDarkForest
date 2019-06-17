@@ -55,8 +55,8 @@ function NeutralSpawner:Begin()
     --根据间隔刷怪
     Timers:CreateTimer(1, function()
         NeutralSpawner:SpawnOneCreature()
-        print("NeutralSpawner.nCreaturesNumber"..NeutralSpawner.nCreaturesNumber)
-        print("NeutralSpawner.flTimeInterval"..NeutralSpawner.flTimeInterval)
+        print("NeutralSpawner.nCreaturesNumber： "..NeutralSpawner.nCreaturesNumber)
+        print("NeutralSpawner.flTimeInterval： "..NeutralSpawner.flTimeInterval)
         if NeutralSpawner.nCreaturesNumber<120 then
            NeutralSpawner.flTimeInterval=NeutralSpawner.flTimeInterval/2
            --位置最小刷怪间隔 防止太卡

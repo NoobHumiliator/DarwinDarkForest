@@ -15,9 +15,11 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_item_bogduggs_baldric:OnCreated( kv )
-	self.bonus_armor = self:GetAbility():GetSpecialValueFor( "bonus_armor" )
-	self.disable_resist_pct = self:GetAbility():GetSpecialValueFor( "disable_resist_pct" )
-	self.move_speed_penalty = self:GetAbility():GetSpecialValueFor( "move_speed_penalty" )
+	if IsServer() then
+	  self.bonus_armor = self:GetAbility():GetSpecialValueFor( "bonus_armor" )
+	  self.disable_resist_pct = self:GetAbility():GetSpecialValueFor( "disable_resist_pct" )
+	  self.move_speed_penalty = self:GetAbility():GetSpecialValueFor( "move_speed_penalty" )
+    end
 end
 
 --------------------------------------------------------------------------------

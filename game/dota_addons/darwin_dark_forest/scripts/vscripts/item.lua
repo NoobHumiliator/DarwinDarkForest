@@ -86,7 +86,7 @@ function ItemController:Begin()
     if not GameRules.bPveMap then
         Timers:CreateTimer(120, function()
             ItemController:SpawnCourier()
-            return 150
+            return 130
         end)
     end
 end
