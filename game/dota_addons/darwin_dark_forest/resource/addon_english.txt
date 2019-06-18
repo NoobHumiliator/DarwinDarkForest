@@ -1259,7 +1259,7 @@
     "DOTA_Tooltip_ability_item_dragon_lance_lua_bonus_move_speed_pct"               "%MOVE SPEED:"
 
     
-    "DOTA_Tooltip_ability_item_urn_of_shadows_lua"                                  "影之灵龛"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua"                                  "Urn of Shadows"
     "DOTA_Tooltip_ability_item_urn_of_shadows_lua_Description"                      "<h1>主动：灵魂释放</h1> 对友方单位施放时提供%soul_heal_amount%点/秒生命恢复，对敌方单位则造成%soul_damage_amount%点每秒伤害。<br><br>持续%duration%秒。"
     "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_health"                     "+$health"
     "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_damage"                     "+$damage"
@@ -1485,6 +1485,17 @@
 
     "DOTA_Tooltip_modifier_bonus_ring_check_move"                        "High Power Field"
     "DOTA_Tooltip_modifier_bonus_ring_check_move_Description"            "Get experience every second, and grants bonus 50%% experience when kill."
+
+
+    "ring_spawn"                                                          "High Power Field"
+    "DOTA_Tooltip_Ability_item_ward_observer_2"                           "Observer Ward x2"
+    "DOTA_Tooltip_Ability_item_ward_observer_2_Description"               "<h1>Use: Plant</h1>Plants an Observer Ward, an invisible watcher that gives ground vision in a %vision_range% radius to your team. Lasts %duration_minutes_tooltip% minutes.<br><br>Hold Control to give one Observer Ward to an allied hero.<br><br>Range: %tooltip_range%"
+
+    "DOTA_Tooltip_Ability_item_ward_observer_3"                           "Observer Ward x3"
+    "DOTA_Tooltip_Ability_item_ward_observer_3_Description"               "<h1>Use: Plant</h1>Plants an Observer Ward, an invisible watcher that gives ground vision in a %vision_range% radius to your team. Lasts %duration_minutes_tooltip% minutes.<br><br>Hold Control to give one Observer Ward to an allied hero.<br><br>Range: %tooltip_range%"
+
+    "DOTA_Tooltip_Ability_item_ward_observer_4"                           "Observer Ward x4"
+    "DOTA_Tooltip_Ability_item_ward_observer_4_Description"               "<h1>Use: Plant</h1>Plants an Observer Ward, an invisible watcher that gives ground vision in a %vision_range% radius to your team. Lasts %duration_minutes_tooltip% minutes.<br><br>Hold Control to give one Observer Ward to an allied hero.<br><br>Range: %tooltip_range%"
 
     
     //EconUnitBegins

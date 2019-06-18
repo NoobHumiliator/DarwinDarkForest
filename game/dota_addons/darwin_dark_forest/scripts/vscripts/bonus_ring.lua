@@ -29,11 +29,12 @@ end
 
 function BonusRing:Begin()
          
-    --PVE模式不出奖励环
+    --PVE模式不出奖励环 5分钟刷新一次
+
     --if not GameRules.bPveMap then
         Timers:CreateTimer(5, function()
             BonusRing:SpawnRing()
-            return 10
+            return 60
         end)
     --end
 end
@@ -61,10 +62,12 @@ end
 
 --产生奖励区域
 function BonusRing:SpawnRing()
+  
+    --EmitGlobalSound( "Hero_Disruptor.KineticField" )
 
     local vCenter=BonusRing:FindRingCenter()
-    local nRadius= 800
-    local nDuration = 10
+    local nRadius= 850
+    local nDuration = 60
      
     BonusRing.nParticleIndex = ParticleManager:CreateParticle("particles/units/heroes/hero_disruptor/disruptor_kineticfield.vpcf", PATTACH_WORLDORIGIN, nil)
     ParticleManager:SetParticleControl(BonusRing.nParticleIndex, 0, vCenter)
@@ -73,10 +76,22 @@ function BonusRing:SpawnRing()
 
     --显示视野
     for nTeam = 0, (DOTA_TEAM_COUNT-1) do
-          AddFOWViewer(nTeam, vCenter, 700, nDuration, false)
+          AddFOWViewer(nTeam, vCenter, 850, nDuration, false)
     end
 
     local hThinker = CreateModifierThinker( nil, nil, "modifier_bonus_ring_thinker", { duration = nDuration,radius=nRadius }, vCenter, DOTA_TEAM_NEUTRALS, false )
     local hDummy = CreateUnitByName( "npc_dota_ring_dummy", vCenter, false, nil, nil, DOTA_TEAM_NEUTRALS )
     hDummy:AddNewModifier(nil,nil,"modifier_kill",{duration=nDuration})  --设置强制死亡时间
+    
+    CustomGameEventManager:Send_ServerToAllClients( "ring_spawned", {})
+
+    for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
+        if PlayerResource:IsValidPlayer( nPlayerID ) then
+          local hHero = PlayerResource:GetSelectedHeroEntity( nPlayerID )
+          if hHero then
+             hHero:EmitSound("Hero_Disruptor.KineticField" )
+          end
+        end
+    end
+
 end

@@ -15,6 +15,9 @@ end
 function modifier_item_heart_lua:OnCreated( kv )
 	self.bonus_health = self:GetAbility():GetSpecialValueFor( "bonus_health" )
 	self.health_regen_rate = self:GetAbility():GetSpecialValueFor( "health_regen_rate" )
+    self.bonus_damage = self:GetAbility():GetSpecialValueFor( "bonus_damage" )
+    self.magic_resistance = self:GetAbility():GetSpecialValueFor( "magic_resistance" )
+
 
     if IsServer() then
     	AddHealthBonus(self:GetCaster(),self.bonus_health)
@@ -25,7 +28,9 @@ function modifier_item_heart_lua:DeclareFunctions()
 	local funcs = 
 	{
 		MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE,
-		MODIFIER_EVENT_ON_TAKEDAMAGE
+		MODIFIER_EVENT_ON_TAKEDAMAGE,
+        MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
+        MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS,
 	}
 
 	return funcs
@@ -62,3 +67,12 @@ function modifier_item_heart_lua:OnDestroy()
 end
 
 ---------------------------------------------
+
+
+function modifier_item_heart_lua:GetModifierPreAttack_BonusDamage( params )
+    return self.bonus_damage
+end
+---------------------------------------------
+function modifier_item_heart_lua:GetModifierMagicalResistanceBonus( params )
+    return self.magic_resistance
+end

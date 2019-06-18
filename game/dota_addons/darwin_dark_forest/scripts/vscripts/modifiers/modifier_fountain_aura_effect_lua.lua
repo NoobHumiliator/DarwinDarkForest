@@ -6,7 +6,12 @@ function modifier_fountain_aura_effect_lua:IsDebuff()
     return false
 end
 
--------------------------------------------------------------------------------
+
+function modifier_fountain_aura_effect_lua:OnCreated()
+
+   self:StartIntervalThink(1)
+
+end
 
 --------------------------------------------------------------------------------
 
@@ -43,6 +48,24 @@ function modifier_fountain_aura_effect_lua:GetModifierTotalPercentageManaRegen( 
 	else 
       return 0 
     end
+
+end
+
+--补充魔瓶
+function modifier_fountain_aura_effect_lua:OnIntervalThink()
+
+	if IsServer() then
+		if self:GetParent():HasItemInInventory("item_bottle") then
+			for i=1,6 do
+		 	   local hItem=self:GetParent():GetItemInSlot(i)
+               if hItem~=nil then
+                  if hItem:GetAbilityName()=="item_bottle" then
+                     hItem:SetCurrentCharges(3)
+                  end
+               end
+			end
+		end
+	end
 
 end
 

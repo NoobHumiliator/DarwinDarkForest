@@ -26,13 +26,27 @@
 {
     flow-children: right;
     horizontal-align: center;
-    margin-top: 64px;
+    margin-top: 20px;
     transition-property: transform, opacity;
     transition-duration: 0.3s;
     border: 0px solid blue;
     transform: scaleX(1) scaleY(1);
     visibility: visible;
 }
+
+#RingMessage
+{
+    flow-children: right;
+    horizontal-align: center;
+    margin-top: 20px;
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    border: 0px solid blue;
+    transform: scaleX(1) scaleY(1);
+    visibility: visible;
+}
+
+
 
 
 #AlertMessage_Icon
@@ -46,6 +60,13 @@
     width: 88px;
     height: 64px;
 }
+
+#RingMessage_Icon
+{
+    width: 64px;
+    height: 64px;
+}
+
 
 
 #AlertMessage_Label
@@ -61,11 +82,24 @@
 #CourierMessage_Label
 {
     color: white;
-    horizontal-align: center;
     text-shadow: 4px 4px 4px #121212;
-    font-size: 48px;
+    font-size: 64px;
     font-weight: bold;
 }
+
+
+
+#RingMessage_Label
+{
+    color: white;
+    horizontal-align: center;
+    text-shadow: 4px 4px 4px #121212;
+    font-size: 64px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+
 
 
 #PickupMessage

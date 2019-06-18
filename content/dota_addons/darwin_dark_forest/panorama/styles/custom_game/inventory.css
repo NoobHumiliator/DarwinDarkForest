@@ -483,18 +483,6 @@ Label{
 
 }
 
-.Temp{
-   background-image: url("file://{images}/custom_game/econ/bitter_lineage.png");
-}
-
-.Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_green_troll_warlord.png");
-}
-
-.Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_ferocious_toxicants.png");
-}
-
 
 #TaoBaoQRCodeContainer{
   
@@ -541,4 +529,21 @@ Label{
 {
   background-size:26px 26px;
   sound:"ui_friends_slide_in"; 
+}
+
+
+.Temp{
+   background-image: url("file://{images}/custom_game/econ/bitter_lineage.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_green_troll_warlord.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_ferocious_toxicants.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/custom_game/ring_icon.png");
 }

@@ -1,10 +1,10 @@
 <root>
   <styles>
     <include src="s2r://panorama/styles/dotastyles.vcss_c" />
-    <include src="file://{resources}/styles/custom_game/rune_notification.css" />
+    <include src="file://{resources}/styles/custom_game/notification.css" />
   </styles>
   <scripts>
-    <include src="file://{resources}/scripts/custom_game/rune_notification.js" />
+    <include src="file://{resources}/scripts/custom_game/notification.js" />
   </scripts>
 
   <Panel hittest="false" class="Notification">
@@ -17,6 +17,11 @@
       <Panel hittest="false" id="CourierMessage" class="Hidden" >
         <Label hittest="false" id="CourierMessage_Label" class="TitleFont" text="" html="true" />
         <Image hittest="false" id="CourierMessage_Icon" />
+      </Panel>
+
+      <Panel hittest="false" id="RingMessage" class="Hidden">
+        <Image hittest="false" id="RingMessage_Icon" />
+        <Label hittest="false" id="RingMessage_Label" class="TitleFont" text="" html="true" />
       </Panel>
 
       <Panel hittest="false" id="PickupMessage" class="Hidden">

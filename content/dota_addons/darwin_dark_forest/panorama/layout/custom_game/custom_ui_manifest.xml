@@ -60,7 +60,7 @@
        <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/inventory.xml" />
        <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/lottery.xml" />
 	   <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" />
-	   <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/rune_notification.xml" />
+	   <CustomUIElement type="Hud"       layoutfile="file://{resources}/layout/custom_game/notification.xml" />
 
        <CustomUIElement type="EndScreen" layoutfile="file://{resources}/layout/custom_game/multiteam_end_screen.xml" />
 

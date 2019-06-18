@@ -105,9 +105,9 @@ function Precache( context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts", context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts", context )
      PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts", context )
+     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_disruptor.vsndevts", context )
 
 
-     
      for sUnitName, vData in pairs(GameRules.vUnitsKV) do
          PrecacheUnitByNameAsync(sUnitName, function() end)
      end
