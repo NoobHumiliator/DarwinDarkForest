@@ -1513,6 +1513,9 @@
     "courier_spawn"                                                      "信使携带宝物  "
     "GameInstructionSmall"                                               "(左上菜单可重新打开此页面)"
 
+    "DOTA_Tooltip_modifier_bonus_ring_effect"                        "高能力场"
+    "DOTA_Tooltip_modifier_bonus_ring_effect_Description"            "处于高能力场中，每秒获得基础经验，并且击杀经验获取提高50%%。"
+
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
 	"npc_dota_creature_lich_shearing_deposition"                  "巫妖"

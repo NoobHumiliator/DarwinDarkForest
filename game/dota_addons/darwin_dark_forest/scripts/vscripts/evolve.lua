@@ -626,3 +626,24 @@ function CountAverageLevel()
      GameRules.nTotalHeroNumber=nTotalHeroNumber
   
 end
+
+
+--获得经验，尝试升级，升级并且更新雷达
+function GainExpAndUpdateRadar (nPlayerId,hHero,flExp)
+
+     hHero.nCustomExp=hHero.nCustomExp+flExp
+
+     --计算等级
+     local nNewLevel=CalculateNewLevel(hHero)
+     
+     --如果升级了 进化
+     if nNewLevel~=hHero.nCurrentCreepLevel then
+        hHero.nCurrentCreepLevel=nNewLevel
+        LevelUpAndEvolve(nPlayerId,hHero)
+     end
+     --更新UI显示
+     CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
+     CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+
+    
+end

@@ -187,31 +187,24 @@ function GameMode:OnEntityKilled(keys)
        
        PlayAbsorbParticle(tempPerksMap,hKillerUnit,hKilledUnit)
 
-       --给玩家经验
+       --计算经验获取率
        local flExpRatio=1
        if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_item_creed_of_omniscience") then
-           flExpRatio=1.2
+           flExpRatio= flExpRatio*1.2
        end
 
+       if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_bonus_ring_effect") then
+           flExpRatio= flExpRatio*1.5
+       end
+       
+       local flExp = 0
        if hKilledUnit.nCreatureLevel then
-         hHero.nCustomExp=hHero.nCustomExp+ vCREEP_EXP_TABLE[hKilledUnit.nCreatureLevel]*flExpRatio
+         flExp= vCREEP_EXP_TABLE[hKilledUnit.nCreatureLevel]*flExpRatio
        else
-         hHero.nCustomExp=hHero.nCustomExp+ vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio
+         flExp= vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio
        end
-       
-       --计算等级
-       local nNewLevel=CalculateNewLevel(hHero)
-       
-       --如果升级了 进化
-       if nNewLevel~=hHero.nCurrentCreepLevel then
-          hHero.nCurrentCreepLevel=nNewLevel
-          LevelUpAndEvolve(nPlayerId,hHero)
-       end
-       --更新UI显示
-       CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
-       CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
 
-
+       GainExpAndUpdateRadar(nPlayerId,hHero,flExp)
    end
 
     --如果玩家生物被击杀
@@ -660,3 +653,5 @@ function GameMode:RequestCreatureIndex(keys)
     
 
 end
+
+

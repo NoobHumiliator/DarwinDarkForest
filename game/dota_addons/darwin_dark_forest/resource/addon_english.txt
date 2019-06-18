@@ -1483,6 +1483,9 @@
     "courier_spawn"                                                      "Courier Carry Item:"
     "GameInstructionSmall"                                               "(Reopen by Top-Left Menu)"
 
+    "DOTA_Tooltip_modifier_bonus_ring_check_move"                        "High Power Field"
+    "DOTA_Tooltip_modifier_bonus_ring_check_move_Description"            "Get experience every second, and grants bonus 50%% experience when kill."
+
     
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "Lich"
