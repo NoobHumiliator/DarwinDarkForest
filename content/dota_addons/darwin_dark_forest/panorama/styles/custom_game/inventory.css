@@ -547,3 +547,16 @@ Label{
 .Temp{
    background-image: url("file://{images}/custom_game/ring_icon.png");
 }
+
+
+.Temp{
+   background-image: url("file://{images}/items/preserved_skull.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/items/pelt_of_the_old_wolf.png");
+}
+
+.Temp{
+   background-image: url("file://{images}/items/paw_of_lucius.png");
+}

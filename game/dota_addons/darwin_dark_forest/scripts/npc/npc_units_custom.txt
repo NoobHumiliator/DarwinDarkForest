@@ -23576,7 +23576,6 @@
 				}
 	        }
 		}
-
 	}
 
 	"npc_dota_creature_storegga_2"

@@ -25,14 +25,14 @@
             <Image style="width:533px;height:376px;margin-left:1156px;margin-top:100px;" src="raw://resource/note_gif/note3.gif" />
             <Label style="margin-top:481px;margin-left:1156px;width:533px;" class="instruction_note" text="#note_3" />
 
-            <Image style="width:533px;height:376px;margin-left:30px;margin-top:546px;" src="raw://resource/note_gif/note4.gif" />
-            <Label style="margin-top:927px;margin-left:30px;width:533px;" class="instruction_note" text="#note_4" />
+            <Image style="width:533px;height:376px;margin-left:30px;margin-top:556px;" src="raw://resource/note_gif/note4.gif" />
+            <Label style="margin-top:937px;margin-left:30px;width:533px;" class="instruction_note" text="#note_4" />
 
-            <Image style="width:533px;height:376px;margin-left:593px;margin-top:546px;" src="raw://resource/note_gif/note5.gif" />
-            <Label style="margin-top:927px;margin-left:593px;width:533px;" class="instruction_note" text="#note_5" />
+            <Image style="width:533px;height:376px;margin-left:593px;margin-top:556px;" src="raw://resource/note_gif/note5.gif" />
+            <Label style="margin-top:937px;margin-left:593px;width:533px;" class="instruction_note" text="#note_5" />
             
-            <Image style="width:533px;height:376px;margin-left:1156px;margin-top:546px;" src="raw://resource/note_gif/note6.gif" />
-            <Label style="margin-top:927px;margin-left:1156px;width:533px;" class="instruction_note" text="#note_6" />
+            <Image style="width:533px;height:376px;margin-left:1156px;margin-top:556px;" src="raw://resource/note_gif/note6.gif" />
+            <Label style="margin-top:937px;margin-left:1156px;width:533px;" class="instruction_note" text="#note_6" />
 
             
 

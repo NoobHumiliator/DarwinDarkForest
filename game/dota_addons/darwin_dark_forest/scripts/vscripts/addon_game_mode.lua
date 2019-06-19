@@ -593,9 +593,8 @@ function GameMode:UpdateScoreboardAndVictory()
     
     -- reverse-sort by score
     table.sort( vSortedTeams, function(a,b) return ( a.teamScore > b.teamScore ) end )
-
+    
     RemoveRepeated(vAliveTeams)
-
     --终极进化阶段 只剩唯一队伍
     if GameRules.bUltimateStage and #vAliveTeams==1  then
       --结束各种类型游戏，记录天梯分数

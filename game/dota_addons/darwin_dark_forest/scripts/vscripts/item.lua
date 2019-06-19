@@ -81,14 +81,14 @@ function ItemController:OnGameRulesStateChange()
 end
 
 function ItemController:Begin()
-         
+  
     --PVE模式不出信使
-    --if not GameRules.bPveMap then
-        Timers:CreateTimer(10, function()
+    if not GameRules.bPveMap then
+        Timers:CreateTimer(120, function()
             ItemController:SpawnCourier()
-            return 10
+            return 130
         end)
-    --end
+    end
 end
 
 

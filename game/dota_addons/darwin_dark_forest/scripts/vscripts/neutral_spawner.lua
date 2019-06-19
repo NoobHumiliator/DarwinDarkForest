@@ -53,7 +53,7 @@ end
 function NeutralSpawner:Begin()
          
     --根据间隔刷怪
-    Timers:CreateTimer(100000, function()
+    Timers:CreateTimer(1, function()
         NeutralSpawner:SpawnOneCreature()
         print("Creatures Number: "..NeutralSpawner.nCreaturesNumber..", Interval: "..NeutralSpawner.flTimeInterval)
         if NeutralSpawner.nCreaturesNumber<120 then

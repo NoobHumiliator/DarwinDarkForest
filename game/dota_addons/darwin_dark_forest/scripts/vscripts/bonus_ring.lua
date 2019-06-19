@@ -29,14 +29,13 @@ end
 
 function BonusRing:Begin()
          
-    --PVE模式不出奖励环 5分钟刷新一次
-
-    --if not GameRules.bPveMap then
-        Timers:CreateTimer(5, function()
+    --PVE模式不出奖励环 6分钟刷新一次
+    if not GameRules.bPveMap then
+        Timers:CreateTimer(360, function()
             BonusRing:SpawnRing()
-            return 60
+            return 360
         end)
-    --end
+    end
 end
 
 

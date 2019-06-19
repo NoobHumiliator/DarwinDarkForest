@@ -1475,16 +1475,19 @@
 
 
     "GameInstruction"                                                    "Game Instruction"
-    "note_1"                                                             "Note1: Kill and eat opponent creatures to absorb Exp and evolve perk"
-    "note_2"                                                             "Note2: Survive, eat, and evolve through a dynamic evolution tree, what you eat determines what you become. "
-    "note_3"                                                             "Note3: Pick up runes and gain perk instantly."
-    "note_4"                                                             "Note4: When any player reach level 11, game will enters Death Mode. Creatures can't respawn. And the last surviver win the game."
+    "note_1"                                                             "Note1: Player begin with a Level-1 small creature, try to kill and eat other creep to gain Exp and evolve."
+    "note_2"                                                             "Note2: Survive, eat, and evolve through a dynamic evolution tree, what you eat determines what you become."
+    "note_3"                                                             "Note3: When creathre pick up runes, it will gain evolve perk instantly."
+    "note_4"                                                             "Note4: Couriers carry higt-level items, and diliver it to random position."
+    "note_5"                                                             "Note5: High Power Field will imprison creatures inside, but grants them great bouns of Exp."
+    "note_6"                                                             "Note4: When any player reach level 11, game will enters Death Mode. Creatures can't respawn. And the last surviver win the game."
     
+
     "courier_spawn"                                                      "Courier Carry Item:"
     "GameInstructionSmall"                                               "(Reopen by Top-Left Menu)"
 
     "DOTA_Tooltip_modifier_bonus_ring_check_move"                        "High Power Field"
-    "DOTA_Tooltip_modifier_bonus_ring_check_move_Description"            "Get experience every second, and grants bonus 50%% experience when kill."
+    "DOTA_Tooltip_modifier_bonus_ring_check_move_Description"            "Get base experience every second, and grants bonus 50%% experience when kill."
 
 
     "ring_spawn"                                                          "High Power Field"
