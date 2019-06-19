@@ -83,12 +83,12 @@ end
 function ItemController:Begin()
          
     --PVE模式不出信使
-    if not GameRules.bPveMap then
-        Timers:CreateTimer(120, function()
+    --if not GameRules.bPveMap then
+        Timers:CreateTimer(10, function()
             ItemController:SpawnCourier()
-            return 130
+            return 10
         end)
-    end
+    --end
 end
 
 
@@ -213,11 +213,13 @@ function ItemController:OnItemPickUp(event)
   if event.UnitEntityIndex then 
       local hUnit=EntIndexToHScript( event.UnitEntityIndex )
       local sItemName=hItem:GetName()
+      local nCharges=hItem:GetCurrentCharges()
       
       --不处理 神符
       if string.find(sItemName,"item_rune_") ~= 1 then
           UTIL_Remove(hItem)
-          hUnit:AddItemByName(sItemName)
+          local hItem=hUnit:AddItemByName(sItemName)
+          hItem:SetCurrentCharges(nCharges)
       end
   end
   

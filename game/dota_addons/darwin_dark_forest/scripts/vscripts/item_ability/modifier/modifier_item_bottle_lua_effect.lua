@@ -7,6 +7,10 @@ end
 function modifier_item_bottle_lua_effect:IsDebuff()
 	return false
 end
+function modifier_item_bottle_lua_effect:GetTexture()
+	return "item_bottle"
+end
+
 
 ----------------------------------------
 

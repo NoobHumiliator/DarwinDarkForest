@@ -5,14 +5,6 @@ modifier_fountain_aura_effect_lua = class({})
 function modifier_fountain_aura_effect_lua:IsDebuff()
     return false
 end
-
-
-function modifier_fountain_aura_effect_lua:OnCreated()
-
-   self:StartIntervalThink(1)
-
-end
-
 --------------------------------------------------------------------------------
 
 function modifier_fountain_aura_effect_lua:DeclareFunctions()
@@ -51,22 +43,16 @@ function modifier_fountain_aura_effect_lua:GetModifierTotalPercentageManaRegen( 
 
 end
 
---补充魔瓶
-function modifier_fountain_aura_effect_lua:OnIntervalThink()
 
-	if IsServer() then
-		if self:GetParent():HasItemInInventory("item_bottle") then
-			for i=1,6 do
-		 	   local hItem=self:GetParent():GetItemInSlot(i)
-               if hItem~=nil then
-                  if hItem:GetAbilityName()=="item_bottle" then
-                     hItem:SetCurrentCharges(3)
-                  end
-               end
-			end
-		end
-	end
 
+-----------------------------------------------------------------------------------
+function modifier_fountain_aura_effect_lua:OnCreated()
+	if not IsServer() then return end
+	self.nParticleIndex = ParticleManager:CreateParticle("particles/items_fx/bottle.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
 end
 
-
+function modifier_fountain_aura_effect_lua:OnDestroy()
+	if not IsServer() then return end
+	ParticleManager:DestroyParticle(self.nParticleIndex, false)
+	ParticleManager:ReleaseParticleIndex(self.nParticleIndex)
+end

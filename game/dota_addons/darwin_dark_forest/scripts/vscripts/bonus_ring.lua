@@ -78,6 +78,17 @@ function BonusRing:SpawnRing()
     for nTeam = 0, (DOTA_TEAM_COUNT-1) do
           AddFOWViewer(nTeam, vCenter, 850, nDuration, false)
     end
+    
+    --清理树木
+    GridNav:DestroyTreesAroundPoint( vCenter, nRadius, false )
+
+    Timers:CreateTimer({
+        endTime = 30,
+        callback = function()
+          GridNav:DestroyTreesAroundPoint( vCenter, nRadius, false )
+        end
+    })
+
 
     local hThinker = CreateModifierThinker( nil, nil, "modifier_bonus_ring_thinker", { duration = nDuration,radius=nRadius }, vCenter, DOTA_TEAM_NEUTRALS, false )
     local hDummy = CreateUnitByName( "npc_dota_ring_dummy", vCenter, false, nil, nil, DOTA_TEAM_NEUTRALS )

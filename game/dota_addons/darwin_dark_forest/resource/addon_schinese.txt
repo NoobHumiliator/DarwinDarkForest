@@ -1503,10 +1503,12 @@
 
 
     "GameInstruction"                                                    "玩法简介"
-    "note_1"                                                             "Note1: 击杀吃掉敌对生物获取经验值以及进化特性。"
+    "note_1"                                                             "Note1: 击杀并吃掉敌对生物获取经验值以及进化特性。"
     "note_2"                                                             "Note2: 吃掉的生物种类决定进化方向，请留意右下角雷达图。"
-    "note_3"                                                             "Note3: 捡起随机刷新的各色神符神符，快速提高某种进化特性。"
-    "note_4"                                                             "Note4: 任意玩家达到11级时游戏进入死亡模式，存活到最后的玩家获得游戏胜利。"
+    "note_3"                                                             "Note3: 捡起随机刷新的各色神符神符，能够快速提高某种进化特性。"
+    "note_4"                                                             "Note4: 信使携带高级空投装备，抛送至地图上随机位置。"
+    "note_5"                                                             "Note5: 高能力场仅允许单向进入，其中的生物会大幅提高经验获取速度。"
+    "note_4"                                                             "Note6: 任意玩家达到11级时游戏进入死亡模式，存活到最后的玩家获得游戏胜利。"
 
     "npc_dota_treasure_courier"                                          "宝物信使"
 
@@ -1526,6 +1528,12 @@
 
     "DOTA_Tooltip_Ability_item_ward_observer_4"                      "侦查守卫x4"
     "DOTA_Tooltip_Ability_item_ward_observer_4_Description"          "<h1>使用：放置</h1>放置隐形的侦查守卫来获得附近区域%vision_range%范围内的视野。持续%duration_minutes_tooltip%分钟。<br><br>按住Ctrl键可以对友方英雄使用，将1个守卫转移到他的物品栏中。<br><br>施法距离：%tooltip_range%"
+
+    "DOTA_Tooltip_modifier_item_bottle_lua_effect"                   "魔瓶（恢复）"
+    "DOTA_Tooltip_modifier_item_bottle_lua_effect_Description"       "提升%fMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%点/秒生命恢复和%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复。"
+    "DOTA_Tooltip_Ability_item_bottle_lua"                           "魔瓶"
+    "DOTA_Tooltip_Ability_item_bottle_lua_Description"               "<h1>使用：恢复</h1>每次使用都能在%restore_time%秒内提升%bonus_health_regen%点/秒生命恢复和%bonus_mana_regen%点/秒魔法恢复。<br>魔瓶在靠近泉水时会被灌满。<br>"
+    
 
 
     //EconUnitBegins
