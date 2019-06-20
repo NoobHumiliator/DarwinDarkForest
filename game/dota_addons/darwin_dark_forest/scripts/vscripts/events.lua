@@ -491,7 +491,7 @@ function GameMode:OnPlayerSay(keys)
         if string.match(sText,"to%d") and hHero and not hHero.hCurrentCreep:IsNull() then
            local nLevel= tonumber(string.match(sText,"%d+"))
            --给玩家对应等级的经验
-           if nLevel>=1 and nLevel<=10 then
+           if nLevel>=1 and nLevel<=11 then
              hHero.nCustomExp=vCREEP_EXP_TABLE[nLevel]+1
                --计算等级
              local nNewLevel=CalculateNewLevel(hHero)

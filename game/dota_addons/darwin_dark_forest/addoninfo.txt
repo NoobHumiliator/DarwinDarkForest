@@ -3,7 +3,7 @@
 	 maps			"island_1x10"
 	"IsPlayable"	"1"
 	"HeroGuidesSupported" "1"
-	"PenaltiesEnabled"			"1"
+	"PenaltiesEnabled"			"0"
 	"island_1x10"
 	{
 			"MaxPlayers"                    "10"

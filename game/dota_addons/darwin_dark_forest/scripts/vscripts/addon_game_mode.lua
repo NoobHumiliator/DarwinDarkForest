@@ -33,7 +33,7 @@ _G.vCREEP_EXP_TABLE={
     68,
     103,
     155, --10
-    233  --11
+    350  --11
 }
 
 vCREEP_EXP_TABLE[0]=2
@@ -68,50 +68,13 @@ require( "rune_spawner" )
 require('libraries/activity_modifier')
 require('libraries/animations')
 
+Precache = require "Precache"
 
 
 function Activate()
     GameMode:InitGameMode()
 end
----------------------------------------------------------------------------
--- Precache
----------------------------------------------------------------------------
-function Precache( context )
-     PrecacheResource( "particle", "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_necro_souls_hero.vpcf", context )    
-     PrecacheResource( "particle", "particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", context )
-     PrecacheResource( "particle", "particles/units/heroes/hero_disruptor/disruptor_kineticfield.vpcf", context )
 
-     --如果 unit 里面写过的技能不需要 其他直接拿来用的技能都需要预加载
-     PrecacheResource( "soundfile", "soundevents/game_sounds_dungeon.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_dungeon_enemies.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_winter_2018.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_creeps.vsndevts", context )
-
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_spirit_breaker.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_morphling.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_warlock.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_death_prophet.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dark_seer.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_furion.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts", context )
-     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_disruptor.vsndevts", context )
-
-
-     for sUnitName, vData in pairs(GameRules.vUnitsKV) do
-         PrecacheUnitByNameAsync(sUnitName, function() end)
-     end
-end
 
 --载入单位
 GameRules.vUnitsKV = LoadKeyValues('scripts/npc/npc_units_custom.txt')
@@ -208,12 +171,6 @@ for i=0,10 do
     print("-----------------------------------")
 end
 
-
-
-
-  for sUnitName, vData in pairs(GameRules.vUnitsKV) do
-         PrecacheUnitByNameAsync(sUnitName, function() end)
-     end
 
 -- 处理一下 将KV里面的技能 按等级拆碎 进化的时候一并洗入技能池
 for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
@@ -598,17 +555,24 @@ function GameMode:UpdateScoreboardAndVictory()
     --终极进化阶段 只剩唯一队伍
     if GameRules.bUltimateStage and #vAliveTeams==1  then
       --结束各种类型游戏，记录天梯分数
-      if GameRules.bPveMap  and not GameRules.bSendEndToSever  then
-          GameRules.bSendEndToSever=true
-          Server:EndPveGame(vAliveTeams[1])
-      end
-      if GetMapName() == "island_1x10" and not GameRules.bSendEndToSever then
-          GameRules.bSendEndToSever=true
-          Server:EndPvpGame(vSortedTeams,"solo",vAliveTeams[1])
-      end
-      if GetMapName() == "island_3x4" and not GameRules.bSendEndToSever then
-          GameRules.bSendEndToSever=true
-          Server:EndPvpGame(vSortedTeams,"three_player",vAliveTeams[1])
+      --作弊模式直接结束游戏
+      if GameRules:IsCheatMode() then
+         GameRules:SetGameWinner(vAliveTeams[1])
+         GameRules.bUltimateStage=false
+      else
+        --非作弊 记录天梯
+        if GameRules.bPveMap  and not GameRules.bSendEndToSever  then
+              GameRules.bSendEndToSever=true
+              Server:EndPveGame(vAliveTeams[1])
+        end
+        if GetMapName() == "island_1x10" and not GameRules.bSendEndToSever then
+              GameRules.bSendEndToSever=true
+              Server:EndPvpGame(vSortedTeams,"solo",vAliveTeams[1])
+        end
+        if GetMapName() == "island_3x4" and not GameRules.bSendEndToSever then
+              GameRules.bSendEndToSever=true
+              Server:EndPvpGame(vSortedTeams,"three_player",vAliveTeams[1])
+        end
       end
     end
  

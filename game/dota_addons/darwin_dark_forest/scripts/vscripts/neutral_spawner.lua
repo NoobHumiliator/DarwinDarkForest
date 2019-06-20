@@ -1,6 +1,6 @@
 local vMysteryTopLeft= {x=-6830,y=7637 }
 local vMysteryDownRight= {x=-1544,y=1412}
-local vElementTopLeft= {x=1125,y=-200}
+local vElementTopLeft= {x=-1000,y=-200}
 local vElementDownRight= {x=6000,y=-6000}
 local vDurableTopLeft= {x=-2190,y=7825}
 local vDurableDownRight= {x=4620,y=222}
@@ -12,7 +12,7 @@ local vFuryDownRight_2= {x=8211,y=-5400}
 
 
 local vDecayTopLeft= {x=-8251,y=3500}
-local vDecayDownRight= {x=-500,y=-5165}
+local vDecayDownRight= {x=-500,y=-6600}
 
 local vHuntTopLeft= {x=-4914,y=2900}
 local vHuntDownRight= {x=3357,y=-2000}

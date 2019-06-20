@@ -356,7 +356,7 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
                sUnitToEnvolve="npc_dota_creature_storm_spirit"
            end
            if tempPerksMap[1].name=="mystery" then
-               sUnitToEnvolve="npc_dota_creature_dark_seer"
+               sUnitToEnvolve="npc_dota_creature_dark_seer_imperial_relics"
            end
            if tempPerksMap[1].name=="durable" then
                sUnitToEnvolve="npc_dota_creature_storegga_2"
@@ -370,6 +370,8 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
            if tempPerksMap[1].name=="hunt" then
                sUnitToEnvolve="npc_dota_creature_nightstalker"
            end  
+
+           return sUnitToEnvolve
     else 
         -- 遍历kv 加入进化池 key 单位名称 value单位总perk点
 
