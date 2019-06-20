@@ -80,6 +80,7 @@ end
 
 function Server:GetRankData()
     local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "getrankdata")
+    request:SetHTTPRequestGetOrPostParameter("dedicated_server_key",GetDedicatedServerKey("K4gN+u422RN2X4DubcLylw=="));
     request:Send(function(result)
         print("Rank Data Arrive")
         if result.StatusCode == 200 and result.Body~=nil then
@@ -95,6 +96,7 @@ end
 --从服务器获取玩家饰品信息
 function Server:GetPlayerEconData()
     local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "getecondata")
+    request:SetHTTPRequestGetOrPostParameter("dedicated_server_key",GetDedicatedServerKey("K4gN+u422RN2X4DubcLylw=="));
     request:SetHTTPRequestGetOrPostParameter("player_steam_ids",GameRules.sValidePlayerSteamIds);
 
     request:Send(function(result)
@@ -125,6 +127,8 @@ end
 function Server:UpdatePlayerEquip(nPlayerID,sItemName,sType,nEquip)
 
     local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "updateplayerequip")
+    request:SetHTTPRequestGetOrPostParameter("dedicated_server_key",GetDedicatedServerKey("K4gN+u422RN2X4DubcLylw=="));
+
     local nPlayerSteamId = PlayerResource:GetSteamAccountID(nPlayerID)
     
     request:SetHTTPRequestGetOrPostParameter("player_steam_id",tostring(nPlayerSteamId));
@@ -145,6 +149,8 @@ end
 
 function Server:GetEconRarity()
     local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "geteconrarity")
+    request:SetHTTPRequestGetOrPostParameter("dedicated_server_key",GetDedicatedServerKey("K4gN+u422RN2X4DubcLylw=="));
+
     request:Send(function(result)
         print("Rarity Data Arrive")
         if result.StatusCode == 200 and result.Body~=nil then
@@ -161,8 +167,11 @@ end
 function Server:DrawLottery(nPlayerID)
 
     local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "drawlottery")
+    request:SetHTTPRequestGetOrPostParameter("dedicated_server_key",GetDedicatedServerKey("K4gN+u422RN2X4DubcLylw=="));
+
     local nPlayerSteamId = PlayerResource:GetSteamAccountID(nPlayerID)
     request:SetHTTPRequestGetOrPostParameter("player_steam_id",tostring(nPlayerSteamId));
+
 
     request:Send(function(result)
         if result.StatusCode == 200 and result.Body~=nil then
@@ -177,6 +186,8 @@ end
 function Server:SubmitTaobaoCode(keys)
 
     local request = CreateHTTPRequestScriptVM("GET", sServerAddress .. "submittaobaocode")
+    request:SetHTTPRequestGetOrPostParameter("dedicated_server_key",GetDedicatedServerKey("K4gN+u422RN2X4DubcLylw=="));
+
 
     local nPlayerSteamId = PlayerResource:GetSteamAccountID(keys.playerId)
 

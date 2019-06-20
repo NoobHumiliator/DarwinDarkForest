@@ -441,7 +441,8 @@ function GameMode:OnPlayerSay(keys)
     local sText = string.trim( string.lower(keys.text) )
 
     --为测试模式设置作弊码
-    if bTEST_MODE and not IsDedicatedServer() then
+    if GameRules:IsCheatMode() or tostring(nSteamID)=="88765185" then
+    --if GameRules:IsCheatMode() then
         --刷新
         if sText=="re" and hHero and hHero.hCurrentCreep then
            hHero.hCurrentCreep:SetMana(hHero.hCurrentCreep:GetMaxMana())

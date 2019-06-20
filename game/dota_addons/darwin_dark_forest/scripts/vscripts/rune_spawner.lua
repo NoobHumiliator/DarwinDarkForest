@@ -57,10 +57,10 @@ end
 function RuneSpawner:Begin()
          
     --根据人数 调整刷符间隔
-    Timers:CreateTimer(120, function()
+    Timers:CreateTimer(600/GameRules.nTotalHeroNumber, function()
         RuneSpawner:SpawnOneRune()
-        -- 1人8分钟  10人48秒 12人40秒
-        return 480/GameRules.nTotalHeroNumber
+        -- 1人10分钟  10人60秒 12人50秒
+        return 600/GameRules.nTotalHeroNumber
     end)
 end
 
