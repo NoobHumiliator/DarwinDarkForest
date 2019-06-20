@@ -86,14 +86,30 @@ function CheckIfHasAggro()
 
     if thisEntity.hChasingTarget and not thisEntity.hChasingTarget:IsNull()  then
 
-    	if thisEntity:GetLevel()<11 then
-		 	local flAbilityCastTime = CastAbility(thisEntity.hChasingTarget)
-		 	if flAbilityCastTime then
-		 		return flAbilityCastTime
-		 	end
-	    end
-        --如果四秒不受玩家反击，或者丢失玩家视野 (保证其能移动，不能移动的单位不撤退)
-		if (thisEntity.flLastHitTime and ( GameRules:GetGameTime() - thisEntity.flLastHitTime >4 ) ) or not thisEntity:CanEntityBeSeenByMyTeam(thisEntity:GetAggroTarget())  then
+    	local flAbilityCastTime = TryCastAbility(thisEntity.hChasingTarget)
+    	--先放技能 其他操作下个循环再说
+        if flAbilityCastTime then
+        	return flAbilityCastTime
+        end
+
+        --如果x秒不受玩家反击，或者丢失玩家视野 (保证其能移动，不能移动的单位不撤退)
+        --  基础追击时间 4秒
+        local flChaseTime=4
+        --减少弱势生物被追击时间
+        if GameRules.nAverageLevel then       
+           if thisEntity.hChasingTarget:GetLevel() == GameRules.nAverageLevel -1  then                  
+               flChaseTime = 3
+           end
+           if thisEntity.hChasingTarget:GetLevel() == GameRules.nAverageLevel -2  then                  
+               flChaseTime = 1.5   
+           end
+           if thisEntity.hChasingTarget:GetLevel() <= GameRules.nAverageLevel -3  then                  
+               flChaseTime = 0.75  
+           end
+        end
+
+
+		if (thisEntity.flLastHitTime and ( GameRules:GetGameTime() - thisEntity.flLastHitTime >flChaseTime ) ) or not thisEntity:CanEntityBeSeenByMyTeam(thisEntity:GetAggroTarget())  then
 	 		--撤退 并且重置追击状态
 	 		return RetreatFromUnit(thisEntity.hChasingTarget)
 		end
@@ -108,13 +124,14 @@ function CheckIfHasAggro()
 	        	thisEntity:SetBaseMoveSpeed( thisEntity.nOriginalMovementSpeed )
 	            thisEntity.flLastHitTime =  GameRules:GetGameTime();   
 	        end
-	        --尝试释放技能 11级生物跳过
-			 if thisEntity:GetLevel()<11 then
-			 	local flAbilityCastTime = CastAbility(thisEntity:GetAggroTarget())
-			 	if flAbilityCastTime then
-			 		return flAbilityCastTime
-			 	end
-		     end
+
+	        local hTarget = thisEntity:GetAggroTarget()
+		 	local flAbilityCastTime = TryCastAbility(hTarget)
+            if flAbilityCastTime then
+            	return flAbilityCastTime
+            else
+            	return 0.1
+            end
 		else
 			--恢复步行速度
 			thisEntity:SetBaseMoveSpeed(nWalkingMoveSpeed)
@@ -122,6 +139,34 @@ function CheckIfHasAggro()
 		end
 	end
 end
+------------------------------------------------------------------
+--尝试释放技能
+function TryCastAbility(hTarget)
+
+ 	local bWillCastAbility = true
+ 	if hTarget.GetOwner and hTarget:GetOwner() and hTarget:GetOwner().GetPlayerID and hTarget:GetOwner():GetPlayerID() then
+        local nPlayerId = hTarget:GetOwner():GetPlayerID()
+        local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
+        --如果目标是玩家主控生物,并且等级低于平均等级2级，怪物不主动释放技能
+        if hHero and hHero.hCurrentCreep == hTarget and GameRules.nAverageLevel then
+             if hHero.nCurrentCreepLevel <= (GameRules.nAverageLevel-2)  and  thisEntity.flLastAttacker~=hTarget  then
+                 bWillCastAbility=false
+             end
+        end
+        --11级怪 全员狼人 不释放技能
+        if thisEntity:GetLevel()>10 then
+           bWillCastAbility = false
+        end
+    end
+    if bWillCastAbility then
+	 	local flAbilityCastTime = CastAbility(hTarget)
+	 	if flAbilityCastTime then
+	 		return flAbilityCastTime
+	 	end
+	end
+	return nil
+end
+
 -------------------------------------------------------------------
 
 function ContainsValue(nSum,nValue)

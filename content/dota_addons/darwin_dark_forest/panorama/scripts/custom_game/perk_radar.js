@@ -139,13 +139,13 @@ function HideRadarDotTooltip(index)
     {
     	$("#PerkRadarContainer").style.position="1400px 830px 0"
     }
-	  if ( 1.5<radio&&radio<1.7)
+	  if ( 1.5<radio&&radio<1.7) //16:10
     {
-    	$("#PerkRadarContainer").style.position="1100px 830px 0"
+    	$("#PerkRadarContainer").style.position="1250px 830px 0"
     }
     if ( radio<1.4 )
     {
-    	$("#PerkRadarContainer").style.position="900px 830px 0"
+    	$("#PerkRadarContainer").style.position="1050px 825px 0"
     }
     
 })();

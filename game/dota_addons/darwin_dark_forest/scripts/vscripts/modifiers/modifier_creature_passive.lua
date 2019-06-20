@@ -33,8 +33,10 @@ function modifier_creature_passive:OnTakeDamage (event)
 		local hAttacker = event.attacker
         
         --承受来自其他 队伍的攻击
-        if hAttacker and  hCaster:GetTeamNumber()~=hAttacker:GetTeamNumber() then         
-              hCaster.flLastHitTime = GameRules:GetGameTime()          
+        if hAttacker and  hCaster:GetTeamNumber()~=hAttacker:GetTeamNumber() then
+              --小本本记下来         
+              hCaster.flLastHitTime = GameRules:GetGameTime()      
+              hCaster.flLastAttacker= hAttacker
         end
 
 	end

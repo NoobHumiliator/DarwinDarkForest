@@ -479,6 +479,14 @@ function GameMode:OnPlayerSay(keys)
         if sText=="evolve" and hHero and not hHero.hCurrentCreep:IsNull() then
             Evolve(nPlayerId,hHero)
         end
+
+        -- 进化二号测试员
+        if sText=="evolve enemy" then
+            local hHandlingHero = PlayerResource:GetPlayer(1):GetAssignedHero()
+            local nHandlingPlayerId = 1
+            Evolve(nHandlingPlayerId,hHandlingHero)
+        end
+
         -- 升级
         if string.match(sText,"to%d") and hHero and not hHero.hCurrentCreep:IsNull() then
            local nLevel= tonumber(string.match(sText,"%d+"))
