@@ -1506,7 +1506,11 @@
     "DOTA_Tooltip_Ability_item_bottle_lua"                           "Bottle"
     "DOTA_Tooltip_Ability_item_bottle_lua_Description"               "<h1>Active: Regenerate</h1>Consumes a charge and regenerating %bonus_health_regen% HP and %bonus_mana_regen% mana per second, over %restore_time% seconds.<br><br>The Bottle automatically refills at the fountain."
     
-    
+    "DOTA_Tooltip_Ability_doom_bringer_infernal_blade_nDecay"        "<font color='#b3d465'>nDecay：</font>"
+    "DOTA_Tooltip_Ability_doom_bringer_infernal_blade_nFury"         "<font color='#eb6877'>nFury：</font>"
+
+    "DOTA_Tooltip_Ability_giant_wolf_critical_strike"                "<font color='#eb6877'>nFury：</font>"
+
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "Lich"
 	"npc_dota_creature_lich_shearing_deposition"                  "Lich"

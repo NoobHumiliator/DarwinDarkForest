@@ -965,7 +965,7 @@
             "03"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "nFury"                     "4 8 13 19 26 34 43 53 64"
+                "nFury"                     "4 10 16 22 28 34 40 46 52"
         
             }
         }
@@ -5133,7 +5133,7 @@
         "FightRecapLevel"               "1"
         "AbilitySound"                  "Hero_Enigma.Midnight_Pulse"
 
-        "MaxLevel"                      "6"
+        "MaxLevel"                      "5"
 
         // Casting
         //-------------------------------------------------------------------------------------------------------------
@@ -5162,22 +5162,22 @@
             "02"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "damage_percent"            "3 3.5 4 4.5 5 5.5"
+                "damage_percent"            "6 7 8 9 10"
             }
             "03"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "duration"                  "9 10 11 12 13 14"
+                "duration"                  "8.5 9 9.5 10 10.5"
             }
             "04"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "nDecay"                    "5 10 15 20 25 30"
+                "nDecay"                    "10 20 30 40 50"
             }
             "05"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "nMystery"                  "5 10 15 20 25 30"
+                "nMystery"                  "10 20 30 40 50"
             }
         }
     }
@@ -7599,6 +7599,7 @@
         "AbilityManaCost"               "40"
         "AbilityCastRange"              "175"
         "AbilityCastPoint"              "0.0 0.0 0.0 0.0"
+        "MaxLevel"                      "6"
 
         // Special
         //-------------------------------------------------------------------------------------------------------------
@@ -7607,7 +7608,7 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "burn_damage"           "25"
+                "burn_damage"           "25 50 75 100 125 150"
             }
             "02"
             {

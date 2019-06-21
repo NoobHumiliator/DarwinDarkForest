@@ -1534,6 +1534,11 @@
     "DOTA_Tooltip_Ability_item_bottle_lua"                           "魔瓶"
     "DOTA_Tooltip_Ability_item_bottle_lua_Description"               "<h1>使用：恢复</h1>每次使用都能在%restore_time%秒内提升%bonus_health_regen%点/秒生命恢复和%bonus_mana_regen%点/秒魔法恢复。<br>魔瓶在靠近泉水时会被灌满。<br>"
     
+    
+    "DOTA_Tooltip_Ability_doom_bringer_infernal_blade_nDecay"         "<font color='#b3d465'>腐朽：</font>"
+    "DOTA_Tooltip_Ability_doom_bringer_infernal_blade_nFury"          "<font color='#eb6877'>狂怒：</font>"
+
+    "DOTA_Tooltip_Ability_giant_wolf_critical_strike"                 "<font color='#eb6877'>狂怒：</font>"
 
 
     //EconUnitBegins

@@ -32,7 +32,10 @@ local precacheHeroes = {
    "alchemist",
    "doombringer",
    "disruptor",
-   "templar_assassin"
+   "templar_assassin",
+   "clinkz",
+   "phantom_assassin"
+
 }
 
 
