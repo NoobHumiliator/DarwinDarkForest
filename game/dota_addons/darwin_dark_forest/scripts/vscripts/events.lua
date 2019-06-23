@@ -123,7 +123,7 @@ function GameMode:OnEntityKilled(keys)
    
 
    local flPercentage=0.5 --野怪进化点数 比例
-   local flPlayerPercentage=0.3 --玩家进化点数 吸取比例
+   local flPlayerPercentage=0.1 --玩家进化点数 吸取比例
 
    --如果玩家击杀野怪，把野怪的进化点赋给玩家
    if  hKilledUnit:GetTeamNumber() == DOTA_TEAM_NEUTRALS then
@@ -256,33 +256,24 @@ function GameMode:OnEntityKilled(keys)
 
             PlayAbsorbParticle(tempPerksMap,hKillerUnit,hKilledUnit)
 
-            --给击杀者经验
-            local flExpRatio=1
+            --给击杀者经验 玩家互相杀 经验翻倍
+            local flExpRatio=2
             if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_item_creed_of_omniscience") then
-                 flExpRatio=1.2
+               flExpRatio=flExpRatio*1.2
             end
 
-            hKillerHero.nCustomExp=hKillerHero.nCustomExp+ vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio 
-            
+            if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_bonus_ring_effect") then
+               flExpRatio= flExpRatio*1.5
+            end
 
+            local flExp= vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio 
+            
             PlayKillEffectAndSound(nKillerPlayerId)
             --给击杀者 英雄换模型
             hKillerHero:SetOriginalModel(hKillerUnit:GetModelName())
             hKillerHero:SetModel(hKillerUnit:GetModelName())
-
-            local nKillerNewLevel=CalculateNewLevel(hKillerHero)
-       
-             --如果升级了 进化
-            if nKillerNewLevel~=hKillerHero.nCurrentCreepLevel then
-                hKillerHero.nCurrentCreepLevel=nKillerNewLevel
-                LevelUpAndEvolve(nKillerPlayerId,hKillerHero)
-            end
             
-
-
-            --更新击杀者雷达
-            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nKillerPlayerId),"UpdateRadar", {current_exp=hKillerHero.nCustomExp-vEXP_TABLE[nKillerNewLevel],next_level_need=vEXP_TABLE[nKillerNewLevel+1]-vEXP_TABLE[nKillerNewLevel],perk_table=GameMode.vPlayerPerk[nKillerPlayerId] } )
-            CustomNetTables:SetTableValue( "player_perk", tostring(nKillerPlayerId), GameMode.vPlayerPerk[nKillerPlayerId] )
+            GainExpAndUpdateRadar(nKillerPlayerId,hKillerHero,flExp)
 
           end
 
@@ -430,7 +421,6 @@ end
 
 
 
-
 --玩家打字事件
 function GameMode:OnPlayerSay(keys) 
  
@@ -444,7 +434,7 @@ function GameMode:OnPlayerSay(keys)
     if GameRules:IsCheatMode() or tostring(nSteamID)=="88765185" then
     --if GameRules:IsCheatMode() then
         --刷新
-        if sText=="re" and hHero and hHero.hCurrentCreep then
+        if sText=="refresh" and hHero and hHero.hCurrentCreep then
            hHero.hCurrentCreep:SetMana(hHero.hCurrentCreep:GetMaxMana())
            hHero.hCurrentCreep:SetHealth(hHero.hCurrentCreep:GetMaxHealth())
            for i=1,20 do
@@ -577,6 +567,54 @@ function GameMode:OnPlayerSay(keys)
            end
         end
 
+        -- 微调属性
+        if string.match(sText,"element%d") and hHero and not hHero.hCurrentCreep:IsNull() then
+            local flValue= tonumber(string.match(sText,"%d+"))
+            GameMode.vPlayerPerk[nPlayerId][1] = flValue
+        end
+
+        if string.match(sText,"mystery%d") and hHero and not hHero.hCurrentCreep:IsNull() then
+            local flValue= tonumber(string.match(sText,"%d+"))
+            GameMode.vPlayerPerk[nPlayerId][2] = flValue
+        end
+
+        if string.match(sText,"durable%d") and hHero and not hHero.hCurrentCreep:IsNull() then 
+            local flValue= tonumber(string.match(sText,"%d+"))
+            GameMode.vPlayerPerk[nPlayerId][3] = flValue
+        end
+
+        if string.match(sText,"fury%d") and hHero and not hHero.hCurrentCreep:IsNull() then   
+            local flValue= tonumber(string.match(sText,"%d+"))
+            GameMode.vPlayerPerk[nPlayerId][4] = flValue
+        end
+
+        if string.match(sText,"decay%d") and hHero and not hHero.hCurrentCreep:IsNull() then   
+            local flValue= tonumber(string.match(sText,"%d+"))
+            GameMode.vPlayerPerk[nPlayerId][5] = flValue
+        end
+
+        if string.match(sText,"hunt%d") and hHero and not hHero.hCurrentCreep:IsNull() then   
+            local flValue= tonumber(string.match(sText,"%d+"))
+            GameMode.vPlayerPerk[nPlayerId][6] = flValue
+        end
+
+        --杀地图全部的生物
+        if string.find(sText,"killall") == 1 then
+            local vEnemies = FindUnitsInRadius(PlayerResource:GetTeam(nPlayerId), Vector(0,0,0), nil, 100000, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL,  DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_CLOSEST, false )
+            for _,hEnemy in pairs(vEnemies) do
+               local DamageInfo =
+               {
+                 victim = hEnemy,
+                 attacker = hHero.hCurrentCreep,
+                 ability = nil,
+                 damage = 1000000,
+                 damage_type = DAMAGE_TYPE_PHYSICAL,
+               }
+               ApplyDamage( DamageInfo )
+            end
+        end
+
+       
     end
 
 
@@ -643,6 +681,11 @@ function CalculateExpLostRatio(hHero)
 
         if hHero.hCurrentCreep:GetLevel() <= GameRules.nAverageLevel-3 then
            flExpLoseRatio=0
+        end
+        
+        --10级生物固定经验损失
+        if hHero.hCurrentCreep:GetLevel()==10 then
+            flExpLoseRatio=0.35    
         end
     end
 

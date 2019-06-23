@@ -237,3 +237,14 @@ function FloatKeepOneDecimal(flDecimal)
 
     return  flDecimal * 0.1
 end
+
+
+function ContainsValue(nSum,nValue)
+
+   if bit:_and(nSum,nValue)==nValue then
+        return true
+    else
+      return false
+    end
+
+end

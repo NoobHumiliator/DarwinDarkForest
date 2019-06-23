@@ -2,13 +2,19 @@ local particles = {
     "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_necro_souls_hero.vpcf",    
     "particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf",
     "particles/units/heroes/hero_disruptor/disruptor_kineticfield.vpcf",
+    "particles/items2_fx/veil_of_discord.vpcf"
 }
 
 local sounds = {
-    "soundevents/game_sounds_dungeon.vsndevts", 
+    "soundevents/game_sounds.vsndevts",
+    "soundevents/game_sounds_ambient.vsndevts",
+    "soundevents/game_sounds_items.vsndevts",
+    "soundevents/soundevents_dota.vsndevts",
+    "soundevents/game_sounds_dungeon.vsndevts",
     "soundevents/game_sounds_dungeon_enemies.vsndevts",
     "soundevents/game_sounds_winter_2018.vsndevts",
     "soundevents/game_sounds_creeps.vsndevts",
+    "soundevents/game_sounds_ui.vsndevts",
 }
 
 
@@ -34,8 +40,9 @@ local precacheHeroes = {
    "disruptor",
    "templar_assassin",
    "clinkz",
-   "phantom_assassin"
-
+   "phantom_assassin",
+   "necrolyte",
+   "magnataur"
 }
 
 

@@ -95,6 +95,24 @@ function Evolve (nPlayerId,hHero)
     local hUnit = SpawnUnitToReplaceHero(sUnitToEnvolve,hHero,nPlayerId)
 
     AddAbilityForUnit(hUnit,nPlayerId)
+    
+    --为11级生物添加两级反转
+    if nLevel==11 then
+       local hAbilityReverse = hUnit:AddAbility("ultimate_stage_reverse_polarity")
+       hAbilityReverse:SetLevel(1)
+       hAbilityReverse:StartCooldown(120)
+    end
+  
+    --冒泡排序交换技能 把被动技能下沉
+    for i=0,24 do
+        for j=0,24-i do
+          local hAbility1 = hUnit:GetAbilityByIndex(j)
+          local hAbility2 = hUnit:GetAbilityByIndex(j+1)
+          if hAbility1 and hAbility2 and hAbility1:IsPassive() and not hAbility2:IsPassive() then
+              hUnit:SwapAbilities(hAbility1:GetAbilityName(), hAbility2:GetAbilityName(), true, true)
+          end
+        end   
+    end
      
     --继承粒子特效
     if Econ.vPlayerData[nPlayerId].sCurrentParticleEconItemName then
@@ -151,12 +169,7 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
   hUnit:SetHealth(hUnit:GetMaxHealth()*flCurrentHealthRatio)
 
   -- evolve island util
-  AddTinyBody(hUnit) 
-  --为死灵法师添加技能（被动技能加给野怪过强）  
-  if hUnit:GetUnitName()=="npc_dota_creature_necrolyte_apostle_of_decay" then
-     hUnit:AddAbility("necrolyte_heartstopper_aura"):SetLevel(1)
-  end
-
+  AddTinyBody(hUnit)
 
   hHero.hCurrentCreep=hUnit
   hHero.nCurrentCreepLevel=hUnit:GetLevel()
@@ -190,7 +203,14 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
   })
 
   --清除周围树木,防止卡在树里面
-  GridNav:DestroyTreesAroundPoint( hUnit:GetOrigin(), 200, false )
+  local flDestroyTreeRadius=200
+  
+  --七级以上生物 扩大范围
+  if hUnit:GetLevel()>=7 then
+     flDestroyTreeRadius=400
+  end
+  
+  GridNav:DestroyTreesAroundPoint( hUnit:GetOrigin(), flDestroyTreeRadius, false )
 
   return hUnit
 
@@ -319,9 +339,8 @@ function GameEnterUltimateStage  (nPlayerId)
     local sPlayerName=PlayerResource:GetPlayerName(nPlayerId)
     Notifications:TopToAll({text = sPlayerName.." ", duration = 4})
     Notifications:TopToAll({text = "#UltimateStageNote", duration = 4, style = {color = "Orange"}, continue = true})       --无法复活 关闭战争迷雾
-    GameRules:GetGameModeEntity():SetFixedRespawnTime(99999999999)
     GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
-    GameRules.bUltimateStage=true    
+    GameRules.bUltimateStage=true
 end
 
 function GameEnterLevelTenStage  (nPlayerId)
@@ -637,11 +656,12 @@ function GainExpAndUpdateRadar (nPlayerId,hHero,flExp)
 
      --计算等级
      local nNewLevel=CalculateNewLevel(hHero)
-     
-     --如果升级了 进化
-     if nNewLevel~=hHero.nCurrentCreepLevel then
-        hHero.nCurrentCreepLevel=nNewLevel
-        LevelUpAndEvolve(nPlayerId,hHero)
+     if hHero:IsAlive() then
+         --如果升级了 进化
+         if nNewLevel~=hHero.nCurrentCreepLevel then
+            hHero.nCurrentCreepLevel=nNewLevel
+            LevelUpAndEvolve(nPlayerId,hHero)
+         end
      end
      --更新UI显示
      CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )

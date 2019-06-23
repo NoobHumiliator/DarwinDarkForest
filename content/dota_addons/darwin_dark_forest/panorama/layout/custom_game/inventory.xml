@@ -45,7 +45,7 @@
                     <Image id="DnaStorageImg" src="file://{images}/custom_game/inventory/dna.png"/>
                     <Label id = "DnaStorageLabel" text = "× ?"/>
                     <Panel id = "TaobaoPlusIcon" class = "" hittest = "true" onmouseover="ShowTaoBaoQRCode()" />
-                    <TextEntry id="TaobaoCodeEntry" maxchars="25" placeholder="请输入激活码" oninputsubmit="OnCdkeySubmitted()" />
+                    <TextEntry id="TaobaoCodeEntry" maxchars="25" placeholder="#ClickPlusForCode" oninputsubmit="OnCdkeySubmitted()" />
                     <Button id="SubmitTaobaoCodeButton" onactivate="SubmitTaobaoCode()" class="EvolveButton">
                         <Label id="SubmitTaobaoCodeButtonLabel"  text="#ExchangeKey"/>
                         <Panel id="SubmitTaobaoCodeButtonLoading" class="Spinner Hidden"/>/>
@@ -75,7 +75,7 @@
                     <Panel class="InventoryRightContainer Hidden" id="InventoryRightContainer">
                         
                         <Panel class="InventoryClassTitle" id="InventorySkinTitle">
-                           <Label class="DrawMutationButtonText"  text="#Skin" />
+                           <Label class="DrawMutationButtonText"  text="#SkinTitle" />
                         </Panel>
                         <Panel class="InventoryClassPanel" id="InventorySkinPanel"/>
 
@@ -95,7 +95,7 @@
                         <Panel class="InventoryClassPanel" id="InventoryKillEffectPanel"/>   
                         
                         <Panel class="InventoryClassTitle" id="InventoryImmortalTitle">
-                           <Label text="#Immortal" />
+                           <Label text="#ImmortalTitle" />
                         </Panel>
                         <Panel class="InventoryClassPanel" id="InventoryImmortalPanel"/> 
 

@@ -89,6 +89,13 @@ function ItemController:Begin()
             return 130
         end)
     end
+
+    --清理地面过期物品
+    Timers:CreateTimer(5, function()
+        ItemController:TryRemoveOverTimeItems()
+        return 5
+    end)
+
 end
 
 
@@ -371,7 +378,7 @@ function ItemController:TreasureDrop( treasureCourier )
   ItemController:DropItemByChance(treasureCourier)
 
   --Knock people back from the treasure
-  ItemController:KnockBackFromTreasure( spawnPoint, 375, 0.25, 400, 100 )
+  ItemController:KnockBackFromTreasure( spawnPoint, 350, 0.25, 250, 75 )
     
   --Destroy the courier
   UTIL_Remove( treasureCourier )
@@ -398,4 +405,26 @@ function ItemController:KnockBackFromTreasure( center, radius, knockback_duratio
      -- print( "knock back unit: " .. unit:GetName() )
     unit:AddNewModifier( unit, nil, "modifier_knockback", modifierKnockback );
   end
+end
+
+
+
+function ItemController:TryRemoveOverTimeItems()
+  
+  for _,hItem in pairs( Entities:FindAllByClassname( "dota_item_drop")) do
+      if hItem and hItem.GetCreationTime and GameRules:GetGameTime()-hItem:GetCreationTime() > 180 then
+          local hContainedItem = hItem:GetContainedItem()
+          local nFXIndex = ParticleManager:CreateParticle( "particles/items2_fx/veil_of_discord.vpcf", PATTACH_CUSTOMORIGIN, item )
+          ParticleManager:SetParticleControl( nFXIndex, 0, hItem:GetOrigin() )
+          ParticleManager:SetParticleControl( nFXIndex, 1, Vector( 35, 35, 25 ) )
+          ParticleManager:ReleaseParticleIndex( nFXIndex )
+          local hInventoryItem = hItem:GetContainedItem()
+          if hInventoryItem then
+             print("Removing item "..hInventoryItem:GetName()) 
+             UTIL_Remove( hInventoryItem )
+          end
+          UTIL_Remove( hItem )
+      end
+  end
+
 end

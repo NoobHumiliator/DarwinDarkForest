@@ -53,6 +53,7 @@
     "InvalideTaobaoCode"                      "Invalide Taobao Code"
     "TaobaoCodeOccupied"                      "Taobao Code is Occupied"
     "TaobaoCodeSuccess"                       "Congratulation, DNA + "
+    "ClickPlusForCode"                        "Please input Taobao Code"
 
     "rarity_normal"                           "Normal"
     "rarity_rare"                             "Rare"
@@ -1509,7 +1510,33 @@
     "DOTA_Tooltip_Ability_doom_bringer_infernal_blade_nDecay"        "<font color='#b3d465'>nDecay：</font>"
     "DOTA_Tooltip_Ability_doom_bringer_infernal_blade_nFury"         "<font color='#eb6877'>nFury：</font>"
 
-    "DOTA_Tooltip_Ability_giant_wolf_critical_strike"                "<font color='#eb6877'>nFury：</font>"
+    "DOTA_Tooltip_Ability_giant_wolf_critical_strike_nFury"          "<font color='#eb6877'>nFury：</font>"
+
+    "ImmortalTitle"                                                  "Immortal (Only Effect on Particular Model)"
+    "SkinTitle"                                                      "Skin (Only Effect on Particular Model)"
+
+    "DOTA_Tooltip_modifier_indicator_durable"                             "Durable Perk"
+    "DOTA_Tooltip_modifier_indicator_durable_Description"                 "Player can absord 50%% of perk when kill this creatures, but lose equivalent other perks."
+   
+    "DOTA_Tooltip_modifier_indicator_decay"                               "Decay Perk"
+    "DOTA_Tooltip_modifier_indicator_decay_Description"                   "Player can absord 50%% of perk when kill this creatures, but lose equivalent other perks."
+
+    "DOTA_Tooltip_modifier_indicator_element"                             "Element Perk"
+    "DOTA_Tooltip_modifier_indicator_element_Description"                 "Player can absord 50%% of perk when kill this creatures, but lose equivalent other perks."
+
+    "DOTA_Tooltip_modifier_indicator_fury"                                "Fury Perk"
+    "DOTA_Tooltip_modifier_indicator_fury_Description"                    "Player can absord 50%% of perk when kill this creatures, but lose equivalent other perks."
+
+    "DOTA_Tooltip_modifier_indicator_hunt"                                "Hunt Perk"
+    "DOTA_Tooltip_modifier_indicator_hunt_Description"                    "Player can absord 50%% of perk when kill this creatures, but lose equivalent other perks."
+    
+    "DOTA_Tooltip_modifier_indicator_mystery"                             "Mystery Perk"
+    "DOTA_Tooltip_modifier_indicator_mystery_Description"                 "Player can absord 50%% of perk when kill this creatures, but lose equivalent other perks."
+
+
+    "DOTA_Tooltip_Ability_decay_necrolyte_reapers_scythe"                 "Reapers Scythe"
+    "DOTA_Tooltip_Ability_decay_necrolyte_reapers_scythe_Description"     "Stuns the target enemy, then deals %damage% damage."
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "Lich"

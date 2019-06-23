@@ -1592,7 +1592,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"health_regen_rate"		"3"
+				"health_regen_rate"		"1.5"
 			}
 		}
 	}

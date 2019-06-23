@@ -92,7 +92,14 @@ function RebuildCollections(econ_data){
 
     var econRarity = CustomNetTables.GetTableValue("econ_rarity", "econ_rarity");
     
-    var immortalNumber=0
+    var typeNumberMap={}
+    
+    typeNumberMap["Immortal"]=0
+    typeNumberMap["Skin"]=0
+    typeNumberMap["Particle"]=0
+    typeNumberMap["KillEffect"]=0
+    typeNumberMap["KillSound"]=0
+
 
     for (var index in data){
         
@@ -111,10 +118,8 @@ function RebuildCollections(econ_data){
 
         $("#Inventory"+typeMap[itemName]+"Title").RemoveClass("Hidden")
 
-        if  (typeMap[itemName]=="Immortal")
-        {
-            immortalNumber=immortalNumber+1
-        }
+        typeNumberMap[typeMap[itemName]] = typeNumberMap[typeMap[itemName]]+1
+
         //如果已经有此物品，跳过不处理
         if (parentPanel.FindChildTraverse(itemName))
         {
@@ -184,9 +189,17 @@ function RebuildCollections(econ_data){
             });
         })(newItemPanel,itemName);
     }
+    
+
     //调整面板的高度，适应滚动条
-    var immortalPanelHeight = 277* Math.ceil(immortalNumber/5);
-    $("#InventoryImmortalPanel").style.height=(immortalPanelHeight+"px;");
+    for(var key in typeNumberMap){
+        if (typeNumberMap[key]>0)
+        {
+            var panelHeight = 277* Math.ceil(typeNumberMap[key]/5);
+            $("#Inventory"+key+"Panel").style.height=(panelHeight+"px;");
+        }
+    }
+
 }
 
 

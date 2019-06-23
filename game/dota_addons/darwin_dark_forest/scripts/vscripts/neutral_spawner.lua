@@ -1,3 +1,12 @@
+LinkLuaModifier( "modifier_indicator_decay", "modifiers/modifier_indicator_decay", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_indicator_durable", "modifiers/modifier_indicator_durable", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_indicator_element", "modifiers/modifier_indicator_element", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_indicator_fury", "modifiers/modifier_indicator_fury", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_indicator_hunt", "modifiers/modifier_indicator_hunt", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_indicator_mystery", "modifiers/modifier_indicator_mystery", LUA_MODIFIER_MOTION_NONE )
+
+
+
 local vMysteryTopLeft= {x=-6830,y=7637 }
 local vMysteryDownRight= {x=-1544,y=1412}
 local vElementTopLeft= {x=-1000,y=-200}
@@ -208,6 +217,8 @@ function NeutralSpawner:SpawnOneCreature()
       --登记单位数量
       self.vCreatureLevelMap[hUnit.nCreatureLevel] = self.vCreatureLevelMap[hUnit.nCreatureLevel]+1
       self.nCreaturesNumber=self.nCreaturesNumber+1
+
+      AddIndicatorModifier(hUnit)
    end
 
 end
@@ -276,3 +287,44 @@ function GetRandomValidPositionForCreature( vData )
 
 end
 
+--添加Perk指示器
+function AddIndicatorModifier(hUnit)
+    
+    local nElement = GameRules.vUnitsKV[hUnit:GetUnitName()].nElement
+    if nElement>0 then
+      local newModifier=hUnit:AddNewModifier(hUnit, nil, "modifier_indicator_element", {})
+      newModifier:SetStackCount(nElement)
+    end
+
+    local nMystery = GameRules.vUnitsKV[hUnit:GetUnitName()].nMystery
+    if nMystery>0 then
+      local newModifier=hUnit:AddNewModifier(hUnit, nil, "modifier_indicator_mystery", {})
+      newModifier:SetStackCount(nMystery)
+    end
+
+    local nDurable = GameRules.vUnitsKV[hUnit:GetUnitName()].nDurable
+    if nDurable>0 then
+      local newModifier=hUnit:AddNewModifier(hUnit, nil, "modifier_indicator_durable", {})
+      newModifier:SetStackCount(nDurable)
+    end
+
+    local nFury = GameRules.vUnitsKV[hUnit:GetUnitName()].nFury
+    if nFury>0 then
+      local newModifier=hUnit:AddNewModifier(hUnit, nil, "modifier_indicator_fury", {})
+      newModifier:SetStackCount(nFury)
+    end
+
+    local nDecay = GameRules.vUnitsKV[hUnit:GetUnitName()].nDecay
+    if nDecay>0 then
+      local newModifier=hUnit:AddNewModifier(hUnit, nil, "modifier_indicator_decay", {})
+      newModifier:SetStackCount(nDecay)
+    end
+
+    local nHunt = GameRules.vUnitsKV[hUnit:GetUnitName()].nHunt
+    if nHunt>0 then
+      local newModifier=hUnit:AddNewModifier(hUnit, nil, "modifier_indicator_hunt", {})
+      newModifier:SetStackCount(nHunt)
+    end
+
+
+end

@@ -14,9 +14,9 @@ _G.vEXP_TABLE={
     105,
     162,
     253,
-    390,
-    595,
-    1350, --11级 游戏结束
+    390,  --9
+    615,  --10
+    1500, --11级 游戏结束
     101349
 }
 
@@ -362,10 +362,11 @@ function GameMode:InitGameMode()
     GameRules:GetGameModeEntity():SetSelectionGoldPenaltyEnabled(false)
     GameRules:GetGameModeEntity():SetLoseGoldOnDeath(false)
     GameRules:GetGameModeEntity():SetBuybackEnabled(false)
-    
-    --GameRules:GetGameModeEntity():SetAlwaysShowPlayerNames(true)
 
-    --在死亡事件里面固定重生时间
+    GameRules:SetHeroRespawnEnabled( true )
+    GameRules:GetGameModeEntity():SetFixedRespawnTime(99999999999)
+    
+    --在死亡事件里面设置重生时间
     
     --GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, "DamageFilter"), self)
     --GameRules:GetGameModeEntity():SetExecuteOrderFilter(Dynamic_Wrap(GameMode, "OrderFilter"), self)
@@ -383,6 +384,7 @@ function GameMode:InitGameMode()
     ListenToGameEvent( "entity_killed", Dynamic_Wrap( GameMode, 'OnEntityKilled' ), self )
     ListenToGameEvent( "npc_spawned", Dynamic_Wrap( GameMode, "OnNPCSpawned" ), self )
     ListenToGameEvent("player_chat", Dynamic_Wrap(GameMode, "OnPlayerSay"), self)
+
 
     CustomGameEventManager:RegisterListener("RequestCreatureIndex", Dynamic_Wrap(GameMode, 'RequestCreatureIndex'))
 
@@ -535,7 +537,7 @@ function GameMode:UpdateScoreboardAndVictory()
              	nTeamMaxLevel=nLevel
              end
              local hHero = PlayerResource:GetSelectedHeroEntity (nPlayerID)
-             if (hHero:IsAlive() and hHero.hCurrentCreep and hHero.hCurrentCreep.IsAlive and hHero.hCurrentCreep:IsAlive()  ) or PlayerResource:GetSelectedHeroEntity(nPlayerID):GetRespawnTime() < 10 then
+             if hHero:IsAlive() and hHero.hCurrentCreep and hHero.hCurrentCreep.IsAlive and hHero.hCurrentCreep:IsAlive() then
                 table.insert(vAliveTeams, nTeamID)
              end
 		  end

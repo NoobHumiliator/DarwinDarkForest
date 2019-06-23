@@ -56,6 +56,7 @@
     "ThreePlayerMode"                         "三人模式"
     "EvolveInventory"                         "基因进化库"
     "ExchangeKey"                             "兑换激活码"
+    "ClickPlusForCode"                        "点击左侧+号获取激活码"
     "Equip"                                   "装备"
     "Remove"                                  "卸下"
     "InvalideTaobaoCode"                      "无效激活码"
@@ -1502,6 +1503,9 @@
     "DOTA_Tooltip_Ability_sandking_burrowstrike_nHunt"                    "<font color='#999999'>猎杀：</font>"
 
 
+    "ImmortalTitle"                                                       "不朽(仅特定模型有效)"
+    "SkinTitle"                                                           "皮肤(仅特定模型有效)"
+
     "GameInstruction"                                                    "玩法简介"
     "note_1"                                                             "Note1: 玩家开局的时候只是个1级的小生物，击杀其他生物获取经验从而进化。"
     "note_2"                                                             "Note2: 击杀特定种类生物可以累积特定能力。能力点数决定了玩家的模型及技能。"
@@ -1538,8 +1542,32 @@
     "DOTA_Tooltip_Ability_doom_bringer_infernal_blade_nDecay"         "<font color='#b3d465'>腐朽：</font>"
     "DOTA_Tooltip_Ability_doom_bringer_infernal_blade_nFury"          "<font color='#eb6877'>狂怒：</font>"
 
-    "DOTA_Tooltip_Ability_giant_wolf_critical_strike"                 "<font color='#eb6877'>狂怒：</font>"
+    "DOTA_Tooltip_Ability_giant_wolf_critical_strike_nFury"               "<font color='#eb6877'>狂怒：</font>"
 
+    "DOTA_Tooltip_modifier_indicator_durable"                             "坚韧点数"
+    "DOTA_Tooltip_modifier_indicator_durable_Description"                 "击杀此生物可吸收其50%%能力点数，但会相应损失其他能力。"
+   
+    "DOTA_Tooltip_modifier_indicator_decay"                               "腐朽点数"
+    "DOTA_Tooltip_modifier_indicator_decay_Description"                   "击杀此生物可吸收其50%%能力点数，但会相应损失其他能力。"
+
+    "DOTA_Tooltip_modifier_indicator_element"                             "元素点数"
+    "DOTA_Tooltip_modifier_indicator_element_Description"                 "击杀此生物可吸收其50%%能力点数，但会相应损失其他能力。"
+
+    "DOTA_Tooltip_modifier_indicator_fury"                                "狂怒点数"
+    "DOTA_Tooltip_modifier_indicator_fury_Description"                    "击杀此生物可吸收其50%%能力点数，但会相应损失其他能力。"
+
+    "DOTA_Tooltip_modifier_indicator_hunt"                                "猎杀点数"
+    "DOTA_Tooltip_modifier_indicator_hunt_Description"                    "击杀此生物可吸收其50%%能力点数，但会相应损失其他能力。"
+    
+    "DOTA_Tooltip_modifier_indicator_mystery"                             "神秘点数"
+    "DOTA_Tooltip_modifier_indicator_mystery_Description"                 "击杀此生物可吸收其50%%能力点数，但会相应损失其他能力。"
+
+    "DOTA_Tooltip_Ability_ultimate_stage_reverse_polarity"                "终极两级反转"
+    "DOTA_Tooltip_Ability_ultimate_stage_reverse_polarity_Description"    "强大的11级生物改变物质的属性，将<font color='#f8b551'>全地图</font>的敌人都拖拽到他的前方，并且以强力的震击对他们眩晕。"
+    
+    "DOTA_Tooltip_Ability_decay_necrolyte_reapers_scythe"                 "终极死神镰刀"
+    "DOTA_Tooltip_Ability_decay_necrolyte_reapers_scythe_Description"     "眩晕敌方目标，然后造成%damage%纯粹伤害。"
+    
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
