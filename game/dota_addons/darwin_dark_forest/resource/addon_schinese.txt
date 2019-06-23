@@ -56,7 +56,7 @@
     "ThreePlayerMode"                         "三人模式"
     "EvolveInventory"                         "基因进化库"
     "ExchangeKey"                             "兑换激活码"
-    "ClickPlusForCode"                        "点击左侧+号获取激活码"
+    "ClickPlusForCode"                        "点击左侧+号支持作者淘宝店，购买激活码"
     "Equip"                                   "装备"
     "Remove"                                  "卸下"
     "InvalideTaobaoCode"                      "无效激活码"

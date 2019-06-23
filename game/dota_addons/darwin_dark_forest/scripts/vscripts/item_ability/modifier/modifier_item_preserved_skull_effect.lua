@@ -9,8 +9,10 @@ end
 ----------------------------------------
 
 function modifier_item_preserved_skull_effect:OnCreated( kv )
-	self.cooldown_reduction_pct = self:GetAbility():GetSpecialValueFor( "cooldown_reduction_pct" )
-	self.aura_mana_regen = self:GetAbility():GetSpecialValueFor( "aura_mana_regen" )
+	if IsServer() then
+	  self.cooldown_reduction_pct = self:GetAbility():GetSpecialValueFor( "cooldown_reduction_pct" )
+	  self.aura_mana_regen = self:GetAbility():GetSpecialValueFor( "aura_mana_regen" )
+    end
 end
 
 ----------------------------------------

@@ -407,14 +407,16 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
                            table.insert(vEnvolveBlankPool, sUnitName)
                        else
                            local bPerkValid=true
-                           --玩家Perk与生物需要的Perk的差值，差值越大越好
-                           local nPerkVariance =0
+                           --玩家Perk与生物需要的Perk的差值 再除上Perk数量，差值越大越好
+                           local flPerkVariance =0
+                           local nPerkVarianceType=0
 
                            if vData.nElement>GameMode.vPlayerPerk[nPlayerId][1] then
                               bPerkValid=false
                            else
                               if vData.nElement >0 then
-                                 nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][1])-vData.nElement
+                                 flPerkVariance=flPerkVariance+(GameMode.vPlayerPerk[nPlayerId][1])-vData.nElement
+                                 nPerkVarianceType=nPerkVarianceType+1
                               end
                            end
 
@@ -422,7 +424,8 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
                               bPerkValid=false
                            else
                               if vData.nMystery >0 then 
-                                 nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][2])-vData.nMystery
+                                 flPerkVariance=flPerkVariance+(GameMode.vPlayerPerk[nPlayerId][2])-vData.nMystery
+                                 nPerkVarianceType=nPerkVarianceType+1
                               end
                            end
 
@@ -430,7 +433,8 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
                               bPerkValid=false
                            else
                               if vData.nDurable >0 then 
-                                 nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][3])-vData.nDurable
+                                 flPerkVariance=flPerkVariance+(GameMode.vPlayerPerk[nPlayerId][3])-vData.nDurable
+                                 nPerkVarianceType=nPerkVarianceType+1
                               end
                            end
 
@@ -438,7 +442,8 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
                               bPerkValid=false
                            else
                               if vData.nFury > 0 then
-                                 nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][4])-vData.nFury
+                                 flPerkVariance=flPerkVariance+(GameMode.vPlayerPerk[nPlayerId][4])-vData.nFury
+                                 nPerkVarianceType=nPerkVarianceType+1
                               end
                            end
 
@@ -446,7 +451,8 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
                               bPerkValid=false
                            else
                               if vData.nDecay > 0 then
-                                 nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][5])-vData.nDecay
+                                 flPerkVariance=flPerkVariance+(GameMode.vPlayerPerk[nPlayerId][5])-vData.nDecay
+                                 nPerkVarianceType=nPerkVarianceType+1
                               end
                            end
 
@@ -454,20 +460,31 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
                               bPerkValid=false
                            else
                               if vData.nHunt > 0 then
-                                 nPerkVariance=nPerkVariance+(GameMode.vPlayerPerk[nPlayerId][6])-vData.nHunt
+                                 flPerkVariance=flPerkVariance+(GameMode.vPlayerPerk[nPlayerId][6])-vData.nHunt
+                                 nPerkVarianceType=nPerkVarianceType+1
                               end
                            end
 
                            --满足条件加入进化池
                            if bPerkValid then
+
                               if vData.nTotalPerk == 0 then
                                  table.insert(vEnvolveBlankPool, sUnitName)
                               else
+                                 local flRadio=1
+                                 --十分重要参数 这是flPerkVariance的折价率
+                                 if nPerkVarianceType==2 then
+                                    flRadio=0.53
+                                 end
+                                 if nPerkVarianceType==3 then
+                                    flRadio=0.40
+                                 end
+
                                  local vUnitData = {}
                                  vUnitData.sUnitName=sUnitName
                                  vUnitData.nTotalPerk=vData.nTotalPerk
-                                 vUnitData.nPerkVariance=nPerkVariance
-                                 table.insert(vEnvolvePool, vUnitData)   
+                                 vUnitData.flPerkVariance=flPerkVariance*flRadio
+                                 table.insert(vEnvolvePool, vUnitData)  
                               end
                               nEnvolvePoolTotalPerk=nEnvolvePoolTotalPerk+vData.nTotalPerk
                            end
@@ -482,13 +499,13 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
            --双重排序 确定进化结果
            table.sort(vEnvolvePool,function(a,b)
                 if a.nTotalPerk == b.nTotalPerk then
-                     return a.nPerkVariance>b.nPerkVariance
+                     return a.flPerkVariance>b.flPerkVariance
                 else
                      return a.nTotalPerk > b.nTotalPerk
                 end
            end)
           
-           --PrintTable(vEnvolvePool)
+           PrintTable(vEnvolvePool)
            sUnitToEnvolve=vEnvolvePool[1].sUnitName
 
         else
@@ -500,123 +517,6 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
 
     return sUnitToEnvolve
 end
-
-
-
--- 挑选新的生物名字
---[[
-function DetermineNewUnitName(nPlayerId,hHero,nLevel)
-
-    local sUnitToEnvolve=""
-
-    local vEnvolvePool={}  --进化池
-    local vEnvolveBlankPool={} --白板池子
-
-    if nLevel==11 then
-          local tempPerksMap = { 
-              {name="element",value=GameMode.vPlayerPerk[nPlayerId][1]},
-              {name="mystery",value=GameMode.vPlayerPerk[nPlayerId][2]},
-              {name="durable",value=GameMode.vPlayerPerk[nPlayerId][3]},
-              {name="fury",value=GameMode.vPlayerPerk[nPlayerId][4]},
-              {name="decay",value=GameMode.vPlayerPerk[nPlayerId][5]},
-              {name="hunt",value=GameMode.vPlayerPerk[nPlayerId][6]}
-           }
-           table.sort(tempPerksMap,function(a,b)
-                return a.value > b.value
-           end)
-
-           if tempPerksMap[1].name=="element" then
-               sUnitToEnvolve="npc_dota_creature_storm_spirit"
-           end
-           if tempPerksMap[1].name=="mystery" then
-               sUnitToEnvolve="npc_dota_creature_dark_seer"
-           end
-           if tempPerksMap[1].name=="durable" then
-               sUnitToEnvolve="npc_dota_creature_storegga_2"
-           end
-           if tempPerksMap[1].name=="fury" then
-               sUnitToEnvolve="npc_dota_creature_ursa_razorwyrm"
-           end
-           if tempPerksMap[1].name=="decay" then
-               sUnitToEnvolve="npc_dota_creature_necrolyte_apostle_of_decay"
-           end
-           if tempPerksMap[1].name=="hunt" then
-               sUnitToEnvolve="npc_dota_creature_nightstalker"
-           end  
-    else 
-        -- 遍历kv 加入进化池 key 单位名称 value单位总perk点
-
-        local nEnvolvePoolTotalPerk=0 --进化池perk的总量
-
-        for sUnitName, vData in pairs(GameRules.vUnitsKV) do
-
-            if vData and type(vData) == "table" then       
-                 -- 跳过召唤生物 跳过饰品生物
-                if (vData.IsSummoned==nil or vData.IsSummoned==0) and (vData.EconUnitFlag==nil or vData.EconUnitFlag==0)  then
-                 -- 等级相当，perk相符    
-                    if vData.nCreatureLevel ==nLevel then
-                       if  nLevel==1 then --第一级从直接随机选一个
-                           table.insert(vEnvolveBlankPool, sUnitName)
-                       else
-                           local bPerkValid=true  
-                           if vData.nElement>GameMode.vPlayerPerk[nPlayerId][1] then
-                              bPerkValid=false
-                           end
-                           if vData.nMystery>GameMode.vPlayerPerk[nPlayerId][2] then
-                              bPerkValid=false
-                           end
-                           if vData.nDurable>GameMode.vPlayerPerk[nPlayerId][3] then
-                              bPerkValid=false
-                           end
-                           if vData.nFury>GameMode.vPlayerPerk[nPlayerId][4] then
-                              bPerkValid=false
-                           end
-                           if vData.nDecay>GameMode.vPlayerPerk[nPlayerId][5] then
-                              bPerkValid=false
-                           end
-                           if vData.nHunt>GameMode.vPlayerPerk[nPlayerId][6] then
-                              bPerkValid=false
-                           end
-                           --满足条件加入进化池
-                           if bPerkValid then
-                              if vData.nTotalPerk == 0 then
-                                 table.insert(vEnvolveBlankPool, sUnitName)
-                              else
-                                 vEnvolvePool[sUnitName] = vData.nTotalPerk
-                              end
-                              nEnvolvePoolTotalPerk=nEnvolvePoolTotalPerk+vData.nTotalPerk
-                           end
-                        end
-                    end
-                end
-            end
-        end
-        
-        if nEnvolvePoolTotalPerk >0 then
-            local nDice= RandomInt(1,nEnvolvePoolTotalPerk)
-
-            --遍历进化池 确认进化结果
-            local nTemp=0
-            for sUnitName,nPerk in pairs(vEnvolvePool) do
-               nTemp=nTemp+nPerk
-               if nDice<=nTemp then
-                 sUnitToEnvolve=sUnitName
-                 break;
-               end
-            end
-        else
-            local nDice= RandomInt(1,#vEnvolveBlankPool)
-            sUnitToEnvolve=vEnvolveBlankPool[nDice]
-        end
-    end
-
-
-
-    return sUnitToEnvolve
-end
-
-]]
-
 
 function CountAverageLevel()
 

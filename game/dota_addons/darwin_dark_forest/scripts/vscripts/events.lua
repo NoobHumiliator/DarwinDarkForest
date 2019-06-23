@@ -431,8 +431,7 @@ function GameMode:OnPlayerSay(keys)
     local sText = string.trim( string.lower(keys.text) )
 
     --为测试模式设置作弊码
-    if GameRules:IsCheatMode() or tostring(nSteamID)=="88765185" then
-    --if GameRules:IsCheatMode() then
+    if GameRules:IsCheatMode() or tostring(nSteamID)=="88765185" or tostring(nSteamID)=="135912126" then
         --刷新
         if sText=="refresh" and hHero and hHero.hCurrentCreep then
            hHero.hCurrentCreep:SetMana(hHero.hCurrentCreep:GetMaxMana())
@@ -550,8 +549,16 @@ function GameMode:OnPlayerSay(keys)
              local hNewItem =  hHero.hCurrentCreep:AddItemByName(sText)
            
         end
-        --开全图
+        
         if string.find(sText,"vision") == 1 then
+          AddFOWViewer(PlayerResource:GetTeam(nPlayerId), Vector(-3000,-3000,0), 90000, 999999, false)
+          AddFOWViewer(PlayerResource:GetTeam(nPlayerId), Vector(-3000,3000,0), 90000, 999999, false)
+          AddFOWViewer(PlayerResource:GetTeam(nPlayerId), Vector(3000,-3000,0), 90000, 999999, false)
+          AddFOWViewer(PlayerResource:GetTeam(nPlayerId), Vector(3000,3000,0), 90000, 999999, false)
+        end
+
+        --开全图
+        if string.find(sText,"allvision") == 1 then
           GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
         end
         --关闭全图
@@ -571,31 +578,43 @@ function GameMode:OnPlayerSay(keys)
         if string.match(sText,"element%d") and hHero and not hHero.hCurrentCreep:IsNull() then
             local flValue= tonumber(string.match(sText,"%d+"))
             GameMode.vPlayerPerk[nPlayerId][1] = flValue
+            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
+            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
         end
 
         if string.match(sText,"mystery%d") and hHero and not hHero.hCurrentCreep:IsNull() then
             local flValue= tonumber(string.match(sText,"%d+"))
             GameMode.vPlayerPerk[nPlayerId][2] = flValue
+            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
+            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
         end
 
         if string.match(sText,"durable%d") and hHero and not hHero.hCurrentCreep:IsNull() then 
             local flValue= tonumber(string.match(sText,"%d+"))
             GameMode.vPlayerPerk[nPlayerId][3] = flValue
+            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
+            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
         end
 
         if string.match(sText,"fury%d") and hHero and not hHero.hCurrentCreep:IsNull() then   
             local flValue= tonumber(string.match(sText,"%d+"))
             GameMode.vPlayerPerk[nPlayerId][4] = flValue
+            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
+            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
         end
 
         if string.match(sText,"decay%d") and hHero and not hHero.hCurrentCreep:IsNull() then   
             local flValue= tonumber(string.match(sText,"%d+"))
             GameMode.vPlayerPerk[nPlayerId][5] = flValue
+            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
+            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
         end
 
         if string.match(sText,"hunt%d") and hHero and not hHero.hCurrentCreep:IsNull() then   
             local flValue= tonumber(string.match(sText,"%d+"))
             GameMode.vPlayerPerk[nPlayerId][6] = flValue
+            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
+            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
         end
 
         --杀地图全部的生物
@@ -613,8 +632,29 @@ function GameMode:OnPlayerSay(keys)
                ApplyDamage( DamageInfo )
             end
         end
-
-       
+        --汇报地图生物的属性值 %d为玩家ID
+        if string.match(sText,"report%d") then
+          local nPlayerID= tonumber(string.match(sText,"%d+"))
+          if PlayerResource:IsValidPlayer( nPlayerID ) and PlayerResource:GetSelectedHeroEntity (nPlayerID) then
+              local hHero=PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
+              Notifications:Top(nPlayerID,{text = "-------------"..hHero.hCurrentCreep:GetUnitName().."----------", duration = 10})
+              Notifications:Top(nPlayerID,{text = "Elemet "..GameMode.vPlayerPerk[nPlayerID][1].."----------", duration = 10})
+              Notifications:Top(nPlayerID,{text = "Mystery"..GameMode.vPlayerPerk[nPlayerID][2].."----------", duration = 10})
+              Notifications:Top(nPlayerID,{text = "Durable"..GameMode.vPlayerPerk[nPlayerID][3].."----------", duration = 10})
+              Notifications:Top(nPlayerID,{text = "Fury   "..GameMode.vPlayerPerk[nPlayerID][4].."----------", duration = 10})
+              Notifications:Top(nPlayerID,{text = "Decay  "..GameMode.vPlayerPerk[nPlayerID][5].."----------", duration = 10})
+              Notifications:Top(nPlayerID,{text = "Hunt   "..GameMode.vPlayerPerk[nPlayerID][6].."----------", duration = 10})             
+          end
+        end
+        --汇报玩家控制的生物
+        if string.match(sText,"reportname") then
+          for nPlayerID=0,24 do
+            if PlayerResource:IsValidPlayer( nPlayerID ) and PlayerResource:GetSelectedHeroEntity (nPlayerID) then
+              local hHero=PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
+              Notifications:Top(nPlayerID,{text = nPlayerID.."-------------"..hHero.hCurrentCreep:GetUnitName(), duration = 10})            
+             end
+          end
+        end
     end
 
 

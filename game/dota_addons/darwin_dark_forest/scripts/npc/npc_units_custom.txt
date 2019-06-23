@@ -14103,7 +14103,7 @@
 		"AttackRate"				"1.3"		// Speed of attack.
 		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"300"		// Range within a target can be attacked.
+		"AttackRange"				"150"		// Range within a target can be attacked.
 		"ProjectileModel"			""	// Particle system model for projectile.
 		"ProjectileSpeed"			"0"		// Speed of projectile.		
 
@@ -23487,7 +23487,7 @@
 		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_nightstalker.vsndevts"
 
 		"Level"						"11"
-		"ModelScale" 				"1.5"
+		"ModelScale" 				"1.55"
 
 		"MinimapIcon"					"minimap_roshancamp"
 		"MinimapIconSize"				"450"
@@ -23862,11 +23862,11 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"		            "Hero_Ursa"
 
-	    "GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts"
-		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_ursa.vsndevts"
+	    "GameSoundsFile"		  "soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts"
+		"VoiceFile"		          "soundevents/voscripts/game_sounds_vo_ursa.vsndevts"
 
 		"Level"						"11"
-		"ModelScale" 				"1.5"
+		"ModelScale" 				"1.55"
 
 		"MinimapIcon"			    "minimap_roshancamp"
 		"MinimapIconSize"			"450"

@@ -12,23 +12,21 @@ end
 ----------------------------------------
 
 function modifier_item_sange_and_yasha_lua:OnCreated( kv )
-
-	self.bonus_damage = self:GetAbility():GetSpecialValueFor( "bonus_damage" )
-    self.bonus_health = self:GetAbility():GetSpecialValueFor( "bonus_health" )
-    self.bonus_health_regen = self:GetAbility():GetSpecialValueFor( "bonus_health_regen" )
-    self.magic_resist = self:GetAbility():GetSpecialValueFor( "magic_resist" )
-
-    self.bonus_attack_speed = self:GetAbility():GetSpecialValueFor( "bonus_attack_speed" )
-    self.bonus_armor = self:GetAbility():GetSpecialValueFor( "bonus_armor" )
-    self.bonus_move_speed_pct = self:GetAbility():GetSpecialValueFor( "bonus_move_speed_pct" )
-    self.bonus_move_speed = self:GetAbility():GetSpecialValueFor( "bonus_move_speed" )
-
-    self.maim_chance = self:GetAbility():GetSpecialValueFor( "maim_chance" )
-    self.maim_duration = self:GetAbility():GetSpecialValueFor( "maim_duration" )
-
-
     if IsServer() then
-    	AddHealthBonus(self:GetCaster(),self.bonus_health)
+		self.bonus_damage = self:GetAbility():GetSpecialValueFor( "bonus_damage" )
+	    self.bonus_health = self:GetAbility():GetSpecialValueFor( "bonus_health" )
+	    self.bonus_health_regen = self:GetAbility():GetSpecialValueFor( "bonus_health_regen" )
+	    self.magic_resist = self:GetAbility():GetSpecialValueFor( "magic_resist" )
+
+	    self.bonus_attack_speed = self:GetAbility():GetSpecialValueFor( "bonus_attack_speed" )
+	    self.bonus_armor = self:GetAbility():GetSpecialValueFor( "bonus_armor" )
+	    self.bonus_move_speed_pct = self:GetAbility():GetSpecialValueFor( "bonus_move_speed_pct" )
+	    self.bonus_move_speed = self:GetAbility():GetSpecialValueFor( "bonus_move_speed" )
+
+	    self.maim_chance = self:GetAbility():GetSpecialValueFor( "maim_chance" )
+	    self.maim_duration = self:GetAbility():GetSpecialValueFor( "maim_duration" )
+
+	    AddHealthBonus(self:GetCaster(),self.bonus_health)
     end
 
 end

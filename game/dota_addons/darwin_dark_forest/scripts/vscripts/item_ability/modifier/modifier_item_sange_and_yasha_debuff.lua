@@ -15,10 +15,11 @@ end
 ----------------------------------------
 
 function modifier_item_sange_and_yasha_lua_debuff:OnCreated( kv )
-
+   
+   if IsServer() then
 	self.movement_speed_slow_pct = self:GetAbility():GetSpecialValueFor( "movement_speed_slow_pct" )
     self.attack_speed_slow = self:GetAbility():GetSpecialValueFor( "attack_speed_slow" )
-
+   end
 
 end
 --------------------------------------------

@@ -15,9 +15,11 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_item_paw_of_lucius:OnCreated( kv )
-	self.bonus_attack_speed = self:GetAbility():GetSpecialValueFor( "bonus_attack_speed" )
-	self.rupture_chance = self:GetAbility():GetSpecialValueFor( "rupture_chance" )
-	self.rupture_duration = self:GetAbility():GetSpecialValueFor( "rupture_duration" )
+	if IsServer() then
+	  self.bonus_attack_speed = self:GetAbility():GetSpecialValueFor( "bonus_attack_speed" )
+	  self.rupture_chance = self:GetAbility():GetSpecialValueFor( "rupture_chance" )
+	  self.rupture_duration = self:GetAbility():GetSpecialValueFor( "rupture_duration" )
+    end
 end
 
 --------------------------------------------------------------------------------

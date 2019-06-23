@@ -112,6 +112,7 @@ function ItemController:CreateItemForNeutraulByChance(hUnit)
         local nTieNum =  math.ceil(hUnit:GetLevel()/2)
         if nTieNum >6 then nTieNum=6 end
         local sItemName = self.vItemsTieTable[nTieNum][RandomInt(1, #self.vItemsTieTable[nTieNum])]
+        --sItemName="item_ward_observer_2"
         hUnit:AddItemByName( sItemName )
 
     end
@@ -226,6 +227,7 @@ function ItemController:OnItemPickUp(event)
       if string.find(sItemName,"item_rune_") ~= 1 then
           UTIL_Remove(hItem)
           local hItem=hUnit:AddItemByName(sItemName)
+          hItem:SetPurchaser(hUnit)
           hItem:SetCurrentCharges(nCharges)
       end
   end
