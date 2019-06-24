@@ -1539,6 +1539,10 @@
 
     "DOTA_Tooltip_Ability_decay_necrolyte_reapers_scythe"                 "Reapers Scythe"
     "DOTA_Tooltip_Ability_decay_necrolyte_reapers_scythe_Description"     "Stuns the target enemy, then deals %damage% damage."
+     
+    
+    "coop_same_team_not_record"                                            "Cooperate mode in same team will not record rank."
+    "cheat_not_record"                                                     "Cheat mode will not record rank."
 
 
     //EconUnitBegins

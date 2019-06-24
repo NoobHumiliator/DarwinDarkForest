@@ -22,10 +22,12 @@ function GameMode:OnGameRulesStateChange()
      GameRules.vPlayerSteamIdMap={}
    
      local nValidPlayerNumber= 0
+     local vPlayerTeam={}
 
      for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
        if PlayerResource:IsValidPlayer( nPlayerID ) then
           nValidPlayerNumber = nValidPlayerNumber+1
+          table.insert(vPlayerTeam,PlayerResource:GetTeam(nPlayerID))
           local nPlayerSteamId = PlayerResource:GetSteamAccountID(nPlayerID)
           GameRules.sValidePlayerSteamIds=GameRules.sValidePlayerSteamIds..nPlayerSteamId..","
           GameRules.vPlayerSteamIdMap[nPlayerSteamId]=nPlayerID
@@ -42,6 +44,9 @@ function GameMode:OnGameRulesStateChange()
      if nValidPlayerNumber==1 then
          GameRules.bPveMap=true
      end
+     
+     vPlayerTeam=RemoveRepetition(vPlayerTeam)
+     GameRules.nValidTeamNumber=#vPlayerTeam
      Server:GetPlayerEconData()
 
 	end
@@ -645,13 +650,13 @@ function GameMode:OnPlayerSay(keys)
           local nReportPlayerID= tonumber(string.match(sText,"%d+"))
           if PlayerResource:IsValidPlayer( nReportPlayerID ) and PlayerResource:GetSelectedHeroEntity (nReportPlayerID) then
               local hHero=PlayerResource:GetPlayer(nReportPlayerID):GetAssignedHero()
-              Notifications:Top(nPlayerID,{text = "-------------"..hHero.hCurrentCreep:GetUnitName().."----------", duration = 10})
-              Notifications:Top(nPlayerID,{text = "Elemet "..GameMode.vPlayerPerk[nReportPlayerID][1].."----------", duration = 10})
-              Notifications:Top(nPlayerID,{text = "Mystery"..GameMode.vPlayerPerk[nReportPlayerID][2].."----------", duration = 10})
-              Notifications:Top(nPlayerID,{text = "Durable"..GameMode.vPlayerPerk[nReportPlayerID][3].."----------", duration = 10})
-              Notifications:Top(nPlayerID,{text = "Fury   "..GameMode.vPlayerPerk[nReportPlayerID][4].."----------", duration = 10})
-              Notifications:Top(nPlayerID,{text = "Decay  "..GameMode.vPlayerPerk[nReportPlayerID][5].."----------", duration = 10})
-              Notifications:Top(nPlayerID,{text = "Hunt   "..GameMode.vPlayerPerk[nReportPlayerID][6].."----------", duration = 10})             
+              Notifications:Top(nPlayerId,{text = "-------------"..hHero.hCurrentCreep:GetUnitName().."----------", duration = 10})
+              Notifications:Top(nPlayerId,{text = "Elemet "..GameMode.vPlayerPerk[nReportPlayerID][1].."----------", duration = 10})
+              Notifications:Top(nPlayerId,{text = "Mystery"..GameMode.vPlayerPerk[nReportPlayerID][2].."----------", duration = 10})
+              Notifications:Top(nPlayerId,{text = "Durable"..GameMode.vPlayerPerk[nReportPlayerID][3].."----------", duration = 10})
+              Notifications:Top(nPlayerId,{text = "Fury   "..GameMode.vPlayerPerk[nReportPlayerID][4].."----------", duration = 10})
+              Notifications:Top(nPlayerId,{text = "Decay  "..GameMode.vPlayerPerk[nReportPlayerID][5].."----------", duration = 10})
+              Notifications:Top(nPlayerId,{text = "Hunt   "..GameMode.vPlayerPerk[nReportPlayerID][6].."----------", duration = 10})             
           end
         end
         --汇报玩家控制的生物
@@ -659,7 +664,7 @@ function GameMode:OnPlayerSay(keys)
           for i=0,24 do
             if PlayerResource:IsValidPlayer( i ) and PlayerResource:GetSelectedHeroEntity (i) then
               local hHero=PlayerResource:GetPlayer(i):GetAssignedHero()
-              Notifications:Top(nPlayerID,{text = i.."-------------"..hHero.hCurrentCreep:GetUnitName(), duration = 10})            
+              Notifications:Top(nPlayerId,{text = i.."-------------"..hHero.hCurrentCreep:GetUnitName(), duration = 10})            
              end
           end
         end

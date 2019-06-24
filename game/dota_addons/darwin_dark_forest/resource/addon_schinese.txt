@@ -1572,7 +1572,10 @@
     
     "DOTA_Tooltip_Ability_decay_necrolyte_reapers_scythe"                 "终极死神镰刀"
     "DOTA_Tooltip_Ability_decay_necrolyte_reapers_scythe_Description"     "眩晕敌方目标，然后造成%damage%纯粹伤害。"
-    
+
+    "coop_same_team_not_record"                                            "合作模式玩家都在同一队的不记录天梯成绩。"
+    "cheat_not_record"                                                     "作弊模式不记录天梯成绩。"
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"

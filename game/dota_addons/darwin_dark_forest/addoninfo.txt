@@ -1,11 +1,15 @@
 "AddonInfo"
 {
-	 maps			"island_1x10"
+	 maps			"island_1x10 island_3x4"
 	"IsPlayable"	"1"
 	"HeroGuidesSupported" "1"
 	"PenaltiesEnabled"			"0"
 	"island_1x10"
 	{
 			"MaxPlayers"                    "10"
+	}
+	"island_3x4"
+	{
+			"MaxPlayers"                    "12"
 	}
 }
