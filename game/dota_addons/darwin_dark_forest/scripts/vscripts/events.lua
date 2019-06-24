@@ -278,7 +278,13 @@ function GameMode:OnEntityKilled(keys)
           end
 
           hHero:Kill(nil, hKillerUnit)
-          GameMode:PutStartPositionToRandomPosForTeam(hHero:GetTeamNumber());
+          
+
+          --重生前的0.1秒 将出身地随机
+          Timers:CreateTimer(4.9, function()
+                 GameMode:PutStartPositionToRandomPosForTeam(hHero:GetTeamNumber());
+              end
+          )
 
            -- 终极进化阶段不能再重生
            if GameRules.bUltimateStage then
@@ -320,7 +326,8 @@ function LevelUpAndEvolve(nPlayerId,hHero)
 
     hHero:EmitSound("General.LevelUp.Bonus")
 
-    GameMode:PutStartPositionToLocation(hHero,hHero:GetAbsOrigin())
+    --由于进化位置是
+    --GameMode:PutStartPositionToLocation(hHero,hHero:GetAbsOrigin())
     Evolve(nPlayerId,hHero)
 
     --进化完了播放升级粒子特效
@@ -488,7 +495,6 @@ function GameMode:OnPlayerSay(keys)
              --如果升级了 并且不是死亡状态（处理召唤生物杀人）
              if nNewLevel~=hHero.nCurrentCreepLevel and hHero:IsAlive() then
                 
-                GameMode:PutStartPositionToLocation(hHero,hHero:GetAbsOrigin())
                 hHero.nCurrentCreepLevel=nNewLevel
                 Evolve(nPlayerId,hHero)
 
@@ -536,8 +542,6 @@ function GameMode:OnPlayerSay(keys)
             CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nHandlingPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[nLevel+1]-vEXP_TABLE[nLevel],perk_table=GameMode.vPlayerPerk[nHandlingPlayerId] } )
             CustomNetTables:SetTableValue( "player_perk", tostring(nHandlingPlayerId), GameMode.vPlayerPerk[nHandlingPlayerId] )
             
-            GameMode:PutStartPositionToLocation(hHandlingHero,hHandlingHero:GetAbsOrigin())
-
             -- 替换模型
             local hUnit = SpawnUnitToReplaceHero(sText,hHandlingHero,nHandlingPlayerId)
             AddAbilityForUnit(hUnit,nHandlingPlayerId)
@@ -634,24 +638,24 @@ function GameMode:OnPlayerSay(keys)
         end
         --汇报地图生物的属性值 %d为玩家ID
         if string.match(sText,"report%d") then
-          local nPlayerID= tonumber(string.match(sText,"%d+"))
-          if PlayerResource:IsValidPlayer( nPlayerID ) and PlayerResource:GetSelectedHeroEntity (nPlayerID) then
-              local hHero=PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
+          local nReportPlayerID= tonumber(string.match(sText,"%d+"))
+          if PlayerResource:IsValidPlayer( nReportPlayerID ) and PlayerResource:GetSelectedHeroEntity (nReportPlayerID) then
+              local hHero=PlayerResource:GetPlayer(nReportPlayerID):GetAssignedHero()
               Notifications:Top(nPlayerID,{text = "-------------"..hHero.hCurrentCreep:GetUnitName().."----------", duration = 10})
-              Notifications:Top(nPlayerID,{text = "Elemet "..GameMode.vPlayerPerk[nPlayerID][1].."----------", duration = 10})
-              Notifications:Top(nPlayerID,{text = "Mystery"..GameMode.vPlayerPerk[nPlayerID][2].."----------", duration = 10})
-              Notifications:Top(nPlayerID,{text = "Durable"..GameMode.vPlayerPerk[nPlayerID][3].."----------", duration = 10})
-              Notifications:Top(nPlayerID,{text = "Fury   "..GameMode.vPlayerPerk[nPlayerID][4].."----------", duration = 10})
-              Notifications:Top(nPlayerID,{text = "Decay  "..GameMode.vPlayerPerk[nPlayerID][5].."----------", duration = 10})
-              Notifications:Top(nPlayerID,{text = "Hunt   "..GameMode.vPlayerPerk[nPlayerID][6].."----------", duration = 10})             
+              Notifications:Top(nPlayerID,{text = "Elemet "..GameMode.vPlayerPerk[nReportPlayerID][1].."----------", duration = 10})
+              Notifications:Top(nPlayerID,{text = "Mystery"..GameMode.vPlayerPerk[nReportPlayerID][2].."----------", duration = 10})
+              Notifications:Top(nPlayerID,{text = "Durable"..GameMode.vPlayerPerk[nReportPlayerID][3].."----------", duration = 10})
+              Notifications:Top(nPlayerID,{text = "Fury   "..GameMode.vPlayerPerk[nReportPlayerID][4].."----------", duration = 10})
+              Notifications:Top(nPlayerID,{text = "Decay  "..GameMode.vPlayerPerk[nReportPlayerID][5].."----------", duration = 10})
+              Notifications:Top(nPlayerID,{text = "Hunt   "..GameMode.vPlayerPerk[nReportPlayerID][6].."----------", duration = 10})             
           end
         end
         --汇报玩家控制的生物
         if string.match(sText,"reportname") then
-          for nPlayerID=0,24 do
-            if PlayerResource:IsValidPlayer( nPlayerID ) and PlayerResource:GetSelectedHeroEntity (nPlayerID) then
-              local hHero=PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
-              Notifications:Top(nPlayerID,{text = nPlayerID.."-------------"..hHero.hCurrentCreep:GetUnitName(), duration = 10})            
+          for i=0,24 do
+            if PlayerResource:IsValidPlayer( i ) and PlayerResource:GetSelectedHeroEntity (i) then
+              local hHero=PlayerResource:GetPlayer(i):GetAssignedHero()
+              Notifications:Top(nPlayerID,{text = i.."-------------"..hHero.hCurrentCreep:GetUnitName(), duration = 10})            
              end
           end
         end

@@ -135,7 +135,7 @@ function Evolve (nPlayerId,hHero)
 end
 
 
-function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
+function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
   
   hHero:AddNoDraw()
   hHero:FindAbilityByName("dota_ability_hero_invulnerable"):SetLevel(1)
@@ -159,7 +159,7 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
   end
 
 
-  local hUnit = CreateUnitByName(sUnitname,GameMode.vStartPointLocation[hHero:GetTeamNumber()],true,hHero, hHero, hHero:GetTeamNumber())
+  local hUnit = CreateUnitByName(sUnitname,hHero:GetOrigin(),true,hHero, hHero, hHero:GetTeamNumber())
   
   --设置视野范围
   hUnit:SetDayTimeVisionRange(1800)
@@ -167,6 +167,8 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,vPosition)
 
   hUnit:SetControllableByPlayer(hHero:GetPlayerID(), true)
   hUnit:SetHealth(hUnit:GetMaxHealth()*flCurrentHealthRatio)
+
+  FindClearSpaceForUnit(hUnit, hUnit:GetAbsOrigin(), true)
 
   -- evolve island util
   AddTinyBody(hUnit)

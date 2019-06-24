@@ -943,6 +943,10 @@
     "DOTA_Tooltip_ability_item_heart_lua"                                               "恐鳌之心"
     "DOTA_Tooltip_ability_item_heart_lua_Description"                                   "<h1>被动：生命恢复</h1>每秒恢复最大生命值的%health_regen_rate%%%。<br><br>如果受到任何伤害，此被动将失效。"
     "DOTA_Tooltip_ability_item_heart_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_heart_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_heart_lua_magic_resistance"                              "%+魔法抗性"
+
+
 
 
     "DOTA_Tooltip_ability_item_ring_of_tarrasque_lua"                                   "恐鳌之戒"
@@ -1502,6 +1506,7 @@
     "DOTA_Tooltip_Ability_sandking_burrowstrike_nDurable"                 "<font color='#f8b551'>坚韧：</font>"
     "DOTA_Tooltip_Ability_sandking_burrowstrike_nHunt"                    "<font color='#999999'>猎杀：</font>"
 
+    "not_allow_teammate_item"                                             "无法捡起队友装备"
 
     "ImmortalTitle"                                                       "不朽(仅特定模型有效)"
     "SkinTitle"                                                           "皮肤(仅特定模型有效)"

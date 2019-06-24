@@ -1,3 +1,5 @@
+--此modifier对普通单位无用
+--LinkLuaModifier( "modifier_item_mute", "modifiers/modifier_item_mute", LUA_MODIFIER_MOTION_NONE )
 
 --[物品控制器，控制物品掉落，继承等规则]
 
@@ -222,13 +224,29 @@ function ItemController:OnItemPickUp(event)
       local hUnit=EntIndexToHScript( event.UnitEntityIndex )
       local sItemName=hItem:GetName()
       local nCharges=hItem:GetCurrentCharges()
+
+      local nPlayerId = hUnit:GetOwner():GetPlayerID()
+      local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
       
+      local hPurchaser=hItem:GetPurchaser()
+
       --不处理 神符
       if string.find(sItemName,"item_rune_") ~= 1 then
+          --1无拥有者 2拥有者是自己 3拥有者是敌人 可以拾取
+          if hPurchaser ==nil or hPurchaser==hHero  or PlayerResource:GetTeam(hPurchaser:GetPlayerID())~= PlayerResource:GetTeam(nPlayerId) then
+             local hNewItem=hUnit:AddItemByName(sItemName)
+             hNewItem:SetPurchaser(hHero)
+             hNewItem:SetCurrentCharges(nCharges)
+          --队友的物品 不允许拾取 直接摧毁
+          else
+            local nFXIndex = ParticleManager:CreateParticle( "particles/items2_fx/veil_of_discord.vpcf", PATTACH_CUSTOMORIGIN, hUnit )
+            ParticleManager:SetParticleControl( nFXIndex, 0, hUnit:GetOrigin() )
+            ParticleManager:SetParticleControl( nFXIndex, 1, Vector( 35, 35, 25 ) )
+            ParticleManager:ReleaseParticleIndex( nFXIndex )
+            Notifications:Bottom(nPlayerId, {text="#not_allow_teammate_item", duration=2, style={color="Red"}})
+            hUnit:EmitSound("DOTA_Item.VeilofDiscord.Activate")
+          end
           UTIL_Remove(hItem)
-          local hItem=hUnit:AddItemByName(sItemName)
-          hItem:SetPurchaser(hUnit)
-          hItem:SetCurrentCharges(nCharges)
       end
   end
   

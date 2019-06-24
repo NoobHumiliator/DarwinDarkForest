@@ -923,6 +923,9 @@
     "DOTA_Tooltip_ability_item_heart_lua"                                               "Heart of Tarrasque"
     "DOTA_Tooltip_ability_item_heart_lua_Description"                                   "<h1>Passive: Health Regeneration</h1>Restores %health_regen_rate%%% of max health per second. <br><br>If damage is taken, this ability is disabled."
     "DOTA_Tooltip_ability_item_heart_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_heart_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_heart_lua_magic_resistance"                              "%+魔法抗性"
+
 
 
     "DOTA_Tooltip_ability_item_ring_of_tarrasque_lua"                                   "Ring of Tarrasque"
