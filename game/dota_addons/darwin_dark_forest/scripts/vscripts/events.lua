@@ -109,7 +109,11 @@ function GameMode:OnPlayerPickHero(keys)
     	hHero:RemoveAbility("empty"..i)
     end
     hHero.nCurrentCreepLevel=1
-    Evolve(nPlayerId,hHero)
+    --稍等英雄位置落地 再进化
+    Timers:CreateTimer(FrameTime(), function()
+            Evolve(nPlayerId,hHero)
+        end
+    )
 end
 
 function GameMode:OnEntityKilled(keys)

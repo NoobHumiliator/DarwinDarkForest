@@ -526,6 +526,8 @@ function GameMode:UpdateScoreboardAndVictory()
 
 	local vSortedTeams = {}
     local vAliveTeams = {}
+    local vAlivePlayers = {}
+
 
 	for _, nTeamID in pairs( self.vfoundTeamsList ) do
         local nTeamMaxLevel = 1;         
@@ -539,6 +541,7 @@ function GameMode:UpdateScoreboardAndVictory()
              local hHero = PlayerResource:GetSelectedHeroEntity (nPlayerID)
              if hHero:IsAlive() and hHero.hCurrentCreep and hHero.hCurrentCreep.IsAlive and hHero.hCurrentCreep:IsAlive() then
                 table.insert(vAliveTeams, nTeamID)
+                table.insert(vAlivePlayers, nPlayerID)
              end
 		  end
 	    end
@@ -553,7 +556,16 @@ function GameMode:UpdateScoreboardAndVictory()
     -- reverse-sort by score
     table.sort( vSortedTeams, function(a,b) return ( a.teamScore > b.teamScore ) end )
     
-    RemoveRepeated(vAliveTeams)
+    print("vAlivePlayers:")
+    PrintTable(vAlivePlayers)
+    print("vAliveTeams:")
+    PrintTable(vAliveTeams)
+
+    vAliveTeams=RemoveRepetition(vAliveTeams)
+
+    print("Removed:")
+    
+    PrintTable(vAliveTeams)
     --终极进化阶段 只剩唯一队伍
     if GameRules.bUltimateStage and #vAliveTeams==1  then
       --结束各种类型游戏，记录天梯分数

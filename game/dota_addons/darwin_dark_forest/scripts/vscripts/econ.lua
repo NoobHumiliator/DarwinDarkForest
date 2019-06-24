@@ -357,7 +357,7 @@ function Econ:EquipImmortalEcon(sItemName,nPlayerID,nIsEquip)
             Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName]=RemoveItemFromList(Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName],sItemName)
         else
             table.insert(Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName],sItemName)
-            RemoveRepeated(Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName])
+            Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName]=RemoveRepetition(Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName])
 
             table.sort(Econ.vPlayerData[nPlayerID].vImmortalInfo[sUnitName],function(a,b) return b>a end )
         end

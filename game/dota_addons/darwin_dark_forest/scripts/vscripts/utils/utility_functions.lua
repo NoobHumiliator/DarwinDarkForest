@@ -199,17 +199,19 @@ function string.trim(s)
 end
 
 --数组去重
-function RemoveRepeated(a)
-    for k,v in pairs(a) do
-        local count=0
-        for j in pairs(a)do count=count+1 end
-        for i=k+1,count do
-            if v==a[i] then
-                table.remove(a,i)
-            end
-        end
+function RemoveRepetition(TableData)
+    local bExist = {}
+    for v, k in pairs(TableData) do
+        bExist[k] = true
     end
+    local result = {}
+    for v, k in pairs(bExist) do
+        table.insert(result, v)
+    end
+
+    return result
 end
+
 
 function RemoveItemFromList(vList,item)
    --将同名技能从技能池移除  

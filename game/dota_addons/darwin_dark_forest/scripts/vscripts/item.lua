@@ -209,7 +209,7 @@ function ItemController:RestoreItems(hHero)
             local hNewItem =  hHero.hCurrentCreep:AddItemByName(vItemInfo.sItemName)
             hNewItem:SetCurrentCharges(vItemInfo.nCurrentCharges)
             hNewItem:StartCooldown(vItemInfo.flRemainingCoolDown)
-            --hHero.hCurrentCreep:AddItem(hNewItem)
+            hNewItem:SetPurchaser(hHero)
         end
     end
     
@@ -232,11 +232,12 @@ function ItemController:OnItemPickUp(event)
 
       --不处理 神符
       if string.find(sItemName,"item_rune_") ~= 1 then
-          --1无拥有者 2拥有者是自己 3拥有者是敌人 可以拾取
-          if hPurchaser ==nil or hPurchaser==hHero  or PlayerResource:GetTeam(hPurchaser:GetPlayerID())~= PlayerResource:GetTeam(nPlayerId) then
-             local hNewItem=hUnit:AddItemByName(sItemName)
-             hNewItem:SetPurchaser(hHero)
-             hNewItem:SetCurrentCharges(nCharges)
+          --1共享物品  2无拥有者 3拥有者是自己 4拥有者是敌人 可以拾取
+
+          --拾取成功的标志位
+          local bSuccessFlag=false
+          if  hItem:GetShareability() == ITEM_FULLY_SHAREABLE or (hPurchaser ==nil) or (hPurchaser==hHero)  or (PlayerResource:GetTeam(hPurchaser:GetPlayerID())~= PlayerResource:GetTeam(nPlayerId)) then
+             bSuccessFlag=true
           --队友的物品 不允许拾取 直接摧毁
           else
             local nFXIndex = ParticleManager:CreateParticle( "particles/items2_fx/veil_of_discord.vpcf", PATTACH_CUSTOMORIGIN, hUnit )
@@ -246,7 +247,15 @@ function ItemController:OnItemPickUp(event)
             Notifications:Bottom(nPlayerId, {text="#not_allow_teammate_item", duration=2, style={color="Red"}})
             hUnit:EmitSound("DOTA_Item.VeilofDiscord.Activate")
           end
+
+          --先移除
           UTIL_Remove(hItem)
+          --再添加
+          if  bSuccessFlag then
+             local hNewItem=hUnit:AddItemByName(sItemName)
+             hNewItem:SetPurchaser(hHero)
+             hNewItem:SetCurrentCharges(nCharges)
+          end
       end
   end
   
