@@ -49,7 +49,7 @@ vAbilityChanceEachLevel={
 
 vPairedAbility={bristleback_bristleback="bristleback_quill_spray",
 ancient_apparition_ice_blast="ancient_apparition_ice_blast_release",
-ancient_apparition_ice_blast="ancient_apparition_ice_blast_release"
+templar_assassin_psionic_trap="templar_assassin_trap"
 }
 
 --[[
@@ -150,7 +150,11 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
            flCurrentHealthRatio=0.01
         end
     end
+    
+    RemoveInvulnerableModifier(hHero.hCurrentCreep)
+
     hHero.hCurrentCreep:AddNoDraw()
+    
     --因为游戏机制移除的
     hHero.hCurrentCreep.bKillByMech=true
     hHero.hCurrentCreep:ForceKill(false)

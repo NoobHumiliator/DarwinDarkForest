@@ -426,8 +426,14 @@ function GameMode:OnNPCSpawned( event )
     --修正模型动作
        ActivityModifier:AddActivityModifierThink(hSpawnedUnit)
     end
-    --设置一个随机的位置
+    --处理生物
     if hSpawnedUnit and hSpawnedUnit.GetUnitName then
+        --修正眼睛插到天辉的问题
+        if hSpawnedUnit:GetUnitName()=="npc_dota_observer_wards"then
+           if hSpawnedUnit.GetTeam and hSpawnedUnit.GetOwner then
+              hSpawnedUnit:SetTeam(hSpawnedUnit:GetOwner():GetTeam())
+           end
+        end
         if hSpawnedUnit:GetUnitName()~="npc_dota_thinker"then
           hSpawnedUnit:SetForwardVector(RandomVector(1))
         end

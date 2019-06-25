@@ -1515,6 +1515,8 @@
 
     "DOTA_Tooltip_Ability_giant_wolf_critical_strike_nFury"          "<font color='#eb6877'>nFury：</font>"
 
+    "not_allow_teammate_item"                                        "Can't Pick Up Items Touched By Allies"
+
     "ImmortalTitle"                                                  "Immortal (Only Effect on Particular Model)"
     "SkinTitle"                                                      "Skin (Only Effect on Particular Model)"
 

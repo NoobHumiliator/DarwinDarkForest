@@ -244,7 +244,7 @@ function ItemController:OnItemPickUp(event)
             ParticleManager:SetParticleControl( nFXIndex, 0, hUnit:GetOrigin() )
             ParticleManager:SetParticleControl( nFXIndex, 1, Vector( 35, 35, 25 ) )
             ParticleManager:ReleaseParticleIndex( nFXIndex )
-            Notifications:Bottom(nPlayerId, {text="#not_allow_teammate_item", duration=2, style={color="Red"}})
+            Notifications:BottomToTeam(PlayerResource:GetTeam(nPlayerId), {text="#not_allow_teammate_item", duration=2, style={color="Red"}})
             hUnit:EmitSound("DOTA_Item.VeilofDiscord.Activate")
           end
 

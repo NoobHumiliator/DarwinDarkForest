@@ -45,7 +45,7 @@ function undead_tusk_bone_ball:OnSpellStart()
 		self.HitUnits = {}
 
 		self.bEndingBoneBall = false
-		self.flBoneBallStartTime = 0.0
+		self.flBoneBallStartTime = GameRules:GetGameTime()
 		
 		self:GetCaster():AddNewModifier( self:GetCaster(), self, "modifier_tusk_snowball_movement", { duration = self.windup + self.duration } )
 		self.hPrimaryTarget:AddNewModifier( self:GetCaster(), self, "modifier_tusk_snowball_visible", { duration = self.windup + self.duration } )
@@ -172,6 +172,12 @@ function undead_tusk_bone_ball:OnProjectileThink( vLocation )
 			end
 
 			local nRadiusMod = self.radius + self.grow_rate * flElapsedTime
+
+            if nRadiusMod > self.radius+self.grow_rate*self.duration+10 then                
+               nRadiusMod= self.radius+self.grow_rate*self.duration             
+            end
+
+
 			ParticleManager:SetParticleControl( self.nFXIndex, 3, Vector( nRadiusMod, self.grow_rate, self.radius ) )
 
 			local bHitPrimaryTarget = false

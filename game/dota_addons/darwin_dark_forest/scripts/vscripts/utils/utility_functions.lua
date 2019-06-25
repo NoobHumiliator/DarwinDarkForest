@@ -250,3 +250,12 @@ function ContainsValue(nSum,nValue)
     end
 
 end
+
+
+--移除无敌类的buff
+function RemoveInvulnerableModifier(hUnit)
+    if hUnit then
+         hUnit:RemoveModifierByName("modifier_ember_spirit_sleight_of_fist_caster_invulnerability")
+         hUnit:RemoveModifierByName("modifier_morphling_waveform")
+    end
+end
