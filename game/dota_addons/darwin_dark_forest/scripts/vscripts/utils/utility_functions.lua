@@ -255,7 +255,75 @@ end
 --移除无敌类的buff
 function RemoveInvulnerableModifier(hUnit)
     if hUnit then
-         hUnit:RemoveModifierByName("modifier_ember_spirit_sleight_of_fist_caster_invulnerability")
-         hUnit:RemoveModifierByName("modifier_morphling_waveform")
+        if hUnit:HasModifier("modifier_ember_spirit_sleight_of_fist_caster_invulnerability") then
+           hUnit:RemoveModifierByName("modifier_ember_spirit_sleight_of_fist_caster_invulnerability")
+        end
     end
+end
+
+
+--创建幻象
+function CreateIllusion(hUnit,nDuration, nIncomeDamage, nOutDamage, vLocation, vModifiers, hAbility)
+
+    if vLocation == nil then
+        vLocation = hUnit:GetAbsOrigin() + RandomVector(RandomInt(50, 100))
+    else
+        vLocation = vLocation + RandomVector(RandomInt(50, 100))
+    end
+
+    local hIllusion = CreateUnitByName(hUnit:GetUnitName(), vLocation, true, hUnit, hUnit, hUnit:GetTeamNumber())
+    
+    FindClearSpaceForUnit(hIllusion, hIllusion:GetAbsOrigin(), true)
+    
+    hIllusion:SetBaseMaxHealth(hUnit:GetMaxHealth())
+    hIllusion:SetMaxHealth(hUnit:GetMaxHealth())
+    hIllusion:SetHealth(hUnit:GetHealth())
+    hIllusion:SetMana(hUnit:GetMana())
+
+    hIllusion:SetBaseAttackTime(hUnit:GetBaseAttackTime())
+    hIllusion:SetBaseMoveSpeed(hUnit:GetIdealSpeed())
+
+    hIllusion:SetOriginalModel(hUnit:GetModelName())
+    hIllusion:SetModel(hUnit:GetModelName())
+    hIllusion:SetModelScale(hUnit:GetModelScale())
+
+    hIllusion:SetUnitName(hUnit:GetUnitName())
+
+    if hUnit:IsRangedAttacker() then
+        hIllusion:SetRangedProjectileName(hUnit:GetRangedProjectileName())
+    end
+
+    hIllusion:SetForwardVector(hUnit:GetForwardVector())
+    hIllusion:AddNewModifier(hUnit, hAbility, "modifier_kill", {duration = nDuration})
+    hIllusion:AddNewModifier(hUnit, hAbility, "modifier_illusion", {duration = nDuration, outgoing_damage = nOutDamage, incoming_damage = nIncomeDamage})
+    hIllusion:SetControllableByPlayer(hUnit:GetMainControllingPlayer(), true)
+    hIllusion:SetOwner( PlayerResource:GetSelectedHeroEntity(hUnit:GetMainControllingPlayer()) )
+
+    for i=0,15 do
+        local hAbility = hUnit:GetAbilityByIndex(i)
+        if hAbility ~= nil then 
+            local nAbilityLevel = hAbility:GetLevel()
+            local sAbilityName = hAbility:GetAbilityName()
+            local hIllusionAbility = hIllusion:FindAbilityByName(sAbilityName)
+            
+            
+            if hIllusionAbility then
+                if hIllusionAbility:IsPassive() then
+                   hIllusionAbility:SetLevel(nAbilityLevel)
+                else
+                   hIllusion:RemoveAbility(sAbilityName)
+                end
+            end
+        end
+    end
+
+    if vModifiers then
+        for _, sModifierName in pairs(vModifiers) do
+            illusion:AddNewModifier(self, hAbility, sModifierName, {})
+        end
+    end
+
+    hIllusion:MakeIllusion()
+
+    return hIllusion
 end

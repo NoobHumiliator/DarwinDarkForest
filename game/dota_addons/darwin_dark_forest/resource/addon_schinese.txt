@@ -1576,6 +1576,23 @@
     "coop_same_team_not_record"                                            "合作模式玩家都在同一队的不记录天梯成绩。"
     "cheat_not_record"                                                     "作弊模式不记录天梯成绩。"
 
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua"                            "如影随形"
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_Description"                "对单个目标单位施放鬼影重重。创造一个复仇鬼影攻击敌人。在技能持续期间内幽鬼可以使用空降将她和任一鬼影互换位置。\n\n鬼影无法控制，受到额外伤害，造成的伤害低于幽鬼本体。"
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_duration"                   "鬼影持续时间："
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_illusion_damage_outgoing"   "%鬼影继承攻击力："
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_illusion_damage_incoming"   "%鬼影承受伤害："
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_nMystery"                   "<font color='#e9c2ff'>神秘：</font>"
+
+    "DOTA_Tooltip_Ability_spectre_reality_lua"                                 "空降"
+    "DOTA_Tooltip_Ability_spectre_reality_lua_Description"                     "幽鬼与选中的鬼影交换位置。"
+
+    "DOTA_Tooltip_Ability_spectre_haunt_lua"                                   "鬼影重重"
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_Description"                       "短暂延迟后，在每个敌方玩家身后创造一个复仇鬼影攻击他们。在技能持续期间内幽鬼可以使用空降将她和任一鬼影互换位置。\n\n鬼影无法控制，受到额外伤害，造成的伤害低于幽鬼本体。"
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_duration"                          "鬼影持续时间："
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_illusion_damage_outgoing"          "%鬼影继承攻击力："
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_illusion_damage_incoming"          "%鬼影承受伤害："
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_nMystery"                          "<font color='#e9c2ff'>神秘：</font>"
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"

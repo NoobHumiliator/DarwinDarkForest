@@ -1546,6 +1546,24 @@
     "coop_same_team_not_record"                                            "Cooperate mode in same team will not record rank."
     "cheat_not_record"                                                     "Cheat mode will not record rank."
 
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua"                            "Shadow Step"
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_Description"                "Perform a single target unit Haunt."
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_duration"                   "DURATION:"
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_illusion_damage_outgoing"   "%HAUNT DAMAGE:"
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_illusion_damage_incoming"   "%HAUNT DAMAGE TAKEN:"
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_nMystery"                   "<font color='#e9c2ff'>Mystery:</font>"
+
+    "DOTA_Tooltip_Ability_spectre_reality_lua"                                 "Reality"
+    "DOTA_Tooltip_Ability_spectre_reality_lua_Description"                     "Spectre exchanges places with a chosen Haunt."
+
+    "DOTA_Tooltip_Ability_spectre_haunt_lua"                                   "Haunt"
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_Description"                       "Creates a spectral nemesis to attack each enemy hero after a short delay. At any moment during the duration, Spectre can use Reality to exchange places of a given haunt.\n\nHaunt illusions are uncontrollable, take extra damage, and deal less damage than Spectre herself."
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_duration"                          "DURATION:"
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_illusion_damage_outgoing"          "%HAUNT DAMAGE:"
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_illusion_damage_incoming"          "%HAUNT DAMAGE TAKEN:"
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_nMystery"                          "<font color='#e9c2ff'>Mystery:</font>"
+
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "Lich"

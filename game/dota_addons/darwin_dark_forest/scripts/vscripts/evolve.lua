@@ -49,7 +49,8 @@ vAbilityChanceEachLevel={
 
 vPairedAbility={bristleback_bristleback="bristleback_quill_spray",
 ancient_apparition_ice_blast="ancient_apparition_ice_blast_release",
-templar_assassin_psionic_trap="templar_assassin_trap"
+templar_assassin_psionic_trap="templar_assassin_trap",
+spectre_haunt_single_lua="spectre_reality_lua",
 }
 
 --[[
@@ -157,6 +158,8 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
     
     --因为游戏机制移除的
     hHero.hCurrentCreep.bKillByMech=true
+    --删除双保险
+    hHero.hCurrentCreep:AddNewModifier(hHero.hCurrentCreep, nil, "modifier_kill", {duration = 1})
     hHero.hCurrentCreep:ForceKill(false)
 
     --UTIL_Remove(  hHero.hCurrentCreep )
@@ -178,6 +181,8 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
   AddTinyBody(hUnit)
 
   hHero.hCurrentCreep=hUnit
+  --玩家的主控生物
+  hUnit.bMainCreep=true
   hHero.nCurrentCreepLevel=hUnit:GetLevel()
 
   
@@ -312,8 +317,10 @@ function AddAbilityForUnit(hUnit,nPlayerId)
           
           --添加配对技能
           if vPairedAbility[sNewAbilityName]~=nil then
+              if not hUnit:HasAbility(vPairedAbility[sNewAbilityName]) then
                 hUnit:AddAbility(vPairedAbility[sNewAbilityName])
                 hUnit:FindAbilityByName(vPairedAbility[sNewAbilityName]):SetLevel(nAbilityLevel)
+              end
           end
 
           nAbilityTotalPerks=RemoveAbilityFromPoolByName(nAbilityTotalPerks,sNewAbilityName,vAbilityPool)

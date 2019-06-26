@@ -15749,11 +15749,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"spectre_dispersion"			// Ability 1
-		"Ability2"					"spectre_haunt_single"			// Ability 2
-		"Ability3"					""			// Ability 3
+		"Ability2"					"spectre_haunt_lua"			// Ability 2
+		"Ability3"					"spectre_reality_lua"			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4 1"
+		"AbilitiesLevel"            "4 1 1"
 
 		// Armor
 		//----------------------------------------------------------------
