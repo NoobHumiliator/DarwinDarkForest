@@ -1428,7 +1428,7 @@
     "DOTA_Tooltip_modifier_item_greater_salve"                              "高级治疗药水"
 
     "DOTA_Tooltip_ability_item_creed_of_omniscience"                        "全能信条"
-    "DOTA_Tooltip_ability_item_creed_of_omniscience_Description"            "被动：提供额外%bonus_xp_tooltip%%经验值。"
+    "DOTA_Tooltip_ability_item_creed_of_omniscience_Description"            "被动：经验获取速度提高%bonus_xp_tooltip%%。"
      
     "DOTA_Tooltip_ability_item_longclaws_amulet"                            "长爪护符"
     "DOTA_Tooltip_ability_item_longclaws_amulet_Lore"                       "魔法在林地里有点不寻常，它的秘密被牢牢地守护着。"

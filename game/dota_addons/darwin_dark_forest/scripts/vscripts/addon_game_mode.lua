@@ -556,41 +556,44 @@ function GameMode:UpdateScoreboardAndVictory()
     -- reverse-sort by score
     table.sort( vSortedTeams, function(a,b) return ( a.teamScore > b.teamScore ) end )
     
-    vAliveTeams=RemoveRepetition(vAliveTeams)
-
-    --终极进化阶段 只剩唯一队伍
-    if GameRules.bUltimateStage and #vAliveTeams==1  then
-      --结束各种类型游戏，记录天梯分数
-      --作弊模式直接结束游戏
-      if GameRules:IsCheatMode() then
-         Notifications:BottomToAll({text="#cheat_not_record", duration=20, style={color="Red"}})
-         GameRules.bUltimateStage=false
-         Timers:CreateTimer(6, function()
-           GameRules:SetGameWinner(vAliveTeams[1])
-         end)
-      else
-        --非作弊 
-        if GameRules.bPveMap  and not GameRules.bSendEndToSever  then             
-              Server:EndPveGame(vAliveTeams[1])
-              GameRules.bSendEndToSever=true
-        end
-        if GetMapName() == "island_1x10" and not GameRules.bSendEndToSever then
-              GameRules.bSendEndToSever=true
-              Server:EndPvpGame(vSortedTeams,"solo",vAliveTeams[1])
-        end
-        if GetMapName() == "island_3x4" and not GameRules.bSendEndToSever then
-              if GameRules.nValidTeamNumber==1 then
-                 Notifications:BottomToAll({text="#coop_same_team_not_record", duration=20, style={color="Red"}})
-                 GameRules.bUltimateStage=false
-                 Timers:CreateTimer(6, function()
-                   GameRules:SetGameWinner(vAliveTeams[1])
-                 end)
-              else
-                GameRules.bSendEndToSever=true
-                Server:EndPvpGame(vSortedTeams,"three_player",vAliveTeams[1])
-              end
-        end
+    --终极进化阶段
+    if GameRules.bUltimateStage then
+      vAliveTeams=RemoveRepetition(vAliveTeams)
+      --只剩唯一队伍
+      if #vAliveTeams==1 then
+          --结束各种类型游戏，记录天梯分数
+          --作弊模式直接结束游戏
+          if GameRules:IsCheatMode() then
+             Notifications:BottomToAll({text="#cheat_not_record", duration=20, style={color="Red"}})
+             GameRules.bUltimateStage=false
+             Timers:CreateTimer(6, function()
+               GameRules:SetGameWinner(vAliveTeams[1])
+             end)
+          else
+            --非作弊 
+            if GameRules.bPveMap  and not GameRules.bSendEndToSever  then             
+                  Server:EndPveGame(vAliveTeams[1])
+                  GameRules.bSendEndToSever=true
+            end
+            if GetMapName() == "island_1x10" and not GameRules.bSendEndToSever then
+                  GameRules.bSendEndToSever=true
+                  Server:EndPvpGame(vSortedTeams,"solo",vAliveTeams[1])
+            end
+            if GetMapName() == "island_3x4" and not GameRules.bSendEndToSever then
+                  if GameRules.nValidTeamNumber==1 then
+                     Notifications:BottomToAll({text="#coop_same_team_not_record", duration=20, style={color="Red"}})
+                     GameRules.bUltimateStage=false
+                     Timers:CreateTimer(6, function()
+                       GameRules:SetGameWinner(vAliveTeams[1])
+                     end)
+                  else
+                    GameRules.bSendEndToSever=true
+                    Server:EndPvpGame(vSortedTeams,"three_player",vAliveTeams[1])
+                  end
+            end
+          end
       end
+
     end
  
 

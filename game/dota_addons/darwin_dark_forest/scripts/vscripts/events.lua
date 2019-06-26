@@ -197,7 +197,7 @@ function GameMode:OnEntityKilled(keys)
        PlayAbsorbParticle(tempPerksMap,hKillerUnit,hKilledUnit)
 
        --计算经验获取率
-       local flExpRatio=1
+       local flExpRatio=0
        if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_item_creed_of_omniscience") then
            flExpRatio= flExpRatio*1.2
        end

@@ -98,11 +98,21 @@ function Evolve (nPlayerId,hHero)
     
     --为11级生物添加两级反转
     if nLevel==11 then
-       local hAbilityReverse = hUnit:AddAbility("ultimate_stage_reverse_polarity")
-       hAbilityReverse:SetLevel(1)
-       hAbilityReverse:StartCooldown(120)
+       hUnit:AddAbility("ultimate_stage_reverse_polarity")
+       hUnit:FindAbilityByName("ultimate_stage_reverse_polarity"):StartCooldown(140)
+       hUnit:FindAbilityByName("ultimate_stage_reverse_polarity"):SetLevel(1)
     end
-  
+
+    --继承粒子特效
+    if Econ.vPlayerData[nPlayerId].sCurrentParticleEconItemName then
+         Econ:EquipParticleEcon(Econ.vPlayerData[nPlayerId].sCurrentParticleEconItemName,nPlayerId)
+    end
+
+    --修改模型
+    if Econ.vPlayerData[nPlayerId].vSkinInfo and Econ.vPlayerData[nPlayerId].vSkinInfo[sUnitToEnvolve]~=nil then
+         Econ:ReplaceUnitModel(hUnit,Econ.vPlayerData[nPlayerId].vSkinInfo[sUnitToEnvolve])
+    end
+
     --冒泡排序交换技能 把被动技能下沉
     for i=0,24 do
         for j=0,24-i do
@@ -113,17 +123,7 @@ function Evolve (nPlayerId,hHero)
           end
         end   
     end
-     
-    --继承粒子特效
-    if Econ.vPlayerData[nPlayerId].sCurrentParticleEconItemName then
-         Econ:EquipParticleEcon(Econ.vPlayerData[nPlayerId].sCurrentParticleEconItemName,nPlayerId)
-    end
 
-    --修改模型
-    if Econ.vPlayerData[nPlayerId].vSkinInfo and Econ.vPlayerData[nPlayerId].vSkinInfo[sUnitToEnvolve]~=nil then
-         Econ:ReplaceUnitModel(hUnit,Econ.vPlayerData[nPlayerId].vSkinInfo[sUnitToEnvolve])
-    end
-    
     --修正模型动作
     ActivityModifier:AddActivityModifierThink(hUnit)
 
