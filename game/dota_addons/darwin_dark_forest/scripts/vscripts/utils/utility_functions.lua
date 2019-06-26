@@ -298,6 +298,8 @@ function CreateIllusion(hUnit,nDuration, nIncomeDamage, nOutDamage, vLocation, v
     hIllusion:AddNewModifier(hUnit, hAbility, "modifier_illusion", {duration = nDuration, outgoing_damage = nOutDamage, incoming_damage = nIncomeDamage})
     hIllusion:SetControllableByPlayer(hUnit:GetMainControllingPlayer(), true)
     hIllusion:SetOwner( PlayerResource:GetSelectedHeroEntity(hUnit:GetMainControllingPlayer()) )
+    hIllusion:SetMaximumGoldBounty(0)
+    hIllusion:SetMinimumGoldBounty(0)
 
     for i=0,15 do
         local hAbility = hUnit:GetAbilityByIndex(i)

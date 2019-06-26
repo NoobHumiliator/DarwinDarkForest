@@ -167,8 +167,10 @@ localizeMapEn={
 econUnitBeginsFlag=False
 #这是原版文件部分
 reLines=[]
-#后面部分
+#饰品生物部分
 econLines=[]
+#玩家生物
+playerUnitLines=[]
 
 
 f = open("../../game/dota_addons/darwin_dark_forest/scripts/npc/npc_units_custom.txt","r",encoding='UTF-8') 
@@ -179,6 +181,10 @@ for line in lines:
   
   if econUnitBeginsFlag==False:
      reLines.append(line)
+     if "npc_dota_creature_" in line:
+       playerUnitLines.append(line.replace("npc_dota_creature_", "npc_dota_creature_player_"))
+     else:
+       playerUnitLines
   if "EconUnitBegins" in line:
      econUnitBeginsFlag=True
 

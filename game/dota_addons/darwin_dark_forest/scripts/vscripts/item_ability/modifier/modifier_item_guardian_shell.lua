@@ -31,11 +31,13 @@ end
 ----------------------------------------
 
 function modifier_item_guardian_shell:OnCreated( kv )
-	self.bonus_armor = self:GetAbility():GetSpecialValueFor( "bonus_armor" )
-	self.magic_resistance = self:GetAbility():GetSpecialValueFor( "magic_resistance" )
-	self.flMoveSpeed = self:GetParent():GetIdealSpeedNoSlows()
-	self.flAttackSpeed = self:GetParent():GetAttackSpeed()
-	self:StartIntervalThink( 0.5 )
+	if IsServer() then
+	 self.bonus_armor = self:GetAbility():GetSpecialValueFor( "bonus_armor" )
+	 self.magic_resistance = self:GetAbility():GetSpecialValueFor( "magic_resistance" )
+	 self.flMoveSpeed = self:GetParent():GetIdealSpeedNoSlows()
+	 self.flAttackSpeed = self:GetParent():GetAttackSpeed()
+	 self:StartIntervalThink( 0.5 )
+    end
 end
 
 ----------------------------------------

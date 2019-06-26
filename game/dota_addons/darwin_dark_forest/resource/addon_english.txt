@@ -709,6 +709,8 @@
     "DOTA_Tooltip_ability_durable_shard_split_hurl_boulder_level"                         "Hurl Boulder Level"
     "DOTA_Tooltip_ability_durable_shard_split_nDurable"                                   "<font color='#f8b551'>Durable:</font>"
 
+    "npc_dota_creature_shard_split"                                                       "Shard Split"
+
     "DOTA_Tooltip_ability_fury_berserk_lua"                                               "Berserker"
     "DOTA_Tooltip_ability_fury_berserk_lua_Description"                                   "Increases damage, attack speed,movement speed, but take more damage."
     "DOTA_Tooltip_ability_fury_berserk_lua_income_damage_percentage"                      "%Income damage Increase"

@@ -723,6 +723,8 @@
     "DOTA_Tooltip_ability_durable_shard_split_hurl_boulder_level"                         "碎土傀儡投石技能等级："
     "DOTA_Tooltip_ability_durable_shard_split_nDurable"                                   "<font color='#f8b551'>坚韧：</font>"
 
+    "npc_dota_creature_shard_split"                                                       "碎土傀儡"
+
     "DOTA_Tooltip_ability_fury_berserk_lua"                                               "狂暴"
     "DOTA_Tooltip_ability_fury_berserk_lua_Description"                                   "大幅提升攻击，攻击速度，移动速度。但是受到的伤害加深，并且被沉默，持续8秒。"
     "DOTA_Tooltip_ability_fury_berserk_lua_income_damage_percentage"                      "%受到伤害："

@@ -38,9 +38,9 @@ function spectre_haunt_lua:OnSpellStart()
 			  nIllustionNumber=nIllustionNumber+1
            end
         end
+        
+        EmitGlobalSound("Hero_Spectre.HauntCast")
 
-
-        EmitSoundOn("Hero_Spectre.HauntCast", self:GetCaster())
 	end
 end
 
