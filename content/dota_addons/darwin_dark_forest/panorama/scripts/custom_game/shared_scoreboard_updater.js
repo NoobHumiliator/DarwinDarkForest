@@ -71,8 +71,8 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 		{
 			if ( playerInfo.player_selected_hero !== ""  &&  CustomNetTables.GetTableValue( "player_creature_index",playerId)!=undefined )
 			{
-				var creepIndex = CustomNetTables.GetTableValue( "player_creature_index",playerId).creepIndex
-				var unitName = Entities.GetUnitName(creepIndex)
+				var creepName = CustomNetTables.GetTableValue( "player_creature_index",playerId).creepName
+				var unitName = creepName
 				//设置 头像
                 //如果是因为至宝替换了单位，头像使用原单位
 				var original = CustomNetTables.GetTableValue( "econ_unit_replace",unitName)
@@ -80,7 +80,14 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 				{
 					unitName=original.sOriginalUnitName;
 				}
-				playerPortrait.SetImage( "file://{images}/custom_game/creature_portrait/"+unitName+".png" );
+                if (unitName==undefined)
+                {
+                	playerPortrait.SetImage( "file://{images}/custom_game/unassigned.png" );
+                } else {
+                    //Js里面再替换回来
+                	unitName=unitName.replace("npc_dota_creature_player_", "npc_dota_creature_")
+                	playerPortrait.SetImage( "file://{images}/custom_game/creature_portrait/"+unitName+".png" );
+                }
 				//playerPortrait.SetImage( "file://{images}/heroes/" + playerInfo.player_selected_hero + ".png" );
 			}
 			else

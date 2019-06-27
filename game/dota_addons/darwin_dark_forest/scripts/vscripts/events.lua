@@ -759,7 +759,7 @@ function GameMode:RequestCreatureIndex(keys)
     
     if hHero and hHero.hCurrentCreep then
         print("Request Creature Index from Sever"..nPlayerID)
-        CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerID), {creepIndex=hHero.hCurrentCreep:GetEntityIndex()} )
+        CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerID), {creepIndex=hHero.hCurrentCreep:GetEntityIndex(),creepName=hHero.hCurrentCreep:GetUnitName()} )
     end
     
 

@@ -1814,5 +1814,1576 @@
 	"npc_dota_creature_troll_warlord_bitter_lineage"                  "Troll Warlord"
 	"npc_dota_creature_troll_warlord_icewrack_marauder_bitter_lineage"                  "Icewrack Marauder"
 	"npc_dota_creature_troll_plunder_of_the_savage_monger_bitter_lineage"                  "Troll Arena Champion"
+	//PlayerUnitBegins
+"lang"
+{
+	"Language"		"English"
+	"Tokens"
+	{		
+    
+	"addon_game_name"	"DOTA EVOLVE ISLAND"
+	"DOTA_GoodGuys"	"Teal Tiger"
+	"DOTA_BadGuys"	"Yellow Monkey"
+	"DOTA_Custom1"	"Pink Dragon"
+	"DOTA_Custom2"	"Orange Dog"
+	"DOTA_Custom3"	"Blue Rooster"
+	"DOTA_Custom4"	"Green Ram"
+	"DOTA_Custom5"	"Brown Rat"
+	"DOTA_Custom6"	"Cyan Boar"
+	"DOTA_Custom7"	"Olive Snake"
+	"DOTA_Custom8"	"Purple Horse"
+
+
+	"addonname"	        "DOTA EVOLVE ISLAND"
+
+    "rune_spawn_element"          "Element Rune Refreshed"
+    "rune_spawn_mystery"          "Mystery Rune Refreshed"
+    "rune_spawn_durable"          "Durable Rune Refreshed"
+    "rune_spawn_fury"             "Fury Rune Refreshed"
+    "rune_spawn_decay"            "Decay Rune Refreshed"
+    "rune_spawn_hunt"             "Hunt Rune Refreshed"
+
+    "rune_pickup_element"          "Pick up Element Rune"
+    "rune_pickup_mystery"          "Pick up Mystery Rune"
+    "rune_pickup_durable"          "Pick up Durable Rune"
+    "rune_pickup_fury"             "Pick up Fury Rune"
+    "rune_pickup_decay"            "Pick up Decay Rune"
+    "rune_pickup_hunt"             "Pick up Hunt Rune"
+
+
+    "congrates_first_place"         "Winner Winner Chicken Dinner"
+    "encourage_runner_ups"          "Never abandon,never give up."
+
+    "TopMenuIcon_Guide_message"               "Game Guide"
+    "TopMenuIcon_Rank_message"                "World Rank"
+    "TopMenuIcon_Inventory_message"           "DNA Inventory"
+    "WorldRank"                               "World Rank"
+    "CurrentSeason"                           "{s:year}Year{d:month}Season"
+    //UI 
+    "PveMode"                                 "PVE Mode"
+    "SoloMode"                                "Single Player Mode"
+    "ThreePlayerMode"                         "Three Players Mode"
+    "EvolveInventory"                         "DNA Inventory"
+    "ExchangeKey"                             "Exchange Key"
+    "Equip"                                   "Equip"
+    "Remove"                                  "Remove"
+    "InvalideTaobaoCode"                      "Invalide Taobao Code"
+    "TaobaoCodeOccupied"                      "Taobao Code is Occupied"
+    "TaobaoCodeSuccess"                       "Congratulation, DNA + "
+    "ClickPlusForCode"                        "Please input Taobao Code"
+
+    "rarity_normal"                           "Normal"
+    "rarity_rare"                             "Rare"
+    "rarity_mythical"                         "Mythical"
+    "rarity_immortal"                         "Immortal"
+
+    "CongratulationNewItem"                   "You earn a new characteristics"
+    "RefundItem"                              "Dupilicate characteristics, auto decomposite for DNA"
+
+    "Confirm"                                 "Confirm"
+
+    "Skin"                                    "Skin"
+    "Immortal"                                "Immortal"
+    "Particle"                                "Particle"
+    "KillEffect"                              "Kill Effect"
+    "KillSound"                               "Kill Sound"
+    
+    "Rune_Spawned"                            "Rune Spawned"
+
+    "econ_unknow"                             "Unkonw"
+    
+    "econ_green"                              "Green Ambient"
+    "econ_lava_trail"                         "Lava Trail"
+    "econ_paltinum_baby_roshan"               "Paltinum"
+    "econ_legion_wings"                       "Legion Wings"
+    "econ_legion_wings_vip"                   "Legion Wings·Golden"
+    "econ_legion_wings_pink"                  "Legion Pink"
+    "econ_darkmoon"                           "Dark Moon"
+    "econ_sf_wings"                           "Fiend Wings"
+    "econ_sakura_trail"                       "Sakura Trail"
+
+    "econ_gold_crawl_zombie"                  "Golden Crawl Zombie"
+    "econ_gold_zombie"                        "Golden Zombie"
+    
+    "econ_huaji"                              "Joke"
+    "econ_jibururen_mark"                     "Ji Bu Ru Ren"
+    "econ_question_mark"                      "Question Mark"
+
+    "econ_shearing_deposition"                "Shearing Deposition"
+    "econ_glare_of_the_tyrant"                "Glare of the Tyrant"
+
+
+    "econ_dragonclaw_hook"                    "Dragonclaw Hook"
+    "econ_feast_of_abscession"                "Feast of Abscession"
+    "econ_golden_rippers_reel"                "Golden Rippers Reel"
+    "econ_golden_scavenging_guttleslug"       "Golden Scavenging Guttleslug"
+    "econ_cult_of_aktok"                      "Cult of Aktok"
+
+    "econ_bracers_of_aeons_of_the_crimson_witness"   "Bracers of Aeons of the Crimson Witness"
+    "econ_jewel_of_aeons"                            "Jewel of Aeons"
+    "econ_mace_of_aeons"                             "Mace of Aeons"
+    "econ_timebreaker"                               "Timebreaker"
+
+    "econ_soul_diffuser"                             "Soul Diffuser"
+    "econ_transversant_soul"                         "Transversant Soul"
+    "econ_transversant_soul_of_the_crimson_witness"  "Transversant Soul of the Crimson Witness"
+
+    "econ_shatterblast_core"                         "Shatterblast Core"
+    "econ_shatterblast_crown"                        "Shatterblast Crown"
+
+    "econ_world_chasm_artifact"                      "World Chasm Artifact"
+    "econ_lycosidae_brood"                           "Lycosidae Brood"
+
+    "econ_golden_severing_crest"                     "Golden Severing Crest"
+    "econ_severing_lash"                             "Severing Lash"
+
+
+    "econ_crimson_edict_of_shadows"                  "Crimson Edict of Shadows"
+    "econ_golden_edict_of_shadows"                   "Golden Edict of Shadows"
+    "econ_shadow_masquerade"                         "Shadow Masquerade"
+    "econ_golden_shadow_masquerade"                  "Golden Shadow Masquerade"
+
+    "econ_golden_infernal_chieftain"                 "Golden Infernal Chieftain"
+    "econ_infernal_chieftain_of_the_crimson_witness" "Infernal Chieftain of the Crimson Witness"
+    "econ_infernal_menace"                           "Infernal Menace"
+
+    "econ_golden_dread_requisition"                  "Golden Dread Requisition"
+    "econ_golden_profane_union"                      "Golden Profane Union"
+    "econ_profane_union"                             "Profane Union"
+
+    "econ_iron_surge"                                "Iron Surge"
+    "econ_savage_mettle"                             "Savage Mettle"
+
+    "econ_bitter_lineage"                            "Bitter Lineage"
+
+    "econ_third_awakening"                                "Third Awakening"
+    "econ_dragon_immortal"                                "Dragon Immortal"
+    "econ_legacy_of_the_winterwyrm"                       "Legacy of the Winterwyrm"
+
+    "econ_bai_tuo_shei_qu"                                "Bai Tuo Shei Qu"
+    "econ_duiyou_ne"                                      "Dui You Ne"
+    "econ_ni_qi_bu_qi"                                    "Ni Qi Bu Qi"
+    "econ_liu_liu_liu"                                    "Zhe Bo Bu kui"
+    "econ_ta_daaaa"                                       "Lakad Matataaaag"
+    "econ_zou_hao_bu_song"                                "Zou Hao Bu Song"
+    "econ_zai_jian_le_bao_bei"                            "Zai Jian Le Bao Bei"
+    "econ_gan_ma_ne_xiong_di"                             "Gan Ma Ne Xiong Di"
+    "econ_lian_dou_xiu_wai_la"                            "Lian Dou Xiu Wai"
+
+    "econ_ethereal_flame_white"                           "White Ethereal Flame"
+    "econ_ethereal_flame_golden"                          "Golden Ethereal Flame"
+    "econ_ethereal_flame_pink"                            "Pink Ethereal Flame"
+    "econ_golden_ti7"                                     "Ti7 Golden"
+    "econ_rich"                                           "Wu Ke Di Guo"
+
+    "custom_end_screen_legend_ratings"                    "Rating"
+    "custom_end_screen_legend_time_cost"                  "Time Cost"
+
+    "Close"                                               "Close"
+
+    "DrawMutate"                               "Draw Mutation("
+
+
+    "UltimateStageNote"                                                         "Reach Level-11! This Game Enter Ultimate Stage."
+    "LevelTenStageNote"                                                         "Reach Level-10! Level 10 creatures are exposed to all players"
+
+	"fury"                                                                      "Fury"
+	"durable"                                                                   "Durable"
+	"element"                                                                   "Element"
+	"hunt"                                                                      "Hunt"
+	"decay"                                                                     "Decay"
+	"mystery"                                                                   "Mystery"
+	"exp"                                                                       "Exp"
+
+	"ui_detail_fury"                                                            "Enforce attack with Claw and Tooth"
+	"ui_detail_durable"                                                         "Impregnable Defence"
+	"ui_detail_element"                                                         "Manipulate Element to Destroy"
+	"ui_detail_hunt"                                                            "Hunter in Shadow"
+	"ui_detail_decay"                                                           "Spread Death and Dicease"
+	"ui_detail_mystery"                                                         "Power of Void and Abysmal Sea"
+
+
+    //召唤
+    "npc_dota_zeus_cloud"                                                           "Thunder of Cloud"
+    "npc_dota_creature_player_summoned_familiar"                                           "Familiar"
+    "npc_dota_creature_player_wraith_warrior"                                              "Wraith Warrior"
+    "npc_dota_creature_player_skeleton_mage"                                               "Skeleton Mage"
+    "npc_dota_creature_player_tombstone_zombie"                                            "Tombstone Zombie"
+    "npc_dota_creature_player_tombstone"                                                   "Tombstone"
+    "npc_dota_storegga_rock"                                                        "Rock"
+    "npc_dota_creature_player_small_storegga"                                              "Small Storegga"
+
+
+    //Level-0
+    "npc_dota_courier_baby_winter_wyvern"                                           "Baby Winter Wyvern"
+    "npc_dota_courier_echo_wisp"                                                    "Echo Wisp"
+    "npc_dota_courier_deathripper"                                                  "Deathripper"
+    "npc_dota_courier_deathbringer"                                                 "Deathbringer"
+    "npc_dota_courier_turtle"                                                       "Turtle"
+    "npc_dota_courier_snowl"                                                        "Snowl"
+
+
+
+     //Level-1
+	"npc_dota_creature_player_tiny_mud_golem"                                              "Tiny Mud Golem"
+    "npc_dota_creature_player_forge_spirit"                                                "Forge Spirit"
+    "npc_dota_creature_player_crawl_zombie"                                                "Crawl Zombie"
+    "npc_dota_creature_player_kobold"                                                      "Kobold"
+    "npc_dota_creature_player_pine_cone"                                                   "Pine Cone"
+    "npc_dota_creature_player_greevil"                                                     "Greevil"
+    "npc_dota_creature_player_geodesic_1"                                                  "Geodesic"
+     
+     //Level-2
+    "npc_dota_creature_player_geodesic_2"                                                  "Geodesic"
+    "npc_dota_creature_player_iceforged"                                                   "Iceforged"
+    "npc_dota_creature_player_woodfang"                                                    "Woodfang"
+    "npc_dota_creature_player_basic_zombie"                                                "Zombie"
+    "npc_dota_creature_player_radiant_melee"                                               "Radiant Melee"
+    "npc_dota_creature_player_bad_melee"                                                   "Dire Melee"
+    "npc_dota_creature_player_bad_range"                                                   "Dire Range"
+    "npc_dota_creature_player_radiant_ranged"                                              "Radiant Range"
+    "npc_dota_creature_player_kobold_tunneler"                                             "Kobold Tunneler"
+    "npc_dota_creature_player_small_spider"                                                "Ghost Spider"
+    "npc_dota_creature_player_red_harpy"                                                   "Storm Harpy"
+    "npc_dota_creature_player_giant_wolf"                                                  "Gaint Wolf"
+    "npc_dota_creature_player_small_mud_golem"                                             "Mud Golem"
+    "npc_dota_creature_player_ogre_mage_1"                                                 "Lesser Ogre Mage"
+    "npc_dota_creature_player_amoeba_1"                                                    "Amoeba"
+
+
+    //Level-3
+    "npc_dota_creature_player_radiant_melee_2"                                             "Radiant Melee"
+    "npc_dota_creature_player_bad_melee_2"                                                 "Dire Super Melee"
+    "npc_dota_creature_player_bad_range_2"                                                 "Dire Super Ranged"
+    "npc_dota_creature_player_radiant_ranged_2"                                            "Radiant Super Ranged"
+    "npc_dota_creature_player_gnoll_assassin"                                              "Gnoll Assassin"
+    "npc_dota_creature_player_forge_spirit_sempiternal"                                    "SSempiternal Forge Spirit"
+    "npc_dota_creature_player_coconut"                                                     "Coconut"
+    "npc_dota_creature_player_vulture"                                                     "Vulture"
+    "npc_dota_creature_player_kobold_taskmaster"                                           "Kobold Taskmaster"
+    "npc_dota_creature_player_mud_golem"                                                   "Mud Golem"
+    "npc_dota_creature_player_skeleton"                                                    "Skeleton"
+    "npc_dota_creature_player_skeleton_archer"                                             "Skeleton Archer"
+    "npc_dota_creature_player_spider"                                                      "Spider"
+    "npc_dota_creature_player_alpha_wolf"                                                  "Alpha Wolf"
+    "npc_dota_creature_player_mole"                                                        "Mole Miner"
+    "npc_dota_creature_player_cunning"                                                     "Wolvar"
+    "npc_dota_creature_player_frostbitten_acolyte_1"                                       "Frostbitten Acolyte"
+    "npc_dota_creature_player_centaur"                                                     "Centaur"
+    "npc_dota_creature_player_ogre_mauler_1"                                               "Ogre Mauler"
+    "npc_dota_creature_player_geodesic"                                                    "Geodesic"
+    "npc_dota_creature_player_satyr_trickster_1"                                           "Satyr Trickster"
+    "npc_dota_creature_player_harpy_storm"                                                 "Harpy Storm Witch"
+    "npc_dota_creature_player_ogre_mage_2"                                                 "Ogre Mage"
+    "npc_dota_creature_player_eidelon_1"                                                   "Eidelon"
+
+
+
+    //Level-4
+    "npc_dota_creature_player_amoeba_2"                                                    "Amoeba"
+    "npc_dota_creature_player_frostbitten_necromancer_1"                                   "Frostbitten Necromancer"
+    "npc_dota_creature_player_frostbitten_acolyte_2"                                       "Frostbitten Acolyte"
+    "npc_dota_creature_player_ogre_mauler_2"                                               "Ogre Mauler"
+    "npc_dota_creature_player_vulture_mid"                                                 "Vulture"
+    "npc_dota_creature_player_acidic_flytrap"                                              "Acidic Flytrap"
+    "npc_dota_creature_player_gnoll_assassin_2"                                            "Gnoll Venom Assassin"
+    "npc_dota_creature_player_forest_troll"                                                "Hill Troll"
+    "npc_dota_creature_player_fell_spirit"                                                 "Fell Spirit"
+    "npc_dota_creature_player_fell_spirit_red"                                             "Fury Fell Spirit"
+    "npc_dota_creature_player_fell_spirit_green"                                           "Borrowed Fell Spirit"
+    "npc_dota_creature_player_tiny_01"                                                     "Tiny"
+    "npc_dota_creature_player_dire_hound"                                                  "Dire Hound"
+    "npc_dota_creature_player_prisoner_crab"                                               "Prisoner Crab"
+    "npc_dota_creature_player_mole_lamp"                                                   "Mole Super Miner"
+    "npc_dota_creature_player_virulent_spider"                                             "Virulent Spider"
+    "npc_dota_creature_player_araknarok"                                                   "Araknarok"
+    "npc_dota_creature_player_frostbitten_ranged"                                          "Frostbitten Necromancer"
+    "npc_dota_creature_player_good_melee_3"                                                "Radiant Mega Melee"
+    "npc_dota_creature_player_good_ranged_3"                                               "Radiant Mega Range"
+    "npc_dota_creature_player_bad_melee_3"                                                 "Dire Mega Melee"
+    "npc_dota_creature_player_bad_range_3"                                                 "Dire Mega Range"
+    "npc_dota_creature_player_centaur_warrior"                                             "Centaur Warrior"
+    "npc_dota_creature_player_ogre_mage_3"                                                 "Ogre Mage"
+    "npc_dota_creature_player_eidelon"                                                     "Small Eidelon"
+    "npc_dota_creature_player_esl_relics_forge_spirit"                                     "Esl Relics Forge Spirit"
+    "npc_dota_creature_player_satyr_soulstealer_1"                                         "Satyr Soulstealer"
+    "npc_dota_creature_player_baboon"                                                      "Baboon"
+    "npc_dota_creature_player_satyr_trickster_2"                                           "Satyr Trickster"
+    "npc_dota_creature_player_eidelon_2"                                                   "Eidelon"
+    "npc_dota_creature_player_familiar"                                                    "Familiar"
+    "npc_dota_creature_player_meranth_guard"                                               "Meranth Guard"
+
+    //Level-5
+    "npc_dota_creature_player_small_thunder_lizard_1"                                      "Small Thunderhide"
+    "npc_dota_creature_player_frostbitten_necromancer_1"                                   "Frostbitten Nnecromancer"
+    "npc_dota_creature_player_brute_1"                                                     "Ogre Brute"
+    "npc_dota_creature_player_dragonspawn_samll"                                           "Small Dragonspawn"
+    "npc_dota_creature_player_black_drake_small"                                           "Small Black Drake"
+    "npc_dota_creature_player_deathbringer_spawn"                                          "Deathbringer Spawn"
+    "npc_dota_creature_player_stalagmite_spawn"                                            "Stalagmite Spawn"
+    "npc_dota_creature_player_infernus"                                                    "Infernus"
+    "npc_dota_creature_player_satyr_soulstealer_2"                                         "Satyr Soulstealer"
+    "npc_dota_creature_player_treant_cis"                                                  "Treant Cis"
+    "npc_dota_creature_player_enraged_wildkin"                                             "Wildwing Ripper"
+    "npc_dota_creature_player_archivist_golem"                                             "Archivist Golem"
+    "npc_dota_creature_player_necro_warrior"                                               "Necro Warrior"
+    "npc_dota_creature_player_necro_archer"                                                "Necro Archer"
+    "npc_dota_creature_player_frostbitten_elder"                                           "Frostbitten Elder"
+    "npc_dota_creature_player_good_siege"                                                  "Siege Engine"
+    "npc_dota_creature_player_centaur_elite"                                               "Centaur Elite"
+    "npc_dota_creature_player_perceptive_spiderling"                                       "Perceptive Spiderling"
+    "npc_dota_creature_player_arsenal_magus_forged_spirit"                                 "Arsenal Magus Forged Spirit"
+    "npc_dota_creature_player_ghost"                                                       "Ghost"
+    "npc_dota_creature_player_meranth_guard_2"                                             "Meranth Guard"
+    "npc_dota_creature_player_thistle_crawler"                                             "Thistle Crawler"
+    "npc_dota_creature_player_forest_bear"                                                 "Bear"
+    "npc_dota_creature_player_tusk_skeleton"                                               "Tusk Skeleton"
+    "npc_dota_creature_player_dire_hound_boss"                                             "Dire Hound Alpha"
+    "npc_dota_creature_player_tiny_02"                                                     "Rock Construction"
+    "npc_dota_creature_player_knoll"                                                       "Knoll"
+    "npc_dota_creature_player_hell_bear"                                                   "Hell Bear"
+    "npc_dota_creature_player_ogre_archmage"                                               "Ogre Frost Mage"
+    "npc_dota_creature_player_forest_troll_high_priest"                                    "Hill Troll Priest"
+    "npc_dota_creature_player_forest_troll_elite"                                          "Hill Troll Elite"
+    "npc_dota_creature_player_satyr_hellcaller_1"                                          "Satyr Tormenter"
+    "npc_dota_creature_player_tentacular_conqueror_1"                                      "Tentacular Conqueror"
+    "npc_dota_creature_player_plague_familiar"                                             "Plague Familiar"
+    "npc_dota_creature_player_amoeba_3"                                                    "Living Sea Foam"
+
+
+
+    //Level-6
+     "npc_dota_creature_player_small_thunder_lizard_2"                                     "Thunderhide"
+    "npc_dota_creature_player_oldone_sentinel_1"                                           "Black Gold Element"
+    "npc_dota_creature_player_slark_1"                                                     "Offshore Assassins"
+    "npc_dota_creature_player_element_spider_1"                                            "Element Spider"
+    "npc_dota_creature_player_amoeba_4"                                                    "Big Living Sea Foam"
+    "npc_dota_creature_player_necro_archer_2"                                              "Necro Archer"
+    "npc_dota_creature_player_centaur_elite_2"                                             "Centaur Elite"
+    "npc_dota_creature_player_frostbitten_elder_1"                                         "Frostbitten Elder"
+    "npc_dota_creature_player_frostbitten_necromancer_2"                                   "Frostbitten Elder Necromancer"
+    "npc_dota_creature_player_brute_2"                                                     "Ogre Brute"
+    "npc_dota_creature_player_ogre_onehead_mage"                                           "Ogre One Head Mage"
+    "npc_dota_creature_player_enraged_wildkin_large"                                       "Big Wildwing Ripper"
+    "npc_dota_creature_player_ferocious_toxicants"                                         "Ferocious Toxicants"
+    "npc_dota_creature_player_granite_golem"                                               "Granite Golem"
+    "npc_dota_creature_player_immortal_familiar"                                           "Bell Familiar"
+    "npc_dota_creature_player_black_drake"                                                 "Black Drake"
+    "npc_dota_creature_player_skeleton_crimson_soldier"                                    "Crimson Wraith Soldier"
+    "npc_dota_creature_player_skeleton_green_soldier"                                      "Wraith Soldier"
+    "npc_dota_creature_player_tusk_skeleton_armor"                                         "Tusk Ghoul"
+    "npc_dota_creature_player_dragonspawn"                                                 "Dragon Egg Protector"
+    "npc_dota_creature_player_large_brute"                                                 "Ogre Mega Brute"
+    "npc_dota_creature_player_ithogoaki"                                                   "Ithogoaki"
+    "npc_dota_creature_player_prism_forge_spirit"                                          "Prism Forge Spirit"
+    "npc_dota_creature_player_dark_troll"                                                  "Dark Troll Berserker"
+    "npc_dota_creature_player_furbolg_disrupter"                                           "Hellbear Smasher"
+    "npc_dota_creature_player_blood_spider"                                                "Bloody Spider"
+    "npc_dota_creature_player_element_spider"                                              "Element Spider"
+    "npc_dota_creature_player_dlotus_spider"                                               "Dlotus Spider"
+    "npc_dota_creature_player_satyr_hellcaller_2"                                          "Satyr Tormenter"
+    "npc_dota_creature_player_centaur_champion"                                            "Centaur Champion"
+    "npc_dota_creature_player_flame_wolf"                                                  "Flaming Mad Wolf"
+    "npc_dota_creature_player_madness_wolf"                                                "BloodMoon Spawn"
+    "npc_dota_creature_player_disease_wolf"                                                "Disease Wolf"
+    "npc_dota_creature_player_mystery_wolf"                                                "Mystery Wolf"
+    "npc_dota_creature_player_tentacular_conqueror_2"                                      "Tentacular Conqueror"
+    "npc_dota_creature_player_satyr_prowler"                                               "Satyr Prowler"
+    "npc_dota_creature_player_ogreseal_1"                                                  "Ogre Seal"
+    "npc_dota_creature_player_green_troll_warlord"                                         "Forest Troll Summoner"
+   
+    //Level-7
+    "npc_dota_creature_player_oldone_sentinel_2"                                           "Black Golden Killer"
+    "npc_dota_creature_player_ogreseal_2"                                                  "Ogre Seal"
+    "npc_dota_creature_player_slark_2"                                                     "Slark"
+    "npc_dota_creature_player_element_spider_2"                                            "Element Spider"
+    "npc_dota_creature_player_frostbitten_elder"                                           "Frostbitten Elder"
+    "npc_dota_creature_player_ogreseal_undead_1"                                           "Ghost Ogre Seal"
+    "npc_dota_creature_player_ogre_onehead_archmage"                                       "Ogre Onehead Archmage"
+    "npc_dota_creature_player_ogre_warlord"                                                "Ogre Warlord"
+    "npc_dota_creature_player_black_dragon"                                                "Black Dragon"
+    "npc_dota_creature_player_centipede"                                                   "Centipede"
+    "npc_dota_creature_player_gluttony"                                                    "Gluttony"
+    "npc_dota_creature_player_radiant_ancient_hulk"                                        "Radiant Ancient Hulk"
+    "npc_dota_creature_player_soul_reaper"                                                 "Soul Reaper"
+    "npc_dota_creature_player_doom_flame"                                                  "Doom Flame"
+    "npc_dota_creature_player_updated_eidolon"                                             "VoidLord Shatter"
+    "npc_dota_creature_player_mystery_warg"                                                "Mystery Warg"
+    "npc_dota_creature_player_element_bear"                                                "Element Bear"
+    "npc_dota_creature_player_blood_moon_shapeshift"                                       "Blood Moon Shapeshift"
+    "npc_dota_creature_player_snow_wolf"                                                   "Snow Wolf"
+    "npc_dota_creature_player_centaur_champion"                                            "Centaur Champion"
+    "npc_dota_creature_player_ocean_salve_master"                                          "Ocean Salve Master"
+    "npc_dota_creature_player_ogreseal"                                                    "Ogreseal"
+    "npc_dota_creature_player_amber_queen_spiderling"                                      "Amber Queen Spiderling"
+    "npc_dota_creature_player_arachne_spider"                                              "Arachne Spider"
+    "npc_dota_creature_player_large_thunder_lizard"                                        "Ancient Thunderhide Leader"
+    "npc_dota_creature_player_gaint_granite_golem"                                         "Ancient Granite Golem"
+    "npc_dota_creature_player_tusk_skeleton_ghost"                                         "Tusk Skeleton Ghost"
+    "npc_dota_creature_player_frostbitten_swollen"                                         "Frostbitten Swollen"
+    "npc_dota_creature_player_disease_bear"                                                "Disease Bear"
+    "npc_dota_creature_player_large_dragonspawn"                                           "Ancient Dragon Spawn"
+    "npc_dota_creature_player_dark_troll_warlord"                                          "Dark Troll Summoner"
+    "npc_dota_creature_player_dark_troll_berserker"                                        "Forest Troll Berserker"
+    "npc_dota_creature_player_satyr_dreamer"                                               "Satyr Dreamer"
+    "npc_dota_creature_player_morphling"                                                   "Sea Element"
+
+
+    //Level-8
+    "npc_dota_creature_player_spirit_breaker"                                              "Spirit Breaker"
+    "npc_dota_creature_player_slark_3"                                                     "Dark Reef Escape"
+    "npc_dota_creature_player_ogreseal_undead_2"                                           "Ogre Seal Ghoul"
+    "npc_dota_creature_player_lich"                                                        "Lich"
+
+    "npc_dota_creature_player_faceless_void"                                               "Faceless Void"
+    "npc_dota_creature_player_spectre"                                                     "Spectre"
+    "npc_dota_creature_player_pudge"                                                       "Pudge"
+    "npc_dota_creature_player_razor"                                                       "Razor"
+    "npc_dota_creature_player_venomancer"                                                  "Venomancer"
+    "npc_dota_creature_player_tiny_03"                                                     "Ancient Rock Construction"
+    "npc_dota_creature_player_life_stealer"                                                "Life Stealer"
+    "npc_dota_creature_player_frostbitten_gaint"                                           "Frostbitten Gaint"
+    "npc_dota_creature_player_black_dragon_large"                                          "Ancient Black Dragon"
+    "npc_dota_creature_player_ogre_warchief"                                               "Ogre Warchief"
+    "npc_dota_creature_player_ogre_double_head_mage"                                       "Ogre Double Head Mage"
+    "npc_dota_creature_player_troll_warlord"                                               "Troll Warlord"
+    "npc_dota_creature_player_gaoler"                                                      "Gaoler"
+    "npc_dota_creature_player_element_truefom"                                             "Element Truefom"
+    "npc_dota_creature_player_undying"                                                     "Undying"
+    "npc_dota_creature_player_radiant_hulk"                                                "Radiant Pumpkin hulk"
+    "npc_dota_creature_player_centaur_elder"                                               "Centaur Elder"
+    "npc_dota_creature_player_ambry"                                                       "Ambry"
+    "npc_dota_creature_player_icewrack"                                                    "Ice Wrack"
+    "npc_dota_creature_player_enigma"                                                      "Enigma"
+    "npc_dota_creature_player_abyssal_keeper"                                              "Abyssal Keeper"      
+    "npc_dota_creature_player_core_element"                                                "Core Element"
+    "npc_dota_creature_player_riki"                                                        "Riki"
+    "npc_dota_creature_player_visage"                                                      "Visage"
+    "npc_dota_creature_player_broodmother"                                                 "Broodmother"
+    "npc_dota_creature_player_morphling_2"                                                 "Morphling"
+    "npc_dota_creature_player_slardar"                                                     "Slardar"
+
+    //Level-9
+    "npc_dota_creature_player_undying_seablight_procession"                                "Undying Seablight Procession"
+    "npc_dota_creature_player_ogre_double_head_antipodeans"                                "Ogre War Mage"
+    "npc_dota_creature_player_spirit_breaker_ironbarde_charger"                            "Ironbarde Charger"
+    "npc_dota_creature_player_lich_rime_lord"                                              "Rime Lord"
+    "npc_dota_creature_player_faceless_void_endless_plane"                                 "Endless Plane"    
+    "npc_dota_creature_player_spectre_enduring_solitude"                                   "Enduring Solitude"
+    "npc_dota_creature_player_pudge_plague_champion"                                       "Plague Champion"
+    "npc_dota_creature_player_razor_lightning_lord"                                        "Lightning Lord"
+    "npc_dota_creature_player_venomancer_deathbringer"                                     "Death Bringer"
+    "npc_dota_creature_player_venomancer_stalker"                                          "Stalker"
+    "npc_dota_creature_player_ancient_apparition"                                          "Ancient Apparition"
+    "npc_dota_creature_player_life_stealer_bond_of_madness"                                "Bond of Madness"
+    "npc_dota_creature_player_undying_shambling_draug"                                     "Shambling Draug"
+    "npc_dota_creature_player_wildkin_boss"                                                "Ancient Wildkin"
+    "npc_dota_creature_player_lost_ores"                                                   "Abyssal Enforcer"
+    "npc_dota_creature_player_red_dragon"                                                  "Ancient Dragon"
+    "npc_dota_creature_player_green_dragon"                                                "Corrosive Dragon"
+    "npc_dota_creature_player_troll_warlord_icewrack_marauder"                             "Icewrack Marauder"
+    "npc_dota_creature_player_tiny_04"                                                     "Rock Gaint"
+    "npc_dota_creature_player_centaur_khan"                                                "Centaur Khan"
+    "npc_dota_creature_player_undying_flesh_golem"                                         "Flesh Golem"
+    "npc_dota_creature_player_nian"                                                        "Nian"
+    "npc_dota_creature_player_roshan"                                                      "Roshan"
+    "npc_dota_creature_player_doom_icewrack"                                               "Doom Icewrack"
+    "npc_dota_creature_player_bloodteeth"                                                  "Bloodteeth"
+    "npc_dota_creature_player_primal_void"                                                 "Primal Void"
+    "npc_dota_creature_player_dream_secret"                                                "Nightmare Prince"
+    "npc_dota_creature_player_broodmother_glutton_larder"                                  "Glutton Larder"
+    "npc_dota_creature_player_visage_soul_keeper"                                          "Soul Keeper"
+    "npc_dota_creature_player_morphling_lost_star"                                         "Lost Star"
+    "npc_dota_creature_player_slardar_vanguard"                                            "Slardar Vanguard"
+
+
+    //Level-10
+    "npc_dota_creature_player_nian_2"                                                      "Nian"
+    "npc_dota_creature_player_roshan_2"                                                    "Roshan"
+    "npc_dota_creature_player_razor_affront_of_the_overseer"                               "Affront of Overseer"
+    "npc_dota_creature_player_life_stealer_chainbreaker"                                   "Chain Breaker"
+    "npc_dota_creature_player_spectre_conservator"                                         "Conservator"
+    "npc_dota_creature_player_faceless_void_nezzureem"                                     "Nezzureem"
+    "npc_dota_creature_player_spirit_breaker_elemental_realms"                             "Elemental Realms"
+    "npc_dota_creature_player_lich_serakund_tyrant"                                        "Serakund Tyrant"
+    "npc_dota_creature_player_life_stealer_profane_union"                                  "Profane Union"
+    "npc_dota_creature_player_razor_severing"                                              "Severing"
+    "npc_dota_creature_player_venomancer_ferocious_toxicant"                               "Ferocious Toxicant"
+    "npc_dota_creature_player_nightmare_hunter"                                            "Nightmare Hunter"
+    "npc_dota_creature_player_red_dragon_elder"                                            "Proto Dragon"
+    "npc_dota_creature_player_green_dragon_elder"                                          "Proto Corrosive Dragon"
+    "npc_dota_creature_player_abyssal_tyrant"                                              "Abyssal Dominator"
+    "npc_dota_creature_player_storegga_1"                                                  "Storegga"
+    "npc_dota_creature_player_ogre_imperator"                                              "Ogre Emperor"
+    "npc_dota_creature_player_troll_plunder_of_the_savage_monger"                          "Troll Arena Champion"
+    "npc_dota_creature_player_spider_queen"                                                "Spider Queen"
+    "npc_dota_creature_player_centaur_warchief"                                            "Centaur Warchief"
+    "npc_dota_creature_player_undying_flesh_baal"                                          "Flesh Baal"
+    "npc_dota_creature_player_pudge_surgical_precision"                                    "Surgical Precision"
+    "npc_dota_creature_player_undying_old_one"                                             "Dark Sea Dominator"
+    "npc_dota_creature_player_undying_night_king"                                          "Night King"
+    "npc_dota_creature_player_lucius_longclaw"                                             "Lucius Longclaw"
+    "npc_dota_creature_player_void_overlord"                                               "Void Overlord"
+    "npc_dota_creature_player_old_element"                                                 "Equilibrium"
+    "npc_dota_creature_player_visage_winged_harvest"                                       "Winged Harvest"
+    "npc_dota_creature_player_morphling_protean_emperor"                                   "Protean Emperor"
+    "npc_dota_creature_player_wildkin_boss_2"                                              "Frist Wildkin"
+
+
+    //Level-11
+    "npc_dota_creature_player_storegga_2"                                                  "Ancient Storegga"
+    "npc_dota_creature_player_ursa_razorwyrm"                                              "Razor Wyrm"
+    "npc_dota_creature_player_necrolyte_apostle_of_decay"                                  "Apostle of Decay"
+    "npc_dota_creature_player_dark_seer_imperial_relics"                                   "Imperial Relics"
+    "npc_dota_creature_player_nightstalker"                                                "Nightstalker"
+    "npc_dota_creature_player_storm_spirit"                                                "Storm Spirit"
+
+    "DOTA_Tooltip_modifier_fountain_aura_effect_lua"                                "Fountain Aura"
+    "DOTA_Tooltip_modifier_fountain_aura_effect_lua_Description"                    "Healing"
+
+
+    "DOTA_Tooltip_ability_zuus_cloud_lua"	                                        "Nimbus"
+	"DOTA_Tooltip_ability_zuus_cloud_lua_Description"	                            "Creates a storm cloud anywhere on the map that automatically casts Lightning Bolt on nearby enemies."
+	"DOTA_Tooltip_ability_zuus_cloud_lua_cloud_duration"	                        "Duration:"
+	"DOTA_Tooltip_ability_zuus_cloud_lua_cloud_bolt_interval"	                    "Lightning Bolt Interval:"
+    "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_bolt_damage"	                        "Lightning Bolt Damage:"
+    "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_radius"	                            "Radius:"
+    "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_nMystery"                            "<font color='#e9c2ff'>Mystery:</font>"
+    "DOTA_Tooltip_ability_zuus_cloud_lua_cloud_nElement"                            "<font color='#00a0e9'>Element:</font>"
+
+
+    "DOTA_Tooltip_ability_hunt_thirst_lua"	                                        "Thirst"
+	"DOTA_Tooltip_ability_hunt_thirst_lua_Description"	                            "Bloodseeker is invigorated by the wounds of his enemies, gaining bonus movement speed and attack speed whenever an enemy hero's health falls below %min_bonus_pct%%%, with the bonuses increasing as their health falls further. If an enemy hero's health falls below %invis_threshold_pct%%%, he will also gain vision and True Sight of that hero. Bonuses stack per hero."
+	"DOTA_Tooltip_ability_hunt_thirst_lua_bonus_movement_speed_pct"	                "%MAX THIRST MOVE SPEED:"
+    "DOTA_Tooltip_ability_hunt_thirst_lua_bonus_attack_speed"					    "MAX ATTACK SPEED:"
+    "DOTA_Tooltip_ability_hunt_thirst_lua_speed_bonus_threshold"					"%THIRST HEALTH THRESHHOLD:"
+    "DOTA_Tooltip_ability_hunt_thirst_lua_vision_bonus_threshold"				    "%VISIBILITY HEALTH THRESHHOLD:"
+    "DOTA_Tooltip_ability_hunt_thirst_lua_nHunt"                                    "<font color='#999999'>Hunt:</font>"
+
+    "DOTA_Tooltip_ability_decay_summon_wraith_warrior"                              "Summon Wraith Warrior"
+    "DOTA_Tooltip_ability_decay_summon_wraith_warrior_Description"                  "Calls forth a mighty Wraith Warrior to aid in the battlefield."
+    "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_duration"      "Duration:"
+    "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_health"        "Health:"
+    "DOTA_Tooltip_ability_decay_summon_wraith_warrior_wraith_warrior_damage"        "Damage:"
+    "DOTA_Tooltip_ability_decay_summon_wraith_warrior_nDecay"                       "<font color='#b3d465'>Decay:</font>"
+   
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal"                              "Summon Ghost Ogreseal"
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_Description"                  "Calls forth a Ghost Ogreseal to aid in the battlefield."
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_ghost_seal_duration"          "Duration:"
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_ghost_seal_flop_level"        "Flop Level："
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_ghost_seal_health"            "Health:"
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_ghost_seal_damage"            "Damage:"
+    "DOTA_Tooltip_ability_decay_summon_ghost_ogreseal_nDecay"                       "<font color='#b3d465'>Decay:</font>"
+   
+    "npc_dota_creature_player_ghost_seal"                                                  "Ghost Seal"
+
+
+    "DOTA_Tooltip_ability_spirit_breaker_charge_of_darkness_nFury"                  "<font color='#eb6877'>Fury:</font>"
+    "DOTA_Tooltip_ability_spirit_breaker_charge_of_darkness_nHunt"                  "<font color='#999999'>Hunt:</font>"
+  
+    "DOTA_Tooltip_ability_black_dragon_fireball_nFury"                              "<font color='#eb6877'>Fury:</font>"
+    "DOTA_Tooltip_ability_black_dragon_fireball_nElement"                           "<font color='#00a0e9'>Element:</font>"
+    
+    "DOTA_Tooltip_ability_lich_chain_frost_nElement"                                "<font color='#00a0e9'>Element:</font>"
+
+
+    "DOTA_Tooltip_modifier_forged_spirit_melting_strike_effect"                     "Melting Strike"
+    "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua"                         "Melting Strike"
+    "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_Description"             "Melts away the armor of heroes hit by the spirit's attack if the spirit has enough mana. Each successive hit increases the amount of armor melted."
+    "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_armor_removed"           "ARMOR REMOVED PER HIT:"
+    "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_duration"                "Duration:"
+    "DOTA_Tooltip_ability_forged_spirit_melting_strike_lua_nElement"                "<font color='#00a0e9'>Element:</font>"
+
+    
+    "DOTA_Tooltip_ability_centaur_khan_war_stomp_nFury"                             "<font color='#eb6877'>Fury:</font>"
+    "DOTA_Tooltip_ability_centaur_khan_war_stomp_nDurable"                          "<font color='#f8b551'>Durable:</font>"
+
+    "DOTA_Tooltip_ability_dark_troll_warlord_ensnare_nHunt"                         "<font color='#999999'>Hunt:</font>"
+    
+    "DOTA_Tooltip_ability_ogre_magi_frost_armor_nElement"                           "<font color='#00a0e9'>Element:</font>"
+    "DOTA_Tooltip_ability_ogre_magi_frost_armor_nDurable"                           "<font color='#f8b551'>Durable:</font>"
+
+    "DOTA_Tooltip_ability_lich_frost_shield_nElement"                               "<font color='#00a0e9'>Element:</font>"
+    "DOTA_Tooltip_ability_lich_frost_shield_nDurable"                               "<font color='#f8b551'>Durable:</font>"
+
+    "DOTA_Tooltip_ability_gnoll_assassin_envenomed_weapon_nDecay"                   "<font color='#b3d465'>Decay:</font>"
+    "DOTA_Tooltip_ability_gnoll_assassin_envenomed_weapon_nHunt"                    "<font color='#999999'>Hunt:</font>"
+     
+
+    "DOTA_Tooltip_ability_spawnlord_master_freeze_nMystery"                         "<font color='#e9c2ff'>Mystery:</font>"
+    "DOTA_Tooltip_ability_spawnlord_master_freeze_nHunt"                            "<font color='#999999'>Hunt:</font>:"     
+
+    "DOTA_Tooltip_ability_granite_golem_hp_aura_nDurable"                           "<font color='#f8b551'>Durable:</font>"     
+    
+    "DOTA_Tooltip_ability_crystal_maiden_crystal_nova_nElement"                     "<font color='#00a0e9'>Element:</font>"     
+    "DOTA_Tooltip_ability_morphling_waveform_nElement"                              "<font color='#00a0e9'>Element:</font>"     
+    
+    "DOTA_Tooltip_ability_troll_warlord_battle_trance_nFury"                        "<font color='#eb6877'>Fury:</font>"     
+    "DOTA_Tooltip_ability_troll_warlord_battle_trance_nHunt"                        "<font color='#999999'>Hunt:</font>:"     
+
+    "DOTA_Tooltip_ability_venomancer_poison_nova_nHunt"                             "<font color='#999999'>Hunt:</font>:" 
+    "DOTA_Tooltip_ability_venomancer_poison_nova_nDecay"                            "<font color='#b3d465'>Decay:</font>" 
+    
+
+    "DOTA_Tooltip_ability_razor_eye_of_the_storm_nElement"                          "<font color='#00a0e9'>Element:</font>" 
+    "DOTA_Tooltip_ability_razor_eye_of_the_storm_nHunt"                             "<font color='#999999'>Hunt:</font>:" 
+
+    "DOTA_Tooltip_ability_life_stealer_rage_nDecay"                                 "<font color='#b3d465'>Decay:</font>" 
+    "DOTA_Tooltip_ability_life_stealer_rage_nFury"                                  "<font color='#eb6877'>Fury:</font>" 
+    
+    
+    "DOTA_Tooltip_ability_pudge_meat_hook_nDecay"                                   "<font color='#b3d465'>Decay:</font>" 
+    "DOTA_Tooltip_ability_pudge_meat_hook_nFury"                                    "<font color='#eb6877'>Fury:</font>" 
+    
+        
+    "DOTA_Tooltip_ability_spectre_dispersion_nMystery"                              "<font color='#e9c2ff'>Mystery:</font>" 
+    "DOTA_Tooltip_ability_spectre_dispersion_nDurable"                              "<font color='#f8b551'>Durable:</font>" 
+    
+    "DOTA_Tooltip_ability_faceless_void_chronosphere_nMystery"                      "<font color='#e9c2ff'>Mystery:</font>" 
+    "DOTA_Tooltip_ability_faceless_void_chronosphere_nFury"                         "<font color='#eb6877'>Fury:</font>" 
+    
+    "DOTA_Tooltip_ability_dark_seer_surge_nMystery"                                 "<font color='#e9c2ff'>Mystery:</font>" 
+    "DOTA_Tooltip_ability_spectre_spectral_dagger_nMystery"                         "<font color='#e9c2ff'>Mystery:</font>" 
+
+    "DOTA_Tooltip_ability_wisp_relocate_nMystery"                                   "<font color='#e9c2ff'>Mystery:</font>" 
+
+    "DOTA_Tooltip_ability_ursa_fury_swipes_nFury"                                   "<font color='#eb6877'>Fury:</font>" 
+    
+    "DOTA_Tooltip_ability_ursa_overpower_nFury"                                     "<font color='#eb6877'>Fury:</font>" 
+
+    "DOTA_Tooltip_ability_satyr_soulstealer_mana_burn_nMystery"                     "<font color='#e9c2ff'>Mystery:</font>" 
+
+    
+    "DOTA_Tooltip_ability_riki_blink_strike_nMystery"                               "<font color='#e9c2ff'>Mystery:</font>"
+    "DOTA_Tooltip_ability_riki_blink_strike_nHunt"                                  "<font color='#999999'>Hunt:</font>"
+
+
+    "DOTA_Tooltip_ability_shredder_reactive_armor_nDurable"                         "<font color='#f8b551'>Durable:</font>"
+    "DOTA_Tooltip_ability_mars_bulwark_nDurable"                                    "<font color='#f8b551'>Durable:</font>"
+   
+    "DOTA_Tooltip_ability_bristleback_bristleback_nDurable"                         "<font color='#f8b551'>Durable:</font>"
+    
+
+    "DOTA_Tooltip_ability_clinkz_strafe_nFury"                                     "<font color='#eb6877'>Fury:</font>"
+
+
+    "DOTA_Tooltip_modifier_slark_shadow_dance_lua_invisible"                        "Shadow Dance"
+    "DOTA_Tooltip_ability_slark_shadow_dance_lua"                                   "Shadow Dance"
+    "DOTA_Tooltip_ability_slark_shadow_dance_lua_Description"                       "When used, Slark hides himself in a cloud of shadows, becoming immune to detection. Attacking, casting spells, and using items will not reveal Slark. Passively, when not visible to the enemy team, Slark gains bonus movement speed and health regeneration."
+    "DOTA_Tooltip_ability_slark_shadow_dance_lua_duration"                          "Active Duration:"
+    "DOTA_Tooltip_ability_slark_shadow_dance_lua_bonus_movement_speed"              "%Move Speed Bonus:"
+    "DOTA_Tooltip_ability_slark_shadow_dance_lua_nHunt"                             "<font color='#999999'>Hunt:</font>"
+
+
+    "DOTA_Tooltip_modifier_bounty_hunter_track_lua_debuff"                           "Track"
+    "DOTA_Tooltip_modifier_bounty_hunter_track_lua_speed"                            "Speed Up"
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua"                                   "Track"
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua_Description"                       "Tracks an enemy, granting True Sight of the target. You move fast when near the tracked unit and deal critical strikes when attacking it. "
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua_target_crit_multiplier"            "%Self Critical Strike Against Target:"
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua_duration"                          "Duration:"
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua_bonus_move_speed_pct"              "%Self Move Speed Bonus:"
+    "DOTA_Tooltip_ability_bounty_hunter_track_lua_nHunt"                             "<font color='#999999'>Hunt:</font>"
+
+
+    "DOTA_Tooltip_ability_night_stalker_hunter_in_the_night_nHunt"                    "<font color='#999999'>Hunt:</font>"
+    "DOTA_Tooltip_ability_night_stalker_darkness_nHunt"                               "<font color='#999999'>Hunt:</font>"
+
+    "DOTA_Tooltip_ability_huskar_life_break_nFury"                                     "<font color='#eb6877'>Fury:</font>"
+    "DOTA_Tooltip_ability_huskar_life_break_nDurable"                                  "<font color='#f8b551'>Durable:</font>"
+    
+
+    "DOTA_Tooltip_ability_huskar_berserkers_blood_nDurable"                            "<font color='#f8b551'>Durable:</font>"
+    "DOTA_Tooltip_ability_warlock_shadow_word_nDurable"                                "<font color='#f8b551'>Durable:</font>"
+    "DOTA_Tooltip_ability_warlock_shadow_word_nDecay"                                  "<font color='#b3d465'>Decay:</font>"
+
+
+    "DOTA_Tooltip_modifier_visage_gravekeepers_cloak_lua_effect"                           "Gravekeeper's Cloak"
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua"                                   "Gravekeeper's Cloak"
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_Description"                       "Visage generates a layered barrier that protects him from damage.  If he receives damage, one layer is removed, and takes time to recover."
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_max_layers"                        "MAX LAYERS:"
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_damage_reduction"                  "%DAMAGE REDUCTION PER LAYER:"
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_recovery_time"                     "LAYER RECOVERY TIME:"
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_minimum_damage"                    "MINIMUM DAMAGE:"
+
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_nDurable"                          "<font color='#f8b551'>Durable:</font>"
+    "DOTA_Tooltip_ability_visage_gravekeepers_cloak_lua_nDecay"                            "<font color='#b3d465'>Decay:</font>"
+
+    "DOTA_Tooltip_ability_death_prophet_carrion_swarm_nDecay"                              "<font color='#b3d465'>Decay:</font>"
+    "DOTA_Tooltip_ability_death_prophet_carrion_swarm_nElement"                            "<font color='#00a0e9'>Element:</font>"
+ 
+    
+    "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua"                                      "Hurl Boulder"
+    "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_Description"                          "Throws a boulder at a unit, doing damage and stunning it."
+    "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_damage"                               "DAMAGE:"
+    "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_duration"                             "STUN DURATION:"
+    "DOTA_Tooltip_ability_mud_golem_hurl_boulder_lua_nDurable"                             "<font color='#f8b551'>Durable:</font>"     
+
+
+    "DOTA_Tooltip_ability_durable_shard_split"                                            "Shard Split"
+    "DOTA_Tooltip_ability_durable_shard_split_Description"                                "On death, Mud Golems shatter into 2 Shard Golems. Shard Golems have %shard_health_tooltip% health, deal %shard_damage_tooltip% damage per attack, and live for %shard_duration_tooltip% seconds."
+    "DOTA_Tooltip_ability_durable_shard_split_shard_damage"                               "Shard Damage:"
+    "DOTA_Tooltip_ability_durable_shard_split_shard_health"                               "Shard Health:"
+    "DOTA_Tooltip_ability_durable_shard_split_hurl_boulder_level"                         "Hurl Boulder Level"
+    "DOTA_Tooltip_ability_durable_shard_split_nDurable"                                   "<font color='#f8b551'>Durable:</font>"
+
+    "npc_dota_creature_player_shard_split"                                                       "Shard Split"
+
+    "DOTA_Tooltip_ability_fury_berserk_lua"                                               "Berserker"
+    "DOTA_Tooltip_ability_fury_berserk_lua_Description"                                   "Increases damage, attack speed,movement speed, but take more damage."
+    "DOTA_Tooltip_ability_fury_berserk_lua_income_damage_percentage"                      "%Income damage Increase"
+    "DOTA_Tooltip_ability_fury_berserk_lua_attack_damage_bonus"                           "Bonus Damage:"
+    "DOTA_Tooltip_ability_fury_berserk_lua_attack_speed_bonus"                            "Bonus Attack Speed:"
+    "DOTA_Tooltip_ability_fury_berserk_lua_movement_speed_bonus"                          "Bonus movement Speed:"
+    "DOTA_Tooltip_ability_fury_berserk_lua_nFury"                                         "<font color='#eb6877'>Fury:</font>"
+    
+
+    "DOTA_Tooltip_ability_dark_seer_vacuum_nMystery"                                              "<font color='#e9c2ff'>Mystery:</font>"
+    "DOTA_Tooltip_ability_dark_seer_vacuum_nElement"                                              "<font color='#00a0e9'>Element:</font>"
+
+    
+    "DOTA_Tooltip_ability_dark_seer_ion_shell_nMystery"                                           "<font color='#e9c2ff'>Mystery:</font>"
+    "DOTA_Tooltip_ability_dark_seer_ion_shell_nDurable"                                           "<font color='#f8b551'>Durable:</font>"
+
+    "DOTA_Tooltip_ability_dazzle_bad_juju_nMystery"                                              "<font color='#e9c2ff'>Mystery:</font>"
+    "DOTA_Tooltip_ability_dazzle_bad_juju_nDecay"                                                "<font color='#b3d465'>Decay:</font>"
+
+    "DOTA_Tooltip_ability_enigma_midnight_pulse_nMystery"                                        "<font color='#e9c2ff'>Mystery:</font>"
+    "DOTA_Tooltip_ability_enigma_midnight_pulse_nDecay"                                          "<font color='#b3d465'>Decay:</font>"
+
+
+    "DOTA_Tooltip_ability_decay_tombstone"                                                "Tombstone"
+    "DOTA_Tooltip_ability_decay_tombstone_Description"                                    "Summons a tombstone at the target point.  Zombies will frequently spawn zombies."
+    "DOTA_Tooltip_ability_decay_tombstone_zombie_duration"                                "TOMBSTONE DURATION:"
+    "DOTA_Tooltip_ability_decay_tombstone_zombie_interval"                                "ZOMBIE SPAWN RADIUS:"
+    "DOTA_Tooltip_ability_decay_tombstone_zombie_health"                                  "ZOMBIE Health:"
+    "DOTA_Tooltip_ability_decay_tombstone_zombie_damage"                                  "ZOMBIE Damage:"
+    "DOTA_Tooltip_ability_decay_tombstone_max_zombie"                                     "ZOMBIE Number:"
+    "DOTA_Tooltip_ability_decay_tombstone_nDecay"                                         "<font color='#b3d465'>Decay:</font>"
+
+    
+    "DOTA_Tooltip_ability_clinkz_death_pact_nDecay"                                       "<font color='#b3d465'>Decay:</font>"
+    "DOTA_Tooltip_ability_skeleton_king_mortal_strike_nDecay"                             "<font color='#b3d465'>Decay:</font>"
+    "DOTA_Tooltip_ability_skeleton_king_mortal_strike_nFury"                              "<font color='#eb6877'>Fury:</font>"
+
+
+
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage"                                             "Summon Skeleton Mage"
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage_Description"                                 "Summons a skeleton mage nearby, which has Netherblast ability."
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage_skeleton_mage_duration"                      "Duration:"
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage_nether_blast_level"                          "Netherblast Level:"
+
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar"                                          "Summon Familiar"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_Description"                              "Summon %familiar_number% familiars。Familiars possess the Stone Form ability, that allows them to turn into stone, stunning enemies upon landing.  While in Stone Form, Familiars are invulnerable, and rapidly regenerate their health."
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_number"                          "Familiar Number:"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_hp"                              "Familiar Health:"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_armor"                           "Familiar Armor:"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_attack_damage"                   "Familiar Damage:"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_nMystery"                        "<font color='#e9c2ff'>Mystery:</font>"
+    "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_nDecay"                          "<font color='#b3d465'>Decay:</font>"
+
+
+    
+    "DOTA_Tooltip_ability_dragon_knight_breathe_fire_nFury"                                      "<font color='#f8b551'>Fury:</font>"
+    "DOTA_Tooltip_ability_dragon_knight_breathe_fire_nElement"                                   "<font color='#00a0e9'>Element:</font>"
+
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage_nDecay"                                     "<font color='#b3d465'>Decay:</font>"
+    
+
+    "DOTA_Tooltip_ability_pugna_nether_blast_nDecay"                                             "<font color='#b3d465'>Decay:</font>"
+    "DOTA_Tooltip_ability_pugna_nether_blast_nElement"                                           "<font color='#00a0e9'>Element:</font>"
+     
+    "DOTA_Tooltip_ability_tidehunter_gush_nElement"                                              "<font color='#00a0e9'>Element:</font>"
+    "DOTA_Tooltip_ability_tidehunter_gush_nHunt"                                                 "<font color='#999999'>Hunt:</font>"
+
+    "DOTA_Tooltip_ability_spirit_breaker_bulldoze_nDurable"                                       "<font color='#f8b551'>Durable:</font>"
+    "DOTA_Tooltip_ability_spirit_breaker_bulldoze_nHunt"                                          "<font color='#999999'>Hunt:</font>"
+    
+
+    "DOTA_Tooltip_ability_spirit_breaker_greater_bash_nDurable"                                   "<font color='#f8b551'>Durable:</font>"
+    "DOTA_Tooltip_ability_spirit_breaker_greater_bash_nHunt"                                      "<font color='#999999'>Hunt:</font>"
+     
+
+    "DOTA_Tooltip_ability_templar_assassin_refraction_nDurable"                                   "<font color='#f8b551'>Durable:</font>"
+    "DOTA_Tooltip_ability_templar_assassin_refraction_nMystery"                                   "<font color='#e9c2ff'>Mystery:</font>"
+
+    "DOTA_Tooltip_ability_ancient_apparition_ice_blast_nElement"                                  "<font color='#00a0e9'>Element:</font>"
+    "DOTA_Tooltip_ability_ancient_apparition_ice_blast_nMystery"                                  "<font color='#e9c2ff'>Mystery:</font>"
+
+
+
+    "DOTA_Tooltip_ability_creature_ogre_melee_smash"                                              "Ogre Smash"
+    "DOTA_Tooltip_ability_creature_ogre_melee_smash_Description"                                  "Smash ground, stun and damage enemies."
+    "DOTA_Tooltip_ability_creature_ogre_melee_smash_impact_radius"                                "Radius:"
+    "DOTA_Tooltip_ability_creature_ogre_melee_smash_stun_duration"                                "Stun Duration:"
+    "DOTA_Tooltip_ability_creature_ogre_melee_smash_damage"                                       "Damage:"
+    
+
+    "DOTA_Tooltip_ability_creature_gaoler_melee_smash"                                            "Gaoler Smash"
+    "DOTA_Tooltip_ability_creature_gaoler_melee_smash_Description"                                "Smash ground, stun and damage enemies."
+    "DOTA_Tooltip_ability_creature_gaoler_melee_smash_impact_radius"                              "Radius:"
+    "DOTA_Tooltip_ability_creature_gaoler_melee_smash_stun_duration"                              "Stun Duration:"
+    "DOTA_Tooltip_ability_creature_gaoler_melee_smash_damage"                                     "Damage:"
+
+    
+    "DOTA_Tooltip_ability_storegga_melee_smash"                                          "Storegga Smash"
+    "DOTA_Tooltip_ability_storegga_melee_smash_Description"                              "Smash ground, stun and damage enemies."
+    "DOTA_Tooltip_ability_storegga_melee_smash_impact_radius"                            "Radius:"
+    "DOTA_Tooltip_ability_storegga_melee_smash_stun_duration"                            "Stun Duration:"
+    "DOTA_Tooltip_ability_storegga_melee_smash_damage"                                   "Damage:"
+
+    "DOTA_Tooltip_ability_storegga_ground_pound"                                         "Storegga Ground Pound"
+    "DOTA_Tooltip_ability_storegga_ground_pound_Description"                             "Channel-Pounding ground, slow and damage enemies."
+    "DOTA_Tooltip_ability_storegga_ground_pound_slow_duration"                           "Slowness Duration:"
+    "DOTA_Tooltip_ability_storegga_ground_pound_damage"                                  "Each Wave Damage:"
+    "DOTA_Tooltip_ability_storegga_ground_pound_radius"                                  "Radius:"
+    "DOTA_Tooltip_ability_storegga_ground_pound_movespeed_slow"                          "Slowness:"
+  
+    "DOTA_Tooltip_ability_frostbitten_icicle"                                            "Frostbitten Icicle"
+    "DOTA_Tooltip_ability_frostbitten_icicle_nElement"                                   "<font color='#00a0e9'>Element:</font>"
+    "DOTA_Tooltip_ability_frostbitten_icicle_nDecay"                                     "<font color='#b3d465'>Decay:</font>"
+    "DOTA_Tooltip_ability_frostbitten_icicle_Description"                                "Blasts the target enemy unit with damaging frost, dealing area damage and freeze movement."
+    "DOTA_Tooltip_ability_frostbitten_icicle_radius"                                     "Radius:"
+    "DOTA_Tooltip_ability_frostbitten_icicle_damage"                                     "Damage:"
+    "DOTA_Tooltip_ability_frostbitten_icicle_freeze_duration"                            "Frozen Duration"
+
+    "DOTA_Tooltip_ability_harpy_storm_chain_lightning_nElement"                          "<font color='#00a0e9'>Element:</font>"
+
+
+    "DOTA_Tooltip_ability_creature_ogreseal_flop"                                        "Ogreseal Flop"
+    "DOTA_Tooltip_ability_creature_ogreseal_flop_Description"                            "Flop forward, doing %damage% damage and stunning for %stun_duration% second on each bounce."
+    
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash"                                      "Jump Smash"
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash_Description"                          "Jump and smash stun and damage enemies."
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash_impact_radius"                        "Radius:"
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash_stun_duration"                        "Duration:"
+    "DOTA_Tooltip_ability_creature_ogre_jump_smash_damage"                               "Damage:"
+
+
+    "DOTA_Tooltip_ability_creature_gaoler_shock"                                         "Gaoler Shock"
+    "DOTA_Tooltip_ability_creature_gaoler_shock_Description"                             "Release several shock circle after short delay."
+    "DOTA_Tooltip_ability_creature_gaoler_shock_shock_interval"                          "Shock Interval"
+    "DOTA_Tooltip_ability_creature_gaoler_shock_shock_damage"                            "Each Wave Damage"
+
+
+    "DOTA_Tooltip_ability_durable_damage_return_lua"                                     "Damage Return"
+    "DOTA_Tooltip_ability_durable_damage_return_lua_Description"                         "For %duration% seconds, duplicates any damage taken back to the unit that dealt the damage."
+    "DOTA_Tooltip_ability_durable_damage_return_lua_duration"                            "Duration:"
+    "DOTA_Tooltip_ability_durable_damage_return_lua_nDurable"                            "<font color='#f8b551'>Durable:</font>"
+
+    "DOTA_Tooltip_ability_item_robe_lua"                                                "Robe of the Magi"
+    "DOTA_Tooltip_ability_item_robe_lua_spell_amplify"                                  "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_robe_lua_mana_regen_bonus"                               "+$mana_regen"
+    "DOTA_Tooltip_ability_item_robe_lua_bonus_damage"                                   "+$damage"
+
+    "DOTA_Tooltip_ability_item_crown_lua"                                               "Crown"
+    "DOTA_Tooltip_ability_item_crown_lua_spell_amplify"                                 "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_crown_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_crown_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_crown_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_crown_lua_bonus_mana_regen"                              "+$mana_regen"
+    "DOTA_Tooltip_ability_item_crown_lua_bonus_health_regen"                            "+$hp_regen"
+    "DOTA_Tooltip_ability_item_crown_lua_magic_resist"                                  "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_crown_lua_bonus_armor"                                   "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_crown_lua_bonus_move_speed_pct"                          "%MOVE SPEED:"
+
+
+    "DOTA_Tooltip_ability_item_circlet_lua"                                              "Circlet"
+    "DOTA_Tooltip_ability_item_circlet_lua_spell_amplify"                                "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_circlet_lua_bonus_health"                                 "+$health"
+    "DOTA_Tooltip_ability_item_circlet_lua_bonus_damage"                                 "+$damage"
+    "DOTA_Tooltip_ability_item_circlet_lua_bonus_attack_speed"                           "+$attack"
+    "DOTA_Tooltip_ability_item_circlet_lua_bonus_mana_regen"                             "+$mana_regen"
+    "DOTA_Tooltip_ability_item_circlet_lua_bonus_health_regen"                           "+$hp_regen"
+    "DOTA_Tooltip_ability_item_circlet_lua_magic_resist"                                 "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_circlet_lua_bonus_armor"                                  "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_circlet_lua_bonus_move_speed_pct"                         "%MOVE SPEED:"
+    
+
+
+    "DOTA_Tooltip_ability_item_staff_of_wizardry_lua"                                   "Staff of Wizardry"
+    "DOTA_Tooltip_ability_item_staff_of_wizardry_lua_spell_amplify"                     "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_staff_of_wizardry_lua_mana_regen_bonus"                  "+$mana_regen"
+    "DOTA_Tooltip_ability_item_staff_of_wizardry_lua_bonus_damage"                      "+$damage"
+
+
+    "DOTA_Tooltip_ability_item_mantle_lua"                                              "Mantle"
+    "DOTA_Tooltip_ability_item_mantle_lua_spell_amplify"                                "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_mantle_lua_bonus_mana_regen"                             "+$mana_regen"
+    "DOTA_Tooltip_ability_item_mantle_lua_bonus_damage"                                 "+$damage"
+
+    "DOTA_Tooltip_ability_item_vitality_booster_lua"                                     "Vitality Booster"
+    "DOTA_Tooltip_ability_item_vitality_booster_lua_bonus_health"                        "+$health"
+
+    "DOTA_Tooltip_ability_item_reaver_lua"                                               "Reaver"
+    "DOTA_Tooltip_ability_item_reaver_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_reaver_lua_bonus_health_regen"                            "+$hp_regen"
+    "DOTA_Tooltip_ability_item_reaver_lua_bonus_damage"                                  "+$damage"
+
+    "DOTA_Tooltip_ability_item_kaya_lua"                                                 "Kaya"
+    "DOTA_Tooltip_ability_item_kaya_lua_manacost_reduction"                              "%+Manacost and Manaloss Reduction"
+    "DOTA_Tooltip_ability_item_kaya_lua_spell_amplify"                                   "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_kaya_lua_mana_regen_bonus"                                "+$mana_regen"
+    "DOTA_Tooltip_ability_item_kaya_lua_bonus_damage"                                    "+$damage"
+
+
+    "DOTA_Tooltip_ability_item_vanguard_lua"                                             "Vanguard"
+    "DOTA_Tooltip_ability_item_vanguard_lua_Description"                                "<h1>Passive: Damage Block</h1> Grants a %block_chance%%% chance to block %block_damage_melee% damage from incoming attacks on melee heroes, and %block_damage_ranged% damage on ranged."
+    "DOTA_Tooltip_ability_item_vanguard_lua_bonus_health_regen"                         "+$hp_regen"
+    "DOTA_Tooltip_ability_item_vanguard_lua_bonus_health"                               "+$health"
+
+    "DOTA_Tooltip_ability_item_sheepstick_lua"                                           "Scythe of Vyse"
+    "DOTA_Tooltip_ability_item_sheepstick_Description"                                   "<h1>Active: Hex</h1>Turns a target unit into a harmless critter for %sheep_duration% seconds. The target has a base movement speed of 140 and will be silenced, muted, and disarmed.<br>Instantly destroys illusions.<br><br>Range: %tooltip_range%"
+    "DOTA_Tooltip_ability_item_sheepstick_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_sheepstick_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_sheepstick_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_sheepstick_spell_amplify"                                 "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_sheepstick_bonus_mana_regen"                              "+$mana_regen"
+
+    "DOTA_Tooltip_ability_item_heart_lua"                                               "Heart of Tarrasque"
+    "DOTA_Tooltip_ability_item_heart_lua_Description"                                   "<h1>Passive: Health Regeneration</h1>Restores %health_regen_rate%%% of max health per second. <br><br>If damage is taken, this ability is disabled."
+    "DOTA_Tooltip_ability_item_heart_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_heart_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_heart_lua_magic_resistance"                              "%+魔法抗性"
+
+
+
+    "DOTA_Tooltip_ability_item_ring_of_tarrasque_lua"                                   "Ring of Tarrasque"
+    "DOTA_Tooltip_ability_item_ring_of_tarrasque_lua_bonus_health"                      "+$health"
+    "DOTA_Tooltip_ability_item_ring_of_tarrasque_lua_bonus_health_regen"                "+$hp_regen"
+
+    "DOTA_Tooltip_ability_item_dagon_lua"                                               "Dagon"
+    "DOTA_Tooltip_ability_item_dagon_lua_Description"                                   "<h1>Active: Energy Burst</h1> Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.<br><br>Damage: %damage%"
+    "DOTA_Tooltip_ability_item_dagon_lua_spell_amplify"                                 "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_dagon_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_dagon_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_dagon_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_dagon_lua_mana_regen_bonus"                              "+$mana_regen"
+
+
+    "DOTA_Tooltip_ability_item_dagon_2_lua"                                               "Dagon (level 2)"
+    "DOTA_Tooltip_ability_item_dagon_2_lua_Description"                                   "<h1>Active: Energy Burst</h1> Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.<br><br>Damage: %damage%"
+    "DOTA_Tooltip_ability_item_dagon_2_lua_spell_amplify"                                 "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_dagon_2_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_dagon_2_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_dagon_2_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_dagon_2_lua_mana_regen_bonus"                              "+$mana_regen"
+
+    "DOTA_Tooltip_ability_item_dagon_3_lua"                                               "Dagon (level 3)"
+    "DOTA_Tooltip_ability_item_dagon_3_lua_Description"                                   "<h1>Active: Energy Burst</h1> Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.<br><br>Damage: %damage%"
+    "DOTA_Tooltip_ability_item_dagon_3_lua_spell_amplify"                                 "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_dagon_3_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_dagon_3_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_dagon_3_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_dagon_3_lua_mana_regen_bonus"                              "+$mana_regen"
+
+    "DOTA_Tooltip_ability_item_dagon_4_lua"                                               "Dagon (level 4)"
+    "DOTA_Tooltip_ability_item_dagon_4_lua_Description"                                   "<h1>Active: Energy Burst</h1> Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.<br><br>Damage: %damage%"
+    "DOTA_Tooltip_ability_item_dagon_4_lua_spell_amplify"                                 "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_dagon_4_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_dagon_4_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_dagon_4_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_dagon_4_lua_mana_regen_bonus"                              "+$mana_regen"
+
+
+    "DOTA_Tooltip_ability_item_dagon_5_lua"                                               "Dagon (level 5)"
+    "DOTA_Tooltip_ability_item_dagon_5_lua_Description"                                   "<h1>Active: Energy Burst</h1> Emits a powerful burst of magical damage upon a targeted enemy unit.<br><br>Damage: %damage%"
+    "DOTA_Tooltip_ability_item_dagon_5_lua_spell_amplify"                                 "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_dagon_5_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_dagon_5_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_dagon_5_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_dagon_5_lua_mana_regen_bonus"                              "+$mana_regen"
+
+     
+    "DOTA_Tooltip_ability_item_branches_lua"                                               "Iron Branch"
+    "DOTA_Tooltip_ability_item_branches_lua_spell_amplify"                                 "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_branches_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_branches_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_branches_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_branches_lua_bonus_mana_regen"                              "+$mana_regen"
+    "DOTA_Tooltip_ability_item_branches_lua_bonus_health_regen"                            "+$hp_regen"
+    "DOTA_Tooltip_ability_item_branches_lua_magic_resist"                                  "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_branches_lua_bonus_armor"                                   "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_branches_lua_bonus_move_speed_pct"                          "%MOVE SPEED:"
+
+
+    "DOTA_Tooltip_ability_item_mystic_staff_lua"                                                  "Mystic Staff"
+    "DOTA_Tooltip_ability_item_mystic_staff_lua_spell_amplify"                                    "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_mystic_staff_lua_mana_regen_bonus"                                 "+$mana_regen"
+
+
+    "DOTA_Tooltip_ability_item_gauntlets_lua"                                                      "Gauntlets"
+    "DOTA_Tooltip_ability_item_gauntlets_lua_bonus_health"                                         "+$health"
+    "DOTA_Tooltip_ability_item_gauntlets_lua_bonus_damage"                                         "+$damage"
+    "DOTA_Tooltip_ability_item_gauntlets_lua_bonus_health_regen"                                   "+$hp_regen"
+    "DOTA_Tooltip_ability_item_gauntlets_lua_magic_resist"                                         "%MAGIC RESISTANCE:"
+
+
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua"                                               "Tome of Knowledge"
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_Description"                                   "<h1>Use: Enlighten</h1>Grants you %xp_bonus% experience"
+
+    
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_2"                                            "Tome of Knowledge Ⅱ"
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_2_Description"                                "<h1>Use: Enlighten</h1>Grants you %xp_bonus% experience"
+
+
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_3"                                            "Tome of Knowledge Ⅲ"
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_3_Description"                                "<h1>Use: Enlighten</h1>Grants you %xp_bonus% experience"
+
+
+    "DOTA_Tooltip_ability_item_enchanted_mango_lua"                                                "Enchanted Mango"
+    "DOTA_Tooltip_ability_item_enchanted_mango_lua_Description"                                    "<h1>Use: Eat Mango</h1> Instantly restores %replenish_amount% mana."
+    "DOTA_Tooltip_ability_item_enchanted_mango_lua_hp_regen"                                       "+$hp_regen"
+
+    "DOTA_Tooltip_ability_elder_red_dragon_passive_lua"                                            "Splash Attack"
+    "DOTA_Tooltip_ability_elder_red_dragon_passive_lua_Description"                                "Splash Attack: attacks damage all enemy units in a radius"
+    "DOTA_Tooltip_ability_elder_red_dragon_passive_lua_radius"                                     "Radius:"
+
+
+    "DOTA_Tooltip_Ability_lycan_boss_claw_attack"                                                  "Claw Attack"
+    "DOTA_Tooltip_Ability_lycan_boss_claw_attack_Description"                                      "Claw attack enemies, deal stun and damage."
+    "DOTA_Tooltip_Ability_lycan_boss_claw_attack_damage"                                           "Damage:"
+    "DOTA_Tooltip_Ability_lycan_boss_claw_attack_stun_duration"                                    "Stun Duration:"
+
+ 
+    "DOTA_Tooltip_Ability_lycan_boss_rupture_ball"                                                 "Rupture Ball"
+    "DOTA_Tooltip_Ability_lycan_boss_rupture_ball_Description"                                     "Launches a rupture ball that floats in a straight path, causes enemies to rupture. "
+    "DOTA_Tooltip_Ability_lycan_boss_rupture_ball_movement_damage_pct"                             "%Moved Distance as Damage:"
+     
+
+    "DOTA_Tooltip_Ability_nian_pin_lua"                        "Chow"
+    "DOTA_Tooltip_Ability_nian_pin_lua_Description"            "Chows down on an enemy unit, disabling it and dealing damage over time. "
+    "DOTA_Tooltip_Ability_nian_pin_lua_dismember_damage"       "Damage per Second:"
+    "DOTA_Tooltip_Ability_nian_pin_lua_duration"               "Duration:"
+
+    "DOTA_Tooltip_Ability_nian_leap_lua"                        "Leap"
+    "DOTA_Tooltip_Ability_nian_leap_lua_Description"            "Leaps forward into target location, dealing damage and stun."
+    "DOTA_Tooltip_Ability_nian_leap_lua_stun_duration"          "Stun Duration:"
+    "DOTA_Tooltip_Ability_nian_leap_lua_damage"                 "Damage:"
+
+    "DOTA_Tooltip_Ability_slardar_bash_nFury"                    "<font color='#eb6877'>Fury:</font>"
+    "DOTA_Tooltip_Ability_slardar_bash_nDurable"                 "<font color='#f8b551'>Durable:</font>"
+    "DOTA_Tooltip_Ability_slardar_bash_nMystery"                 "<font color='#e9c2ff'>Mystery:</font>"
+
+    "DOTA_Tooltip_Ability_slardar_amplify_damage_nFury"          "<font color='#eb6877'>Fury:</font>"
+    "DOTA_Tooltip_Ability_slardar_amplify_damage_nMystery"       "<font color='#e9c2ff'>Mystery:</font>"
+    
+
+    "npc_dota_creature_player_siltbreaker"                              "Siltbreaker"
+
+    "DOTA_Tooltip_Ability_siltbreaker_tail_spin_ccw"             "Tail Spin"
+    "DOTA_Tooltip_Ability_siltbreaker_tail_spin_ccw_Description" "Siltbreaker Spins around, flinging his tail, damaging, slowing and knocking back every enemy hit by the tail."
+    "DOTA_Tooltip_Ability_siltbreaker_tail_spin_ccw_damage"                "Damage:"
+    "DOTA_Tooltip_Ability_siltbreaker_tail_spin_ccw_knockback_distance"    "Knockback Distance:"
+    "DOTA_Tooltip_Ability_siltbreaker_tail_spin_ccw_movespeed_slow"        "%Movespeed Slow:"
+    "DOTA_Tooltip_Ability_siltbreaker_tail_spin_ccw_attackspeed_slow"      "Attackspeed Slow:"
+
+    "DOTA_Tooltip_Ability_siltbreaker_waves"                            "Waves"
+    "DOTA_Tooltip_Ability_siltbreaker_waves_Description"                "Sends waves outwards from Siltbreaker, which deal damage and knock enemies back upon hit."
+    "DOTA_Tooltip_Ability_siltbreaker_waves_damage"                     "Damage:"
+
+    "DOTA_Tooltip_Ability_siltbreaker_mouth_beam"                       "Mouth Beam"
+    "DOTA_Tooltip_Ability_siltbreaker_mouth_beam_Description"           "Fires a highly damaging beam with his mouth, which he sways around slowly."
+    "DOTA_Tooltip_Ability_siltbreaker_mouth_beam_damage_per_tick"       "Damage Per Tick:"
+    "DOTA_Tooltip_Ability_siltbreaker_mouth_beam_tick_interval"         "Tick Interval:"
+    
+
+    "DOTA_Tooltip_Ability_sandking_caustic_finale_nDecay"               "<font color='#b3d465'>Decay:</font>"
+    "DOTA_Tooltip_Ability_sandking_epicenter_nElement"                  "<font color='#00a0e9'>Element:</font>"
+    "DOTA_Tooltip_Ability_sandking_epicenter_nDurable"                  "<font color='#f8b551'>Durable:</font>"
+
+    "npc_dota_creature_player_sand_king"                                       "Sand King"
+    "npc_dota_creature_player_sand_king_scouring_dunes"                        "Scouring Dunes"
+    "npc_dota_creature_player_sand_king_kray_legions"                          "Kray Legions"
+    "npc_dota_creature_player_rhyzik"                                          "Rhyzik"
+
+    "DOTA_Tooltip_Ability_sand_king_tail_swipe_left"                    "Tail Swipe Left"
+    "DOTA_Tooltip_Ability_sand_king_tail_swipe_left_Description"        "Rhyzik swipes his tail to left side, damaging enemies and applying caustic finale on it hits."
+    "DOTA_Tooltip_Ability_sand_king_tail_swipe_left_damage"             "Damage:"
+
+    "DOTA_Tooltip_Ability_sand_king_tail_swipe_right"                   "Tail Swipe Right"
+    "DOTA_Tooltip_Ability_sand_king_tail_swipe_right_Description"       "Rhyzik swipes his tail to right side, damaging enemies and applying caustic finale on it hits."
+    "DOTA_Tooltip_Ability_sand_king_tail_swipe_right_damage"            "Damage:"
+    
+    "DOTA_Tooltip_Ability_sand_king_boss_passive"                       "Caustic Finale"
+    "DOTA_Tooltip_Ability_sand_king_boss_passive_Description"           "Successive attacks on the same target increase the stack count and reset the entire stack's duration."
+    "DOTA_Tooltip_Ability_sand_king_boss_passive_caustic_damage"        "Damage:"
+    "DOTA_Tooltip_Ability_sand_king_boss_passive_caustic_armor_reduction_pct"        "%Armor Reduction per Stack:"
+    
+    "DOTA_Tooltip_Ability_sand_king_boss_burrowstrike"                       "Burrowstrike"
+    "DOTA_Tooltip_Ability_sand_king_boss_burrowstrike_Description"           "Rhyzik burrows into the ground and travels forward a random distance between 1000 and 2000, or until colliding with an enemy."
+    "DOTA_Tooltip_Ability_sand_king_boss_burrowstrike_damage"                "Damage:"
+ 
+    "DOTA_Tooltip_Ability_invoker_tornado_nElement"                          "<font color='#00a0e9'>Element:</font>"
+
+    "DOTA_Tooltip_Ability_undead_tusk_bone_ball"                             "Bone Ball"
+    "DOTA_Tooltip_Ability_undead_tusk_bone_ball_Description"                 "Begins rolling into a bone ball, which pulls in nearby allies, and then chases the target, damaging and stunning every enemy on its way."
+    "DOTA_Tooltip_Ability_undead_tusk_bone_ball_damage"                      "Damage:"
+    "DOTA_Tooltip_Ability_undead_tusk_bone_ball_nDecay"                      "<font color='#b3d465'>Decay:</font>"
+
+    "DOTA_Tooltip_Ability_crystal_maiden_frostbite_nElement"                 "<font color='#00a0e9'>Element:</font>"
+
+    "DOTA_Tooltip_Ability_visage_summon_familiars_stone_form_nDurable"        "<font color='#f8b551'>Durable:</font>"
+    "DOTA_Tooltip_Ability_visage_summon_familiars_stone_form_nDecay"          "<font color='#b3d465'>Decay:</font>"
+   
+
+    "DOTA_Tooltip_Ability_elder_green_dragon_passive_lua"                                 "Corrosive Breath"
+    "DOTA_Tooltip_Ability_elder_green_dragon_passive_lua_Description"                     "Attacks dealpoison damage per second."
+    "DOTA_Tooltip_Ability_elder_green_dragon_passive_lua_duration"                        "Duration:"
+    "DOTA_Tooltip_Ability_elder_green_dragon_passive_lua_damage_per_tick"                 "Damage Per Tick:"
+
+    "DOTA_Tooltip_modifier_elder_green_dragon_passive_lua_passive"                        "Corrosive Breath"
+
+
+         
+    "DOTA_Tooltip_ability_item_ogre_axe_lua"                                               "Ogre Axe"
+    "DOTA_Tooltip_ability_item_ogre_axe_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_ogre_axe_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_ogre_axe_lua_bonus_health_regen"                            "+$hp_regen"
+    "DOTA_Tooltip_ability_item_ogre_axe_lua_magic_resist"                                  "%MAGIC RESISTANCE:"
+
+              
+    "DOTA_Tooltip_ability_item_belt_of_strength_lua"                                               "Belt of Strength"
+    "DOTA_Tooltip_ability_item_belt_of_strength_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_belt_of_strength_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_belt_of_strength_lua_bonus_health_regen"                            "+$hp_regen"
+    "DOTA_Tooltip_ability_item_belt_of_strength_lua_magic_resist"                                  "%MAGIC RESISTANCE:"
+
+                   
+    "DOTA_Tooltip_ability_item_blade_of_alacrity_lua"                                               "Blade of Alacrity"
+    "DOTA_Tooltip_ability_item_blade_of_alacrity_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_blade_of_alacrity_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_blade_of_alacrity_lua_bonus_armor"                                   "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_blade_of_alacrity_lua_bonus_move_speed_pct"                          "%MOVE SPEED:"
+    
+
+
+    "DOTA_Tooltip_ability_item_boots_of_elves_lua"                                                 "Band of Elvenskin"
+    "DOTA_Tooltip_ability_item_boots_of_elves_lua_bonus_attack_speed"                              "+$attack"
+    "DOTA_Tooltip_ability_item_boots_of_elves_lua_bonus_damage"                                    "+$damage"
+    "DOTA_Tooltip_ability_item_boots_of_elves_lua_bonus_armor"                                     "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_boots_of_elves_lua_bonus_move_speed_pct"                            "%MOVE SPEED:"
+    
+     
+    "DOTA_Tooltip_ability_item_slippers_lua"                                                    "Slippers of Agility"
+    "DOTA_Tooltip_ability_item_slippers_lua_bonus_attack_speed"                                 "+$attack"
+    "DOTA_Tooltip_ability_item_slippers_lua_bonus_damage"                                       "+$damage"
+    "DOTA_Tooltip_ability_item_slippers_lua_bonus_armor"                                        "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_slippers_lua_bonus_move_speed_pct"                               "%MOVE SPEED:"
+
+    "DOTA_Tooltip_ability_item_eagle_lua"                                                       "Eaglesong"
+    "DOTA_Tooltip_ability_item_eagle_lua_bonus_attack_speed"                                    "+$attack"
+    "DOTA_Tooltip_ability_item_eagle_lua_bonus_damage"                                          "+$damage"
+    "DOTA_Tooltip_ability_item_eagle_lua_bonus_armor"                                           "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_eagle_lua_bonus_move_speed_pct"                                  "%MOVE SPEED:"
+    
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven"                                    "Magic Wand"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_Description"                        "<h1>Active: Energy Charge</h1>Instantly restores %restore_per_charge% health and mana per charge stored."
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_max_charges"                        "Max Charge:"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_charge_radius"                      "Charge Radius"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_restore_per_charge"                 "Restore Per Charge:"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_spell_amplify"                      "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_health"                       "+$health"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_damage"                       "+$damage"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_attack_speed"                 "+$attack"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_mana_regen"                   "+$mana_regen"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_health_regen"                 "+$hp_regen"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_magic_resist"                       "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_armor"                        "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_magic_wand_datadriven_bonus_move_speed_pct"               "%MOVE SPEED:"
+
+    "DOTA_Tooltip_ability_item_magic_stick_datadriven"                                    "Magic Stick"
+    "DOTA_Tooltip_ability_item_magic_stick_datadriven_Description"                        "<h1>Active: Energy Charge</h1>Instantly restores %restore_per_charge% health and mana per charge stored."
+    "DOTA_Tooltip_ability_item_magic_stick_datadriven_max_charges"                        "Max Charge:"
+    "DOTA_Tooltip_ability_item_magic_stick_datadriven_charge_radius"                      "Charge Radius"
+    "DOTA_Tooltip_ability_item_magic_stick_datadriven_restore_per_charge"                 "Restore Per Charge:"
+
+
+    "DOTA_Tooltip_ability_item_ghost_lua"                                    "Ghost Scepter"
+    "DOTA_Tooltip_ability_item_ghost_lua_Description"                        "<h1>Active: Ghost Form</h1> You enter ghost form for %duration% seconds, becoming immune to physical damage, but are unable to attack and %extra_spell_damage_percent%%% more vulnerable to magic damage."
+    "DOTA_Tooltip_ability_item_ghost_lua_spell_amplify"                      "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_health"                       "+$health"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_damage"                       "+$damage"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_attack_speed"                 "+$attack"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_mana_regen"                   "+$mana_regen"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_health_regen"                 "+$hp_regen"
+    "DOTA_Tooltip_ability_item_ghost_lua_magic_resist"                       "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_armor"                        "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_ghost_lua_bonus_move_speed_pct"               "%MOVE SPEED:"
+
+    
+    "DOTA_Tooltip_ability_item_energy_booster_lua"                           "Energy Booster"
+    "DOTA_Tooltip_ability_item_energy_booster_lua_bonus_mana_regen"          "+$mana_regen"
+
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua"                                    "Ultimate Orb"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_spell_amplify"                      "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_health"                       "+$health"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_damage"                       "+$damage"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_attack_speed"                 "+$attack"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_mana_regen"                   "+$mana_regen"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_health_regen"                 "+$hp_regen"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_magic_resist"                       "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_armor"                        "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_ultimate_orb_lua_bonus_move_speed_pct"               "%MOVE SPEED:"
+
+    "DOTA_Tooltip_ability_item_bracer_lua"                                          "Bracer"
+    "DOTA_Tooltip_ability_item_bracer_lua_spell_amplify"                            "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_health"                             "+$health"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_damage"                             "+$damage"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_attack_speed"                       "+$attack"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_mana_regen"                         "+$mana_regen"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_health_regen"                       "+$hp_regen"
+    "DOTA_Tooltip_ability_item_bracer_lua_magic_resist"                             "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_armor"                              "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_bracer_lua_bonus_move_speed_pct"                     "%MOVE SPEED:"
+
+    "DOTA_Tooltip_ability_item_wraith_band_lua"                                          "Wraith Band"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_spell_amplify"                            "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_health"                             "+$health"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_damage"                             "+$damage"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_attack_speed"                       "+$attack"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_mana_regen"                         "+$mana_regen"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_health_regen"                       "+$hp_regen"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_magic_resist"                             "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_armor"                              "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_wraith_band_lua_bonus_move_speed_pct"                     "%MOVE SPEED:"
+
+    "DOTA_Tooltip_ability_item_null_talisman_lua"                                          "Null Talisman"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_spell_amplify"                            "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_health"                             "+$health"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_damage"                             "+$damage"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_attack_speed"                       "+$attack"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_mana_regen"                         "+$mana_regen"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_health_regen"                       "+$hp_regen"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_magic_resist"                             "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_armor"                              "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_null_talisman_lua_bonus_move_speed_pct"                     "%MOVE SPEED:"
+
+    "DOTA_Tooltip_ability_item_power_treads_lua"                                           "Power Treads"
+    "DOTA_Tooltip_ability_item_power_treads_lua_Description"                               "<h1>Active: Switch Attribute</h1>Switches between Strength type, Agility type, or Intelligence type.\nMovement speed bonuses from multiple pairs of boots do not stack."
+    "DOTA_Tooltip_ability_item_power_treads_lua_bonus_movement_speed_passive"              "%MOVE SPEED:"
+    "DOTA_Tooltip_ability_item_power_treads_lua_bonus_attack_speed_passive"                "+$attack"
+
+    "DOTA_Tooltip_ability_item_rune_element"                                               "Element Rune"
+    "DOTA_Tooltip_ability_item_rune_mystery"                                               "Mystery Rune"
+    "DOTA_Tooltip_ability_item_rune_durable"                                               "Durable Rune"
+    "DOTA_Tooltip_ability_item_rune_fury"                                                  "Fury Rune"
+    "DOTA_Tooltip_ability_item_rune_decay"                                                 "Decay Rune"
+    "DOTA_Tooltip_ability_item_rune_hunt"                                                  "Hunt Rune"
+
+
+    "DOTA_Tooltip_ability_item_dragon_lance_lua"                                    "Dragon Lance"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_Description"                        "<h1>Passive: Dragon's Reach</h1> Increases attack range by %base_attack_range%."
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_bonus_health"                       "+$health"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_bonus_damage"                       "+$damage"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_attack_speed"                       "+$attack"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_health_regen"                       "+$hp_regen"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_magic_resist"                       "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_bonus_armor"                        "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_dragon_lance_lua_bonus_move_speed_pct"               "%MOVE SPEED:"
+
+    
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua"                                  "Urn of Shadows"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_Description"                      "<h1>主动：灵魂释放</h1> 对友方单位施放时提供%soul_heal_amount%点/秒生命恢复，对敌方单位则造成%soul_damage_amount%点每秒伤害。<br><br>持续%duration%秒。"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_health"                     "+$health"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_damage"                     "+$damage"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_attack_speed"               "+$attack"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_mana_regen"                 "+$mana_regen"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_health_regen"               "+$hp_regen"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_magic_resist"                     "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_armor"                       "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_urn_of_shadows_lua_bonus_move_speed_pct"              "%MOVE SPEED:"
+
+  
+
+    "DOTA_Tooltip_modifier_item_urn_of_shadows_lua_debuff"                           "Urn of Shadows"
+    "DOTA_Tooltip_modifier_item_urn_of_shadows_lua_buff"                             "Urn of Shadows"
+     
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua"                                  "Spirit Vessel"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_Description"                      "<h1>Active: Soul Release</h1> When used against enemies, it reduces health by %enemy_hp_drain%%% of current health per second, and reduces HP regeneration and healing by %hp_regen_reduction_enemy%%%. Deals %soul_damage_amount% damage per second. <br><br>When used on allies, it provides %soul_heal_amount% health regeneration per second. <br><br>Lasts %duration% seconds."
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_health"                     "+$health"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_damage"                     "+$damage"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_attack_speed"               "+$attack"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_mana_regen"                 "+$mana_regen"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_health_regen"               "+$hp_regen"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_magic_resist"                     "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_armor"                      "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_spirit_vessel_lua_bonus_move_speed_pct"             "%MOVE SPEED:"
+
+    "DOTA_Tooltip_modifier_item_spirit_vessel_lua_debuff"                           "Spirit Vessel"
+    "DOTA_Tooltip_modifier_item_spirit_vessel_lua_buff"                             "Spirit Vessel"
+    
+    "npc_dota_hero_wisp"                                                            "Island Creep"
+
+    "DOTA_Tooltip_ability_tiny_grow_nDurable"                              "<font color='#f8b551'>Durable:</font>"
+    "DOTA_Tooltip_ability_warlock_golem_flaming_fists_nElement"            "<font color='#00a0e9'>Element:</font>"
+    "DOTA_Tooltip_ability_warlock_golem_flaming_fists_nFury"               "<font color='#eb6877'>Fury:</font>"
+
+    "DOTA_Tooltip_ability_item_sange_lua"                                    "Maim"
+    "DOTA_Tooltip_ability_item_sange_lua_Description"                        "<h1>Passive:Maim</h1> Each attack has a %maim_chance%% chance to reduce enemy hero movement speed by %movement_speed_slow_pct%%, and attack speed by %attack_speed_slow%， Effect lasts %maim_duration% second."
+    "DOTA_Tooltip_ability_item_sange_lua_bonus_health"                       "+$health"
+    "DOTA_Tooltip_ability_item_sange_lua_bonus_damage"                       "+$damage"
+    "DOTA_Tooltip_ability_item_sange_lua_bonus_health_regen"                 "+$hp_regen"
+    "DOTA_Tooltip_ability_item_sange_lua_magic_resist"                       "%MAGIC RESISTANCE:"
+
+    "DOTA_Tooltip_modifier_item_sange_lua_debuff"                            "Maim"
+
+
+    "DOTA_Tooltip_ability_item_yasha_lua"                                   "Yasha"
+    "DOTA_Tooltip_ability_item_yasha_lua_bonus_damage"                      "+$damage"
+    "DOTA_Tooltip_ability_item_yasha_lua_bonus_attack_speed"                "+$attack"
+    "DOTA_Tooltip_ability_item_yasha_lua_bonus_armor"                       "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_yasha_lua_bonus_move_speed_pct"              "%MOVE SPEED:"
+    "DOTA_Tooltip_ability_item_yasha_lua_bonus_armor"                       "BONUS ARMOR:"
+
+
+    "DOTA_Tooltip_ability_item_sange_and_yasha_lua"                                   "Sange and Yasha"
+    "DOTA_Tooltip_ability_item_sange_and_yasha_lua_Description"                       "<h1>Passive:Maim</h1> Each attack has a %maim_chance%% chance to reduce enemy hero movement speed by %movement_speed_slow_pct%%, and attack speed by %attack_speed_slow%， Effect lasts %maim_duration% second."
+    "DOTA_Tooltip_ability_item_sange_and_yasha_lua_bonus_health"                      "+$health"
+    "DOTA_Tooltip_ability_item_sange_and_yasha_lua_bonus_damage"                      "+$damage"
+    "DOTA_Tooltip_ability_item_sange_and_yasha_lua_bonus_health_regen"                "+$hp_regen"
+    "DOTA_Tooltip_ability_item_sange_and_yasha_lua_magic_resist"                      "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_ability_item_sange_and_yasha_lua_bonus_attack_speed"                "+$attack"
+    "DOTA_Tooltip_ability_item_sange_and_yasha_lua_bonus_armor"                       "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_sange_and_yasha_lua_bonus_move_speed_pct"              "%MOVE SPEED:"
+    "DOTA_Tooltip_ability_item_sange_and_yasha_lua_bonus_armor"                       "BONUS ARMOR:"
+
+
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua"                                   "Kaya and Sange"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_Description"                       "<h1>Passive:Maim</h1> Each attack has a %maim_chance%% chance to reduce enemy hero movement speed by %movement_speed_slow_pct%%, and attack speed by %attack_speed_slow%， Effect lasts %maim_duration% second."
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_bonus_health"                      "+$health"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_bonus_damage"                      "+$damage"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_bonus_health_regen"                "+$hp_regen"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_manacost_reduction"                "%+Manacost and Manaloss Reduction"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_spell_amplify"                     "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_mana_regen_bonus"                  "+$mana_regen"
+    "DOTA_Tooltip_ability_item_kaya_and_sange_lua_bonus_damage"                      "+$damage"
+
+ 
+    
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua"                                   "Yasha and Kaya"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_manacost_reduction"                "%+Manacost and Manaloss Reduction"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_spell_amplify"                     "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_mana_regen_bonus"                  "+$mana_regen"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_bonus_damage"                      "+$damage"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_bonus_attack_speed"                "+$attack"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_bonus_armor"                       "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_bonus_move_speed_pct"              "%MOVE SPEED:"
+    "DOTA_Tooltip_ability_item_yasha_and_kaya_lua_bonus_armor"                       "BONUS ARMOR:"
+
+
+    "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike"                     "Burrowstrike"
+    "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_Description"         "Burrows into the ground and tunnels forward, damaging and stunning enemy units around target location."
+    "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_damage"              "Damage:"
+    "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_speed"               "Speed："
+    "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_stun_duration"       "Stun Duration："
+    "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_knockback_distance"  "Knockback Distance："
+
+
+    "DOTA_Tooltip_Ability_phantom_assassin_blur_nDurable"                     "<font color='#f8b551'>Durable:</font>"
+    "DOTA_Tooltip_Ability_phantom_assassin_blur_nHunt"                        "<font color='#999999'>Hunt:</font>"
+
+
+    "DOTA_Tooltip_Ability_riki_smoke_screen_nMystery"                          "<font color='#e9c2ff'>Mystery:</font>"
+    "DOTA_Tooltip_Ability_riki_smoke_screen_nHunt"                             "<font color='#999999'>Hunt:</font>"
+
+    "DOTA_Tooltip_Ability_ember_spirit_searing_chains_nElement"                "<font color='#00a0e9'>Element:</font>"
+    "DOTA_Tooltip_Ability_ember_spirit_searing_chains_nHunt"                   "<font color='#999999'>Hunt:</font>"
+
+    "DOTA_Tooltip_Ability_ember_spirit_sleight_of_fist_nElement"               "<font color='#00a0e9'>Element:</font>"
+    "DOTA_Tooltip_Ability_ember_spirit_sleight_of_fist_nFury"                  "<font color='#eb6877'>Fury:</font>"
+    
+
+    "DOTA_Tooltip_Ability_clinkz_searing_arrows_nElement"                   "<font color='#00a0e9'>Element:</font>"
+    "DOTA_Tooltip_Ability_clinkz_searing_arrows_nFury"                      "<font color='#eb6877'>Fury:</font>"
+
+    "DOTA_Tooltip_Ability_phantom_assassin_coup_de_grace_nFury"             "<font color='#eb6877'>Fury:</font>"
+  
+    "DOTA_Tooltip_Ability_antimage_blink_nMystery"                          "<font color='#e9c2ff'>Mystery:</font>"
+
+    "DOTA_Tooltip_Ability_centaur_double_edge_nFury"                        "<font color='#eb6877'>Fury:</font>"
+    "DOTA_Tooltip_Ability_centaur_double_edge_nDurable"                     "<font color='#f8b551'>Durable:</font>"
+
+    "DOTA_Tooltip_Ability_spectre_desolate_hHunt"                           "<font color='#999999'>Hunt:</font>"
+    "DOTA_Tooltip_Ability_spectre_desolate_nFury"                           "<font color='#eb6877'>Fury:</font>"
+    "DOTA_Tooltip_Ability_spectre_desolate_nMystery"                        "<font color='#e9c2ff'>Mystery:</font>"
+
+    "DOTA_Tooltip_Ability_templar_assassin_psionic_trap_nMystery"           "<font color='#e9c2ff'>Mystery:</font>"
+
+    "DOTA_Tooltip_Ability_alchemist_chemical_rage_nFury"                    "<font color='#eb6877'>Fury:</font>"
+    "DOTA_Tooltip_Ability_alchemist_chemical_rage_nMystery"                 "<font color='#e9c2ff'>Mystery:</font>"
+
+    "DOTA_Tooltip_Ability_skeleton_king_hellfire_blast_nElement"            "<font color='#00a0e9'>Element:</font>"
+    "DOTA_Tooltip_Ability_skeleton_king_hellfire_blast_nDecay"              "<font color='#b3d465'>Decay:</font>"
+
+    "DOTA_Tooltip_ability_item_greater_clarity"                             "Greater Clarity"
+    "DOTA_Tooltip_ability_item_greater_clarity_Description"                 "<h1>Use: Replenish</h1> Grants %mana_per_tick% mana regeneration to the target for %buff_duration% seconds.<br>"
+    "DOTA_Tooltip_modifier_item_greater_clarity"                            "Greater Clarity"
+
+    "DOTA_Tooltip_ability_item_greater_salve"                               "Greater Salve"
+    "DOTA_Tooltip_ability_item_greater_salve_Description"                   "<h1>Use: Salve</h1> Grants %hp_per_tick% health regeneration to the target for %buff_duration% seconds."
+    "DOTA_Tooltip_modifier_item_greater_salve"                              "Greater Salve"
+
+    "DOTA_Tooltip_ability_item_creed_of_omniscience"                        "Creed of Omniscience"
+    "DOTA_Tooltip_ability_item_creed_of_omniscience_Description"            "Passive：Passive: Grants %bonus_xp_tooltip%% bonus experience."
+     
+    "DOTA_Tooltip_ability_item_longclaws_amulet"                            "Longclaw's Amulet"
+    "DOTA_Tooltip_ability_item_longclaws_amulet_Lore"                       "Magic is somewhat uncommon in the Weald, its secrets closely guarded."
+    "DOTA_Tooltip_ability_item_longclaws_amulet_spell_lifesteal_pct"        "%SPELL LIFESTEAL:"
+    "DOTA_Tooltip_ability_item_longclaws_amulet_cooldown_reduction_pct"     "%COOLDOWN REDUCTION:"
+    "DOTA_Tooltip_ability_item_longclaws_amulet_mana_cost_reduction_pct"    "%MANA COST REDUCTION:"
+
+    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf"                         "Pelt of the Old Wolf"
+    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_Lore"                    "The wild can be a treachorous place; don't let your guard down."
+    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_bonus_armor"             "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_bonus_move_speed"        "BONUS MOVE SPEED:"
+    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_bonus_evasion"           "%BONUS EVASION:"
+
+    "DOTA_Tooltip_ability_item_bogduggs_baldric"                             "Bogdugg's Baldric"
+    "DOTA_Tooltip_ability_item_bogduggs_baldric_Lore"                        "Running's not as fun as hitting.  Not one bit."
+    "DOTA_Tooltip_ability_item_bogduggs_baldric_bonus_armor"                 "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_bogduggs_baldric_disable_resist_pct"          "%STUN DURATION REDUCTION:"
+    "DOTA_Tooltip_ability_item_bogduggs_baldric_move_speed_penalty"          "MOVE SPEED REDUCTION:"
+
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur"                         "Bogdugg's Lucky Femur"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_Description"             "Passive: Skillshot - After an ability is cast, it has a %refresh_pct%%% chance to be immediately refreshed.\n"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_Lore"                    "And another!"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_mana_regen_penalty"      "MANA REGEN REDUCTION:"
+
+
+    "DOTA_Tooltip_ability_item_paw_of_lucius"                                 "Paw of Lucius"
+    "DOTA_Tooltip_ability_item_paw_of_lucius_Description"                     "Passive: Attacks have a %rupture_chance%%% chance to inflict Rupture.\n"
+    "DOTA_Tooltip_ability_item_paw_of_lucius_Lore"                            "This claw cuts deep."
+    "DOTA_Tooltip_ability_item_paw_of_lucius_bonus_attack_speed"              "BONUS ATTACK SPEED:"
+
+    "DOTA_Tooltip_ability_item_sign_of_the_arachnid"                          "Sign of the Arachnid"
+    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_Description"              "Passive: Arachnid Aura - Allies gain bonus movement and attack speed."
+    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_Lore"                     "An ominous mark bestowed upon followers of the Silken Path."
+    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_bonus_move_speed_pct"     "%AURA BONUS MOVE SPEED:"
+    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_attack_speed"             "AURA BONUS ATTACK SPEED:"
+    "DOTA_Tooltip_modifier_item_sign_of_the_arachnid_effect"                  "Sign of the Arachnid Aura"
+    "DOTA_Tooltip_modifier_item_sign_of_the_arachnid_effect_Description"      "Gaining bonus movement and attack speed."
+ 
+    "DOTA_Tooltip_ability_item_preserved_skull"                         "Preserved Skull"
+    "DOTA_Tooltip_ability_item_preserved_skull_Description"             "Passive: Conjuration Aura - Allies gain bonus mana regen and cooldown reduction."
+    "DOTA_Tooltip_ability_item_preserved_skull_Lore"                    "Where be your gibes now?"
+    "DOTA_Tooltip_ability_item_preserved_skull_cooldown_reduction_pct"  "%AURA COOLDOWN REDUCTION:"
+    "DOTA_Tooltip_ability_item_preserved_skull_aura_mana_regen"         "AURA MANA REGEN:"
+    "DOTA_Tooltip_modifier_item_preserved_skull_effect"                 "Conjuration Aura"
+    "DOTA_Tooltip_modifier_item_preserved_skull_effect_Description"     "Gaining bonus mana regen and cooldown reduction."
+
+    "DOTA_Tooltip_ability_item_guardian_shell"                           "Guardian Shell"
+    "DOTA_Tooltip_ability_item_guardian_shell_Description"               "Passive: Unwavering - Movement Speed cannot be slowed and wearer cannot be rooted."
+    "DOTA_Tooltip_ability_item_guardian_shell_Lore"                      "Push ever onward, unburdened by mortal cares."
+    "DOTA_Tooltip_ability_item_guardian_shell_bonus_armor"               "BONUS ARMOR:"
+    "DOTA_Tooltip_ability_item_guardian_shell_magic_resistance"          "%BONUS MAGIC RESISTANCE:"
+
+    "DOTA_Tooltip_ability_item_watchers_gaze"                            "Watcher's Gaze"
+    "DOTA_Tooltip_ability_item_watchers_gaze_Description"                "Active: Stone Gaze - Enemies within your frontal cone are turned to stone and take additional physical damage."
+    "DOTA_Tooltip_ability_item_watchers_gaze_Lore"                       "Look upon thine enemies and see them petrify before you."
+
+    "DOTA_Tooltip_Ability_item_lifestone"                                "Lifestone"
+    "DOTA_Tooltip_Ability_item_lifestone_Description"                    "Active: Health Pact</h1>Converts %pact_hp_cost% health into %pact_mana_gained% mana every 0.5 seconds."
+    "DOTA_Tooltip_ability_item_lifestone_Lore"                           "The stone thirsts for blood."
+    "DOTA_Tooltip_Ability_item_lifestone_hp_regen"                       "HP REGEN:"
+    "DOTA_Tooltip_modifier_item_lifestone_pact"                          "Health Pact"
+    "DOTA_Tooltip_modifier_item_lifestone_pact_Description"              "This unit is converting health into mana."
+
+    "DOTA_Tooltip_Ability_item_ogre_seal_totem"                          "Ogre Seal Totem"
+    "DOTA_Tooltip_Ability_item_ogre_seal_totem_Description"              "Active: Ogre Seal Flop</h1>Flop like an ogre seal, doing %damage% damage and stunning for %stun_duration% second on each bounce."
+    "DOTA_Tooltip_ability_item_ogre_seal_totem_Lore"                     "A totem carved from an ogre seal's tooth."
+    "DOTA_Tooltip_Ability_item_ogre_seal_totem_bonus_hp"                 "BONUS HP:"
+
+    "DOTA_Tooltip_Ability_sandking_burrowstrike_nDurable"                 "<font color='#f8b551'>Durable:</font>"
+    "DOTA_Tooltip_Ability_sandking_burrowstrike_nHunt"                    "<font color='#999999'>Hunt:</font>"
+
+
+    "GameInstruction"                                                    "Game Instruction"
+    "note_1"                                                             "Note1: Player begin with a Level-1 small creature, try to kill and eat other creep to gain Exp and evolve."
+    "note_2"                                                             "Note2: Survive, eat, and evolve through a dynamic evolution tree, what you eat determines what you become."
+    "note_3"                                                             "Note3: When creathre pick up runes, it will gain evolve perk instantly."
+    "note_4"                                                             "Note4: Couriers carry higt-level items, and diliver it to random position."
+    "note_5"                                                             "Note5: High Power Field will imprison creatures inside, but grants them great bouns of Exp."
+    "note_6"                                                             "Note4: When any player reach level 11, game will enters Death Mode. Creatures can't respawn. And the last surviver win the game."
+    
+
+    "courier_spawn"                                                      "Courier Carry Item:"
+    "GameInstructionSmall"                                               "(Reopen by Top-Left Menu)"
+
+    "DOTA_Tooltip_modifier_bonus_ring_check_move"                        "High Power Field"
+    "DOTA_Tooltip_modifier_bonus_ring_check_move_Description"            "Get base experience every second, and grants bonus 50%% experience when kill."
+
+
+    "ring_spawn"                                                          "High Power Field"
+    "DOTA_Tooltip_Ability_item_ward_observer_2"                           "Observer Ward x2"
+    "DOTA_Tooltip_Ability_item_ward_observer_2_Description"               "<h1>Use: Plant</h1>Plants an Observer Ward, an invisible watcher that gives ground vision in a %vision_range% radius to your team. Lasts %duration_minutes_tooltip% minutes.<br><br>Hold Control to give one Observer Ward to an allied hero.<br><br>Range: %tooltip_range%"
+
+    "DOTA_Tooltip_Ability_item_ward_observer_3"                           "Observer Ward x3"
+    "DOTA_Tooltip_Ability_item_ward_observer_3_Description"               "<h1>Use: Plant</h1>Plants an Observer Ward, an invisible watcher that gives ground vision in a %vision_range% radius to your team. Lasts %duration_minutes_tooltip% minutes.<br><br>Hold Control to give one Observer Ward to an allied hero.<br><br>Range: %tooltip_range%"
+
+    "DOTA_Tooltip_Ability_item_ward_observer_4"                           "Observer Ward x4"
+    "DOTA_Tooltip_Ability_item_ward_observer_4_Description"               "<h1>Use: Plant</h1>Plants an Observer Ward, an invisible watcher that gives ground vision in a %vision_range% radius to your team. Lasts %duration_minutes_tooltip% minutes.<br><br>Hold Control to give one Observer Ward to an allied hero.<br><br>Range: %tooltip_range%"
+
+    
+    "DOTA_Tooltip_modifier_item_bottle_lua_effect"                   "Bottle Regenerating"
+    "DOTA_Tooltip_modifier_item_bottle_lua_effect_Description"       "Regenerating %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% HP and %dMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% mana per second."
+    "DOTA_Tooltip_Ability_item_bottle_lua"                           "Bottle"
+    "DOTA_Tooltip_Ability_item_bottle_lua_Description"               "<h1>Active: Regenerate</h1>Consumes a charge and regenerating %bonus_health_regen% HP and %bonus_mana_regen% mana per second, over %restore_time% seconds.<br><br>The Bottle automatically refills at the fountain."
+    
+    "DOTA_Tooltip_Ability_doom_bringer_infernal_blade_nDecay"        "<font color='#b3d465'>nDecay：</font>"
+    "DOTA_Tooltip_Ability_doom_bringer_infernal_blade_nFury"         "<font color='#eb6877'>nFury：</font>"
+
+    "DOTA_Tooltip_Ability_giant_wolf_critical_strike_nFury"          "<font color='#eb6877'>nFury：</font>"
+
+    "not_allow_teammate_item"                                        "Can't Pick Up Items Touched By Allies"
+
+    "ImmortalTitle"                                                  "Immortal (Only Effect on Particular Model)"
+    "SkinTitle"                                                      "Skin (Only Effect on Particular Model)"
+
+    "DOTA_Tooltip_modifier_indicator_durable"                             "Durable Perk"
+    "DOTA_Tooltip_modifier_indicator_durable_Description"                 "Player can absord 50%% of perk when kill this creatures, but lose equivalent other perks."
+   
+    "DOTA_Tooltip_modifier_indicator_decay"                               "Decay Perk"
+    "DOTA_Tooltip_modifier_indicator_decay_Description"                   "Player can absord 50%% of perk when kill this creatures, but lose equivalent other perks."
+
+    "DOTA_Tooltip_modifier_indicator_element"                             "Element Perk"
+    "DOTA_Tooltip_modifier_indicator_element_Description"                 "Player can absord 50%% of perk when kill this creatures, but lose equivalent other perks."
+
+    "DOTA_Tooltip_modifier_indicator_fury"                                "Fury Perk"
+    "DOTA_Tooltip_modifier_indicator_fury_Description"                    "Player can absord 50%% of perk when kill this creatures, but lose equivalent other perks."
+
+    "DOTA_Tooltip_modifier_indicator_hunt"                                "Hunt Perk"
+    "DOTA_Tooltip_modifier_indicator_hunt_Description"                    "Player can absord 50%% of perk when kill this creatures, but lose equivalent other perks."
+    
+    "DOTA_Tooltip_modifier_indicator_mystery"                             "Mystery Perk"
+    "DOTA_Tooltip_modifier_indicator_mystery_Description"                 "Player can absord 50%% of perk when kill this creatures, but lose equivalent other perks."
+
+
+    "DOTA_Tooltip_Ability_decay_necrolyte_reapers_scythe"                 "Reapers Scythe"
+    "DOTA_Tooltip_Ability_decay_necrolyte_reapers_scythe_Description"     "Stuns the target enemy, then deals %damage% damage."
+     
+    
+    "coop_same_team_not_record"                                            "Cooperate mode in same team will not record rank."
+    "cheat_not_record"                                                     "Cheat mode will not record rank."
+
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua"                            "Shadow Step"
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_Description"                "Perform a single target unit Haunt."
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_duration"                   "DURATION:"
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_illusion_damage_outgoing"   "%HAUNT DAMAGE:"
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_illusion_damage_incoming"   "%HAUNT DAMAGE TAKEN:"
+    "DOTA_Tooltip_Ability_spectre_haunt_single_lua_nMystery"                   "<font color='#e9c2ff'>Mystery:</font>"
+
+    "DOTA_Tooltip_Ability_spectre_reality_lua"                                 "Reality"
+    "DOTA_Tooltip_Ability_spectre_reality_lua_Description"                     "Spectre exchanges places with a chosen Haunt."
+
+    "DOTA_Tooltip_Ability_spectre_haunt_lua"                                   "Haunt"
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_Description"                       "Creates a spectral nemesis to attack each enemy hero after a short delay. At any moment during the duration, Spectre can use Reality to exchange places of a given haunt.\n\nHaunt illusions are uncontrollable, take extra damage, and deal less damage than Spectre herself."
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_duration"                          "DURATION:"
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_illusion_damage_outgoing"          "%HAUNT DAMAGE:"
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_illusion_damage_incoming"          "%HAUNT DAMAGE TAKEN:"
+    "DOTA_Tooltip_Ability_spectre_haunt_lua_nMystery"                          "<font color='#e9c2ff'>Mystery:</font>"
+
+
+
+    //EconUnitBegins
 	}
 }

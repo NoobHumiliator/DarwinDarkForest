@@ -174,7 +174,7 @@ function NeutralSpawner:SpawnOneCreature()
                  for sUnitName,vData in pairs(GameRules.vUnitsKV) do
                      if vData and type(vData) == "table" then
                          --非召唤生物 非饰品生物
-                         if (vData.IsSummoned==nil or vData.IsSummoned==0) and (vData.EconUnitFlag==nil or vData.EconUnitFlag==0)  then
+                         if (vData.IsSummoned==nil or vData.IsSummoned==0) and (vData.EconUnitFlag==nil or vData.EconUnitFlag==0) and (vData.ConsideredHero==nil or vData.ConsideredHero==0)  then
                              if vData.nCreatureLevel==i then
                                 table.insert(vTemp, sUnitName)
                              end

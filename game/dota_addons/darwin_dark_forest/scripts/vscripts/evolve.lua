@@ -81,6 +81,9 @@ function Evolve (nPlayerId,hHero)
          sOriginalUnitName=sUnitToEnvolve
          sUnitToEnvolve=Econ.vPlayerData[nPlayerId].vImmortalReplaceMap[sUnitToEnvolve]
          CustomNetTables:SetTableValue("econ_unit_replace",sUnitToEnvolve,{sOriginalUnitName=sOriginalUnitName})
+    else
+        --没有不朽物品，使用玩家专属生物
+        sUnitToEnvolve = string.gsub(sUnitToEnvolve, "npc_dota_creature_", "npc_dota_creature_player_") 
     end
 
     --判断游戏阶段
@@ -202,7 +205,7 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
   ItemController:RestoreItems(hHero)
 
   --放在NetTable送达前台
-  CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerId), {creepIndex=hUnit:GetEntityIndex()} )
+  CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerId), {creepIndex=hUnit:GetEntityIndex(), creepName=hUnit:GetUnitName()  } )
   -- Fix for centering camera
   Timers:CreateTimer({
     callback = function()
@@ -413,7 +416,7 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
 
             if vData and type(vData) == "table" then       
                  -- 跳过召唤生物 跳过饰品生物
-                if (vData.IsSummoned==nil or vData.IsSummoned==0) and (vData.EconUnitFlag==nil or vData.EconUnitFlag==0)  then
+                if (vData.IsSummoned==nil or vData.IsSummoned==0) and (vData.EconUnitFlag==nil or vData.EconUnitFlag==0) and (vData.ConsideredHero==nil or vData.ConsideredHero==0)  then
                  -- 等级相当，perk相符    
                     if vData.nCreatureLevel ==nLevel then
                        if  nLevel==1 then --第一级从直接随机选一个

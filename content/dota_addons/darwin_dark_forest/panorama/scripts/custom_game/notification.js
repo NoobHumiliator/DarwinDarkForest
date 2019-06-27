@@ -57,6 +57,9 @@ function OnRunePickUp(key)
 	{
 		unitName=original.sOriginalUnitName;
 	}
+    
+    //Js里面再替换回来
+    unitName=unitName.replace("npc_dota_creature_player_", "npc_dota_creature_")
 
 	$( "#PickupMessage_Unit" ).SetImage( "file://{images}/custom_game/creature_portrait/"+unitName+".png" );
    	$( "#PickupMessage_Rune" ).SetImage( "file://{images}/custom_game/rune/"+key.rune_type+".png" );

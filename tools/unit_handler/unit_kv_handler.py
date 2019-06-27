@@ -165,6 +165,8 @@ localizeMapEn={
 
 
 econUnitBeginsFlag=False
+playerUsableUnitBeginsFlag=False
+
 #这是原版文件部分
 reLines=[]
 #饰品生物部分
@@ -181,12 +183,15 @@ for line in lines:
   
   if econUnitBeginsFlag==False:
      reLines.append(line)
-     if "npc_dota_creature_" in line:
+     if playerUsableUnitBeginsFlag:
        playerUnitLines.append(line.replace("npc_dota_creature_", "npc_dota_creature_player_"))
-     else:
-       playerUnitLines
+       if "HasInventory" in line:
+        playerUnitLines.append('\t\t"ConsideredHero"             "1"')
+
   if "EconUnitBegins" in line:
      econUnitBeginsFlag=True
+  if "//Level-1" in line:
+     playerUsableUnitBeginsFlag=True
 
 f.close()
 
@@ -195,7 +200,8 @@ econUnitBeginsFlag=False
 lReLines=[]
 #国际化文件后面部分
 lEconLines=[]
-
+#国际化文件玩家生物部分
+lPlyaerLines=[]
 
 lf = open("../../game/dota_addons/darwin_dark_forest/resource/addon_schinese.txt","r",encoding='UTF-8') 
 lLines = lf.readlines()
@@ -204,6 +210,9 @@ for line in lLines:
   
   if econUnitBeginsFlag==False:
      lReLines.append(line)
+     if "npc_dota_creature_" in line:
+      lPlyaerLines.append(line.replace("npc_dota_creature_", "npc_dota_creature_player_"))
+
   if "EconUnitBegins" in line:
      econUnitBeginsFlag=True
 
@@ -213,7 +222,7 @@ lf.close()
 econUnitBeginsFlag=False
 lReLinesEn=[]
 lEconLinesEn=[]
-
+lPlyaerLinesEn=[]
 
 lf = open("../../game/dota_addons/darwin_dark_forest/resource/addon_english.txt","r",encoding='UTF-8') 
 lLines = lf.readlines()
@@ -222,6 +231,8 @@ for line in lLines:
   
   if econUnitBeginsFlag==False:
      lReLinesEn.append(line)
+     lPlyaerLinesEn.append(line.replace("npc_dota_creature_", "npc_dota_creature_player_"))
+
   if "EconUnitBegins" in line:
      econUnitBeginsFlag=True
 
@@ -254,6 +265,7 @@ def createNewUnit(originalUnitName,suffix,map):
     if holdingUnit:
        if 'HasInventory' in line:
           resultLines.append('\t\t"EconUnitFlag"              "1"\n')
+          resultLines.append('\t\t"ConsideredHero"              "1"\n')
        if '{' in line:
           braceNumber=braceNumber+1
        if  '}' in line:
@@ -297,6 +309,9 @@ with open('../../game/dota_addons/darwin_dark_forest/scripts/npc/npc_units_custo
     f.write(line)
   for line in econLines:
     f.write(line)
+  f.write('\t//PlayerUnitBegins\n') 
+  for line in playerUnitLines:
+    f.write(line)
   f.write('}')
 f.close()
 
@@ -304,6 +319,9 @@ with open('../../game/dota_addons/darwin_dark_forest/resource/addon_schinese.txt
   for line in lReLines:
     lf.write(line)
   for line in lEconLines:
+    lf.write(line)
+  lf.write('\t//PlayerUnitBegins\n') 
+  for line in lPlyaerLines:
     lf.write(line)
   lf.write('\t}\n')
   lf.write('}')
@@ -314,6 +332,9 @@ with open('../../game/dota_addons/darwin_dark_forest/resource/addon_english.txt'
   for line in lReLinesEn:
     lf.write(line)
   for line in lEconLinesEn:
+    lf.write(line)
+  lf.write('\t//PlayerUnitBegins\n') 
+  for line in lPlyaerLinesEn:
     lf.write(line)
   lf.write('\t}\n')
   lf.write('}')
