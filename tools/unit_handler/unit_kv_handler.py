@@ -231,7 +231,8 @@ for line in lLines:
   
   if econUnitBeginsFlag==False:
      lReLinesEn.append(line)
-     lPlyaerLinesEn.append(line.replace("npc_dota_creature_", "npc_dota_creature_player_"))
+     if "npc_dota_creature_" in line:
+      lPlyaerLinesEn.append(line.replace("npc_dota_creature_", "npc_dota_creature_player_"))
 
   if "EconUnitBegins" in line:
      econUnitBeginsFlag=True

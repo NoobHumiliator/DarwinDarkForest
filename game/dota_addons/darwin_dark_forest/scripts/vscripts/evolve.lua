@@ -51,6 +51,7 @@ vPairedAbility={bristleback_bristleback="bristleback_quill_spray",
 ancient_apparition_ice_blast="ancient_apparition_ice_blast_release",
 templar_assassin_psionic_trap="templar_assassin_trap",
 spectre_haunt_single_lua="spectre_reality_lua",
+spectre_haunt_lua="spectre_reality_lua",
 }
 
 --[[

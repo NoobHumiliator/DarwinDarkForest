@@ -1531,14 +1531,18 @@
 
     "ring_spawn"                                                     "高能力场出现"
 
-    "DOTA_Tooltip_Ability_item_ward_observer_2"                      "侦查守卫x2"
-    "DOTA_Tooltip_Ability_item_ward_observer_2_Description"          "<h1>使用：放置</h1>放置隐形的侦查守卫来获得附近区域%vision_range%范围内的视野。持续%duration_minutes_tooltip%分钟。<br><br>按住Ctrl键可以对友方英雄使用，将1个守卫转移到他的物品栏中。<br><br>施法距离：%tooltip_range%"
+    "DOTA_Tooltip_Ability_item_ward_observer_lua"                    "侦查守卫"
+    "DOTA_Tooltip_Ability_item_ward_observer_lua_Description"        "<h1>使用：放置</h1>放置隐形的侦查守卫来获得附近区域%vision_range%范围内的视野。持续%duration_minutes_tooltip%分钟。<br>"
 
-    "DOTA_Tooltip_Ability_item_ward_observer_3"                      "侦查守卫x3"
-    "DOTA_Tooltip_Ability_item_ward_observer_3_Description"          "<h1>使用：放置</h1>放置隐形的侦查守卫来获得附近区域%vision_range%范围内的视野。持续%duration_minutes_tooltip%分钟。<br><br>按住Ctrl键可以对友方英雄使用，将1个守卫转移到他的物品栏中。<br><br>施法距离：%tooltip_range%"
+    "DOTA_Tooltip_Ability_item_ward_observer_2_lua"                  "侦查守卫x2"
+    "DOTA_Tooltip_Ability_item_ward_observer_2_lua_Description"      "<h1>使用：放置</h1>放置隐形的侦查守卫来获得附近区域%vision_range%范围内的视野。持续%duration_minutes_tooltip%分钟。<br>"
 
-    "DOTA_Tooltip_Ability_item_ward_observer_4"                      "侦查守卫x4"
-    "DOTA_Tooltip_Ability_item_ward_observer_4_Description"          "<h1>使用：放置</h1>放置隐形的侦查守卫来获得附近区域%vision_range%范围内的视野。持续%duration_minutes_tooltip%分钟。<br><br>按住Ctrl键可以对友方英雄使用，将1个守卫转移到他的物品栏中。<br><br>施法距离：%tooltip_range%"
+    "DOTA_Tooltip_Ability_item_ward_observer_3_lua"                  "侦查守卫x3"
+    "DOTA_Tooltip_Ability_item_ward_observer_3_lua_Description"      "<h1>使用：放置</h1>放置隐形的侦查守卫来获得附近区域%vision_range%范围内的视野。持续%duration_minutes_tooltip%分钟。<br>"
+
+    "DOTA_Tooltip_Ability_item_ward_observer_4_lua"                  "侦查守卫x4"
+    "DOTA_Tooltip_Ability_item_ward_observer_4_lua_Description"      "<h1>使用：放置</h1>放置隐形的侦查守卫来获得附近区域%vision_range%范围内的视野。持续%duration_minutes_tooltip%分钟。<br>"
+
 
     "DOTA_Tooltip_modifier_item_bottle_lua_effect"                   "魔瓶（恢复）"
     "DOTA_Tooltip_modifier_item_bottle_lua_effect_Description"       "提升%fMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%点/秒生命恢复和%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复。"

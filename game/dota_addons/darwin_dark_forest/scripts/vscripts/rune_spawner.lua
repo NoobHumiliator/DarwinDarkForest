@@ -57,6 +57,11 @@ end
 function RuneSpawner:Begin()
          
     --根据人数 调整刷符间隔
+    
+    if GameRules.nTotalHeroNumber==nil then
+          CountAverageLevel()
+    end
+
     Timers:CreateTimer(600/GameRules.nTotalHeroNumber, function()
         RuneSpawner:SpawnOneRune()
         -- 1人10分钟  10人60秒 12人50秒
