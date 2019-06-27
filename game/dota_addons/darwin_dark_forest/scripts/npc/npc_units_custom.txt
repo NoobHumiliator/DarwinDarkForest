@@ -3692,6 +3692,8 @@
 		"Level"						"3"
 		"ModelScale" 				".90"
 		"HasInventory"				"1"
+
+		"vscripts"					"creap_ai.lua"
           
         "nHunt"                     "4"  
 		"nDecay"                    "2"               
@@ -5663,7 +5665,9 @@
 		"HasInventory"				"1"
           
         "nHunt"                     "6"  
-		"nDecay"                    "2"           
+		"nDecay"                    "2"
+
+		"vscripts"					"creap_ai.lua"           
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -17485,11 +17489,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -20491,11 +20495,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -21773,11 +21777,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -23487,10 +23491,10 @@
 		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_nightstalker.vsndevts"
 
 		"Level"						"11"
-		"ModelScale" 				"1.55"
+		"ModelScale" 				"1.65"
 
-		"MinimapIcon"					"minimap_roshancamp"
-		"MinimapIconSize"				"450"
+		"MinimapIcon"				"minimap_roshancamp"
+		"MinimapIconSize"			"450"
          
         "vscripts"					"creap_ai.lua"
         "HasInventory"				"1"
@@ -23662,10 +23666,10 @@
 		"SoundSet"		            "Hero_DarkSeer"
 
 		"Level"						"11"
-		"ModelScale" 				"1.8"
+		"ModelScale" 				"1.9"
 
-		"MinimapIcon"					"minimap_roshancamp"
-		"MinimapIconSize"				"450"
+		"MinimapIcon"			    "minimap_roshancamp"
+		"MinimapIconSize"			"450"
         
 
         "vscripts"					"creap_ai.lua"
@@ -23866,7 +23870,7 @@
 		"VoiceFile"		          "soundevents/voscripts/game_sounds_vo_ursa.vsndevts"
 
 		"Level"						"11"
-		"ModelScale" 				"1.55"
+		"ModelScale" 				"1.6"
 
 		"MinimapIcon"			    "minimap_roshancamp"
 		"MinimapIconSize"			"450"
@@ -39349,11 +39353,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -39453,11 +39457,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -39557,11 +39561,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -39661,11 +39665,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -39765,11 +39769,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -39869,11 +39873,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -39973,11 +39977,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -40077,11 +40081,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -40181,11 +40185,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -40285,11 +40289,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -40389,11 +40393,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -40493,11 +40497,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -40597,11 +40601,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -40701,11 +40705,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -40805,11 +40809,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -40911,11 +40915,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -41015,11 +41019,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -41119,11 +41123,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -41223,11 +41227,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -41327,11 +41331,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -41431,11 +41435,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -41535,11 +41539,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -41639,11 +41643,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -41743,11 +41747,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -41847,11 +41851,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -41951,11 +41955,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -42055,11 +42059,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -42159,11 +42163,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -42263,11 +42267,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -42367,11 +42371,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -42475,11 +42479,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -42579,11 +42583,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -42683,11 +42687,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -42787,11 +42791,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -42891,11 +42895,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -42995,11 +42999,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -43099,11 +43103,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -43203,11 +43207,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -43307,11 +43311,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -43411,11 +43415,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -43515,11 +43519,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -43619,11 +43623,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -43723,11 +43727,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -43827,11 +43831,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -43931,11 +43935,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -49873,6 +49877,7 @@
 			"run"		"350"
 			"run_fast"	"400"
 		}			
+
 
 		// Status
 		//----------------------------------------------------------------
@@ -65928,11 +65933,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"	// Ability 1
-		"Ability2"					""	// Ability 2
+		"Ability2"					"riki_smoke_screen"	// Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"           "3"
+		"AbilitiesLevel"           "3 4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -68934,11 +68939,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "4"
+		"AbilitiesLevel"            "4 5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -70216,11 +70221,11 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"riki_blink_strike"			// Ability 1
-		"Ability2"					""	        // Ability 2
+		"Ability2"					"riki_smoke_screen"	        // Ability 2
 		"Ability3"					""	        // Ability 3
 		"Ability4"					""			// Ability 4
         
-        "AbilitiesLevel"            "5"
+        "AbilitiesLevel"            "5 6"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -71930,14 +71935,15 @@
 		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_nightstalker.vsndevts"
 
 		"Level"						"11"
-		"ModelScale" 				"1.55"
+		"ModelScale" 				"1.65"
 
-		"MinimapIcon"					"minimap_roshancamp"
-		"MinimapIconSize"				"450"
+		"MinimapIcon"			    "minimap_roshancamp"
+		"MinimapIconSize"			"450"
          
         "vscripts"					"creap_ai.lua"
         "HasInventory"				"1"
-		"ConsideredHero"             "1"        "nHunt"                     "40"
+		"ConsideredHero"             "1" 
+        "nHunt"                     "40"
 
 		// Abilities
 		//----------------------------------------------------------------
