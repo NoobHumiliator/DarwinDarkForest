@@ -271,19 +271,19 @@ function CalculateItemDropChance(hUnit)
     if hUnit and hUnit.GetLevel and GameRules.nAverageLevel then
         
         if hUnit:GetLevel() >= GameRules.nAverageLevel+2 then
-           flItemDropChance=0.45
+           flItemDropChance=0.4
         end
 
         if hUnit:GetLevel() == GameRules.nAverageLevel+1 then
-           flItemDropChance=0.35
+           flItemDropChance=0.3
         end
 
         if hUnit:GetLevel() == GameRules.nAverageLevel then
-           flItemDropChance=0.25
+           flItemDropChance=0.2
         end
 
         if hUnit:GetLevel() == GameRules.nAverageLevel-1 then
-           flItemDropChance=0.15
+           flItemDropChance=0.1
         end
 
         if hUnit:GetLevel() <= GameRules.nAverageLevel-2 then

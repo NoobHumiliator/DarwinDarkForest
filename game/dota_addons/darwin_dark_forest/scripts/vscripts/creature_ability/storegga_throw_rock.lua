@@ -189,7 +189,7 @@ function storegga_throw_rock:OnProjectileHit( hTarget, vLocation )
 				hChild:SetMaximumGoldBounty( 0 )
 				hChild:SetControllableByPlayer(self:GetCaster():GetMainControllingPlayer(), false)
 				hChild:AddNewModifier( self:GetCaster(), self, "modifier_kill", { duration = 20 } )
-				hChild:FindAbilityByName("mud_golem_hurl_boulder_lua"):SetLevel(1)
+				hChild:FindAbilityByName("mud_golem_hurl_boulder_lua"):SetLevel(8)
 			end
 		end
 

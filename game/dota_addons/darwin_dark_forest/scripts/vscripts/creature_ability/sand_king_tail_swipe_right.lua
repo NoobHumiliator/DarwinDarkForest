@@ -18,7 +18,7 @@ end
 --------------------------------------------------------------------------------
 function sand_king_tail_swipe_right:OnSpellStart()
 	if IsServer() then
-		self:GetCaster():FindAbilityByName("sand_king_tail_swipe_left"):StartCooldown(8)
+		--self:GetCaster():FindAbilityByName("sand_king_tail_swipe_left"):StartCooldown(8)
 	end
 end
 

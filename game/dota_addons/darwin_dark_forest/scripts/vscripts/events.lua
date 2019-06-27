@@ -731,11 +731,11 @@ function CalculateExpLostRatio(hHero)
         end
 
         if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-1 then
-           flExpLoseRatio=0.2
+           flExpLoseRatio=0.15
         end
 
         if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-2 then
-           flExpLoseRatio=0.1
+           flExpLoseRatio=0.05
         end
 
         if hHero.hCurrentCreep:GetLevel() <= GameRules.nAverageLevel-3 then

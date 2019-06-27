@@ -162,9 +162,21 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
     
     --因为游戏机制移除的
     hHero.hCurrentCreep.bKillByMech=true
-    --删除双保险
-    hHero.hCurrentCreep:AddNewModifier(hHero.hCurrentCreep, nil, "modifier_kill", {duration = 1})
-    hHero.hCurrentCreep:ForceKill(false)
+
+    --hHero.hCurrentCreep:ForceKill(false)
+
+    --连环删除大法
+    local toKillUnit=hHero.hCurrentCreep
+
+    Timers:CreateTimer(FrameTime(), function()
+           if toKillUnit  and not toKillUnit:IsNull() and toKillUnit:IsAlive() then
+              toKillUnit:ForceKill(false)
+              return FrameTime()
+           else
+            return nil
+           end
+        end
+    )
 
     --UTIL_Remove(  hHero.hCurrentCreep )
   end

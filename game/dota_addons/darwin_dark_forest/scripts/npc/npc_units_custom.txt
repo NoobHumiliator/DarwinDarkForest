@@ -455,8 +455,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"170"
-		"AttackDamageMax"			"180"
+		"AttackDamageMin"			"270"
+		"AttackDamageMax"			"280"
 		"AttackRate"				"1.3"
 		"AttackAnimationPoint"		"0.4"
 		"AttackAcquisitionRange"	"500"
@@ -475,12 +475,12 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"390"
+		"MovementSpeed"				"400"
 		"MovementTurnRate"			"0.5"
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"900"
+		"StatusHealth"				"1500"
 		"StatusHealthRegen"			"1.0"
 		"StatusMana"				"300"
 		"StatusManaRegen"			"2.0"
@@ -15983,7 +15983,7 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		    "130"
 		"AttackDamageMax"		    "135"
-		"AttackRate"		        "1.700000"
+		"AttackRate"		        "1.300000"
 		"AttackAnimationPoint"		"0.300000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
@@ -18629,8 +18629,8 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		    "168"
 		"AttackDamageMax"		    "182"
-		"AttackRate"		        "1.700000"
-		"AttackAnimationPoint"		"0.300000"
+		"AttackRate"		        "1.200000"
+		"AttackAnimationPoint"		"0.250000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
 		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
@@ -21581,10 +21581,10 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"		    "23"
-		"AttackDamageMax"		    "25"
-		"AttackRate"		        "1.700000"
-		"AttackAnimationPoint"		"0.300000"
+		"AttackDamageMin"		    "236"
+		"AttackDamageMax"		    "245"
+		"AttackRate"		        "1.100000"
+		"AttackAnimationPoint"		"0.200000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
 		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
@@ -23590,7 +23590,7 @@
 		"SoundSet"		            "Hero_Tiny"
 
 		"Level"						"11"
-		"ModelScale" 				"1.85"
+		"ModelScale" 				"2.0"
 
 		"MinimapIcon"				"minimap_roshancamp"
 		"MinimapIconSize"			"450"
@@ -69316,14 +69316,14 @@
 		//----------------------------------------------------------------
 		"Ability1"					"sand_king_boss_burrowstrike"			
 		"Ability2"					"sand_king_boss_passive"
-		"Ability3"					"sand_king_tail_swipe_right"
-		"Ability4"					"sand_king_tail_swipe_left"	// Ability 4.
+		"Ability3"					"sand_king_tail_swipe_left"
+		"Ability4"					""	        // Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-        "AbilitiesLevel"            "1 1 1 1"
+        "AbilitiesLevel"            "1 1 1"
 
 		// Armor
 		//----------------------------------------------------------------

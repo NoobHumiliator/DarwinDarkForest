@@ -1384,6 +1384,10 @@
     "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_stun_duration"       "击飞时间："
     "DOTA_Tooltip_Ability_venomancer_ward_burrowstrike_knockback_distance"  "击飞距离："
 
+    "DOTA_Tooltip_Ability_storegga_throw_rock"                              "投石"
+    "DOTA_Tooltip_Ability_storegga_throw_rock_Description"                  "向目标区域投掷巨石，巨石落地后造成高额伤害，并且分裂成碎石傀儡。"
+
+ 
 
     "DOTA_Tooltip_Ability_phantom_assassin_blur_nDurable"                     "<font color='#f8b551'>坚韧：</font>"
     "DOTA_Tooltip_Ability_phantom_assassin_blur_nHunt"                        "<font color='#999999'>猎杀：</font>"
