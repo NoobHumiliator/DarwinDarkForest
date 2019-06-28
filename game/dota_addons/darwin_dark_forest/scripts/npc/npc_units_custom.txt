@@ -6197,25 +6197,7 @@
 		//----------------------------------------------------------------------------------------------------------------------
 		"Creature"
 		{
-			"AttachWearables"
-			{
-				"Wearable1"
-				{
-					"ItemDef"			"493"
-				}
-				"Wearable2"
-				{
-					"ItemDef"			"494"
-				}
-				"Wearable3"
-				{
-					"ItemDef"			"495"
-				}
-				"Wearable4"
-				{
-					"ItemDef"			"496"
-				}
-			}
+			
 		}
 	}
 
@@ -9134,7 +9116,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"52"		// Damage range min.
 		"AttackDamageMax"			"59"		// Damage range max.
 		"AttackRate"				"1.0"		// Speed of attack.

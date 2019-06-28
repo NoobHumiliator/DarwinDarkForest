@@ -1,4 +1,6 @@
 spectre_haunt_lua = class({})
+LinkLuaModifier( "modifier_spectre_haunt_lua_fly", "creature_ability/modifier/modifier_spectre_haunt_lua_fly", LUA_MODIFIER_MOTION_NONE )
+
 --------------------------------------------------------------------------------
 
 function spectre_haunt_lua:OnSpellStart()
@@ -21,6 +23,8 @@ function spectre_haunt_lua:OnSpellStart()
 			      local hIllustion=CreateIllusion(self:GetCaster(),self:GetSpecialValueFor("duration"), self:GetSpecialValueFor("illusion_damage_incoming")-100, self:GetSpecialValueFor("illusion_damage_outgoing")-100, vLocation, {}, self)
 				  EmitSoundOn("Hero_Spectre.Haunt",hCreep)
 				  hIllustion:SetForceAttackTarget(hCreep)
+				  FindClearSpaceForUnit(hIllustion, vLocation, false)
+	              hIllustion:AddNewModifier(hIllustion, self, "modifier_spectre_haunt_lua_fly", {})
 				  hIllustion.hHauntOwner=self:GetCaster()
 				  nIllustionNumber=nIllustionNumber+1
 		 	 end
@@ -34,6 +38,8 @@ function spectre_haunt_lua:OnSpellStart()
 		      local hIllustion=CreateIllusion(self:GetCaster(),self:GetSpecialValueFor("duration"), self:GetSpecialValueFor("illusion_damage_incoming")-100, self:GetSpecialValueFor("illusion_damage_outgoing")-100, vLocation, {}, self)
 			  EmitSoundOn("Hero_Spectre.Haunt",hCreep)
 			  hIllustion:SetForceAttackTarget(hCreep)
+			  FindClearSpaceForUnit(hIllustion, vLocation, false)
+	          hIllustion:AddNewModifier(hIllustion, self, "modifier_spectre_haunt_lua_fly", {})
 			  hIllustion.hHauntOwner=self:GetCaster()
 			  nIllustionNumber=nIllustionNumber+1
            end
