@@ -11,6 +11,7 @@
 		"econ_data",
 		"econ_rarity",
 		"econ_type",
-		"econ_unit_replace"
+		"econ_unit_replace",
+		"hand_book"
 	]
 }

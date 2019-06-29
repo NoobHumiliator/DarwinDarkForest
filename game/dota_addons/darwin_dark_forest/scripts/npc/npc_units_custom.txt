@@ -3013,7 +3013,7 @@
 		"AttackRate"				"1.6"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
-		"AttackRange"				"128"		// Range within a target can be attacked.
+		"AttackRange"				"100"		// Range within a target can be attacked.
 		"ProjectileModel"			"" // Particle system model for projectile.
 		"ProjectileSpeed"			""			// Speed of projectile.
 
@@ -4410,7 +4410,7 @@
 		"AttackRate"				"1.45"		// Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"90"		// Range within a target can be attacked.
+		"AttackRange"				"105"		// Range within a target can be attacked.
 		"ProjectileModel"			"" // Particle system model for projectile.
 		"ProjectileSpeed"			""			// Speed of projectile.
 
@@ -4847,7 +4847,7 @@
 
 
      //远程 净化
-    "npc_dota_creature_satyr_trickster_1"
+    "npc_dota_creature_satyr_trickster_2"
 	{										
 		// General
 		//----------------------------------------------------------------
@@ -4859,8 +4859,8 @@
 		"HasInventory"				"1"
 		
         "vscripts"					"creap_ai.lua"
-		"nMystery"                  "3"
-		"nElement"                  "3"
+		"nMystery"                  "4"
+		"nHunt"                     "4"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -5363,75 +5363,6 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}	
-
-	 //远程 净化
-    "npc_dota_creature_satyr_trickster_2"
-	{										
-		// General
-		//----------------------------------------------------------------
-		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_b/n_creep_satyr_b.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"					// Name of sound set.
-		"ModelScale"				"0.9"
-		"Level"						"4"
-		"HasInventory"				"1"
-		
-        "vscripts"					"creap_ai.lua"
-		"nMystery"                  "6"
-		"nElement"                  "6"
-
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"satyr_trickster_purge"			// Ability 1
-		"Ability2"					""			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"0"			// Physical protection.
-
-		// Attack
-		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"29"		// Damage range min.
-		"AttackDamageMax"			"35"		// Damage range max.	
-	    "AttackRate"				"1.6"		// Speed of attack.
-		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"280"		// Range within a target can be acquired.
-		"AttackRange"				"280"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/neutral_fx/satyr_trickster_projectile.vpcf" // Particle system model for projectile.
-		"ProjectileSpeed"			"1500"		// Speed of projectile.		     	   
-
-		// Bounds
-		//----------------------------------------------------------------
-		"RingRadius"				"55"
-		"HealthBarOffset"			"170"
-
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"295"		// Speed.
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"550"		// Base health.
-		"StatusHealthRegen"			"1.0"		// Health regeneration rate.
-		"StatusMana"				"400"		// Base mana.
-		"StatusManaRegen"			"4"			// Mana regeneration rate.		 
-		
-		// Vision
-		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"800"		// Range of vision during day light.
-		"VisionNighttimeRange"		"800"		// Range of vision at night time.
-
-		// Team
-		//----------------------------------------------------------------
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-	}
 
 	 //白板 弱鸡
     "npc_dota_creature_good_ranged_3"
@@ -7426,7 +7357,7 @@
         
         "vscripts"					"creap_ai.lua"
 
-        "nElement"                  "8"
+        "nDecay"                    "8"
         "nMystery"                  "8"
 
 		// Abilities
@@ -8252,7 +8183,7 @@
         
         "vscripts"					"creap_ai.lua"
         "nFury"                     "8"
-        "nMystery"                  "8"
+        "nElement"                  "8"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -8270,13 +8201,13 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"49"		// Damage range min.
 		"AttackDamageMax"			"54"		// Damage range max.
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
+		"AttackRange"				"115"		// Range within a target can be attacked.
 		"ProjectileModel"			""			// Particle system model for projectile.
 		"ProjectileSpeed"			"0"			// Speed of projectile.	
 		// Bounds
@@ -8404,8 +8335,8 @@
 		"ModelScale" 				"0.8"
 		"HasInventory"				"1"
         
-        "nMystery"                  "8"
-        "nDecay"                    "8"
+        "nMystery"                  "7"
+        "nDecay"                    "7"
         "vscripts"					"creap_ai.lua"
 
 
@@ -9842,7 +9773,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/darkreef/blob/darkreef_blob_01.vmdl"
 		"SoundSet"					"Hero_Venomancer"
-		"Level"						"5"
+		"Level"						"6"
 		"ModelScale" 				"1.1"
 		"HasInventory"				"1"
         
@@ -10250,8 +10181,8 @@
 		"ModelScale" 				"0.9"
 		"HasInventory"				"1"
         
-        "nMystery"                  "10"
-        "nDecay"                    "10"
+        "nMystery"                  "9"
+        "nDecay"                    "9"
         "vscripts"					"creap_ai.lua"
 
 
@@ -10851,7 +10782,7 @@
         
         "vscripts"					"creap_ai.lua"
 
-        "nElement"                  "10"
+        "nDecay"                    "10"
         "nMystery"                  "10"
 
 		// Abilities
@@ -10953,13 +10884,13 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"58"		// Damage range min.
 		"AttackDamageMax"			"68"		// Damage range max.
 		"AttackRate"				"1.2"		// Speed of attack.
 		"AttackAnimationPoint"		"0.26"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"225"		// Range within a target can be attacked.
+		"AttackRange"				"120"		// Range within a target can be attacked.
 		"ProjectileModel"			""			// Particle system model for projectile.
 		"ProjectileSpeed"			"0"			// Speed of projectile.		
 		// Bounds
@@ -13901,8 +13832,7 @@
 
 		"HasInventory"				"1"
 
-		"nElement"                  "8"
-		"nFury"                     "12"
+		"nFury"                     "24"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -16635,9 +16565,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nFury"                     "14"
         "nHunt"                     "14"
-
+        "nFury"                     "14"
+  
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"troll_warlord_battle_trance"			// Ability 1
@@ -16672,8 +16602,6 @@
 			"fastest"	"430"
 		}    
   
-        "ConsideredHero"			"1"
-
 		// Bounds
 		//----------------------------------------------------------------
 		"RingRadius"				"80"
@@ -23513,7 +23441,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"390"		// Speed.			
+		"MovementSpeed"				"420"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -38380,7 +38308,7 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		    "130"
 		"AttackDamageMax"		    "135"
-		"AttackRate"		        "1.700000"
+		"AttackRate"		        "1.300000"
 		"AttackAnimationPoint"		"0.300000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
@@ -38485,7 +38413,7 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		    "130"
 		"AttackDamageMax"		    "135"
-		"AttackRate"		        "1.700000"
+		"AttackRate"		        "1.300000"
 		"AttackAnimationPoint"		"0.300000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
@@ -38590,7 +38518,7 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		    "130"
 		"AttackDamageMax"		    "135"
-		"AttackRate"		        "1.700000"
+		"AttackRate"		        "1.300000"
 		"AttackAnimationPoint"		"0.300000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
@@ -38694,8 +38622,8 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		    "168"
 		"AttackDamageMax"		    "182"
-		"AttackRate"		        "1.700000"
-		"AttackAnimationPoint"		"0.300000"
+		"AttackRate"		        "1.200000"
+		"AttackAnimationPoint"		"0.250000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
 		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
@@ -38803,8 +38731,8 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		    "168"
 		"AttackDamageMax"		    "182"
-		"AttackRate"		        "1.700000"
-		"AttackAnimationPoint"		"0.300000"
+		"AttackRate"		        "1.200000"
+		"AttackAnimationPoint"		"0.250000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
 		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
@@ -38912,8 +38840,8 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		    "168"
 		"AttackDamageMax"		    "182"
-		"AttackRate"		        "1.700000"
-		"AttackAnimationPoint"		"0.300000"
+		"AttackRate"		        "1.200000"
+		"AttackAnimationPoint"		"0.250000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
 		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
@@ -39022,10 +38950,10 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"		    "23"
-		"AttackDamageMax"		    "25"
-		"AttackRate"		        "1.700000"
-		"AttackAnimationPoint"		"0.300000"
+		"AttackDamageMin"		    "236"
+		"AttackDamageMax"		    "245"
+		"AttackRate"		        "1.100000"
+		"AttackAnimationPoint"		"0.200000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
 		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
@@ -39133,10 +39061,10 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"		    "23"
-		"AttackDamageMax"		    "25"
-		"AttackRate"		        "1.700000"
-		"AttackAnimationPoint"		"0.300000"
+		"AttackDamageMin"		    "236"
+		"AttackDamageMax"		    "245"
+		"AttackRate"		        "1.100000"
+		"AttackAnimationPoint"		"0.200000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
 		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
@@ -39244,10 +39172,10 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"		    "23"
-		"AttackDamageMax"		    "25"
-		"AttackRate"		        "1.700000"
-		"AttackAnimationPoint"		"0.300000"
+		"AttackDamageMin"		    "236"
+		"AttackDamageMax"		    "245"
+		"AttackRate"		        "1.100000"
+		"AttackAnimationPoint"		"0.200000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
 		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
@@ -49690,9 +49618,9 @@
 		"ConsideredHero"              "1"
 		"HasInventory"				"1"
          
-        "nFury"                     "14"
         "nHunt"                     "14"
-
+        "nFury"                     "14"
+  
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"troll_warlord_battle_trance"			// Ability 1
@@ -49727,8 +49655,6 @@
 			"fastest"	"430"
 		}    
   
-        "ConsideredHero"			"1"
-
 		// Bounds
 		//----------------------------------------------------------------
 		"RingRadius"				"80"
@@ -49859,7 +49785,6 @@
 			"run"		"350"
 			"run_fast"	"400"
 		}			
-
 
 		// Status
 		//----------------------------------------------------------------
@@ -51443,7 +51368,7 @@
 		"AttackRate"				"1.6"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
-		"AttackRange"				"128"		// Range within a target can be attacked.
+		"AttackRange"				"100"		// Range within a target can be attacked.
 		"ProjectileModel"			"" // Particle system model for projectile.
 		"ProjectileSpeed"			""			// Speed of projectile.
 
@@ -52122,7 +52047,9 @@
 		"Level"						"3"
 		"ModelScale" 				".90"
 		"HasInventory"				"1"
-		"ConsideredHero"             "1"          
+		"ConsideredHero"             "1"
+		"vscripts"					"creap_ai.lua"
+          
         "nHunt"                     "4"  
 		"nDecay"                    "2"               
 
@@ -52838,7 +52765,7 @@
 		"AttackRate"				"1.45"		// Speed of attack.
 		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"90"		// Range within a target can be attacked.
+		"AttackRange"				"105"		// Range within a target can be attacked.
 		"ProjectileModel"			"" // Particle system model for projectile.
 		"ProjectileSpeed"			""			// Speed of projectile.
 
@@ -53275,7 +53202,7 @@
 
 
      //远程 净化
-    "npc_dota_creature_player_satyr_trickster_1"
+    "npc_dota_creature_player_satyr_trickster_2"
 	{										
 		// General
 		//----------------------------------------------------------------
@@ -53287,8 +53214,8 @@
 		"HasInventory"				"1"
 		"ConsideredHero"             "1"		
         "vscripts"					"creap_ai.lua"
-		"nMystery"                  "3"
-		"nElement"                  "3"
+		"nMystery"                  "4"
+		"nHunt"                     "4"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -53792,75 +53719,6 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}	
 
-	 //远程 净化
-    "npc_dota_creature_player_satyr_trickster_2"
-	{										
-		// General
-		//----------------------------------------------------------------
-		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_b/n_creep_satyr_b.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"					// Name of sound set.
-		"ModelScale"				"0.9"
-		"Level"						"4"
-		"HasInventory"				"1"
-		"ConsideredHero"             "1"		
-        "vscripts"					"creap_ai.lua"
-		"nMystery"                  "6"
-		"nElement"                  "6"
-
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"satyr_trickster_purge"			// Ability 1
-		"Ability2"					""			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"0"			// Physical protection.
-
-		// Attack
-		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"29"		// Damage range min.
-		"AttackDamageMax"			"35"		// Damage range max.	
-	    "AttackRate"				"1.6"		// Speed of attack.
-		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"280"		// Range within a target can be acquired.
-		"AttackRange"				"280"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/neutral_fx/satyr_trickster_projectile.vpcf" // Particle system model for projectile.
-		"ProjectileSpeed"			"1500"		// Speed of projectile.		     	   
-
-		// Bounds
-		//----------------------------------------------------------------
-		"RingRadius"				"55"
-		"HealthBarOffset"			"170"
-
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"295"		// Speed.
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"550"		// Base health.
-		"StatusHealthRegen"			"1.0"		// Health regeneration rate.
-		"StatusMana"				"400"		// Base mana.
-		"StatusManaRegen"			"4"			// Mana regeneration rate.		 
-		
-		// Vision
-		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"800"		// Range of vision during day light.
-		"VisionNighttimeRange"		"800"		// Range of vision at night time.
-
-		// Team
-		//----------------------------------------------------------------
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-	}
-
 	 //白板 弱鸡
     "npc_dota_creature_player_good_ranged_3"
 	{
@@ -54093,7 +53951,9 @@
 		"HasInventory"				"1"
 		"ConsideredHero"             "1"          
         "nHunt"                     "6"  
-		"nDecay"                    "2"           
+		"nDecay"                    "2"
+
+		"vscripts"					"creap_ai.lua"           
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -54623,25 +54483,7 @@
 		//----------------------------------------------------------------------------------------------------------------------
 		"Creature"
 		{
-			"AttachWearables"
-			{
-				"Wearable1"
-				{
-					"ItemDef"			"493"
-				}
-				"Wearable2"
-				{
-					"ItemDef"			"494"
-				}
-				"Wearable3"
-				{
-					"ItemDef"			"495"
-				}
-				"Wearable4"
-				{
-					"ItemDef"			"496"
-				}
-			}
+			
 		}
 	}
 
@@ -55870,7 +55712,7 @@
 		"ConsideredHero"             "1"        
         "vscripts"					"creap_ai.lua"
 
-        "nElement"                  "8"
+        "nDecay"                    "8"
         "nMystery"                  "8"
 
 		// Abilities
@@ -56696,7 +56538,7 @@
 		"ConsideredHero"             "1"        
         "vscripts"					"creap_ai.lua"
         "nFury"                     "8"
-        "nMystery"                  "8"
+        "nElement"                  "8"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -56714,13 +56556,13 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"49"		// Damage range min.
 		"AttackDamageMax"			"54"		// Damage range max.
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
+		"AttackRange"				"115"		// Range within a target can be attacked.
 		"ProjectileModel"			""			// Particle system model for projectile.
 		"ProjectileSpeed"			"0"			// Speed of projectile.	
 		// Bounds
@@ -56848,8 +56690,8 @@
 		"ModelScale" 				"0.8"
 		"HasInventory"				"1"
 		"ConsideredHero"             "1"        
-        "nMystery"                  "8"
-        "nDecay"                    "8"
+        "nMystery"                  "7"
+        "nDecay"                    "7"
         "vscripts"					"creap_ai.lua"
 
 
@@ -57560,7 +57402,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"52"		// Damage range min.
 		"AttackDamageMax"			"59"		// Damage range max.
 		"AttackRate"				"1.0"		// Speed of attack.
@@ -58286,7 +58128,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"Model"						"models/creeps/darkreef/blob/darkreef_blob_01.vmdl"
 		"SoundSet"					"Hero_Venomancer"
-		"Level"						"5"
+		"Level"						"6"
 		"ModelScale" 				"1.1"
 		"HasInventory"				"1"
 		"ConsideredHero"             "1"        
@@ -58694,8 +58536,8 @@
 		"ModelScale" 				"0.9"
 		"HasInventory"				"1"
 		"ConsideredHero"             "1"        
-        "nMystery"                  "10"
-        "nDecay"                    "10"
+        "nMystery"                  "9"
+        "nDecay"                    "9"
         "vscripts"					"creap_ai.lua"
 
 
@@ -59295,7 +59137,7 @@
         
         "vscripts"					"creap_ai.lua"
 
-        "nElement"                  "10"
+        "nDecay"                    "10"
         "nMystery"                  "10"
 
 		// Abilities
@@ -59397,13 +59239,13 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"58"		// Damage range min.
 		"AttackDamageMax"			"68"		// Damage range max.
 		"AttackRate"				"1.2"		// Speed of attack.
 		"AttackAnimationPoint"		"0.26"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
-		"AttackRange"				"225"		// Range within a target can be attacked.
+		"AttackRange"				"120"		// Range within a target can be attacked.
 		"ProjectileModel"			""			// Particle system model for projectile.
 		"ProjectileSpeed"			"0"			// Speed of projectile.		
 		// Bounds
@@ -62345,8 +62187,7 @@
 
 		"HasInventory"				"1"
 		"ConsideredHero"             "1"
-		"nElement"                  "8"
-		"nFury"                     "12"
+		"nFury"                     "24"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -64409,7 +64250,7 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		    "130"
 		"AttackDamageMax"		    "135"
-		"AttackRate"		        "1.700000"
+		"AttackRate"		        "1.300000"
 		"AttackAnimationPoint"		"0.300000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
@@ -65079,9 +64920,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 		"ConsideredHero"             "1"         
-        "nFury"                     "14"
         "nHunt"                     "14"
-
+        "nFury"                     "14"
+  
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"troll_warlord_battle_trance"			// Ability 1
@@ -65116,8 +64957,6 @@
 			"fastest"	"430"
 		}    
   
-        "ConsideredHero"			"1"
-
 		// Bounds
 		//----------------------------------------------------------------
 		"RingRadius"				"80"
@@ -67055,8 +66894,8 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		    "168"
 		"AttackDamageMax"		    "182"
-		"AttackRate"		        "1.700000"
-		"AttackAnimationPoint"		"0.300000"
+		"AttackRate"		        "1.200000"
+		"AttackAnimationPoint"		"0.250000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
 		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
@@ -69298,14 +69137,14 @@
 		//----------------------------------------------------------------
 		"Ability1"					"sand_king_boss_burrowstrike"			
 		"Ability2"					"sand_king_boss_passive"
-		"Ability3"					"sand_king_tail_swipe_left"
-		"Ability4"					""	        // Ability 4.
+		"Ability3"					"sand_king_tail_swipe_right"
+		"Ability4"					"sand_king_tail_swipe_left"	// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
 		"Ability8"					""			// Ability 8 - Extra.
 
-        "AbilitiesLevel"            "1 1 1"
+        "AbilitiesLevel"            "1 1 1 1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -70007,10 +69846,10 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"		    "23"
-		"AttackDamageMax"		    "25"
-		"AttackRate"		        "1.700000"
-		"AttackAnimationPoint"		"0.300000"
+		"AttackDamageMin"		    "236"
+		"AttackDamageMax"		    "245"
+		"AttackRate"		        "1.100000"
+		"AttackAnimationPoint"		"0.200000"
 		"AttackAcquisitionRange"	"800"
 		"AttackRange"		        "475"
 		"ProjectileModel"		    "particles/units/heroes/hero_razor/razor_base_attack.vpcf"
@@ -71919,13 +71758,12 @@
 		"Level"						"11"
 		"ModelScale" 				"1.65"
 
-		"MinimapIcon"			    "minimap_roshancamp"
+		"MinimapIcon"				"minimap_roshancamp"
 		"MinimapIconSize"			"450"
          
         "vscripts"					"creap_ai.lua"
         "HasInventory"				"1"
-		"ConsideredHero"             "1" 
-        "nHunt"                     "40"
+		"ConsideredHero"             "1"        "nHunt"                     "40"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -71958,7 +71796,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"390"		// Speed.			
+		"MovementSpeed"				"420"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
@@ -72017,7 +71855,7 @@
 		"SoundSet"		            "Hero_Tiny"
 
 		"Level"						"11"
-		"ModelScale" 				"1.85"
+		"ModelScale" 				"2.0"
 
 		"MinimapIcon"				"minimap_roshancamp"
 		"MinimapIconSize"			"450"
@@ -72093,10 +71931,10 @@
 		"SoundSet"		            "Hero_DarkSeer"
 
 		"Level"						"11"
-		"ModelScale" 				"1.8"
+		"ModelScale" 				"1.9"
 
-		"MinimapIcon"					"minimap_roshancamp"
-		"MinimapIconSize"				"450"
+		"MinimapIcon"			    "minimap_roshancamp"
+		"MinimapIconSize"			"450"
         
 
         "vscripts"					"creap_ai.lua"
@@ -72297,7 +72135,7 @@
 		"VoiceFile"		          "soundevents/voscripts/game_sounds_vo_ursa.vsndevts"
 
 		"Level"						"11"
-		"ModelScale" 				"1.55"
+		"ModelScale" 				"1.6"
 
 		"MinimapIcon"			    "minimap_roshancamp"
 		"MinimapIconSize"			"450"

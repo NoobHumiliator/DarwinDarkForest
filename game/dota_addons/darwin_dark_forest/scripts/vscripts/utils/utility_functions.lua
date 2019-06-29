@@ -251,6 +251,16 @@ function ContainsValue(nSum,nValue)
 
 end
 
+function ContainsValue(nSum,nValue)
+
+   if bit:_and(nSum,nValue)==nValue then
+        return true
+    else
+      return false
+    end
+
+end
+
 
 --移除无敌类的buff
 function RemoveInvulnerableModifier(hUnit)

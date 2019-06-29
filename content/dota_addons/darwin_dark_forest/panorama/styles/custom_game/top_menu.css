@@ -37,3 +37,14 @@
   background-image: url('file://{images}/custom_game/top_menu/inventory.png');
 }
 
+#TopMenuIcon_Handbook{
+  background-size:38px 38px;
+  background-image: url('file://{images}/custom_game/top_menu/shop.png');
+  brightness: 2.0;
+}
+
+
+.Hidden{
+  opacity:0.0;
+}
+

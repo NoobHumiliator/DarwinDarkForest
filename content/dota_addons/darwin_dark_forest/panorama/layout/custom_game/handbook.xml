@@ -1,0 +1,96 @@
+<root>
+    <styles>
+       <include src="file://{resources}/styles/custom_game/handbook.css" />
+       <include src="s2r://panorama/styles/dotastyles.css" />
+    </styles>
+
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/handbook.js" />
+        <include src="file://{resources}/scripts/custom_game/util.js" />
+    </scripts>
+
+    <snippets>
+      <snippet name="CreatureItem">
+          <Panel class="CreatureItemRoot">
+
+              <Panel id="CreatureIconAndAbilityPanel">
+                  <Panel id="CreatureIconPanel">
+                    <Image id="CreatureIcon"/>
+                  </Panel>
+                  <Panel id="AbilityPanel">
+                      <DOTAAbilityImage id="Ability1"/>
+                      <DOTAAbilityImage id="Ability2"/>
+                      <DOTAAbilityImage id="Ability3"/>
+                  </Panel> 
+              </Panel> 
+              <Panel class="CreatureNamePanel">
+                  <Label id="CreatureName"/>
+              </Panel>
+              <Panel id="CreaturePerkPanel">
+                <Label class="CreaturePerkLabel" id="CreaturePerk1"/>
+                <Label class="CreaturePerkLabel" id="CreaturePerk2"/>
+                <Label class="CreaturePerkLabel" id="CreaturePerk3"/>
+              </Panel>
+          </Panel>
+      </snippet>
+     </snippets>
+
+     <Panel style="width:100%;height:100%;" hittest="false">
+       <Panel id = "PageHandBook" class="Hidden" hittest = "true">
+              <Panel id="HandBookTabs" hittest="false">
+
+                  <RadioButton class="TabButton" onactivate="SwitchPanel('nFury')">
+                     <Panel class="RadioBox"/>
+                     <Label class="TabButtonLabel" style="color:#eb6877;" text="#fury"/>
+                  </RadioButton>
+
+                  <Label class="TabSeparator" text=" / "/>
+                  <RadioButton class="TabButton" onactivate="SwitchPanel('nDurable')">
+                     <Panel class="RadioBox"/>
+                     <Label class="TabButtonLabel" style="color:#f8b551;" text="#durable"/>
+                  </RadioButton>
+
+                  <Label class="TabSeparator" text=" / "/>
+                  <RadioButton class="TabButton" onactivate="SwitchPanel('nElement')">
+                     <Panel class="RadioBox"/>
+                     <Label class="TabButtonLabel" style="color:#00a0e9;" text="#element"/>
+                  </RadioButton>
+
+                  <Label class="TabSeparator" text=" / "/>
+                  <RadioButton class="TabButton" onactivate="SwitchPanel('nHunt')">
+                     <Panel class="RadioBox"/>
+                     <Label class="TabButtonLabel" style="color:#999999;" text="#hunt"/>
+                  </RadioButton>
+
+                  <Label class="TabSeparator" text=" / "/>
+                  <RadioButton class="TabButton" onactivate="SwitchPanel('nDecay')">
+                     <Panel class="RadioBox"/>
+                     <Label class="TabButtonLabel" style="color:#b3d465;" text="#decay"/>
+                  </RadioButton>
+
+                  <Label class="TabSeparator" text=" / "/>
+                  <RadioButton class="TabButton" onactivate="SwitchPanel('nMystery')">
+                     <Panel class="RadioBox"/>
+                     <Label class="TabButtonLabel" style="color:#e9c2ff;" text="#mystery"/>
+                  </RadioButton>
+                  <Label class="NoteLabel"  text="(点击顶部菜单切换生物类群)" />
+                  <Button class="HandBookCloseButton" onactivate="CloseHandBook()" />
+              </Panel>
+              <Panel class="HandBookMain" hittest="false">
+                  <Panel id="HandBookLeft" hittest="false">
+                      <Label class="LevelLabel" text="Level 1"/>
+                      <Label class="LevelLabel" text="Level 2"/>
+                      <Label class="LevelLabel" text="Level 3"/>
+                      <Label class="LevelLabel" text="Level 4"/>
+                      <Label class="LevelLabel" text="Level 5"/>
+                      <Label class="LevelLabel" text="Level 6"/>
+                      <Label class="LevelLabel" text="Level 7"/>
+                      <Label class="LevelLabel" text="Level 8"/>
+                      <Label class="LevelLabel" text="Level 9"/>
+                      <Label class="LevelLabel" text="Level 10"/>
+                  </Panel>
+                  <Panel id="HandBookContainer" hittest="false"/>
+              </Panel>
+        </Panel>
+     </Panel>
+</root>

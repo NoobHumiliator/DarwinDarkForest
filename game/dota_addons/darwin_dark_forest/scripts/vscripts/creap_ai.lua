@@ -27,7 +27,7 @@ function Spawn( entityKeyValues )
        return
     end
 
-    thisEntity:SetAcquisitionRange(540)
+    thisEntity:SetAcquisitionRange(460)
     
     --是否正在追击
     thisEntity.bChasing=false

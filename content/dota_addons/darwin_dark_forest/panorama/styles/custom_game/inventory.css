@@ -537,11 +537,11 @@ Label{
 }
 
 .Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_storegga_1.png");
+   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_tiny_mud_golem.png");
 }
 
 .Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_ferocious_toxicants.png");
+   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_black_dragon.png");
 }
 
 .Temp{
@@ -551,12 +551,4 @@ Label{
 
 .Temp{
    background-image: url("file://{images}/items/preserved_skull.png");
-}
-
-.Temp{
-   background-image: url("file://{images}/items/pelt_of_the_old_wolf.png");
-}
-
-.Temp{
-   background-image: url("file://{images}/items/paw_of_lucius.png");
 }

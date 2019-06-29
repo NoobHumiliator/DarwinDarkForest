@@ -48,6 +48,8 @@
     "TopMenuIcon_Guide_message"               "游戏指南"
     "TopMenuIcon_Rank_message"                "天梯排行"
     "TopMenuIcon_Inventory_message"           "基因进化库"
+    "TopMenuIcon_Handbook_message"           "进化图鉴"
+    
     "WorldRank"                               "天梯排行"
     "CurrentSeason"                           "{s:year}年第{d:month}赛季"
     //UI 
@@ -184,6 +186,15 @@
 	"hunt"                                                                      "猎杀"
 	"decay"                                                                     "腐朽"
 	"mystery"                                                                   "神秘"
+
+    "nFury"                                                                      "狂怒"
+    "nDurable"                                                                   "坚韧"
+    "nElement"                                                                   "元素"
+    "nHunt"                                                                      "猎杀"
+    "nDecay"                                                                     "腐朽"
+    "nMystery"                                                                   "神秘"
+
+
 	"exp"                                                                       "经验"
 
 	"ui_detail_fury"                                                            "以尖牙利爪强化攻击"
@@ -192,6 +203,8 @@
 	"ui_detail_hunt"                                                            "隐藏于阴影的狡诈猎手"
 	"ui_detail_decay"                                                           "掌控死亡和腐败黑暗力量"
 	"ui_detail_mystery"                                                         "来自虚空与深海的未知能力"
+
+    "dna_tip_message"                                                           "每天游戏根据可获得上限25的DNA（第一名+25，第二名+20 依次递减）"
 
 
     //召唤
@@ -382,6 +395,7 @@
     "npc_dota_creature_satyr_prowler"                                               "萨特潜行先锋"
     "npc_dota_creature_ogreseal_1"                                                  "海象"
     "npc_dota_creature_green_troll_warlord"                                         "丛林巨魔召唤法师"
+    "npc_dota_creature_ocean_salve"                                                 "深海奴隶"
 
 
    
@@ -608,7 +622,7 @@
      
 
     "DOTA_Tooltip_ability_spawnlord_master_freeze_nMystery"                         "<font color='#e9c2ff'>神秘：</font>"
-    "DOTA_Tooltip_ability_spawnlord_master_freeze_nHunt"                            "猎杀:"     
+    "DOTA_Tooltip_ability_spawnlord_master_freeze_nHunt"                            "<font color='#999999'>猎杀：</font>"     
 
     "DOTA_Tooltip_ability_granite_golem_hp_aura_nDurable"                           "<font color='#f8b551'>坚韧:</font>"     
     
@@ -616,9 +630,9 @@
     "DOTA_Tooltip_ability_morphling_waveform_nElement"                              "<font color='#00a0e9'>元素:</font>"     
     
     "DOTA_Tooltip_ability_troll_warlord_battle_trance_nFury"                        "<font color='#eb6877'>狂怒:</font>"     
-    "DOTA_Tooltip_ability_troll_warlord_battle_trance_nHunt"                        "猎杀:"     
+    "DOTA_Tooltip_ability_troll_warlord_battle_trance_nHunt"                        "<font color='#999999'>猎杀：</font>"     
 
-    "DOTA_Tooltip_ability_venomancer_poison_nova_nHunt"                             "猎杀:" 
+    "DOTA_Tooltip_ability_venomancer_poison_nova_nHunt"                             "<font color='#999999'>猎杀：</font>" 
     "DOTA_Tooltip_ability_venomancer_poison_nova_nDecay"                            "<font color='#b3d465'>腐朽：</font>" 
     
 
@@ -779,8 +793,6 @@
     "DOTA_Tooltip_ability_decay_mystery_summon_familiar_familiar_nDecay"                          "<font color='#b3d465'>腐朽：</font>"
 
 
-    
-    "DOTA_Tooltip_ability_dragon_knight_breathe_fire_nFury"                                      "<font color='#f8b551'>狂怒：</font>"
     "DOTA_Tooltip_ability_dragon_knight_breathe_fire_nElement"                                   "<font color='#00a0e9'>元素:</font>"
 
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_nDecay"                                     "<font color='#b3d465'>腐朽：</font>"
@@ -1602,6 +1614,9 @@
     "DOTA_Tooltip_Ability_spectre_haunt_lua_illusion_damage_outgoing"          "%鬼影继承攻击力："
     "DOTA_Tooltip_Ability_spectre_haunt_lua_illusion_damage_incoming"          "%鬼影承受伤害："
     "DOTA_Tooltip_Ability_spectre_haunt_lua_nMystery"                          "<font color='#e9c2ff'>神秘：</font>"
+    
+    "DOTA_Tooltip_Ability_mars_gods_rebuke_nFury"                              "<font color='#eb6877'>狂怒：</font>"
+    "DOTA_Tooltip_Ability_mars_gods_rebuke_nDurable"                           "<font color='#f8b551'>坚韧：</font>"
 
 
     //EconUnitBegins
@@ -2009,6 +2024,7 @@
     "npc_dota_creature_player_satyr_prowler"                                               "萨特潜行先锋"
     "npc_dota_creature_player_ogreseal_1"                                                  "海象"
     "npc_dota_creature_player_green_troll_warlord"                                         "丛林巨魔召唤法师"
+    "npc_dota_creature_player_ocean_salve"                                                 "深海奴隶"
     "npc_dota_creature_player_oldone_sentinel_2"                                           "黑金灭杀者"
     "npc_dota_creature_player_ogreseal_2"                                                  "海象"
     "npc_dota_creature_player_slark_2"                                                     "鱼人夜行者"

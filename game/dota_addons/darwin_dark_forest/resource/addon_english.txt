@@ -40,6 +40,9 @@
     "TopMenuIcon_Guide_message"               "Game Guide"
     "TopMenuIcon_Rank_message"                "World Rank"
     "TopMenuIcon_Inventory_message"           "DNA Inventory"
+
+    "TopMenuIcon_Handbook_message"            "Evolve Handbook"
+
     "WorldRank"                               "World Rank"
     "CurrentSeason"                           "{s:year}Year{d:month}Season"
     //UI 
@@ -177,6 +180,16 @@
 	"decay"                                                                     "Decay"
 	"mystery"                                                                   "Mystery"
 	"exp"                                                                       "Exp"
+
+    "dna_tip_message"                                                           "Player can gain maximum 25 DNA everyday. (First +25, Second+20 ....)"
+
+
+    "nFury"                                                                      "Fury"
+    "nDurable"                                                                   "Durable"
+    "nElement"                                                                   "Element"
+    "nHunt"                                                                      "Hunt"
+    "nDecay"                                                                     "Decay"
+    "nMystery"                                                                   "Mystery"
 
 	"ui_detail_fury"                                                            "Enforce attack with Claw and Tooth"
 	"ui_detail_durable"                                                         "Impregnable Defence"
@@ -374,6 +387,7 @@
     "npc_dota_creature_satyr_prowler"                                               "Satyr Prowler"
     "npc_dota_creature_ogreseal_1"                                                  "Ogre Seal"
     "npc_dota_creature_green_troll_warlord"                                         "Forest Troll Summoner"
+    "npc_dota_creature_ocean_salve"                                                 "Deep Sea Prisoner"
    
     //Level-7
     "npc_dota_creature_oldone_sentinel_2"                                           "Black Golden Killer"
@@ -1972,6 +1986,7 @@
     "npc_dota_creature_player_satyr_prowler"                                               "Satyr Prowler"
     "npc_dota_creature_player_ogreseal_1"                                                  "Ogre Seal"
     "npc_dota_creature_player_green_troll_warlord"                                         "Forest Troll Summoner"
+    "npc_dota_creature_player_ocean_salve"                                                 "Deep Sea Prisoner"
     "npc_dota_creature_player_oldone_sentinel_2"                                           "Black Golden Killer"
     "npc_dota_creature_player_ogreseal_2"                                                  "Ogre Seal"
     "npc_dota_creature_player_slark_2"                                                     "Slark"

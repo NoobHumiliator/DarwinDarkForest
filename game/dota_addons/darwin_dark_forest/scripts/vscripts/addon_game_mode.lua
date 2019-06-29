@@ -67,6 +67,7 @@ require( "utils/notifications" )
 require( "rune_spawner" )
 require('libraries/activity_modifier')
 require('libraries/animations')
+require('handbook')
 
 Precache = require "Precache"
 
@@ -139,7 +140,8 @@ for sUnitName, vData in pairs(GameRules.vUnitsKV) do
         end
 
         vData.nTotalPerk=vData.nElement+vData.nMystery+vData.nDurable+vData.nFury+vData.nDecay+vData.nHunt
-        
+        vData.sUnitName=sUnitName
+
         --为每个生物定义一个等级
         if vData.AttackCapabilities=="DOTA_UNIT_CAP_NO_ATTACK" then
             vData.nCreatureLevel=0
@@ -149,7 +151,7 @@ for sUnitName, vData in pairs(GameRules.vUnitsKV) do
         if vData.nCreatureLevel==nil then
             vData.nCreatureLevel=1
         end
-        print("sUnitName"..sUnitName)
+        --print("sUnitName"..sUnitName)
         --计算总perk
         vCreaturePerksTotal[vData.nCreatureLevel]["nElement"]=vCreaturePerksTotal[vData.nCreatureLevel]["nElement"]+vData.nElement
         vCreaturePerksTotal[vData.nCreatureLevel]["nMystery"]=vCreaturePerksTotal[vData.nCreatureLevel]["nMystery"]+vData.nMystery
@@ -204,6 +206,7 @@ for sAbilityName, vData in pairs(GameRules.vAbilitiesKV) do
 
         if vData.nMystery~=nil or vData.nElement~=nil or vData.nDurable~=nil or vData.nFury~=nil or vData.nDecay~=nil or vData.nHunt~=nil  then
             
+            print("sAbilityName"..sAbilityName)
             local vLevel=1
             --最大技能等级
             if vData.MaxLevel and tonumber(vData.MaxLevel) then
@@ -276,7 +279,7 @@ for k,v in pairs(vAbilityPerksTotal) do
     print(k..":"..v)
 end
 
-
+HandBook:DealCreatureData()
 ---------------------------------------------------------------------------
 -- Initializer
 ---------------------------------------------------------------------------

@@ -9,6 +9,24 @@ function FindDotaHudElement(id){
 
 
 
+function FindDotaHudElementByClass(className){
+    var hudRoot;
+    for(panel=$.GetContextPanel();panel!=null;panel=panel.GetParent()){
+        hudRoot = panel;
+    }
+    var comp = hudRoot.FindChildrenWithClassTraverse(className);
+    if (comp.length>0)
+    {
+        return comp[0];
+    } 
+    else 
+    {
+        return null;
+    }
+}
+
+
+
 function ConvertToSteamid64(steamid32)  //32位转64位
 {
     var steamid64 = '765' + (parseInt(steamid32) + 61197960265728).toString();
@@ -53,3 +71,33 @@ function DrawRandomFromArray (arr,num){
     return result;
 
 };
+
+var ShowAbilityTooltip = ( function( ability )
+{
+    return function()
+    {
+        $.DispatchEvent( "DOTAShowAbilityTooltip", ability, ability.abilityname );
+    }
+});
+
+var HideAbilityTooltip = ( function( ability )
+{
+    return function()
+    {
+        $.DispatchEvent( "DOTAHideAbilityTooltip", ability );
+    }
+});
+
+
+function TipsOver(message, pos){
+    if ($("#"+pos)!=undefined)
+    {
+       $.DispatchEvent( "DOTAShowTextTooltip", $("#"+pos), $.Localize(message));
+    }
+}
+
+function TipsOut(){
+    $.DispatchEvent( "DOTAHideTitleTextTooltip");
+    $.DispatchEvent( "DOTAHideTextTooltip");
+}
+

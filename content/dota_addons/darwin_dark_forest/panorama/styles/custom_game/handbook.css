@@ -1,0 +1,212 @@
+.Hidden{
+    opacity:0.0;
+}
+
+#PageHandBook{
+    width:1920px;
+    height:1080px;
+    background-image: url("s2r://panorama/images/backgrounds/gallery_background_png.vtex");
+    background-size:100% 100%;
+    box-shadow: fill #00000066 -4px -4px 8px 8px;
+    vertical-align: center;
+    horizontal-align:center;
+    z-index:5000;
+    transition-property: opacity, transform, pre-transform-scale2d, wash-color, position;
+    transition-duration: 0.4s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+    flow-children: down;
+}
+
+
+#HandBookTabs   
+{
+    width: fill-parent-flow( 1.0 );
+    /*background-color: gradient( linear, 0% 0%, 100% 0%, from( #000000aa ), color-stop( 0.8, #000000aa ),  to( #00000000 ) );*/
+    height: 60px;
+    width: 80%;
+    margin-left: 25%;
+    flow-children: right;
+    vertical-align: top;
+    horizontal-align: center;
+
+    opacity: 1.0;
+    
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    
+}
+
+
+.HandBookMain
+{
+    height: 1020px;
+    width: 100%;
+    flow-children: right;
+}
+
+#HandBookLeft
+{
+    height: 1020px;
+    width: 4%;
+    flow-children: down;
+}
+
+#HandBookContainer
+{
+    height: 1020px;
+    width: 96%;
+    overflow: scroll;
+}
+
+
+
+
+.TabButton
+{
+    margin: 0px;
+    vertical-align: middle;
+    wash-color: white; 
+    transition-property: wash-color;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out;
+
+    flow-children: right;
+}
+
+.TabButton Label
+{
+    vertical-align: middle;
+    font-size: 50px;
+    /*text-transform: uppercase;*/
+    margin: 0px;
+    letter-spacing: 3px;
+}
+
+.TabButton:hover Label
+{
+    brightness: 1.3;
+}
+
+.TabButton:selected
+{
+    brightness: 3;
+}
+
+.TabButton .RadioBox
+{
+    visibility: collapse;
+}
+
+
+.TabButtonLabel
+{
+    font-size: 50px;
+}
+
+.TabSeparator
+{
+    vertical-align: middle;
+    font-size: 50px;
+}
+
+
+.CreatureItemRoot {
+    width: 165px;
+    height: 100px;
+    flow-children: down;
+    background-color: #000000dd;
+}
+
+
+#CreatureIconAndAbilityPanel{
+
+   flow-children: right;
+   width: 165px;
+   height: 64px;
+}
+
+#AbilityPanel{
+
+   flow-children: down;
+   width: 26.22px;
+   height: 64px;
+}
+
+#CreatureIconPanel{
+
+    width: 113.78px;
+    height: 64px;
+}
+
+.CreatureNamePanel{
+
+    width: 165px;
+    height: 18px;
+    flow-children: right;
+}
+
+#CreatureName{
+
+    width: 165px;
+    height: 18px;
+    font-size: 18px;
+}
+
+#CreaturePerkPanel{
+
+    flow-children: right;
+    height: 17px;
+    width: 165px;
+}
+
+.CreaturePerkLabel{
+
+    height: 17px;
+    width: 54px;
+    font-size: 17px;
+}
+
+
+.LevelLabel{
+    height: 100px;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+.HandBookCloseButton
+{
+  horizontal-align:right;
+  background-color:#333333;
+  wash-color:white;
+  border-radius:50%;
+  border:1px solid #333333;
+  width:60px;
+  height:60px;
+  box-shadow:#000000 -3px -3px 6px 6px;
+  z-index:555;
+  background-image:url("s2r://panorama/images/control_icons/x_close_png.vtex");
+  background-size:40px 40px;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  margin-right:50px;
+  transition-property:wash-color, pre-transform-scale2d, background-color;
+  transition-duration:0.1s;
+  transition-timing-function:ease-in;
+}
+
+.HandBookCloseButton:active
+{
+  background-size:36px 36px;
+  sound:"ui_friends_slide_in"; 
+}
+
+.NoteLabel{
+  
+  vertical-align: bottom;
+
+}

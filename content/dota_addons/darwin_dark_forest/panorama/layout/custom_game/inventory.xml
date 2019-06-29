@@ -42,9 +42,9 @@
             <Panel class="InventoryTop">                  
                 <Label text = "#EvolveInventory" class="InventoryTitle"></Label>
                 <Panel id="DnaStoragePanel">
-                    <Image id="DnaStorageImg" src="file://{images}/custom_game/inventory/dna.png"/>
-                    <Label id = "DnaStorageLabel" text = "× ?"/>
-                    <Panel id = "TaobaoPlusIcon" class = "" hittest = "true" onmouseover="ShowTaoBaoQRCode()" />
+                    <Image id="DnaStorageImg" src="file://{images}/custom_game/inventory/dna.png" onmouseover="TipsOver('dna_tip_message','DnaStorageImg')" onmouseout="TipsOut()" />
+                    <Label id = "DnaStorageLabel" text = "× ?" onmouseover="TipsOver('dna_tip_message','DnaStorageLabel')" onmouseout="TipsOut()" />
+                    <Panel id = "TaobaoPlusIcon"  class = "" hittest = "true" onmouseover="ShowTaoBaoQRCode()" />
                     <TextEntry id="TaobaoCodeEntry" maxchars="25" placeholder="#ClickPlusForCode" oninputsubmit="OnCdkeySubmitted()" />
                     <Button id="SubmitTaobaoCodeButton" onactivate="SubmitTaobaoCode()" class="EvolveButton">
                         <Label id="SubmitTaobaoCodeButtonLabel"  text="#ExchangeKey"/>

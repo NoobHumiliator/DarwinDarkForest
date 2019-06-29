@@ -23,19 +23,16 @@ function CloseInstruction(){
     FindDotaHudElement("page_instruction").AddClass("Hidden")
 }   
 
-
-
-function TipsOver(message, pos){
-    if ($("#"+pos)!=undefined)
-    {
-       $.DispatchEvent( "DOTAShowTextTooltip", $("#"+pos), $.Localize(message));
-    }
+function OpenHandbook(){
+    FindDotaHudElement("PageHandBook").RemoveClass("Hidden");  
+    FindDotaHudElement("ScoreboardContainer").style.opacity=0
+    SwitchPanel("nDecay")
 }
 
-function TipsOut(){
-    $.DispatchEvent( "DOTAHideTitleTextTooltip");
-    $.DispatchEvent( "DOTAHideTextTooltip");
-}
+function CloseHandbook(){
+    FindDotaHudElement("PageHandBook").AddClass("Hidden")
+    FindDotaHudElement("ScoreboardContainer").style.opacity=1
+}   
 
 
 (function()
@@ -66,6 +63,10 @@ function TipsOut(){
     });
 
     $.Schedule(18, function(){
+      TipsOver('TopMenuIcon_Handbook_message','TopMenuIcon_Handbook')
+    });
+
+    $.Schedule(22, function(){
       TipsOut()
     });
     

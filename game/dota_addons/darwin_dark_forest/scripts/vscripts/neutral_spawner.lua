@@ -89,6 +89,10 @@ function NeutralSpawner:SpawnOneCreature()
 
    -- 先找到队伍平均等级
    local nAverageLevel = GameRules.nAverageLevel
+
+   if GameRules.nAverageLevel==nil then
+      GameRules.nAverageLevel=1
+   end
   
    --比例
    local vLevelRatio ={}
