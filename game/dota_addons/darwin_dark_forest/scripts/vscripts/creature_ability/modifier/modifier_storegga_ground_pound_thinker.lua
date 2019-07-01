@@ -47,7 +47,7 @@ function modifier_storegga_ground_pound_thinker:OnIntervalThink()
         GridNav:DestroyTreesAroundPoint(self:GetCaster():GetOrigin(),self.radius,false)
 
 		for _, hEnemy in pairs( hEnemies ) do
-			if hEnemy ~= nil and hEnemy:IsInvulnerable() == false  then
+			if hEnemy ~= nil  and not hEnemy:IsNull() and hEnemy:IsInvulnerable() == false  then
 				local damageInfo =
 				{
 					victim = hEnemy,

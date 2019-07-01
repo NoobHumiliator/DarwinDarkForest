@@ -578,7 +578,7 @@ function GameMode:UpdateScoreboardAndVictory()
     table.sort( vSortedTeams, function(a,b) return ( a.teamScore > b.teamScore ) end )
     
     --终极进化阶段
-    if GameRules.bUltimateStage then
+    if GameRules.bUltimateStage and false then
       vAliveTeams=RemoveRepetition(vAliveTeams)
       --只剩唯一队伍
       if #vAliveTeams==1 then

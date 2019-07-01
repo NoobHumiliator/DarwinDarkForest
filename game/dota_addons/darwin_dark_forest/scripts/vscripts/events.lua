@@ -775,7 +775,7 @@ function CalculateExpLostRatio(hHero)
             flExpLoseRatio=0.35    
         end
         if hHero.hCurrentCreep:GetLevel()==11 then
-            flExpLoseRatio=0.006 
+            flExpLoseRatio=0.01
         end
     end
 
