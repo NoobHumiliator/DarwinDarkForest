@@ -302,6 +302,7 @@ function GameMode:InitGameMode()
     BonusRing:Init()
 
     GameMode.vStartPointLocation={} --key是teamnumber value坐标
+    GameRules.nFatalErrorTimes=1
     
 
     --队伍颜色
@@ -399,6 +400,18 @@ function GameMode:InitGameMode()
 	ListenToGameEvent( "dota_npc_goal_reached", Dynamic_Wrap( GameMode, "OnNpcGoalReached" ), self )
     --]]
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, 1 ) 
+
+    Timers:CreateTimer(5, function()
+        for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
+            GameMode:UpdatePlayerColor( nPlayerID )
+        end
+    end)
+
+    Timers:CreateTimer(10, function()
+        for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
+            GameMode:UpdatePlayerColor( nPlayerID )
+        end
+    end)
 
 end
 
@@ -531,21 +544,26 @@ function GameMode:UpdateScoreboardAndVictory()
     local vAliveTeams = {}
     local vAlivePlayers = {}
 
-
 	for _, nTeamID in pairs( self.vfoundTeamsList ) do
-        local nTeamMaxLevel = 1;         
+        local nTeamMaxLevel = 1       
 		for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
 		  --选出等级最高的英雄
-		  if PlayerResource:IsValidPlayer( nPlayerID ) and PlayerResource:GetSelectedHeroEntity (nPlayerID) and PlayerResource:GetSelectedHeroEntity(nPlayerID):GetTeamNumber()==nTeamID then
-             local nLevel=PlayerResource:GetSelectedHeroEntity (nPlayerID).nCurrentCreepLevel
-             if nTeamMaxLevel<nLevel then
-             	nTeamMaxLevel=nLevel
-             end
+		  if PlayerResource:IsValidPlayer( nPlayerID ) and PlayerResource:GetSelectedHeroEntity (nPlayerID) then
+
              local hHero = PlayerResource:GetSelectedHeroEntity (nPlayerID)
-             if hHero:IsAlive() and hHero.hCurrentCreep and hHero.hCurrentCreep.IsAlive and hHero.hCurrentCreep:IsAlive() then
-                table.insert(vAliveTeams, nTeamID)
-                table.insert(vAlivePlayers, nPlayerID)
+             if hHero.GetTeamNumber and hHero:GetTeamNumber()==nTeamID then
+                local nLevel=hHero.nCurrentCreepLevel
+                if nLevel then
+                   if nTeamMaxLevel<nLevel then
+                 	  nTeamMaxLevel=nLevel
+                   end
+                end
+                if  hHero.IsAlive and  hHero:IsAlive() and hHero.hCurrentCreep and not hHero.hCurrentCreep:IsNull() and hHero.hCurrentCreep.IsAlive and hHero.hCurrentCreep:IsAlive() then
+                    table.insert(vAliveTeams, nTeamID)
+                    table.insert(vAlivePlayers, nPlayerID)
+                end
              end
+
 		  end
 	    end
         local sortedTeam={}
@@ -605,15 +623,23 @@ end
 -- Update player labels and the scoreboard
 ---------------------------------------------------------------------------
 function GameMode:OnThink()
-	for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
-		self:UpdatePlayerColor( nPlayerID )
-	end
-	
-	self:UpdateScoreboardAndVictory()
-	-- Stop thinking if game is paused
-	if GameRules:IsGamePaused() == true then
+
+    -- Stop thinking if game is paused
+    if GameRules:IsGamePaused() == true then
         return 1
     end
+	
+    xpcall(
+    function()
+        GameMode:UpdateScoreboardAndVictory()
+    end,
+    function(e)
+        --每一百次上传一次错误日志
+        if math.mod(GameRules.nFatalErrorTimes,100)==1 then
+           Server:UploadErrorLog(e)
+        end
+        GameRules.nFatalErrorTimes=GameRules.nFatalErrorTimes+1
+    end)
 
 	return 1
 end

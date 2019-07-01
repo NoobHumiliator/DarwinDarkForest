@@ -273,7 +273,7 @@ def createNewUnit(originalUnitName,suffix,map):
           braceNumber=braceNumber-1
        #遍历需要替换的数组
        for key in replaceMap:
-       	if key in line:
+       	if (key in line) and ("ItemDef" in line):
        	   line=line.replace(key,replaceMap[key])
        if braceNumber==0:
           holdingUnit=None

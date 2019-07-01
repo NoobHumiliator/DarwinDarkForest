@@ -4415,17 +4415,17 @@
             "01"
             {
                 "var_type"                     "FIELD_FLOAT"
-                "shard_damage"                 "4 7 10 14 18 23 28 34"
+                "shard_damage"                 "7 11 17 25 35 47 34 59"
             }
             "02"
             {
                 "var_type"                     "FIELD_FLOAT"
-                "shard_health"                 "100 150 200 250 350 450 550 650"
+                "shard_health"                 "100 150 220 310 430 580 750 940"
             }
             "03"
             {
                 "var_type"                     "FIELD_FLOAT"
-                "hurl_boulder_level"           "0 0 1 1 2 2 3 3"
+                "hurl_boulder_level"           "0 0 1 2 3 4 5 6"
             }
             "04"
             {
@@ -6634,7 +6634,7 @@
             "03"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "attack_speed_reduction"    "10 18 26 34 42 50"
+                "attack_speed_reduction"    "10 16 22 28 36 42"
             }
             "04"
             {
@@ -6675,7 +6675,7 @@
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "count"                 "2 4 6 8 10 12 14 16"
+                "count"                 "2 3 4 5 6 7 8 9"
             }
             "03"
             {
@@ -6690,12 +6690,12 @@
             "05"
             {
                 "var_type"              "FIELD_INTEGER"
-                "max_charges"           "2 4 6 8 10 12 14 16"
+                "max_charges"           "2 3 4 5 6 7 8 9"
             }
             "06"
             {
                 "var_type"              "FIELD_FLOAT"
-                "charge_restore_time"   "45.0"
+                "charge_restore_time"   "30.0"
             }
             "07"
             {
@@ -7959,6 +7959,47 @@
                 "var_type"                  "FIELD_FLOAT"
                 "nDurable"                  "3 6 9 12 15 18"
             }
+        }
+    }
+
+
+    "eidolon_duplicate_lua"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "creature_ability/eidolon_duplicate_lua"
+        "AbilityTextureName"            "enigma_demonic_conversion"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "MaxLevel"                      "7"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "count"                     "12 11 10 9 8 7 6"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "illusion_damage_outgoing"  "50 55 60 65 70 75 80"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "illusion_damage_incoming"  "200"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "duration"                  "20"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nMystery"                  "4 8 12 16 20 24 28"
+            }    
         }
     }
 

@@ -1618,6 +1618,19 @@
     "DOTA_Tooltip_Ability_mars_gods_rebuke_nFury"                              "<font color='#eb6877'>狂怒：</font>"
     "DOTA_Tooltip_Ability_mars_gods_rebuke_nDurable"                           "<font color='#f8b551'>坚韧：</font>"
 
+    "DOTA_Tooltip_modifier_respawn_invulnerable"                               "复活保护"
+    "DOTA_Tooltip_modifier_respawn_invulnerable_Description"                   "无敌，对敌人造成任意伤害立即取消此效果。"
+
+
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua"                                "虚灵分裂"
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_Description"                    "在反复经过几次成功的攻击后，虚灵会分裂。"
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_count"                          "分裂所需攻击次数"
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_duration"                       "分裂体持续时间："
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_illusion_damage_outgoing"       "%分裂体继承攻击力："
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_illusion_damage_incoming"       "%分裂体承受伤害："
+    
+    "DOTA_Tooltip_modifier_eidolon_duplicate_passive"                           "虚灵分裂"
+    
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"

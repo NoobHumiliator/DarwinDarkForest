@@ -28,7 +28,6 @@ function HandBook:DealCreatureData()
             end
         end
         CustomNetTables:SetTableValue("hand_book", key,result[key])
-        PrintTable(result[key])
     end
 end
 

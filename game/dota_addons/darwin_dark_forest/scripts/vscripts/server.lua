@@ -210,3 +210,20 @@ function Server:SubmitTaobaoCode(keys)
         end
     end)
 end
+
+
+function Server:UploadErrorLog(sMessage)
+
+    local request = CreateHTTPRequestScriptVM("POST", sServerAddress .. "uploaderrorlog")
+    request:SetHTTPRequestGetOrPostParameter("dedicated_server_key",GetDedicatedServerKey("K4gN+u422RN2X4DubcLylw=="));
+    request:SetHTTPRequestGetOrPostParameter("player_steam_ids",GameRules.sValidePlayerSteamIds);
+    request:SetHTTPRequestGetOrPostParameter("log_message",sMessage);
+
+    request:Send(function(result)
+        if result.StatusCode == 200 and result.Body~=nil then
+            print("UploadErrorLog, Success"..result.Body)       
+        else
+            print("UploadErrorLog, Fail:"..result.Body)       
+        end
+    end)
+end

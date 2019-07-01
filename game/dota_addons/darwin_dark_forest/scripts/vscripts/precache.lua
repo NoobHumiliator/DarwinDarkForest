@@ -2,7 +2,9 @@ local particles = {
     "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_necro_souls_hero.vpcf",    
     "particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf",
     "particles/units/heroes/hero_disruptor/disruptor_kineticfield.vpcf",
-    "particles/items2_fx/veil_of_discord.vpcf"
+    "particles/items2_fx/veil_of_discord.vpcf",
+    "particles/units/heroes/hero_omniknight/omniknight_guardian_angel_omni.vpcf",
+    "particles/units/heroes/hero_omniknight/omniknight_guardian_angel_halo_buff.vpcf"
 }
 
 local sounds = {
@@ -42,7 +44,9 @@ local precacheHeroes = {
    "clinkz",
    "phantom_assassin",
    "necrolyte",
-   "magnataur"
+   "magnataur",
+   "mars",
+   "ember_spirit"
 }
 
 

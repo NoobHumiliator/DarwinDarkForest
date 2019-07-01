@@ -1579,6 +1579,19 @@
     "DOTA_Tooltip_Ability_spectre_haunt_lua_illusion_damage_incoming"          "%HAUNT DAMAGE TAKEN:"
     "DOTA_Tooltip_Ability_spectre_haunt_lua_nMystery"                          "<font color='#e9c2ff'>Mystery:</font>"
 
+    "DOTA_Tooltip_modifier_respawn_invulnerable"                               "Respwan Protector"
+    "DOTA_Tooltip_modifier_respawn_invulnerable_Description"                   "Invulnerable, this buff will cancel as soon as player deal any damage."
+    
+
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua"                                "Eidolon Multiply"
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_Description"                    "Eidolon repeated successful attacks cause them to multiply"
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_count"                          "Attacks to Multiply:"
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_duration"                       "DURATION:"
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_illusion_damage_outgoing"       "%DAMAGE PUTPUT:"
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_illusion_damage_incoming"       "%DAMAGE TAKEN:"
+    
+    "DOTA_Tooltip_modifier_eidolon_duplicate_passive"                           "Eidolon Multiply"
+
 
 
     //EconUnitBegins

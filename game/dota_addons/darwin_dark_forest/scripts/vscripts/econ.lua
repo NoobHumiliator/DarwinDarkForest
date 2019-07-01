@@ -247,23 +247,26 @@ end
 
 function Econ:EquipParticleEcon(sItemName,nPlayerID)
 
-    local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
-    
-    local vCurrentEconParticleIndexs={}
+    if PlayerResource:GetPlayer(nPlayerID) then
 
-    for _,sParticle in pairs(self.vParticleMap[sItemName]) do
-        if hHero and hHero.hCurrentCreep and hHero.hCurrentCreep:IsAlive() then
+        local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()  
+        local vCurrentEconParticleIndexs={}
 
-            local nParticleAttach = Econ:ChooseParticleAttach(sItemName)
-            local nParticleIndex = ParticleManager:CreateParticle(sParticle,nParticleAttach,hHero.hCurrentCreep)
-            ParticleManager:SetParticleControlEnt(nParticleIndex,0,hHero.hCurrentCreep,nParticleAttach,"follow_origin",hHero.hCurrentCreep:GetAbsOrigin(),true)
-            
-            Econ:SetControllPoints(nParticleIndex,sItemName)
-            table.insert(vCurrentEconParticleIndexs,nParticleIndex)
+        for _,sParticle in pairs(self.vParticleMap[sItemName]) do
+            if hHero and hHero.hCurrentCreep and hHero.hCurrentCreep:IsAlive() then
+
+                local nParticleAttach = Econ:ChooseParticleAttach(sItemName)
+                local nParticleIndex = ParticleManager:CreateParticle(sParticle,nParticleAttach,hHero.hCurrentCreep)
+                ParticleManager:SetParticleControlEnt(nParticleIndex,0,hHero.hCurrentCreep,nParticleAttach,"follow_origin",hHero.hCurrentCreep:GetAbsOrigin(),true)
+                
+                Econ:SetControllPoints(nParticleIndex,sItemName)
+                table.insert(vCurrentEconParticleIndexs,nParticleIndex)
+            end
         end
+        Econ.vPlayerData[nPlayerID].sCurrentParticleEconItemName=sItemName
+        Econ.vPlayerData[nPlayerID].vCurrentEconParticleIndexs=vCurrentEconParticleIndexs
+
     end
-    Econ.vPlayerData[nPlayerID].sCurrentParticleEconItemName=sItemName
-    Econ.vPlayerData[nPlayerID].vCurrentEconParticleIndexs=vCurrentEconParticleIndexs
 
 end
 
@@ -384,5 +387,3 @@ function Econ:ReplaceUnitModel(hUnit,sModelName)
     hUnit:SetModelScale(flModelScale)
 
 end
-
-

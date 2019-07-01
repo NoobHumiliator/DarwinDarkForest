@@ -1,5 +1,6 @@
 --[[ events.lua ]]
 LinkLuaModifier( "modifier_zero_cooldown_and_mana_cost", "modifiers/modifier_zero_cooldown_and_mana_cost", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_respawn_invulnerable", "modifiers/modifier_respawn_invulnerable", LUA_MODIFIER_MOTION_NONE )
 
 ---------------------------------------------------------------------------
 -- Event: Game state change handler
@@ -116,7 +117,13 @@ function GameMode:OnPlayerPickHero(keys)
     hHero.nCurrentCreepLevel=1
     --稍等英雄位置落地 再进化
     Timers:CreateTimer(FrameTime(), function()
-            Evolve(nPlayerId,hHero)
+             xpcall(
+              function()
+                  Evolve(nPlayerId,hHero)
+              end,
+              function(e)
+                  Server:UploadErrorLog(e)
+            end)
         end
     )
 end
@@ -290,7 +297,7 @@ function GameMode:OnEntityKilled(keys)
           
 
           --重生前的0.1秒 将出身地随机
-          Timers:CreateTimer(4.9, function()
+          Timers:CreateTimer(4.6, function()
                  GameMode:PutStartPositionToRandomPosForTeam(hHero:GetTeamNumber());
               end
           )
@@ -337,7 +344,15 @@ function LevelUpAndEvolve(nPlayerId,hHero)
 
     --由于进化位置是
     --GameMode:PutStartPositionToLocation(hHero,hHero:GetAbsOrigin())
-    Evolve(nPlayerId,hHero)
+    
+     --关键函数包起来
+      xpcall(
+      function()
+          Evolve(nPlayerId,hHero)
+      end,
+      function(e)
+          Server:UploadErrorLog(e)
+      end)
 
     --进化完了播放升级粒子特效
     local nLevelUpParticleIndex = ParticleManager:CreateParticle("particles/econ/events/ti6/hero_levelup_ti6_godray.vpcf", PATTACH_ABSORIGIN_FOLLOW, hHero.hCurrentCreep)
@@ -411,7 +426,19 @@ function GameMode:OnNPCSpawned( event )
         --计算等级
         local nNewLevel=CalculateNewLevel(hSpawnedUnit)
         hSpawnedUnit.nCurrentCreepLevel=nNewLevel
-        Evolve(nPlayerId,hSpawnedUnit)
+        
+        --关键函数包起来
+        xpcall(
+        function()
+            local hNewCreep=Evolve(nPlayerId,hSpawnedUnit)           
+            local flDuration = CalculateInvulnerableDuration(hSpawnedUnit)
+            hNewCreep:AddNewModifier(hNewCreep, nil, "modifier_respawn_invulnerable", {duration=flDuration})
+        end,
+        function(e)
+            Server:UploadErrorLog(e)
+        end)
+
+
 
          --将镜头定位到重生英雄，然后放开
         PlayerResource:SetCameraTarget(nPlayerId,hSpawnedUnit)
@@ -511,6 +538,7 @@ function GameMode:OnPlayerSay(keys)
              if nNewLevel~=hHero.nCurrentCreepLevel and hHero:IsAlive() then
                 
                 hHero.nCurrentCreepLevel=nNewLevel
+
                 Evolve(nPlayerId,hHero)
 
                 --进化完了播放升级粒子特效
@@ -716,7 +744,7 @@ function CalculateExpLostRatio(hHero)
     --损失经验率
     local flExpLoseRatio = 0.5
 
-    if  GameRules.nAverageLevel then
+    if  GameRules.nAverageLevel  and hHero.hCurrentCreep and not hHero.hCurrentCreep:IsNull()  then
         
         if hHero.hCurrentCreep:GetLevel() >= GameRules.nAverageLevel+2 then
            flExpLoseRatio=0.5
@@ -746,6 +774,9 @@ function CalculateExpLostRatio(hHero)
         if hHero.hCurrentCreep:GetLevel()==10 then
             flExpLoseRatio=0.35    
         end
+        if hHero.hCurrentCreep:GetLevel()==11 then
+            flExpLoseRatio=0.006 
+        end
     end
 
     print("AverageLevel: "..GameRules.nAverageLevel.."flExpLoseRatio: "..flExpLoseRatio)
@@ -757,12 +788,49 @@ function GameMode:RequestCreatureIndex(keys)
     local nPlayerID = keys.playerId
     local hHero = PlayerResource:GetPlayer(nPlayerID):GetAssignedHero()
     
-    if hHero and hHero.hCurrentCreep then
+    if hHero and hHero.hCurrentCreep and not hHero.hCurrentCreep:IsNull()  then
         print("Request Creature Index from Sever"..nPlayerID)
         CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerID), {creepIndex=hHero.hCurrentCreep:GetEntityIndex(),creepName=hHero.hCurrentCreep:GetUnitName()} )
     end
     
-
 end
 
 
+
+
+--计算复活无敌时间
+function CalculateInvulnerableDuration(hHero)
+              
+    --无敌时间
+    local flDuration = 3.5
+
+    if  GameRules.nAverageLevel and hHero.hCurrentCreep and not hHero.hCurrentCreep:IsNull() then
+        
+        if hHero.hCurrentCreep:GetLevel() >= GameRules.nAverageLevel+2 then
+           flDuration=0.3
+        end
+
+        if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel+1 then
+           flDuration=1
+        end
+
+        if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel then
+           flDuration=3.5
+        end
+
+        if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-1 then
+           flDuration=5
+        end
+
+        if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-2 then
+           flDuration=7
+        end
+
+        if hHero.hCurrentCreep:GetLevel() <= GameRules.nAverageLevel-3 then
+           flDuration=9
+        end
+        
+    end
+
+    return  flDuration
+end

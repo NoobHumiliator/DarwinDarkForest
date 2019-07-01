@@ -108,16 +108,6 @@ function Evolve (nPlayerId,hHero)
        hUnit:FindAbilityByName("ultimate_stage_reverse_polarity"):SetLevel(1)
     end
 
-    --继承粒子特效
-    if Econ.vPlayerData[nPlayerId].sCurrentParticleEconItemName then
-         Econ:EquipParticleEcon(Econ.vPlayerData[nPlayerId].sCurrentParticleEconItemName,nPlayerId)
-    end
-
-    --修改模型
-    if Econ.vPlayerData[nPlayerId].vSkinInfo and Econ.vPlayerData[nPlayerId].vSkinInfo[sUnitToEnvolve]~=nil then
-         Econ:ReplaceUnitModel(hUnit,Econ.vPlayerData[nPlayerId].vSkinInfo[sUnitToEnvolve])
-    end
-
     --冒泡排序交换技能 把被动技能下沉
     for i=0,24 do
         for j=0,24-i do
@@ -134,6 +124,16 @@ function Evolve (nPlayerId,hHero)
 
     --计算平均等级
     CountAverageLevel()
+
+    --继承粒子特效
+    if Econ.vPlayerData[nPlayerId].sCurrentParticleEconItemName then
+         Econ:EquipParticleEcon(Econ.vPlayerData[nPlayerId].sCurrentParticleEconItemName,nPlayerId)
+    end
+
+    --修改模型
+    if Econ.vPlayerData[nPlayerId].vSkinInfo and Econ.vPlayerData[nPlayerId].vSkinInfo[sUnitToEnvolve]~=nil then
+         Econ:ReplaceUnitModel(hUnit,Econ.vPlayerData[nPlayerId].vSkinInfo[sUnitToEnvolve])
+    end
 
     return hUnit
 
@@ -163,8 +163,6 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
     --因为游戏机制移除的
     hHero.hCurrentCreep.bKillByMech=true
 
-    --hHero.hCurrentCreep:ForceKill(false)
-
     --连环删除大法
     local toKillUnit=hHero.hCurrentCreep
 
@@ -177,11 +175,10 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
            end
         end
     )
-
+    --闪退 弃用
     --UTIL_Remove(  hHero.hCurrentCreep )
   end
-
-
+  
   local hUnit = CreateUnitByName(sUnitname,hHero:GetOrigin(),true,hHero, hHero, hHero:GetTeamNumber())
   
   --设置视野范围
@@ -199,9 +196,11 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
   hHero.hCurrentCreep=hUnit
   --玩家的主控生物
   hUnit.bMainCreep=true
-  hHero.nCurrentCreepLevel=hUnit:GetLevel()
 
-  
+  if hUnit:GetLevel() then
+     hHero.nCurrentCreepLevel=hUnit:GetLevel()
+  end
+
   --设置技能等级
   for i=1,20 do
     local hAbility=hUnit:GetAbilityByIndex(i-1)
