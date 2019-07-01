@@ -12,40 +12,36 @@ end
 
 --------------------------------------------------------------------------------
 
-function zuus_cloud_lua:OnSpellStart()	
+function clinkz_burning_army_lua:OnSpellStart()	
 	if IsServer() then
  
-        local nCount=0
 		self.spawn_interval = self:GetSpecialValueFor( "spawn_interval" )
 		self.count = self:GetSpecialValueFor( "count" )
+       	self.range = self:GetSpecialValueFor( "range" )
 
 
+		local vForwardVector =  (self:GetCaster()-self:GetCursorPosition()):Normalized()
+        
+        local flDistance = self.range/(self.count-1)
+
+        local nCurrentCount=0
         Timers:CreateTimer(self.spawn_interval, function()
       
-        	nCount=nCount+1
-	    	local hArcher = CreateUnitByName( "npc_dota_creature_clinkz_archer", self:GetCursorPosition(), true, self:GetCaster(), self:GetCaster(), self:GetCaster():GetTeamNumber() )
-	        
-	        if nCount==self.count then
+        	local vPosition = nCurrentCount*vForwardVector*flDistance+self:GetCursorPosition()
+	    	local hArcher = CreateUnitByName( "npc_dota_creature_clinkz_archer", vPosition, true, self:GetCaster(), self:GetCaster(), self:GetCaster():GetTeamNumber() )
+	        hArcher:SetOwner( self:GetCaster() )
+            hArcher:SetControllableByPlayer(nil, false)
+            hArcher:AddNewModifier( self:GetCaster(), self, "modifier_clinkz_burning_army_lua", {} )
+		    hArcher:AddNewModifier( self:GetCaster(), self, "modifier_kill", { duration = self:GetSpecialValueFor( "duration" ) } )
+            FindClearSpaceForUnit( hArcher, vPosition, true )
+	        nCurrentCount=nCurrentCount+1
+	        if nCurrentCount==self.count then
 	          return nil 
 	        else
 	          return self.spawn_interval
 	        end
-
 	    end)
 
-		local hCloud = CreateUnitByName( "npc_dota_zeus_cloud", self:GetCursorPosition(), true, self:GetCaster(), self:GetCaster(), self:GetCaster():GetTeamNumber() )
-		
-		local nParticle = ParticleManager:CreateParticle("particles/units/heroes/hero_zeus/zeus_cloud.vpcf", PATTACH_ABSORIGIN_FOLLOW, hCloud)
-		ParticleManager:SetParticleControl(nParticle, 0, Vector(self:GetCursorPosition().x, self:GetCursorPosition().y, 450))
-		ParticleManager:SetParticleControl(nParticle, 1, Vector(radius, 0, 0))
-		ParticleManager:SetParticleControl(nParticle, 2, Vector(self:GetCursorPosition().x, self:GetCursorPosition().y, self:GetCursorPosition().z + 450))	
-
-
-		hCloud:SetOwner( self:GetCaster() )
-		hCloud:SetControllableByPlayer( self:GetCaster():GetPlayerOwnerID(), false )
-		hCloud:AddNewModifier( self:GetCaster(), self, "modifier_zuus_cloud_lua", {} )
-		hCloud:AddNewModifier( self:GetCaster(), self, "modifier_kill", { duration = self:GetSpecialValueFor( "cloud_duration" ) } )
-		FindClearSpaceForUnit( hCloud, self:GetCursorPosition(), true )
 	end
 end
 

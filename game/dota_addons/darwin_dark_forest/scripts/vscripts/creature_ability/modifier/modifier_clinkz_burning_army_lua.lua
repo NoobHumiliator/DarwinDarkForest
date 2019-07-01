@@ -1,29 +1,25 @@
-modifier_zuus_cloud_lua =  class({})
+modifier_clinkz_burning_army_lua =  class({})
 
-function modifier_zuus_cloud_lua:IsDebuff()	
+function modifier_clinkz_burning_army_lua:IsDebuff()	
 	return false 
 end
 
-function modifier_zuus_cloud_lua:IsHidden() 				
-	return false
+function modifier_clinkz_burning_army_lua:IsHidden() 				
+	return true
 end
 
-function modifier_zuus_cloud_lua:IsPurgable() 				
+function modifier_clinkz_burning_army_lua:IsPurgable() 				
 	return false 
 end
 
-function modifier_zuus_cloud_lua:GetTexture()
-    return "zuus_cloud"
-end
 
-function modifier_zuus_cloud_lua:OnCreated()
+function modifier_clinkz_burning_army_lua:OnCreated()
 	if IsServer() then
 		self.cloud_bolt_interval = self:GetAbility():GetSpecialValueFor( "cloud_bolt_interval" )
 		self.cloud_bolt_damage = self:GetAbility():GetSpecialValueFor( "cloud_bolt_damage" )
 		self.radius = self:GetAbility():GetSpecialValueFor( "radius" )
 	    self:StartIntervalThink( self.cloud_bolt_interval )
 	end
-	
 end
 
 function modifier_zuus_cloud_lua:OnIntervalThink()
