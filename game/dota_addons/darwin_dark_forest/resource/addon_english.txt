@@ -1599,6 +1599,8 @@
     "econ_barren_crown"                                                         "Barren Crown"
     "econ_barren_vector"                                                        "Barren Vector"
 
+    "econ_wan_bu_liao_la"                                                       "Wan Bu Liao La"
+    "econ_gao_fu_shuai"                                                         "Gao Fu Shuai"
 
 
     //EconUnitBegins
@@ -1848,6 +1850,18 @@
 	"npc_dota_creature_troll_warlord_bitter_lineage"                  "Troll Warlord"
 	"npc_dota_creature_troll_warlord_icewrack_marauder_bitter_lineage"                  "Icewrack Marauder"
 	"npc_dota_creature_troll_plunder_of_the_savage_monger_bitter_lineage"                  "Troll Arena Champion"
+	"npc_dota_creature_clinkz_maraxiforms_ire"                  "Clinkz"
+	"npc_dota_creature_clinkz_scorched_fletcher_maraxiforms_ire"                  "Scorched Fletcher"
+	"npc_dota_creature_clinkz_compendium_scorched_fletcher_maraxiforms_ire"                  "Compendium Scorched Fletcher"
+	"npc_dota_creature_sand_king_barren_crown"                  "Sand King"
+	"npc_dota_creature_sand_king_barren_vector"                  "Sand King"
+	"npc_dota_creature_sand_king_barren_crown_barren_vector"                  "Sand King"
+	"npc_dota_creature_sand_king_scouring_dunes_barren_crown"                  "Scouring Dunes"
+	"npc_dota_creature_sand_king_scouring_dunes_barren_vector"                  "Scouring Dunes"
+	"npc_dota_creature_sand_king_scouring_dunes_barren_crown_barren_vector"                  "Scouring Dunes"
+	"npc_dota_creature_sand_king_kray_legions_barren_crown"                  "Kray Legions"
+	"npc_dota_creature_sand_king_kray_legions_barren_vector"                  "Kray Legions"
+	"npc_dota_creature_sand_king_kray_legions_barren_crown_barren_vector"                  "Kray Legions"
 	//PlayerUnitBegins
     "npc_dota_creature_player_summoned_familiar"                                           "Familiar"
     "npc_dota_creature_player_wraith_warrior"                                              "Wraith Warrior"

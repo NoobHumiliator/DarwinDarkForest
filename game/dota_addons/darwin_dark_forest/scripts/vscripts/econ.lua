@@ -36,8 +36,8 @@ Econ.vKillSoundMap ={
     zai_jian_le_bao_bei="soundboard.zai_jian_le_bao_bei",
     gan_ma_ne_xiong_di="soundboard.gan_ma_ne_xiong_di",
     lian_dou_xiu_wai_la="soundboard.lian_dou_xiu_wai_la",
-    wan_bu_liao_la="soundboard.wan_bu_liao_la"
-    gao_fu_shuai="soundboard.gao_fu_shuai"
+    wan_bu_liao_la="soundboard.wan_bu_liao_la",
+    gao_fu_shuai="soundboard.gao_fu_shuai",
 }
 
 

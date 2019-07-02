@@ -4860,8 +4860,8 @@
 		
         "vscripts"					"creap_ai.lua"
 
-		"nFury"                     "1"
-		"nDurable"                  "4"
+		"nFury"                     "3"
+		"nDurable"                  "5"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -5379,8 +5379,8 @@
 		"HasInventory"				"1"
 		
         "vscripts"					"creap_ai.lua"
-		"nFury"                     "2"
-		"nDurable"                  "6"
+		"nFury"                     "4"
+		"nDurable"                  "8"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -6052,8 +6052,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 		
-		"nDecay"                    "8"
-		"nDurable"                  "2"
+		"nDecay"                    "6"
+		"nDurable"                  "6"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -7665,8 +7665,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nFury"                     "3"
-        "nDurable"                  "8"
+		"nFury"                     "5"
+        "nDurable"                  "11"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -9262,8 +9262,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nDecay"                     "8"
-		"nDurable"                   "3"
+		"nDecay"                    "8"
+		"nDurable"                  "8"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -10091,8 +10091,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nHunt"                     "5"
-		"nMystery"                  "10"
+		"nHunt"                     "14"
+		"nMystery"                  "6"
 	
 		// Abilities
 		//----------------------------------------------------------------
@@ -11328,8 +11328,8 @@
 		"HasInventory"				"1"
 
 
-		"nDurable"                  "5"
-        "nDecay"                    "12"
+		"nDurable"                  "10"
+        "nDecay"                    "10"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -11573,8 +11573,8 @@
 
 		"HasInventory"				"1"
 
-		"nFury"                     "4"
-        "nDurable"                  "10"
+		"nFury"                     "7"
+        "nDurable"                  "13"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -12727,8 +12727,8 @@
 
 		"HasInventory"				"1"
 
-		"nHunt"                     "6"
-		"nMystery"                  "12"
+		"nHunt"                     "16"
+		"nMystery"                  "8"
 	
 		// Abilities
 		//----------------------------------------------------------------
@@ -13078,8 +13078,8 @@
 
 		"HasInventory"				"1"
          
-        "nDurable"                  "12"
-        "nFury"                     "6"
+        "nDurable"                  "16"
+        "nFury"                     "8"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -13143,7 +13143,7 @@
 	"npc_dota_creature_ogreseal_undead_1"
 	{
 		// General
-		// 
+		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/creeps/ice_biome/ogreseal/ogreseal_undead.vmdl"	// Model.
 		"SoundSet"					"n_creep_Melee"
@@ -13154,7 +13154,7 @@
 
 		"HasInventory"				"1"
 
-		"nDurable"                  "6"
+		"nDurable"                  "12"
         "nDecay"                    "12"
 
 		// Abilities
@@ -13236,9 +13236,9 @@
 
 		"HasInventory"				"1"
          
-        "nFury"                     "7"
-        "nElement"                  "7"
-        "nHunt"                     "7"
+        "nFury"                     "8"
+        "nElement"                  "8"
+        "nHunt"                     "8"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -14068,9 +14068,9 @@
 
 		"HasInventory"				"1"
 
-		"nMystery"                  "7"
-		"nDurable"                  "7"
-		"nFury"                     "7"
+		"nMystery"                  "8"
+		"nDurable"                  "8"
+		"nFury"                     "8"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -14386,7 +14386,7 @@
 
 		"HasInventory"				"1"
          
-        "nDecay"                   "24"
+        "nDecay"                     "24"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -14457,9 +14457,9 @@
 
 		"HasInventory"				"1"
          
-        "nDecay"                    "7"
-        "nElement"                  "7"
-        "nDurable"                  "7"
+        "nDecay"                    "8"
+        "nElement"                  "8"
+        "nDurable"                  "8"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -14531,8 +14531,8 @@
 
 		"HasInventory"				"1"
          
-        "nDecay"                    "6"
-        "nFury"                     "10"
+        "nDecay"                    "8"
+        "nFury"                     "16"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -14903,6 +14903,10 @@
 				{
 					"ItemDef"			"61"
 				}
+				"Wearable7"
+				{
+					"ItemDef"			"523"
+				}
 	        }
 		}
 	}
@@ -14920,8 +14924,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nElement"                  "14"
-        "nMystery"                  "14"
+        "nElement"                  "15"
+        "nMystery"                  "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -15230,9 +15234,9 @@
 
 		"HasInventory"				"1"
 
-		"nMystery"                  "8"
-		"nDurable"                  "8"
-		"nFury"                     "8"
+		"nMystery"                  "10"
+		"nDurable"                  "10"
+		"nFury"                     "10"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -15449,8 +15453,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nHunt"                     "7"
-		"nMystery"                  "14"
+		"nHunt"                     "20"
+		"nMystery"                  "10"
 	
 		// Abilities
 		//----------------------------------------------------------------
@@ -15542,86 +15546,7 @@
 		}
 	}
 
-	"npc_dota_creature_ogreseal_undead_2"
-	{
-		// General
-		// 
-		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
-		"Model"						"models/creeps/ice_biome/ogreseal/ogreseal_undead.vmdl"	// Model.
-		"SoundSet"					"n_creep_Melee"
-		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"ModelScale"				"0.8"
-		"Level"						"8"
-		"vscripts"					"creap_ai.lua"
-		"HasInventory"				"1"
-
-		"nDurable"                  "7"
-        "nDecay"                    "14"
-
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"creature_ogreseal_flop"
-		"Ability2"					""
-		"Ability3"					""			// Ability 3.
-		"Ability4"					""			// Ability 4.
-		"Ability5"					""			// Ability 5.
-		"Ability6"					""			// Ability 6 - Extra.
-		"Ability7"					""			// Ability 7 - Extra.
-		"Ability8"					""			// Ability 8 - Extra.
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"8"			// Physical protection.
-		"MagicalResistance"			"0"		// Magical protection.
-
-		// Attack
-		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"115"		// Damage range min.
-		"AttackDamageMax"			"125"		// Damage range max.
-		"AttackRate"				"1.7"
-		"AttackAnimationPoint"		"0.5714"
-		"AttackAcquisitionRange"	"500"
-		"AttackRange"				"180"
-		"ProjectileModel"			""	// Particle system model for projectile.
-		"ProjectileSpeed"			"0"		// Speed of projectile.		     
-
-		// Bounds
-		//----------------------------------------------------------------
-		"RingRadius"				"80"
-		"HealthBarOffset"			"160"
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
-		"MovementSpeed"				"300"		// Speed
-		"MovementTurnRate"			"0.5"		// Turning rate.
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"2700"		// Base health.
-		"StatusHealthRegen"			"13"		    // Health regeneration rate.
-		"StatusMana"				"500"	    // Base mana.
-		"StatusManaRegen"			"1.25"		// Mana regeneration rate.
-
-
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-		
-		// Vision
-		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
-		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
-		
-		// Creature Data
-		//----------------------------------------------------------------------------------------------------------------------
-		"Creature"
-		{
-		}
-	}
 	
-
 	"npc_dota_creature_lich"
 	{
         // General
@@ -15638,8 +15563,8 @@
 		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
          
-        "nElement"                  "14"
-        "nDecay"                    "14"
+        "nElement"                  "15"
+        "nDecay"                    "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -15739,8 +15664,8 @@
 		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
          
-        "nMystery"                  "14"
-        "nFury"                     "14"
+        "nMystery"                  "15"
+        "nFury"                     "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -15839,8 +15764,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nMystery"                  "14"
-        "nDurable"                  "14"
+        "nMystery"                  "15"
+        "nDurable"                  "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -15939,8 +15864,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDecay"                    "14"
-        "nDurable"                  "14"
+        "nDecay"                    "15"
+        "nDurable"                  "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -16155,8 +16080,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
         
-        "nHunt"                     "14"  
-		"nDecay"                    "14"           
+        "nHunt"                     "15"  
+		"nDecay"                    "15"           
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -16249,7 +16174,7 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nDurable"                  "28"
+		"nDurable"                  "30"
          
 		// Abilities
 		//----------------------------------------------------------------
@@ -16321,8 +16246,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDecay"                   "14"
-        "nFury"                    "14"
+        "nDecay"                   "15"
+        "nFury"                    "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -16422,9 +16347,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDecay"                   "8"
-        "nElement"                 "8"
-        "nDurable"                 "8"
+        "nDecay"                    "10"
+        "nElement"                  "10"
+        "nDurable"                  "10"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -16494,9 +16419,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nFury"                    "8"
-        "nElement"                 "8"
-        "nHunt"                    "8"
+        "nFury"                     "10"
+        "nElement"                  "10"
+        "nHunt"                     "10"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -16566,8 +16491,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDurable"                  "14"
-        "nFury"                     "8"
+        "nDurable"                  "20"
+        "nFury"                     "10"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -16745,8 +16670,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nHunt"                     "14"
-        "nFury"                     "14"
+        "nHunt"                     "15"
+        "nFury"                     "15"
   
 		// Abilities
 		//----------------------------------------------------------------
@@ -16859,8 +16784,8 @@
 
 		"HasInventory"				"1"
          
-        "nMystery"                  "8"
-        "nDurable"                  "14"
+        "nMystery"                  "10"
+        "nDurable"                  "20"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -16929,9 +16854,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nElement"                  "8"
-        "nDurable"                  "8"
-        "nFury"                     "8"
+        "nElement"                  "10"
+        "nDurable"                  "10"
+        "nFury"                     "10"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -16999,13 +16924,13 @@
 		"SoundSet"		            "Hero_Undying"
 
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
-		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_undying.vsndevts"
+		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_undying.vsndevts"
 		"Level"						"8"
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDecay"                    "28"
+        "nDecay"                    "30"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -17168,8 +17093,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nDurable"                 "14"
-		"nFury"                    "14"
+		"nDurable"                  "15"
+		"nFury"                     "15"
          
 
 		// Abilities
@@ -17243,7 +17168,7 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nFury"                     "28"
+		"nFury"                     "30"
          
 
 		// Abilities
@@ -17315,7 +17240,7 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nMystery"                  "28"
+		"nMystery"                  "30"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -17408,8 +17333,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nElement"                  "14"
-		"nFury"                     "14"
+		"nElement"                  "15"
+		"nFury"                     "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -17491,7 +17416,7 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nElement"                  "28"
+		"nElement"                  "30"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -17573,8 +17498,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nMystery"                  "14"
-        "nHunt"                     "14"
+		"nMystery"                  "15"
+        "nHunt"                     "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -17681,8 +17606,8 @@
 		"ModelScale" 				"1"
 		"vscripts"					"creap_ai.lua"
 
-		"nMystery"                  "14"
-        "nDecay"                    "14"
+		"nMystery"                  "15"
+        "nDecay"                    "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -17835,6 +17760,10 @@
 				{
 					"ItemDef"			"7348"
 				}
+				"Wearable6"
+				{
+					"ItemDef"			"523"
+				}
 	        }
 		}
 	}
@@ -17851,8 +17780,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nElement"                  "16"
-        "nMystery"                  "16"
+        "nElement"                  "18"
+        "nMystery"                  "18"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -17951,9 +17880,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDecay"                    "10"
-        "nMystery"                  "10"
-        "nDurable"                  "10"
+        "nDecay"                    "12"
+        "nMystery"                  "12"
+        "nDurable"                  "12"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -18156,9 +18085,9 @@
 
 		"HasInventory"				"1"
 
-		"nMystery"                  "10"
-		"nDurable"                  "10"
-		"nFury"                     "10"
+		"nMystery"                  "12"
+		"nDurable"                  "12"
+		"nFury"                     "12"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -18259,8 +18188,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nHunt"                     "16"
-		"nDurable"                  "16"
+		"nHunt"                     "18"
+		"nDurable"                  "18"
 	
 		// Abilities
 		//----------------------------------------------------------------
@@ -18374,8 +18303,8 @@
 		"VoiceFile"		          "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
 		"GameSoundsFile"		  "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
          
-        "nElement"                  "16"
-        "nDecay"                    "16"
+        "nElement"                  "18"
+        "nDecay"                    "18"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -18479,8 +18408,8 @@
 		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
          
-        "nMystery"                  "16"
-        "nFury"                     "16"
+        "nMystery"                  "18"
+        "nFury"                     "18"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -18489,7 +18418,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "5"
+		"AbilitiesLevel"            "4"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -18580,8 +18509,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nMystery"                  "16"
-        "nDurable"                  "16"
+        "nMystery"                  "18"
+        "nDurable"                  "18"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -18683,8 +18612,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDecay"                    "16"
-        "nDurable"                  "16"
+        "nDecay"                    "18"
+        "nDurable"                  "18"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -18903,8 +18832,8 @@
         "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
         "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
 
-        "nHunt"                     "14"  
-		"nDecay"                    "14"           
+        "nHunt"                     "18"
+		"nDecay"                    "18"           
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -18998,9 +18927,9 @@
         "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
         "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
 
-        "nHunt"                     "6"  
-		"nDecay"                    "6"
-		"nFury"                     "6"         
+        "nHunt"                     "12"  
+		"nDecay"                    "12"
+		"nFury"                     "12"      
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -19095,7 +19024,7 @@
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
          
-        "nElement"                  "32"
+        "nElement"                  "36"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -19197,8 +19126,8 @@
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
          
-        "nDecay"                   "16"
-        "nFury"                    "16"
+        "nDecay"                    "18"
+        "nFury"                     "18"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -19293,9 +19222,9 @@
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
          
-        "nDecay"                    "10"
-        "nElement"                  "10"
-        "nDurable"                  "10"
+        "nDecay"                    "12"
+        "nElement"                  "12"
+        "nDurable"                  "12"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -19387,9 +19316,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDurable"                  "10"
-        "nElement"                  "10"
-        "nFury"                     "10"
+        "nDurable"                  "12"
+        "nElement"                  "12"
+        "nFury"                     "12"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -19463,8 +19392,8 @@
 
 		"VoiceFile" 				"soundevents/voscripts/game_sounds_vo_warlock_golem.vsndevts"
   
-        "nFury"                     "16"
-        "nElement"                  "16"
+        "nFury"                     "18"
+        "nElement"                  "18"
 
 
 		// Abilities
@@ -19547,9 +19476,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nFury"                     "10"
-        "nElement"                  "10"
-        "nHunt"                     "10"
+        "nFury"                     "12"
+        "nElement"                  "12"
+        "nHunt"                     "12"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -19622,9 +19551,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDecay"                    "10"
-        "nElement"                  "10"
-        "nHunt"                     "10"
+        "nDecay"                    "12"
+        "nElement"                  "12"
+        "nHunt"                     "12"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -19703,8 +19632,8 @@
 		"ModelScale" 				"1.1"
 		"vscripts"					"creap_ai.lua"
          
-        "nDurable"                  "16"
-        "nElement"                  "16"
+        "nDurable"                  "18"
+        "nElement"                  "18"
 
 
 		// Abilities
@@ -19714,12 +19643,12 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "2"
+		"AbilitiesLevel"            "3"
 
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"3"			// Physical protection.
-		"MagicalResistance"         "30"
+		"MagicalResistance"         "25"
 
 		// Attack
 		//----------------------------------------------------------------
@@ -19800,14 +19729,14 @@
 		"SoundSet"		            "Hero_TrollWarlord"
 
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_troll_warlord.vsndevts"
-		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_troll_warlord.vsndevts"
+		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_troll_warlord.vsndevts"
 		"Level"						"9"
 		"ModelScale" 				"1.2"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nHunt"                    "16"
-        "nFury"                    "16"
+        "nHunt"                    "18"
+        "nFury"                    "18"
   
 		// Abilities
 		//----------------------------------------------------------------
@@ -19918,7 +19847,7 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDurable"                  "32"
+        "nDurable"                  "36"
   
 		// Abilities
 		//----------------------------------------------------------------
@@ -20202,7 +20131,7 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDecay"                    "32"
+        "nDecay"                    "36"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -20274,8 +20203,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nMystery"                  "16"
-        "nDecay"                    "16"
+        "nMystery"                  "18"
+        "nDecay"                    "18"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -20498,7 +20427,7 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nFury"                     "32"
+		"nFury"                     "36"
          
 		// Abilities
 		//----------------------------------------------------------------
@@ -20572,7 +20501,7 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nMystery"                  "32"
+		"nMystery"                  "36"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -20673,8 +20602,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nHunt"                     "16"
-		"nMystery"                  "16"
+		"nHunt"                     "18"
+		"nMystery"                  "18"
 
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_riki.vsndevts"
 		"VoiceFile"	           	"soundevents/voscripts/game_sounds_vo_riki.vsndevts"
@@ -20858,6 +20787,10 @@
 				{
 					"ItemDef"			"7350"
 				}
+				"Wearable6"
+				{
+					"ItemDef"			"523"
+				}
 	        }
 		}
 	}
@@ -20877,8 +20810,8 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nElement"                  "18"
-        "nMystery"                  "18"
+        "nElement"                  "21"
+        "nMystery"                  "21"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -20976,8 +20909,8 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nMystery"                  "18"
-        "nDecay"                    "18"
+        "nMystery"                  "21"
+        "nDecay"                    "21"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -21069,9 +21002,9 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nDurable"                  "12"
-        "nElement"                  "12"
-        "nFury"                     "12"
+        "nDurable"                  "14"
+        "nElement"                  "14"
+        "nFury"                     "14"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -21146,9 +21079,9 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
 
-		"nDecay"                    "12"
-		"nDurable"                  "12"
-		"nHunt"                     "12"
+		"nDecay"                    "14"
+		"nDurable"                  "14"
+		"nHunt"                     "14"
 	
 		// Abilities
 		//----------------------------------------------------------------
@@ -21224,9 +21157,9 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
 
-		"nFury"                     "12"
-		"nDurable"                  "12"
-		"nMystery"                  "12"
+		"nFury"                     "14"
+		"nDurable"                  "14"
+		"nMystery"                  "14"
 	
 		// Abilities
 		//----------------------------------------------------------------
@@ -21308,8 +21241,8 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
 
-		"nHunt"                     "18"
-		"nDurable"                  "18"
+		"nHunt"                     "21"
+		"nDurable"                  "21"
 	
 		// Abilities
 		//----------------------------------------------------------------
@@ -21417,8 +21350,8 @@
 		"VoiceFile"		          "soundevents/voscripts/game_sounds_vo_lich.vsndevts"
 		"GameSoundsFile"		  "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
         
-        "nElement"                  "18"
-        "nDecay"                    "18"
+        "nElement"                  "21"
+        "nDecay"                    "21"
 
         "MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
@@ -21524,8 +21457,8 @@
 		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
          
-        "nMystery"                  "18"
-        "nFury"                     "18"
+        "nMystery"                  "21"
+        "nFury"                     "21"
 
         "MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
@@ -21537,7 +21470,7 @@
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
 
-		"AbilitiesLevel"            "6"
+		"AbilitiesLevel"            "5"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -21633,8 +21566,8 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nMystery"                  "18"
-        "nDurable"                  "18"
+        "nMystery"                  "21"
+        "nDurable"                  "21"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -21732,14 +21665,14 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nDecay"                    "18"
-        "nFury"                     "18"
+        "nDecay"                    "21"
+        "nFury"                     "21"
 
         "MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
 
-        "VoiceFile"		        "soundevents/voscripts/game_sounds_vo_life_stealer.vsndevts"
-		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_life_stealer.vsndevts"
+        "VoiceFile"		            "soundevents/voscripts/game_sounds_vo_life_stealer.vsndevts"
+		"GameSoundsFile"	    	"soundevents/game_sounds_heroes/game_sounds_life_stealer.vsndevts"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -21844,8 +21777,8 @@
         "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_razor.vsndevts"
 
-        "nHunt"                     "18"  
-		"nElement"                  "18"
+        "nHunt"                     "21"  
+		"nElement"                  "21"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -21956,8 +21889,8 @@
         "VoiceFile"				    "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts"
         "GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
 
-        "nHunt"                     "18"  
-		"nDecay"                    "18"
+        "nHunt"                     "21"  
+		"nDecay"                    "21"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -22047,8 +21980,8 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
-		"nHunt"                     "18"
-		"nMystery"                  "18"
+		"nHunt"                     "21"
+		"nMystery"                  "21"
 
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
@@ -22151,9 +22084,9 @@
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
          
-        "nFury"                     "12"
-        "nElement"                  "12"
-        "nHunt"                     "12"
+        "nFury"                     "14"
+        "nElement"                  "14"
+        "nHunt"                     "14"
 
 
         "MinimapIcon"				"minimap_ancient"
@@ -22232,9 +22165,9 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nDecay"                    "12"
-        "nElement"                  "12"
-        "nHunt"                     "12"
+        "nDecay"                    "14"
+        "nElement"                  "14"
+        "nHunt"                     "14"
 
 
 		// Abilities
@@ -22310,8 +22243,8 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nElement"                  "18"
-        "nFury"                     "18"
+        "nElement"                  "21"
+        "nFury"                     "21"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -22543,7 +22476,7 @@
 		"MinimapIconSize"			"350"
 
          
-        "nDurable"                  "36"
+        "nDurable"                  "42"
   
 		// Abilities
 		//----------------------------------------------------------------
@@ -22618,8 +22551,8 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nDurable"                  "18"
-        "nElement"                  "18"
+        "nDurable"                  "21"
+        "nElement"                  "21"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -22722,8 +22655,8 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nHunt"                     "18"
-        "nFury"                     "18"
+        "nHunt"                     "21"
+        "nFury"                     "21"
   
 		// Abilities
 		//----------------------------------------------------------------
@@ -22935,8 +22868,8 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nFury"                     "18"
-        "nDurable"                  "18"
+        "nFury"                     "21"
+        "nDurable"                  "21"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -22950,7 +22883,7 @@
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"14"			// Physical protection.
-		"MagicalResistance"         "30"
+		"MagicalResistance"         "25"
 
 		// Attack
 		//----------------------------------------------------------------
@@ -23051,7 +22984,7 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nDecay"                    "36"
+        "nDecay"                    "42"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -23129,8 +23062,8 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nDecay"                    "18"
-        "nDurable"                  "18"
+        "nDecay"                    "21"
+        "nDurable"                  "21"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -23243,9 +23176,9 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nDecay"                    "12"
-        "nMystery"                  "12"
-        "nDurable"                  "12"
+        "nDecay"                    "14"
+        "nMystery"                  "14"
+        "nDurable"                  "14"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -23324,9 +23257,9 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nDecay"                    "10"
-        "nElement"                  "10"
-        "nDurable"                  "10"
+        "nDecay"                    "14"
+        "nElement"                  "14"
+        "nDurable"                  "14"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -23401,7 +23334,7 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nFury"                     "36"
+        "nFury"                     "42"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -23478,7 +23411,7 @@
 		"MinimapIconSize"			"350"
 
 
-		"nMystery"                  "32"
+		"nMystery"                  "42"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -23579,7 +23512,7 @@
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
          
-        "nElement"                  "36"
+        "nElement"                  "42"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -30641,8 +30574,8 @@
 		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
          
-        "nMystery"                  "14"
-        "nFury"                     "14"
+        "nMystery"                  "15"
+        "nFury"                     "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -32165,14 +32098,14 @@
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
 		"EconUnitFlag"              "1"
-		"ConsideredHero"              "1"
+		"ConsideredHero"            "1"
 		"HasInventory"				"1"
 
 		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
          
-        "nMystery"                  "16"
-        "nFury"                     "16"
+        "nMystery"                  "18"
+        "nFury"                     "18"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -33695,14 +33628,14 @@
 		"ModelScale" 				"1.4"
 		"vscripts"					"creap_ai.lua"
 		"EconUnitFlag"              "1"
-		"ConsideredHero"              "1"
+		"ConsideredHero"            "1"
 		"HasInventory"				"1"
 
 		"VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_faceless_void.vsndevts"
          
-        "nMystery"                  "18"
-        "nFury"                     "18"
+        "nMystery"                  "21"
+        "nFury"                     "21"
 
         "MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
@@ -38356,7 +38289,7 @@
 		"ConsideredHero"              "1"
 		"HasInventory"				"1"
          
-        "nHunt"                     "28"
+        "nHunt"                     "30"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -38454,7 +38387,7 @@
 		"ConsideredHero"              "1"
 		"HasInventory"				"1"
          
-        "nHunt"                     "32"
+        "nHunt"                     "36"
 
         "VoiceFile"		        "soundevents/voscripts/game_sounds_vo_broodmother.vsndevts"
 		"particle_folder"		"particles/units/heroes/hero_broodmother"
@@ -38560,7 +38493,7 @@
 		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_broodmother.vsndevts"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_broodmother.vsndevts"
          
-        "nHunt"                     "36"
+        "nHunt"                     "42"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -38659,8 +38592,8 @@
         "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_razor.vsndevts"
 
-        "nHunt"                     "14"  
-		"nElement"                  "14"
+        "nHunt"                     "15"  
+		"nElement"                  "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -38973,8 +38906,8 @@
         "VoiceFile"				    "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
         "GameSoundsFile"		    "soundevents/voscripts/game_sounds_vo_razor.vsndevts"
 
-        "nHunt"                     "16"  
-		"nElement"                  "16"
+        "nHunt"                     "18"  
+		"nElement"                  "18"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -44309,8 +44242,8 @@
 		"ConsideredHero"              "1"
 		"HasInventory"				"1"
          
-        "nFury"                     "16"
-        "nDurable"                  "16"
+        "nFury"                     "18"
+        "nDurable"                  "18"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -45884,8 +45817,8 @@
 		"ConsideredHero"              "1"
 		"HasInventory"				"1"
          
-        "nDecay"                   "14"
-        "nFury"                    "14"
+        "nDecay"                   "15"
+        "nFury"                    "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -46581,8 +46514,8 @@
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
          
-        "nDecay"                   "16"
-        "nFury"                    "16"
+        "nDecay"                   "18"
+        "nFury"                    "18"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -47267,11 +47200,11 @@
 		"ModelScale" 				"1.3"
 		"vscripts"					"creap_ai.lua"
 		"EconUnitFlag"              "1"
-		"ConsideredHero"              "1"
+		"ConsideredHero"            "1"
 		"HasInventory"				"1"
          
-        "nDecay"                    "18"
-        "nFury"                     "18"
+        "nDecay"                    "21"
+        "nFury"                     "21"
 
         "MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"350"
@@ -48010,8 +47943,8 @@
 		"ConsideredHero"              "1"
 		"HasInventory"				"1"
 
-		"nHunt"                     "14"
-		"nDurable"                  "14"
+		"nHunt"                     "15"
+		"nDurable"                  "15"
 	
 		// Abilities
 		//----------------------------------------------------------------
@@ -49036,8 +48969,8 @@
 		"ConsideredHero"              "1"
 		"HasInventory"				"1"
          
-        "nDurable"                  "14"
-        "nElement"                  "14"
+        "nDurable"                  "15"
+        "nElement"                  "15"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -50308,6 +50241,1267 @@
 				"Wearable4"
 				{
 					"ItemDef"			"12562"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_clinkz_maraxiforms_ire"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/clinkz/clinkz.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Clinkz"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+         
+        "nElement"                  "9"
+        "nFury"                     "9" 
+        "nDecay"                    "10" 
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"clinkz_searing_arrows"			// Ability 1
+		"Ability2"					"clinkz_burning_army_lua"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "4 2"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"145"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"				"350"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_morphling/morphling_base_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1300"		// Speed of projectile.
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2300"
+		"StatusHealthRegen"			"5.75"
+		"StatusMana"				"500"
+		"StatusManaRegen"			"2.5"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"56"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"57"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"58"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"9162"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"60"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"61"
+				}
+				"Wearable7"
+				{
+					"ItemDef"			"523"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_clinkz_scorched_fletcher_maraxiforms_ire"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/clinkz/clinkz.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Clinkz"
+		"Level"						"9"
+		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+         
+        "nElement"                  "10"
+        "nFury"                     "11" 
+        "nDecay"                    "11" 
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"clinkz_searing_arrows"			// Ability 1
+		"Ability2"					"clinkz_burning_army_lua"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5 3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"182"		// Damage range min.
+		"AttackDamageMax"			"199"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"				"500"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_clinkz/clinkz_base_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1300"		// Speed of projectile.
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2900"
+		"StatusHealthRegen"			"6.5"
+		"StatusMana"				"733"
+		"StatusManaRegen"			"1.8"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"7130"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7135"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"9162"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"7142"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7348"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"523"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_clinkz_compendium_scorched_fletcher_maraxiforms_ire"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/clinkz/clinkz.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Clinkz"
+		"Level"						"10"
+		"ModelScale" 				"1.3"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+         
+        "nElement"                  "12"
+        "nFury"                     "12" 
+        "nDecay"                    "12"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"clinkz_searing_arrows"			// Ability 1
+		"Ability2"					"clinkz_burning_army_lua"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6 4"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"236"		// Damage range min.
+		"AttackDamageMax"			"254"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"				"500"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_clinkz/clinkz_base_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1300"		// Speed of projectile.
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3500"
+		"StatusHealthRegen"			"8.75"
+		"StatusMana"				"800"
+		"StatusManaRegen"			"2"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"7345"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7346"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7347"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"9162"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7350"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"523"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_sand_king_barren_crown"
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/sand_king/sand_king.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_SandKing"
+		"Level"						"7"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+         
+        "nHunt"                     "7"
+        "nDurable"                  "7"
+        "nDecay"                    "7"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"sandking_burrowstrike"			// Ability 1
+		"Ability2"					"sandking_epicenter"	        // Ability 2
+		"Ability3"					""	        // Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3 1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"108"		// Damage range min.
+		"AttackDamageMax"			"116"		// Damage range max.
+		"AttackRate"				"1.0"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"135"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"	        
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"360"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"385"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1750"		// Base health.
+		"StatusHealthRegen"			"8"		    // Health regeneration rate.
+		"StatusMana"				"450"		// Base mana.
+		"StatusManaRegen"			"2.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"8074"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"198"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"199"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"200"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"201"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_sand_king_barren_vector"
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/sand_king/sand_king.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_SandKing"
+		"Level"						"7"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+         
+        "nHunt"                     "7"
+        "nDurable"                  "7"
+        "nDecay"                    "7"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"sandking_burrowstrike"			// Ability 1
+		"Ability2"					"sandking_epicenter"	        // Ability 2
+		"Ability3"					""	        // Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3 1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"108"		// Damage range min.
+		"AttackDamageMax"			"116"		// Damage range max.
+		"AttackRate"				"1.0"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"135"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"	        
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"360"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"385"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1750"		// Base health.
+		"StatusHealthRegen"			"8"		    // Health regeneration rate.
+		"StatusMana"				"450"		// Base mana.
+		"StatusManaRegen"			"2.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"180"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"198"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7809"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"200"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"201"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_sand_king_barren_crown_barren_vector"
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/sand_king/sand_king.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"		            "Hero_SandKing"
+		"Level"						"7"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+         
+        "nHunt"                     "7"
+        "nDurable"                  "7"
+        "nDecay"                    "7"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"sandking_burrowstrike"			// Ability 1
+		"Ability2"					"sandking_epicenter"	        // Ability 2
+		"Ability3"					""	        // Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "3 1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"108"		// Damage range min.
+		"AttackDamageMax"			"116"		// Damage range max.
+		"AttackRate"				"1.0"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"135"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			"0"	        
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"360"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"385"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1750"		// Base health.
+		"StatusHealthRegen"			"8"		    // Health regeneration rate.
+		"StatusMana"				"450"		// Base mana.
+		"StatusManaRegen"			"2.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"8074"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"198"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7809"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"200"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"201"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_sand_king_scouring_dunes_barren_crown"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"	                	"models/heroes/sand_king/sand_king.vmdl"
+		"SoundSet"		            "Hero_SandKing"
+
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_sandking.vsndevts"
+
+		"ModelScale"				"1.2"
+		"Level"						"8"
+		"vscripts"					"creap_ai.lua"
+
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+
+		"nHunt"                     "10"
+		"nDurable"                  "10"
+		"nDecay"                    "10"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"sandking_burrowstrike"			
+		"Ability2"					"sandking_epicenter"
+		"Ability3"					""			
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+        "AbilitiesLevel"            "4 2"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"			"10"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"137"		// Damage range min.
+		"AttackDamageMax"			"146"		// Damage range max.
+		"AttackRate"				"1.3"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+		"AttackRange"				"140"		// Range within a target can be attacked.
+		"ProjectileModel"			""	// Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"160"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"380"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2600"		// Base health.
+		"StatusHealthRegen"			"13"		    // Health regeneration rate.
+		"StatusMana"				"500"		// Base mana.
+		"StatusManaRegen"			"1.8"	    // Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+	
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"6610"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"6611"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"6612"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"8074"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"6614"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_sand_king_scouring_dunes_barren_vector"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"	                	"models/heroes/sand_king/sand_king.vmdl"
+		"SoundSet"		            "Hero_SandKing"
+
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_sandking.vsndevts"
+
+		"ModelScale"				"1.2"
+		"Level"						"8"
+		"vscripts"					"creap_ai.lua"
+
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+
+		"nHunt"                     "8"
+		"nDurable"                  "8"
+		"nDecay"                    "8"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"sandking_burrowstrike"			
+		"Ability2"					"sandking_epicenter"
+		"Ability3"					""			
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+        "AbilitiesLevel"            "4 2"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"			"10"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"137"		// Damage range min.
+		"AttackDamageMax"			"146"		// Damage range max.
+		"AttackRate"				"1.3"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+		"AttackRange"				"140"		// Range within a target can be attacked.
+		"ProjectileModel"			""	// Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"160"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"380"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2600"		// Base health.
+		"StatusHealthRegen"			"13"		    // Health regeneration rate.
+		"StatusMana"				"500"		// Base mana.
+		"StatusManaRegen"			"1.8"	    // Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+	
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"6610"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"6611"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7809"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"6613"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"6614"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_sand_king_scouring_dunes_barren_crown_barren_vector"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"	                	"models/heroes/sand_king/sand_king.vmdl"
+		"SoundSet"		            "Hero_SandKing"
+
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_sandking.vsndevts"
+
+		"ModelScale"				"1.2"
+		"Level"						"8"
+		"vscripts"					"creap_ai.lua"
+
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+
+		"nHunt"                     "8"
+		"nDurable"                  "8"
+		"nDecay"                    "8"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"sandking_burrowstrike"			
+		"Ability2"					"sandking_epicenter"
+		"Ability3"					""			
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+        "AbilitiesLevel"            "4 2"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"8"			// Physical protection.
+		"MagicalResistance"			"10"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"137"		// Damage range min.
+		"AttackDamageMax"			"146"		// Damage range max.
+		"AttackRate"				"1.3"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+		"AttackRange"				"140"		// Range within a target can be attacked.
+		"ProjectileModel"			""	// Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"160"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"380"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2600"		// Base health.
+		"StatusHealthRegen"			"13"		    // Health regeneration rate.
+		"StatusMana"				"500"		// Base mana.
+		"StatusManaRegen"			"1.8"	    // Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+	
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"6610"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"6611"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7809"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"8074"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"6614"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_sand_king_kray_legions_barren_crown"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"	                	"models/heroes/sand_king/sand_king.vmdl"
+		"SoundSet"		            "Hero_SandKing"
+
+		"GameSoundsFile"		   "soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
+		"VoiceFile"		           "soundevents/voscripts/game_sounds_vo_sandking.vsndevts"
+
+		"ModelScale"				"1.4"
+		"Level"						"9"
+		"vscripts"					"creap_ai.lua"
+
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+
+		"nHunt"                     "12"
+		"nDurable"                  "12"
+		"nDecay"                    "12"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"sandking_burrowstrike"			
+		"Ability2"					"sandking_epicenter"
+		"Ability3"					""			
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+        "AbilitiesLevel"            "5 3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"10"			// Physical protection.
+		"MagicalResistance"			"15"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"182"		// Damage range min.
+		"AttackDamageMax"			"206"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"150"		// Range within a target can be attacked.
+		"ProjectileModel"			""	// Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"160"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"350"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3400"		// Base health.
+		"StatusHealthRegen"			"17"		    // Health regeneration rate.
+		"StatusMana"				"550"		// Base mana.
+		"StatusManaRegen"			"6"	    // Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+	
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"9429"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"9430"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"9431"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"8074"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"9433"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_sand_king_kray_legions_barren_vector"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"	                	"models/heroes/sand_king/sand_king.vmdl"
+		"SoundSet"		            "Hero_SandKing"
+
+		"GameSoundsFile"		   "soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
+		"VoiceFile"		           "soundevents/voscripts/game_sounds_vo_sandking.vsndevts"
+
+		"ModelScale"				"1.4"
+		"Level"						"9"
+		"vscripts"					"creap_ai.lua"
+
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+
+		"nHunt"                     "10"
+		"nDurable"                  "10"
+		"nDecay"                    "10"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"sandking_burrowstrike"			
+		"Ability2"					"sandking_epicenter"
+		"Ability3"					""			
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+        "AbilitiesLevel"            "5 3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"10"			// Physical protection.
+		"MagicalResistance"			"15"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"182"		// Damage range min.
+		"AttackDamageMax"			"206"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"150"		// Range within a target can be attacked.
+		"ProjectileModel"			""	// Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"160"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"350"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3400"		// Base health.
+		"StatusHealthRegen"			"17"		    // Health regeneration rate.
+		"StatusMana"				"550"		// Base mana.
+		"StatusManaRegen"			"6"	    // Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+	
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"9429"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"9430"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"9431"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"9432"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7809"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_sand_king_kray_legions_barren_crown_barren_vector"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"	                	"models/heroes/sand_king/sand_king.vmdl"
+		"SoundSet"		            "Hero_SandKing"
+
+		"GameSoundsFile"		   "soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
+		"VoiceFile"		           "soundevents/voscripts/game_sounds_vo_sandking.vsndevts"
+
+		"ModelScale"				"1.4"
+		"Level"						"9"
+		"vscripts"					"creap_ai.lua"
+
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+
+		"nHunt"                     "10"
+		"nDurable"                  "10"
+		"nDecay"                    "10"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"sandking_burrowstrike"			
+		"Ability2"					"sandking_epicenter"
+		"Ability3"					""			
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+
+        "AbilitiesLevel"            "5 3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"10"			// Physical protection.
+		"MagicalResistance"			"15"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"182"		// Damage range min.
+		"AttackDamageMax"			"206"		// Damage range max.
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"150"		// Range within a target can be attacked.
+		"ProjectileModel"			""	// Particle system model for projectile.
+		"ProjectileSpeed"			"0"		// Speed of projectile.		
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"160"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"350"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3400"		// Base health.
+		"StatusHealthRegen"			"17"		    // Health regeneration rate.
+		"StatusMana"				"550"		// Base mana.
+		"StatusManaRegen"			"6"	    // Mana regeneration rate.
+
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+	
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"9429"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"9430"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"9431"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"8074"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7809"
 				}
 	        }
 		}
@@ -63565,6 +64759,10 @@
 				{
 					"ItemDef"			"61"
 				}
+				"Wearable7"
+				{
+					"ItemDef"			"523"
+				}
 	        }
 		}
 	}
@@ -66496,6 +67694,10 @@
 				"Wearable5"
 				{
 					"ItemDef"			"7348"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"523"
 				}
 	        }
 		}
@@ -69519,6 +70721,10 @@
 				"Wearable5"
 				{
 					"ItemDef"			"7350"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"523"
 				}
 	        }
 		}

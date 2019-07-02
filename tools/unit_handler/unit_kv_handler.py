@@ -119,6 +119,16 @@ localizeMap={
    'npc_dota_creature_troll_warlord':'巨魔战将',
    'npc_dota_creature_troll_warlord_icewrack_marauder':'巨魔劫掠者',
    'npc_dota_creature_troll_plunder_of_the_savage_monger':'巨魔竞技场冠军',
+
+   'npc_dota_creature_sand_king':'沙王',
+   'npc_dota_creature_sand_king_scouring_dunes':'沙丘之蚀',
+   'npc_dota_creature_sand_king_kray_legions':'鳌虾之王',
+
+   'npc_dota_creature_clinkz':'克林克兹',
+   'npc_dota_creature_clinkz_scorched_fletcher':'闷燃弓手',
+   'npc_dota_creature_clinkz_compendium_scorched_fletcher':'焦燃枯骨',
+   
+
 }
 
 
@@ -169,6 +179,16 @@ localizeMapEn={
    'npc_dota_creature_troll_warlord':'Troll Warlord',
    'npc_dota_creature_troll_warlord_icewrack_marauder':'Icewrack Marauder',
    'npc_dota_creature_troll_plunder_of_the_savage_monger':'Troll Arena Champion',
+
+
+
+   'npc_dota_creature_sand_king':'Sand King',
+   'npc_dota_creature_sand_king_scouring_dunes':'Scouring Dunes',
+   'npc_dota_creature_sand_king_kray_legions':'Kray Legions',
+
+   'npc_dota_creature_clinkz':'Clinkz',
+   'npc_dota_creature_clinkz_scorched_fletcher':'Scorched Fletcher',
+   'npc_dota_creature_clinkz_compendium_scorched_fletcher':'Compendium Scorched Fletcher',
 }
 
 

@@ -13,16 +13,6 @@ function modifier_clinkz_burning_army_lua:IsPurgable()
 end
 
 
-function modifier_clinkz_burning_army_lua:OnCreated()
-	if IsServer() then
-		self.cloud_bolt_interval = self:GetAbility():GetSpecialValueFor( "cloud_bolt_interval" )
-		self.cloud_bolt_damage = self:GetAbility():GetSpecialValueFor( "cloud_bolt_damage" )
-		self.radius = self:GetAbility():GetSpecialValueFor( "radius" )
-	    self:StartIntervalThink( self.cloud_bolt_interval )
-	end
-end
-
-
 function modifier_clinkz_burning_army_lua:DeclareFunctions()
 	local decFuns =
 		{

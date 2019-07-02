@@ -5,6 +5,20 @@ if HandBook == nil then HandBook = class({}) end
 
 local vTypes={"nFury","nDurable","nElement","nHunt","nDecay","nMystery"}
 
+--微调生物的名字
+local vAdjustMap={
+    
+    npc_dota_creature_ogre_mauler_1=true,
+    npc_dota_creature_ogre_mauler_2=true,
+    npc_dota_creature_brute_1=true,
+    npc_dota_creature_brute_2=true,
+    npc_dota_creature_ogre_warlord=true,
+    npc_dota_creature_ogre_warchief=true,
+
+}
+
+
+
 function HandBook:DealCreatureData()
 
     -- 三重遍历
@@ -53,9 +67,8 @@ function HandBook:InsertCombineData(vRawPerkData,sPerkNameCombine)
                    bMeetRequirement=false
                 end
              end
-
-
-             if bMeetRequirement then
+             
+             if bMeetRequirement  and vAdjustMap[sUnitName]==nil then
                  local vPerkData={}
                  for _,v in pairs(SpliteStr(sPerkNameCombine)) do
                      vPerkData[v]=vData[v]
@@ -103,7 +116,7 @@ function HandBook:Adjust(vRawPerkData,sPerkNameCombine)
 
        for sUnitName, vData in pairs(GameRules.vUnitsKV) do
             
-            if sUnitName=="npc_dota_creature_ogre_mauler_1" or  sUnitName=="npc_dota_creature_ogre_mauler_2" or sUnitName=="npc_dota_creature_brute_1" or sUnitName=="npc_dota_creature_brute_2" or sUnitName=="npc_dota_creature_ogre_warlord" or  sUnitName=="npc_dota_creature_ogre_warchief" then
+            if vAdjustMap[sUnitName] then
                
                  local vPerkData={}
                  for _,v in pairs(SpliteStr(sPerkNameCombine)) do

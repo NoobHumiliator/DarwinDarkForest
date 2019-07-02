@@ -43,7 +43,7 @@ function clinkz_burning_army_lua:OnSpellStart()
 
             if hCaster:HasAbility("clinkz_searing_arrows") then
 				local hAbility = hArcher:AddAbility("clinkz_searing_arrows")
-				hArcher:UpgradeAbility(true)
+				hAbility:UpgradeAbility(true)
 				hArcher:SetLevel( hCaster:FindAbilityByName("clinkz_searing_arrows"):GetLevel() )
 				hAbility:ToggleAutoCast()
 			end
