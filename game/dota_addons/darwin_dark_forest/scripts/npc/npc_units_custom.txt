@@ -767,8 +767,8 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"clinkz_searing_arrows"
-		"Ability2"					"clinkz_archer_passive"
+		"Ability1"					""
+		"Ability2"					""
 
 		// Armor
 		//----------------------------------------------------------------
@@ -802,9 +802,9 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"2"
-		"StatusHealthRegen"			"1"
+		"StatusHealthRegen"			"0"
 		"StatusMana"				"500"
-		"StatusManaRegen"			"1"
+		"StatusManaRegen"			"1.25"
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -14807,6 +14807,107 @@
 	//   Level-8
 	//-----------------------------------------
 
+	"npc_dota_creature_clinkz"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/clinkz/clinkz.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Clinkz"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+         
+        "nElement"                  "9"
+        "nFury"                     "9" 
+        "nDecay"                    "10" 
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"clinkz_searing_arrows"			// Ability 1
+		"Ability2"					"clinkz_burning_army_lua"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "4 2"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"145"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"				"350"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_morphling/morphling_base_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1300"		// Speed of projectile.
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2300"
+		"StatusHealthRegen"			"5.75"
+		"StatusMana"				"500"
+		"StatusManaRegen"			"2.5"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"56"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"57"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"58"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"59"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"60"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"61"
+				}
+	        }
+		}
+	}
+
+
 	"npc_dota_creature_morphling_2"
 	{
         // General
@@ -17641,6 +17742,102 @@
 	}
 
 	//Level-9
+
+	"npc_dota_creature_clinkz_scorched_fletcher"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/clinkz/clinkz.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Clinkz"
+		"Level"						"9"
+		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+         
+        "nElement"                  "10"
+        "nFury"                     "11" 
+        "nDecay"                    "11" 
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"clinkz_searing_arrows"			// Ability 1
+		"Ability2"					"clinkz_burning_army_lua"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5 3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"182"		// Damage range min.
+		"AttackDamageMax"			"199"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"				"500"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_clinkz/clinkz_base_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1300"		// Speed of projectile.
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2900"
+		"StatusHealthRegen"			"6.5"
+		"StatusMana"				"733"
+		"StatusManaRegen"			"1.8"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"7130"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7135"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7141"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"7142"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7348"
+				}
+	        }
+		}
+	}
     
     "npc_dota_creature_morphling_lost_star"
 	{
@@ -20569,6 +20766,102 @@
 
 
 	//Level-10
+	"npc_dota_creature_clinkz_compendium_scorched_fletcher"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/clinkz/clinkz.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Clinkz"
+		"Level"						"10"
+		"ModelScale" 				"1.3"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+         
+        "nElement"                  "12"
+        "nFury"                     "12" 
+        "nDecay"                    "12"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"clinkz_searing_arrows"			// Ability 1
+		"Ability2"					"clinkz_burning_army_lua"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6 4"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"236"		// Damage range min.
+		"AttackDamageMax"			"254"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"				"500"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_clinkz/clinkz_base_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1300"		// Speed of projectile.
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3500"
+		"StatusHealthRegen"			"8.75"
+		"StatusMana"				"800"
+		"StatusManaRegen"			"2"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"7345"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7346"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7347"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"7349"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7350"
+				}
+	        }
+		}
+	}
+
 	"npc_dota_creature_morphling_protean_emperor"
 	{
         // General
@@ -63176,6 +63469,107 @@
 	//   Level-8
 	//-----------------------------------------
 
+	"npc_dota_creature_player_clinkz"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/clinkz/clinkz.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Clinkz"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+		"ConsideredHero"             "1"         
+        "nElement"                  "9"
+        "nFury"                     "9" 
+        "nDecay"                    "10" 
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"clinkz_searing_arrows"			// Ability 1
+		"Ability2"					"clinkz_burning_army_lua"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "4 2"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"145"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"				"350"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_morphling/morphling_base_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1300"		// Speed of projectile.
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2300"
+		"StatusHealthRegen"			"5.75"
+		"StatusMana"				"500"
+		"StatusManaRegen"			"2.5"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"56"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"57"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"58"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"59"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"60"
+				}
+				"Wearable6"
+				{
+					"ItemDef"			"61"
+				}
+	        }
+		}
+	}
+
+
 	"npc_dota_creature_player_morphling_2"
 	{
         // General
@@ -66010,6 +66404,102 @@
 	}
 
 	//Level-9
+
+	"npc_dota_creature_player_clinkz_scorched_fletcher"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/clinkz/clinkz.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Clinkz"
+		"Level"						"9"
+		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+		"ConsideredHero"             "1"         
+        "nElement"                  "10"
+        "nFury"                     "11" 
+        "nDecay"                    "11" 
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"clinkz_searing_arrows"			// Ability 1
+		"Ability2"					"clinkz_burning_army_lua"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5 3"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"182"		// Damage range min.
+		"AttackDamageMax"			"199"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"				"500"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_clinkz/clinkz_base_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1300"		// Speed of projectile.
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2900"
+		"StatusHealthRegen"			"6.5"
+		"StatusMana"				"733"
+		"StatusManaRegen"			"1.8"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"7130"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7135"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7141"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"7142"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7348"
+				}
+	        }
+		}
+	}
     
     "npc_dota_creature_player_morphling_lost_star"
 	{
@@ -68938,6 +69428,102 @@
 
 
 	//Level-10
+	"npc_dota_creature_player_clinkz_compendium_scorched_fletcher"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/clinkz/clinkz.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Clinkz"
+		"Level"						"10"
+		"ModelScale" 				"1.3"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+		"ConsideredHero"             "1"         
+        "nElement"                  "12"
+        "nFury"                     "12" 
+        "nDecay"                    "12"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"clinkz_searing_arrows"			// Ability 1
+		"Ability2"					"clinkz_burning_army_lua"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6 4"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"236"		// Damage range min.
+		"AttackDamageMax"			"254"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"				"500"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_clinkz/clinkz_base_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1300"		// Speed of projectile.
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3500"
+		"StatusHealthRegen"			"8.75"
+		"StatusMana"				"800"
+		"StatusManaRegen"			"2"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"7345"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7346"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7347"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"7349"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7350"
+				}
+	        }
+		}
+	}
+
 	"npc_dota_creature_player_morphling_protean_emperor"
 	{
         // General

@@ -35,7 +35,9 @@ Econ.vKillSoundMap ={
     zou_hao_bu_song="soundboard.zou_hao_bu_song",
     zai_jian_le_bao_bei="soundboard.zai_jian_le_bao_bei",
     gan_ma_ne_xiong_di="soundboard.gan_ma_ne_xiong_di",
-    lian_dou_xiu_wai_la="soundboard.lian_dou_xiu_wai_la"
+    lian_dou_xiu_wai_la="soundboard.lian_dou_xiu_wai_la",
+    wan_bu_liao_la="soundboard.wan_bu_liao_la"
+    gao_fu_shuai="soundboard.gao_fu_shuai"
 }
 
 
@@ -107,6 +109,12 @@ Econ.vImmortalUnitMap ={
     savage_mettle={"npc_dota_creature_spirit_breaker","npc_dota_creature_spirit_breaker_ironbarde_charger","npc_dota_creature_spirit_breaker_elemental_realms"},
     
     bitter_lineage={"npc_dota_creature_troll_warlord","npc_dota_creature_troll_warlord_icewrack_marauder","npc_dota_creature_troll_plunder_of_the_savage_monger"},
+
+    maraxiforms_ire={"npc_dota_creature_clinkz","npc_dota_creature_clinkz_scorched_fletcher","npc_dota_creature_clinkz_compendium_scorched_fletcher"},
+    
+    barren_crown={"npc_dota_creature_sand_king","npc_dota_creature_sand_king_scouring_dunes","npc_dota_creature_sand_king_kray_legions"},
+    barren_vector={"npc_dota_creature_sand_king","npc_dota_creature_sand_king_scouring_dunes","npc_dota_creature_sand_king_kray_legions"},
+
 }
 
 

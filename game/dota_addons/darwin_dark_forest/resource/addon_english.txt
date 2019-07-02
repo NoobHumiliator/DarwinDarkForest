@@ -427,6 +427,7 @@
 
 
     //Level-8
+    "npc_dota_creature_clinkz"                                                      "Clinkz"
     "npc_dota_creature_spirit_breaker"                                              "Spirit Breaker"
     "npc_dota_creature_slark_3"                                                     "Dark Reef Escape"
     "npc_dota_creature_ogreseal_undead_2"                                           "Ogre Seal Ghoul"
@@ -461,6 +462,7 @@
     "npc_dota_creature_slardar"                                                     "Slardar"
 
     //Level-9
+    "npc_dota_creature_clinkz_scorched_fletcher"                                    "Scorched Fletcher"
     "npc_dota_creature_undying_seablight_procession"                                "Undying Seablight Procession"
     "npc_dota_creature_ogre_double_head_antipodeans"                                "Ogre War Mage"
     "npc_dota_creature_spirit_breaker_ironbarde_charger"                            "Ironbarde Charger"
@@ -495,6 +497,7 @@
 
 
     //Level-10
+    "npc_dota_creature_clinkz_compendium_scorched_fletcher"                         "Compendium Scorched Fletcher"
     "npc_dota_creature_nian_2"                                                      "Nian"
     "npc_dota_creature_roshan_2"                                                    "Roshan"
     "npc_dota_creature_razor_affront_of_the_overseer"                               "Affront of Overseer"
@@ -1592,6 +1595,10 @@
     
     "DOTA_Tooltip_modifier_eidolon_duplicate_passive"                           "Eidolon Multiply"
 
+    "econ_maraxiforms_ire"                                                      "Maraxiform's Ire"
+    "econ_barren_crown"                                                         "Barren Crown"
+    "econ_barren_vector"                                                        "Barren Vector"
+
 
 
     //EconUnitBegins
@@ -2034,6 +2041,7 @@
     "npc_dota_creature_player_dark_troll_berserker"                                        "Forest Troll Berserker"
     "npc_dota_creature_player_satyr_dreamer"                                               "Satyr Dreamer"
     "npc_dota_creature_player_morphling"                                                   "Sea Element"
+    "npc_dota_creature_player_clinkz"                                                      "Clinkz"
     "npc_dota_creature_player_spirit_breaker"                                              "Spirit Breaker"
     "npc_dota_creature_player_slark_3"                                                     "Dark Reef Escape"
     "npc_dota_creature_player_ogreseal_undead_2"                                           "Ogre Seal Ghoul"
@@ -2065,6 +2073,7 @@
     "npc_dota_creature_player_broodmother"                                                 "Broodmother"
     "npc_dota_creature_player_morphling_2"                                                 "Morphling"
     "npc_dota_creature_player_slardar"                                                     "Slardar"
+    "npc_dota_creature_player_clinkz_scorched_fletcher"                                    "Scorched Fletcher"
     "npc_dota_creature_player_undying_seablight_procession"                                "Undying Seablight Procession"
     "npc_dota_creature_player_ogre_double_head_antipodeans"                                "Ogre War Mage"
     "npc_dota_creature_player_spirit_breaker_ironbarde_charger"                            "Ironbarde Charger"
@@ -2096,6 +2105,7 @@
     "npc_dota_creature_player_visage_soul_keeper"                                          "Soul Keeper"
     "npc_dota_creature_player_morphling_lost_star"                                         "Lost Star"
     "npc_dota_creature_player_slardar_vanguard"                                            "Slardar Vanguard"
+    "npc_dota_creature_player_clinkz_compendium_scorched_fletcher"                         "Compendium Scorched Fletcher"
     "npc_dota_creature_player_nian_2"                                                      "Nian"
     "npc_dota_creature_player_roshan_2"                                                    "Roshan"
     "npc_dota_creature_player_razor_affront_of_the_overseer"                               "Affront of Overseer"

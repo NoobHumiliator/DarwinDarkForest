@@ -61,6 +61,14 @@ map={
    'npc_dota_creature_troll_warlord_icewrack_marauder':{'bitter_lineage':('9597','7818')},
    'npc_dota_creature_troll_plunder_of_the_savage_monger':{'bitter_lineage':('12561','7818')},
 
+   'npc_dota_creature_clinkz':{'maraxiforms_ire':('59','9162')},
+   'npc_dota_creature_clinkz_scorched_fletcher':{'maraxiforms_ire':('7141','9162')},
+   'npc_dota_creature_clinkz_compendium_scorched_fletcher':{'maraxiforms_ire':('7349','9162')},
+
+   'npc_dota_creature_sand_king':{'barren_crown':('180','8074'),'barren_vector':('199','7809')},
+   'npc_dota_creature_sand_king_scouring_dunes':{'barren_crown':('6613','8074'),'barren_vector':('6612','7809')},
+   'npc_dota_creature_sand_king_kray_legions':{'barren_crown':('9432','8074'),'barren_vector':('9433','7809')},
+   
 }
 
 
