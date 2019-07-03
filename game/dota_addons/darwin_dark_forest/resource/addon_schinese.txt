@@ -1641,6 +1641,19 @@
     "econ_wan_bu_liao_la"                                                       "玩不了啦"
     "econ_gao_fu_shuai"                                                         "这就是高富帅"
 
+
+    "DOTA_Tooltip_Ability_clinkz_burning_army_lua"                              "燃烧之军"
+    "DOTA_Tooltip_Ability_clinkz_burning_army_lua_Description"                  "召唤一队烈焰骷髅弓手。骷髅弓手不能移动，需要3次攻击才会被击杀。骷髅弓手使用当前灼热之箭技能。基础攻击力为英雄基础攻击力的%base_damage_percent%%。"
+    "DOTA_Tooltip_ability_clinkz_burning_army_lua_duration"                     "持续时间："
+    "DOTA_Tooltip_ability_clinkz_burning_army_lua_range"                        "距离："
+    "DOTA_Tooltip_ability_clinkz_burning_army_lua_count"                        "数量："
+    "DOTA_Tooltip_ability_clinkz_burning_army_lua_attack_rate"                  "攻击频率："
+    "DOTA_Tooltip_ability_clinkz_burning_army_lua_spawn_interval"               "产生间隔："
+
+    "DOTA_Tooltip_ability_clinkz_burning_army_lua_nDecay"                      "<font color='#b3d465'>腐朽：</font>"
+    "DOTA_Tooltip_ability_clinkz_burning_army_lua_nElement"                    "<font color='#00a0e9'>元素：</font>"
+    "DOTA_Tooltip_ability_clinkz_burning_army_lua_nFury"                       "<font color='#eb6877'>狂怒：</font>"
+
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
 	"npc_dota_creature_lich_shearing_deposition"                  "巫妖"

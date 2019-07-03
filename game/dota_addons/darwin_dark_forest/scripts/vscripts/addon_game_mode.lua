@@ -401,18 +401,6 @@ function GameMode:InitGameMode()
     --]]
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, 1 ) 
 
-    Timers:CreateTimer(5, function()
-        for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
-            GameMode:UpdatePlayerColor( nPlayerID )
-        end
-    end)
-
-    Timers:CreateTimer(10, function()
-        for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
-            GameMode:UpdatePlayerColor( nPlayerID )
-        end
-    end)
-
 end
 
 
@@ -627,6 +615,10 @@ function GameMode:OnThink()
     -- Stop thinking if game is paused
     if GameRules:IsGamePaused() == true then
         return 1
+    end
+
+    for nPlayerID = 0, (DOTA_MAX_TEAM_PLAYERS-1) do
+        GameMode:UpdatePlayerColor( nPlayerID )
     end
 	
     xpcall(

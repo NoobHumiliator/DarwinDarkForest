@@ -19,6 +19,8 @@ function clinkz_burning_army_lua:OnSpellStart()
 		local count = self:GetSpecialValueFor( "count" )
        	self.range = self:GetSpecialValueFor( "range" )
 
+       	local base_damage_percent = self:GetSpecialValueFor( "base_damage_percent" )
+
 
 		local vForwardVector =  (self:GetCursorPosition()-self:GetCaster():GetAbsOrigin()):Normalized()
 		local vCursorPosition= self:GetCursorPosition()
@@ -44,13 +46,14 @@ function clinkz_burning_army_lua:OnSpellStart()
             if hCaster:HasAbility("clinkz_searing_arrows") then
 				local hAbility = hArcher:AddAbility("clinkz_searing_arrows")
 				hAbility:UpgradeAbility(true)
-				hArcher:SetLevel( hCaster:FindAbilityByName("clinkz_searing_arrows"):GetLevel() )
+				hAbility:SetLevel( hCaster:FindAbilityByName("clinkz_searing_arrows"):GetLevel() )
 				hAbility:ToggleAutoCast()
 			end
 
-			hArcher:SetBaseDamageMax(hCaster:GetBaseDamageMax())
-            hArcher:SetBaseDamageMin(hCaster:GetBaseDamageMin())
-			
+			hArcher:SetBaseDamageMax(hCaster:GetBaseDamageMax()*(base_damage_percent/100))
+            hArcher:SetBaseDamageMin(hCaster:GetBaseDamageMin()*(base_damage_percent/100))
+			hArcher:SetControllableByPlayer(hCaster:GetMainControllingPlayer(), false)
+
             ParticleManager:CreateParticle("particles/units/heroes/hero_clinkz/clinkz_burning_army_start.vpcf", PATTACH_POINT_FOLLOW, hArcher)
 
 			local nParticleIndex = ParticleManager:CreateParticle("particles/units/heroes/hero_clinkz/clinkz_burning_army.vpcf", PATTACH_POINT_FOLLOW, hArcher)

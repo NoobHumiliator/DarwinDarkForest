@@ -1,6 +1,6 @@
 --持久化服务器 交互Service
 if Server == nil then Server = class({}) end
-sServerAddress="http://106.12.3.136:8081/"
+sServerAddress="http://106.12.3.136:8080/"
 
 
 local function stringTable(t)
@@ -87,7 +87,9 @@ function Server:GetRankData()
             local body = JSON:decode(result.Body)
             print(body)
             if body ~= nil then
-                CustomNetTables:SetTableValue("rank_data", "rank_data", stringTable(body))
+                CustomNetTables:SetTableValue("rank_data", "pve", stringTable(body)['pve'])
+                CustomNetTables:SetTableValue("rank_data", "solo", stringTable(body)['solo'])
+                CustomNetTables:SetTableValue("rank_data", "three_player", stringTable(body)['three_player'])
             end
         end
     end)

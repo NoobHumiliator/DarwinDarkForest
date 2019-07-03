@@ -27,11 +27,20 @@ function refreshTopPanel(gamemode, data) {
 }
 
 function RebuildRank(){
-	var rank_data = CustomNetTables.GetTableValue("rank_data", "rank_data");
-	if (rank_data === undefined) return;
-	refreshTopPanel('pve_mode_players', rank_data['pve'])	
-	refreshTopPanel('solo_mode_players', rank_data['solo'])	
-	refreshTopPanel('three_player_mode_players', rank_data['three_player'])	
+	var pve = CustomNetTables.GetTableValue("rank_data", 'pve');
+	if (pve != undefined) {
+	   refreshTopPanel('pve_mode_players', pve)	
+    }
+
+	var solo = CustomNetTables.GetTableValue("rank_data", 'solo');
+	if (solo != undefined) {
+	   refreshTopPanel('solo_mode_players', solo);
+	}
+
+	var three_player = CustomNetTables.GetTableValue("rank_data", 'three_player');
+	if (three_player != undefined) {
+	   refreshTopPanel('three_player_mode_players', three_player);
+	}
 }
 
 (function(){

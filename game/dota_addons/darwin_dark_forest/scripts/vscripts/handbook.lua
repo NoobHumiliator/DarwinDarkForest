@@ -14,7 +14,33 @@ local vAdjustMap={
     npc_dota_creature_brute_2=true,
     npc_dota_creature_ogre_warlord=true,
     npc_dota_creature_ogre_warchief=true,
+    npc_dota_creature_large_dragonspawn=true,
+    npc_dota_creature_dragonspawn=true,
+    npc_dota_creature_slark_1=true,
+    npc_dota_creature_slark_2=true,
+    npc_dota_creature_slark_3=true,
+    npc_dota_creature_gaoler=true,
+    npc_dota_creature_small_thunder_lizard_1=true,
+    npc_dota_creature_small_thunder_lizard_2=true,
+    npc_dota_creature_large_thunder_lizard=true
 
+
+}
+
+--微调生物的类群
+local vAdjustsCombine={
+    
+    "nFury nDurable",
+    "nDurable nFury",
+    "nFury nDurable nElement",
+    "nDurable nFury nElement",
+    "nElement nFury nDurable",
+    "nHunt nMystery",
+    "nMystery nHunt",
+    "nDurable nMystery",
+    "nMystery nDurable",
+    "nElement nDurable",
+    "nDurable nElement",
 }
 
 
@@ -37,6 +63,7 @@ function HandBook:DealCreatureData()
                 for i3=i2+1,#vTypes do
                    if i3~=i1 then
                       self:InsertCombineData(result[key],vTypes[i1].." "..vTypes[i2].." "..vTypes[i3])
+                      self:Adjust(result[key],vTypes[i1].." "..vTypes[i2].." "..vTypes[i3])
                    end
                 end
             end
@@ -112,15 +139,30 @@ function HandBook:Adjust(vRawPerkData,sPerkNameCombine)
     --微调的标志位
     vRawPerkData[sPerkNameCombine.."a"]={}
 
-    if sPerkNameCombine=="nFury nDurable" or sPerkNameCombine=="nDurable nFury" then
+    local bInAdjustCombine=false
+
+    for _,v in ipairs(vAdjustsCombine) do
+        if sPerkNameCombine==v then
+            print("sPerkNameCombine"..sPerkNameCombine)
+            bInAdjustCombine=true
+        end
+    end
+
+
+    if bInAdjustCombine then
 
        for sUnitName, vData in pairs(GameRules.vUnitsKV) do
             
             if vAdjustMap[sUnitName] then
                
                  local vPerkData={}
+                 local bValid=true
+
                  for _,v in pairs(SpliteStr(sPerkNameCombine)) do
                      vPerkData[v]=vData[v]
+                     if vPerkData[v]==0 then
+                        bValid=false
+                     end
                  end
                  local vAbilityData={}
                  if vData.Ability1 and vData.Ability1~="" then
@@ -133,8 +175,9 @@ function HandBook:Adjust(vRawPerkData,sPerkNameCombine)
                     vAbilityData.ability_3=vData.Ability3
                  end
 
-                vRawPerkData[sPerkNameCombine.."a"][vData.nCreatureLevel] = {unit_name=sUnitName,total_perk=vData.nTotalPerk,perk_data=vPerkData,ability_data=vAbilityData}
-
+                 if bValid then
+                     vRawPerkData[sPerkNameCombine.."a"][vData.nCreatureLevel] = {unit_name=sUnitName,total_perk=vData.nTotalPerk,perk_data=vPerkData,ability_data=vAbilityData}
+                 end
             end 
 
         end

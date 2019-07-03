@@ -502,10 +502,10 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
                                  local flRadio=1
                                  --十分重要参数 这是flPerkVariance的折价率
                                  if nPerkVarianceType==2 then
-                                    flRadio=0.53
+                                    flRadio=0.525
                                  end
                                  if nPerkVarianceType==3 then
-                                    flRadio=0.40
+                                    flRadio=0.36
                                  end
 
                                  local vUnitData = {}
