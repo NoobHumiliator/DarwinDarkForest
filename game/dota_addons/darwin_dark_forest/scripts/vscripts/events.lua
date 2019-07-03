@@ -139,7 +139,7 @@ function GameMode:OnEntityKilled(keys)
    
 
    local flPercentage=0.5 --野怪进化点数 比例
-   local flPlayerPercentage=0.1 --玩家进化点数 吸取比例
+   local flPlayerPercentage=0.09 --玩家进化点数 吸取比例
 
    --如果玩家击杀野怪，把野怪的进化点赋给玩家
    if  hKilledUnit:GetTeamNumber() == DOTA_TEAM_NEUTRALS then
@@ -698,7 +698,7 @@ function GameMode:OnPlayerSay(keys)
           for i=0,24 do
             if PlayerResource:IsValidPlayer( i ) and PlayerResource:GetSelectedHeroEntity (i) then
               local hHero=PlayerResource:GetPlayer(i):GetAssignedHero()
-              Notifications:Top(nPlayerId,{text = i.."-------------"..hHero.hCurrentCreep:GetUnitName(), duration = 10})            
+              Notifications:Top(nPlayerId,{text = i.."-------------"..hHero.hCurrentCreep:GetUnitName().." Level:"..hHero.hCurrentCreep:GetLevel(), duration = 10})            
              end
           end
         end
