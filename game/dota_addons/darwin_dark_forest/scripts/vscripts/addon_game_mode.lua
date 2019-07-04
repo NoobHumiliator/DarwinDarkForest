@@ -153,13 +153,16 @@ for sUnitName, vData in pairs(GameRules.vUnitsKV) do
         end
         --print("sUnitName"..sUnitName)
         --计算总perk
-        vCreaturePerksTotal[vData.nCreatureLevel]["nElement"]=vCreaturePerksTotal[vData.nCreatureLevel]["nElement"]+vData.nElement
-        vCreaturePerksTotal[vData.nCreatureLevel]["nMystery"]=vCreaturePerksTotal[vData.nCreatureLevel]["nMystery"]+vData.nMystery
-        vCreaturePerksTotal[vData.nCreatureLevel]["nDurable"]=vCreaturePerksTotal[vData.nCreatureLevel]["nDurable"]+vData.nDurable
-        vCreaturePerksTotal[vData.nCreatureLevel]["nFury"]=vCreaturePerksTotal[vData.nCreatureLevel]["nFury"]+vData.nFury
-        vCreaturePerksTotal[vData.nCreatureLevel]["nDecay"]=vCreaturePerksTotal[vData.nCreatureLevel]["nDecay"]+vData.nDecay
-        vCreaturePerksTotal[vData.nCreatureLevel]["nHunt"]=vCreaturePerksTotal[vData.nCreatureLevel]["nHunt"]+vData.nHunt
         
+        --剔除召唤饰品生物
+        if (vData.IsSummoned==nil or vData.IsSummoned==0) and (vData.EconUnitFlag==nil or vData.EconUnitFlag==0) and (vData.ConsideredHero==nil or vData.ConsideredHero==0)  then
+          vCreaturePerksTotal[vData.nCreatureLevel]["nElement"]=vCreaturePerksTotal[vData.nCreatureLevel]["nElement"]+vData.nElement
+          vCreaturePerksTotal[vData.nCreatureLevel]["nMystery"]=vCreaturePerksTotal[vData.nCreatureLevel]["nMystery"]+vData.nMystery
+          vCreaturePerksTotal[vData.nCreatureLevel]["nDurable"]=vCreaturePerksTotal[vData.nCreatureLevel]["nDurable"]+vData.nDurable
+          vCreaturePerksTotal[vData.nCreatureLevel]["nFury"]=vCreaturePerksTotal[vData.nCreatureLevel]["nFury"]+vData.nFury
+          vCreaturePerksTotal[vData.nCreatureLevel]["nDecay"]=vCreaturePerksTotal[vData.nCreatureLevel]["nDecay"]+vData.nDecay
+          vCreaturePerksTotal[vData.nCreatureLevel]["nHunt"]=vCreaturePerksTotal[vData.nCreatureLevel]["nHunt"]+vData.nHunt
+        end
 
     end
 end
