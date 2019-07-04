@@ -1059,6 +1059,7 @@
     "DOTA_Tooltip_Ability_nian_leap_lua_Description"            "Leaps forward into target location, dealing damage and stun."
     "DOTA_Tooltip_Ability_nian_leap_lua_stun_duration"          "Stun Duration:"
     "DOTA_Tooltip_Ability_nian_leap_lua_damage"                 "Damage:"
+    "DOTA_Tooltip_Ability_nian_leap_lua_impact_radius"          "Radius:"
 
     "DOTA_Tooltip_Ability_slardar_bash_nFury"                    "<font color='#eb6877'>Fury:</font>"
     "DOTA_Tooltip_Ability_slardar_bash_nDurable"                 "<font color='#f8b551'>Durable:</font>"
@@ -1592,6 +1593,7 @@
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_duration"                       "DURATION:"
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_illusion_damage_outgoing"       "%DAMAGE PUTPUT:"
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_illusion_damage_incoming"       "%DAMAGE TAKEN:"
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_nMystery"                       "<font color='#e9c2ff'>Mystery:</font>"
     
     "DOTA_Tooltip_modifier_eidolon_duplicate_passive"                           "Eidolon Multiply"
 

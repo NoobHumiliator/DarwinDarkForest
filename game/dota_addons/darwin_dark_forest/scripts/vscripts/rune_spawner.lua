@@ -62,7 +62,7 @@ function RuneSpawner:Begin()
           CountAverageLevel()
     end
 
-    Timers:CreateTimer(600/GameRules.nTotalHeroNumber, function()
+    Timers:CreateTimer(8/GameRules.nTotalHeroNumber, function()
         RuneSpawner:SpawnOneRune()
         -- 1人10分钟  10人60秒 12人50秒
         return 600/GameRules.nTotalHeroNumber

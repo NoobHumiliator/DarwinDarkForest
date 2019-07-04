@@ -1078,6 +1078,7 @@
     "DOTA_Tooltip_Ability_nian_leap_lua_Description"            "跃向目标位置，伤害并击晕落点附近的敌人。"
     "DOTA_Tooltip_Ability_nian_leap_lua_stun_duration"          "眩晕时间："
     "DOTA_Tooltip_Ability_nian_leap_lua_damage"                 "伤害："
+    "DOTA_Tooltip_Ability_nian_leap_lua_impact_radius"          "伤害范围："
 
     "DOTA_Tooltip_Ability_slardar_bash_nFury"                    "<font color='#eb6877'>狂怒：</font>"
     "DOTA_Tooltip_Ability_slardar_bash_nDurable"                 "<font color='#f8b551'>坚韧：</font>"
@@ -1631,6 +1632,8 @@
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_duration"                       "分裂体持续时间："
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_illusion_damage_outgoing"       "%分裂体继承攻击力："
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_illusion_damage_incoming"       "%分裂体承受伤害："
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_nMystery"                       "<font color='#e9c2ff'>神秘：</font>"
+
     
     "DOTA_Tooltip_modifier_eidolon_duplicate_passive"                           "虚灵分裂"
 

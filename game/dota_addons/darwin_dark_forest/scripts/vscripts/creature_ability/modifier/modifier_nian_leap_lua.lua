@@ -92,10 +92,11 @@ function modifier_nian_leap_lua:HorizontalMotion(me, dt)
 					{
 						victim = enemy,
 						attacker = self:GetParent(),
-						damage = self.damage,
+						damage = self:GetAbility():GetSpecialValueFor("damage"),
 						damage_type = DAMAGE_TYPE_PHYSICAL,
 						ability = self,
 					}
+					ApplyDamage( damageInfo )
                     EmitSoundOnLocationWithCaster( self:GetParent():GetOrigin(), "OgreTank.GroundSmash", self:GetParent() )
 					enemy:AddNewModifier( self:GetParent(), self:GetAbility(), "modifier_stunned", { duration = self.stun_duration } )
 				end

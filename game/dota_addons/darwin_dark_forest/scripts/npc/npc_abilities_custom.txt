@@ -199,6 +199,14 @@
         }
     }
 
+
+    "dota_ability_rune_revealer_lua"
+    {
+        "BaseClass"                         "ability_lua" 
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "ScriptFile"                        "creature_ability/dota_ability_rune_revealer_lua"
+    }
+
     "dota_ability_reveal_invis"
     {
            "BaseClass"                          "ability_datadriven"
@@ -5479,7 +5487,7 @@
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "damage"                "600 850"
+                "damage"                "400 600"
             }
             "03"
             {
