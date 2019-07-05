@@ -6510,18 +6510,20 @@
 		// Recipe
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemRecipe"					"1"
-		"ItemResult"					"item_cyclone"
+		"ItemResult"					"item_cyclone_lua"
 		"ItemRequirements"
 		{
-			"01"						"item_staff_of_wizardry;item_void_stone;item_wind_lace"
+			"01"						"item_staff_of_wizardry_lua;item_void_stone;item_wind_lace"
 		}
 	}
 
-	"item_cyclone"
+	"item_cyclone_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"100"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_cyclone_lua"
+		"AbilityTextureName"            "item_cyclone"
+
+
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
@@ -6554,29 +6556,34 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"		"10"
+				"bonus_damage"		    "3"
 			}
 			"02"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"5.0"
+				"var_type"				"FIELD_INTEGER"
+				"spell_amplify"		     "10"
 			}
 			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"5.5"
+			}
+			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_movement_speed"	"20"
 			}
-			"04"
+			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"cyclone_duration"		"2.5"
 			}
-			"05"
+			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"cast_range_tooltip"		"575"
 			}
-			"06"
+			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"tooltip_drop_damage"	"50"
@@ -9690,7 +9697,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"	             "2.5"
+				"duration"	             "1.6"
 			}
 			"06"
 			{
@@ -9754,5 +9761,172 @@
 			}
 		}
 	}
+
+	"item_recipe_invis_sword"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"183"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_invis_sword"
+		"ItemRequirements"
+		{
+			"01"						"item_shadow_amulet_lua;item_claymore"
+		}
+	}
+
+	"item_invis_sword"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"152"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"FightRecapLevel"				"1"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"28.0"
+		"AbilitySharedCooldown"			"shadow_blade"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+		"ItemCost"						"2800"
+		"ItemShopTags"					"damage;attack_speed;movespeed;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"sb;invis;shadow blade;silver edge"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"22"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"windwalk_duration"		"5.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"windwalk_movement_speed"	"20"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"windwalk_fade_time"	"0.3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"windwalk_bonus_damage"	"175"
+			}
+		}
+	}
+
+	"item_recipe_holy_locket"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"268"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Sound
+		//-------------------------------------------------------------------------------------------------------------			
+		"UIPickupSound"					"Item.PickUpRingShop"
+		"UIDropSound"					"Item.DropRingShop"
+		"WorldDropSound"				"Item.DropRingWorld"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_holy_locket_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_ring_of_tarrasque;item_energy_booster_lua;item_cloak"
+		}
+	}
+	
+	//=================================================================================================================
+	// Holy Locket
+	//=================================================================================================================
+	"item_holy_locket_lua"
+	{
+
+		"BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_holy_locket_lua"
+		"AbilityTextureName"            "item_holy_locket"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2700"
+		"ItemQuality"					"rare"
+		"ActiveDescriptionLine"			"2"
+		"ShouldBeInitiallySuggested"	"1"
+		
+		// Sound
+		//-------------------------------------------------------------------------------------------------------------			
+		"UIPickupSound"					"Item.PickUpRingShop"
+		"UIDropSound"					"Item.DropRingShop"
+		"WorldDropSound"				"Item.DropRingWorld"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"health_regen"      	"4"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_regen"          	"4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"magic_resist"		    "15"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal_increase"		    "25"
+			}
+		}
+	}
+
+
+
 
 }

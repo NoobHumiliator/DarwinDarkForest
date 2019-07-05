@@ -1677,8 +1677,6 @@
     "DOTA_Tooltip_Ability_item_guardian_greaves_lua_bonus_health_regen"        "+$hp_regen"
     "DOTA_Tooltip_Ability_item_guardian_greaves_lua_magic_resist"              "%+魔法抗性"
 
-
-
     "DOTA_Tooltip_modifier_item_guardian_greaves_lua_aura_effect"                         "守护光环"
     "DOTA_Tooltip_modifier_item_guardian_greaves_lua_aura_effect_Description"             "每秒恢复%dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%点生命值。护甲提升%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点。"
 
@@ -1699,6 +1697,18 @@
      
     "DOTA_Tooltip_modifier_item_veil_of_discord_lua_effect"                    "魔法虚弱"
     "DOTA_Tooltip_modifier_item_veil_of_discord_lua_effect_Description"        "受到的魔法伤害增加%dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%%。"
+
+    "DOTA_Tooltip_Ability_item_shadow_amulet_lua"                             "暗影护符"
+    "DOTA_Tooltip_Ability_item_shadow_amulet_lua_Description"                 "<h1>主动：渐隐</h1>让自己或友方单位静止不动的情况下获得隐身效果,持续%invis_duration%秒。<br><br>拥有%fade_time%秒渐隐时间，如果移动将立刻打破隐身。<br><br>对友军施法距离：%tooltip_range%"
+    "DOTA_Tooltip_Ability_item_shadow_amulet_lua_bonus_attack_speed"          "+$attack"
+    
+    "DOTA_Tooltip_Ability_item_holy_locket_lua"                               "圣洁吊坠"
+    "DOTA_Tooltip_Ability_item_holy_locket_lua_Description"                   "<h1>被动：神圣福佑</h1>自身提供的所有治疗和恢复效果增强%heal_increase%%%。"
+    "DOTA_Tooltip_ability_item_holy_locket_lua_bonus_health"                  "+$health"
+    "DOTA_Tooltip_ability_item_holy_locket_lua_health_regen"                  "+$hp_regen"
+    "DOTA_Tooltip_ability_item_holy_locket_lua_mana_regen"                    "+$mana_regen"
+    "DOTA_Tooltip_ability_item_holy_locket_magic_resist"                       "%+魔法抗性"
+
 
 
     //EconUnitBegins

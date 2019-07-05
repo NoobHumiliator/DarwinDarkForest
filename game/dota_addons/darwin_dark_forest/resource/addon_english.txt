@@ -1626,7 +1626,7 @@
 
     
     "DOTA_Tooltip_Ability_item_guardian_greaves_lua"                           "Guardian Greaves"
-    "DOTA_Tooltip_Ability_item_guardian_greaves_lua_Description"               "<h1>主动：修复</h1>使周围友军回复%replenish_health%点生命和%replenish_mana%点魔法，并移除施法者身上大部分的负面效果。<br><br>作用范围：%replenish_radius%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n<h1>被动：卫士光环</h1> 为周围友军提供%aura_health_regen%点/秒额外生命恢复和%aura_armor%点额外护甲。如果友方英雄的生命值低于%aura_bonus_threshold%%%，他们将获得%aura_health_regen_bonus%点/秒额外生命恢复和%aura_armor_bonus%点额外护甲。\n多个鞋类物品提供的移动速度加成不叠加。"
+    "DOTA_Tooltip_Ability_item_guardian_greaves_lua_Description"               "<h1>Active: Mend</h1>Restores %replenish_health% health and %replenish_mana% mana to nearby allies, and removes most negative effects from the caster.<br><br>Radius: %replenish_radius%<br>Dispel Type: <span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>\n<h1>Passive: Guardian Aura</h1> Provides nearby allies with %aura_health_regen% health regeneration and %aura_armor% bonus armor. If an allied hero's health falls below %aura_bonus_threshold%%%, they receive %aura_health_regen_bonus% health regeneration and %aura_armor_bonus% armor.\nMovement speed bonuses from multiple pairs of boots do not stack."
 
     "DOTA_Tooltip_Ability_item_guardian_greaves_lua_bonus_armor"               "+Armor"
     "DOTA_Tooltip_Ability_item_guardian_greaves_lua_bonus_move_speed_pct"      "%AURA BONUS MOVE SPEED:"
@@ -1636,12 +1636,23 @@
     "DOTA_Tooltip_Ability_item_guardian_greaves_lua_bonus_attack_speed"        "+$attack"
     "DOTA_Tooltip_Ability_item_guardian_greaves_lua_bonus_mana_regen"          "+$mana_regen"
     "DOTA_Tooltip_Ability_item_guardian_greaves_lua_bonus_health_regen"        "+$hp_regen"
-    "DOTA_Tooltip_Ability_item_guardian_greaves_lua_magic_resist"              "%BONUS MAGIC RESISTANCE:"
+    "DOTA_Tooltip_Ability_item_guardian_greaves_lua_magic_resist"              "%+$spell_resist"
 
     "DOTA_Tooltip_modifier_item_guardian_greaves_lua_aura_effect"                         "Guardian Aura"
     "DOTA_Tooltip_modifier_item_guardian_greaves_lua_aura_effect_Description"             "Regenerating %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% health per second. Armor increased by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%."
 
-    
+    "DOTA_Tooltip_Ability_item_shadow_amulet_lua"                             "Shadow Amulet"
+    "DOTA_Tooltip_Ability_item_shadow_amulet_lua_Description"                 "<h1>Active: Fade</h1>Grants invisibility to you or a target allied hero as long as the target unit remains still.  <br><br>Has a %fade_time% second fade time, and last  and breaks instantly upon moving. <br><br>Range: %tooltip_range%"
+    "DOTA_Tooltip_Ability_item_shadow_amulet_lua_bonus_attack_speed"          "+$attack"
+
+
+    "DOTA_Tooltip_Ability_item_holy_locket_lua"                               "Holy Locket"
+    "DOTA_Tooltip_Ability_item_holy_locket_lua_Description"                   "<h1>Passive: Holy Blessing</h1>Amplifies heals and regeneration you provide by %heal_increase%%%."
+    "DOTA_Tooltip_ability_item_holy_locket_lua_bonus_health"                  "+$health"
+    "DOTA_Tooltip_ability_item_holy_locket_lua_health_regen"                  "+$hp_regen"
+    "DOTA_Tooltip_ability_item_holy_locket_lua_mana_regen"                    "+$mana_regen"
+    "DOTA_Tooltip_ability_item_holy_locket_magic_resist"                       "%+$spell_resist"
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "Lich"

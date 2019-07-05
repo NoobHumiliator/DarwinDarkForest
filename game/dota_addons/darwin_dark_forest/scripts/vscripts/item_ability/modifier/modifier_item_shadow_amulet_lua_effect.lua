@@ -2,7 +2,7 @@
 modifier_item_shadow_amulet_lua_effect = class({})
 
 function modifier_item_shadow_amulet_lua_effect:IsHidden()
-	return false
+	return true
 end
 ----------------------------------------
 function modifier_item_shadow_amulet_lua_effect:IsDebuff()
