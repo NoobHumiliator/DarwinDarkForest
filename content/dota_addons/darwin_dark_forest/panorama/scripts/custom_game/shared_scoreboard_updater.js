@@ -157,51 +157,54 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 	if ( PlayerPerkContainer )
 	{     
 		var player_perk = CustomNetTables.GetTableValue("player_perk", ""+playerId);
-        var end_game_rank_data = CustomNetTables.GetTableValue("end_game_rank_data", "end_game_rank_data");
-
-		for ( var i = 1; i <= 6; i++ )
-		{
-			var perkPanelName = "_dynamic_perk_" + i;
-			var perkPanel = PlayerPerkContainer.FindChild( perkPanelName );
-			if ( perkPanel === null )
+        
+        if (player_perk!=undefined)
+        {
+	        var end_game_rank_data = CustomNetTables.GetTableValue("end_game_rank_data", "end_game_rank_data");
+			for ( var i = 1; i <= 6; i++ )
 			{
-				perkPanel = $.CreatePanel( "Label", PlayerPerkContainer, perkPanelName );
-				perkPanel.AddClass( "EndPerkLabel" );
-				perkPanel.text=parseInt(player_perk[""+i])
+				var perkPanelName = "_dynamic_perk_" + i;
+				var perkPanel = PlayerPerkContainer.FindChild( perkPanelName );
+				if ( perkPanel === null )
+				{
+					perkPanel = $.CreatePanel( "Label", PlayerPerkContainer, perkPanelName );
+					perkPanel.AddClass( "EndPerkLabel" );
+					perkPanel.text=parseInt(player_perk[""+i])
+				}
 			}
-		}
 
-		if (end_game_rank_data['type']=='pve')
-		{
-			  $( "#rating_label" ).text=$.Localize("custom_end_screen_legend_time_cost")
-			   var steam_id = playerInfo.player_steamid;
-               steam_id = ConvertToSteamId32(steam_id);
-               var time_cost=end_game_rank_data['player_data'][steam_id]
-			  _ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerRating", FormatSeconds(time_cost) );
+			if (end_game_rank_data['type']=='pve')
+			{
+				  $( "#rating_label" ).text=$.Localize("custom_end_screen_legend_time_cost")
+				   var steam_id = playerInfo.player_steamid;
+	               steam_id = ConvertToSteamId32(steam_id);
+	               var time_cost=end_game_rank_data['player_data'][steam_id]
+				  _ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerRating", FormatSeconds(time_cost) );
 
-		} else  {
+			} else  {
 
-			  $( "#rating_label" ).text=$.Localize("custom_end_screen_legend_ratings")
-			  var steam_id = playerInfo.player_steamid;
-               steam_id = ConvertToSteamId32(steam_id);
-               var score=end_game_rank_data['player_data'][steam_id]['score']
-               var score_change=end_game_rank_data['player_data'][steam_id]['score_change']
-               var score_change_type=end_game_rank_data['player_data'][steam_id]['score_change_type'] //1加 2减 0平
-               if (score_change_type=='0')
-               {
-               	  _ScoreboardUpdater_SetHtmlSafe( playerPanel, "PlayerRating", score+"("+score_change+")" );
-               }
-               if (score_change_type=='1')
-               {
-               	  //红
-               	  _ScoreboardUpdater_SetHtmlSafe( playerPanel, "PlayerRating", score+"(<font color='#EA7070'>"+score_change+"</font>)" );
-               }
-			   if (score_change_type=='2')
-               {
-               	  //绿
-               	  _ScoreboardUpdater_SetHtmlSafe( playerPanel, "PlayerRating", score+"(<font color='#70EA72'>"+score_change+"</font>)" );
-               }
-		}
+				  $( "#rating_label" ).text=$.Localize("custom_end_screen_legend_ratings")
+				  var steam_id = playerInfo.player_steamid;
+	               steam_id = ConvertToSteamId32(steam_id);
+	               var score=end_game_rank_data['player_data'][steam_id]['score']
+	               var score_change=end_game_rank_data['player_data'][steam_id]['score_change']
+	               var score_change_type=end_game_rank_data['player_data'][steam_id]['score_change_type'] //1加 2减 0平
+	               if (score_change_type=='0')
+	               {
+	               	  _ScoreboardUpdater_SetHtmlSafe( playerPanel, "PlayerRating", score+"("+score_change+")" );
+	               }
+	               if (score_change_type=='1')
+	               {
+	               	  //红
+	               	  _ScoreboardUpdater_SetHtmlSafe( playerPanel, "PlayerRating", score+"(<font color='#EA7070'>"+score_change+"</font>)" );
+	               }
+				   if (score_change_type=='2')
+	               {
+	               	  //绿
+	               	  _ScoreboardUpdater_SetHtmlSafe( playerPanel, "PlayerRating", score+"(<font color='#70EA72'>"+score_change+"</font>)" );
+	               }
+			}
+	    }
 	}
 
 }

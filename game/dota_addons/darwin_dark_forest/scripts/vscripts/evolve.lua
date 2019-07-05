@@ -515,7 +515,7 @@ function DetermineNewUnitName(nPlayerId,hHero,nLevel)
                                     flRadio=0.525
                                  end
                                  if nPerkVarianceType==3 then
-                                    flRadio=0.36
+                                    flRadio=0.35
                                  end
 
                                  local vUnitData = {}

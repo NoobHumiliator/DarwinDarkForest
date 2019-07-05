@@ -1984,7 +1984,7 @@
 		"ItemResult"					"item_dagon_lua"
 		"ItemRequirements"
 		{
-			"01"						"item_staff_of_wizardry;item_crown"
+			"01"						"item_staff_of_wizardry;item_crown_lua"
 		}
 	}
 
@@ -6697,7 +6697,7 @@
 		"ItemResult"					"item_crimson_guard"
 		"ItemRequirements"
 		{
-			"01"						"item_vanguard;item_buckler"
+			"01"						"item_vanguard_lua;item_buckler"
 		}
 	}
 
@@ -9356,4 +9356,403 @@
 			}
 		}
 	}
+
+	"item_recipe_guardian_greaves"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"230"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_guardian_greaves_lua"
+
+		"ItemRequirements"
+		{
+			"01"						"item_mekansm;item_arcane_boots"
+		}
+	}
+
+
+	"item_guardian_greaves_lua"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_guardian_greaves_lua"
+		"AbilityTextureName"            "item_guardian_greaves"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"1"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40"
+		"AbilityCastRange" 				"1200"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"ItemCost"						"5475"
+		"ItemShopTags"					"int;armor;regen_health;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"guardian greaves"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemAlertable"					"1"
+		"ShouldBeSuggested"				"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{				
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed_pct"		"17.25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"5.8"
+			}	
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"aura_health_regen"		"3.5"
+			}			
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_armor"			"2"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_health_regen_bonus"		"16"
+			}			
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_armor_bonus"			"10"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_bonus_threshold"	"20"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"1200"
+			}	
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"replenish_health"		"300"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"replenish_mana"		"200"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"replenish_radius"		"1200"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "100"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "0.5"
+			}
+			"14"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "5"
+			}
+			"15"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "5"
+			}
+			"16"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "0.5"
+			}
+			"17"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "5"
+			}
+			"18"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.4"
+			}
+		}
+	}
+
+    
+	"item_recipe_veil_of_discord"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"189"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_veil_of_discord_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_helm_of_iron_will;item_crown_lua"
+		}
+	}
+
+
+	"item_veil_of_discord_lua"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_veil_of_discord_lua"
+		"AbilityTextureName"            "item_veil_of_discord"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+		"ItemCost"						"2050"
+		"ItemShopTags"					"int;armor;regen_health;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"vod;veil of discord"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_regen"	"6.6"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"			"6.96"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"resist_debuff"			"-25"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"debuff_radius"			"600"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"resist_debuff_duration"	"16.0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"	"0.3"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "120"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "8"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "5"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "0.75"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "15"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.48"
+			}
+		}
+	}
+
+	"item_recipe_glimmer_cape"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"253"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_glimmer_cape"
+		"ItemRequirements"
+		{
+			"01"						"item_shadow_amulet;item_cloak"
+		}
+	}
+
+	"item_glimmer_cape"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"254"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCooldown"				"14.0"
+		"AbilityManaCost"				"90"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1950"
+		"ItemShopTags"					""
+		"ItemQuality"					"rare"
+		"ItemAliases"					"glimmer cape"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{			
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_magical_armor"	"15"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"fade_delay"		    "0.6"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"active_magical_armor"	"45"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"	             "2.5"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_range"			"800"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"building_duration_limit"			"180"
+			}
+		}
+	}
+
+	"item_shadow_amulet_lua"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_shadow_amulet_lua"
+		"AbilityTextureName"            "item_shadow_amulet"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"FightRecapLevel"				"1"
+
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCooldown"				"15"
+		"AbilityManaCost"				"0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1400"
+		"ItemShopTags"					""
+		"ItemAliases"					"shadow amulet"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{			
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"fade_time"				"1.25"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_range"			"600"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"invis_duration"   	    "4"
+			}
+		}
+	}
+
 }

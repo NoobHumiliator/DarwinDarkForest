@@ -22,12 +22,16 @@ function ItemController:Init()
 
     -- 携带物品的概率
     self.flItemCarryChance=1
+
+    -- Tie 总数
+    self.nTotalTieNum=6
+
     --掉落物品的概率
     self.flItemDropChance=0.65
 
     --二维数组 k 为1-5级物品
     self.vItemsTieTable = {}
-    for i=1,6 do
+    for i=1,self.nTotalTieNum do
         self.vItemsTieTable[i]={}
     end
 
@@ -48,14 +52,14 @@ function ItemController:Init()
     table.sort(vItems,function(a,b) return a.ItemCost<b.ItemCost end )       
 
     -- 按照分组加入 
-    for i=1,6 do
-        local nPerTieNum= math.floor(#vItems/6)
+    for i=1,self.nTotalTieNum do
+        local nPerTieNum= math.floor(#vItems/self.nTotalTieNum)
         local nTemp=1+(i-1)*nPerTieNum
         for j=nTemp,nTemp+nPerTieNum-1 do
               table.insert(self.vItemsTieTable[i],vItems[j].sItemName)
         end
-        -- 将多余出来的一并加入Tie6
-        if i ==6 then
+        -- 将多余出来的一并加入最高Tie
+        if i ==self.nTotalTieNum then
           for j=1+i*nPerTieNum,#vItems do
              table.insert(self.vItemsTieTable[i],vItems[j].sItemName)
           end
@@ -112,9 +116,8 @@ function ItemController:CreateItemForNeutraulByChance(hUnit)
     if RandomInt(1, 100)/100 <= self.flItemCarryChance then
         
         local nTieNum =  math.ceil(hUnit:GetLevel()/2)
-        if nTieNum >6 then nTieNum=6 end
+        if nTieNum >self.nTotalTieNum then nTieNum=self.nTotalTieNum end
         local sItemName = self.vItemsTieTable[nTieNum][RandomInt(1, #self.vItemsTieTable[nTieNum])]
-        --sItemName="item_ward_observer_2"
         hUnit:AddItemByName( sItemName )
 
     end
@@ -319,7 +322,7 @@ function ItemController:ChooseCourierItem()
 
     local nTieNum =  math.ceil(GameRules.nAverageLevel/2)
     nTieNum=nTieNum+3
-    if nTieNum >6 then nTieNum=6 end
+    if nTieNum >self.nTotalTieNum then nTieNum=self.nTotalTieNum end
     local sItemName = self.vItemsTieTable[nTieNum][RandomInt(1, #self.vItemsTieTable[nTieNum])]
     return sItemName
 
