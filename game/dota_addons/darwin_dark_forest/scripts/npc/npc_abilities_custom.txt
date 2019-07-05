@@ -7305,7 +7305,7 @@
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "radius"                "500"
+                "radius"                "350"
             }
             "03"
             {
@@ -8090,5 +8090,101 @@
             }
         }
     }
+
+
+    "test_double_lua"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "creature_ability/test_double_lua"
+        "AbilityTextureName"            "centaur_double_edge"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_ALL"
+
+
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Clinkz.DeathPact"
+
+        "MaxLevel"                      "5"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "1200"
+        "AbilityCastPoint"              "0"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+        "AbilityCooldown"               "1"
+        "AbilityManaCost"               "0"
+        "AbilityDamage"                 "75 130 200"
+    }
+
+
+    "bane_brain_sap"
+    {
+        "BaseClass"                     "bane_brain_sap"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"      
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Bane.BrainSap"
+        "HasScepterUpgrade"             "1"
+        "MaxLevel"                      "8"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0.4"
+        "AbilityCastRange"              "600"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "10.5 10 9.5 9 8.5 8 7.5 7"
+
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "90 100 110 120 130 140 150 160"
+
+        
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "brain_sap_damage"              "75 150 235 330 435 550 675 810"
+                "LinkedSpecialBonus"            "special_bonus_unique_bane_2"
+            }
+            "02"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "tooltip_brain_sap_heal_amt"    "75 150 235 330 435 550 675 810"
+                "LinkedSpecialBonus"            "special_bonus_unique_bane_2"
+            }
+            "03"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "cooldown_scepter"              "1.5"
+            }
+            "04"
+            {
+                "var_type"                      "FIELD_FLOAT"
+                "castpoint_scepter"             "0.2"
+            }
+            "05"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "nHunt"                         "5 10 15 20 25 30 35 40"
+            }
+           "06"
+            {
+                "var_type"                      "FIELD_INTEGER"
+                "nMystery"                      "5 10 15 20 25 30 35 40"
+            }
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+    
 
 }

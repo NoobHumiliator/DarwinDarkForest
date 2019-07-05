@@ -14810,6 +14810,102 @@
 	//   Level-8
 	//-----------------------------------------
 
+	"npc_dota_creature_bane"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/bane/bane.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Bane"
+		"Level"						"8"
+		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+         
+        "nHunt"                     "10"
+        "nMystery"                  "20"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"bane_brain_sap" // Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"145"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"				"400"			// Range within a target can be attacked.
+		"ProjectileModel"		    "particles/units/heroes/hero_bane/bane_projectile.vpcf"
+		"ProjectileSpeed"		    "900"
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2150"
+		"StatusHealthRegen"			"5.5"
+		"StatusMana"				"500"
+		"StatusManaRegen"			"5"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"503"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"612"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"613"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"614"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"615"
+				}
+	        }
+		}
+	}
+
+
 	"npc_dota_creature_clinkz"
 	{
         // General
@@ -15135,7 +15231,7 @@
 
 		"HasInventory"				"1"
          
-        "nHunt"                     "28"
+        "nHunt"                     "30"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -17670,6 +17766,101 @@
 	}
 
 	//Level-9
+
+	"npc_dota_creature_bane_heir_of_terror"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/bane/bane.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Bane"
+		"Level"						"9"
+		"ModelScale" 				"1.3"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+         
+        "nHunt"                     "12"
+        "nMystery"                  "24" 
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"bane_brain_sap"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"182"		// Damage range min.
+		"AttackDamageMax"			"199"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+        "AttackRange"		        "400"
+		"ProjectileModel"		    "particles/units/heroes/hero_bane/bane_projectile.vpcf"
+		"ProjectileSpeed"		    "900"
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2750"
+		"StatusHealthRegen"			"13.7"
+		"StatusMana"				"733"
+		"StatusManaRegen"			"7.3"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"503"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7941"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7944"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"7942"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7943"
+				}
+	        }
+		}
+	}
 
 	"npc_dota_creature_clinkz_scorched_fletcher"
 	{
@@ -20698,6 +20889,104 @@
 
 
 	//Level-10
+    
+    "npc_dota_creature_bane_lucid_torment"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/bane/bane.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Bane"
+		"Level"						"10"
+		"ModelScale" 				"1.4"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+         
+        "nMystery"                  "28"
+        "nHunt"                     "14" 
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"bane_brain_sap"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "7"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"6"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"236"		// Damage range min.
+		"AttackDamageMax"			"254"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"		        "400"
+		"ProjectileModel"	    	"particles/units/heroes/hero_bane/bane_projectile.vpcf"
+		"ProjectileSpeed"		    "900"
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3500"
+		"StatusHealthRegen"			"8.75"
+		"StatusMana"				"800"
+		"StatusManaRegen"			"8"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"8547"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8548"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"8549"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"8550"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"503"
+				}
+	        }
+		}
+	}
+
+
+
 	"npc_dota_creature_clinkz_compendium_scorched_fletcher"
 	{
         // General
@@ -22771,7 +23060,7 @@
 		"VoiceFile"		        "soundevents/voscripts/game_sounds_vo_broodmother.vsndevts"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_broodmother.vsndevts"
          
-        "nHunt"                     "36"
+        "nHunt"                     "42"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -38390,7 +38679,7 @@
 		"ConsideredHero"              "1"
 		"HasInventory"				"1"
          
-        "nHunt"                     "32"
+        "nHunt"                     "36"
 
         "VoiceFile"		        "soundevents/voscripts/game_sounds_vo_broodmother.vsndevts"
 		"particle_folder"		"particles/units/heroes/hero_broodmother"
@@ -51505,6 +51794,294 @@
 				"Wearable5"
 				{
 					"ItemDef"			"7809"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_bane_slumbering_terror"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/bane/bane.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Bane"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+         
+        "nHunt"                     "10"
+        "nMystery"                  "20"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"bane_brain_sap" // Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"145"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"				"400"			// Range within a target can be attacked.
+		"ProjectileModel"		    "particles/units/heroes/hero_bane/bane_projectile.vpcf"
+		"ProjectileSpeed"		    "900"
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2150"
+		"StatusHealthRegen"			"5.5"
+		"StatusMana"				"500"
+		"StatusManaRegen"			"5"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"503"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"612"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7692"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"614"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"615"
+				}
+	        }
+		}
+	}
+	"npc_dota_creature_bane_heir_of_terror_slumbering_terror"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/bane/bane.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Bane"
+		"Level"						"9"
+		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+         
+        "nHunt"                     "12"
+        "nMystery"                  "24" 
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"bane_brain_sap"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"182"		// Damage range min.
+		"AttackDamageMax"			"199"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+        "AttackRange"		        "400"
+		"ProjectileModel"		    "particles/units/heroes/hero_bane/bane_projectile.vpcf"
+		"ProjectileSpeed"		    "900"
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2750"
+		"StatusHealthRegen"			"13.7"
+		"StatusMana"				"733"
+		"StatusManaRegen"			"4.8"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"503"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7941"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7692"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"7942"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7943"
+				}
+	        }
+		}
+	}
+    "npc_dota_creature_bane_lucid_torment_slumbering_terror"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/bane/bane.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Bane"
+		"Level"						"10"
+		"ModelScale" 				"1.3"
+		"vscripts"					"creap_ai.lua"
+		"EconUnitFlag"              "1"
+		"ConsideredHero"              "1"
+		"HasInventory"				"1"
+         
+        "nMystery"                  "28"
+        "nHunt"                     "14" 
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"bane_brain_sap"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "7"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"6"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"236"		// Damage range min.
+		"AttackDamageMax"			"254"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"		        "400"
+		"ProjectileModel"	    	"particles/units/heroes/hero_bane/bane_projectile.vpcf"
+		"ProjectileSpeed"		    "900"
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3500"
+		"StatusHealthRegen"			"8.75"
+		"StatusMana"				"800"
+		"StatusManaRegen"			"2"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"8547"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8548"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"8549"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"7692"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"503"
 				}
 	        }
 		}
@@ -64669,6 +65246,102 @@
 	//   Level-8
 	//-----------------------------------------
 
+	"npc_dota_creature_player_bane"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/bane/bane.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Bane"
+		"Level"						"8"
+		"ModelScale" 				"1.1"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+		"ConsideredHero"             "1"         
+        "nHunt"                     "10"
+        "nMystery"                  "20"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"bane_brain_sap" // Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "5"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"135"		// Damage range min.
+		"AttackDamageMax"			"145"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"				"400"			// Range within a target can be attacked.
+		"ProjectileModel"		    "particles/units/heroes/hero_bane/bane_projectile.vpcf"
+		"ProjectileSpeed"		    "900"
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2150"
+		"StatusHealthRegen"			"5.5"
+		"StatusMana"				"500"
+		"StatusManaRegen"			"5"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"503"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"612"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"613"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"614"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"615"
+				}
+	        }
+		}
+	}
+
+
 	"npc_dota_creature_player_clinkz"
 	{
         // General
@@ -67529,6 +68202,101 @@
 	}
 
 	//Level-9
+
+	"npc_dota_creature_player_bane_heir_of_terror"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/bane/bane.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Bane"
+		"Level"						"9"
+		"ModelScale" 				"1.2"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+		"ConsideredHero"             "1"         
+        "nHunt"                     "12"
+        "nMystery"                  "24" 
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"bane_brain_sap"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"182"		// Damage range min.
+		"AttackDamageMax"			"199"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+        "AttackRange"		        "400"
+		"ProjectileModel"		    "particles/units/heroes/hero_bane/bane_projectile.vpcf"
+		"ProjectileSpeed"		    "900"
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2750"
+		"StatusHealthRegen"			"13.7"
+		"StatusMana"				"733"
+		"StatusManaRegen"			"4.8"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"503"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"7941"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"7944"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"7942"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"7943"
+				}
+	        }
+		}
+	}
 
 	"npc_dota_creature_player_clinkz_scorched_fletcher"
 	{
@@ -70557,6 +71325,104 @@
 
 
 	//Level-10
+    
+    "npc_dota_creature_player_bane_lucid_torment"
+	{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/bane/bane.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"Hero_Bane"
+		"Level"						"10"
+		"ModelScale" 				"1.3"
+		"vscripts"					"creap_ai.lua"
+		"HasInventory"				"1"
+		"ConsideredHero"             "1"         
+        "nMystery"                  "28"
+        "nHunt"                     "14" 
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"bane_brain_sap"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		"AbilitiesLevel"            "7"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"6"			// Physical protection.
+		"MagicalResistance"         "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"236"		// Damage range min.
+		"AttackDamageMax"			"254"		// Damage range max.
+		"AttackRate"		        "1.5"
+		"AttackAnimationPoint"		"0.3"
+		"AttackAcquisitionRange"	"550"		// Range within a target can be acquired.
+		"AttackRange"		        "400"
+		"ProjectileModel"	    	"particles/units/heroes/hero_bane/bane_projectile.vpcf"
+		"ProjectileSpeed"		    "900"
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"180"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"340"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3500"
+		"StatusHealthRegen"			"8.75"
+		"StatusMana"				"800"
+		"StatusManaRegen"			"2"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"
+		"VisionNighttimeRange"		"2500"
+
+		// Team
+		//----------------------------------------------------------------
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"Creature"
+		{      		
+	        "AttachWearables"
+	        {
+	           "Wearable1"
+				{
+					"ItemDef"			"8547"
+				}
+				"Wearable2"
+				{
+					"ItemDef"			"8548"
+				}
+				"Wearable3"
+				{
+					"ItemDef"			"8549"
+				}
+				"Wearable4"
+				{
+					"ItemDef"			"8550"
+				}
+				"Wearable5"
+				{
+					"ItemDef"			"503"
+				}
+	        }
+		}
+	}
+
+
+
 	"npc_dota_creature_player_clinkz_compendium_scorched_fletcher"
 	{
         // General

@@ -427,6 +427,7 @@
 
 
     //Level-8
+    "npc_dota_creature_bane"                                                        "Bane"
     "npc_dota_creature_clinkz"                                                      "Clinkz"
     "npc_dota_creature_spirit_breaker"                                              "Spirit Breaker"
     "npc_dota_creature_slark_3"                                                     "Dark Reef Escape"
@@ -462,6 +463,7 @@
     "npc_dota_creature_slardar"                                                     "Slardar"
 
     //Level-9
+    "npc_dota_creature_bane_heir_of_terror"                                         "Heir of Terror"
     "npc_dota_creature_clinkz_scorched_fletcher"                                    "Scorched Fletcher"
     "npc_dota_creature_undying_seablight_procession"                                "Undying Seablight Procession"
     "npc_dota_creature_ogre_double_head_antipodeans"                                "Ogre War Mage"
@@ -497,6 +499,7 @@
 
 
     //Level-10
+    "npc_dota_creature_bane_lucid_torment"                                          "Lucid Torment"
     "npc_dota_creature_clinkz_compendium_scorched_fletcher"                         "Compendium Scorched Fletcher"
     "npc_dota_creature_nian_2"                                                      "Nian"
     "npc_dota_creature_roshan_2"                                                    "Roshan"
@@ -1603,6 +1606,7 @@
 
     "econ_wan_bu_liao_la"                                                       "Wan Bu Liao La"
     "econ_gao_fu_shuai"                                                         "Gao Fu Shuai"
+    "econ_slumbering_terror"                                                    "Slumbering Terror"
 
 
     "DOTA_Tooltip_Ability_clinkz_burning_army_lua"                              "Burning Army"
@@ -1616,6 +1620,9 @@
     "DOTA_Tooltip_ability_clinkz_burning_army_lua_nDecay"                      "<font color='#b3d465'>Decay:</font>"
     "DOTA_Tooltip_ability_clinkz_burning_army_lua_nElement"                    "<font color='#00a0e9'>Element:</font>"
     "DOTA_Tooltip_ability_clinkz_burning_army_lua_nFury"                       "<font color='#eb6877'>Fury:</font>"
+
+    "DOTA_Tooltip_ability_bane_brain_sap_nHunt"                                "<font color='#999999'>Hunt:</font>"
+    "DOTA_Tooltip_ability_bane_brain_sap_nMystery"                             "<font color='#e9c2ff'>Mystery:</font>"
 
 
     //EconUnitBegins
@@ -1877,6 +1884,9 @@
 	"npc_dota_creature_sand_king_kray_legions_barren_crown"                  "Kray Legions"
 	"npc_dota_creature_sand_king_kray_legions_barren_vector"                  "Kray Legions"
 	"npc_dota_creature_sand_king_kray_legions_barren_crown_barren_vector"                  "Kray Legions"
+	"npc_dota_creature_bane_slumbering_terror"                  "Bane"
+	"npc_dota_creature_bane_heir_of_terror_slumbering_terror"                  "Heir of Terror"
+	"npc_dota_creature_bane_lucid_torment_slumbering_terror"                  "Lucid Torment"
 	//PlayerUnitBegins
     "npc_dota_creature_player_summoned_familiar"                                           "Familiar"
     "npc_dota_creature_player_wraith_warrior"                                              "Wraith Warrior"
@@ -2070,6 +2080,7 @@
     "npc_dota_creature_player_dark_troll_berserker"                                        "Forest Troll Berserker"
     "npc_dota_creature_player_satyr_dreamer"                                               "Satyr Dreamer"
     "npc_dota_creature_player_morphling"                                                   "Sea Element"
+    "npc_dota_creature_player_bane"                                                        "Bane"
     "npc_dota_creature_player_clinkz"                                                      "Clinkz"
     "npc_dota_creature_player_spirit_breaker"                                              "Spirit Breaker"
     "npc_dota_creature_player_slark_3"                                                     "Dark Reef Escape"
@@ -2102,6 +2113,7 @@
     "npc_dota_creature_player_broodmother"                                                 "Broodmother"
     "npc_dota_creature_player_morphling_2"                                                 "Morphling"
     "npc_dota_creature_player_slardar"                                                     "Slardar"
+    "npc_dota_creature_player_bane_heir_of_terror"                                         "Heir of Terror"
     "npc_dota_creature_player_clinkz_scorched_fletcher"                                    "Scorched Fletcher"
     "npc_dota_creature_player_undying_seablight_procession"                                "Undying Seablight Procession"
     "npc_dota_creature_player_ogre_double_head_antipodeans"                                "Ogre War Mage"
@@ -2134,6 +2146,7 @@
     "npc_dota_creature_player_visage_soul_keeper"                                          "Soul Keeper"
     "npc_dota_creature_player_morphling_lost_star"                                         "Lost Star"
     "npc_dota_creature_player_slardar_vanguard"                                            "Slardar Vanguard"
+    "npc_dota_creature_player_bane_lucid_torment"                                          "Lucid Torment"
     "npc_dota_creature_player_clinkz_compendium_scorched_fletcher"                         "Compendium Scorched Fletcher"
     "npc_dota_creature_player_nian_2"                                                      "Nian"
     "npc_dota_creature_player_roshan_2"                                                    "Roshan"

@@ -6,7 +6,7 @@ if HandBook == nil then HandBook = class({}) end
 local vTypes={"nFury","nDurable","nElement","nHunt","nDecay","nMystery"}
 
 --微调生物的名字
-local vAdjustMap={
+local vAdjustMap1={
     
     npc_dota_creature_ogre_mauler_1=true,
     npc_dota_creature_ogre_mauler_2=true,
@@ -22,13 +22,22 @@ local vAdjustMap={
     npc_dota_creature_gaoler=true,
     npc_dota_creature_small_thunder_lizard_1=true,
     npc_dota_creature_small_thunder_lizard_2=true,
-    npc_dota_creature_large_thunder_lizard=true
+    npc_dota_creature_large_thunder_lizard=true,
 
 
 }
 
+local vAdjustMap2={
+    
+    npc_dota_creature_bane=true,
+    npc_dota_creature_bane_heir_of_terror=true,
+    npc_dota_creature_bane_lucid_torment=true
+
+}
+
+
 --微调生物的类群
-local vAdjustsCombine={
+local vAdjustsCombine1={
     
     "nFury nDurable",
     "nDurable nFury",
@@ -42,6 +51,14 @@ local vAdjustsCombine={
     "nElement nDurable",
     "nDurable nElement",
 }
+
+--微调生物的类群
+local vAdjustsCombine2={
+    
+    "nHunt nMystery",
+    "nMystery nHunt",
+}
+
 
 
 
@@ -95,7 +112,7 @@ function HandBook:InsertCombineData(vRawPerkData,sPerkNameCombine)
                 end
              end
              
-             if bMeetRequirement  and vAdjustMap[sUnitName]==nil then
+             if bMeetRequirement  and vAdjustMap1[sUnitName]==nil and  vAdjustMap2[sUnitName]==nil then
                  local vPerkData={}
                  for _,v in pairs(SpliteStr(sPerkNameCombine)) do
                      vPerkData[v]=vData[v]
@@ -137,23 +154,31 @@ end
 function HandBook:Adjust(vRawPerkData,sPerkNameCombine)
     
     --微调的标志位
-    vRawPerkData[sPerkNameCombine.."a"]={}
+    vRawPerkData[sPerkNameCombine.."1"]={}
+    vRawPerkData[sPerkNameCombine.."2"]={}
 
-    local bInAdjustCombine=false
+    local bInAdjustCombine1=false
 
-    for _,v in ipairs(vAdjustsCombine) do
+    for _,v in ipairs(vAdjustsCombine1) do
         if sPerkNameCombine==v then
-            print("sPerkNameCombine"..sPerkNameCombine)
-            bInAdjustCombine=true
+            bInAdjustCombine1=true
+        end
+    end
+
+    local bInAdjustCombine2=false
+
+    for _,v in ipairs(vAdjustsCombine2) do
+        if sPerkNameCombine==v then
+            bInAdjustCombine2=true
         end
     end
 
 
-    if bInAdjustCombine then
+    if bInAdjustCombine1 then
 
        for sUnitName, vData in pairs(GameRules.vUnitsKV) do
             
-            if vAdjustMap[sUnitName] then
+            if vAdjustMap1[sUnitName] then
                
                  local vPerkData={}
                  local bValid=true
@@ -176,15 +201,54 @@ function HandBook:Adjust(vRawPerkData,sPerkNameCombine)
                  end
 
                  if bValid then
-                     vRawPerkData[sPerkNameCombine.."a"][vData.nCreatureLevel] = {unit_name=sUnitName,total_perk=vData.nTotalPerk,perk_data=vPerkData,ability_data=vAbilityData}
+                     vRawPerkData[sPerkNameCombine.."1"][vData.nCreatureLevel] = {unit_name=sUnitName,total_perk=vData.nTotalPerk,perk_data=vPerkData,ability_data=vAbilityData}
                  end
             end 
 
         end
     end
 
-    if next(vRawPerkData[sPerkNameCombine.."a"])==nil then
-       vRawPerkData[sPerkNameCombine.."a"]=nil
+    if next(vRawPerkData[sPerkNameCombine.."1"])==nil then
+       vRawPerkData[sPerkNameCombine.."1"]=nil
+    end
+
+
+    if bInAdjustCombine2 then
+
+       for sUnitName, vData in pairs(GameRules.vUnitsKV) do
+            
+            if vAdjustMap2[sUnitName] then
+               
+                 local vPerkData={}
+                 local bValid=true
+
+                 for _,v in pairs(SpliteStr(sPerkNameCombine)) do
+                     vPerkData[v]=vData[v]
+                     if vPerkData[v]==0 then
+                        bValid=false
+                     end
+                 end
+                 local vAbilityData={}
+                 if vData.Ability1 and vData.Ability1~="" then
+                    vAbilityData.ability_1=vData.Ability1
+                 end
+                 if vData.Ability2 and vData.Ability2~="" then
+                    vAbilityData.ability_2=vData.Ability2
+                 end
+                 if vData.Ability3 and vData.Ability3~="" then
+                    vAbilityData.ability_3=vData.Ability3
+                 end
+
+                 if bValid then
+                     vRawPerkData[sPerkNameCombine.."2"][vData.nCreatureLevel] = {unit_name=sUnitName,total_perk=vData.nTotalPerk,perk_data=vPerkData,ability_data=vAbilityData}
+                 end
+            end 
+
+        end
+    end
+
+    if next(vRawPerkData[sPerkNameCombine.."2"])==nil then
+       vRawPerkData[sPerkNameCombine.."2"]=nil
     end
         
 end

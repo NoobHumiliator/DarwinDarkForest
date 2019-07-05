@@ -146,8 +146,13 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
   hHero:FindAbilityByName("dota_ability_hero_invulnerable"):SetLevel(1)
   --如果已经控制了某个生物 先移除
   local flCurrentHealthRatio = 1
+  local bPreviousHasFlyMovementCapability = false
+  local nPreviousLevel=1
+
   if  hHero.hCurrentCreep~=nil and not hHero.hCurrentCreep:IsNull() then
+    bPreviousHasFlyMovementCapability =  hHero.hCurrentCreep:HasFlyMovementCapability()
     if hHero.hCurrentCreep:IsAlive() then
+        nPreviousLevel=hHero.hCurrentCreep:GetLevel()
         --记录物品 记录血量 （重生的话从死亡事件里面记录物品）
         ItemController:RecordItemsInfo(hHero)
         flCurrentHealthRatio= hHero.hCurrentCreep:GetHealth()/hHero.hCurrentCreep:GetMaxHealth()
@@ -159,16 +164,16 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
     RemoveInvulnerableModifier(hHero.hCurrentCreep)
 
     hHero.hCurrentCreep:AddNoDraw()
-    
-    --因为游戏机制移除的
-    hHero.hCurrentCreep.bKillByMech=true
 
     --连环删除大法
-    local toKillUnit=hHero.hCurrentCreep
+    local hToKillUnit=hHero.hCurrentCreep
 
     Timers:CreateTimer(FrameTime(), function()
-           if toKillUnit  and not toKillUnit:IsNull() and toKillUnit:IsAlive() then
-              toKillUnit:ForceKill(false)
+           if hToKillUnit  and not hToKillUnit:IsNull() and hToKillUnit:IsAlive() then
+              --因游戏机制移除的生物
+              hToKillUnit.bKillByMech=true
+              hToKillUnit:AddNoDraw()
+              hToKillUnit:ForceKill(false)
               return FrameTime()
            else
             return nil
@@ -230,10 +235,15 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
 
   --清除周围树木,防止卡在树里面
   local flDestroyTreeRadius=200
+
+  --如果之前有飞行能力，现在没有了
+  if bPreviousHasFlyMovementCapability and not hUnit:HasFlyMovementCapability() then
+     flDestroyTreeRadius=450
+  end
   
-  --七级以上生物 扩大范围
-  if hUnit:GetLevel()>=7 then
-     flDestroyTreeRadius=400
+  --如果之前不足七级，或者本次是重生
+  if nPreviousLevel<7 and hUnit:GetLevel()>=7 then
+     flDestroyTreeRadius=450
   end
   
   GridNav:DestroyTreesAroundPoint( hUnit:GetOrigin(), flDestroyTreeRadius, false )

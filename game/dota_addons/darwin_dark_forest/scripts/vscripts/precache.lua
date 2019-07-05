@@ -46,7 +46,9 @@ local precacheHeroes = {
    "necrolyte",
    "magnataur",
    "mars",
-   "ember_spirit"
+   "ember_spirit",
+   "crystal_maiden",
+   "bane"
 }
 
 

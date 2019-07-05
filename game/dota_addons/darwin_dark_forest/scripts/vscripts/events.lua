@@ -130,98 +130,97 @@ end
 
 function GameMode:OnEntityKilled(keys)
   
-   if keys.entindex_attacker==nil then
-       return
-   end
-
    local hKilledUnit = EntIndexToHScript( keys.entindex_killed )
-   local hKillerUnit = EntIndexToHScript(keys.entindex_attacker)
    
-
    local flPercentage=0.5 --野怪进化点数 比例
    local flPlayerPercentage=0.09 --玩家进化点数 吸取比例
 
    --如果玩家击杀野怪，把野怪的进化点赋给玩家
    if  hKilledUnit:GetTeamNumber() == DOTA_TEAM_NEUTRALS then
+       if keys.entindex_attacker  then
+           local hKillerUnit = EntIndexToHScript(keys.entindex_attacker)
+           if hKillerUnit and not hKillerUnit:IsNull() then
 
-       local nPlayerId = hKillerUnit:GetMainControllingPlayer()
-       local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
-        
-       --如果是生物自然死亡，不做处理
-       if hHero==nil then
-           return
-       end
-
-       --掉落物品
-       ItemController:DropItemByChance(hKilledUnit)
-   
-       --被击杀的时大怪，播放
-       if hKilledUnit:GetLevel()>hHero.nCurrentCreepLevel then
-            PlayKillEffectAndSound(nPlayerId)
-       end
-
-       --消除野怪户口 (先确保被击杀单位不是野怪的召唤生物)      
-       if hKilledUnit.nCreatureLevel then
-           NeutralSpawner.nCreaturesNumber=NeutralSpawner.nCreaturesNumber-1
-           NeutralSpawner.vCreatureLevelMap[hKilledUnit.nCreatureLevel]=NeutralSpawner.vCreatureLevelMap[hKilledUnit.nCreatureLevel]-1
-       end
-
-       local tempPerksMap = {0,0,0,0,0,0}
-   
-       if GameRules.vUnitsKV[hKilledUnit:GetUnitName()] then
-           tempPerksMap[1] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nElement  *flPercentage
-           tempPerksMap[2] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nMystery *flPercentage
-           tempPerksMap[3] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nDurable *flPercentage
-           tempPerksMap[4] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nFury *flPercentage
-           tempPerksMap[5] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nDecay *flPercentage
-           tempPerksMap[6] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nHunt *flPercentage
-       end
-     
-
-       --计算一个总进化点数       
-       local flTotalPerks=0
-       --计算多少种属性 需要倒扣
-       local nUnmatchTypes=0
-
-       for _,v in ipairs(tempPerksMap) do
-         flTotalPerks=v+flTotalPerks
-         if v==0 then
-           nUnmatchTypes=nUnmatchTypes+1
-         end
-       end
-       
-       if flTotalPerks>0 then --需要处理进化点数
-             -- 遍历 如果进化点不符合倒扣，属性符合增加
-             for i,v in ipairs(tempPerksMap) do        
-                 if tempPerksMap[i] ==0 then --此项倒扣，倒扣的值为 flTotalPerks/nUnmatchTypes
-                    GameMode.vPlayerPerk[nPlayerId][i]= math.max(0, GameMode.vPlayerPerk[nPlayerId][i]-flTotalPerks/nUnmatchTypes)
-                 else --此项增加
-                    GameMode.vPlayerPerk[nPlayerId][i]=GameMode.vPlayerPerk[nPlayerId][i]+ tempPerksMap[i]
-                 end
+             local nPlayerId = hKillerUnit:GetMainControllingPlayer()
+             local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
+              
+             --如果是生物自然死亡，不做处理
+             if hHero==nil then
+                 return
              end
-       end
-       
-       PlayAbsorbParticle(tempPerksMap,hKillerUnit,hKilledUnit)
 
-       --计算经验获取率
-       local flExpRatio=1
-       if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_item_creed_of_omniscience") then
-           flExpRatio= flExpRatio*1.2
-       end
+             --掉落物品
+             ItemController:DropItemByChance(hKilledUnit)
+         
+             --被击杀的时大怪，播放
+             if hKilledUnit:GetLevel()>hHero.nCurrentCreepLevel then
+                  PlayKillEffectAndSound(nPlayerId)
+             end
 
-       if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_bonus_ring_effect") then
-           flExpRatio= flExpRatio*1.5
-       end
-       
-       local flExp = 0
-       if hKilledUnit.nCreatureLevel then
-         flExp= vCREEP_EXP_TABLE[hKilledUnit.nCreatureLevel]*flExpRatio
-       else
-         flExp= vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio
-       end
+             --消除野怪户口 (先确保被击杀单位不是野怪的召唤生物)      
+             if hKilledUnit.nCreatureLevel then
+                 NeutralSpawner.nCreaturesNumber=NeutralSpawner.nCreaturesNumber-1
+                 NeutralSpawner.vCreatureLevelMap[hKilledUnit.nCreatureLevel]=NeutralSpawner.vCreatureLevelMap[hKilledUnit.nCreatureLevel]-1
+             end
 
-       GainExpAndUpdateRadar(nPlayerId,hHero,flExp)
-   end
+             local tempPerksMap = {0,0,0,0,0,0}
+         
+             if GameRules.vUnitsKV[hKilledUnit:GetUnitName()] then
+                 tempPerksMap[1] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nElement  *flPercentage
+                 tempPerksMap[2] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nMystery *flPercentage
+                 tempPerksMap[3] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nDurable *flPercentage
+                 tempPerksMap[4] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nFury *flPercentage
+                 tempPerksMap[5] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nDecay *flPercentage
+                 tempPerksMap[6] = GameRules.vUnitsKV[hKilledUnit:GetUnitName()].nHunt *flPercentage
+             end
+           
+
+             --计算一个总进化点数       
+             local flTotalPerks=0
+             --计算多少种属性 需要倒扣
+             local nUnmatchTypes=0
+
+             for _,v in ipairs(tempPerksMap) do
+               flTotalPerks=v+flTotalPerks
+               if v==0 then
+                 nUnmatchTypes=nUnmatchTypes+1
+               end
+             end
+             
+             if flTotalPerks>0 then --需要处理进化点数
+                   -- 遍历 如果进化点不符合倒扣，属性符合增加
+                   for i,v in ipairs(tempPerksMap) do        
+                       if tempPerksMap[i] ==0 then --此项倒扣，倒扣的值为 flTotalPerks/nUnmatchTypes
+                          GameMode.vPlayerPerk[nPlayerId][i]= math.max(0, GameMode.vPlayerPerk[nPlayerId][i]-flTotalPerks/nUnmatchTypes)
+                       else --此项增加
+                          GameMode.vPlayerPerk[nPlayerId][i]=GameMode.vPlayerPerk[nPlayerId][i]+ tempPerksMap[i]
+                       end
+                   end
+             end
+             
+             PlayAbsorbParticle(tempPerksMap,hKillerUnit,hKilledUnit)
+
+             --计算经验获取率
+             local flExpRatio=1
+             if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_item_creed_of_omniscience") then
+                 flExpRatio= flExpRatio*1.2
+             end
+
+             if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_bonus_ring_effect") then
+                 flExpRatio= flExpRatio*1.5
+             end
+             
+             local flExp = 0
+             if hKilledUnit.nCreatureLevel then
+               flExp= vCREEP_EXP_TABLE[hKilledUnit.nCreatureLevel]*flExpRatio
+             else
+               flExp= vCREEP_EXP_TABLE[hKilledUnit:GetLevel()]*flExpRatio
+             end
+
+             GainExpAndUpdateRadar(nPlayerId,hHero,flExp)
+          end --if hKillerUnit and not hKillerUnit:IsNull()
+       end --if keys.entindex_attacker
+   end --hKilledUnit:GetTeamNumber() == DOTA_TEAM_NEUTRALS
 
     --如果玩家生物被击杀
    if  hKilledUnit:GetOwner() and not hKilledUnit:IsHero() and hKilledUnit:GetOwner().GetPlayerID then
@@ -233,18 +232,30 @@ function GameMode:OnEntityKilled(keys)
 
        --玩家被 其他队伍的玩家所击杀 标志位
        local bKilledByOtherTeam = false
-       
-       if hKillerUnit:GetOwner() and  hKillerUnit:GetOwner().GetPlayerID then
-          nKillerPlayerId = hKillerUnit:GetOwner():GetPlayerID()
-          if nKillerPlayerId~=-1 and PlayerResource:GetTeam(nKillerPlayerId)~=PlayerResource:GetTeam(nPlayerId) then
-            hKillerHero =  PlayerResource:GetSelectedHeroEntity(nKillerPlayerId)
-            bKilledByOtherTeam=true
-          end
+       local hKillerUnit=nil
+
+       if keys.entindex_attacker then
+         hKillerUnit = EntIndexToHScript(keys.entindex_attacker)
+         if hKillerUnit and not hKillerUnit:IsNull() and hKillerUnit:GetOwner() and  hKillerUnit:GetOwner().GetPlayerID then
+            nKillerPlayerId = hKillerUnit:GetOwner():GetPlayerID()
+            if nKillerPlayerId~=-1 and PlayerResource:GetTeam(nKillerPlayerId)~=PlayerResource:GetTeam(nPlayerId) then
+              hKillerHero =  PlayerResource:GetSelectedHeroEntity(nKillerPlayerId)
+              bKilledByOtherTeam=true
+            end
+         end
        end
 
-       print("nPlayerId"..nPlayerId)
        -- 保证是玩家的主控生物
        if hHero and hHero.hCurrentCreep == hKilledUnit and true~=hHero.hCurrentCreep.bKillByMech then
+
+          hHero:Kill(nil, hKillerUnit)
+
+          -- 终极进化阶段不能再重生
+          if GameRules.bUltimateStage then
+            hHero:SetTimeUntilRespawn(-1)
+          else
+            hHero:SetTimeUntilRespawn(5)
+          end
 
           --掉落物品
           ItemController:DropItemByChance(hKilledUnit)
@@ -274,11 +285,11 @@ function GameMode:OnEntityKilled(keys)
 
             --给击杀者经验 玩家互相杀 经验翻倍
             local flExpRatio=2
-            if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_item_creed_of_omniscience") then
+            if hKillerHero.hCurrentCreep and hKillerHero.hCurrentCreep:HasModifier("modifier_item_creed_of_omniscience") then
                flExpRatio=flExpRatio*1.2
             end
 
-            if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_bonus_ring_effect") then
+            if hKillerHero.hCurrentCreep and hKillerHero.hCurrentCreep:HasModifier("modifier_bonus_ring_effect") then
                flExpRatio= flExpRatio*1.5
             end
 
@@ -293,28 +304,19 @@ function GameMode:OnEntityKilled(keys)
 
           end
 
-          hHero:Kill(nil, hKillerUnit)
-          
-
-          --重生前的0.1秒 将出身地随机
+          --重生前将出身地随机
           Timers:CreateTimer(4.6, function()
                  GameMode:PutStartPositionToRandomPosForTeam(hHero:GetTeamNumber());
               end
           )
 
-           -- 终极进化阶段不能再重生
-           if GameRules.bUltimateStage then
-              hHero:SetTimeUntilRespawn(99999999999)
-           else
-              hHero:SetTimeUntilRespawn(5)
-           end
-            --计算等级
-           local nNewLevel=CalculateNewLevel(hHero)
-           hHero.nCurrentCreepLevel=nNewLevel
-           --英雄重生的时候再进化
-           --Evolve(nPlayerId,hHero)
-            --更新雷达显示
-            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
+           --计算等级
+          local nNewLevel=CalculateNewLevel(hHero)
+          hHero.nCurrentCreepLevel=nNewLevel
+          --英雄重生的时候再进化
+          --Evolve(nPlayerId,hHero)
+          --更新雷达显示
+          CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
        end
    end
    DoCleanForDeadUnit(hKilledUnit)
@@ -416,7 +418,7 @@ end
 function GameMode:OnNPCSpawned( event )
 
     local hSpawnedUnit = EntIndexToHScript( event.entindex )
-    print("hSpawnedUnit:GetUnitName()"..hSpawnedUnit:GetUnitName())
+    --print("hSpawnedUnit:GetUnitName()"..hSpawnedUnit:GetUnitName())
 
     --如果已经初始化过 （是复生 而不是第一次选出来）
     if hSpawnedUnit:IsHero() and hSpawnedUnit.nCurrentCreepLevel then
@@ -453,14 +455,8 @@ function GameMode:OnNPCSpawned( event )
     --修正模型动作
        ActivityModifier:AddActivityModifierThink(hSpawnedUnit)
     end
-    --处理生物
+    --处理生物角度
     if hSpawnedUnit and hSpawnedUnit.GetUnitName then
-        --修正眼睛插到天辉的问题
-        if hSpawnedUnit:GetUnitName()=="npc_dota_observer_wards"then
-           if hSpawnedUnit.GetTeam and hSpawnedUnit.GetOwner then
-              hSpawnedUnit:SetTeam(hSpawnedUnit:GetOwner():GetTeam())
-           end
-        end
         if hSpawnedUnit:GetUnitName()~="npc_dota_thinker"then
           hSpawnedUnit:SetForwardVector(RandomVector(1))
         end
@@ -501,6 +497,9 @@ function GameMode:OnPlayerSay(keys)
         if sText=="blink" and hHero and not hHero.hCurrentCreep:IsNull() then
            hHero.hCurrentCreep:AddAbility("test_blink")
            hHero.hCurrentCreep:FindAbilityByName("test_blink"):SetLevel(1)
+
+           hHero.hCurrentCreep:AddAbility("test_double_lua")
+           hHero.hCurrentCreep:FindAbilityByName("test_double_lua"):SetLevel(1)
         end
     
         -- 关闭 wtf 模式
@@ -511,6 +510,14 @@ function GameMode:OnPlayerSay(keys)
          -- 自杀
         if sText=="suicide" and hHero and not hHero.hCurrentCreep:IsNull() then
            hHero.hCurrentCreep:ForceKill(true)
+        end
+
+        -- 接近进化
+        if sText=="near" and hHero and not hHero.hCurrentCreep:IsNull() then
+           hHero.nCustomExp=vEXP_TABLE[11]-1
+           local nNewLevel=10
+           CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
+           CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
         end
         
         -- 进化 换模型
@@ -530,7 +537,7 @@ function GameMode:OnPlayerSay(keys)
            local nLevel= tonumber(string.match(sText,"%d+"))
            --给玩家对应等级的经验
            if nLevel>=1 and nLevel<=11 then
-             hHero.nCustomExp=vCREEP_EXP_TABLE[nLevel]+1
+             hHero.nCustomExp=vEXP_TABLE[nLevel]+1
                --计算等级
              local nNewLevel=CalculateNewLevel(hHero)
              
@@ -819,15 +826,15 @@ function CalculateInvulnerableDuration(hHero)
         end
 
         if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-1 then
-           flDuration=5
+           flDuration=6
         end
 
         if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-2 then
-           flDuration=7
+           flDuration=10
         end
 
         if hHero.hCurrentCreep:GetLevel() <= GameRules.nAverageLevel-3 then
-           flDuration=9
+           flDuration=14
         end
         
     end

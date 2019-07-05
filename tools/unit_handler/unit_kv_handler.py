@@ -68,6 +68,10 @@ map={
    'npc_dota_creature_sand_king':{'barren_crown':('180','8074'),'barren_vector':('199','7809')},
    'npc_dota_creature_sand_king_scouring_dunes':{'barren_crown':('6613','8074'),'barren_vector':('6612','7809')},
    'npc_dota_creature_sand_king_kray_legions':{'barren_crown':('9432','8074'),'barren_vector':('9433','7809')},
+
+   'npc_dota_creature_bane':{'slumbering_terror':('613','7692')},
+   'npc_dota_creature_bane_heir_of_terror':{'slumbering_terror':('7944','7692')},
+   'npc_dota_creature_bane_lucid_torment':{'slumbering_terror':('8550','7692')},
    
 }
 
@@ -127,6 +131,10 @@ localizeMap={
    'npc_dota_creature_clinkz':'克林克兹',
    'npc_dota_creature_clinkz_scorched_fletcher':'闷燃弓手',
    'npc_dota_creature_clinkz_compendium_scorched_fletcher':'焦燃枯骨',
+
+   'npc_dota_creature_bane':'祸乱之源',
+   'npc_dota_creature_bane_heir_of_terror':'恐惧之裔',
+   'npc_dota_creature_bane_lucid_torment':'无休折磨',
    
 
 }
@@ -189,6 +197,10 @@ localizeMapEn={
    'npc_dota_creature_clinkz':'Clinkz',
    'npc_dota_creature_clinkz_scorched_fletcher':'Scorched Fletcher',
    'npc_dota_creature_clinkz_compendium_scorched_fletcher':'Compendium Scorched Fletcher',
+
+   'npc_dota_creature_bane':'Bane',
+   'npc_dota_creature_bane_heir_of_terror':'Heir of Terror',
+   'npc_dota_creature_bane_lucid_torment':'Lucid Torment',
 }
 
 

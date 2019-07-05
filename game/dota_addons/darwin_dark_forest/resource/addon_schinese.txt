@@ -437,6 +437,7 @@
 
 
     //Level-8
+    "npc_dota_creature_bane"                                                        "祸乱之源"
     "npc_dota_creature_clinkz"                                                      "克林克兹"
     "npc_dota_creature_spirit_breaker"                                              "裂魂人"
     "npc_dota_creature_slark_3"                                                     "暗黑之礁逃犯"
@@ -476,6 +477,7 @@
     "npc_dota_creature_slardar"                                                     "鱼人战士"
 
     //Level-9
+    "npc_dota_creature_bane_heir_of_terror"                                         "恐惧之裔"
     "npc_dota_creature_clinkz_scorched_fletcher"                                    "闷燃弓手"
     "npc_dota_creature_undying_seablight_procession"                                "深海信徒"
     "npc_dota_creature_ogre_double_head_antipodeans"                                "双头食人战争魔法师"
@@ -511,6 +513,7 @@
 
 
     //Level-10
+    "npc_dota_creature_bane_lucid_torment"                                          "无休折磨"
     "npc_dota_creature_clinkz_compendium_scorched_fletcher"                         "焦燃枯骨"
     "npc_dota_creature_nian_2"                                                      "年兽"
     "npc_dota_creature_roshan_2"                                                    "肉山"
@@ -1643,7 +1646,7 @@
 
     "econ_wan_bu_liao_la"                                                       "玩不了啦"
     "econ_gao_fu_shuai"                                                         "这就是高富帅"
-
+    "econ_slumbering_terror"                                                    "沉睡之惧"
 
     "DOTA_Tooltip_Ability_clinkz_burning_army_lua"                              "燃烧之军"
     "DOTA_Tooltip_Ability_clinkz_burning_army_lua_Description"                  "召唤一队烈焰骷髅弓手。骷髅弓手不能移动，需要3次攻击才会被击杀。骷髅弓手使用当前灼热之箭技能。基础攻击力为英雄基础攻击力的%base_damage_percent%%。"
@@ -1656,6 +1659,11 @@
     "DOTA_Tooltip_ability_clinkz_burning_army_lua_nDecay"                      "<font color='#b3d465'>腐朽：</font>"
     "DOTA_Tooltip_ability_clinkz_burning_army_lua_nElement"                    "<font color='#00a0e9'>元素：</font>"
     "DOTA_Tooltip_ability_clinkz_burning_army_lua_nFury"                       "<font color='#eb6877'>狂怒：</font>"
+    
+
+    "DOTA_Tooltip_ability_bane_brain_sap_nHunt"                                "<font color='#999999'>猎杀：</font>"
+    "DOTA_Tooltip_ability_bane_brain_sap_nMystery"                             "<font color='#e9c2ff'>神秘：</font>"
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
@@ -1916,6 +1924,9 @@
 	"npc_dota_creature_sand_king_kray_legions_barren_crown"                  "鳌虾之王"
 	"npc_dota_creature_sand_king_kray_legions_barren_vector"                  "鳌虾之王"
 	"npc_dota_creature_sand_king_kray_legions_barren_crown_barren_vector"                  "鳌虾之王"
+	"npc_dota_creature_bane_slumbering_terror"                  "祸乱之源"
+	"npc_dota_creature_bane_heir_of_terror_slumbering_terror"                  "恐惧之裔"
+	"npc_dota_creature_bane_lucid_torment_slumbering_terror"                  "无休折磨"
 	//PlayerUnitBegins
     "npc_dota_creature_player_summoned_familiar"                                           "佣兽"
     "npc_dota_creature_player_wraith_warrior"                                              "冥界士兵"
@@ -2109,6 +2120,7 @@
     "npc_dota_creature_player_dark_troll_berserker"                                        "丛林巨魔狂战士"
     "npc_dota_creature_player_satyr_dreamer"                                               "萨特梦者"
     "npc_dota_creature_player_morphling"                                                   "海元素"
+    "npc_dota_creature_player_bane"                                                        "祸乱之源"
     "npc_dota_creature_player_clinkz"                                                      "克林克兹"
     "npc_dota_creature_player_spirit_breaker"                                              "裂魂人"
     "npc_dota_creature_player_slark_3"                                                     "暗黑之礁逃犯"
@@ -2144,6 +2156,7 @@
     "npc_dota_creature_player_broodmother"                                                 "育母蜘蛛"
     "npc_dota_creature_player_morphling_2"                                                 "变体精灵"
     "npc_dota_creature_player_slardar"                                                     "鱼人战士"
+    "npc_dota_creature_player_bane_heir_of_terror"                                         "恐惧之裔"
     "npc_dota_creature_player_clinkz_scorched_fletcher"                                    "闷燃弓手"
     "npc_dota_creature_player_undying_seablight_procession"                                "深海信徒"
     "npc_dota_creature_player_ogre_double_head_antipodeans"                                "双头食人战争魔法师"
@@ -2176,6 +2189,7 @@
     "npc_dota_creature_player_visage_soul_keeper"                                          "灵魂守卫"
     "npc_dota_creature_player_morphling_lost_star"                                         "迷星元素"
     "npc_dota_creature_player_slardar_vanguard"                                            "鱼人先锋"
+    "npc_dota_creature_player_bane_lucid_torment"                                          "无休折磨"
     "npc_dota_creature_player_clinkz_compendium_scorched_fletcher"                         "焦燃枯骨"
     "npc_dota_creature_player_nian_2"                                                      "年兽"
     "npc_dota_creature_player_roshan_2"                                                    "肉山"

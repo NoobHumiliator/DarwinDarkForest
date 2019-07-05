@@ -588,21 +588,7 @@ Label{
 }
 
 
-.Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_clinkz.png");
-}
-.Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_clinkz_compendium_scorched_fletcher.png");
-}
-.Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_clinkz_scorched_fletcher.png");
-}
 
 .Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_amoeba_4.png");
-}
-
-
-.Temp{
-   background-image: url("file://{images}/custom_game/creature_portrait/npc_dota_creature_amoeba_3.png");
+   background-image: url("file://{images}/custom_game/econ/slumbering_terror.png");
 }

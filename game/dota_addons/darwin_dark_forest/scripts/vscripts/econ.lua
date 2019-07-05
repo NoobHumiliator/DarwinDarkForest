@@ -114,6 +114,8 @@ Econ.vImmortalUnitMap ={
     
     barren_crown={"npc_dota_creature_sand_king","npc_dota_creature_sand_king_scouring_dunes","npc_dota_creature_sand_king_kray_legions"},
     barren_vector={"npc_dota_creature_sand_king","npc_dota_creature_sand_king_scouring_dunes","npc_dota_creature_sand_king_kray_legions"},
+    
+    slumbering_terror={"npc_dota_creature_bane","npc_dota_creature_bane_heir_of_terror","npc_dota_creature_bane_lucid_torment"},
 
 }
 

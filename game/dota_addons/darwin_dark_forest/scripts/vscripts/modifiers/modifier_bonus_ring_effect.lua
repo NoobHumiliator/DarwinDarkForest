@@ -56,12 +56,11 @@ function modifier_bonus_ring_effect:OnIntervalThink()
 	         local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
              
              --如果圈中生物是玩家的主控生物
-             if hHero and hHero.hCurrentCreep == self:GetParent() then
+             if hHero and hHero.hCurrentCreep == self:GetParent() and hHero.hCurrentCreep:GetLevel()<=10 then
 
                 local flExp = 0.5
-
                 flExp=flExp+ (vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel])*0.004
-
+                
                 GainExpAndUpdateRadar(nPlayerId,hHero,flExp)
 
              end
