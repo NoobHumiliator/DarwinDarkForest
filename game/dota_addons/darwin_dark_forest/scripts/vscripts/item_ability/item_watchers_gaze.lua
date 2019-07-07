@@ -1,4 +1,10 @@
 item_watchers_gaze = class({})
+LinkLuaModifier( "modifier_item_watchers_gaze", "item_ability/modifier/modifier_item_watchers_gaze", LUA_MODIFIER_MOTION_NONE )
+
+function item_watchers_gaze:GetIntrinsicModifierName()
+	return "modifier_item_watchers_gaze"
+end
+
 --------------------------------------------------------------------------------
 
 function item_watchers_gaze:OnSpellStart()

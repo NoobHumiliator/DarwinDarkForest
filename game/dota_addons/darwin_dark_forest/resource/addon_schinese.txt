@@ -953,12 +953,12 @@
     "DOTA_Tooltip_ability_item_vanguard_lua_bonus_health"                               "+$health"
 
     "DOTA_Tooltip_ability_item_sheepstick_lua"                                          "邪恶镰刀"
-    "DOTA_Tooltip_ability_item_sheepstick_Description"                                   "<h1>主动：妖术</h1>将一个单位变成无害的小动物，持续%sheep_duration%秒。目标的基础移速变为140，并且被沉默、锁闭和缴械。<br>幻象会被立刻消灭。<br><br>施法距离：%tooltip_range%"
-    "DOTA_Tooltip_ability_item_sheepstick_bonus_health"                                  "+$health"
-    "DOTA_Tooltip_ability_item_sheepstick_bonus_damage"                                  "+$damage"
-    "DOTA_Tooltip_ability_item_sheepstick_bonus_attack_speed"                            "+$attack"
-    "DOTA_Tooltip_ability_item_sheepstick_spell_amplify"                                 "%+技能增强"
-    "DOTA_Tooltip_ability_item_sheepstick_bonus_mana_regen"                              "+$mana_regen"
+    "DOTA_Tooltip_ability_item_sheepstick_lua_Description"                                   "<h1>主动：妖术</h1>将一个单位变成无害的小动物，持续%sheep_duration%秒。目标的基础移速变为140，并且被沉默、锁闭和缴械。<br>幻象会被立刻消灭。<br><br>施法距离：%tooltip_range%"
+    "DOTA_Tooltip_ability_item_sheepstick_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_sheepstick_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_sheepstick_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_sheepstick_lua_spell_amplify"                                 "%+技能增强"
+    "DOTA_Tooltip_ability_item_sheepstick_lua_bonus_mana_regen"                              "+$mana_regen"
 
     "DOTA_Tooltip_ability_item_heart_lua"                                               "恐鳌之心"
     "DOTA_Tooltip_ability_item_heart_lua_Description"                                   "<h1>被动：生命恢复</h1>每秒恢复最大生命值的%health_regen_rate%%%。<br><br>如果受到任何伤害，此被动将失效。"
@@ -1461,12 +1461,6 @@
     "DOTA_Tooltip_ability_item_longclaws_amulet_cooldown_reduction_pct"     "%冷却时间减少："
     "DOTA_Tooltip_ability_item_longclaws_amulet_mana_cost_reduction_pct"    "%魔法消耗减少："
 
-    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf"                         "暮狼毛皮"
-    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_Lore"                    "野外有时候会相当危险；不要放松警惕。"
-    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_bonus_armor"             "护甲加成："
-    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_bonus_move_speed"        "额外移动速度："
-    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_bonus_evasion"           "%额外闪避："
-
     "DOTA_Tooltip_ability_item_bogduggs_baldric"                             "波格达格的肩带"
     "DOTA_Tooltip_ability_item_bogduggs_baldric_Lore"                        "奔跑没有打人爽。根本比不上。"
     "DOTA_Tooltip_ability_item_bogduggs_baldric_bonus_armor"                 "额外护甲："
@@ -1476,26 +1470,15 @@
     "DOTA_Tooltip_ability_item_bogduggs_lucky_femur"                         "波格达格的幸运股骨"
     "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_Description"             "被动：好运连连 - 在施放一个技能后，有%refresh_pct%%%的几率马上刷新该技能。"
     "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_Lore"                    "再来一次！"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_bonus_health"            "+$health"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_bonus_damage"            "+$damage"
     "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_mana_regen_penalty"      "魔法恢复速度降低："
-    
 
-    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur"                         "波格达格的幸运股骨"
-    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_Description"             "被动：好运连连 - 在施放一个技能后，有%refresh_pct%%%的几率马上刷新该技能。"
-    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_Lore"                    "再来一次！"
-    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_mana_regen_penalty"      "魔法恢复速度降低："
 
     "DOTA_Tooltip_ability_item_paw_of_lucius"   "卢修兕之爪"
     "DOTA_Tooltip_ability_item_paw_of_lucius_Description"   "被动：普通攻击有%rupture_chance%%%的几率施加割裂效果。"
     "DOTA_Tooltip_ability_item_paw_of_lucius_Lore"  "这爪能入肉三分。"
     "DOTA_Tooltip_ability_item_paw_of_lucius_bonus_attack_speed"    "额外攻击速度："
-
-    "DOTA_Tooltip_ability_item_sign_of_the_arachnid"    "蛛形印记"
-    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_Description"    "被动：蛛形光环 - 友军获得额外移动速度和攻击速度。"
-    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_Lore"   "一个授予蛛丝之路追随者的不祥标志。"
-    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_bonus_move_speed_pct"   "%光环额外移动速度："
-    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_attack_speed"   "光环额外攻击速度："
-    "DOTA_Tooltip_modifier_item_sign_of_the_arachnid_effect"    "蛛形光环"
-    "DOTA_Tooltip_modifier_item_sign_of_the_arachnid_effect_Description"    "获得额外的移动和攻击速度。"
  
     "DOTA_Tooltip_ability_item_preserved_skull"                         "坚韧之颅"
     "DOTA_Tooltip_ability_item_preserved_skull_Description"             "被动：祈灵光环 - 友军获得额外的魔法恢复速率和冷却时间减少。"
@@ -1514,6 +1497,17 @@
     "DOTA_Tooltip_ability_item_watchers_gaze"                            "守卫之眼"
     "DOTA_Tooltip_ability_item_watchers_gaze_Description"                "主动：石化凝视 - 前方锥形区域内的敌人将变成石头，并承受额外的物理伤害。"
     "DOTA_Tooltip_ability_item_watchers_gaze_Lore"                       "看着你的敌人，亲见他们在你面前石化。"
+    "DOTA_Tooltip_ability_item_watchers_gaze_spell_amplify"              "%+技能增强"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_health"               "+$health"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_damage"               "+$damage"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_attack_speed"         "+$attack"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_mana_regen"           "+$mana_regen"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_health_regen"         "+$hp_regen"
+    "DOTA_Tooltip_ability_item_watchers_gaze_magic_resist"               "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_armor"                "+护甲提升"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_move_speed_pct"       "%+移动速度"
+
+
 
     "DOTA_Tooltip_Ability_item_lifestone"                                "生命之石"
     "DOTA_Tooltip_Ability_item_lifestone_Description"                    "主动：生命之契-每0.5秒将%pact_hp_cost%点生命值转化为%pact_mana_gained%点魔法。"
@@ -1708,6 +1702,65 @@
     "DOTA_Tooltip_ability_item_holy_locket_lua_health_regen"                  "+$hp_regen"
     "DOTA_Tooltip_ability_item_holy_locket_lua_mana_regen"                    "+$mana_regen"
     "DOTA_Tooltip_ability_item_holy_locket_magic_resist"                       "%+魔法抗性"
+
+    "DOTA_Tooltip_Ability_item_cyclone_lua"                                 "Eul的神圣法杖"
+    "DOTA_Tooltip_ability_item_cyclone_lua_Description"                     "<h1>主动：龙卷风</h1> 使目标单位被卷入龙卷风中，持续%cyclone_duration%秒，并处于无敌状态。可以对自己使用龙卷风。<br><br>敌方单位落地后将受到%tooltip_drop_damage%点魔法伤害。<br><br>施法距离：%cast_range_tooltip%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>"
+    "DOTA_Tooltip_ability_item_cyclone_lua_Lore"                            "一支从久远年代流传下来的神秘权杖，能招来破坏性的龙卷风行善或作恶。"
+    "DOTA_Tooltip_ability_item_cyclone_lua_bonus_damage"                    "+$damage"
+    "DOTA_Tooltip_ability_item_cyclone_lua_spell_amplify"                   "%+技能增强"
+    "DOTA_Tooltip_ability_item_cyclone_lua_bonus_mana_regen"                "+$mana_regen"
+    "DOTA_Tooltip_ability_item_cyclone_lua_bonus_movement_speed"            "+$move_speed"
+
+    "DOTA_Tooltip_Ability_item_solar_crest_lua"                           "炎阳纹章"
+    "DOTA_Tooltip_ability_item_solar_crest_lua_Description"               "<h1>主动：日耀</h1>对队友施放可以提供%bonus_armor%点护甲，%target_attack_speed%攻击速度，和%target_movement_speed%%%移动速度。对敌人施放将降低其%bonus_armor%点护甲，%target_attack_speed%攻击速度并减缓%target_movement_speed%%%移动速度。<br><br>使用时自身会暂时失去炎阳纹章的护甲加成。<br><br>无法对技能免疫的敌人施放。<br><br>施法距离：%valor_cast_range_tooltip%"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_armor"               "+护甲提升"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_move_speed_pct"      "%+移动速度"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_spell_amplify"             "%+技能增强"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_health"              "+$health"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_damage"              "+$damage"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_attack_speed"        "+$attack"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_mana_regen"          "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_health_regen"        "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_magic_resist"              "%+魔法抗性"
+
+    "DOTA_Tooltip_modifier_item_solar_crest_lua_buff"                    "炎阳纹章"
+    "DOTA_Tooltip_modifier_item_solar_crest_lua_buff_Description"        "提升%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%移动速度，和%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%攻击速度。"
+    
+    "DOTA_Tooltip_modifier_item_solar_crest_lua_debuff"                  "炎阳纹章"
+    "DOTA_Tooltip_modifier_item_solar_crest_lua_debuff_Description"      "降低%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%移动速度，降低%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%攻击速度。"
+
+
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua"                          "回音战刃"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_Description"              "<h1>被动：回音一击</h1>攻击可以快速攻击两次。两次攻击都将减缓%movement_slow%%%移动速度，每次持续%slow_duration%秒。"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_Lore"                     "一把看似迅捷异常的战刃，其中注入了共鸣魔力。"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_bonus_attack_speed"       "+$attack"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_bonus_damage"             "+$damage"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_bonus_mana_regen"         "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_bonus_health"             "+$health"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_bonus_health_regen"       "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_magic_resist"             "%+魔法抗性"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_spell_amplify"            "%+技能增强"
+
+    
+    "DOTA_Tooltip_Ability_item_oblivion_staff_lua"                          "空明杖"
+    "DOTA_Tooltip_Ability_item_oblivion_staff_lua_bonus_attack_speed"       "+$attack"
+    "DOTA_Tooltip_Ability_item_oblivion_staff_lua_bonus_damage"             "+$damage"
+    "DOTA_Tooltip_Ability_item_oblivion_staff_lua_bonus_mana_regen"         "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_oblivion_staff_lua_spell_amplify"            "%+技能增强"
+
+    "DOTA_Tooltip_Ability_item_rod_of_atos_lua"                          "阿托斯之棍"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_Description"              "<h1>主动：致残</h1>缠绕目标，持续%duration%秒。<br><br>施法距离：%tooltip_range%"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_Lore"                     "荒芜之王阿托斯将他的精粹储存在这根看似平平无奇的魔杖中。"
+    
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_spell_amplify"                            "%+技能增强"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_mana_regen"                              "+$mana_regen"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_health_regen"                            "+$hp_regen"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_magic_resist"                                  "%+魔法抗性"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_armor"                                   "+护甲提升"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_move_speed_pct"                          "%+移动速度"
 
 
 

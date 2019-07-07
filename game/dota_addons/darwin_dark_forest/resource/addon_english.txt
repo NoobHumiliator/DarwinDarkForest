@@ -935,12 +935,12 @@
     "DOTA_Tooltip_ability_item_vanguard_lua_bonus_health"                               "+$health"
 
     "DOTA_Tooltip_ability_item_sheepstick_lua"                                           "Scythe of Vyse"
-    "DOTA_Tooltip_ability_item_sheepstick_Description"                                   "<h1>Active: Hex</h1>Turns a target unit into a harmless critter for %sheep_duration% seconds. The target has a base movement speed of 140 and will be silenced, muted, and disarmed.<br>Instantly destroys illusions.<br><br>Range: %tooltip_range%"
-    "DOTA_Tooltip_ability_item_sheepstick_bonus_health"                                  "+$health"
-    "DOTA_Tooltip_ability_item_sheepstick_bonus_damage"                                  "+$damage"
-    "DOTA_Tooltip_ability_item_sheepstick_bonus_attack_speed"                            "+$attack"
-    "DOTA_Tooltip_ability_item_sheepstick_spell_amplify"                                 "%+Spell Amplification"
-    "DOTA_Tooltip_ability_item_sheepstick_bonus_mana_regen"                              "+$mana_regen"
+    "DOTA_Tooltip_ability_item_sheepstick_lua_Description"                                   "<h1>Active: Hex</h1>Turns a target unit into a harmless critter for %sheep_duration% seconds. The target has a base movement speed of 140 and will be silenced, muted, and disarmed.<br>Instantly destroys illusions.<br><br>Range: %tooltip_range%"
+    "DOTA_Tooltip_ability_item_sheepstick_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_ability_item_sheepstick_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_ability_item_sheepstick_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_ability_item_sheepstick_lua_spell_amplify"                                 "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_sheepstick_lua_bonus_mana_regen"                              "+$mana_regen"
 
     "DOTA_Tooltip_ability_item_heart_lua"                                               "Heart of Tarrasque"
     "DOTA_Tooltip_ability_item_heart_lua_Description"                                   "<h1>Passive: Health Regeneration</h1>Restores %health_regen_rate%%% of max health per second. <br><br>If damage is taken, this ability is disabled."
@@ -1436,12 +1436,6 @@
     "DOTA_Tooltip_ability_item_longclaws_amulet_cooldown_reduction_pct"     "%COOLDOWN REDUCTION:"
     "DOTA_Tooltip_ability_item_longclaws_amulet_mana_cost_reduction_pct"    "%MANA COST REDUCTION:"
 
-    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf"                         "Pelt of the Old Wolf"
-    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_Lore"                    "The wild can be a treachorous place; don't let your guard down."
-    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_bonus_armor"             "BONUS ARMOR:"
-    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_bonus_move_speed"        "BONUS MOVE SPEED:"
-    "DOTA_Tooltip_ability_item_pelt_of_the_old_wolf_bonus_evasion"           "%BONUS EVASION:"
-
     "DOTA_Tooltip_ability_item_bogduggs_baldric"                             "Bogdugg's Baldric"
     "DOTA_Tooltip_ability_item_bogduggs_baldric_Lore"                        "Running's not as fun as hitting.  Not one bit."
     "DOTA_Tooltip_ability_item_bogduggs_baldric_bonus_armor"                 "BONUS ARMOR:"
@@ -1451,22 +1445,16 @@
     "DOTA_Tooltip_ability_item_bogduggs_lucky_femur"                         "Bogdugg's Lucky Femur"
     "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_Description"             "Passive: Skillshot - After an ability is cast, it has a %refresh_pct%%% chance to be immediately refreshed.\n"
     "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_Lore"                    "And another!"
-    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_mana_regen_penalty"      "MANA REGEN REDUCTION:"
 
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_health"                  "+$health"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_bonus_damage"            "+$damage"
+    "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_mana_regen_penalty"      "MANA REGEN REDUCTION:"
 
     "DOTA_Tooltip_ability_item_paw_of_lucius"                                 "Paw of Lucius"
     "DOTA_Tooltip_ability_item_paw_of_lucius_Description"                     "Passive: Attacks have a %rupture_chance%%% chance to inflict Rupture.\n"
     "DOTA_Tooltip_ability_item_paw_of_lucius_Lore"                            "This claw cuts deep."
     "DOTA_Tooltip_ability_item_paw_of_lucius_bonus_attack_speed"              "BONUS ATTACK SPEED:"
 
-    "DOTA_Tooltip_ability_item_sign_of_the_arachnid"                          "Sign of the Arachnid"
-    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_Description"              "Passive: Arachnid Aura - Allies gain bonus movement and attack speed."
-    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_Lore"                     "An ominous mark bestowed upon followers of the Silken Path."
-    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_bonus_move_speed_pct"     "%AURA BONUS MOVE SPEED:"
-    "DOTA_Tooltip_ability_item_sign_of_the_arachnid_attack_speed"             "AURA BONUS ATTACK SPEED:"
-    "DOTA_Tooltip_modifier_item_sign_of_the_arachnid_effect"                  "Sign of the Arachnid Aura"
-    "DOTA_Tooltip_modifier_item_sign_of_the_arachnid_effect_Description"      "Gaining bonus movement and attack speed."
- 
     "DOTA_Tooltip_ability_item_preserved_skull"                         "Preserved Skull"
     "DOTA_Tooltip_ability_item_preserved_skull_Description"             "Passive: Conjuration Aura - Allies gain bonus mana regen and cooldown reduction."
     "DOTA_Tooltip_ability_item_preserved_skull_Lore"                    "Where be your gibes now?"
@@ -1484,6 +1472,16 @@
     "DOTA_Tooltip_ability_item_watchers_gaze"                            "Watcher's Gaze"
     "DOTA_Tooltip_ability_item_watchers_gaze_Description"                "Active: Stone Gaze - Enemies within your frontal cone are turned to stone and take additional physical damage."
     "DOTA_Tooltip_ability_item_watchers_gaze_Lore"                       "Look upon thine enemies and see them petrify before you."
+    "DOTA_Tooltip_ability_item_watchers_gaze_spell_amplify"              "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_health"               "+$health"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_damage"               "+$damage"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_attack_speed"         "+$attack"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_mana_regen"           "+$mana_regen"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_health_regen"         "+$hp_regen"
+    "DOTA_Tooltip_ability_item_watchers_gaze_magic_resist"               "%+$spell_resist"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_armor"                "+Armor"
+    "DOTA_Tooltip_ability_item_watchers_gaze_bonus_move_speed_pct"       "%BONUS MOVE SPEED:"
+
 
     "DOTA_Tooltip_Ability_item_lifestone"                                "Lifestone"
     "DOTA_Tooltip_Ability_item_lifestone_Description"                    "Active: Health Pact</h1>Converts %pact_hp_cost% health into %pact_mana_gained% mana every 0.5 seconds."
@@ -1641,6 +1639,24 @@
     "DOTA_Tooltip_modifier_item_guardian_greaves_lua_aura_effect"                         "Guardian Aura"
     "DOTA_Tooltip_modifier_item_guardian_greaves_lua_aura_effect_Description"             "Regenerating %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% health per second. Armor increased by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%."
 
+     
+    "DOTA_Tooltip_Ability_item_veil_of_discord_lua"                           "Veil of Discord"
+    "DOTA_Tooltip_Ability_item_veil_of_discord_lua_Description"               "<h1>Active: Magic Weakness</h1> Cast a %debuff_radius% radius blast that decreases enemy magic resistance by %resist_debuff%%%.<br><br>Range: %tooltip_range%<br>Duration: %resist_debuff_duration% seconds."
+
+    "DOTA_Tooltip_Ability_item_veil_of_discord_lua_bonus_armor"               "+Armor"
+    "DOTA_Tooltip_Ability_item_veil_of_discord_lua_bonus_move_speed_pct"      "%BONUS MOVE SPEED:"
+    "DOTA_Tooltip_Ability_item_veil_of_discord_lua_spell_amplify"             "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_veil_of_discord_lua_bonus_health"              "+$health"
+    "DOTA_Tooltip_Ability_item_veil_of_discord_lua_bonus_damage"              "+$damage"
+    "DOTA_Tooltip_Ability_item_veil_of_discord_lua_bonus_attack_speed"        "+$attack"
+    "DOTA_Tooltip_Ability_item_veil_of_discord_lua_bonus_mana_regen"          "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_veil_of_discord_lua_bonus_health_regen"        "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_veil_of_discord_lua_magic_resist"              "%+$spell_resist"
+
+     
+    "DOTA_Tooltip_modifier_item_veil_of_discord_lua_effect"                    "Magic Weakness"
+    "DOTA_Tooltip_modifier_item_veil_of_discord_lua_effect_Description"        "Magic damage increased by %dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%%."
+
     "DOTA_Tooltip_Ability_item_shadow_amulet_lua"                             "Shadow Amulet"
     "DOTA_Tooltip_Ability_item_shadow_amulet_lua_Description"                 "<h1>Active: Fade</h1>Grants invisibility to you or a target allied hero as long as the target unit remains still.  <br><br>Has a %fade_time% second fade time, and last  and breaks instantly upon moving. <br><br>Range: %tooltip_range%"
     "DOTA_Tooltip_Ability_item_shadow_amulet_lua_bonus_attack_speed"          "+$attack"
@@ -1652,6 +1668,59 @@
     "DOTA_Tooltip_ability_item_holy_locket_lua_health_regen"                  "+$hp_regen"
     "DOTA_Tooltip_ability_item_holy_locket_lua_mana_regen"                    "+$mana_regen"
     "DOTA_Tooltip_ability_item_holy_locket_magic_resist"                       "%+$spell_resist"
+
+    "DOTA_Tooltip_Ability_item_cyclone_lua"                                    "Eul's Scepter of Divinity"
+    "DOTA_Tooltip_ability_item_cyclone_lua_Description"                        "<h1>Active: Cyclone</h1> Sweeps a target unit up into a cyclone, making them invulnerable for %cyclone_duration% seconds. Cyclone can only be cast on enemy units or yourself.<br><br>Enemy units take %tooltip_drop_damage% magical damage upon landing.<br><br>Range: %cast_range_tooltip%<br>Dispel Type: <span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>"
+    "DOTA_Tooltip_ability_item_cyclone_lua_bonus_damage"                       "+$damage"
+    "DOTA_Tooltip_ability_item_cyclone_lua_spell_amplify"                      "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_cyclone_lua_bonus_mana_regen"                   "+$mana_regen"
+    "DOTA_Tooltip_ability_item_cyclone_lua_bonus_movement_speed"               "+$move_speed"
+
+    "DOTA_Tooltip_Ability_item_solar_crest_lua"                           "Solar Crest"
+    "DOTA_Tooltip_ability_item_solar_crest_lua_Description"               "<h1>Active: Shine</h1>When cast on an ally, grants them %bonus_armor% armor, %target_attack_speed% attack speed, and %target_movement_speed%%% movement speed. When cast on an enemy, removes %bonus_armor% armor, %target_attack_speed% attack speed, and %target_movement_speed%%% movement speed.<br><br>Removes the armor from the caster when used. <br><br> Cannot target magic immune enemies.<br><br>Range: %valor_cast_range_tooltip%"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_armor"               "+Armor"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_move_speed_pct"      "%+BONUS MOVE SPEED:"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_spell_amplify"             "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_health"              "+$health"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_damage"              "+$damage"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_attack_speed"        "+$attack"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_mana_regen"          "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_health_regen"        "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_magic_resist"              "%+$spell_resist"
+
+
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua"                          "Echo Sabre"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_Description"              "<h1>Passive: Echo Strike</h1>To attack twice in quick succession. The double attacks apply a %movement_slow%%% movement slow for %slow_duration% seconds on each strike."
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_Lore"                     "A deceptively swift blade imbued with resonant magic."
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_bonus_attack_speed"       "+$attack"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_bonus_damage"             "+$damage"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_bonus_mana_regen"         "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_bonus_health"             "+$health"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_bonus_health_regen"       "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_magic_resist"              "%+$spell_resist"
+    "DOTA_Tooltip_Ability_item_echo_sabre_lua_spell_amplify"             "%+Spell Amplification"
+
+
+    "DOTA_Tooltip_Ability_item_oblivion_staff_lua"                          "Oblivion Staff"
+    "DOTA_Tooltip_Ability_item_oblivion_staff_lua_bonus_attack_speed"       "+$attack"
+    "DOTA_Tooltip_Ability_item_oblivion_staff_lua_bonus_damage"             "+$damage"
+    "DOTA_Tooltip_Ability_item_oblivion_staff_lua_bonus_mana_regen"         "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_oblivion_staff_lua_spell_amplify"            "%+Spell Amplification"
+
+
+    "DOTA_Tooltip_Ability_item_rod_of_atos_lua"                          "Rod of Atos"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_Description"              "<h1>Active: Cripple</h1>Roots the target for %duration% seconds.<br><br>Range: %tooltip_range%"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_Lore"                     "Atos, the Lord of Blight, has his essence stored in this deceptively simple wand."
+    
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_spell_amplify"            "%+Spell Amplification"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_health"             "+$health"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_damage"             "+$damage"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_attack_speed"       "+$attack"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_mana_regen"         "+$mana_regen"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_health_regen"       "+$hp_regen"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_magic_resist"             "%+$spell_resist"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_armor"              "+Armor"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_move_speed_pct"     "%+BONUS MOVE SPEED:"
 
 
     //EconUnitBegins

@@ -4,7 +4,8 @@ local particles = {
     "particles/units/heroes/hero_disruptor/disruptor_kineticfield.vpcf",
     "particles/items2_fx/veil_of_discord.vpcf",
     "particles/units/heroes/hero_omniknight/omniknight_guardian_angel_omni.vpcf",
-    "particles/units/heroes/hero_omniknight/omniknight_guardian_angel_halo_buff.vpcf"
+    "particles/units/heroes/hero_omniknight/omniknight_guardian_angel_halo_buff.vpcf",
+    "particles/items2_fx/rod_of_atos.vpcf"
 }
 
 local sounds = {

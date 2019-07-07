@@ -5,13 +5,29 @@ modifier_item_guardian_shell = class({})
 function modifier_item_guardian_shell:IsHidden() 
 	return true
 end
+-------------------------------------------------------------------------------
+function modifier_item_guardian_shell:OnCreated( kv )
 
+	if IsServer() then
+		 self.flMoveSpeed = self:GetParent():GetIdealSpeedNoSlows()
+	     self:StartIntervalThink( 0.5 )
+    end
+end
+--------------------------------------------------------------------------------
+function modifier_item_guardian_shell:DeclareFunctions()
+	local funcs = 
+	{
+		MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,
+		MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS,
+		MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE_MIN,
+	}
+	return funcs
+end
 --------------------------------------------------------------------------------
 
-function modifier_item_guardian_shell:IsPurgable()
-	return false
+function modifier_item_guardian_shell:GetAttributes()
+	return MODIFIER_ATTRIBUTE_MULTIPLE
 end
-
 --------------------------------------------------------------------------------
 
 function modifier_item_guardian_shell:CheckState()
@@ -30,45 +46,22 @@ end
 
 ----------------------------------------
 
-function modifier_item_guardian_shell:OnCreated( kv )
+function modifier_item_guardian_shell:OnIntervalThink()
 	if IsServer() then
-	 self.bonus_armor = self:GetAbility():GetSpecialValueFor( "bonus_armor" )
-	 self.magic_resistance = self:GetAbility():GetSpecialValueFor( "magic_resistance" )
-	 self.flMoveSpeed = self:GetParent():GetIdealSpeedNoSlows()
-	 self.flAttackSpeed = self:GetParent():GetAttackSpeed()
-	 self:StartIntervalThink( 0.5 )
+	  self.flMoveSpeed = self:GetParent():GetIdealSpeedNoSlows()
     end
 end
 
 ----------------------------------------
 
-function modifier_item_guardian_shell:OnIntervalThink()
-	self.flMoveSpeed = 0
-	self.flMoveSpeed = self:GetParent():GetIdealSpeedNoSlows()
-end
-
-----------------------------------------
-
-function modifier_item_guardian_shell:DeclareFunctions()
-	local funcs = 
-	{
-		MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,
-		MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS,
-		MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE_MIN,
-	}
-	return funcs
-end
-
-----------------------------------------
-
 function modifier_item_guardian_shell:GetModifierPhysicalArmorBonus( params )
-	return self.bonus_armor
+	return self:GetAbility():GetSpecialValueFor( "bonus_armor" )
 end
 
 ----------------------------------------
 
 function modifier_item_guardian_shell:GetModifierMagicalResistanceBonus( params )
-	return self.magic_resistance
+	return self:GetAbility():GetSpecialValueFor( "magic_resistance" )
 end
 
 ----------------------------------------

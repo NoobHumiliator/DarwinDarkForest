@@ -17,8 +17,20 @@ end
 function modifier_item_bogduggs_lucky_femur:OnCreated( kv )
 	self.mana_regen_penalty = self:GetAbility():GetSpecialValueFor( "mana_regen_penalty" )
 	self.refresh_pct = self:GetAbility():GetSpecialValueFor( "refresh_pct" )
-end
+	self.bonus_damage = self:GetAbility():GetSpecialValueFor( "bonus_damage" )
+    self.bonus_health = self:GetAbility():GetSpecialValueFor( "bonus_health" )
 
+    if IsServer() then
+    	AddHealthBonus(self:GetCaster(),self.bonus_health)
+    end
+end
+--------------------------------------------------------------------------------
+
+function modifier_item_bogduggs_lucky_femur:OnDestroy()
+    if IsServer() then
+    	RemoveHealthBonus(self:GetCaster(),self.bonus_health)
+    end
+end
 --------------------------------------------------------------------------------
 
 function modifier_item_bogduggs_lucky_femur:DeclareFunctions()
@@ -26,6 +38,7 @@ function modifier_item_bogduggs_lucky_femur:DeclareFunctions()
 	{
 		MODIFIER_EVENT_ON_ABILITY_FULLY_CAST,
 		MODIFIER_PROPERTY_MANA_REGEN_CONSTANT,
+		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE
 	}
 	return funcs
 end
@@ -59,3 +72,8 @@ end
 function modifier_item_bogduggs_lucky_femur:GetModifierConstantManaRegen( params )
 	return -self.mana_regen_penalty
 end
+---------------------------------------------------------------------------------
+function modifier_item_bogduggs_lucky_femur:GetModifierPreAttack_BonusDamage( params )
+	return self.bonus_damage
+end
+
