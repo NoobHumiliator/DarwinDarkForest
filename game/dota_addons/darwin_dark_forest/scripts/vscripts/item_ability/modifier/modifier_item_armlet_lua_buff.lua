@@ -13,6 +13,10 @@ function modifier_item_armlet_lua_buff:IsDebuff()
   return false
 end
 ----------------------------------------
+function modifier_item_armlet_lua_buff:GetTexture()
+  return "item_armlet_active"
+end
+----------------------------------------
 
 function modifier_item_armlet_lua_buff:OnCreated( kv )
 	if IsServer() then

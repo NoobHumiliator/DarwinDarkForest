@@ -7030,7 +7030,7 @@
             "02"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "bonus_hero_damage"         "40 80 120 160 200 240"
+                "bonus_hero_damage"         "0"
                 "CalculateSpellDamageTooltip"   "0"
             }
                         
@@ -7043,7 +7043,7 @@
             "04"
             {
                 "var_type"                      "FIELD_INTEGER"
-                "creep_damage_penalty"          "-50 -40 -30 -20 -10 0"
+                "creep_damage_penalty"          "10 20 30 40 50 60"
                 "CalculateSpellDamageTooltip"   "0"
             }
             "05"
@@ -8001,7 +8001,7 @@
             "04"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "duration"                  "20"
+                "duration"                  "15"
             }
             "05"
             {

@@ -1770,6 +1770,29 @@
     "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_armor"                          "+Armor"
     "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_move_speed_pct"                 "%+BONUS MOVE SPEED"
 
+
+    "DOTA_Tooltip_modifier_item_hurricane_pike_lua_buff"                                "Hurricane Pike Range"
+    "DOTA_Tooltip_modifier_item_hurricane_pike_lua_buff_Description"                    "Increase attack speed, can attack the target without range restrictions."
+
+    
+    "DOTA_Tooltip_ability_ember_spirit_sleight_of_fist_creep_damage_penalty"            "%Damage Increasement:"
+  
+    "DOTA_Tooltip_Ability_item_ring_of_aquila_lua"                                      "Ring of Aquila"
+    "DOTA_Tooltip_Ability_item_ring_of_aquila_lua_Description"                          "<h1>Passive: Aquila Aura</h1>Grants %aura_mana_regen% mana regeneration and %aura_bonus_armor% armor to nearby allies.<br><br>Radius: %aura_radius%\n"
+    "DOTA_Tooltip_Ability_item_ring_of_aquila_lua_spell_amplify"                        "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_ring_of_aquila_lua_bonus_health"                         "+$health"
+    "DOTA_Tooltip_Ability_item_ring_of_aquila_lua_bonus_damage"                         "+$damage"
+    "DOTA_Tooltip_Ability_item_ring_of_aquila_lua_bonus_attack_speed"                   "+$attack"
+    "DOTA_Tooltip_Ability_item_ring_of_aquila_lua_bonus_mana_regen"                     "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_ring_of_aquila_lua_bonus_health_regen"                   "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_ring_of_aquila_lua_magic_resist"                         "%+$spell_resist"
+    "DOTA_Tooltip_Ability_item_ring_of_aquila_lua_bonus_armor"                          "+Armor"
+    "DOTA_Tooltip_Ability_item_ring_of_aquila_lua_bonus_move_speed_pct"                 "%+BONUS MOVE SPEED"
+    "DOTA_Tooltip_modifier_item_ring_of_aquila_lua_effect"                              "Ring of Aquila Aura"
+    "DOTA_Tooltip_modifier_item_ring_of_aquila_lua_effect_Description"                  "Mana regeneration increased by %fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% and armor increased by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%."
+
+
+
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "Lich"
 	"npc_dota_creature_lich_shearing_deposition"                  "Lich"

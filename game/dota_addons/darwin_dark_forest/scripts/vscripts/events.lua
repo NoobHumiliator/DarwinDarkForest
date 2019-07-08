@@ -754,20 +754,20 @@ end
 function CalculateExpLostRatio(hHero)
               
     --损失经验率
-    local flExpLoseRatio = 0.5
+    local flExpLoseRatio = 0.35
 
     if  GameRules.nAverageLevel  and hHero.hCurrentCreep and not hHero.hCurrentCreep:IsNull()  then
         
         if hHero.hCurrentCreep:GetLevel() >= GameRules.nAverageLevel+2 then
-           flExpLoseRatio=0.5
+           flExpLoseRatio=0.45
         end
 
         if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel+1 then
-           flExpLoseRatio=0.4
+           flExpLoseRatio=0.40
         end
 
         if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel then
-           flExpLoseRatio=0.3
+           flExpLoseRatio=0.35
         end
 
         if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-1 then
