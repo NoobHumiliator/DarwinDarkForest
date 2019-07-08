@@ -1679,7 +1679,7 @@
     "DOTA_Tooltip_Ability_item_solar_crest_lua"                           "Solar Crest"
     "DOTA_Tooltip_ability_item_solar_crest_lua_Description"               "<h1>Active: Shine</h1>When cast on an ally, grants them %bonus_armor% armor, %target_attack_speed% attack speed, and %target_movement_speed%%% movement speed. When cast on an enemy, removes %bonus_armor% armor, %target_attack_speed% attack speed, and %target_movement_speed%%% movement speed.<br><br>Removes the armor from the caster when used. <br><br> Cannot target magic immune enemies.<br><br>Range: %valor_cast_range_tooltip%"
     "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_armor"               "+Armor"
-    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_move_speed_pct"      "%+BONUS MOVE SPEED:"
+    "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_move_speed_pct"      "%+BONUS MOVE SPEED"
     "DOTA_Tooltip_Ability_item_solar_crest_lua_spell_amplify"             "%+Spell Amplification"
     "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_health"              "+$health"
     "DOTA_Tooltip_Ability_item_solar_crest_lua_bonus_damage"              "+$damage"
@@ -1720,8 +1720,55 @@
     "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_health_regen"       "+$hp_regen"
     "DOTA_Tooltip_ability_item_rod_of_atos_lua_magic_resist"             "%+$spell_resist"
     "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_armor"              "+Armor"
-    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_move_speed_pct"     "%+BONUS MOVE SPEED:"
+    "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_move_speed_pct"     "%+BONUS MOVE SPEED"
 
+
+    "DOTA_Tooltip_Ability_item_butterfly_lua"                                "Butterfly"
+    "DOTA_Tooltip_ability_item_butterfly_lua_bonus_armor"                    "+Armor"
+    "DOTA_Tooltip_ability_item_butterfly_lua_bonus_move_speed_pct"           "%+BONUS MOVE SPEED"
+    "DOTA_Tooltip_ability_item_butterfly_lua_bonus_damage"                   "+$damage"
+    "DOTA_Tooltip_ability_item_butterfly_lua_bonus_evasion"                  "%+$evasion"
+    "DOTA_Tooltip_ability_item_butterfly_lua_bonus_attack_speed"             "+$attack"
+
+    "DOTA_Tooltip_Ability_item_force_staff_lua"                                         "Force Staff"
+    "DOTA_Tooltip_ability_item_force_staff_lua_Description"                             "<h1>Active: Force</h1>Pushes any target unit %push_length% units in the direction it is facing.<br><br>Range: %tooltip_range%"
+    "DOTA_Tooltip_Ability_item_force_staff_lua_bonus_health_regen"                      "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_force_staff_lua_spell_amplify"                           "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_force_staff_lua_bonus_mana_regen"                        "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_force_staff_lua_bonus_damage"                            "+$damage"
+
+    "DOTA_Tooltip_Ability_item_armlet_lua"                                              "Armlet of Mordiggian"
+    "DOTA_Tooltip_ability_item_armlet_lua_Description"                                  "<h1>Toggle: Unholy Strength</h1>When active, Unholy Strength grants +%unholy_bonus_damage% damage, +%unholy_bonus_health% max health and +%unholy_bonus_armor% armor, but drains %unholy_health_drain_per_second_tooltip% health per second.<br><br> You cannot die from the health drain when Unholy Strength is activated, nor from the strength loss when Unholy Strength is deactivated."
+    "DOTA_Tooltip_ability_item_armlet_lua_Lore"                                         "Weapon of choice among brutes, the bearer sacrifices his life energy to gain immense strength and power."
+    
+    "DOTA_Tooltip_ability_item_armlet_lua_bonus_damage"                                 "+$damage"
+    "DOTA_Tooltip_ability_item_armlet_lua_bonus_attack_speed"                           "+$attack"
+    "DOTA_Tooltip_ability_item_armlet_lua_bonus_armor"                                  "+$armor"
+    "DOTA_Tooltip_ability_item_armlet_lua_bonus_health_regen"                           "+$hp_regen"
+
+    "DOTA_Tooltip_modifier_item_armlet_lua_buff"                                        "Unholy Strength"
+    "DOTA_Tooltip_modifier_item_armlet_lua_buff_Description"                            "Increased damage, armor, maximum health. But losing health per second."
+    
+
+    "DOTA_Tooltip_Ability_item_force_staff_lua"                                         "Force Staff"
+    "DOTA_Tooltip_ability_item_force_staff_lua_Description"                             "<h1>Active: Force</h1>Pushes any target unit %push_length% units in the direction it is facing.<br><br>Range: %tooltip_range%"
+    "DOTA_Tooltip_Ability_item_force_staff_lua_bonus_health_regen"                      "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_force_staff_lua_spell_amplify"                           "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_force_staff_lua_bonus_mana_regen"                        "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_force_staff_lua_bonus_damage"                            "+$damage"
+
+
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua"                                      "Hurricane Pike"
+    "DOTA_Tooltip_ability_item_hurricane_pike_lua_Description"                          "<h1>Active: Hurricane Thrust</h1> Pushes you and target enemy %enemy_length% units away from each other, and for %range_duration% seconds, allows you to make %max_attacks% attacks against the target without range restrictions and with +%bonus_attack_speed_effect% attack speed.<br><br>Works like Force Staff when used on self or allies.<br><br>Allied Range: %tooltip_range%<br>Enemy Range: %cast_range_enemy%\n<h1>Passive:  Dragon's Reach</h1> Increases attack range by %base_attack_range%."
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_spell_amplify"                        "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_health"                         "+$health"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_damage"                         "+$damage"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_attack_speed"                   "+$attack"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_mana_regen"                     "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_health_regen"                   "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_magic_resist"                         "%+$spell_resist"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_armor"                          "+Armor"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_move_speed_pct"                 "%+BONUS MOVE SPEED"
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "Lich"

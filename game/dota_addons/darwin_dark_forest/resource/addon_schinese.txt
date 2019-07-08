@@ -1763,6 +1763,45 @@
     "DOTA_Tooltip_ability_item_rod_of_atos_lua_bonus_move_speed_pct"                          "%+移动速度"
 
 
+    "DOTA_Tooltip_Ability_item_butterfly_lua"                                "蝴蝶"
+    "DOTA_Tooltip_ability_item_butterfly_lua_bonus_armor"                    "+护甲提升"
+    "DOTA_Tooltip_ability_item_butterfly_lua_bonus_move_speed_pct"           "%+移动速度"
+    "DOTA_Tooltip_ability_item_butterfly_lua_bonus_damage"                   "+$damage"
+    "DOTA_Tooltip_ability_item_butterfly_lua_bonus_evasion"                  "%+$evasion"
+    "DOTA_Tooltip_ability_item_butterfly_lua_bonus_attack_speed"             "+$attack"
+
+    
+    "DOTA_Tooltip_Ability_item_armlet_lua"                                              "莫尔迪基安的臂章"
+    "DOTA_Tooltip_ability_item_armlet_lua_Description"                                  "<h1>激活：邪恶之力</h1>激活后邪恶之力将提升%unholy_bonus_damage%点攻击力、%unholy_bonus_health%点血量和%unholy_bonus_armor%点护甲，但每秒失去%unholy_health_drain_per_second_tooltip%点生命值。<br><br> 开启邪恶之力后生命流失并不会导致死亡，关闭邪恶之力后血量降低也不会导致死亡。"
+    "DOTA_Tooltip_ability_item_armlet_lua_Lore"                                         "能让你成为野兽的武器，持有者牺牲自己的生命能量来获得巨大力量。"
+    
+    "DOTA_Tooltip_ability_item_armlet_lua_bonus_damage"                                 "+$damage"
+    "DOTA_Tooltip_ability_item_armlet_lua_bonus_attack_speed"                           "+$attack"
+    "DOTA_Tooltip_ability_item_armlet_lua_bonus_armor"                                  "+$armor"
+    "DOTA_Tooltip_ability_item_armlet_lua_bonus_health_regen"                           "+$hp_regen"
+
+    "DOTA_Tooltip_modifier_item_armlet_lua_buff"                                        "邪恶之力"
+    "DOTA_Tooltip_modifier_item_armlet_lua_buff_Description"                            "提高攻击力，护甲，血量。但是每秒损失生命值。"
+
+    "DOTA_Tooltip_Ability_item_force_staff_lua"                                         "原力法杖"
+    "DOTA_Tooltip_ability_item_force_staff_lua_Description"                             "<h1>主动：原力</h1>将任何目标单位向其面对方向推进%push_length%距离。<br><br>施法距离：%tooltip_range%"
+    "DOTA_Tooltip_Ability_item_force_staff_lua_bonus_health_regen"                      "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_force_staff_lua_spell_amplify"                           "%+技能增强"
+    "DOTA_Tooltip_Ability_item_force_staff_lua_bonus_mana_regen"                        "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_force_staff_lua_bonus_damage"                            "+$damage"
+
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua"                                      "飓风长戟"
+    "DOTA_Tooltip_ability_item_hurricane_pike_lua_Description"                          "<h1>主动：飓风之力</h1> 将自己和敌方目标朝相反方向各推开%enemy_length%距离，并且接下来的攻击不受英雄攻击距离的限制，持续%max_attacks%次攻击或%range_duration%秒，并且获得%bonus_attack_speed_effect%攻击速度加成。<br><br>对自身或友军使用时效果等同于原力法杖。<br><br>对友军施法距离：%tooltip_range%<br>对敌军施法距离：%cast_range_enemy%<h1>被动：魔龙之能</h1> 攻击距离增加%base_attack_range%。"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_spell_amplify"                        "%+技能增强"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_health"                         "+$health"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_damage"                         "+$damage"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_attack_speed"                   "+$attack"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_mana_regen"                     "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_health_regen"                   "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_magic_resist"                         "%+魔法抗性"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_armor"                          "+护甲提升"
+    "DOTA_Tooltip_Ability_item_hurricane_pike_lua_bonus_move_speed_pct"                 "%+移动速度"
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"

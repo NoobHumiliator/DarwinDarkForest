@@ -264,8 +264,13 @@ function GameMode:OnEntityKilled(keys)
           ItemController:RecordItemsInfo(hHero)
 
           local flExpLoseRatio = CalculateExpLostRatio(hHero)
-          hHero.nCustomExp=hHero.nCustomExp-(vEXP_TABLE[hHero.hCurrentCreep:GetLevel()+1]-vEXP_TABLE[hHero.hCurrentCreep:GetLevel()])*flExpLoseRatio
           
+          if  hHero.hCurrentCreep and not hHero.hCurrentCreep:IsNull() and hHero.hCurrentCreep:GetLevel()==11 then
+              hHero.nCustomExp = vEXP_TABLE[9]+1
+          else
+              hHero.nCustomExp=hHero.nCustomExp-(vEXP_TABLE[hHero.hCurrentCreep:GetLevel()+1]-vEXP_TABLE[hHero.hCurrentCreep:GetLevel()])*flExpLoseRatio       
+          end
+
            --保证不是负数
           if hHero.nCustomExp<1 then
               hHero.nCustomExp=1
@@ -432,7 +437,7 @@ function GameMode:OnNPCSpawned( event )
         --关键函数包起来
         xpcall(
         function()
-            local hNewCreep=Evolve(nPlayerId,hSpawnedUnit)           
+            local hNewCreep=Evolve(nPlayerId,hSpawnedUnit,true)           
             local flDuration = CalculateInvulnerableDuration(hSpawnedUnit)
             hNewCreep:AddNewModifier(hNewCreep, nil, "modifier_respawn_invulnerable", {duration=flDuration})
         end,
@@ -777,13 +782,6 @@ function CalculateExpLostRatio(hHero)
            flExpLoseRatio=0
         end
         
-        --10级生物固定经验损失
-        if hHero.hCurrentCreep:GetLevel()==10 then
-            flExpLoseRatio=0.35    
-        end
-        if hHero.hCurrentCreep:GetLevel()==11 then
-            flExpLoseRatio=0.01
-        end
     end
 
     print("AverageLevel: "..GameRules.nAverageLevel.."flExpLoseRatio: "..flExpLoseRatio)
