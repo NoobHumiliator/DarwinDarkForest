@@ -1790,7 +1790,14 @@
     "DOTA_Tooltip_Ability_item_ring_of_aquila_lua_bonus_move_speed_pct"                 "%+BONUS MOVE SPEED"
     "DOTA_Tooltip_modifier_item_ring_of_aquila_lua_effect"                              "Ring of Aquila Aura"
     "DOTA_Tooltip_modifier_item_ring_of_aquila_lua_effect_Description"                  "Mana regeneration increased by %fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% and armor increased by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%."
+   
 
+    "DOTA_Tooltip_Ability_item_poor_mans_shield_lua"                                     "Poor Man's Shield"
+    "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_Description"                         "<h1>Passive: Damage Block</h1>Gives a %block_chance%%% chance to block %block_damage_melee% damage from incoming attacks on melee, and %block_damage_ranged% damage on ranged."
+    "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_damage"                        "+$damage"
+    "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_attack_speed"                  "+$attack"
+    "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_armor"                         "+Armor"
+    "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_move_speed_pct"                "%+BONUS MOVE SPEED"
 
 
     //EconUnitBegins

@@ -28,14 +28,14 @@ function RemoveHealthBonus(hUnit,nHealth)
 
 	hUnit:SetBaseMaxHealth(hMaxHealth-nHealth)
 	hUnit:SetMaxHealth(hMaxHealth-nHealth)
-    
-    local flCurrentHealth=math.ceil( flRatio* (hMaxHealth-nHealth))
 
-    if flCurrentHealth <1 then
-        flCurrentHealth = 1  
+	if hUnit:IsAlive() then
+	    local flCurrentHealth=math.ceil( flRatio* (hMaxHealth-nHealth))
+	    if flCurrentHealth <1 then
+	        flCurrentHealth = 1  
+	    end
+	    hUnit:SetHealth(flCurrentHealth)
     end
-
-    hUnit:SetHealth(flCurrentHealth)
 end
 
 
@@ -48,10 +48,13 @@ function RemoveHealthBonusNoRatio(hUnit,nHealth)
 
 	hUnit:SetBaseMaxHealth(hMaxHealth-nHealth)
 	hUnit:SetMaxHealth(hMaxHealth-nHealth)
-	local nNewHealth= nCurrentHealth-nHealth
-	if nNewHealth<1 then
-       nNewHealth=1
-	end
-    hUnit:SetHealth(nNewHealth)
+
+	if hUnit:IsAlive() then 
+	  local nNewHealth= nCurrentHealth-nHealth
+	  if nNewHealth<1 then
+         nNewHealth=1
+	  end
+      hUnit:SetHealth(nNewHealth)
+    end
 end
 

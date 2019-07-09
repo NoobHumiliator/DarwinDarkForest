@@ -70,13 +70,8 @@ vAbilityChanceEachLevel={
 ]]
 
 --进化 
-function Evolve (nPlayerId,hHero,bRespawn)
+function Evolve (nPlayerId,hHero)
    
-    --重生的标志物
-    if bRespawn==nil then
-       bRespawn=false
-    end
-
     local nLevel=hHero.nCurrentCreepLevel
     local sUnitToEnvolve = DetermineNewUnitName(nPlayerId,hHero,nLevel)
 
@@ -102,7 +97,7 @@ function Evolve (nPlayerId,hHero,bRespawn)
 
   
     print("To Evolve Creature"..sUnitToEnvolve)
-    local hUnit = SpawnUnitToReplaceHero(sUnitToEnvolve,hHero,nPlayerId,bRespawn)
+    local hUnit = SpawnUnitToReplaceHero(sUnitToEnvolve,hHero,nPlayerId)
 
     AddAbilityForUnit(hUnit,nPlayerId)
     
@@ -145,7 +140,7 @@ function Evolve (nPlayerId,hHero,bRespawn)
 end
 
 
-function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,bRespawn)
+function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
   
   hHero:AddNoDraw()
   hHero:FindAbilityByName("dota_ability_hero_invulnerable"):SetLevel(1)
@@ -157,9 +152,7 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId,bRespawn)
   if  hHero.hCurrentCreep~=nil and not hHero.hCurrentCreep:IsNull() then
     bPreviousHasFlyMovementCapability =  hHero.hCurrentCreep:HasFlyMovementCapability()
     --开臂章有问题，此处多加一个标志物
-    if not bRespawn and hHero.hCurrentCreep:IsAlive() then
-        print("is alive")
-        print(bRespawn)
+    if hHero.hCurrentCreep:IsAlive() then
         nPreviousLevel=hHero.hCurrentCreep:GetLevel()
         --记录物品 记录血量 （重生的话从死亡事件里面记录物品）
         ItemController:RecordItemsInfo(hHero)

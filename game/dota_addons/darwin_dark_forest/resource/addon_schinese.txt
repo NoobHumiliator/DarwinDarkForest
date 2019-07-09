@@ -1821,8 +1821,14 @@
 
     "DOTA_Tooltip_modifier_item_ring_of_aquila_lua_effect"                               "天鹰之戒光环"
     "DOTA_Tooltip_modifier_item_ring_of_aquila_lua_effect_Description"                   "提升%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，增加%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲。"
+    
 
- 
+    "DOTA_Tooltip_Ability_item_poor_mans_shield_lua"                                     "穷鬼盾"
+    "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_Description"                         "<h1>被动：伤害格挡</h1>拥有%block_chance%%%几率格挡来自敌方的伤害，近战可格挡%block_damage_melee%点伤害，远程可格挡%block_damage_ranged%点。"
+    "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_damage"                         "+$damage"
+    "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_attack_speed"                   "+$attack"
+    "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_armor"                          "+护甲提升"
+    "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_move_speed_pct"                 "%+移动速度"
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"

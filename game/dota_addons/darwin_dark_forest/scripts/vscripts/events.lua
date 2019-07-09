@@ -437,7 +437,7 @@ function GameMode:OnNPCSpawned( event )
         --关键函数包起来
         xpcall(
         function()
-            local hNewCreep=Evolve(nPlayerId,hSpawnedUnit,true)           
+            local hNewCreep=Evolve(nPlayerId,hSpawnedUnit)           
             local flDuration = CalculateInvulnerableDuration(hSpawnedUnit)
             hNewCreep:AddNewModifier(hNewCreep, nil, "modifier_respawn_invulnerable", {duration=flDuration})
         end,

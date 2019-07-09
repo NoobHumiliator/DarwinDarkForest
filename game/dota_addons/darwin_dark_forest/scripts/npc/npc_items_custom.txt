@@ -10302,7 +10302,7 @@
 
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"1.0"
+		"AbilityCooldown"				"0.7"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -10802,6 +10802,88 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"tooltip_range"			"350"
+			}
+		}
+	}
+
+	"item_recipe_poor_mans_shield"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"70"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_poor_mans_shield"
+		"ItemPurchasable"				"0"
+		"ItemRequirements"
+		{
+			"01"						"item_slippers_lua;item_slippers_lua;item_stout_shield"
+		}
+	}
+	
+	"item_poor_mans_shield_lua"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_poor_mans_shield_lua"
+		"AbilityTextureName"            "item_poor_mans_shield"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"500"
+		"ItemShopTags"					"agi;block"
+		"ItemQuality"					"common"
+		"ItemAliases"					"pms;poor man's shield"
+		"ItemPurchasable"				"0"
+
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"block_damage_melee"	"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"block_damage_ranged"	"10"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"block_chance"			"50"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "2"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "6"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "0.46"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.3"
 			}
 		}
 	}

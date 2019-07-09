@@ -9,8 +9,8 @@ end
 function modifier_item_guardian_shell:OnCreated( kv )
 
 	if IsServer() then
+         self:GetParent():RemoveModifierByName("modifier_dark_seer_surge")
 		 self.flMoveSpeed = self:GetParent():GetIdealSpeedNoSlows()
-	     self:StartIntervalThink( 0.5 )
     end
 end
 --------------------------------------------------------------------------------
@@ -42,14 +42,6 @@ end
 
 function modifier_item_guardian_shell:GetPriority()
 	return MODIFIER_PRIORITY_HIGH
-end
-
-----------------------------------------
-
-function modifier_item_guardian_shell:OnIntervalThink()
-	if IsServer() then
-	  self.flMoveSpeed = self:GetParent():GetIdealSpeedNoSlows()
-    end
 end
 
 ----------------------------------------
