@@ -10889,4 +10889,220 @@
 	}
 
 
+	"item_recipe_helm_of_the_dominator"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"163"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_helm_of_the_dominator_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_gloves;item_headdress;item_ring_of_health"
+		}
+	}
+	
+	"item_helm_of_the_dominator_lua"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_helm_of_the_dominator_lua"
+		"AbilityTextureName"            "item_helm_of_the_dominator"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"60.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"ItemCost"						"2175"
+		"ItemShopTags"					"damage;armor;unique;hard_to_tag"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"hotd;helm of the dominator"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "40"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "0.2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "2"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "2"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "0.2"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "2"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.16"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "0.32"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.1"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_speed_aura"		"20"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hp_regen_aura"			"8.5"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"1200"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"   			"60"
+			}
+		}
+	}
+
+	"item_recipe_heavens_halberd"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"209"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_heavens_halberd_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_sange_lua;item_talisman_of_evasion"
+		}
+	}
+	
+	"item_heavens_halberd_lua"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_helm_of_the_dominator_lua"
+		"AbilityTextureName"            "item_helm_of_the_dominator"
+
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18"
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		"ItemCost"						"3450"
+		"ItemShopTags"					"str;damage;evasion"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"heaven's halberd"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"				"25"
+			}			
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"31"
+			}	
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"disarm_range"				"5.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"disarm_melee"				"3.0"
+			}	
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"disarm_cast_range_tooltip"	"600"
+			}		
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"status_resistance"				"14"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_health"		    		"400"
+			}
+
+		}
+	}
+
+
+
 }

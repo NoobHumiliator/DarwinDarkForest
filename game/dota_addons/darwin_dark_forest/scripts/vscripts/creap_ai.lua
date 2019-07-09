@@ -43,6 +43,11 @@ end
 
 function CreepThink()
 
+	-- 对玩家无效
+    if thisEntity:GetTeam()~=DOTA_TEAM_NEUTRALS then
+       return
+    end
+
     if thisEntity.vWaypoints==nil then
 
 	    thisEntity.vWaypoints = {}
