@@ -206,7 +206,6 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 			}
 	    }
 	}
-
 }
 
 

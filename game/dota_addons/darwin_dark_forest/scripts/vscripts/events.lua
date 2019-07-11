@@ -800,7 +800,31 @@ function GameMode:RequestCreatureIndex(keys)
     
 end
 
-
+function GameMode:PortraitClicked(keys) 
+    local nPlayerID = keys.playerId
+    local nTargetPlayerID = keys.targetPlayerId
+    local nDoubleClick = keys.doubleClick
+    local nControldown = keys.controldown
+    
+    local hTargetHero =  PlayerResource:GetSelectedHeroEntity(nTargetPlayerID)
+    local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerID)
+  
+    if hTargetHero and hHero and hTargetHero.hCurrentCreep and hHero.hCurrentCreep then
+         if   hHero.hCurrentCreep:CanEntityBeSeenByMyTeam(hTargetHero.hCurrentCreep) then
+              CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerID),"UpdateSelect", {creepIndex= hTargetHero.hCurrentCreep:GetEntityIndex()} )            
+              
+              --如果按住ctrl 或者双击，定位到目标位置
+              if nDoubleClick==1  or nControldown==1 then
+                PlayerResource:SetCameraTarget(nPlayerID,hTargetHero.hCurrentCreep)
+                Timers:CreateTimer({ endTime = 0.1, 
+                    callback = function()
+                      PlayerResource:SetCameraTarget(nPlayerID,nil) 
+                    end
+                })
+              end
+         end
+    end
+end
 
 
 --计算复活无敌时间

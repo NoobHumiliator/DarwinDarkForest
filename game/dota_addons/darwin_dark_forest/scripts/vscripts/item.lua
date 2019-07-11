@@ -232,7 +232,7 @@ function ItemController:OnItemPickUp(event)
       local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)
       
       local hPurchaser=hItem:GetPurchaser()
-
+      
       --不处理 神符
       if string.find(sItemName,"item_rune_") ~= 1 then
           --1共享物品  2无拥有者 3拥有者是自己 4拥有者是敌人 可以拾取

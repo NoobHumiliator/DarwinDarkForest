@@ -1,7 +1,7 @@
 "use strict";
 
 
-function OnRuneSpawned( key )
+function OnWarnRuneSpawn( key )
 {
 	$( "#AlertMessage" ).RemoveClass( "Hidden");
 	$( "#AlertMessage_Icon" ).SetImage( "file://{images}/custom_game/rune/"+key.rune_type+".png" );
@@ -88,7 +88,7 @@ function ClearRunePickUpMessage()
 
 
 (function () {
-	GameEvents.Subscribe( "rune_spawned", OnRuneSpawned );
+	GameEvents.Subscribe( "warn_rune_spawn", OnWarnRuneSpawn );
 	GameEvents.Subscribe( "rune_pick_up", OnRunePickUp );
 	GameEvents.Subscribe( "courier_spawned", OnCourierSpawned );
 	GameEvents.Subscribe( "ring_spawned", OnRingSpawned );

@@ -16,6 +16,8 @@ function decay_summon_skeleton_mage:OnSpellStart()
 			local flDuration = self:GetSpecialValueFor( "skeleton_mage_duration" )
 			local nNetherBlastLevel = self:GetSpecialValueFor( "nether_blast_level" )
 
+			local  mage_health  = self:GetSpecialValueFor( "mage_health" )
+
             EmitSoundOn( "Undying_Zombie.Spawn", hSkeletonMage )
             
             ParticleManager:ReleaseParticleIndex( ParticleManager:CreateParticle( "particles/neutral_fx/skeleton_spawn.vpcf", PATTACH_ABSORIGIN, hSkeletonMage ) )
@@ -26,8 +28,17 @@ function decay_summon_skeleton_mage:OnSpellStart()
 			hSkeletonMage:SetDeathXP( 0 )
 			hSkeletonMage:SetMinimumGoldBounty( 0 )
 			hSkeletonMage:SetMaximumGoldBounty( 0 )
+
+			Timers:CreateTimer({
+				    endTime = FrameTime(),
+				    callback = function()
+				       	hSkeletonMage:SetMaxHealth(mage_health)
+				       	hSkeletonMage:SetBaseMaxHealth(mage_health)
+				        hSkeletonMage:Heal(mage_health,hSkeletonMage)
+				    end
+				})
             hSkeletonMage:FindAbilityByName("pugna_nether_blast"):SetLevel(nNetherBlastLevel)
-            hSkeletonMage:FindAbilityByName("pugna_nether_blast"):StartCooldown(3.0)
+            hSkeletonMage:FindAbilityByName("pugna_nether_blast"):StartCooldown(1.5)
 
 		end
 	end

@@ -296,13 +296,14 @@ function GameMode:InitGameMode()
     GameRules.sValidePlayerSteamIds="" --有效玩家的steamId队列
     GameRules.bUltimateStage=false  --终极进化阶段
     GameRules.bLevelTenStage=false  --有生物到达10级
-
-    ItemController:Init()
+    
     Timers:start()
+    ItemController:Init()
+    RuneSpawner:Init()
     NeutralSpawner:Init()
     Econ:Init()
-    RuneSpawner:Init()
     BonusRing:Init()
+    GameRules.RuneSpawner=RuneSpawner
 
     GameMode.vStartPointLocation={} --key是teamnumber value坐标
     GameRules.nFatalErrorTimes=1
@@ -394,6 +395,7 @@ function GameMode:InitGameMode()
 
 
     CustomGameEventManager:RegisterListener("RequestCreatureIndex", Dynamic_Wrap(GameMode, 'RequestCreatureIndex'))
+    CustomGameEventManager:RegisterListener("PortraitClicked", Dynamic_Wrap(GameMode, 'PortraitClicked'))
 
     --[[
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( GameMode, "OnNPCSpawned" ), self )

@@ -27,12 +27,12 @@
 
 	"addonname"	        "刀塔进化岛"
 
-    "rune_spawn_element"          "元素神符刷新"
-    "rune_spawn_mystery"          "神秘神符刷新"
-    "rune_spawn_durable"          "坚韧神符刷新"
-    "rune_spawn_fury"             "狂怒神符刷新"
-    "rune_spawn_decay"            "腐朽神符刷新"
-    "rune_spawn_hunt"             "猎杀神符刷新"
+    "rune_spawn_element"          "元素神符即将出现"
+    "rune_spawn_mystery"          "神秘神符即将出现"
+    "rune_spawn_durable"          "坚韧神符即将出现"
+    "rune_spawn_fury"             "狂怒神符即将出现"
+    "rune_spawn_decay"            "腐朽神符即将出现"
+    "rune_spawn_hunt"             "猎杀神符即将出现"
 
     "rune_pickup_element"          "拾取了元素神符"
     "rune_pickup_mystery"          "拾取了神秘神符"
@@ -788,6 +788,8 @@
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_Description"                                 "在身边召唤一个脆弱的骷髅法师，具有幽冥轰爆技能。"
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_skeleton_mage_duration"                      "骷髅法师持续时间："
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_nether_blast_level"                          "骷髅法师幽冥轰爆等级："
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage_mage_health"                                 "骷髅法师血量："
+
 
     "DOTA_Tooltip_ability_decay_mystery_summon_familiar"                                          "召唤佣兽"
     "DOTA_Tooltip_ability_decay_mystery_summon_familiar_Description"                              "召唤%familiar_number%只盲眼的佣兽为维萨吉作战。佣兽拥有石像形态技能，可以化为石像，在落地时使敌人眩晕。在石像形态中的佣兽无敌，并且迅速回复生命值。"
@@ -1829,6 +1831,23 @@
     "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_attack_speed"                   "+$attack"
     "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_armor"                          "+护甲提升"
     "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_move_speed_pct"                 "%+移动速度"
+
+
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua"                                "支配头盔"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_Description"                    "<h1>主动：支配</h1>控制一个小于玩家2级的中立生物。\n<h1>被动：支配光环</h1> 周围友方单位的攻击速度提升%attack_speed_aura%，生命恢复提升%hp_regen_aura%点/秒。<br><br>作用范围：%aura_radius%"
+    
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_spell_amplify"                        "%+技能增强"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_health"                         "+$health"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_damage"                         "+$damage"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_attack_speed"                   "+$attack"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_mana_regen"                     "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_health_regen"                   "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_magic_resist"                         "%+魔法抗性"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_armor"                          "+护甲提升"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_move_speed_pct"                 "%+移动速度"
+
+    "DOTA_Tooltip_modifier_item_helm_of_the_dominator_lua_aura_effect"                         "支配光环"
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"

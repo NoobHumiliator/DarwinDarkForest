@@ -63,40 +63,58 @@ function RuneSpawner:Begin()
     end
 
     Timers:CreateTimer(600/GameRules.nTotalHeroNumber, function()
-        RuneSpawner:SpawnOneRune()
+        RuneSpawner:WarnRuneSpawn()
         -- 1人10分钟  10人60秒 12人50秒
         return 600/GameRules.nTotalHeroNumber
     end)
 end
 
 
-function RuneSpawner:SpawnOneRune()
+function RuneSpawner:WarnRuneSpawn()
 
    local nDice= RandomInt(1, 6)
    local sType= RuneSpawner.vTypeMap[nDice]
-   print("Spawn Rune item_rune_"..sType)
-   local hRune = CreateItem("item_rune_"..sType, nil, nil)
    local vVector = GetRandomValidPosition()
-   CreateItemOnPositionSync(vVector, hRune)
+
+
    local hVisionRevealer = CreateUnitByName( "npc_rune_revealer_"..sType, vVector, false, nil, nil, DOTA_TEAM_NEUTRALS )
-   hRune.hVisionRevealer=hVisionRevealer
+   hVisionRevealer.sType=sType
+   hVisionRevealer.vVector=vVector
 
    local data =
    {
       rune_type = sType
    }
-   CustomGameEventManager:Send_ServerToAllClients( "rune_spawned", data )
+   CustomGameEventManager:Send_ServerToAllClients( "warn_rune_spawn", data )
+
+   for nTeam = 0, (DOTA_TEAM_COUNT-1) do
+       MinimapEvent( nTeam, hVisionRevealer, hVisionRevealer:GetAbsOrigin().x, hVisionRevealer:GetAbsOrigin().y, DOTA_MINIMAP_EVENT_HINT_LOCATION, 15 )
+   end
+
 
    Timers:CreateTimer(0.1, function()
         if  hVisionRevealer and not hVisionRevealer:IsNull() and hVisionRevealer:IsAlive() then
           for nTeam = 0, (DOTA_TEAM_COUNT-1) do
-              AddFOWViewer(nTeam, vVector, 700, 0.5, false)
+              AddFOWViewer(nTeam, vVector, 850, 0.5, false)
           end
           return 0.5
         else
           return nil
         end
    end)
+
+end
+
+
+function RuneSpawner:SpawnRune(hVisionRevealer)
+
+   local sType=hVisionRevealer.sType
+   local vVector=hVisionRevealer.vVector
+
+   local hRune = CreateItem("item_rune_"..sType, nil, nil)
+   CreateItemOnPositionSync(vVector, hRune)
+   hRune.hVisionRevealer=hVisionRevealer
+
 end
 
 

@@ -2637,6 +2637,11 @@
             }
             "03"
             {
+                "var_type"                     "FIELD_INTEGER"
+                "mage_health"                  "100 150 200 250 300 350 400 450"
+            }
+            "04"
+            {
                 "var_type"                     "FIELD_FLOAT"
                 "nDecay"                       "6 10 14 18 22 26 30 34"
             }

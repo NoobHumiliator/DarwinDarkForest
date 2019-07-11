@@ -18,6 +18,8 @@ function modifier_item_echo_sabre_lua:OnCreated( kv )
     self.bonus_mana_regen = self:GetAbility():GetSpecialValueFor( "bonus_mana_regen" )
   	self.bonus_health_regen = self:GetAbility():GetSpecialValueFor( "bonus_health_regen" )
     self.magic_resistance = self:GetAbility():GetSpecialValueFor( "magic_resistance" )
+    self.slow_duration = self:GetAbility():GetSpecialValueFor( "slow_duration" )
+
 
     if IsServer() then
     	AddHealthBonus(self:GetCaster(),self.bonus_health)
@@ -42,7 +44,7 @@ function modifier_item_echo_sabre_lua:DeclareFunctions()
 		MODIFIER_PROPERTY_MANA_REGEN_CONSTANT,
 		MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
 		MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS,
-		MODIFIER_EVENT_ON_ATTACK
+		MODIFIER_EVENT_ON_ATTACK_LANDED
 	}
 
 	return funcs
@@ -78,7 +80,7 @@ function modifier_item_echo_sabre_lua:GetModifierMagicalResistanceBonus( params 
 end
 
 
-function modifier_item_echo_sabre_lua:OnAttack(keys)
+function modifier_item_echo_sabre_lua:OnAttackLanded(keys)
 	local hParent = self:GetParent()
 	local hTarget = keys.target
 	

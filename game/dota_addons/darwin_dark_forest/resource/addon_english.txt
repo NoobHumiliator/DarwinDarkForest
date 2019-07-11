@@ -19,12 +19,12 @@
 
 	"addonname"	        "DOTA EVOLVE ISLAND"
 
-    "rune_spawn_element"          "Element Rune Refreshed"
-    "rune_spawn_mystery"          "Mystery Rune Refreshed"
-    "rune_spawn_durable"          "Durable Rune Refreshed"
-    "rune_spawn_fury"             "Fury Rune Refreshed"
-    "rune_spawn_decay"            "Decay Rune Refreshed"
-    "rune_spawn_hunt"             "Hunt Rune Refreshed"
+    "rune_spawn_element"          "Element Rune Will Spawn"
+    "rune_spawn_mystery"          "Mystery Rune Will Spawn"
+    "rune_spawn_durable"          "Durable Rune Will Spawn"
+    "rune_spawn_fury"             "Fury Rune Will Spawn"
+    "rune_spawn_decay"            "Decay Rune Will Spawn"
+    "rune_spawn_hunt"             "Hunt Rune Will Spawn"
 
     "rune_pickup_element"          "Pick up Element Rune"
     "rune_pickup_mystery"          "Pick up Mystery Rune"
@@ -774,6 +774,7 @@
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_Description"                                 "Summons a skeleton mage nearby, which has Netherblast ability."
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_skeleton_mage_duration"                      "Duration:"
     "DOTA_Tooltip_ability_decay_summon_skeleton_mage_nether_blast_level"                          "Netherblast Level:"
+    "DOTA_Tooltip_ability_decay_summon_skeleton_mage_mage_health"                                 "Mage Health:"
 
     "DOTA_Tooltip_ability_decay_mystery_summon_familiar"                                          "Summon Familiar"
     "DOTA_Tooltip_ability_decay_mystery_summon_familiar_Description"                              "Summon %familiar_number% familiars。Familiars possess the Stone Form ability, that allows them to turn into stone, stunning enemies upon landing.  While in Stone Form, Familiars are invulnerable, and rapidly regenerate their health."
@@ -1798,6 +1799,23 @@
     "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_attack_speed"                  "+$attack"
     "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_armor"                         "+Armor"
     "DOTA_Tooltip_Ability_item_poor_mans_shield_lua_bonus_move_speed_pct"                "%+BONUS MOVE SPEED"
+
+
+
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua"                                "Helm of the Dominator"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_Description"                    "<h1>Active: Dominate</h1>Takes control of 2-level lower than player's neutral creep.<br><br>Range: %tooltip_range%\n<h1>Passive: Dominator Aura</h1> Increases nearby allies' attack speed by %attack_speed_aura% and health regen by %hp_regen_aura%.<br><br>Radius: %aura_radius%"
+    
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_spell_amplify"                         "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_health"                         "+$health"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_damage"                         "+$damage"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_attack_speed"                   "+$attack"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_mana_regen"                     "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_health_regen"                   "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_magic_resist"                         "%+$spell_resist"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_armor"                          "+Armor"
+    "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_move_speed_pct"                 "%+BONUS MOVE SPEED"
+
+    "DOTA_Tooltip_modifier_item_helm_of_the_dominator_lua_aura_effect"                         "Dominator Aura"
 
 
     //EconUnitBegins

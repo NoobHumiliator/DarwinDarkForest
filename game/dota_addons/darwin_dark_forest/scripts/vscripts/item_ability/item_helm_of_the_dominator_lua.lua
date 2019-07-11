@@ -18,6 +18,10 @@ function item_helm_of_the_dominator_lua:CastFilterResultTarget(hTarget)
 			return UF_FAIL_FRIENDLY
 		end
 
+		if hTarget:GetTeamNumber()~=DOTA_TEAM_NEUTRALS then
+			return UF_FAIL_ENEMY
+		end
+
 		if hTarget:GetLevel()>hCaster:GetLevel()-2 then
 			return UF_FAIL_OTHER
 		end

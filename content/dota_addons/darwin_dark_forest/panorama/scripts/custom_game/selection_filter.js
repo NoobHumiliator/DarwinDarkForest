@@ -28,13 +28,20 @@ function OnPlayerCreatureChange(tableName,key,value)
 }
 
 
+//点击头像选中单位
+function UpdateSelect(keys)
+{    
+     GameUI.SelectUnit(keys.creepIndex, false)
+}
+
+
 
 
 (function () {
 
     // Built-In Dota client events
     GameEvents.Subscribe( "dota_player_update_selected_unit", OnUpdateSelectedUnit );
+    GameEvents.Subscribe( "UpdateSelect", UpdateSelect );
     CustomNetTables.SubscribeNetTableListener( "player_creature_index", OnPlayerCreatureChange );
    
-
 })();

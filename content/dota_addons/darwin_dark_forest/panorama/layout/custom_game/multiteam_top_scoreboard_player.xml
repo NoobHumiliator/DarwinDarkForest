@@ -1,0 +1,30 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="file://{resources}/styles/custom_game/multiteam_top_scoreboard.css" />
+		<include src="s2r://panorama/styles/custom_game/shared_scoreboard_styles.vcss_c" />
+	</styles>
+	<script>
+	function PortraitClicked(bDoubleClick)
+	{
+        
+        var targetPlayerId= $.GetContextPanel().GetAttributeInt( "player_id", -1 )
+	    GameEvents.SendCustomGameEventToServer('PortraitClicked', {playerId:Players.GetLocalPlayer(), targetPlayerId:targetPlayerId,doubleClick:bDoubleClick,controldown:GameUI.IsControlDown() })
+	}
+	</script>
+	<Panel hittest="false" class="ScoreboardPlayerWrapper">
+		<Panel hittest="false" id="PlayerNamePanel">
+			<Label hittest="false" id="PlayerName" />
+		</Panel>
+		<Panel hittest="false" id="RespawnIndicator">
+			<Label hittest="false" id="RespawnTimer" text="123"/>
+		</Panel>
+		<Panel hittest="false" class="ScoreboardPlayer">
+			<Button class="PlayerPortraitWrapper" onmouseactivate="PortraitClicked(false);"  ondblclick="PortraitClicked(true);">
+				<Panel hittest="false" id="PlayerColorBar" />
+				<Image hittest="false" id="HeroIcon" />
+			</Button>
+			<Image hittest="false" id="DisconnectionIndicator" src="s2r://panorama/images/custom_game/icon_disconnect_png.vtex" />
+		</Panel>
+	</Panel>
+</root>
