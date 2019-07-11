@@ -14504,8 +14504,8 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"1900"		// Base health.
 		"StatusHealthRegen"			"6"		// Health regeneration rate.
-		"StatusMana"				"500"			// Base mana.
-		"StatusManaRegen"			"1.2"		// Mana regeneration rate.		 
+		"StatusMana"				"800"			// Base mana.
+		"StatusManaRegen"			"2"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -19462,7 +19462,7 @@
 		"StatusHealth"				"3150"		// Base health.
 		"StatusHealthRegen"			"16"		// Health regeneration rate.
 		"StatusMana"				"1100"	    // Base mana.
-		"StatusManaRegen"			"10.5"		    // Mana regeneration rate.		 
+		"StatusManaRegen"			"3"		    // Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -21144,8 +21144,8 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"3100"
 		"StatusHealthRegen"			"15"
-		"StatusMana"				"1200"
-		"StatusManaRegen"			"12"
+		"StatusMana"				"1250"
+		"StatusManaRegen"			"12.5"
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -23594,8 +23594,8 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"3500"		// Base health.
 		"StatusHealthRegen"			"17"		// Health regeneration rate.
-		"StatusMana"				"600"	    // Base mana.
-		"StatusManaRegen"			"5.5"		// Mana regeneration rate.		 
+		"StatusMana"				"1350"	    // Base mana.
+		"StatusManaRegen"			"4"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------

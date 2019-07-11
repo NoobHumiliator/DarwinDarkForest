@@ -17,8 +17,18 @@ end
 
 function modifier_item_lifestone:OnCreated( kv )
 	self.hp_regen = self:GetAbility():GetSpecialValueFor( "hp_regen" )
+	self.bonus_health = self:GetAbility():GetSpecialValueFor( "bonus_health" )
+	if IsServer() then
+    	AddHealthBonus(self:GetCaster(),self.bonus_health)
+    end
 end
 
+--------------------------------------------------------------------------------
+function modifier_item_lifestone:OnDestroy()
+    if IsServer() then
+    	RemoveHealthBonus(self:GetCaster(),self.bonus_health)
+    end
+end
 --------------------------------------------------------------------------------
 
 function modifier_item_lifestone:DeclareFunctions()

@@ -1816,6 +1816,18 @@
     "DOTA_Tooltip_Ability_item_helm_of_the_dominator_lua_bonus_move_speed_pct"                 "%+BONUS MOVE SPEED"
 
     "DOTA_Tooltip_modifier_item_helm_of_the_dominator_lua_aura_effect"                         "Dominator Aura"
+    
+    "DOTA_Tooltip_Ability_item_heavens_halberd_lua"                                            "Heaven's Halberd"
+    "DOTA_Tooltip_Ability_item_heavens_halberd_lua_Description"                                "<h1>Active: Disarm</h1>Prevents a target from attacking for %disarm_melee% seconds on melee targets, and %disarm_range% seconds on ranged targets.<br><br>Range: %disarm_cast_range_tooltip%"
+    "DOTA_Tooltip_ability_item_heavens_halberd_lua_bonus_evasion"                              "%+$evasion"
+    "DOTA_Tooltip_ability_item_heavens_halberd_lua_bonus_damage"                               "+$damage"
+    "DOTA_Tooltip_ability_item_heavens_halberd_lua_status_resistance"                          "%STATUS RESISTANCE:"
+    "DOTA_Tooltip_ability_item_heavens_halberd_lua_bonus_health"                               "+$health"
+    "DOTA_Tooltip_ability_item_heavens_halberd_lua_bonus_health_regen"                         "+$hp_regen"
+    "DOTA_Tooltip_ability_item_heavens_halberd_lua_magic_resistance"                           "%MAGIC RESISTANCE:"
+  
+    "DOTA_Tooltip_modifier_item_heavens_halberd_lua_debuff"                                    "Disarm"
+    "DOTA_Tooltip_modifier_item_heavens_halberd_lua_debuff_Description"                        "Disarmed by Heaven's Halberd, cannot attack."
 
 
     //EconUnitBegins
