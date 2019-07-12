@@ -69,6 +69,6 @@ end
 
 ----------------------------------------------
 
-function modifier_item_heavens_halberd_lua::GetModifierEvasion_Constant(params)
+function modifier_item_heavens_halberd_lua:GetModifierEvasion_Constant(params)
 	return self.bonus_evasion
 end

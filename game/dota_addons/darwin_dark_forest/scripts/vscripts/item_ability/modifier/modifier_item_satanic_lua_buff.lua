@@ -44,6 +44,8 @@ function modifier_item_satanic_lua_buff:OnAttackLanded( keys )
 
 		local damage = keys.damage
 
+		local flArmor = target:GetPhysicalArmorValue(false)
+
         local heal = damage * self:GetAbility():GetSpecialValueFor("unholy_lifesteal_percent") * 0.01 * (1 - ((0.052 * flArmor) / (0.9 + 0.048 * math.abs(flArmor) ) ))
 
 		if attacker:IsIllusion()  then

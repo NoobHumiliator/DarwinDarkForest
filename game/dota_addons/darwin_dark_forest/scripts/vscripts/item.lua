@@ -29,7 +29,7 @@ function ItemController:Init()
     --掉落物品的概率
     self.flItemDropChance=0.65
 
-    --二维数组 k 为1-5级物品
+    --二维数组
     self.vItemsTieTable = {}
     for i=1,self.nTotalTieNum do
         self.vItemsTieTable[i]={}
@@ -37,6 +37,8 @@ function ItemController:Init()
 
     -- 处理物品 kv 首先排序
     local vItems={}
+    local vToDoItems={}
+
     self.vTextureNameMap={}
 
     for sItemName, vData in pairs(vItemsKV) do
@@ -49,19 +51,28 @@ function ItemController:Init()
         end
     end
     -- 按照 物品价格排序
-    table.sort(vItems,function(a,b) return a.ItemCost<b.ItemCost end )       
+    table.sort(vItems,function(a,b) return a.ItemCost<b.ItemCost end )
 
-    -- 按照分组加入 
-    for i=1,self.nTotalTieNum do
-        local nPerTieNum= math.floor(#vItems/self.nTotalTieNum)
+    --大于3800的加入 Tie6 ，其他加入1-5的预处理分组
+    for _,v in pairs(vItems) do
+        if v.ItemCost>3800 then
+           table.insert(self.vItemsTieTable[6],v.sItemName)
+        else
+           table.insert(vToDoItems,v)
+        end
+    end       
+
+    -- 剩下五组 平分物品
+    for i=1,self.nTotalTieNum-1 do
+        local nPerTieNum= math.floor(#vToDoItems/(self.nTotalTieNum-1))
         local nTemp=1+(i-1)*nPerTieNum
         for j=nTemp,nTemp+nPerTieNum-1 do
-              table.insert(self.vItemsTieTable[i],vItems[j].sItemName)
+              table.insert(self.vItemsTieTable[i],vToDoItems[j].sItemName)
         end
         -- 将多余出来的一并加入最高Tie
-        if i ==self.nTotalTieNum then
-          for j=1+i*nPerTieNum,#vItems do
-             table.insert(self.vItemsTieTable[i],vItems[j].sItemName)
+        if i ==self.nTotalTieNum-1 then
+          for j=1+i*nPerTieNum,#vToDoItems do
+             table.insert(self.vItemsTieTable[i],vToDoItems[j].sItemName)
           end
         end
     end
@@ -90,9 +101,9 @@ function ItemController:Begin()
   
     --PVE模式不出信使
     if not GameRules.bPveMap then
-        Timers:CreateTimer(120, function()
+        Timers:CreateTimer(110, function()
             ItemController:SpawnCourier()
-            return 130
+            return 110
         end)
     end
 
@@ -321,7 +332,7 @@ end
 function ItemController:ChooseCourierItem()
 
     local nTieNum =  math.ceil(GameRules.nAverageLevel/2)
-    nTieNum=nTieNum+3
+    nTieNum=nTieNum+2
     if nTieNum >self.nTotalTieNum then nTieNum=self.nTotalTieNum end
     local sItemName = self.vItemsTieTable[nTieNum][RandomInt(1, #self.vItemsTieTable[nTieNum])]
     return sItemName

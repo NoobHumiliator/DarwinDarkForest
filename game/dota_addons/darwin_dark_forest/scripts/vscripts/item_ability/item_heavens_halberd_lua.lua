@@ -24,12 +24,12 @@ function item_heavens_halberd_lua:OnSpellStart()
     local disarm_melee = self:GetSpecialValueFor( "disarm_melee" )
     local disarm_range = self:GetSpecialValueFor( "disarm_range" )
     
-    if hTarget:GetAttackCapability()=DOTA_UNIT_CAP_RANGED_ATTACK then
+    if hTarget:GetAttackCapability()==DOTA_UNIT_CAP_RANGED_ATTACK then
         hTarget:AddNewModifier(hCaster, self, "modifier_item_heavens_halberd_lua_debuff", {duration=disarm_range})
     end
 
 
-    if hTarget:GetAttackCapability()=DOTA_UNIT_CAP_MELEE_ATTACK then
+    if hTarget:GetAttackCapability()==DOTA_UNIT_CAP_MELEE_ATTACK then
        hTarget:AddNewModifier(hCaster, self, "modifier_item_heavens_halberd_lua_debuff", {duration=disarm_melee})
     end
 
