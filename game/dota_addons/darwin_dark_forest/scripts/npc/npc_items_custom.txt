@@ -6686,7 +6686,7 @@
 		// Recipe
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemRecipe"					"1"
-		"ItemResult"					"item_black_king_bar"
+		"ItemResult"					"item_black_king_bar_lua"
 		"ItemRequirements"
 		{
 			"01"						"item_ogre_axe_lua;item_mithril_hammer"
@@ -6696,11 +6696,13 @@
 	//=================================================================================================================
 	// Black King Bar
 	//=================================================================================================================
-	"item_black_king_bar"
+	"item_black_king_bar_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"116"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+        
+        "BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_black_king_bar_lua"
+		"AbilityTextureName"            "item_black_king_bar"
+
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"FightRecapLevel"				"2"
 
@@ -6725,27 +6727,37 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"10"
+				"bonus_damage"			"27"
 			}
 			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"24"
-			}
-			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"duration"				"10.0 9.0 8.0 7.0 6.0 5.0"
 			}
-			"04"
+			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"max_level"				"6"
 			}
-			"05"
+			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"model_scale"			"30"     // Percentage over model scale
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "200"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"1"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"	        "0.8"
 			}
 		}
 	}
@@ -11414,6 +11426,550 @@
 			}
 		}
 	}
+
+
+	"item_recipe_diffusal_blade"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"173"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_diffusal_blade_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_blade_of_alacrity;item_blade_of_alacrity;item_robe"
+		}
+	}
+
+	"item_diffusal_blade_lua"
+	{
+        "BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_diffusal_blade_lua"
+		"AbilityTextureName"            "item_diffusal_blade"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilitySharedCooldown"			"diffusal"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"ItemCost"						"3150"
+		"ItemShopTags"					"agi;int;unique;hard_to_tag"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"diffusal blade 1"
+		"ItemPermanent"					"1"
+
+		"UpgradesItems"					"item_diffusal_blade"
+		"UpgradeRecipe"					"item_recipe_diffusal_blade"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"feedback_mana_burn"	"50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"feedback_mana_burn_illusion_melee"	"16"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"feedback_mana_burn_illusion_ranged"	"8"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"purge_slow_duration"	"4.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_per_burn"		"0.8"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "10"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"     "20"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "0.5"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "10"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "3.2"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "1"
+			}
+
+		}
+	}
+
+	"item_recipe_silver_edge"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"248"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_silver_edge_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_invis_sword;item_ultimate_orb_lua"
+		}
+	}
+
+	"item_silver_edge_lua"
+	{
+        
+        "BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_silver_edge_lua"
+		"AbilityTextureName"            "item_silver_edge"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"FightRecapLevel"				"1"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"22.0"
+		"AbilitySharedCooldown"			"shadow_blade"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+		"ItemCost"						"5550"
+		"ItemShopTags"					"damage;attack_speed;movespeed;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"sb;invis;shadow blade"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"45"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"windwalk_duration"		"14.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"windwalk_movement_speed"	"25"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"windwalk_fade_time"	"0.3"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"windwalk_bonus_damage"	"175"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"backstab_reduction"	"-50"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"backstab_duration"		"4"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "300"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "1.5"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "1.5"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "15.0"
+			}
+			"14"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "1.2"
+			}
+			"15"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "2.4"
+			}
+			"16"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "0.75"
+			}
+		}
+	}
+
+
+	"item_recipe_manta"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"146"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"FightRecapLevel"				"1"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"500"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_manta_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_yasha_lua;item_ultimate_orb_lua"
+		}
+	}
+	
+	"item_manta_lua"
+	{
+		 
+        "BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_manta_lua"
+		"AbilityTextureName"            "item_manta"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"45.0"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125"
+		"ItemCost"						"4700"
+		"ItemShopTags"					"agi;str;int;attack_speed;move_speed;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"manta style"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"38"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"	"20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"images_count"			"2"
+			}			
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_illusion_duration"			"20"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"images_do_damage_percent_melee"	"-67"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_damage_outgoing_melee"			"33"
+			}	
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"images_take_damage_percent_melee"	"250"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_damage_incoming_melee_total_pct"			"350"
+			}			
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"images_do_damage_percent_ranged"	"-72"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_damage_outgoing_ranged"			"28"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"images_take_damage_percent_ranged"	"300"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_damage_incoming_ranged_total_pct"			"400"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_melee"		"30"
+			}
+			"14"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_ranged_tooltip"		"45"
+			}
+			"15"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"invuln_duration"		"0.1"
+			}
+			"16"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_radius"			"1000"
+			}
+			"17"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"tooltip_ranged_cooldown_increase"	"15"
+			}
+			"18"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"		    "200"
+			}
+			"19"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"    "1"
+			}
+			"20"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "15"
+			}
+			"21"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "1"
+			}
+			"22"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "10"
+			}
+			"23"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_resist"          "0.8"
+			}
+			"24"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"           "4.16"
+			}
+			"25"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_move_speed_pct"  "1.3"
+			}	
+		}
+	}
+
+	"item_recipe_shivas_guard"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"118"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_shivas_guard_lua"
+		"ItemRequirements"
+		{
+			"01"						"item_platemail;item_mystic_staff_lua"
+		}
+	}
+	
+	"item_shivas_guard_lua"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"					"item_ability/item_shivas_guard_lua"
+		"AbilityTextureName"            "item_shivas_guard"
+
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+		"AbilityCastRange"				"900"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		"ItemCost"						"4750"
+		"ItemShopTags"					"int;armor;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"shiva's guard;shivas"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"15"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"1200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_attack_speed"		"-45"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_damage"			"200"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_movement_speed"	"-40"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"blast_debuff_duration"	"4.0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_radius"			"900"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_speed"			"350"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"          "10"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"      "3"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spell_amplify"         "30"
+			}
+		}
+	}
+
+	
+
 	
 	
     

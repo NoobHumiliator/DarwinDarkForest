@@ -26,7 +26,6 @@ function modifier_eidolon_duplicate_passive:OnAttackLanded( params )
              	if self:GetStackCount()+1 == self:GetAbility():GetSpecialValueFor( "count" ) then
              		 local  vLocation =self:GetParent():GetAbsOrigin()
                      local hIllustion=CreateIllusion(self:GetParent(),self:GetAbility():GetSpecialValueFor("duration"), self:GetAbility():GetSpecialValueFor("illusion_damage_incoming")-100, self:GetAbility():GetSpecialValueFor("illusion_damage_outgoing")-100, vLocation, {}, self:GetAbility())
-					 FindClearSpaceForUnit(hIllustion, vLocation, false)
 					 hIllustion.hHauntOwner=self:GetParent()
 					 EmitSoundOn("Hero_Enigma.Demonic_Conversion", self:GetParent())
 					 self:SetStackCount(0)

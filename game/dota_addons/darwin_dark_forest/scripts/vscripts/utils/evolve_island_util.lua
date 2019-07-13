@@ -104,6 +104,7 @@ function CreateIllusion(hUnit,nDuration, nIncomeDamage, nOutDamage, vLocation, v
     end
 
     hIllusion:MakeIllusion()
+    FindClearSpaceForUnit(hIllusion, vLocation, false)
 
     return hIllusion
 end
