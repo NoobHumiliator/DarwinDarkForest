@@ -1829,6 +1829,139 @@
     "DOTA_Tooltip_modifier_item_heavens_halberd_lua_debuff"                                    "Disarm"
     "DOTA_Tooltip_modifier_item_heavens_halberd_lua_debuff_Description"                        "Disarmed by Heaven's Halberd, cannot attack."
 
+    "DOTA_Tooltip_Ability_item_satanic_lua"                                                    "Satanic"
+    "DOTA_Tooltip_Ability_item_satanic_lua_Description"                                        "<h1>Active: Unholy Rage</h1>Increases Lifesteal percentage to %unholy_lifesteal_total_tooltip%%% for %unholy_duration% seconds. \n<h1>Passive: Lifesteal</h1>Heals the attacker for %lifesteal_percent%%% of attack damage dealt."
+    "DOTA_Tooltip_ability_item_satanic_lua_bonus_damage"                                       "+$damage"
+    "DOTA_Tooltip_ability_item_satanic_lua_status_resistance"                                  "%STATUS RESISTANCE:"
+    "DOTA_Tooltip_ability_item_satanic_lua_bonus_health"                                       "+$health"
+    "DOTA_Tooltip_ability_item_satanic_lua_bonus_health_regen"                                 "+$hp_regen"
+    "DOTA_Tooltip_ability_item_satanic_lua_magic_resistance"                                   "%MAGIC RESISTANCE:"
+  
+    "DOTA_Tooltip_modifier_item_satanic_lua_buff"                                              "Unholy Rage"
+    "DOTA_Tooltip_modifier_item_satanic_lua_buff_Description"                                  "Lifesteal increased by 85%%."
+        
+    "DOTA_Tooltip_Ability_item_meteor_hammer_lua"                                              "Meteor Hammer"
+    "DOTA_Tooltip_Ability_item_meteor_hammer_lua_Description"                                  "<h1>Active: Meteor Hammer</h1> CHANNELED - After a successful channel, summons a meteor that strikes a %impact_radius% AoE, stunning enemies for %stun_duration% seconds and dealing impact damage. Continues to deal damage over time to enemies units and buildings for %burn_duration% seconds.<BR><BR>Building Impact Damage: %impact_damage_buildings% <BR>Building Over Time Damage: %burn_dps_buildings% <BR><BR>Non-Building Impact Damage: %impact_damage_units% <BR>Non-Building Over Time Damage: %burn_dps_units% <BR><BR>Channel Duration: %max_duration% seconds.<BR>Landing Time: %land_time% seconds."
+    "DOTA_Tooltip_ability_item_meteor_hammer_lua_bonus_damage"                                 "+$damage"
+    "DOTA_Tooltip_ability_item_meteor_hammer_lua_status_resistance"                            "%STATUS RESISTANCE:"
+    "DOTA_Tooltip_ability_item_meteor_hammer_lua_bonus_health"                                 "+$health"
+    "DOTA_Tooltip_ability_item_meteor_hammer_lua_bonus_health_regen"                           "+$hp_regen"
+    "DOTA_Tooltip_ability_item_meteor_hammer_lua_bonus_mana_regen"                             "+$mana_regen"
+    "DOTA_Tooltip_ability_item_meteor_hammer_lua_spell_amplify"                                "%+Spell Amplification"
+
+  
+    "DOTA_Tooltip_modifier_item_meteor_hammer_lua_burn"                                        "Meteor Hammer Burn"
+    "DOTA_Tooltip_modifier_item_meteor_hammer_lua_burn_Description"                            "Taking damage over time."
+
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua"                                               "Shiva's Guard"
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua_Description"                                   "<h1>Active: Arctic Blast</h1> Emits a freezing wave that deals %blast_damage% magical damage to enemies and slows their movement by %blast_movement_speed%%% for %blast_debuff_duration% seconds.<br><br>Radius: %blast_radius%\n<h1>Passive: Freezing Aura</h1> Reduces the attack speed of all enemies by %aura_attack_speed%. <br><br>Radius: %aura_radius%"
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua_bonus_armor"                                   "+$armor"
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua_bonus_armor"                                   "+$armor"
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua_bonus_mana_regen"                              "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua_spell_amplify"                                 "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua_bonus_damage"                                  "+$damage"
+
+    "DOTA_Tooltip_modifier_item_shivas_guard_lua_slow"                                         "Arctic Blast"
+    "DOTA_Tooltip_modifier_item_shivas_guard_lua_slow_Description"                             "Movement speed slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%."
+    
+    "DOTA_Tooltip_modifier_item_shivas_guard_lua_debuff"                                       "Freezing Aura"
+    "DOTA_Tooltip_modifier_item_shivas_guard_lua_debuff_Description"                           "Attack speed reduced by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
+
+    "DOTA_Tooltip_Ability_item_manta_lua"                                               "Manta Style"
+    "DOTA_Tooltip_Ability_item_manta_lua_Description"                                   "<h1>Active: Mirror Image</h1>Creates %images_count% images of your hero that last %tooltip_illusion_duration% seconds. <br><br>Melee images deal %tooltip_damage_outgoing_melee%%% damage and take %tooltip_damage_incoming_melee_total_pct%%% damage, while Ranged images deal %tooltip_damage_outgoing_ranged%%% and take %tooltip_damage_incoming_ranged_total_pct%%% damage. <br><br>Cooldown increased by %tooltip_ranged_cooldown_increase% seconds on ranged heroes.<br><br>Dispel Type: <span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>"
+    "DOTA_Tooltip_Ability_item_manta_lua_spell_amplify"                                 "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_mana_regen"                              "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_health_regen"                            "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_manta_lua_magic_resist"                                  "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_armor"                                   "+Armor"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_move_speed_pct"                          "%+BONUS MOVE SPEED"
+
+
+    "DOTA_Tooltip_Ability_item_silver_edge_lua"                                         "Silver Edge"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_Description"                             "<h1>Active: Shadow Walk</h1>Makes you invisible for %windwalk_duration% seconds, or until you attack or cast a spell.  While invisible, you move %windwalk_movement_speed%%% faster and can move through units.  <br><br>Attacking to end the invisibility will deal %windwalk_bonus_damage% bonus physical damage to the target, and for %backstab_duration% seconds, disable their passive abilities."
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_spell_amplify"                           "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_health"                            "+$health"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_damage"                            "+$damage"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_attack_speed"                      "+$attack"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_mana_regen"                        "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_health_regen"                      "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_magic_resist"                            "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_armor"                             "+Armor"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_move_speed_pct"                    "%+BONUS MOVE SPEED"
+
+    "DOTA_Tooltip_modifier_item_silver_edge_lua_buff"                                   "Shadow Walk"
+    "DOTA_Tooltip_modifier_item_silver_edge_lua_buff_Description"                       "Invisible. Movement speed increased by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% and you can move through units. Attacking to break invisibility will deal 225 bonus damage, slow the target and disable their passives."
+    
+    "DOTA_Tooltip_modifier_item_silver_edge_lua_debuff"                                 "Shadow Walk Attack"
+    "DOTA_Tooltip_modifier_item_silver_edge_lua_debuff_Description"                     "Passive abilities disabled."
+
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua"                                      "Diffusal Blade"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_Description"                          "<h1>Active: Inhibit</h1> Targets an enemy, slowing it for %purge_slow_duration% seconds.<br><br>Range: %cast_range_tooltip%\n<h1>Passive: Manabreak</h1>Each attack burns %feedback_mana_burn% mana from the target, and deals %damage_per_burn% physical damage per burned mana. <br><br>Burns %feedback_mana_burn_illusion_melee% mana per attack from melee illusions and %feedback_mana_burn_illusion_ranged% mana per attack from ranged illusions."
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_spell_amplify"                        "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_bonus_damage"                         "+$damage"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_bonus_attack_speed"                   "+$attack"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_bonus_mana_regen"                     "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_bonus_armor"                          "+Armor"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_bonus_move_speed_pct"                 "%+BONUS MOVE SPEED"
+
+    "DOTA_Tooltip_modifier_item_diffusal_blade_lua_debuff"                              "Diffusal Blade Inhibit"
+    "DOTA_Tooltip_modifier_item_diffusal_blade_lua_debuff_Description"                  "Movement speed reduced by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%."
+     
+
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua"                                      "Ethereal Blade"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_Description"                          "<h1>Active: Ether Blast</h1>Converts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and %ethereal_damage_bonus%%% more vulnerable to magic damage.  Lasts for %duration_ally% seconds on allies and %duration% seconds on enemies.<br><br>  Enemy targets are also slowed by %blast_movement_slow%%%, and take 2 x [your attack damage] + %blast_damage_base% as magical damage.<br><br>Range: %tooltip_range%"
+    
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_spell_amplify"                        "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_health"                         "+$health"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_damage"                         "+$damage"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_attack_speed"                   "+$attack"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_mana_regen"                     "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_health_regen"                   "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_magic_resist"                         "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_armor"                          "+Armor"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_move_speed_pct"                 "%+BONUS MOVE SPEED"
+
+    "DOTA_Tooltip_modifier_item_ethereal_blade_lua_debuff"                              "Ether Blast"
+    "DOTA_Tooltip_modifier_item_ethereal_blade_lua_debuff_Description"                  "Ethereal Form. Taking %dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_DECREPIFY_UNIQUE%%% increased magic damage and cannot attack or be attacked."
+
+    "DOTA_Tooltip_Ability_item_aeon_disk_lua"                                            "Aeon Disk"
+    "DOTA_Tooltip_Ability_item_aeon_disk_lua_Description"                                "<h1>Passive: Combo Breaker</h1> When you take damage and your health falls below %health_threshold_pct%%, a strong dispel is applied and you gain a %buff_duration% second buff that provides +%status_resistance%%% Status Resistance and causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage."
+    "DOTA_Tooltip_Ability_item_aeon_disk_lua_bonus_health"                               "+$health"
+    "DOTA_Tooltip_Ability_item_aeon_disk_lua_bonus_mana_regen"                           "+$mana_regen"
+
+
+    "DOTA_Tooltip_Ability_item_sphere_lua"                                                 "Linken's Sphere"
+    "DOTA_Tooltip_Ability_item_sphere_lua_Description"                                     "<h1>Passive: Spellblock</h1>Blocks most targeted spells once every %block_cooldown% seconds.\n<h1>Active: Transfer Spellblock</h1>Temporarily removes Spellblock from the item's owner and transfers it to an allied unit for %block_cooldown% seconds.<br><br>Range: %cast_range_tooltip%"
+    "DOTA_Tooltip_Ability_item_sphere_lua_spell_amplify"                                   "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_health"                                    "+$health"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_damage"                                    "+$damage"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_attack_speed"                              "+$attack"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_mana_regen"                                "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_health_regen"                              "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_sphere_lua_magic_resist"                                    "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_armor"                                     "+Armor"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_move_speed_pct"                            "%+BONUS MOVE SPEED"
+
+
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua"                                         "Drum of Endurance"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_Description"                             "<h1>Active: Endurance</h1> Gives +%bonus_attack_speed_pct_buff% attack speed and +%bonus_movement_speed_pct_buff%%% movement speed to nearby allies for %duration% seconds. <br><br>Radius: %radius%"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_spell_amplify"                           "%+Spell Amplification"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_health"                            "+$health"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_damage"                            "+$damage"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_attack_speed"                      "+$attack"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_mana_regen"                        "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_health_regen"                      "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_magic_resist"                            "%MAGIC RESISTANCE:"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_armor"                             "+Armor"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_move_speed_pct"                    "%+BONUS MOVE SPEED"
+
+    
+    "DOTA_Tooltip_modifier_item_ancient_janggo_lua_buff"                                   "Endurance"
+    "DOTA_Tooltip_modifier_item_ancient_janggo_lua_buff_Description"                       "Movement speed increased by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%.\nAttack speed increased by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "Lich"

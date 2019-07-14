@@ -6,7 +6,7 @@ LinkLuaModifier( "modifier_item_shivas_guard_lua_slow", "item_ability/modifier/m
 --------------------------------------------------------------------------------
 
 function item_shivas_guard_lua:GetIntrinsicModifierName()
-	return "modifier_item_black_king_bar_lua"
+	return "modifier_item_shivas_guard_lua"
 end
 
 --------------------------------------------------------------------------------

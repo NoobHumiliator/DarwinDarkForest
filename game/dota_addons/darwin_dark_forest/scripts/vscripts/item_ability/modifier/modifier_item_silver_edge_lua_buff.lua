@@ -13,7 +13,6 @@ end
 
 function modifier_item_silver_edge_lua_buff:OnCreated()
 	if IsServer() then
-       self.windwalk_movement_speed= self:GetAbility():GetSpecialValueFor("windwalk_movement_speed")
        self.windwalk_bonus_damage= self:GetAbility():GetSpecialValueFor("windwalk_bonus_damage")
 	end
 end
@@ -35,7 +34,7 @@ function modifier_item_silver_edge_lua_buff:DeclareFunctions()
 end
 
 function modifier_item_silver_edge_lua_buff:GetModifierMoveSpeedBonus_Percentage() 
-	return self.windwalk_movement_speed 
+	return self:GetAbility():GetSpecialValueFor("windwalk_movement_speed")
 end
 
 function modifier_item_silver_edge_lua_buff:OnAbilityExecuted( keys )

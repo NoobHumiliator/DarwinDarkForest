@@ -196,7 +196,7 @@ function NeutralSpawner:SpawnOneCreature()
    --- 刷怪逻辑
    if #vTemp>0 then
       local sUnitName=vTemp[RandomInt(1, #vTemp)]
-      --local sUnitName = "npc_dota_creature_deathbringer_spawn"
+      --local sUnitName = "npc_dota_creature_skeleton_archer"
       local vRandomPos = GetRandomValidPositionForCreature(GameRules.vUnitsKV[sUnitName])
       
       local hUnit = CreateUnitByName(sUnitName, vRandomPos, true, nil, nil, DOTA_TEAM_NEUTRALS)

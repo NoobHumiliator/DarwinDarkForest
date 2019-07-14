@@ -55,7 +55,7 @@ function item_ethereal_blade_lua:OnProjectileHit(hTarget, location)
 					hTarget:AddNewModifier(self:GetCaster(), self, "modifier_item_ethereal_blade_lua_debuff", {duration = self.duration})								
 					local damageTable = {
 						victim 			= hTarget,
-						damage 			= self:GetCaster():GetAttackDamage()*2+75,
+						damage 			= self:GetCaster():GetAttackDamage()*2+self:GetSpecialValueFor("blast_damage_base"),
 						damage_type		= DAMAGE_TYPE_MAGICAL,
 						damage_flags 	= DOTA_DAMAGE_FLAG_NONE,
 						attacker 		= self:GetCaster(),

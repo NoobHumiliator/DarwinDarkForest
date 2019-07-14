@@ -35,6 +35,13 @@ function ItemController:Init()
         self.vItemsTieTable[i]={}
     end
 
+    --大于价格2950，但是归于Tie5的物品
+    local vTie5Exception={
+        item_reaver_lua=true,
+        item_relic=true,
+        item_eagle_lua=true,
+    }
+
     -- 处理物品 kv 首先排序
     local vItems={}
     local vToDoItems={}
@@ -53,9 +60,9 @@ function ItemController:Init()
     -- 按照 物品价格排序
     table.sort(vItems,function(a,b) return a.ItemCost<b.ItemCost end )
 
-    --大于3800的加入 Tie6 ，其他加入1-5的预处理分组
+    --大于3200的加入 Tie6 ，其他加入1-5的预处理分组
     for _,v in pairs(vItems) do
-        if v.ItemCost>3800 then
+        if v.ItemCost>2950 and vTie5Exception[v.sItemName]==nil then
            table.insert(self.vItemsTieTable[6],v.sItemName)
         else
            table.insert(vToDoItems,v)

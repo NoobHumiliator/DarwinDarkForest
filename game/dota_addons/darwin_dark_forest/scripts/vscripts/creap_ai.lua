@@ -198,8 +198,8 @@ function CastAbility(hTarget)
     for i=1,20 do
         local hAbility=thisEntity:GetAbilityByIndex(i-1)
         if  hAbility and not hAbility:IsPassive() and hAbility:IsFullyCastable() then
-        	--目标类技能
-        	if ContainsValue(hAbility:GetBehavior(),DOTA_ABILITY_BEHAVIOR_UNIT_TARGET) then
+        	--目标类技能 (法球不算)
+        	if ContainsValue(hAbility:GetBehavior(),DOTA_ABILITY_BEHAVIOR_UNIT_TARGET) and not ContainsValue(hAbility:GetBehavior(),DOTA_ABILITY_BEHAVIOR_ATTACK) then
         		--对敌人使用的目标技能
         		if ContainsValue(hAbility:GetAbilityTargetTeam(),DOTA_UNIT_TARGET_TEAM_ENEMY) or ContainsValue(hAbility:GetAbilityTargetTeam(),DOTA_UNIT_TARGET_TEAM_CUSTOM) then
 					    ExecuteOrderFromTable({
@@ -247,6 +247,12 @@ function CastAbility(hTarget)
 				return hAbility:GetCastPoint()+RandomFloat(0.1, 0.3)
         	end
 
+        	--自动释放的技能，自动释放
+        	if ContainsValue(hAbility:GetBehavior(),DOTA_ABILITY_BEHAVIOR_AUTOCAST) then   		    
+    		   if not hAbility:GetAutoCastState() then
+                  hAbility:ToggleAutoCast()
+    		   end
+        	end
         end
     end
 
@@ -292,7 +298,7 @@ function RetreatFromUnit(hUnit)
 	        thisEntity:SetAggroTarget(nil)
 			thisEntity.bChasing=false
 			thisEntity.hChasingTarget=nil
-            return 0.2
+            return 0.8
 	end
  
 end

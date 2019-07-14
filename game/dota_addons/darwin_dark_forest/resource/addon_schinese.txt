@@ -1873,7 +1873,125 @@
     "DOTA_Tooltip_modifier_item_satanic_lua_buff"                                              "不洁狂热"
     "DOTA_Tooltip_modifier_item_satanic_lua_buff_Description"                                  "增加85%%的吸血。"
 
+    
+    "DOTA_Tooltip_Ability_item_meteor_hammer_lua"                                              "陨星锤"
+    "DOTA_Tooltip_Ability_item_meteor_hammer_lua_Description"                                  "<h1>主动：陨星锤</h1> 持续施法 - 成功施法后召唤一颗陨石，打击%impact_radius%范围内敌人，造成%stun_duration%秒眩晕和冲击伤害。对敌方单位和建筑造成持续伤害，持续%burn_duration%秒。<BR><BR>对建筑冲击伤害：%impact_damage_buildings%<BR>对建筑持续伤害：%burn_dps_buildings%<BR><BR>对非建筑冲击伤害：%impact_damage_units%<BR>对非建筑持续伤害：%burn_dps_units%<BR><BR>持续施法时间：%max_duration%秒<BR>落地时间：%land_time%秒"
+    "DOTA_Tooltip_ability_item_meteor_hammer_lua_bonus_damage"                                 "+$damage"
+    "DOTA_Tooltip_ability_item_meteor_hammer_lua_status_resistance"                            "%状态抗性："
+    "DOTA_Tooltip_ability_item_meteor_hammer_lua_bonus_health"                                 "+$health"
+    "DOTA_Tooltip_ability_item_meteor_hammer_lua_bonus_health_regen"                           "+$hp_regen"
+    "DOTA_Tooltip_ability_item_meteor_hammer_lua_bonus_mana_regen"                             "+$mana_regen"
+    "DOTA_Tooltip_ability_item_meteor_hammer_lua_spell_amplify"                                "%+技能增强"
 
+  
+    "DOTA_Tooltip_modifier_item_meteor_hammer_lua_burn"                                        "陨星锤烧灼"
+    "DOTA_Tooltip_modifier_item_meteor_hammer_lua_burn_Description"                            "持续受到伤害。"
+
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua"                                               "希瓦的守护"
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua_Description"                                   "<h1>主动：极寒冲击</h1> 发出一道寒冷的波动，对敌人造成%blast_damage%点魔法伤害并减速%blast_movement_speed%%%，持续%blast_debuff_duration%秒。<br><br>作用范围：%blast_radius%\n<h1>被动：霜冷光环</h1> 降低敌人%aura_attack_speed%攻击速度。<br><br>作用范围：%aura_radius%"
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua_bonus_armor"                                   "+$armor"
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua_bonus_armor"                                   "+$armor"
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua_bonus_mana_regen"                              "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua_spell_amplify"                                 "%+技能增强"
+    "DOTA_Tooltip_Ability_item_shivas_guard_lua_bonus_damage"                                  "+$damage"
+
+    "DOTA_Tooltip_modifier_item_shivas_guard_lua_slow"                                         "极寒冲击"
+    "DOTA_Tooltip_modifier_item_shivas_guard_lua_slow_Description"                             "移动速度减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。"
+    
+    "DOTA_Tooltip_modifier_item_shivas_guard_lua_debuff"                                       "霜冷光环"
+    "DOTA_Tooltip_modifier_item_shivas_guard_lua_debuff_Description"                           "攻击速度降低%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。"
+
+    "DOTA_Tooltip_Ability_item_manta_lua"                                               "幻影斧"
+    "DOTA_Tooltip_Ability_item_manta_lua_Description"                                   "<h1>主动：镜像</h1>制造%images_count%个你的幻象，持续%tooltip_illusion_duration%秒。<br><br>近战英雄的幻象继承%tooltip_damage_outgoing_melee%%%的攻击力，承受%tooltip_damage_incoming_melee_total_pct%%%的伤害；远程英雄的幻象继承%tooltip_damage_outgoing_ranged%%%的攻击力，承受%tooltip_damage_incoming_ranged_total_pct%%%的伤害。<br><br>远程英雄装备后的冷却时间增加%tooltip_ranged_cooldown_increase%秒。</font><br><br> 驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>"
+    "DOTA_Tooltip_Ability_item_manta_lua_spell_amplify"                                 "%+技能增强"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_health"                                  "+$health"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_damage"                                  "+$damage"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_attack_speed"                            "+$attack"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_mana_regen"                              "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_health_regen"                            "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_manta_lua_magic_resist"                                  "%+魔法抗性"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_armor"                                   "+护甲提升"
+    "DOTA_Tooltip_Ability_item_manta_lua_bonus_move_speed_pct"                          "%+移动速度"
+
+
+    "DOTA_Tooltip_Ability_item_silver_edge_lua"                                         "白银之锋"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_Description"                             "<h1>主动：暗影步</h1>进入隐身直到%windwalk_duration%秒持续时间结束、攻击或施法。隐身时，移动速度将提升%windwalk_movement_speed%%%，而且可以穿越单位。<br><br>破隐一击将额外造成%windwalk_bonus_damage%点物理伤害， 并且%backstab_duration%秒内目标的被动技能无效。"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_spell_amplify"                           "%+技能增强"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_health"                            "+$health"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_damage"                            "+$damage"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_attack_speed"                      "+$attack"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_mana_regen"                        "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_health_regen"                      "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_magic_resist"                            "%+魔法抗性"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_armor"                             "+护甲提升"
+    "DOTA_Tooltip_Ability_item_silver_edge_lua_bonus_move_speed_pct"                    "%+移动速度"
+
+    "DOTA_Tooltip_modifier_item_silver_edge_lua_buff"                                   "暗影步"
+    "DOTA_Tooltip_modifier_item_silver_edge_lua_buff_Description"                       "隐身，移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%，而且可以穿过单位。破隐一击将造成175点额外伤害，同时禁用被动技能。"
+    
+    "DOTA_Tooltip_modifier_item_silver_edge_lua_debuff"                                 "暗影步攻击效果"
+    "DOTA_Tooltip_modifier_item_silver_edge_lua_debuff_Description"                     "被动技能被禁用。"
+
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua"                                      "净魂之刃"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_Description"                          "<h1>主动：阻止</h1> 以敌方单位为目标，减缓其移动速度，持续%purge_slow_duration%秒。<br><br>施法距离：%cast_range_tooltip%\n<h1>被动：破法</h1>每次攻击将燃烧目标%feedback_mana_burn%点魔法，而且每燃烧一点魔法都会造成%damage_per_burn%点物理伤害。<br><br>近战英雄的幻象每次攻击将燃烧%feedback_mana_burn_illusion_melee%点魔法。远程英雄的幻象每次攻击将燃烧%feedback_mana_burn_illusion_ranged%点魔法。"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_spell_amplify"                        "%+技能增强"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_bonus_damage"                         "+$damage"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_bonus_attack_speed"                   "+$attack"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_bonus_mana_regen"                     "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_bonus_armor"                          "+护甲提升"
+    "DOTA_Tooltip_Ability_item_diffusal_blade_lua_bonus_move_speed_pct"                 "%+移动速度"
+
+    "DOTA_Tooltip_modifier_item_diffusal_blade_lua_debuff"                              "净魂之刃阻止"
+    "DOTA_Tooltip_modifier_item_diffusal_blade_lua_debuff_Description"                  "移动速度减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。"
+     
+
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua"                                      "虚灵之刃"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_Description"                          "<h1>主动：虚化冲击</h1>发射一道能量波，将目标转变为虚无状态，接下来受到的魔法伤害将会提升%ethereal_damage_bonus%%%，并且无法攻击或被攻击。友方单位受到作用时持续%duration_ally%秒，敌方单位则持续%duration%秒。<br><br>如果目标是敌人还将被减速%blast_movement_slow%%%，并额外受到200%%x[攻击力]+%blast_damage_base%点魔法伤害。<br><br>施法距离：%tooltip_range%"
+    
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_spell_amplify"                           "%+技能增强"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_health"                            "+$health"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_damage"                            "+$damage"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_attack_speed"                      "+$attack"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_mana_regen"                        "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_health_regen"                      "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_magic_resist"                            "%+魔法抗性"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_armor"                             "+护甲提升"
+    "DOTA_Tooltip_Ability_item_ethereal_blade_lua_bonus_move_speed_pct"                    "%+移动速度"
+
+    "DOTA_Tooltip_modifier_item_ethereal_blade_lua_debuff"                                "虚化冲击"
+    "DOTA_Tooltip_modifier_item_ethereal_blade_lua_debuff_Description"                    "虚化形态。受到%dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_DECREPIFY_UNIQUE%%%法术攻击加成并且不能进行物理攻击或被攻击。"
+    
+    "DOTA_Tooltip_Ability_item_aeon_disk_lua"                                              "永恒之盘"
+    "DOTA_Tooltip_Ability_item_aeon_disk_lua_Description"                                  "<h1>被动：强断连招</h1>当受到伤害并且生命值低于%health_threshold_pct%%时，会对英雄施加一个强驱散效果，%buff_duration%秒内提升%status_resistance%%%状态抗性，并且所有受到和造成的伤害全部归零。来自玩家的伤害才会触发。"
+    "DOTA_Tooltip_Ability_item_aeon_disk_lua_bonus_health"                                 "+$health"
+    "DOTA_Tooltip_Ability_item_aeon_disk_lua_bonus_mana_regen"                             "+$mana_regen"
+
+    "DOTA_Tooltip_Ability_item_sphere_lua"                                                 "林肯法球"
+    "DOTA_Tooltip_Ability_item_sphere_lua_Description"                                     "<h1>被动：法术抵抗</h1>每%block_cooldown%秒被动抵挡一次大部分指向性法术。\n<h1>主动：抵抗转移</h1>将抵挡状态暂时转移给一个友方单位，持续%block_cooldown%秒。<br><br>施法距离：%cast_range_tooltip%"
+    "DOTA_Tooltip_Ability_item_sphere_lua_spell_amplify"                                   "%+技能增强"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_health"                                    "+$health"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_damage"                                    "+$damage"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_attack_speed"                              "+$attack"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_mana_regen"                                "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_health_regen"                              "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_sphere_lua_magic_resist"                                    "%+魔法抗性"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_armor"                                     "+护甲提升"
+    "DOTA_Tooltip_Ability_item_sphere_lua_bonus_move_speed_pct"                            "%+移动速度"
+
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua"                                         "韧鼓"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_Description"                             "<h1>主动：坚韧</h1> 为周围友军提供+%bonus_attack_speed_buff%攻速加成和+%bonus_movement_speed_pct_buff%%%移动速度加成，持续%duration%秒。<br><br>作用范围：%radius%"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_spell_amplify"                           "%+技能增强"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_health"                            "+$health"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_damage"                            "+$damage"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_attack_speed"                      "+$attack"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_mana_regen"                        "+$mana_regen"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_health_regen"                      "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_magic_resist"                            "%+魔法抗性"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_armor"                             "+护甲提升"
+    "DOTA_Tooltip_Ability_item_ancient_janggo_lua_bonus_move_speed_pct"                    "%+移动速度"
+    
+    "DOTA_Tooltip_modifier_item_ancient_janggo_lua_buff"                                   "坚韧"
+    "DOTA_Tooltip_modifier_item_ancient_janggo_lua_buff_Description"                       "移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。\n攻击速度提升%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。"
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
