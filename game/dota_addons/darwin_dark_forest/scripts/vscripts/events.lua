@@ -446,7 +446,6 @@ function GameMode:OnNPCSpawned( event )
         end)
 
 
-
          --将镜头定位到重生英雄，然后放开
         PlayerResource:SetCameraTarget(nPlayerId,hSpawnedUnit)
         Timers:CreateTimer({ endTime = 0.5, 
@@ -503,8 +502,8 @@ function GameMode:OnPlayerSay(keys)
            hHero.hCurrentCreep:AddAbility("test_blink")
            hHero.hCurrentCreep:FindAbilityByName("test_blink"):SetLevel(1)
 
-           hHero.hCurrentCreep:AddAbility("test_double_lua")
-           hHero.hCurrentCreep:FindAbilityByName("test_double_lua"):SetLevel(1)
+           hHero.hCurrentCreep:AddAbility("test_select_lua")
+           hHero.hCurrentCreep:FindAbilityByName("test_select_lua"):SetLevel(1)
         end
     
         -- 关闭 wtf 模式
@@ -811,9 +810,10 @@ function GameMode:PortraitClicked(keys)
   
     if hTargetHero and hHero and hTargetHero.hCurrentCreep and hHero.hCurrentCreep then
          if   hHero.hCurrentCreep:CanEntityBeSeenByMyTeam(hTargetHero.hCurrentCreep) then
+              
               CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerID),"UpdateSelect", {creepIndex= hTargetHero.hCurrentCreep:GetEntityIndex()} )            
               
-              --如果按住ctrl 或者双击，定位到目标位置
+              --如果按住ctrl 或者双击，定位到目标位置              
               if nDoubleClick==1  or nControldown==1 then
                 PlayerResource:SetCameraTarget(nPlayerID,hTargetHero.hCurrentCreep)
                 Timers:CreateTimer({ endTime = 0.1, 

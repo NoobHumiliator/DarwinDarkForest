@@ -31,7 +31,7 @@ function OnPlayerCreatureChange(tableName,key,value)
 //点击头像选中单位
 function UpdateSelect(keys)
 {    
-     GameUI.SelectUnit(keys.creepIndex, false)
+     GameUI.SelectUnit(keys.creepIndex, true)
 }
 
 
