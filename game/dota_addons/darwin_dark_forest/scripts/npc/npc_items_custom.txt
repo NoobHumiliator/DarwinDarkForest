@@ -787,6 +787,28 @@
 		}
 	}
 
+	"item_recipe_mask_of_madness"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"171"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_mask_of_madness"
+		"ItemRequirements"
+		{
+			"01"						"item_lifesteal;item_quarterstaff"
+		}
+	}
+
 	"item_mask_of_madness"
 	{
 		// General
@@ -881,6 +903,29 @@
 		}
 	}
 
+	"item_recipe_blade_mail"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"126"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"FightRecapLevel"				"1"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_blade_mail"
+		"ItemRequirements"
+		{
+			"01"						"item_broadsword;item_chainmail;item_robe_lua"
+		}
+	}
+
 	"item_blade_mail"
 	{
 		// General
@@ -899,6 +944,7 @@
 		"ItemShopTags"					"damage;armor;int;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"bm;blade mail;blademail"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
 		
@@ -929,29 +975,6 @@
 		}
 	}
 
-	"item_recipe_blade_mail"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"126"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.vmdl"
-		"FightRecapLevel"				"1"
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"	
-		"ItemShopTags"					""
-		
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_blade_mail"
-		"ItemRequirements"
-		{
-			"01"						"item_broadsword;item_chainmail;item_robe_lua"
-		}
-	}
-
 	"item_pers"
 	{
 		// General
@@ -965,8 +988,9 @@
 		"ItemShopTags"					"regen_health;regen_mana"		
 		"ItemQuality"					"common"
 		"ItemAliases"					"perseverance"
-		"ItemDisassembleRule"				"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemShareability"				"ITEM_PARTIALLY_SHAREABLE"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -985,6 +1009,28 @@
 		}
 	}
 
+	"item_recipe_maelstrom"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"165"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_maelstrom"
+		"ItemRequirements"
+		{
+			"01"						"item_mithril_hammer;item_javelin"
+		}
+	}
+
 	"item_maelstrom"
 	{
 		// General
@@ -998,9 +1044,9 @@
 		"ItemShopTags"					"damage;attack_speed;unique"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"maelstrom"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ShouldBeSuggested"				"1"
-		
+		"ShouldBeSuggested"				"1"		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -1080,6 +1126,9 @@
 		"ItemQuality"					"epic"
 		"ItemAliases"					"crystalys"
 		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1108,7 +1157,7 @@
 		}
 	}
 	
-	"item_recipe_kaya_lua"
+	"item_recipe_kaya"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -1147,7 +1196,8 @@
 		"ItemAliases"					"ky;kaya"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
 		"ShouldBeSuggested"				"1"
-		
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -1194,6 +1244,11 @@
 		"ItemRequirements"
 		{
 			"01"						"item_ring_of_health;item_vitality_booster_lua;item_stout_shield"
+		    "02"						"item_ring_of_health;item_vitality_booster_lua;item_poor_mans_shield_lua"
+		   	"03"						"item_ring_of_health;item_vitality_booster_lua;item_buckler"
+		   	"04"						"item_ring_of_tarrasque_lua;item_vitality_booster_lua;item_stout_shield"
+		   	"05"						"item_ring_of_tarrasque_lua;item_vitality_booster_lua;item_poor_mans_shield_lua"
+		  	"06"						"item_ring_of_tarrasque_lua;item_vitality_booster_lua;item_buckler"
 		}
 	}
 
@@ -1212,8 +1267,11 @@
 		"ItemShopTags"					"regen_health;block;health_pool"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"vg;vanguard"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1247,6 +1305,29 @@
 		}
 	}
 
+	"item_recipe_hood_of_defiance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"130"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hood_of_defiance"
+		"ItemRequirements"
+		{
+			"01"						"item_ring_of_health;item_cloak;item_ring_of_regen"
+			"02"						"item_helm_of_iron_will;item_cloak;item_ring_of_health"
+            "03"						"item_helm_of_iron_will;item_cloak;item_ring_of_regen"
+		}
+	}
+
 	"item_hood_of_defiance"
 	{
 		// General
@@ -1265,6 +1346,7 @@
 		"ItemShopTags"					"regen_health;magic_resist"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"hood of defiance"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
 		
@@ -1300,45 +1382,6 @@
 		}
 	}
 
-	"item_desolator"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"168"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3500"
-		"ItemShopTags"					"damage;unique"
-		"ItemQuality"					"artifact"
-		"ItemAliases"					"desolator"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"ShouldBeSuggested"				"1"
-
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"50"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"corruption_armor"		"-7"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"corruption_duration"	"15.0"
-			}
-		}
-	}
-
 	"item_moon_shard"
 	{
 		// General
@@ -1356,6 +1399,9 @@
 		"ItemAliases"					"moon shard"
 		"SideShop"						"0"
 		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1426,6 +1472,7 @@
 		"ItemShopTags"					"regen_health;regen_mana;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"refresher orb"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
 		
@@ -1473,7 +1520,6 @@
 	{
 
 		"ID"							"20010"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass"						"item_lua"
 		"AbilityTextureName" 		    "item_sheepstick"
 		"ScriptFile"					"item_ability/item_sheepstick_lua"
@@ -1500,6 +1546,7 @@
 		"ItemShopTags"					"int;regen_mana;agi;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"hex;sheepstick;scythe of vyse"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
 		
@@ -1568,7 +1615,7 @@
 		"ItemResult"					"item_heart_lua"
 		"ItemRequirements"
 		{
-			"01"						"item_ring_of_tarrasque_lua;item_vitality_booster_lua;item_reaver"
+			"01"						"item_ring_of_tarrasque_lua;item_vitality_booster_lua;item_reaver_lua"
 		}
 	}
 
@@ -1591,7 +1638,9 @@
 		"ItemShopTags"					"str;regen_health;health_pool"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"hot;heart of tarrasque"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
 		"ShouldBeSuggested"				"1"
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -3652,6 +3701,7 @@
 		"ItemRequirements"
 		{
 			"01"						"item_ring_of_basilius;item_lifesteal"
+			"02"						"item_headdress;item_lifesteal"
 		}
 	}
 
@@ -3708,6 +3758,29 @@
 			}			
 		}
 	}
+
+	"item_recipe_tranquil_boots"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"213"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_tranquil_boots"
+		"ItemRequirements"
+		{
+			"01"						"item_boots;item_wind_lace;item_ring_of_regen"
+			"02"						"item_boots;item_ring_of_protection;item_ring_of_regen"
+		}
+	}
+	
 
 	"item_tranquil_boots"
 	{
@@ -5099,6 +5172,8 @@
 		"ItemAliases"					"bracer"
 		"ShouldBeInitiallySuggested"	"1"
 		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -5194,6 +5269,9 @@
 		"ItemAliases"					"wraith band"
 		"ShouldBeInitiallySuggested"	"1"
 		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -5247,9 +5325,9 @@
 		}
 	}
 
-	"item_recipe_null_talisman"
+	"item_recipe_null_talisman_lua"
 	{
-		"ID"							"20130"
+		"ID"							"20113"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -5271,12 +5349,13 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"20135"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"							"20114"
 
         "BaseClass"						"item_lua"
 		"ScriptFile"					"item_ability/item_null_talisman_lua"
 		"AbilityTextureName" 		    "item_null_talisman"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -5286,6 +5365,10 @@
 		"ItemAliases"					"null talisman"
 		"ShouldBeInitiallySuggested"	"1"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6010,6 +6093,7 @@
 		"ItemRequirements"
 		{
 			"01"						"item_sobi_mask;item_sobi_mask;item_belt_of_strength_lua"
+		   	"02"						"item_staff_of_wizardry_lua;item_belt_of_strength_lua"
 		}
 	}
 
@@ -6032,6 +6116,7 @@
 		"ItemRequirements"
 		{
 			"01"						"item_necronomicon;item_necronomicon"
+			"02"						"item_necronomicon;item_staff_of_wizardry_lua"
 		}
 	}
 
@@ -6054,6 +6139,7 @@
 		"ItemRequirements"
 		{
 			"01"						"item_necronomicon_2;item_necronomicon"
+			"02"						"item_necronomicon_2;item_staff_of_wizardry_lua"
 		}
 	}
 
@@ -6654,6 +6740,7 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6741,6 +6828,7 @@
 		"ItemSellable"					"1"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6830,6 +6918,7 @@
 		"ItemAliases"					"skull basher"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6925,6 +7014,7 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7045,6 +7135,7 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7326,6 +7417,7 @@
 		"ItemAliases"					"dragon lance"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7441,6 +7533,7 @@
 		"ItemAliases"					"urn of shadows"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7571,6 +7664,7 @@
 		"ItemAliases"					"sv;spirit vessel"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7691,6 +7785,7 @@
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"yasha"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7769,6 +7864,7 @@
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"sange"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7862,6 +7958,7 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7973,6 +8070,7 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -8080,6 +8178,7 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -8362,10 +8461,10 @@
 		"ItemPurchasable"				"1"
 		"ItemQuality"					""
 		"ItemStackable"					"0"
-		"ItemSellable"					"0"
+		"ItemSellable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
-		"ItemPermanent"					"0"
-		"ItemKillable"					"0"
+		"ItemKillable"					"1"
+		"ItemAlertable"					"1"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -8440,8 +8539,8 @@
 		"ItemStackable"					"0"
 		"ItemSellable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
-		"ItemPermanent"					"0"
 		"ItemKillable"					"1"
+		"ItemAlertable"					"1"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -8532,9 +8631,9 @@
 		"ItemStackable"					"0"
 		"ItemSellable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
-		"ItemPermanent"					"0"
-		"ItemKillable"					"0"
+		"ItemKillable"					"1"
 		"CustomShop"					"1"
+		"ItemAlertable"					"1"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -8579,7 +8678,8 @@
 		"ItemSellable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
-		"ItemKillable"					"0"
+		"ItemKillable"					"1"
+		"ItemAlertable"					"1"
 
 
 		// Special
@@ -8674,8 +8774,8 @@
 		"ItemStackable"					"0"
 		"ItemSellable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
-		"ItemPermanent"					"0"
-		"ItemKillable"					"0"
+		"ItemKillable"					"1"
+		"ItemAlertable"					"1"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -8753,7 +8853,8 @@
 		"ItemSellable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
-		"ItemKillable"					"0"
+		"ItemKillable"					"1"
+		"ItemAlertable"					"1"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -9283,6 +9384,7 @@
 		"ItemAliases"					"vod;veil of discord"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -9396,6 +9498,8 @@
 		"ItemQuality"					"rare"
 		"ItemAliases"					"glimmer cape"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -9532,6 +9636,7 @@
 		"ItemAliases"					"sb;invis;shadow blade;silver edge"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -9594,6 +9699,7 @@
 		"ItemRequirements"
 		{
 			"01"						"item_ring_of_tarrasque;item_energy_booster_lua;item_cloak"
+			"02"						"item_ring_of_health;item_energy_booster_lua;item_cloak"
 		}
 	}
 	
@@ -9614,6 +9720,7 @@
 		"ItemQuality"					"rare"
 		"ActiveDescriptionLine"			"2"
 		"ShouldBeInitiallySuggested"	"1"
+		"ItemAlertable"					"1"
 		
 		// Sound
 		//-------------------------------------------------------------------------------------------------------------			
@@ -9701,6 +9808,7 @@
 		"ItemAliases"					"rod of atos"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -9810,7 +9918,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"3875"
-		"ItemDisassembleRule"				"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemShopTags"					"armor;regen_mana;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"solar crest"
@@ -9937,6 +10045,7 @@
 		"ItemShopTags"					"damage;int;attack_speed;regen_mana"
 		"ItemQuality"					"common"
 		"ItemAliases"					"oblivion staff"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10015,6 +10124,7 @@
 		"ItemAliases"					"orchid malevolence"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10106,6 +10216,7 @@
 		"ItemAliases"					"echo sabre"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10206,6 +10317,7 @@
 		"ItemAliases"					"bfly;butterfly"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10282,6 +10394,7 @@
 		"ItemAliases"					"armlet of mordiggian"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10381,6 +10494,7 @@
 		"ItemAliases"					"fs;force staff"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10469,6 +10583,7 @@
 		"ItemAliases"					"fs;force staff"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10599,11 +10714,11 @@
 		"ItemShopTags"					""
 		"ItemQuality"					"rare"
 		"ItemAliases"					"roa;ring of aquila"
-		"ItemShareability"				""		
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"		
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ActiveDescriptionLine"			"2"
 		"ShouldBeSuggested"				"1"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 
 		// Sound
 		//-------------------------------------------------------------------------------------------------------------			
@@ -10728,6 +10843,7 @@
 		"ItemQuality"					"common"
 		"ItemAliases"					"quelling blade"
 		"ItemPurchasable"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10814,6 +10930,7 @@
 		"ItemQuality"					"common"
 		"ItemAliases"					"pms;poor man's shield"
 		"ItemPurchasable"				"0"
+		"ItemAlertable"					"1"
 
 		
 		// Special	
@@ -10877,6 +10994,7 @@
 		"ItemRequirements"
 		{
 			"01"						"item_gloves;item_headdress;item_ring_of_health"
+			"02"						"item_helm_of_iron_will;item_lifesteal"
 		}
 	}
 	
@@ -11027,6 +11145,7 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11090,7 +11209,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"	
+		"ItemCost"						"0"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -11130,6 +11249,7 @@
 		"ItemAliases"					"orchid malevolence"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11237,6 +11357,7 @@
 		"ItemAliases"					"satanic"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11307,6 +11428,7 @@
 		"ItemAliases"					"radiance"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11519,6 +11641,7 @@
 		"UpgradesItems"					"item_diffusal_blade"
 		"UpgradeRecipe"					"item_recipe_diffusal_blade"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11607,6 +11730,7 @@
 	"item_silver_edge_lua"
 	{
         
+        "ID"                            "20295"
         "BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_silver_edge_lua"
 		"AbilityTextureName"            "item_silver_edge"
@@ -11630,6 +11754,7 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11761,6 +11886,7 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11918,6 +12044,7 @@
 	
 	"item_shivas_guard_lua"
 	{
+		"ID"							"20290"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_shivas_guard_lua"
 		"AbilityTextureName"            "item_shivas_guard"
@@ -11939,9 +12066,10 @@
 		"ItemShopTags"					"int;armor;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"shiva's guard;shivas"
+		"ShouldBeSuggested"				"1"
+
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ShouldBeSuggested"				"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -12179,6 +12307,7 @@
 		"ItemAliases"					"ad;aeon disk"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -12259,6 +12388,7 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ActiveDescriptionLine"			"2"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -12341,7 +12471,9 @@
 		"ItemRequirements"
 		{
 			"01"						"item_sobi_mask;item_crown_lua;item_wind_lace"
-			"02"						"item_sobi_mask;item_branches_lua;item_wind_lace"
+			"02"						"item_sobi_mask;item_bracer_lua;item_wind_lace"
+			"03"						"item_ring_of_regen;item_bracer_lua;item_wind_lace"
+			"04"						"item_robe_lua;item_bracer_lua"
 		}
 	}
 
@@ -12373,6 +12505,7 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemRequiresCharges"			"1"
 		"ShouldBeSuggested"				"1"
+		"ItemAlertable"					"1"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -12449,13 +12582,5 @@
 				"bonus_move_speed_pct"  "0.3"
 			}
 		}
-	}
-
-
-
-	
-
-	
-	
-    
+	}    
 }
