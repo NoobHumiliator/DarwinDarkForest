@@ -21,11 +21,15 @@ end
 
 function modifier_bonus_ring_effect:DeclareFunctions()
    local funcs = {
-	MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE
+    	MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE,
+      MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE
    }
    return funcs
 end
 
+function modifier_bonus_ring_effect:GetModifierIncomingDamage_Percentage()
+    return 20
+end
 
 function modifier_bonus_ring_effect:GetModifierMoveSpeed_Absolute()
     if IsServer() then

@@ -1,4 +1,4 @@
- "item_longclaws_amulet"
+    "item_longclaws_amulet"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -44,6 +44,56 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"mana_cost_reduction_pct"		"8"
+			}
+		}
+	}
+
+
+ 
+    "item_bogduggs_baldric"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"bogduggs_baldric"
+		"ScriptFile"					"item_ability/item_bogduggs_baldric"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2300"
+		"ItemPurchasable"				"0"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"0"
+		"CustomShop"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"15"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"disable_resist_pct"	"60"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"move_speed_penalty"    "30"
 			}
 		}
 	}

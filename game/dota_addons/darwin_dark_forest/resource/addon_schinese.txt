@@ -747,12 +747,15 @@
 
     "DOTA_Tooltip_ability_fury_berserk_lua"                                               "狂暴"
     "DOTA_Tooltip_ability_fury_berserk_lua_Description"                                   "大幅提升攻击，攻击速度，移动速度。但是受到的伤害加深，并且被沉默，持续8秒。"
-    "DOTA_Tooltip_ability_fury_berserk_lua_income_damage_percentage"                      "%受到伤害："
+    "DOTA_Tooltip_ability_fury_berserk_lua_income_damage_percentage"                      "%额外受到伤害："
     "DOTA_Tooltip_ability_fury_berserk_lua_attack_damage_bonus"                           "额外攻击力："
     "DOTA_Tooltip_ability_fury_berserk_lua_attack_speed_bonus"                            "攻击速度提升："
     "DOTA_Tooltip_ability_fury_berserk_lua_movement_speed_bonus"                          "移动速度提升："
     "DOTA_Tooltip_ability_fury_berserk_lua_nFury"                                         "<font color='#eb6877'>狂怒:</font>"
     
+    "DOTA_Tooltip_modifier_fury_berserk_lua"                                               "狂暴"
+    "DOTA_Tooltip_modifier_fury_berserk_lua_Description"                                   "被沉默，受到额外伤害，但是大幅提高攻击力与攻击速度。"
+
 
     "DOTA_Tooltip_ability_dark_seer_vacuum_nMystery"                                              "<font color='#e9c2ff'>神秘：</font>"
     "DOTA_Tooltip_ability_dark_seer_vacuum_nElement"                                              "<font color='#00a0e9'>元素:</font>"
@@ -1477,11 +1480,13 @@
     "DOTA_Tooltip_ability_item_bogduggs_lucky_femur_mana_regen_penalty"      "魔法恢复速度降低："
 
 
-    "DOTA_Tooltip_ability_item_paw_of_lucius"   "卢修兕之爪"
+    "DOTA_Tooltip_ability_item_paw_of_lucius"                            "卢修兕之爪"
+    "DOTA_Tooltip_ability_item_paw_of_lucius_bonus_attack_speed"        "+$attack"
+    "DOTA_Tooltip_ability_item_paw_of_lucius_bonus_damage"              "+$damage"
+
     "DOTA_Tooltip_ability_item_paw_of_lucius_Description"   "被动：普通攻击有%rupture_chance%%%的几率施加割裂效果。"
     "DOTA_Tooltip_ability_item_paw_of_lucius_Lore"  "这爪能入肉三分。"
-    "DOTA_Tooltip_ability_item_paw_of_lucius_bonus_attack_speed"    "额外攻击速度："
- 
+
     "DOTA_Tooltip_ability_item_preserved_skull"                         "坚韧之颅"
     "DOTA_Tooltip_ability_item_preserved_skull_Description"             "被动：祈灵光环 - 友军获得额外的魔法恢复速率和冷却时间减少。"
     "DOTA_Tooltip_ability_item_preserved_skull_Lore"                    "你再嘲笑啊？"
@@ -1546,7 +1551,7 @@
     "GameInstructionSmall"                                               "(左上菜单可重新打开此页面)"
 
     "DOTA_Tooltip_modifier_bonus_ring_effect"                        "高能力场"
-    "DOTA_Tooltip_modifier_bonus_ring_effect_Description"            "处于高能力场中，每秒获得基础经验，并且击杀经验获取提高50%%。"
+    "DOTA_Tooltip_modifier_bonus_ring_effect_Description"            "处于高能力场中，无法自由出入，收到的伤害提高%dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%%，每秒获得基础经验，并且击杀经验获取提高50%%。"
 
     "ring_spawn"                                                     "高能力场出现"
 

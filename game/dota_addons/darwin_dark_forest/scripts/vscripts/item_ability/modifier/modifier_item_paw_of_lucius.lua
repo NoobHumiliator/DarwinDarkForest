@@ -16,7 +16,6 @@ end
 
 function modifier_item_paw_of_lucius:OnCreated( kv )
 	if IsServer() then
-	  self.bonus_attack_speed = self:GetAbility():GetSpecialValueFor( "bonus_attack_speed" )
 	  self.rupture_chance = self:GetAbility():GetSpecialValueFor( "rupture_chance" )
 	  self.rupture_duration = self:GetAbility():GetSpecialValueFor( "rupture_duration" )
     end
@@ -28,15 +27,20 @@ function modifier_item_paw_of_lucius:DeclareFunctions()
 	local funcs =
 	{
 		MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
+		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
 		MODIFIER_EVENT_ON_ATTACK_LANDED,
 	}
 	return funcs
 end
 
 --------------------------------------------------------------------------------
-
 function modifier_item_paw_of_lucius:GetModifierAttackSpeedBonus_Constant( params )
-	return self.bonus_attack_speed
+	return self:GetAbility():GetSpecialValueFor( "bonus_attack_speed" )
+end
+
+--------------------------------------------------------------------------------
+function modifier_item_paw_of_lucius:GetModifierPreAttack_BonusDamage( params )
+	return self:GetAbility():GetSpecialValueFor( "bonus_damage" )
 end
 
 --------------------------------------------------------------------------------

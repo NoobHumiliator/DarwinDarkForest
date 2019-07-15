@@ -828,7 +828,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lifesteal_percent"		"10"
+				"lifesteal_percent"		"5"
 			}
 			"04"
 			{
@@ -876,7 +876,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lifesteal_percent"		"7"
+				"lifesteal_percent"		"4"
 			}
 		}
 	}
@@ -2007,7 +2007,7 @@
 		"ItemResult"					"item_dagon_lua"
 		"ItemRequirements"
 		{
-			"01"						"item_staff_of_wizardry;item_crown_lua"
+			"01"						"item_staff_of_wizardry_lua;item_crown_lua"
 		}
 	}
 
@@ -2029,7 +2029,7 @@
 		"ItemResult"					"item_dagon_2_lua"
 		"ItemRequirements"
 		{
-			"02"						"item_dagon_lua;item_staff_of_wizardry"
+			"02"						"item_dagon_lua;item_staff_of_wizardry_lua"
 		}
 	}
 
@@ -2051,7 +2051,7 @@
 		"ItemResult"					"item_dagon_3_lua"
 		"ItemRequirements"
 		{
-			"02"						"item_dagon_2_lua;item_staff_of_wizardry"
+			"02"						"item_dagon_2_lua;item_staff_of_wizardry_lua"
 		}
 	}
 
@@ -2073,7 +2073,7 @@
 		"ItemResult"					"item_dagon_4_lua"
 		"ItemRequirements"
 		{
-			"02"						"item_dagon_3_lua;item_staff_of_wizardry"
+			"02"						"item_dagon_3_lua;item_staff_of_wizardry_lua"
 		}
 	}
 
@@ -2095,7 +2095,7 @@
 		"ItemResult"					"item_dagon_5_lua"
 		"ItemRequirements"
 		{
-			"02"						"item_dagon_4_lua;item_staff_of_wizardry"
+			"02"						"item_dagon_4_lua;item_staff_of_wizardry_lua"
 		}
 	}
 
@@ -3388,8 +3388,29 @@
 			}
 		}
 	}
-
     
+    "item_recipe_phase_boots"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"49"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_phase_boots"
+		"ItemRequirements"
+		{
+			"01"						"item_boots;item_chainmail;item_blades_of_attack"
+			"02"						"item_boots;item_blades_of_attack;item_blades_of_attack"
+		}
+	}
 
 
 	"item_phase_boots"
@@ -3673,12 +3694,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"vampiric_aura"			"7"
+				"vampiric_aura"			"4"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"vampiric_aura_ranged"	"5"
+				"vampiric_aura_ranged"	"3"
 			}
 			"06"
 			{
@@ -5500,7 +5521,7 @@
 		"ItemResult"					"item_headdress"
 		"ItemRequirements"
 		{
-			"01"						"item_ring_of_regen;item_branches"
+			"01"						"item_ring_of_regen;item_branches_lua"
 		}
 	}
     
@@ -5560,7 +5581,7 @@
 		"ItemResult"					"item_buckler"
 		"ItemRequirements"
 		{
-			"01"						"item_chainmail;item_branches"
+			"01"						"item_chainmail;item_branches_lua"
 		}
 	}
 	
@@ -5915,7 +5936,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"600"	
+		"ItemCost"						"0"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -7374,6 +7395,7 @@
 		"ItemRequirements"
 		{
 			"01"						"item_infused_raindrop;item_circlet_lua;item_ring_of_protection"
+			"02"						"item_sobi_mask;item_gauntlets_lua;item_gauntlets_lua"
 		}
 	}
 	
@@ -7507,6 +7529,7 @@
 		"ItemRequirements"
 		{
 			"01"						"item_urn_of_shadows_lua;item_vitality_booster_lua;item_wind_lace"
+			"02"						"item_urn_of_shadows_lua;item_vitality_booster_lua"
 		}
 	}
 	
@@ -8294,54 +8317,29 @@
 			}
 		}
 	}
- 
-    "item_bogduggs_baldric"
+
+	"item_recipe_item_bogduggs_lucky_femur"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_lua"
-		"AbilityTextureName"			"bogduggs_baldric"
-		"ScriptFile"					"item_ability/item_bogduggs_baldric"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"100"
-		"AbilityCastPoint"				"0.0"
+		"ID"							"20285"													
+        "BaseClass"                     "item_datadriven"		
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2300"
-		"ItemPurchasable"				"0"
-		"ItemQuality"					""
-		"ItemStackable"					"0"
-		"ItemSellable"					"0"
-		"ItemShareability"				"ITEM_NOT_SHAREABLE"
-		"ItemPermanent"					"0"
-		"ItemKillable"					"0"
-		"CustomShop"					"1"
-
-		// Special
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_bogduggs_lucky_femur"
+		"ItemRequirements"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"15"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"disable_resist_pct"	"60"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"move_speed_penalty"    "30"
-			}
+			"01"						"item_reaver_lua;item_mithril_hammer"
 		}
 	}
+
 
 	"item_bogduggs_lucky_femur"
 	{
@@ -8381,12 +8379,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"	        "30"
+				"bonus_damage"	        "32"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"	        "1000"
+				"bonus_health"	        "700"
 			}
 			"04"
 			{
@@ -8395,6 +8393,29 @@
 			}
 		}
 	}
+
+	"item_recipe_item_paw_of_lucius"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20280"													
+        "BaseClass"                     "item_datadriven"		
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_paw_of_lucius"
+		"ItemRequirements"
+		{
+			"01"						"item_gloves;item_claymore;item_broadsword"
+		}
+	}
+
 
     
     "item_paw_of_lucius"
@@ -8413,14 +8434,14 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"750"
-		"ItemPurchasable"				"0"
+		"ItemCost"						"3150"
+		"ItemPurchasable"				"1"
 		"ItemQuality"					""
 		"ItemStackable"					"0"
-		"ItemSellable"					"0"
+		"ItemSellable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
-		"ItemKillable"					"0"
+		"ItemKillable"					"1"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -8429,7 +8450,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"		"20"
+				"bonus_attack_speed"		"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"		       "40"
 			}
 			"02"
 			{
@@ -9622,7 +9648,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"heal_increase"		    "25"
+				"heal_increase"		    "15"
 			}
 		}
 	}
@@ -9758,6 +9784,7 @@
 		"ItemRequirements"
 		{
 			"01"						"item_medallion_of_courage;item_ultimate_orb_lua;item_wind_lace"
+			"02"						"item_medallion_of_courage;item_ultimate_orb_lua"
 		}
 	}
 
@@ -11223,17 +11250,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lifesteal_percent"		"12"
+				"lifesteal_percent"		"6"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"unholy_lifesteal_percent"	"85"
+				"unholy_lifesteal_percent"	"50"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"unholy_lifesteal_total_tooltip"	"97"
+				"unholy_lifesteal_total_tooltip"	"56"
 			}
 			"05"
 			{

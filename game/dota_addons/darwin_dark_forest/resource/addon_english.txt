@@ -732,13 +732,16 @@
     "npc_dota_creature_shard_split"                                                       "Shard Split"
 
     "DOTA_Tooltip_ability_fury_berserk_lua"                                               "Berserker"
-    "DOTA_Tooltip_ability_fury_berserk_lua_Description"                                   "Increases damage, attack speed,movement speed, but take more damage."
-    "DOTA_Tooltip_ability_fury_berserk_lua_income_damage_percentage"                      "%Income damage Increase"
+    "DOTA_Tooltip_ability_fury_berserk_lua_Description"                                   "Increases damage, attack speed,movement speed, but get silence and take extra damage."
+    "DOTA_Tooltip_ability_fury_berserk_lua_income_damage_percentage"                      "%Extra Income damage"
     "DOTA_Tooltip_ability_fury_berserk_lua_attack_damage_bonus"                           "Bonus Damage:"
     "DOTA_Tooltip_ability_fury_berserk_lua_attack_speed_bonus"                            "Bonus Attack Speed:"
     "DOTA_Tooltip_ability_fury_berserk_lua_movement_speed_bonus"                          "Bonus movement Speed:"
     "DOTA_Tooltip_ability_fury_berserk_lua_nFury"                                         "<font color='#eb6877'>Fury:</font>"
-    
+
+    "DOTA_Tooltip_modifier_fury_berserk_lua"                                              "Berserk"
+    "DOTA_Tooltip_modifier_fury_berserk_lua_Description"                                  "Silence, and take more damage.But increases attack damage, attack speed,movement speed."
+
 
     "DOTA_Tooltip_ability_dark_seer_vacuum_nMystery"                                              "<font color='#e9c2ff'>Mystery:</font>"
     "DOTA_Tooltip_ability_dark_seer_vacuum_nElement"                                              "<font color='#00a0e9'>Element:</font>"
@@ -1453,8 +1456,9 @@
 
     "DOTA_Tooltip_ability_item_paw_of_lucius"                                 "Paw of Lucius"
     "DOTA_Tooltip_ability_item_paw_of_lucius_Description"                     "Passive: Attacks have a %rupture_chance%%% chance to inflict Rupture.\n"
+    "DOTA_Tooltip_ability_item_paw_of_lucius_bonus_attack_speed"              "+$attack"
+    "DOTA_Tooltip_ability_item_paw_of_lucius_bonus_damage"                    "+$damage"
     "DOTA_Tooltip_ability_item_paw_of_lucius_Lore"                            "This claw cuts deep."
-    "DOTA_Tooltip_ability_item_paw_of_lucius_bonus_attack_speed"              "BONUS ATTACK SPEED:"
 
     "DOTA_Tooltip_ability_item_preserved_skull"                         "Preserved Skull"
     "DOTA_Tooltip_ability_item_preserved_skull_Description"             "Passive: Conjuration Aura - Allies gain bonus mana regen and cooldown reduction."
@@ -1512,9 +1516,8 @@
     "courier_spawn"                                                      "Courier Carry Item:"
     "GameInstructionSmall"                                               "(Reopen by Top-Left Menu)"
 
-    "DOTA_Tooltip_modifier_bonus_ring_check_move"                        "High Power Field"
-    "DOTA_Tooltip_modifier_bonus_ring_check_move_Description"            "Get base experience every second, and grants bonus 50%% experience when kill."
-
+    "DOTA_Tooltip_modifier_bonus_ring_effect"                            "High Power Field"
+    "DOTA_Tooltip_modifier_bonus_ring_effect_Description"                "Take extra %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%% damage, but get base experience every second, and grants bonus 50%% experience when kill."
 
     "ring_spawn"                                                          "High Power Field"
     "DOTA_Tooltip_Ability_item_ward_observer_2"                           "Observer Ward x2"

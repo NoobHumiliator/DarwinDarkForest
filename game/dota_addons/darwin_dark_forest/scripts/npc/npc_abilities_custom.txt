@@ -2193,7 +2193,7 @@
             "02"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "income_damage_percentage"  "125"
+                "income_damage_percentage"  "25"
             }
             "03"
             {
