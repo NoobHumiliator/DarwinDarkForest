@@ -14,6 +14,11 @@ function modifier_item_aeon_disk_lua_buff:GetStatusEffectName()
 	return "particles/items4_fx/combo_breaker_buff.vpcf"
 end
 
+------------------------------------------
+function modifier_item_aeon_disk_lua_buff:GetEffectAttachType()
+	return PATTACH_ABSORIGIN_FOLLOW
+end
+
 ----------------------------------------
 function modifier_item_aeon_disk_lua_buff:GetAttributes()
 	return MODIFIER_ATTRIBUTE_MULTIPLE

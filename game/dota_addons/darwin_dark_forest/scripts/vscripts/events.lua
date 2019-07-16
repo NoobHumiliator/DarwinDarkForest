@@ -133,7 +133,7 @@ function GameMode:OnEntityKilled(keys)
    local hKilledUnit = EntIndexToHScript( keys.entindex_killed )
    
    local flPercentage=0.5 --野怪进化点数 比例
-   local flPlayerPercentage=0.09 --玩家进化点数 吸取比例
+   local flPlayerPercentage=0.08 --玩家进化点数 吸取比例
 
    --如果玩家击杀野怪，把野怪的进化点赋给玩家
    if  hKilledUnit:GetTeamNumber() == DOTA_TEAM_NEUTRALS then

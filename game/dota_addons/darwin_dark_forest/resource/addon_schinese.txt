@@ -1517,17 +1517,20 @@
 
 
     "DOTA_Tooltip_Ability_item_lifestone"                                "生命之石"
-    "DOTA_Tooltip_Ability_item_lifestone_Description"                    "主动：生命之契-每0.5秒将%pact_hp_cost%点生命值转化为%pact_mana_gained%点魔法。"
+    "DOTA_Tooltip_Ability_item_lifestone_Description"                    "<h1>主动：生命之契</h1>每0.5秒将%pact_hp_cost%点生命值转化为%pact_mana_gained%点魔法。"
     "DOTA_Tooltip_ability_item_lifestone_Lore"                           "灵石渴求鲜血。"
     "DOTA_Tooltip_Ability_item_lifestone_hp_regen"                       "生命恢复："
     "DOTA_Tooltip_modifier_item_lifestone_pact"                          "生命之契"
     "DOTA_Tooltip_modifier_item_lifestone_pact_Description"              "这个单位正将生命转化为魔法。"
 
     "DOTA_Tooltip_Ability_item_ogre_seal_totem"                          "食人魔海豹图腾"
-    "DOTA_Tooltip_Ability_item_ogre_seal_totem_Description"              "主动：食人魔海豹扑打</h1>像食人魔海豹一样扑打，每次造成%damage%点伤害并眩晕%stun_duration%秒。"
+    "DOTA_Tooltip_Ability_item_ogre_seal_totem_Description"              "<h1>主动：食人魔海豹扑打</h1>像食人魔海豹一样扑打，每次造成%damage%点伤害并眩晕%stun_duration%秒。"
     "DOTA_Tooltip_ability_item_ogre_seal_totem_Lore"                     "从食人魔海豹的牙齿雕刻而来的图腾。"
-    "DOTA_Tooltip_Ability_item_ogre_seal_totem_bonus_hp"                 "生命加成："
-
+    "DOTA_Tooltip_Ability_item_ogre_seal_totem_bonus_damage"             "+$damage"
+    "DOTA_Tooltip_Ability_item_ogre_seal_totem_bonus_hp"                 "+$health"
+    "DOTA_Tooltip_Ability_item_ogre_seal_totem_bonus_health_regen"       "+$hp_regen"
+    "DOTA_Tooltip_Ability_item_ogre_seal_totem_magic_resistance"         "%+魔法抗性"
+ 
 
     "DOTA_Tooltip_Ability_sandking_burrowstrike_nDurable"                 "<font color='#f8b551'>坚韧：</font>"
     "DOTA_Tooltip_Ability_sandking_burrowstrike_nHunt"                    "<font color='#999999'>猎杀：</font>"

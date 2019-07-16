@@ -40,7 +40,7 @@ vCREEP_EXP_TABLE[0]=2
 
 -- 根据系数调整升级经验
 for i,_ in ipairs(vEXP_TABLE) do
-    vEXP_TABLE[i]=math.floor(vEXP_TABLE[i]*1.6+0.5)
+    vEXP_TABLE[i]=math.floor(vEXP_TABLE[i]*1.7+0.5)
 end
 
 GameRules.vWorldCenterPos=Vector(-640,624,128)

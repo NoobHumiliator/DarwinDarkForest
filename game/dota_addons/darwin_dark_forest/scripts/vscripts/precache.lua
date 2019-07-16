@@ -5,7 +5,8 @@ local particles = {
     "particles/items2_fx/veil_of_discord.vpcf",
     "particles/units/heroes/hero_omniknight/omniknight_guardian_angel_omni.vpcf",
     "particles/units/heroes/hero_omniknight/omniknight_guardian_angel_halo_buff.vpcf",
-    "particles/items2_fx/rod_of_atos.vpcf"
+    "particles/items2_fx/rod_of_atos.vpcf",
+    "particles/items4_fx/combo_breaker_buff.vpcf"
 }
 
 local sounds = {

@@ -832,6 +832,10 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -947,6 +951,10 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -990,7 +998,10 @@
 		"ItemAliases"					"perseverance"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemShareability"				"ITEM_PARTIALLY_SHAREABLE"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1047,6 +1058,10 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"		
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -1157,12 +1172,12 @@
 		}
 	}
 	
-	"item_recipe_kaya"
+	"item_recipe_kaya_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"258"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+
+		"ID"                            "20610"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -1197,6 +1212,10 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
 		"ShouldBeSuggested"				"1"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+        
+        "ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1349,6 +1368,10 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1401,7 +1424,7 @@
 		"ShouldBeSuggested"				"1"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-	
+	    
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1475,6 +1498,10 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1493,15 +1520,13 @@
 		}
 	}
 
-	"item_recipe_sheepstick"
+	"item_recipe_sheepstick_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"95"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20600"		
 		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"BaseClass"                     "item_datadriven"
 		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"0"	
 		"ItemShopTags"					""
 		
@@ -1549,6 +1574,10 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1597,12 +1626,11 @@
 		}
 	}
 
-	"item_recipe_heart"
+	"item_recipe_heart_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"113"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20590"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -1642,6 +1670,9 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 	
 		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -1749,6 +1780,9 @@
 		"ItemAliases"					"ac;assault cuirass"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1835,6 +1869,9 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -1943,6 +1980,9 @@
 		"ItemAliases"					"mkb;monkey king bar"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -2009,6 +2049,9 @@
 		"ItemAliases"					"daedalus"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -2038,13 +2081,12 @@
 	}
 
 
-   "item_recipe_dagon"
+   "item_recipe_dagon_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"103"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20581"
 		"Model"							"models/props_gameplay/recipe.vmdl"
-		
+		"BaseClass"                     "item_datadriven"
+
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"0"	
@@ -2060,12 +2102,13 @@
 		}
 	}
 
-	"item_recipe_dagon_2"
+	"item_recipe_dagon_2_lua"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"197"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20582"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2078,16 +2121,16 @@
 		"ItemResult"					"item_dagon_2_lua"
 		"ItemRequirements"
 		{
+			"01"						"item_dagon_lua;item_dagon_lua"
 			"02"						"item_dagon_lua;item_staff_of_wizardry_lua"
 		}
 	}
 
-	"item_recipe_dagon_3"
+	"item_recipe_dagon_3_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"198"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20583"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2100,16 +2143,17 @@
 		"ItemResult"					"item_dagon_3_lua"
 		"ItemRequirements"
 		{
+			"01"						"item_dagon_2_lua;item_dagon_lua"
 			"02"						"item_dagon_2_lua;item_staff_of_wizardry_lua"
 		}
 	}
 
-	"item_recipe_dagon_4"
+	"item_recipe_dagon_4_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"199"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20584"		
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
+
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2122,16 +2166,16 @@
 		"ItemResult"					"item_dagon_4_lua"
 		"ItemRequirements"
 		{
+			"01"						"item_dagon_3_lua;item_dagon_lua"
 			"02"						"item_dagon_3_lua;item_staff_of_wizardry_lua"
 		}
 	}
 
-	"item_recipe_dagon_5"
+	"item_recipe_dagon_5_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"200"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20585"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2144,6 +2188,7 @@
 		"ItemResult"					"item_dagon_5_lua"
 		"ItemRequirements"
 		{
+			"01"						"item_dagon_4_lua;item_dagon_lua"
 			"02"						"item_dagon_4_lua;item_staff_of_wizardry_lua"
 		}
 	}
@@ -2179,6 +2224,10 @@
 		"UpgradesItems"					"item_dagon;item_dagon_2;item_dagon_3;item_dagon_4"
 		"UpgradeRecipe"					"item_recipe_dagon"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -2248,6 +2297,10 @@
 		"UpgradesItems"					"item_dagon;item_dagon_2;item_dagon_3;item_dagon_4"
 		"UpgradeRecipe"					"item_recipe_dagon"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -2322,6 +2375,10 @@
 		"UpgradesItems"					"item_dagon;item_dagon_2;item_dagon_3;item_dagon_4"
 		"UpgradeRecipe"					"item_recipe_dagon"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -2397,6 +2454,10 @@
 		"UpgradesItems"					"item_dagon;item_dagon_2;item_dagon_3;item_dagon_4"
 		"UpgradeRecipe"					"item_recipe_dagon"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -2471,6 +2532,10 @@
 		"UpgradesItems"					"item_dagon;item_dagon_2;item_dagon_3;item_dagon_4"
 		"UpgradeRecipe"					"item_recipe_dagon"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -2557,6 +2622,10 @@
 		"ItemAliases"					"bf;battle fury"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -3399,6 +3468,10 @@
 		"ItemAliases"					"soul ring"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Sound
 		//-------------------------------------------------------------------------------------------------------------			
@@ -3413,7 +3486,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"6"
+				"bonus_strength"		"0"
 			}
 			"02"
 			{
@@ -3481,6 +3554,10 @@
 		"ItemAliases"					"phase boots"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -3562,6 +3639,9 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ActiveDescriptionLine"			"2"
 		"ShouldBeInitiallySuggested"	"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Sound
 		//-------------------------------------------------------------------------------------------------------------			
@@ -3650,6 +3730,10 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
 
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -3721,6 +3805,10 @@
 		"ItemAliases"					"vladmir's offering;vlads"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -3803,6 +3891,10 @@
 		"ItemHideCharges"		     	"1"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -3909,6 +4001,10 @@
 		"ItemAliases"					"nlf;nullifier"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -3998,7 +4094,7 @@
 		"ItemContributesToNetWorthWhenDropped"	"0"
 		"AllowedInBackpack"				"0"
 		"IsTempestDoubleClonable"		"0"
-		"ItemDisassembleRule"				"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
 		"ShouldBeSuggested"				"1"
 		
 		// Special	
@@ -4750,6 +4846,10 @@
 		"ItemRequiresCharges"			"1"
 		"ItemDisplayCharges"			"1"
 
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -5464,6 +5564,9 @@
 		"ItemAliases"					"power treads"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -5554,6 +5657,10 @@
 		"MaxUpgradeLevel"				"2"
 		"ItemBaseLevel"					"1"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		"UpgradesItems"					"item_travel_boots"
 		"UpgradeRecipe"					"item_recipe_travel_boots"
@@ -5622,6 +5729,9 @@
 		"ItemQuality"					"rare"
 		"ItemAliases"					"headdress"
 		"AbilityCastRange"				"1200"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -5689,7 +5799,9 @@
 		"ItemShopTags"					"armor;boost_armor"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"buckler"
-		
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -5773,6 +5885,10 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemAlertable"					"1"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -5887,6 +6003,10 @@
 		"ItemAlertable"					"1"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -5982,6 +6102,10 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemAlertable"					"1"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -5995,7 +6119,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_mana"			"250"
+				"bonus_mana"			"0"
 			}			
 			"03"
 			{
@@ -6051,6 +6175,11 @@
 		"ItemAliases"					"aether lens"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
+
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6171,6 +6300,10 @@
 		"UpgradesItems"					"item_necronomicon;item_necronomicon_2"
 		"UpgradeRecipe"					"item_recipe_necronomicon"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6282,6 +6415,10 @@
 		"UpgradesItems"					"item_necronomicon_2"
 		"UpgradeRecipe"					"item_recipe_necronomicon"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6390,6 +6527,10 @@
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6473,11 +6614,9 @@
 		}
 	}
 
-	"item_recipe_cyclone"
+	"item_recipe_cyclone_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"99"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20560"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		
 		// Item Info
@@ -6498,6 +6637,8 @@
 
 	"item_cyclone_lua"
 	{
+
+		"ID"                            "20565"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_cyclone_lua"
 		"AbilityTextureName"            "item_cyclone"
@@ -6527,6 +6668,10 @@
 		"ItemAliases"					"cyclone euls;eul's scepter of divinity"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6613,6 +6758,10 @@
 		"ItemAlertable"					"1"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+	    "ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6740,7 +6889,10 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6780,12 +6932,11 @@
 	}
     
 
-    "item_recipe_black_king_bar"
+    "item_recipe_black_king_bar_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"115"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20550"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6802,12 +6953,10 @@
 		}
 	}
 	
-	//=================================================================================================================
-	// Black King Bar
-	//=================================================================================================================
+
 	"item_black_king_bar_lua"
 	{
-        
+        "ID"                            "20555"
         "BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_black_king_bar_lua"
 		"AbilityTextureName"            "item_black_king_bar"
@@ -6828,7 +6977,10 @@
 		"ItemSellable"					"1"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6918,7 +7070,10 @@
 		"ItemAliases"					"skull basher"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7014,7 +7169,10 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7116,9 +7274,7 @@
 		}
 	}
 	
-	//=================================================================================================================
-	// Desolator
-	//=================================================================================================================
+
 	"item_desolator"
 	{
 		// General
@@ -7135,7 +7291,10 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7369,9 +7528,7 @@
 
 	}
 
-	//=================================================================================================================
-	// Recipe: Dragon Lance
-	//=================================================================================================================
+
 	"item_recipe_dragon_lance_lua"
 	{
 		// General
@@ -7395,9 +7552,7 @@
 		}
 	}
 	
-	//=================================================================================================================
-	// Dragon Lance
-	//=================================================================================================================
+
 	"item_dragon_lance_lua"
 	{
         
@@ -7417,7 +7572,10 @@
 		"ItemAliases"					"dragon lance"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7491,9 +7649,6 @@
 		}
 	}
 	
-	//=================================================================================================================
-	// Urn of Shadows
-	//=================================================================================================================
 	"item_urn_of_shadows_lua"
 	{
 		// General
@@ -7533,7 +7688,10 @@
 		"ItemAliases"					"urn of shadows"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7626,9 +7784,6 @@
 		}
 	}
 	
-	//=================================================================================================================
-	// Spirit Vessel
-	//=================================================================================================================
 	"item_spirit_vessel_lua"
 	{
 		// General
@@ -7664,7 +7819,10 @@
 		"ItemAliases"					"sv;spirit vessel"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7785,7 +7943,10 @@
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"yasha"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7842,9 +8003,6 @@
 		}
 	}
 	
-	//=================================================================================================================
-	// Sange
-	//=================================================================================================================
 	"item_sange_lua"
 	{
 		// General
@@ -7864,7 +8022,10 @@
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"sange"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7955,10 +8116,11 @@
 		"ItemShopTags"					"damage;str;agi;attack_speed;unique"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"sny;s&y;sy;sange and yasha"
+		"ShouldBeSuggested"				"1"
+
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -8070,7 +8232,10 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -8178,7 +8343,10 @@
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -8417,11 +8585,10 @@
 		}
 	}
 
-	"item_recipe_item_bogduggs_lucky_femur"
+	"item_recipe_bogduggs_lucky_femur"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"20285"													
+
+		"ID"							"20540"													
         "BaseClass"                     "item_datadriven"		
 
 		// Item Info
@@ -8442,8 +8609,7 @@
 
 	"item_bogduggs_lucky_femur"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
+		"ID"                            "20545"
 		"BaseClass"						"item_lua"
 		"AbilityTextureName"			"bogduggs_lucky_femur"
 		"ScriptFile"					"item_ability/item_bogduggs_lucky_femur"
@@ -8464,7 +8630,10 @@
 		"ItemSellable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemKillable"					"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -8493,11 +8662,11 @@
 		}
 	}
 
-	"item_recipe_item_paw_of_lucius"
+	"item_recipe_paw_of_lucius"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"20280"													
+		"ID"							"20530"													
         "BaseClass"                     "item_datadriven"		
 
 		// Item Info
@@ -8520,6 +8689,7 @@
     "item_paw_of_lucius"
 	{
 
+        "ID"                            "20535"
 		"BaseClass"						"item_lua"
 		"AbilityTextureName"			"paw_of_lucius"
 		"ScriptFile"					"item_ability/item_paw_of_lucius"
@@ -8540,7 +8710,10 @@
 		"ItemSellable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemKillable"					"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -8584,11 +8757,11 @@
 		}
 	}
     
-    "item_recipe_item_guardian_shell"
+    "item_recipe_guardian_shell"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"20249"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"							"20249"
         "BaseClass"                     "item_datadriven"		
 
 		// Item Info
@@ -8610,8 +8783,7 @@
 
 	"item_guardian_shell"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"20248"
 		"BaseClass"						"item_lua"
 		"AbilityTextureName"			"guardian_shell"
 		"ScriptFile"					"item_ability/item_guardian_shell"
@@ -8633,7 +8805,10 @@
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemKillable"					"1"
 		"CustomShop"					"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -8652,10 +8827,30 @@
 		}
 	}
 
+    "item_recipe_watchers_gaze"
+	{
+		"ID"                            "20520"
+        "BaseClass"                     "item_datadriven"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_watchers_gaze"
+		"ItemRequirements"
+		{
+			"01"						"item_ultimate_orb_lua;item_ultimate_orb_lua"
+		}
+	}
+
+
 	"item_watchers_gaze"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
+		"ID"                            "20525"
 		"BaseClass"						"item_lua"
 		"AbilityTextureName"			"watchers_gaze"
 		"ScriptFile"					"item_ability/item_watchers_gaze"
@@ -8679,7 +8874,10 @@
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
 		"ItemKillable"					"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 
 
 		// Special
@@ -8704,55 +8902,75 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"		    "400"
+				"bonus_health"		    "725"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_health_regen"    "1.2"
+				"bonus_health_regen"    "2.5"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"          "20"
+				"bonus_damage"          "25"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"     "20"
+				"bonus_attack_speed"     "25"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"      "2"
+				"bonus_mana_regen"      "2.5"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"spell_amplify"         "20"
+				"spell_amplify"         "25"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"magic_resist"          "1.6"
+				"magic_resist"          "1.25"
 			}
 			"11"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_armor"           "1.6"
+				"bonus_armor"           "4"
 			}
 			"12"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_move_speed_pct"  "1"
+				"bonus_move_speed_pct"  "1.25"
 			}
 		}
 	}
 
+	"item_recipe_ogre_seal_totem"
+	{
+		"ID"                            "20510"
+        "BaseClass"                     "item_datadriven"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_ogre_seal_totem"
+		"ItemRequirements"
+		{
+			"01"						"item_reaver_lua;item_relic"
+		}
+	}
+
+
 	"item_ogre_seal_totem"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
+		"ID"                            "20515"
 		"BaseClass"						"item_lua"
 		"ScriptFile"					"item_ability/item_ogre_seal_totem"
 		"AbilityTextureName"			"ogre_seal_totem"
@@ -8768,49 +8986,65 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1500"
+		"ItemCost"						"6800"
 		"ItemPurchasable"				"1"
 		"ItemQuality"					""
 		"ItemStackable"					"0"
 		"ItemSellable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemKillable"					"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
-			"03"
+			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_hp"					"400"
+				"bonus_damage"				"70"
 			}
-            "04"
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_hp"					"600"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"bonus_health_regen"		"2.5"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"magic_resistance"	    	"2.0"
+			}
+            "05"
             {
                 "var_type"                  "FIELD_INTEGER"
                 "radius"                    "275"
             }
-            "05"
-            {
-                "var_type"                  "FIELD_INTEGER"
-                "damage"                    "250"
-            }
             "06"
             {
+                "var_type"                  "FIELD_INTEGER"
+                "damage"                    "600"
+            }
+            "07"
+            {
                 "var_type"                  "FIELD_FLOAT"
-                "stun_duration"             "1.0"
+                "stun_duration"             "1.5"
             } 
         }
 	}
 
 
-    "item_recipe_item_lifestone"
+    "item_recipe_lifestone"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"20248"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-        "BaseClass"                     "item_datadriven"		
+		"ID"                            "20500"
+        "BaseClass"                     "item_datadriven"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -8831,8 +9065,8 @@
 
 	"item_lifestone"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
+
+		"ID"                            "20505"
 		"BaseClass"						"item_lua"
 		"ScriptFile"					"item_ability/item_lifestone"
 		"AbilityTextureName"			"lifestone"
@@ -8854,7 +9088,10 @@
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
 		"ItemKillable"					"1"
-		"ItemAlertable"					"1"
+
+	    "ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -9190,12 +9427,12 @@
 		}
 	}
 
-	"item_recipe_guardian_greaves"
+	"item_recipe_guardian_greaves_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"230"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20490"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -9216,6 +9453,7 @@
 
 	"item_guardian_greaves_lua"
 	{
+		"ID"                            "20495"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_guardian_greaves_lua"
 		"AbilityTextureName"            "item_guardian_greaves"
@@ -9236,7 +9474,10 @@
 		"ItemAliases"					"guardian greaves"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemAlertable"					"1"
-		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -9336,12 +9577,12 @@
 	}
 
     
-	"item_recipe_veil_of_discord"
+	"item_recipe_veil_of_discord_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"189"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20480"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -9363,6 +9604,7 @@
 
 	"item_veil_of_discord_lua"
 	{
+		"ID"                            "20485"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_veil_of_discord_lua"
 		"AbilityTextureName"            "item_veil_of_discord"
@@ -9384,7 +9626,10 @@
 		"ItemAliases"					"vod;veil of discord"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -9470,7 +9715,7 @@
 		"ItemResult"					"item_glimmer_cape"
 		"ItemRequirements"
 		{
-			"01"						"item_shadow_amulet;item_cloak"
+			"01"						"item_shadow_amulet_lua;item_cloak"
 		}
 	}
 
@@ -9498,7 +9743,9 @@
 		"ItemQuality"					"rare"
 		"ItemAliases"					"glimmer cape"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 
 		
 		// Special	
@@ -9636,7 +9883,9 @@
 		"ItemAliases"					"sb;invis;shadow blade;silver edge"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -9675,14 +9924,11 @@
 		}
 	}
 
-	"item_recipe_holy_locket"
+	"item_recipe_holy_locket_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"268"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
+		"ID"                            "20470"
+
+		"BaseClass"                     "item_datadriven"
 		"ItemCost"						"0"	
 		"ItemShopTags"					""
 		
@@ -9703,12 +9949,9 @@
 		}
 	}
 	
-	//=================================================================================================================
-	// Holy Locket
-	//=================================================================================================================
 	"item_holy_locket_lua"
 	{
-
+        "ID"                            "20475"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_holy_locket_lua"
 		"AbilityTextureName"            "item_holy_locket"
@@ -9720,7 +9963,10 @@
 		"ItemQuality"					"rare"
 		"ActiveDescriptionLine"			"2"
 		"ShouldBeInitiallySuggested"	"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Sound
 		//-------------------------------------------------------------------------------------------------------------			
@@ -9760,14 +10006,11 @@
 		}
 	}
     
-    "item_recipe_rod_of_atos"
+    "item_recipe_rod_of_atos_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"205"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
+		"ID"                            "20460"
+		"BaseClass"                     "item_datadriven"
+
 		"ItemCost"						"0"	
 		"ItemShopTags"					""
 		
@@ -9784,6 +10027,7 @@
     
     "item_rod_of_atos_lua"
 	{
+		"ID"                            "20465"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_rod_of_atos_lua"
 		"AbilityTextureName"            "item_rod_of_atos"
@@ -9808,7 +10052,9 @@
 		"ItemAliases"					"rod of atos"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -9875,10 +10121,9 @@
 
 	"item_recipe_solar_crest"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"227"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20450"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -9898,6 +10143,7 @@
 
 	"item_solar_crest_lua"
 	{
+		"ID"                            "20455"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_solar_crest_lua"
 		"AbilityTextureName"            "item_solar_crest"
@@ -9924,6 +10170,10 @@
 		"ItemAliases"					"solar crest"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10008,12 +10258,11 @@
 	}
 
 
-	"item_recipe_oblivion_staff"
+	"item_recipe_oblivion_staff_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"66"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20440"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -10032,7 +10281,7 @@
 	
 	"item_oblivion_staff_lua"
 	{
-
+        "ID"                            "20445"
         "BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_oblivion_staff_lua"
 		"AbilityTextureName"            "item_oblivion_staff"
@@ -10045,7 +10294,10 @@
 		"ItemShopTags"					"damage;int;attack_speed;regen_mana"
 		"ItemQuality"					"common"
 		"ItemAliases"					"oblivion staff"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10124,7 +10376,10 @@
 		"ItemAliases"					"orchid malevolence"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10169,12 +10424,11 @@
 	}
 
 
-	"item_recipe_echo_sabre"
+	"item_recipe_echo_sabre_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"251"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20430"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -10193,7 +10447,7 @@
 	
 	"item_echo_sabre_lua"
 	{
-
+        "ID"                            "20435"
         "BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_echo_sabre_lua"
 		"AbilityTextureName"            "item_echo_sabre"
@@ -10216,7 +10470,10 @@
 		"ItemAliases"					"echo sabre"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10277,16 +10534,12 @@
 		}
 	}
 	
-	"item_recipe_butterfly"
+	"item_recipe_butterfly_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"138"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
+		"ID"                            "20420"
 		"ItemCost"						"0"	
 		"ItemShopTags"					""
+		"BaseClass"                     "item_datadriven"
 		
 		// Recipe
 		//-------------------------------------------------------------------------------------------------------------
@@ -10303,6 +10556,7 @@
 	//=================================================================================================================
 	"item_butterfly_lua"
 	{
+		"ID"                            "20425"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_butterfly_lua"
 		"AbilityTextureName"            "item_butterfly"
@@ -10317,7 +10571,9 @@
 		"ItemAliases"					"bfly;butterfly"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10352,12 +10608,11 @@
 	}
 
 
-	"item_recipe_armlet"
+	"item_recipe_armlet_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"150"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20410"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -10376,7 +10631,7 @@
 	
 	"item_armlet_lua"
 	{
-
+        "ID"                            "20415"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_armlet_lua"
 		"AbilityTextureName"            "item_armlet"
@@ -10394,7 +10649,9 @@
 		"ItemAliases"					"armlet of mordiggian"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10444,12 +10701,12 @@
 	}
 
 
-	"item_recipe_force_staff"
+	"item_recipe_force_staff_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"101"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20400"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -10469,6 +10726,7 @@
 
 	"item_force_staff_lua"
 	{
+		"ID"                            "20405"
         "BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_force_staff_lua"
 		"AbilityTextureName"            "item_force_staff"
@@ -10494,7 +10752,9 @@
 		"ItemAliases"					"fs;force staff"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10534,12 +10794,12 @@
 	}
 
 
-	"item_recipe_hurricane_pike"
+	"item_recipe_hurricane_pike_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"262"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20390"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -10558,6 +10818,7 @@
 	
 	"item_hurricane_pike_lua"
 	{
+		"ID"                            "20395"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_hurricane_pike_lua"
 		"AbilityTextureName"            "item_hurricane_pike"
@@ -10583,7 +10844,9 @@
 		"ItemAliases"					"fs;force staff"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10677,12 +10940,11 @@
 		}
 	}
 
-	"item_recipe_ring_of_aquila"
+	"item_recipe_ring_of_aquila_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"211"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		
+		"ID"                            "20380"
+		"BaseClass"                     "item_datadriven"
+
 		"ItemCost"						"0"	
 		"ItemShopTags"					""
 		
@@ -10696,11 +10958,9 @@
 		}
 	}
 
-	//=================================================================================================================
-	// Ring of Aquila
-	//=================================================================================================================
 	"item_ring_of_aquila_lua"
 	{
+		"ID"                            "20385"
         "BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_ring_of_aquila_lua"
 		"AbilityTextureName"            "item_ring_of_aquila"
@@ -10719,6 +10979,10 @@
 		"ActiveDescriptionLine"			"2"
 		"ShouldBeSuggested"				"1"
 		"ItemPurchasable"				"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 
 		// Sound
 		//-------------------------------------------------------------------------------------------------------------			
@@ -10843,7 +11107,9 @@
 		"ItemQuality"					"common"
 		"ItemAliases"					"quelling blade"
 		"ItemPurchasable"				"1"
-		"ItemAlertable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -10892,12 +11158,12 @@
 		}
 	}
 
-	"item_recipe_poor_mans_shield"
+	"item_recipe_poor_mans_shield_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"70"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20370"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"BaseClass"                    "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -10917,6 +11183,7 @@
 	
 	"item_poor_mans_shield_lua"
 	{
+		"ID"                            "20375"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_poor_mans_shield_lua"
 		"AbilityTextureName"            "item_poor_mans_shield"
@@ -10930,7 +11197,10 @@
 		"ItemQuality"					"common"
 		"ItemAliases"					"pms;poor man's shield"
 		"ItemPurchasable"				"0"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 
 		
 		// Special	
@@ -10976,14 +11246,11 @@
 	}
 
 
-	"item_recipe_helm_of_the_dominator"
+	"item_recipe_helm_of_the_dominator_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"163"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
+		"ID"                            "20360"
+		"BaseClass"                     "item_datadriven"
+
 		"ItemCost"						"0"	
 		"ItemShopTags"					""
 		
@@ -11000,6 +11267,7 @@
 	
 	"item_helm_of_the_dominator_lua"
 	{
+		"ID"                            "20365"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_helm_of_the_dominator_lua"
 		"AbilityTextureName"            "item_helm_of_the_dominator"
@@ -11023,6 +11291,9 @@
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"hotd;helm of the dominator"
 		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11096,12 +11367,11 @@
 		}
 	}
 
-	"item_recipe_heavens_halberd"
+	"item_recipe_heavens_halberd_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"209"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		
+		"ID"                            "20350"
+		"BaseClass"                     "item_datadriven"
+
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"0"	
@@ -11119,6 +11389,7 @@
 	
 	"item_heavens_halberd_lua"
 	{
+		"ID"                            "20355"
         "BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_heavens_halberd_lua"
 		"AbilityTextureName"            "item_heavens_halberd"
@@ -11142,10 +11413,11 @@
 		"ItemShopTags"					"str;damage;evasion"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"heaven's halberd"
+		"ShouldBeSuggested"				"1"
+
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11247,9 +11519,10 @@
 		"ItemShopTags"					"int;attack_speed;damage;regen_mana;damage;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"orchid malevolence"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11313,12 +11586,12 @@
 		}
 	}
 
-	"item_recipe_satanic"
+	"item_recipe_satanic_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"155"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		"ID"							"20340"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -11337,6 +11610,7 @@
 	
 	"item_satanic_lua"
 	{
+		"ID"                            "20345"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_satanic_lua"
 		"AbilityTextureName"            "item_satanic"
@@ -11355,9 +11629,11 @@
 		"ItemShopTags"					"damage;str;armor;unique;hard_to_tag"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"satanic"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11428,7 +11704,6 @@
 		"ItemAliases"					"radiance"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11462,12 +11737,10 @@
 		}
 	}
 
-	"item_recipe_ethereal_blade"
+	"item_recipe_ethereal_blade_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"175"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		
+		"ID"                            "20330"
+		"BaseClass"                     "item_ability"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"0"	
@@ -11481,10 +11754,11 @@
 		{
 			"01"						"item_eagle_lua;item_ghost_lua"
 		}
-	}	
+	}
 
 	"item_ethereal_blade_lua"
 	{
+		"ID"                            "20335"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_ethereal_blade_lua"
 		"AbilityTextureName"            "item_ethereal_blade"
@@ -11587,12 +11861,13 @@
 	}
 
 
-	"item_recipe_diffusal_blade"
+	"item_recipe_diffusal_blade_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"173"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+        "ID"                            "20320"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"BaseClass"                    "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -11611,6 +11886,8 @@
 
 	"item_diffusal_blade_lua"
 	{
+
+		"ID"                            "20325"
         "BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_diffusal_blade_lua"
 		"AbilityTextureName"            "item_diffusal_blade"
@@ -11641,7 +11918,10 @@
 		"UpgradesItems"					"item_diffusal_blade"
 		"UpgradeRecipe"					"item_recipe_diffusal_blade"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+	    "ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11706,12 +11986,10 @@
 		}
 	}
 
-	"item_recipe_silver_edge"
+	"item_recipe_silver_edge_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"248"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		
+		"ID"							"20294"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"                     "item_datadriven"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"0"	
@@ -11751,10 +12029,9 @@
 		"ItemShopTags"					"damage;attack_speed;movespeed;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"sb;invis;shadow blade"
-		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+        "ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -11839,13 +12116,13 @@
 	}
 
 
-	"item_recipe_manta"
+	"item_recipe_manta_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"146"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20315"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"FightRecapLevel"				"1"
+
+		"BaseClass"                     "item_ability"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -11865,6 +12142,7 @@
 	"item_manta_lua"
 	{
 		 
+		"ID"                            "20310"
         "BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_manta_lua"
 		"AbilityTextureName"            "item_manta"
@@ -11883,10 +12161,9 @@
 		"ItemShopTags"					"agi;str;int;attack_speed;move_speed;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"manta style"
-		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+        "ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -12020,12 +12297,12 @@
 		}
 	}
 
-	"item_recipe_shivas_guard"
+	"item_recipe_shivas_guard_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"118"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20290"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -12044,11 +12321,10 @@
 	
 	"item_shivas_guard_lua"
 	{
-		"ID"							"20290"
+		"ID"							"20291"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_shivas_guard_lua"
 		"AbilityTextureName"            "item_shivas_guard"
-
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"FightRecapLevel"				"1"
@@ -12068,9 +12344,10 @@
 		"ItemAliases"					"shiva's guard;shivas"
 		"ShouldBeSuggested"				"1"
 
-		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+        "ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		
+        
+
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -12133,12 +12410,12 @@
 		}
 	}
 
-	"item_recipe_meteor_hammer"
+	"item_recipe_meteor_hammer_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"222"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"Model"							"models/props_gameplay/recipe.vmdl"
+        "ID"                            "20300"
+ 		"Model"							"models/props_gameplay/recipe.vmdl"
+
+ 		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -12151,12 +12428,13 @@
 		"ItemResult"					"item_meteor_hammer_lua"
 		"ItemRequirements"
 		{
-			"01"						"item_ogre_axe_lua;item_staff_of_wizardry_lua;item_ring_of_regen;item_sobi_mask"
+			"01"						"item_ogre_axe_lua;item_staff_of_wizardry_lua"
 		}
 	}
 	
 	"item_meteor_hammer_lua"
 	{
+		"ID"                            "20305"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_meteor_hammer_lua"
 		"AbilityTextureName"            "item_meteor_hammer"
@@ -12184,8 +12462,9 @@
 		"ItemCost"						"2625"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"mh;meteor hammer"
+        "ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ShouldBeSuggested"				"1"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -12264,12 +12543,12 @@
 		}
 	}
 
-	"item_recipe_aeon_disk"
+	"item_recipe_aeon_disk_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"255"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20270"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"BaseClass"                     "item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -12288,7 +12567,7 @@
 
 	"item_aeon_disk_lua"
 	{
-
+        "ID"                            "20275"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_aeon_disk_lua"
 		"AbilityTextureName"            "item_aeon_disk"
@@ -12305,9 +12584,11 @@
 		"ItemShopTags"					"str;regen_health;health_pool"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"ad;aeon disk"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -12342,12 +12623,12 @@
 	}
 
 
-	"item_recipe_sphere"
+	"item_recipe_sphere_lua"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"122"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"                            "20260"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"BaseClass"             		"item_datadriven"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -12366,6 +12647,7 @@
 	
 	"item_sphere_lua"
 	{
+		"ID"                            "20265"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_sphere_lua"
 		"AbilityTextureName"            "item_sphere"
@@ -12385,10 +12667,12 @@
 		"ItemShopTags"					"regen_health;regen_mana;str;agi;int;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"ls;linken's sphere"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ActiveDescriptionLine"			"2"
 		"ShouldBeSuggested"				"1"
 		"ItemAlertable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -12452,16 +12736,18 @@
 		}
 	}
 
-	"item_recipe_ancient_janggo"
+	"item_recipe_ancient_janggo_lua"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"184"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"							"20135"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		
+		"BaseClass"             		"item_datadriven"
+
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"600"	
+		"ItemCost"						"0"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -12479,7 +12765,8 @@
 
 	"item_ancient_janggo_lua"
 	{
-
+        
+        "ID"                            "20130"
 		"BaseClass"                     "item_lua"
 		"ScriptFile"					"item_ability/item_ancient_janggo_lua"
 		"AbilityTextureName"            "item_ancient_janggo"
@@ -12502,10 +12789,12 @@
 		"ItemInitialCharges"			"6"
 		"ItemDisplayCharges"			"1"
 		"ItemAliases"					"drum of endurance"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemRequiresCharges"			"1"
 		"ShouldBeSuggested"				"1"
-		"ItemAlertable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+        
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
