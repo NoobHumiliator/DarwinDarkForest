@@ -25,21 +25,28 @@ function modifier_creature_passive:DeclareFunctions()
 end
 
 ---------------------------------------------------------------------------------
+
 function modifier_creature_passive:OnTakeDamage (event)
-
-	if event.unit == self:GetParent() then
-        
-		local hCaster = self:GetParent()
-		local hAttacker = event.attacker
-        
-        --承受来自其他 队伍的攻击
-        if hAttacker and  hCaster:GetTeamNumber()~=hAttacker:GetTeamNumber() then
-              --小本本记下来         
-              hCaster.flLastHitTime = GameRules:GetGameTime()      
-              hCaster.flLastAttacker= hAttacker
-        end
-
-	end
+    
+    --仅限中立生物 反伤类不触发
+    if self:GetParent():GetTeam()==DOTA_TEAM_NEUTRALS then
+		if event.unit == self:GetParent() then
+			--信使无效
+			if self:GetParent():GetAttackCapability()~=DOTA_UNIT_CAP_NO_ATTACK then
+				local hCaster = self:GetParent()
+				local hAttacker = event.attacker
+		        --承受来自其他 队伍的攻击
+		        if hAttacker and  hCaster:GetTeamNumber()~=hAttacker:GetTeamNumber() then
+		              --立即进行反击      
+		              hCaster.flLastHitTime = GameRules:GetGameTime()      
+		              hCaster.hLastAttacker= hAttacker
+		              hCaster.hChasingTarget = hAttacker
+		              hCaster:SetBaseMoveSpeed( hCaster.nOriginalMovementSpeed )
+		              hCaster:MoveToTargetToAttack(hAttacker)
+		        end
+			end
+		end
+    end
 end
 -----------------------------------------------------------------------------------
 

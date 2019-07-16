@@ -1,5 +1,5 @@
---测试模式
-_G.bTEST_MODE=true
+--测试PVE模式
+_G.bTEST_PVE=false
 
 _G.nNEUTRAL_TEAM = 4
 --最大玩家数量 可能会根据地图调整

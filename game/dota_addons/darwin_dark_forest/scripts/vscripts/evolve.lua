@@ -194,7 +194,7 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
   ItemController:RestoreItems(hHero)
 
   --放在NetTable送达前台
-  CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerId), {creepIndex=hUnit:GetEntityIndex(), creepName=hUnit:GetUnitName()  } )
+  CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerId), {creepIndex=hUnit:GetEntityIndex(), creepName=hUnit:GetUnitName(),creepLevel=hUnit:GetLevel()  } )
   -- Fix for centering camera
   Timers:CreateTimer({
     callback = function()
@@ -552,7 +552,12 @@ function CountAverageLevel()
      if nTotalHeroNumber>0 then
         nAverageLevel = math.floor(nTotalLevel/nTotalHeroNumber + 0.5) --四舍五入
      end
-     
+
+     -- PVE模式 无此机制
+     if not GameRules.bPveMap then
+       CustomNetTables:SetTableValue( "game_state","game_state", {average_level=nAverageLevel})
+     end
+
      GameRules.nAverageLevel=nAverageLevel
      GameRules.nTotalHeroNumber=nTotalHeroNumber
   

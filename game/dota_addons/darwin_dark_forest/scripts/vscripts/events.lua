@@ -44,6 +44,14 @@ function GameMode:OnGameRulesStateChange()
 
      if nValidPlayerNumber==1 then
          GameRules.bPveMap=true
+         --Local不测单人
+         if GameRules.sValidePlayerSteamIds=="88765185" then
+            if bTEST_PVE then
+               GameRules.bPveMap=true
+            else
+               GameRules.bPveMap=false
+            end
+         end
      end
      
      vPlayerTeam=RemoveRepetition(vPlayerTeam)
@@ -502,8 +510,6 @@ function GameMode:OnPlayerSay(keys)
            hHero.hCurrentCreep:AddAbility("test_blink")
            hHero.hCurrentCreep:FindAbilityByName("test_blink"):SetLevel(1)
 
-           hHero.hCurrentCreep:AddAbility("test_select_lua")
-           hHero.hCurrentCreep:FindAbilityByName("test_select_lua"):SetLevel(1)
         end
     
         -- 关闭 wtf 模式
@@ -770,11 +776,11 @@ function CalculateExpLostRatio(hHero)
         end
 
         if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-1 then
-           flExpLoseRatio=0.15
+           flExpLoseRatio=0.10
         end
 
         if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-2 then
-           flExpLoseRatio=0.05
+           flExpLoseRatio=0.03
         end
 
         if hHero.hCurrentCreep:GetLevel() <= GameRules.nAverageLevel-3 then
@@ -794,7 +800,7 @@ function GameMode:RequestCreatureIndex(keys)
     
     if hHero and hHero.hCurrentCreep and not hHero.hCurrentCreep:IsNull()  then
         print("Request Creature Index from Sever"..nPlayerID)
-        CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerID), {creepIndex=hHero.hCurrentCreep:GetEntityIndex(),creepName=hHero.hCurrentCreep:GetUnitName()} )
+        CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerID), {creepIndex=hHero.hCurrentCreep:GetEntityIndex(),creepName=hHero.hCurrentCreep:GetUnitName(), creepLevel=hHero.hCurrentCreep:GetLevel() } )
     end
     
 end
@@ -844,7 +850,7 @@ function CalculateInvulnerableDuration(hHero)
         end
 
         if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel then
-           flDuration=3.5
+           flDuration=3
         end
 
         if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-1 then
@@ -852,11 +858,15 @@ function CalculateInvulnerableDuration(hHero)
         end
 
         if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-2 then
-           flDuration=10
+           flDuration=12
         end
 
-        if hHero.hCurrentCreep:GetLevel() <= GameRules.nAverageLevel-3 then
-           flDuration=14
+        if hHero.hCurrentCreep:GetLevel() == GameRules.nAverageLevel-3 then
+           flDuration=24
+        end
+
+        if hHero.hCurrentCreep:GetLevel() <= GameRules.nAverageLevel-4 then
+           flDuration=36
         end
         
     end
