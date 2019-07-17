@@ -229,3 +229,25 @@ function Server:UploadErrorLog(sMessage)
         end
     end)
 end
+
+--上传吃鸡信息
+function Server:UploadSnapLog(vSanpInfo,sType)
+    
+    local request = CreateHTTPRequestScriptVM("POST", sServerAddress .. "uploadwinnerlog")
+    request:SetHTTPRequestGetOrPostParameter("dedicated_server_key",GetDedicatedServerKey("K4gN+u422RN2X4DubcLylw=="));
+    request:SetHTTPRequestGetOrPostParameter("player_steam_ids",GameRules.sValidePlayerSteamIds);
+    request:SetHTTPRequestGetOrPostParameter("snap_player_steam_id",vSanpInfo.sSteamID);
+    request:SetHTTPRequestGetOrPostParameter("items",vSanpInfo.sItems);
+    request:SetHTTPRequestGetOrPostParameter("abilities",vSanpInfo.sAbilities);
+    request:SetHTTPRequestGetOrPostParameter("perk",vSanpInfo.sPerks);
+    request:SetHTTPRequestGetOrPostParameter("type",sType);
+    request:SetHTTPRequestGetOrPostParameter("unit_name",vSanpInfo.sUnitName);
+
+    request:Send(function(result)
+        if result.StatusCode == 200 and result.Body~=nil then
+            print("UploadLog, Success"..result.Body)       
+        else
+            print("UploadLog, Fail:"..result.Body)       
+        end
+    end)
+end
