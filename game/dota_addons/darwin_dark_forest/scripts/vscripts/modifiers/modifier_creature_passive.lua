@@ -55,9 +55,14 @@ function modifier_creature_passive:GetModifierProvidesFOWVision()
        
      if self:GetParent():GetLevel()>=10 then
         return 1
-     else
-     	return 0
      end
 
+     if self:GetParent():GetTeam()~=DOTA_TEAM_NEUTRALS and  GameRules.nAverageLevel then 
+     	if self:GetParent():GetLevel()>=GameRules.nAverageLevel+2 then
+           return 1
+        end
+     end
+
+     return 0
 end
 -----------------------------------------------------------------------------------

@@ -27,7 +27,7 @@ function Spawn( entityKeyValues )
        return
     end
 
-    thisEntity:SetAcquisitionRange(460)
+    thisEntity:SetAcquisitionRange(500)
     
     --保存初始移动速度
     thisEntity.nOriginalMovementSpeed=thisEntity:GetBaseMoveSpeed()
@@ -49,7 +49,7 @@ function CreepThink()
 	    thisEntity.vWaypoints = {}
 	    --画一个漫步的行走方向
 	    local currentWayPoint = thisEntity:GetAbsOrigin()
-		while #thisEntity.vWaypoints < 10 do
+		while #thisEntity.vWaypoints < 15 do
 			local waypoint = currentWayPoint + RandomVector( RandomFloat( 0, 2048 ) )
 			if GridNav:CanFindPath( thisEntity:GetAbsOrigin(), waypoint ) then
 				table.insert( thisEntity.vWaypoints, waypoint )
@@ -94,7 +94,7 @@ function CheckIfHasAggro()
         --基础追击时间 4秒
         local flChaseTime=CalculateChasingTime()
 
-		if (thisEntity.flLastHitTime and ( GameRules:GetGameTime() - thisEntity.flLastHitTime >flChaseTime ) ) or not thisEntity:CanEntityBeSeenByMyTeam(thisEntity:GetAggroTarget())  then
+		if (thisEntity.flLastHitTime and ( GameRules:GetGameTime() - thisEntity.flLastHitTime >flChaseTime ) )  then
 	 		--撤退 并且重置追击状态
 	 		return RetreatFromUnit(thisEntity.hChasingTarget)
 		end
@@ -347,12 +347,12 @@ end
 function CalculateChasingTime()
     
     --如果x秒不受玩家反击，或者丢失玩家视野 (保证其能移动，不能移动的单位不撤退)
-    --  基础追击时间 4秒
-    local flChaseTime=4
+    --  基础追击时间 4.5秒
+    local flChaseTime=4.5
     
     -- 降低11级生物的仇恨时间
     if thisEntity:GetLevel()==11 then
-       flChaseTime=2
+       flChaseTime=3
     end
 
     --减少弱势生物被追击时间
