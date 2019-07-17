@@ -459,25 +459,36 @@ end
 ---------------------------------------------------------------------------------
 -- 将玩家的出生点放到随机的位置
 ---------------------------------------------------------------------------------
-function GameMode:PutStartPositionToRandomPosForTeam(team, deadPos)
+function GameMode:PutStartPositionToRandomPosForTeam(nTeam)
     -- 将对应队伍的出生点放到随机的位置去
-    local playerStarts = Entities:FindAllByClassname("info_player_start_dota")
-    for _, start in pairs(playerStarts) do
-        if start:GetTeamNumber() == team then
+    local vPlayerStarts = Entities:FindAllByClassname("info_player_start_dota")
+    for _, hStart in pairs(vPlayerStarts) do
+        if hStart:GetTeamNumber() == nTeam then
            
-            local maxTry = 10
-            local randomPos = GetRandomValidPosition()
-            if deadPos == nil then deadPos = Vector(0,0,0) end
-            while (randomPos - deadPos):Length2D() < 4000 do
-                randomPos =GetRandomValidPosition()
-                maxTry = maxTry - 1
-                if maxTry <= 0 then
-                    randomPos =GetRandomValidPosition()
+            local nMaxTry = 20
+            local bHasValidPlace = false
+            local vRandomPos =GetRandomValidPosition()
+            
+            --如果重生，尽量避开其他玩家
+            while not bHasValidPlace do
+                vRandomPos =GetRandomValidPosition()
+                bHasValidPlace=true
+
+                nMaxTry = nMaxTry - 1
+                if nMaxTry <= 0 then
                     break
                 end
+
+                local vEnemies = FindUnitsInRadius( nTeam, vRandomPos, nil, 2500, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES+DOTA_UNIT_TARGET_FLAG_INVULNERABLE+DOTA_UNIT_TARGET_FLAG_OUT_OF_WORLD, 0, false )           
+                for _,hEnemy in pairs(vEnemies) do
+                    if hEnemy.bMainCreep then
+                        bHasValidPlace=false
+                    end
+                end
             end
-            GameMode.vStartPointLocation[team]=randomPos
-            start:SetOrigin(randomPos)
+            
+            GameMode.vStartPointLocation[nTeam]=vRandomPos
+            hStart:SetOrigin(vRandomPos)
         end
     end
 end
