@@ -2,7 +2,7 @@
 if Snapshot == nil then Snapshot = class({}) end
 
 
-function Snapshot:CreateSnapShot(nPlayerID)
+function Snapshot:GenerateSnapShot(nPlayerID)
     
    local vSanpInfo ={}
 
@@ -30,14 +30,24 @@ function Snapshot:CreateSnapShot(nPlayerID)
     vSanpInfo.sPerks=""
     
     local vPerkNameMap={"Element:","Mystery:","Durable:","Fury:","Decay:","Hunt:"}
+    
+    local flPerkSum=0
 
     for i=1,6 do
         vSanpInfo.sPerks=vSanpInfo.sPerks..vPerkNameMap[i]..GameMode.vPlayerPerk[nPlayerID][i]
+        flPerkSum=flPerkSum+GameMode.vPlayerPerk[nPlayerID][i]
     end
 
-    vSanpInfo.sSteamID=PlayerResource:GetSteamAccountID(nPlayerID)
+    vSanpInfo.sPerkSum= tostring(flPerkSum)
+
+    vSanpInfo.sSteamID=tostring(PlayerResource:GetSteamAccountID(nPlayerID))
 
     vSanpInfo.sUnitName=hHero.hCurrentCreep:GetUnitName()
+    
+    vSanpInfo.sGameTime=tostring(GameRules:GetGameTime())
 
+    vSanpInfo.sAverageLevel=GameRules.sAverageLevel
+
+    return vSanpInfo
 
 end

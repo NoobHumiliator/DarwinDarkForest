@@ -548,9 +548,11 @@ function CountAverageLevel()
      end
      
      local nAverageLevel =1 
+     local sAverageLevel =""
 
      if nTotalHeroNumber>0 then
         nAverageLevel = math.floor(nTotalLevel/nTotalHeroNumber + 0.5) --四舍五入
+        sAverageLevel = string.format("%.2f", nTotalLevel/nTotalHeroNumber)
      end
 
      -- PVE模式 无此机制
@@ -559,6 +561,7 @@ function CountAverageLevel()
      end
 
      GameRules.nAverageLevel=nAverageLevel
+     GameRules.sAverageLevel=sAverageLevel
      GameRules.nTotalHeroNumber=nTotalHeroNumber
   
 end

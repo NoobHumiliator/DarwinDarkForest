@@ -68,6 +68,9 @@ require( "rune_spawner" )
 require('libraries/activity_modifier')
 require('libraries/animations')
 require('handbook')
+require('cheat')
+require('snapshot')
+
 
 Precache = require "Precache"
 

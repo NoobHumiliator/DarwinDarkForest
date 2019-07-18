@@ -1,6 +1,6 @@
 --持久化服务器 交互Service
 if Server == nil then Server = class({}) end
-sServerAddress="http://106.12.3.136:8080/"
+sServerAddress="http://106.12.3.136:8081/"
 
 
 local function stringTable(t)
@@ -233,15 +233,19 @@ end
 --上传吃鸡信息
 function Server:UploadSnapLog(vSanpInfo,sType)
     
-    local request = CreateHTTPRequestScriptVM("POST", sServerAddress .. "uploadwinnerlog")
+    local request = CreateHTTPRequestScriptVM("POST", sServerAddress .. "uploadsnap")
     request:SetHTTPRequestGetOrPostParameter("dedicated_server_key",GetDedicatedServerKey("K4gN+u422RN2X4DubcLylw=="));
+    request:SetHTTPRequestGetOrPostParameter("snap_type",sType);
     request:SetHTTPRequestGetOrPostParameter("player_steam_ids",GameRules.sValidePlayerSteamIds);
     request:SetHTTPRequestGetOrPostParameter("snap_player_steam_id",vSanpInfo.sSteamID);
     request:SetHTTPRequestGetOrPostParameter("items",vSanpInfo.sItems);
     request:SetHTTPRequestGetOrPostParameter("abilities",vSanpInfo.sAbilities);
-    request:SetHTTPRequestGetOrPostParameter("perk",vSanpInfo.sPerks);
-    request:SetHTTPRequestGetOrPostParameter("type",sType);
+    request:SetHTTPRequestGetOrPostParameter("perk_detail",vSanpInfo.sPerks);
+    request:SetHTTPRequestGetOrPostParameter("perk_sum",vSanpInfo.sPerkSum);
     request:SetHTTPRequestGetOrPostParameter("unit_name",vSanpInfo.sUnitName);
+    request:SetHTTPRequestGetOrPostParameter("game_time",vSanpInfo.sGameTime);
+    request:SetHTTPRequestGetOrPostParameter("average_level",vSanpInfo.sAverageLevel);
+
 
     request:Send(function(result)
         if result.StatusCode == 200 and result.Body~=nil then
