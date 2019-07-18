@@ -2729,7 +2729,7 @@
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "39 36 33 30 27 24 21 18"
+        "AbilityCooldown"               "30"
         
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -2742,17 +2742,17 @@
             "01"
             {
                 "var_type"                     "FIELD_INTEGER"
-                "wraith_warrior_duration"       "20"
+                "wraith_warrior_duration"       "30"
             }
             "02"
             {
                 "var_type"                     "FIELD_INTEGER"
-                "wraith_warrior_health"        "400 500 650 850 1100 1400 1750 2150"
+                "wraith_warrior_health"        "650 850 1100 1400 1750 2150 2600 3100"
             }
             "03"
             {
                 "var_type"                     "FIELD_INTEGER"
-                "wraith_warrior_damage"        "70 90 115 145 180 220 265 315"
+                "wraith_warrior_damage"        "115 145 180 220 265 315 370 430"
             }
             "04"
             {
@@ -7864,7 +7864,7 @@
             "01"
             {
                 "var_type"                  "FIELD_FLOAT"
-                "duration"                  "6.0 6.5 7.0 7.5 8.0 8.5"
+                "duration"                  "5.0 5.5 6.0 6.5 7.0 7.5"
             }
             "02"
             {
@@ -7879,7 +7879,7 @@
             "04"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "nMystery"                  "10 20 30 40 50 60"
+                "nMystery"                  "20 30 40 50 60 70"
             }     
         }
     }

@@ -60,11 +60,15 @@ function Evolve (nPlayerId,hHero)
 
     --判断游戏阶段
     if nLevel==11 and GameRules.bUltimateStage==false then       
-        GameEnterUltimateStage(nPlayerId)    
+        GameEnterUltimateStage(nPlayerId)
+        local vSnap=Snapshot:GenerateSnapShot(nPlayerId)
+        Server:UploadSnapLog(vSnap,"first_11")
     end
     if nLevel==10 and GameRules.bLevelTenStage==false then 
         GameEnterLevelTenStage(nPlayerId)
-    end          
+        local vSnap=Snapshot:GenerateSnapShot(nPlayerId)
+        Server:UploadSnapLog(vSnap,"first_10")
+    end
 
   
     print("To Evolve Creature"..sUnitToEnvolve)

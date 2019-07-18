@@ -230,7 +230,7 @@ function Server:UploadErrorLog(sMessage)
     end)
 end
 
---上传吃鸡信息
+--上传快照日志
 function Server:UploadSnapLog(vSanpInfo,sType)
     
     local request = CreateHTTPRequestScriptVM("POST", sServerAddress .. "uploadsnap")
@@ -245,6 +245,7 @@ function Server:UploadSnapLog(vSanpInfo,sType)
     request:SetHTTPRequestGetOrPostParameter("unit_name",vSanpInfo.sUnitName);
     request:SetHTTPRequestGetOrPostParameter("game_time",vSanpInfo.sGameTime);
     request:SetHTTPRequestGetOrPostParameter("average_level",vSanpInfo.sAverageLevel);
+    request:SetHTTPRequestGetOrPostParameter("match_id",GameRules.sMatchId);
 
 
     request:Send(function(result)

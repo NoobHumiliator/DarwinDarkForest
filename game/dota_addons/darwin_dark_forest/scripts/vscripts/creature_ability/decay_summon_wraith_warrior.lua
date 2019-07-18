@@ -28,16 +28,17 @@ function decay_summon_wraith_warrior:OnSpellStart()
 			hWraithWarrior:SetMinimumGoldBounty( 0 )
 			hWraithWarrior:SetMaximumGoldBounty( 0 )
 			Timers:CreateTimer({
-				    endTime = 0.05,
+				    endTime = FrameTime(),
 				    callback = function()
 				       	hWraithWarrior:SetMaxHealth(self.wraith_warrior_health)
+				       	hWraithWarrior:SetBaseMaxHealth(self.wraith_warrior_health)
 				        hWraithWarrior:Heal(self.wraith_warrior_health,hWraithWarrior)
 				    end
 				})
 
             hWraithWarrior:SetBaseDamageMax(wraith_warrior_damage+10)
             hWraithWarrior:SetBaseDamageMin(wraith_warrior_damage-10)
-
+            hWraithWarrior:SetModelScale(1.5+0.1*self:GetLevel())
 		end
 	end
 end

@@ -14,6 +14,7 @@ function Snapshot:GenerateSnapShot(nPlayerID)
       local hCurrentItem = hHero.hCurrentCreep:GetItemInSlot(i)
       if hCurrentItem then
         vSanpInfo.sItems = vSanpInfo.sItems..hCurrentItem:GetName()
+        vSanpInfo.sItems = vSanpInfo.sItems.." "
       end
    end
 
@@ -23,7 +24,9 @@ function Snapshot:GenerateSnapShot(nPlayerID)
         local hAbility=hHero.hCurrentCreep:GetAbilityByIndex(i)
         if hAbility then
            vSanpInfo.sAbilities = vSanpInfo.sAbilities..hAbility:GetAbilityName()
-           vSanpInfo.sAbilities = ":"..vSanpInfo.sAbilities..hAbility:GetLevel()
+           vSanpInfo.sAbilities = vSanpInfo.sAbilities..":"
+           vSanpInfo.sAbilities = vSanpInfo.sAbilities..hAbility:GetLevel()
+           vSanpInfo.sAbilities = vSanpInfo.sAbilities.." "
         end
     end
 
@@ -34,11 +37,12 @@ function Snapshot:GenerateSnapShot(nPlayerID)
     local flPerkSum=0
 
     for i=1,6 do
-        vSanpInfo.sPerks=vSanpInfo.sPerks..vPerkNameMap[i]..GameMode.vPlayerPerk[nPlayerID][i]
+        vSanpInfo.sPerks=vSanpInfo.sPerks..vPerkNameMap[i]
+        vSanpInfo.sPerks=vSanpInfo.sPerks..math.floor(GameMode.vPlayerPerk[nPlayerID][i]+0.5)
         flPerkSum=flPerkSum+GameMode.vPlayerPerk[nPlayerID][i]
     end
 
-    vSanpInfo.sPerkSum= tostring(flPerkSum)
+    vSanpInfo.sPerkSum= tostring(math.floor(flPerkSum+0.5))
 
     vSanpInfo.sSteamID=tostring(PlayerResource:GetSteamAccountID(nPlayerID))
 

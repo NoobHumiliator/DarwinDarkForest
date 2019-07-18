@@ -829,7 +829,7 @@
 		"Model"						"models/items/wraith_king/wk_ti8_creep/wk_ti8_creep.vmdl"
 		"SoundSet"		            "Hero_SkeletonKing"
 		"Level"						"1"
-		"ModelScale" 				"1.0"
+		"ModelScale" 				"1.5"
 		"IsSummoned"                "1"
 
 		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_skeletonking.vsndevts"
@@ -841,14 +841,14 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"0"
+		"ArmorPhysical"				"5"
 		"MagicalResistance"			"0"
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"25"
-		"AttackDamageMax"			"25"
+		"AttackDamageMin"			"115"
+		"AttackDamageMax"			"155"
 		"AttackRate"				"1.0"
 		"AttackAnimationPoint"		"0.36"
 		"AttackAcquisitionRange"	"500"
@@ -866,11 +866,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"260"
+		"MovementSpeed"				"330"
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"100"
+		"StatusHealth"				"650"
 		"StatusHealthRegen"			"1"
 		"StatusMana"				"500"
 		"StatusManaRegen"			"2"
