@@ -4428,12 +4428,12 @@
             "01"
             {
                 "var_type"                     "FIELD_FLOAT"
-                "shard_damage"                 "7 11 17 25 35 47 34 59"
+                "shard_damage"                 "7 11 16 22 29 37 36 46"
             }
             "02"
             {
                 "var_type"                     "FIELD_FLOAT"
-                "shard_health"                 "100 150 220 310 430 580 750 940"
+                "shard_health"                 "100 150 200 250 300 350 400 450"
             }
             "03"
             {
@@ -4444,11 +4444,6 @@
             {
                 "var_type"                     "FIELD_FLOAT"
                 "duration"                     "60"
-            }
-            "05"
-            {
-                "var_type"                     "FIELD_INTEGER"
-                "nDurable"                     "4 8 12 16 20 24 28 32"
             }
         }
     }
@@ -4537,7 +4532,7 @@
         "AbilityCastPoint"              "0.3"
         "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
 
-        "MaxLevel"                       "8"
+        "MaxLevel"                       "6"
          
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -4545,7 +4540,7 @@
         
         // Damage.
         //-------------------------------------------------------------------------------------------------------------
-       "AbilityDamage"                  "8 12 16 20 24 28 32 80"
+       "AbilityDamage"                  "8 12 18 26 36 48"
 
         // Special
         //-------------------------------------------------------------------------------------------------------------
@@ -4554,17 +4549,17 @@
             "01"
             {
                 "var_type"                                      "FIELD_INTEGER"
-                "ball_lightning_initial_mana_percentage"        "8 7 6 5 4 3 2 1"     
+                "ball_lightning_initial_mana_percentage"        "8"     
             }
             "02"
             {
                 "var_type"                                      "FIELD_INTEGER"
-                "ball_lightning_initial_mana_base"              "30"        
+                "ball_lightning_initial_mana_base"              "10"        
             }
             "03"
             {
                 "var_type"                          "FIELD_INTEGER"
-                "ball_lightning_move_speed"         "1250 1875 2500 3125 3750 4375 5000 5625"        
+                "ball_lightning_move_speed"         "1500 1750 2000 2250 2500 3000"        
             }
             "04"
             {
@@ -4574,7 +4569,7 @@
             "05"
             {
                 "var_type"                          "FIELD_INTEGER"
-                "ball_lightning_travel_cost_base"   "12"        
+                "ball_lightning_travel_cost_base"   "4"        
             }
             "06"
             {
@@ -4599,12 +4594,7 @@
             "10"
             {
                 "var_type"                              "FIELD_INTEGER"
-                "nMystery"                              "5 10 15 20 25 30 35 99"       
-            }
-            "11"
-            {
-                "var_type"                              "FIELD_INTEGER"
-                "nElement"                              "5 10 15 20 25 30 35 99"       
+                "nElement"                              "15 30 45 60 75 90"       
             }
         }
     }
@@ -8191,5 +8181,57 @@
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
     }
     
+
+    "centaur_return_lua"
+    {
+
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "creature_ability/centaur_return_lua"
+        "AbilityTextureName"            "centaur_return"
+        
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_3"
+        "AbilityCastGestureSlot"        "DEFAULT"
+
+        "MaxLevel"                      "6"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "55 50 45 40 35 30"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "return_damage"             "16 32 52 76 104 136"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage_gain_pct"           "6 8 10 12 14 16"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "damage_gain_duration"      "20"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "max_stacks"                "13"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "nDurable"                  "8 16 24 32 40 48"
+            }
+        }
+    }
 
 }

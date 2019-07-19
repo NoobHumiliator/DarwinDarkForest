@@ -6,7 +6,8 @@ local particles = {
     "particles/units/heroes/hero_omniknight/omniknight_guardian_angel_omni.vpcf",
     "particles/units/heroes/hero_omniknight/omniknight_guardian_angel_halo_buff.vpcf",
     "particles/items2_fx/rod_of_atos.vpcf",
-    "particles/items4_fx/combo_breaker_buff.vpcf"
+    "particles/items4_fx/combo_breaker_buff.vpcf",
+    "particles/units/heroes/hero_centaur/centaur_return.vpcf"
 }
 
 local sounds = {
@@ -19,6 +20,7 @@ local sounds = {
     "soundevents/game_sounds_winter_2018.vsndevts",
     "soundevents/game_sounds_creeps.vsndevts",
     "soundevents/game_sounds_ui.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts",
 }
 
 

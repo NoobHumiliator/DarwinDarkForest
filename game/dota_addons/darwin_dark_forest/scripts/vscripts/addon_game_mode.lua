@@ -310,8 +310,13 @@ function GameMode:InitGameMode()
 
     GameMode.vStartPointLocation={} --key是teamnumber value坐标
     GameRules.nFatalErrorTimes=1
-    
 
+    GameRules.sMatchId=tostring(GameRules:GetMatchID())
+
+    if GameRules.sMatchId=="0" then
+       GameRules.sMatchId=tostring(GetSystemTime())..tostring(RandomInt(1,9999999))
+    end
+    
     --队伍颜色
 	self.m_TeamColors = {}
 	self.m_TeamColors[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }	--		Teal

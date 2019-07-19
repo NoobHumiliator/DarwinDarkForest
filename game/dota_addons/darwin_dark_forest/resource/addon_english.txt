@@ -1969,6 +1969,21 @@
     "DOTA_Tooltip_modifier_item_ancient_janggo_lua_buff"                                   "Endurance"
     "DOTA_Tooltip_modifier_item_ancient_janggo_lua_buff_Description"                       "Movement speed increased by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%.\nAttack speed increased by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 
+    "DOTA_Tooltip_Ability_storm_spirit_ball_lightning_nElement"                            "<font color='#00a0e9'>Element:</font>"
+
+    "DOTA_Tooltip_ability_centaur_return_lua"                       "Retaliate"
+    "DOTA_Tooltip_ability_centaur_return_lua_Description"           "Centaur counters all attacks, dealing damage back to the attacker. Each time Centaur gets attacked by a hero or a tower, he gains a charge counter. Can be cast to consume all charges, granting you a percentage base damage increase for %damage_gain_duration% seconds."
+    "DOTA_Tooltip_ability_centaur_return_lua_return_damage"         "RETURN DAMAGE:"
+    "DOTA_Tooltip_ability_centaur_return_lua_damage_gain_pct"       "%ATTACK DAMAGE PER ATTACK:"
+    "DOTA_Tooltip_ability_centaur_return_lua_damage_gain_duration"  "ATTACK DAMAGE DURATION:"
+    "DOTA_Tooltip_ability_centaur_return_lua_max_stacks"            "MAX STACKS:"
+
+
+    "DOTA_Tooltip_modifier_centaur_return_lua_stack"              "Retaliate"
+    "DOTA_Tooltip_modifier_centaur_return_lua_stack_Description"  "Activate to grant additional attack damage per stack."
+    "DOTA_Tooltip_modifier_centaur_return_lua_buff"               "Retaliate"
+    "DOTA_Tooltip_modifier_centaur_return_lua_buff_Description"   "Gaining %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%% additional attack damage."
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "Lich"

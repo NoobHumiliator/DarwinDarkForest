@@ -16175,7 +16175,7 @@
 		"SoundSet"		            "Hero_Venomancer"
 		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
 		"Level"						"8"
-		"ModelScale" 				"1.1"
+		"ModelScale" 				"1.05"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
         
@@ -19019,7 +19019,7 @@
 		"SoundSet"		            "Hero_Venomancer"
 		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
 		"Level"						"9"
-		"ModelScale" 				"1.2"
+		"ModelScale" 				"1.15"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
         
@@ -19114,7 +19114,7 @@
 		"SoundSet"		            "Hero_Venomancer"
 		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
 		"Level"						"9"
-		"ModelScale" 				"1.1"
+		"ModelScale" 				"1.15"
 		"vscripts"					"creap_ai.lua"
         "HasInventory"				"1"
 
@@ -21363,7 +21363,7 @@
 		"Model"	                	"models/creeps/sandking_boss/sand_king_boss.vmdl"
 		"SoundSet"		            "Roshan"
 
-		"ModelScale"				"2.1"
+		"ModelScale"				"1.8"
 		"Level"						"10"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
@@ -22170,7 +22170,7 @@
 		"SoundSet"		            "Hero_Venomancer"
 		"IdleSoundLoop"		        "Hero_Venomancer.IdleLoop"
 		"Level"						"10"
-		"ModelScale" 				"1.3"
+		"ModelScale" 				"1.25"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
 
@@ -23901,7 +23901,7 @@
 		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_stormspirit.vsndevts"
 
 		"Level"						"11"
-		"ModelScale" 				"3.0"
+		"ModelScale" 				"3.2"
          
         "vscripts"					"creap_ai.lua"
         "HasInventory"				"1"
@@ -24173,7 +24173,7 @@
 		"SoundSet"		            "Hero_DarkSeer"
 
 		"Level"						"11"
-		"ModelScale" 				"1.9"
+		"ModelScale" 				"2.2"
 
 		"MinimapIcon"			    "minimap_roshancamp"
 		"MinimapIconSize"			"450"

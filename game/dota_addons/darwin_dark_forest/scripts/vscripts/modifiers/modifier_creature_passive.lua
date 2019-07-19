@@ -52,19 +52,16 @@ end
 
 
 function modifier_creature_passive:GetModifierProvidesFOWVision()
-      
-    if IsServer() then
-	     if self:GetParent():GetLevel()>=10 then
-	        return 1
-	     end
+     
+     if IsServer() then
 
-	     if self:GetParent():GetTeam()~=DOTA_TEAM_NEUTRALS and  GameRules.nAverageLevel then 
+	    if self:GetParent():GetTeam()~=DOTA_TEAM_NEUTRALS and  GameRules.nAverageLevel then 
 	     	if self:GetParent():GetLevel()>=GameRules.nAverageLevel+2 then
 	     		 if self:GetParent():GetLevel()>=GameRules.nAverageLevel+4 then
 	     		 	--如果有玩家排名超前 4分钟CD汇报一次
 	     		    if GameRules.flReportSpeedUpTime == nil or (GameRules:GetGameTime()-GameRules.flReportSpeedUpTime>240) then
-                       local nPlayerId = self:GetParent():GetMainControllingPlayer()
-                       if  nPlayerId then
+	                   local nPlayerId = self:GetParent():GetMainControllingPlayer()
+	                   if  nPlayerId then
 			     		   GameRules.flReportSpeedUpTime=GameRules:GetGameTime()
 			     		   local vSnap=Snapshot:GenerateSnapShot(nPlayerId)
 			               Server:UploadSnapLog(vSnap,"speed_up")
@@ -73,9 +70,13 @@ function modifier_creature_passive:GetModifierProvidesFOWVision()
 	             end
 	           return 1
 	        end
-	     end
+	    end
 
-        return 0
-    end
+	    if self:GetParent():GetLevel()>=10 then
+	        return 1
+	    end
+
+	    return 0
+	end
 end
 -----------------------------------------------------------------------------------

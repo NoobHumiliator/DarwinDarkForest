@@ -2001,6 +2001,22 @@
     "DOTA_Tooltip_modifier_item_ancient_janggo_lua_buff"                                   "坚韧"
     "DOTA_Tooltip_modifier_item_ancient_janggo_lua_buff_Description"                       "移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。\n攻击速度提升%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。"
 
+    "DOTA_Tooltip_Ability_storm_spirit_ball_lightning_nElement"                            "<font color='#00a0e9'>元素：</font>"
+
+    "DOTA_Tooltip_ability_centaur_return_lua"                         "反伤"
+    "DOTA_Tooltip_ability_centaur_return_lua_Description"             "半人马战行者向攻击他的单位发出反击，对攻击者造成伤害。每次受到敌方玩家或者更高等级生物攻击都会获得能量。可以开启，消耗所有能量，使基础攻击力获得一定百分比的提升，持续%damage_gain_duration%秒。"
+    "DOTA_Tooltip_ability_centaur_return_lua_return_damage"           "反伤伤害："
+    "DOTA_Tooltip_ability_centaur_return_lua_damage_gain_pct"         "%每点能量提升攻击力："
+    "DOTA_Tooltip_ability_centaur_return_lua_damage_gain_duration"    "攻击力持续时间："
+    "DOTA_Tooltip_ability_centaur_return_lua_max_stacks"              "最大能量点数："
+    "DOTA_Tooltip_ability_centaur_return_lua_nDurable"                "<font color='#f8b551'>坚韧：</font>"
+
+    "DOTA_Tooltip_modifier_centaur_return_lua_stack"              "反伤"
+    "DOTA_Tooltip_modifier_centaur_return_lua_stack_Description"  "开启后每点能量都将提供额外攻击力。"
+    "DOTA_Tooltip_modifier_centaur_return_lua_buff"               "反伤"
+    "DOTA_Tooltip_modifier_centaur_return_lua_buff_Description"   "获得%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成。"
+
+
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
 	"npc_dota_creature_lich_shearing_deposition"                  "巫妖"

@@ -35,6 +35,7 @@ function decay_mystery_summon_familiar:OnSpellStart()
 				Timers:CreateTimer({
 					    endTime = 0.05,
 					    callback = function()
+					        hFamiliar:SetBaseMaxHealth(self.familiar_hp)
 					       	hFamiliar:SetMaxHealth(self.familiar_hp)
 					        hFamiliar:Heal(self.familiar_hp,hFamiliar)
 					    end
