@@ -124,18 +124,20 @@ function undead_tusk_bone_ball:EndBoneBall( bHitTarget )
 			end
 		end
 
-		for _, enemy in pairs ( self.HitUnits ) do
-			local damageInfo =
-			{
-				victim = enemy,
-				attacker = self:GetCaster(),
-				damage = self.damage,
-				damage_type = DAMAGE_TYPE_MAGICAL,
-				ability = self,
-			}
-			ApplyDamage( damageInfo )
-			enemy:AddNewModifier( self:GetCaster(), self, "modifier_stunned", { duration = self.stun_duration } )
-			EmitSoundOn( "Hero_Tusk.Snowball.ProjectileHit", enemy )
+		for _, enemy in pairs ( self.HitUnits ) do            
+            if not enemy:IsNull() then
+				local damageInfo =
+				{
+					victim = enemy,
+					attacker = self:GetCaster(),
+					damage = self.damage,
+					damage_type = DAMAGE_TYPE_MAGICAL,
+					ability = self,
+				}
+				ApplyDamage( damageInfo )
+				enemy:AddNewModifier( self:GetCaster(), self, "modifier_stunned", { duration = self.stun_duration } )
+				EmitSoundOn( "Hero_Tusk.Snowball.ProjectileHit", enemy )
+			end
 		end
 	end
 end

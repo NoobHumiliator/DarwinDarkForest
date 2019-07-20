@@ -82,6 +82,7 @@ end
 
 --载入单位
 GameRules.vUnitsKV = LoadKeyValues('scripts/npc/npc_units_custom.txt')
+
 --载入技能
 GameRules.vAbilitiesKV = LoadKeyValues('scripts/npc/npc_abilities_custom.txt')
 
@@ -116,7 +117,7 @@ vAbilityPerksTotal["nHunt"]=0
 for sUnitName, vData in pairs(GameRules.vUnitsKV) do
 
     if vData and type(vData) == "table" then
-        
+
         --元素
         if vData.nElement ==nil then
         	vData.nElement=0

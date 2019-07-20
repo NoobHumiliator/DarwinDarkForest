@@ -332,10 +332,9 @@ end
 
 function Econ:PlayKillSound(sSound,hHero)
     if hHero.hCurrentCreep and hHero.hCurrentCreep:IsAlive() then
-        EmitSoundOnLocationWithCaster( hHero.hCurrentCreep:GetOrigin(), sSound, hHero.hCurrentCreep )
+       hHero.hCurrentCreep:EmitSound(sSound)
     end    
 end
-
 
 
 function Econ:EquipSkinEcon(sItemName,nPlayerID)

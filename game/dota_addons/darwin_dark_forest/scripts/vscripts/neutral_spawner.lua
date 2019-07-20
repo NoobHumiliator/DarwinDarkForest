@@ -35,10 +35,6 @@ end
 
 function NeutralSpawner:Init()
   
-  for sUnitName, _ in pairs(GameRules.vUnitsKV) do
-    PrecacheUnitByNameAsync(sUnitName, function() end)
-  end
-
   self.nCreaturesNumber = 0
   self.vCreatureLevelMap = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
   self.vCreatureLevelMap[0]=0

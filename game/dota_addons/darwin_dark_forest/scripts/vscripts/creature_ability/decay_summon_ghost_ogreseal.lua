@@ -20,7 +20,7 @@ function decay_summon_ghost_ogreseal:OnSpellStart()
 
             EmitSoundOn( "Undying_Zombie.Spawn", hGhostSeal )
             
-            ParticleManager:ReleaseParticleIndex( ParticleManager:CreateParticle( "particles/neutral_fx/skeleton_spawn.vpcf", PATTACH_ABSORIGIN, hSkeletonMage ) )
+            ParticleManager:ReleaseParticleIndex( ParticleManager:CreateParticle( "particles/neutral_fx/skeleton_spawn.vpcf", PATTACH_ABSORIGIN, hGhostSeal ) )
 
 			hGhostSeal:AddNewModifier( self:GetCaster(), self, "modifier_kill", { duration = ghost_seal_duration } )
             hGhostSeal:SetControllableByPlayer(self:GetCaster():GetMainControllingPlayer(), false)
@@ -36,7 +36,7 @@ function decay_summon_ghost_ogreseal:OnSpellStart()
 				        hGhostSeal:Heal(self.ghost_seal_health,hGhostSeal)
 				    end
 				})
-
+			EmitSoundOn( "OgreTank.Grunt", hGhostSeal )
             hGhostSeal:SetBaseDamageMax(ghost_seal_damage+10)
             hGhostSeal:SetBaseDamageMin(ghost_seal_damage-10)
             hGhostSeal:FindAbilityByName("creature_ogreseal_flop"):SetLevel(flop_level)

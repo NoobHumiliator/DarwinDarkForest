@@ -7,7 +7,13 @@ local particles = {
     "particles/units/heroes/hero_omniknight/omniknight_guardian_angel_halo_buff.vpcf",
     "particles/items2_fx/rod_of_atos.vpcf",
     "particles/items4_fx/combo_breaker_buff.vpcf",
-    "particles/units/heroes/hero_centaur/centaur_return.vpcf"
+    "particles/units/heroes/hero_centaur/centaur_return.vpcf",
+    'particles/units/heroes/hero_spirit_breaker/spirit_breaker_haste_owner.vpcf',
+    'particles/units/heroes/hero_huskar/huskar_berserker_blood_hero_effect.vpcf',
+    'particles/units/heroes/hero_huskar/huskar_berserkers_blood_glow.vpcf',
+    'particles/units/heroes/hero_meepo/meepo_geostrike_ambient.vpcf',
+    'particles/units/heroes/hero_luna/luna_ambient_lunar_blessing.vpcf',
+
 }
 
 local sounds = {
@@ -20,41 +26,32 @@ local sounds = {
     "soundevents/game_sounds_winter_2018.vsndevts",
     "soundevents/game_sounds_creeps.vsndevts",
     "soundevents/game_sounds_ui.vsndevts",
+    --KV里面没用过的音效，写在这里
     "soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_warlock.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_death_prophet.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_furion.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_disruptor.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_templar_assassin.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_mars.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts",
+    "soundevents/game_sounds_heroes/game_sounds_bristleback.vsndevts",
 }
-
-
-local precacheHeroes = {
-   "spirit_breaker",
-   "bounty_hunter",
-   "huskar",
-   "zuus",
-   "crystalmaiden",
-   "morphling",
-   "warlock",
-   "death_prophet",
-   "pugna",
-   "dark_seer",
-   "tusk",
-   "furion",
-   "lycan",
-   "dragon_knight",
-   "medusa",
-   "antimage",
-   "alchemist",
-   "doombringer",
-   "disruptor",
-   "templar_assassin",
-   "clinkz",
-   "phantom_assassin",
-   "necrolyte",
-   "magnataur",
-   "mars",
-   "ember_spirit",
-   "crystal_maiden",
-   "bane"
-}
-
 
 local function PrecacheEverythingFromTable( context, kvtable)
     for key, value in pairs(kvtable) do
@@ -67,7 +64,7 @@ local function PrecacheEverythingFromTable( context, kvtable)
             if string.find(value, "vmdl") then
                 PrecacheResource( "model", value, context)
             end
-            if string.find(value, "vsndevts") then
+            if string.find(value, "vsndevts") then            
                 PrecacheResource( "soundfile", value, context)
             end
         end
@@ -76,20 +73,21 @@ end
 
 function PrecacheEverythingFromKV( context )
     local kv_files = {
-        "scripts/npc/npc_units_custom.txt",
         "scripts/npc/npc_abilities_custom.txt",
+        "scripts/npc/npc_units_custom.txt",
         "scripts/npc/npc_heroes_custom.txt",
-        "scripts/npc/npc_abilities_override.txt",
         "scripts/npc/npc_items_custom.txt",
     }
     for _, kv in pairs(kv_files) do
         local kvs = LoadKeyValues(kv)
         if kvs then
-            -- print("BEGIN TO PRECACHE RESOURCE FROM: ", kv)
+            --print("BEGIN TO PRECACHE RESOURCE FROM: ", kv)
             PrecacheEverythingFromTable( context, kvs)
         end
     end
 end
+
+
 
 return function(context)
 
@@ -102,12 +100,5 @@ return function(context)
         PrecacheResource("soundfile", p, context)
     end
 
-    for unit in pairs(LoadKeyValues("scripts/npc/npc_units_custom.txt")) do
-        PrecacheUnitByNameSync(unit,context,0)
-    end
-
-    for _, p in pairs(precacheHeroes) do
-        PrecacheUnitByNameSync("npc_dota_hero_"..p, context, -1)
-    end
-
 end
+
