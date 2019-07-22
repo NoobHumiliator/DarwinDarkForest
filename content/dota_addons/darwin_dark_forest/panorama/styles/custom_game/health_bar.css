@@ -1,0 +1,184 @@
+#HealthBarRoot{
+
+   height: 100%;
+   width: 100%;
+
+}
+
+.HealthBarPanel
+{
+  margin-top: -8px;
+}
+
+.HealthBarPanel.no_health_bar
+{
+  opacity: 0;
+}
+
+.HealthBarPanel.hover
+{
+  z-index: 10;
+}
+
+#HealthBarContainer
+{
+  flow-children: down;
+}
+
+
+#HealthBarStatusBar
+{
+  horizontal-align: center;
+  flow-children: right;
+}
+
+#Threat
+{
+  margin-top: 26px;
+}
+#ThreatImage
+{
+  width: 24px;
+  height: 24px;
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.Threat_Green #ThreatImage
+{
+  background-image: url("file://{images}/custom_game/perk_radar/green.png");
+}
+.Threat_Red #ThreatImage
+{
+  background-image: url("file://{images}/custom_game/perk_radar/red.png");
+}
+
+#Bar
+{
+  vertical-align: top;
+  width: 70px;
+  flow-children: down;
+
+  margin-top: 20px;
+}
+#UnitName
+{
+  vertical-align: center;
+  horizontal-align: center;
+
+  width: 100%;
+  height: 15px;
+
+  text-align: center;
+  text-overflow: shrink;
+
+  z-index: 50;
+}
+
+#HealthBar
+{
+  width: 100%;
+  height: 7px;
+}
+#HealthProgress
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  border-width: 1px;
+  border-top-width: 0px;
+}
+#HealthProgress_Left
+{
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #425d25  ), color-stop( 0.2, #5BA539 ), color-stop( .5, #4D9030), to( #425d25) );
+}
+.ColorBlindModeEnabled #HealthProgress_Left
+{
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #658fdf  ), color-stop( 0.2, #a4caff ), color-stop( .5, #3f6fcb), to( #2c56ab ) );
+}
+
+#ManaBar
+{
+  width: 100%;
+  height: 5px;
+}
+#ManaProgress
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  border-width: 1px;
+  border-top-width: 0px;
+}
+#ManaProgress_Left
+{
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #2b4287 ), color-stop( 0.2, #4165ce ), color-stop( .5, #4a73ea), to( #2b4287 ) );
+}
+
+#LevelInfo
+{
+  horizontal-align: right;
+  margin-top: 6px;
+
+  width: 24px;
+  height: 44px;
+}
+#LevelBackground
+{
+  horizontal-align: center;
+  vertical-align: bottom;
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  background-color: #121212;
+}
+#LevelLabel
+{
+  horizontal-align: center;
+  vertical-align: bottom;
+  margin-top: 1px;
+  padding: 1px;
+
+  width: 24px;
+  height: 24px;
+
+  color: #E7D291;
+  text-shadow: 0px 0px 2.25px 2.7 #EC780E24;
+  text-align: center;
+  text-overflow: shrink;
+
+  z-index: 50;
+}
+
+#CircularXPProgress,
+#CircularXPProgressBlur
+{
+  horizontal-align: center;
+  vertical-align: bottom;
+  width: 24px;
+  height: 24px;
+}
+#CircularXPProgressBlur_FG,
+#CircularXPProgress_FG
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1.5px solid #E7D291;
+  z-index: 50;
+  transition-property: clip;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+#CircularXPProgressBlur_BG,
+#CircularXPProgress_BG
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #393939;
+  z-index: 40;
+  background-color: #000000FF;
+}

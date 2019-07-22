@@ -3,8 +3,9 @@
 	custom_net_tables =
 	[
 		"game_state",
-		"player_perk",
+		"player_info",
 		"player_creature_index",
+		"main_creature_owner",
 		"team_max_level",
 		"rank_data",
 		"end_game_rank_data",

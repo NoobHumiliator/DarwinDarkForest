@@ -180,7 +180,7 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 	var PlayerPerkContainer = playerPanel.FindChildInLayoutFile( "PlayerPerkContainer" );
 	if ( PlayerPerkContainer )
 	{     
-		var player_perk = CustomNetTables.GetTableValue("player_perk", ""+playerId);
+		var player_perk = CustomNetTables.GetTableValue("player_info", ""+playerId).perk_table;
         
         if (player_perk!=undefined)
         {

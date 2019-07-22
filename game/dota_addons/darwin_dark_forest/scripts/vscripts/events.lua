@@ -102,7 +102,8 @@ function GameMode:OnPlayerPickHero(keys)
 
     --初始化玩家的perk点数
     GameMode.vPlayerPerk[nPlayerId]={0,0,0,0,0,0}
-    CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+    CustomNetTables:SetTableValue( "player_info", tostring(nHandlingPlayerId), {current_exp=1,next_level_need=vEXP_TABLE[2],perk_table=GameMode.vPlayerPerk[nPlayerId] } )       
+
     hHero.nCustomExp=1 --自定义经验
     
     -- 移除饰品
@@ -551,6 +552,8 @@ function GameMode:RequestCreatureIndex(keys)
     if hHero and hHero.hCurrentCreep and not hHero.hCurrentCreep:IsNull()  then
         print("Request Creature Index from Sever"..nPlayerID)
         CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerID), {creepIndex=hHero.hCurrentCreep:GetEntityIndex(),creepName=hHero.hCurrentCreep:GetUnitName(), creepLevel=hHero.hCurrentCreep:GetLevel() } )
+        CustomNetTables:SetTableValue( "main_creature_owner", tostring(nPlayerID), {creepIndex=hHero.hCurrentCreep:GetEntityIndex(),creepName=hHero.hCurrentCreep:GetUnitName(), creepLevel=hHero.hCurrentCreep:GetLevel() } )
+
     end
     
 end

@@ -48,7 +48,7 @@ function GameMode:OnPlayerSay(keys)
            hHero.nCustomExp=vEXP_TABLE[11]-1
            local nNewLevel=10
            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
-           CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+           CustomNetTables:SetTableValue( "player_info", tostring(nPlayerId), {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] })
         end
         
         -- 进化 换模型
@@ -84,8 +84,7 @@ function GameMode:OnPlayerSay(keys)
                 ParticleManager:ReleaseParticleIndex(nLevelUpParticleIndex)
              end
              --更新UI显示
-             CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
-             CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+             CustomNetTables:SetTableValue( "player_info", tostring(nPlayerId), {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
            end
         end
         --强制进化到某生物
@@ -119,10 +118,9 @@ function GameMode:OnPlayerSay(keys)
             GameMode.vPlayerPerk[nHandlingPlayerId][4] = GameRules.vUnitsKV[sText].nFury
             GameMode.vPlayerPerk[nHandlingPlayerId][5] = GameRules.vUnitsKV[sText].nDecay
             GameMode.vPlayerPerk[nHandlingPlayerId][6] = GameRules.vUnitsKV[sText].nHunt
-    
-            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nHandlingPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[nLevel+1]-vEXP_TABLE[nLevel],perk_table=GameMode.vPlayerPerk[nHandlingPlayerId] } )
-            CustomNetTables:SetTableValue( "player_perk", tostring(nHandlingPlayerId), GameMode.vPlayerPerk[nHandlingPlayerId] )
-            
+
+            CustomNetTables:SetTableValue( "player_info", tostring(nHandlingPlayerId), {current_exp=1,next_level_need=vEXP_TABLE[nLevel+1]-vEXP_TABLE[nLevel],perk_table=GameMode.vPlayerPerk[nHandlingPlayerId] } )
+
             -- 替换模型
             local hUnit = SpawnUnitToReplaceHero(sText,hHandlingHero,nHandlingPlayerId)
             AddAbilityForUnit(hUnit,nHandlingPlayerId)
@@ -163,43 +161,37 @@ function GameMode:OnPlayerSay(keys)
         if string.match(sText,"element%d") and hHero and not hHero.hCurrentCreep:IsNull() then
             local flValue= tonumber(string.match(sText,"%d+"))
             GameMode.vPlayerPerk[nPlayerId][1] = flValue
-            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
-            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+            CustomNetTables:SetTableValue( "player_info", tostring(nHandlingPlayerId), {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
         end
 
         if string.match(sText,"mystery%d") and hHero and not hHero.hCurrentCreep:IsNull() then
             local flValue= tonumber(string.match(sText,"%d+"))
             GameMode.vPlayerPerk[nPlayerId][2] = flValue
-            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
-            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+            CustomNetTables:SetTableValue( "player_info", tostring(nHandlingPlayerId), {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
         end
 
         if string.match(sText,"durable%d") and hHero and not hHero.hCurrentCreep:IsNull() then 
             local flValue= tonumber(string.match(sText,"%d+"))
             GameMode.vPlayerPerk[nPlayerId][3] = flValue
-            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
-            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+            CustomNetTables:SetTableValue( "player_info", tostring(nHandlingPlayerId), {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )       
         end
-
+        
         if string.match(sText,"fury%d") and hHero and not hHero.hCurrentCreep:IsNull() then   
             local flValue= tonumber(string.match(sText,"%d+"))
             GameMode.vPlayerPerk[nPlayerId][4] = flValue
-            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
-            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+            CustomNetTables:SetTableValue( "player_info", tostring(nHandlingPlayerId), {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )       
         end
 
         if string.match(sText,"decay%d") and hHero and not hHero.hCurrentCreep:IsNull() then   
             local flValue= tonumber(string.match(sText,"%d+"))
             GameMode.vPlayerPerk[nPlayerId][5] = flValue
-            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
-            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+            CustomNetTables:SetTableValue( "player_info", tostring(nHandlingPlayerId), {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
         end
 
         if string.match(sText,"hunt%d") and hHero and not hHero.hCurrentCreep:IsNull() then   
             local flValue= tonumber(string.match(sText,"%d+"))
             GameMode.vPlayerPerk[nPlayerId][6] = flValue
-            CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
-            CustomNetTables:SetTableValue( "player_perk", tostring(nPlayerId), GameMode.vPlayerPerk[nPlayerId] )
+            CustomNetTables:SetTableValue( "player_info", tostring(nHandlingPlayerId), {current_exp=1,next_level_need=vEXP_TABLE[hHero.nCurrentCreepLevel+1]-vEXP_TABLE[hHero.nCurrentCreepLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )       
         end
 
         --杀地图全部的生物

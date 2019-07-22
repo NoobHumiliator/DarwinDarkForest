@@ -1,18 +1,20 @@
 var radar_radius=79.18
 var perkNameMap = ["element","mystery","durable","fury","decay","hunt"];
 
-function UpdateRadar(keys)
+function UpdateRadar()
 {
-   var currentLevelExp =  keys.current_exp;
-   var nextLevelExp =  keys.next_level_need;
-   var current_exp= parseFloat(keys.current_exp).toFixed(0);
+   var player_info = CustomNetTables.GetTableValue("player_info", Players.GetLocalPlayer());
+
+   var currentLevelExp =  player_info.current_exp;
+   var nextLevelExp =  player_info.next_level_need;
+   var current_exp= parseFloat(player_info.current_exp).toFixed(0);
 
 
-   var text = current_exp + "/" + keys.next_level_need + $.Localize("#exp");
+   var text = current_exp + "/" + player_info.next_level_need + $.Localize("#exp");
    $("#LevelProgressLable").text=text;
-   $("#ProgressBarLeft").style.width= (keys.current_exp/keys.next_level_need*100)+"%";
+   $("#ProgressBarLeft").style.width= (player_info.current_exp/player_info.next_level_need*100)+"%";
     
-   var element=keys.perk_table["1"];
+   var element=player_info.perk_table["1"];
    if (element>0)
    {    
         if (element>99) { element = 99 }
@@ -24,7 +26,7 @@ function UpdateRadar(keys)
         $("#RadarDot_1").SetHasClass("Opacity", true);
    }
 
-   var durable=keys.perk_table["3"];
+   var durable=player_info.perk_table["3"];
    if (durable>0)
    {
        if (durable>99) { durable = 99 }
@@ -36,7 +38,7 @@ function UpdateRadar(keys)
        $("#RadarDot_3").SetHasClass("Opacity", true);  
    }
 
-   var decay=keys.perk_table["5"];
+   var decay=player_info.perk_table["5"];
    if (decay>0)
    {
         if (decay>99) { decay = 99 }
@@ -48,7 +50,7 @@ function UpdateRadar(keys)
         $("#RadarDot_5").SetHasClass("Opacity", true);  
     }
 
-   var mystery=keys.perk_table["2"];
+   var mystery=player_info.perk_table["2"];
    if (mystery>0)
    {
         if (mystery>99) { mystery = 99 }
@@ -60,7 +62,7 @@ function UpdateRadar(keys)
         $("#RadarDot_2").SetHasClass("Opacity", true);  
    }
 
-   var fury=keys.perk_table["4"]
+   var fury=player_info.perk_table["4"]
    if (fury>0)
    {
         if (fury>99) { fury = 99 }
@@ -71,7 +73,7 @@ function UpdateRadar(keys)
         $("#RadarDot_4").SetHasClass("Opacity", true);  
    }
    
-   var hunt=keys.perk_table["6"]
+   var hunt=player_info.perk_table["6"]
    
    if (hunt>0)
    {    
@@ -88,7 +90,7 @@ function UpdateRadar(keys)
 
 function ShowRadarTooltip(index)
 {
-    var perk =  CustomNetTables.GetTableValue( "player_perk", Players.GetLocalPlayer())[index].toFixed(1);
+    var perk =  CustomNetTables.GetTableValue( "player_info", Players.GetLocalPlayer()).perk_table[index].toFixed(1);
 
     var title=$.Localize("#"+perkNameMap[index-1])+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='#FF943F'>"+perk+"<font/>";
     var detail="#ui_detail_"+perkNameMap[index-1];
@@ -104,13 +106,13 @@ function HideRadarTooltip(index)
 
 function ShowRadarDotTooltip(index)
 {
-    var perk =  CustomNetTables.GetTableValue( "player_perk", Players.GetLocalPlayer())[index].toFixed(1);
+    var perk =  CustomNetTables.GetTableValue( "player_info", Players.GetLocalPlayer()).perk_table[index].toFixed(1);
 
     var title=$.Localize("#"+perkNameMap[index-1])+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='#FF943F'>"+perk+"<font/>";
     var detail="#ui_detail_"+perkNameMap[index-1];
 
     $.DispatchEvent("DOTAShowTitleTextTooltip", $( "#RadarDot_"+index), title, detail);
-}
+} 
 
 function HideRadarDotTooltip(index)
 {
@@ -126,7 +128,8 @@ function HideRadarDotTooltip(index)
 (function()
 {
 	//$("#PerkRadarPanel").style.position.x
-    GameEvents.Subscribe( "UpdateRadar", UpdateRadar );
+    CustomNetTables.SubscribeNetTableListener("player_info", UpdateRadar);
+
 
     // 根据分辨率 重新定位雷达位置
     var width =Game.GetScreenWidth()
