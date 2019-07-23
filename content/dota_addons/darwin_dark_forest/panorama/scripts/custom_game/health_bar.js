@@ -90,13 +90,25 @@ function UpdateHealthBar() {
             {
                 var ownerInfo = CustomNetTables.GetTableValue( "main_creature_owner",entityIndex)
                 var playInfo = CustomNetTables.GetTableValue( "player_info",""+ownerInfo.owner_id)
+                if (ownerInfo.owner_id == Players.GetLocalPlayer())
+                {
+                     panel.FindChildTraverse("HealthProgress_Left").AddClass("Highlighted")
+                } else {
+                    if (Players.GetTeam( ownerInfo.owner_id )!= Players.GetTeam( Players.GetLocalPlayer() )
+                    {
+                      panel.FindChildTraverse("HealthProgress_Left").AddClass("Highlighted")
+                    }
+                }
                 if (playInfo!=undefined)
                 {
                     var radio = playInfo.current_exp/playInfo.next_level_need
                     panel.FindChildTraverse("CircularXPProgress").value = radio;
                     panel.FindChildTraverse("CircularXPProgressBlur").value = radio;
                 }
-            } 
+            } else{
+
+
+            }
         }
     }
     

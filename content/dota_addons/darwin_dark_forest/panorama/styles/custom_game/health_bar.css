@@ -89,14 +89,23 @@
   border-width: 1px;
   border-top-width: 0px;
 }
-#HealthProgress_Left
+
+
+.Highlighted .ProgressBarLeft
 {
-  background-color: gradient( linear, 0% 0%, 0% 100%, from( #425d25  ), color-stop( 0.2, #5BA539 ), color-stop( .5, #4D9030), to( #425d25) );
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #ffffffFF ), to( #689339FF ) );
 }
-.ColorBlindModeEnabled #HealthProgress_Left
+
+.EnemyTeam .ProgressBarLeft
 {
-  background-color: gradient( linear, 0% 0%, 0% 100%, from( #658fdf  ), color-stop( 0.2, #a4caff ), color-stop( .5, #3f6fcb), to( #2c56ab ) );
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #da3700FF ), to( #921a00FF ) );
 }
+
+.Highlighted.EnemyTeam .ProgressBarLeft
+{
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #ffffffFF ), to( #689339FF ) );
+}
+
 
 #ManaBar
 {
