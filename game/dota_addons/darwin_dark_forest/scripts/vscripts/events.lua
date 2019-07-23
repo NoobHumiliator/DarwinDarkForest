@@ -552,8 +552,7 @@ function GameMode:RequestCreatureIndex(keys)
     if hHero and hHero.hCurrentCreep and not hHero.hCurrentCreep:IsNull()  then
         print("Request Creature Index from Sever"..nPlayerID)
         CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerID), {creepIndex=hHero.hCurrentCreep:GetEntityIndex(),creepName=hHero.hCurrentCreep:GetUnitName(), creepLevel=hHero.hCurrentCreep:GetLevel() } )
-        CustomNetTables:SetTableValue( "main_creature_owner", tostring(nPlayerID), {creepIndex=hHero.hCurrentCreep:GetEntityIndex(),creepName=hHero.hCurrentCreep:GetUnitName(), creepLevel=hHero.hCurrentCreep:GetLevel() } )
-
+        CustomNetTables:SetTableValue( "main_creature_owner", tostring(hHero.hCurrentCreep:GetEntityIndex()), {owner_id=nPlayerID,creepName=hHero.hCurrentCreep:GetUnitName(), creepLevel=hHero.hCurrentCreep:GetLevel() } )
     end
     
 end

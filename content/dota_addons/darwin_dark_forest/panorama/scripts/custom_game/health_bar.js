@@ -11,6 +11,30 @@ GameUI.CorrectPositionValue = function(value)
     return GameUI.GetHUDSeed() * value;
 }
 
+GameUI.GetCursorEntity = function()
+{
+    var targets = GameUI.FindScreenEntities(GameUI.GetCursorPosition());
+    var targets1 = targets.filter(function(e)
+        {
+            return e.accurateCollision;
+        });
+    var targets2 = targets.filter(function(e)
+        {
+            return !e.accurateCollision;
+        });
+    targets = targets1;
+    if (targets1.length == 0)
+    {
+        targets = targets2;
+    }
+    if (targets.length == 0)
+    {
+        return -1;
+    }
+    return targets[0].entityIndex;
+}
+
+
 function UpdateHealthBar() {
     $.Schedule(0, UpdateHealthBar);
 
@@ -21,55 +45,74 @@ function UpdateHealthBar() {
 
     //只影响视野内单位
     var screenEntities = Entities.GetAllEntitiesByClassname('npc_dota_creature')
+    var cursorEntIndex = GameUI.GetCursorEntity();
+    var cursorPanel;
     for ( var entityIndex of screenEntities )
     {
-        var panel = HealthBarRoot.FindChildTraverse(entityIndex);
-        if (panel == null || panel == undefined)
+        if (Entities.IsAlive( entityIndex ))
         {
-            panel = $.CreatePanel("Panel", HealthBarRoot, entityIndex);
-            panel.BLoadLayoutSnippet("HealthBarPanel");
+            var panel = HealthBarRoot.FindChildTraverse(entityIndex);
+            if (panel == null || panel == undefined)
+            {
+                panel = $.CreatePanel("Panel", HealthBarRoot, entityIndex);
+                panel.BLoadLayoutSnippet("HealthBarPanel");
+            }
+            panel.used = true;
+
+            panel.unitEntIndex = entityIndex;
+
+            var unitName = Entities.GetUnitName(entityIndex) 
+
+            var origin = Entities.GetAbsOrigin(entityIndex);
+            var offset = Entities.GetHealthBarOffset(entityIndex);
+            offset = offset == -1 ? 100 : offset;
+            var x = Game.WorldToScreenX(origin[0], origin[1], origin[2]+offset);
+            var y = Game.WorldToScreenY(origin[0], origin[1], origin[2]+offset);
+            panel.SetPositionInPixels(GameUI.CorrectPositionValue(x-panel.actuallayoutwidth/2), GameUI.CorrectPositionValue(y-panel.actuallayoutheight), 0);
+
+            if (entityIndex == cursorEntIndex)
+            {
+                cursorPanel = panel;
+            }
+
+            panel.SetDialogVariable("unit_name", $.Localize(unitName));
+
+            var manaPercent = Entities.GetMana(entityIndex)/Entities.GetMaxMana(entityIndex);
+            panel.FindChildTraverse("ManaProgress").value = manaPercent;
+
+            var healthPercent = Entities.GetHealth(entityIndex)/Entities.GetMaxHealth(entityIndex);
+            panel.FindChildTraverse("HealthProgress").value = healthPercent;
+
+            var level = Entities.GetLevel(entityIndex);
+            panel.FindChildTraverse("LevelLabel").text = level;
+
+            if (CustomNetTables.GetTableValue( "main_creature_owner",entityIndex)!=undefined)
+            {
+                var ownerInfo = CustomNetTables.GetTableValue( "main_creature_owner",entityIndex)
+                var playInfo = CustomNetTables.GetTableValue( "player_info",""+ownerInfo.owner_id)
+                if (playInfo!=undefined)
+                {
+                    var radio = playInfo.current_exp/playInfo.next_level_need
+                    panel.FindChildTraverse("CircularXPProgress").value = radio;
+                    panel.FindChildTraverse("CircularXPProgressBlur").value = radio;
+                }
+            } 
         }
-        panel.used = true;
-
-        panel.unitEntIndex = entityIndex;
-
-        var unitName = Entities.GetUnitName(entityIndex) 
-
-        var origin = Entities.GetAbsOrigin(entityIndex);
-        var offset = Entities.GetHealthBarOffset(entityIndex);
-        offset = offset == -1 ? 100 : offset;
-        var x = Game.WorldToScreenX(origin[0], origin[1], origin[2]+offset);
-        var y = Game.WorldToScreenY(origin[0], origin[1], origin[2]+offset);
-        panel.SetPositionInPixels(GameUI.CorrectPositionValue(x-panel.actuallayoutwidth/2), GameUI.CorrectPositionValue(y-panel.actuallayoutheight), 0);
-
-        //if (entityIndex == cursorEntIndex)
+    }
+    
+    for (var index = 0; index < HealthBarRoot.GetChildCount(); index++) {
+        var panel = HealthBarRoot.GetChild(index);
+        if (panel.used == false)
         {
-            cursorPanel = panel;
+            panel.DeleteAsync(-1);
         }
-
-        panel.SetDialogVariable("unit_name", $.Localize(unitName));
-
-        var manaPercent = Entities.GetMana(entityIndex)/Entities.GetMaxMana(entityIndex);
-        panel.FindChildTraverse("ManaProgress").value = manaPercent;
-
-        var healthPercent = Entities.GetHealthPercent(entityIndex);
-        panel.FindChildTraverse("HealthProgress").value = healthPercent;
-
-        var level = Entities.GetLevel(entityIndex);
-        panel.FindChildTraverse("LevelLabel").text = level;
-
-        if (needXp == 0)
-            percent = 1;
-        else
-            percent = levelXp/levelNeedXp;
-
-        if (percent == 1) {
-            panel.FindChildTraverse("LevelLabel").text = $.Localize("Level_Max");
-        }
-
-        
     }
 
+    // 防止遮挡
+    if (cursorPanel != undefined && cursorPanel != null)
+    {
+        HealthBarRoot.MoveChildAfter(cursorPanel, HealthBarRoot.GetChild(HealthBarRoot.GetChildCount()-1));
+    }
 
 }
 

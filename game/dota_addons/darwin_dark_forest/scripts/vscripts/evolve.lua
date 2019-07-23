@@ -203,6 +203,8 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
 
   --放在NetTable送达前台
   CustomNetTables:SetTableValue( "player_creature_index", tostring(nPlayerId), {creepIndex=hUnit:GetEntityIndex(), creepName=hUnit:GetUnitName(),creepLevel=hUnit:GetLevel()  } )
+  CustomNetTables:SetTableValue( "main_creature_owner", tostring(hUnit:GetEntityIndex()), {owner_id=nPlayerId,creepName=hUnit:GetUnitName(), creepLevel=hUnit:GetLevel() } )
+
   -- Fix for centering camera
   Timers:CreateTimer({
     callback = function()
