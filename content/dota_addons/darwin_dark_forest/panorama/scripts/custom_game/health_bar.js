@@ -90,13 +90,15 @@ function UpdateHealthBar() {
             {
                 var ownerInfo = CustomNetTables.GetTableValue( "main_creature_owner",entityIndex)
                 var playInfo = CustomNetTables.GetTableValue( "player_info",""+ownerInfo.owner_id)
+
                 if (ownerInfo.owner_id == Players.GetLocalPlayer())
                 {
                      panel.FindChildTraverse("HealthProgress_Left").AddClass("Highlighted")
                 } else {
-                    if (Players.GetTeam( ownerInfo.owner_id )!= Players.GetTeam( Players.GetLocalPlayer() )
+                    if (Players.GetTeam( ownerInfo.owner_id )!= Players.GetTeam( Players.GetLocalPlayer() ) )
                     {
                       panel.FindChildTraverse("HealthProgress_Left").AddClass("Highlighted")
+                      panel.FindChildTraverse("HealthProgress_Left").AddClass("EnemyTeam")
                     }
                 }
                 if (playInfo!=undefined)
@@ -105,9 +107,11 @@ function UpdateHealthBar() {
                     panel.FindChildTraverse("CircularXPProgress").value = radio;
                     panel.FindChildTraverse("CircularXPProgressBlur").value = radio;
                 }
-            } else{
-
-
+            } else {
+                if (Entities.GetTeamNumber(entityIndex)!= Players.GetTeam( Players.GetLocalPlayer() ))
+                {
+                    panel.FindChildTraverse("HealthProgress_Left").AddClass("EnemyTeam")
+                }
             }
         }
     }

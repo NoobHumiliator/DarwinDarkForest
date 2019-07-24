@@ -91,21 +91,26 @@
 }
 
 
-.Highlighted .ProgressBarLeft
+#HealthBar .ProgressBarLeft
+{
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #79ac43FF ), to( #689339FF ) );
+}
+
+
+#HealthBar .ProgressBarLeft.Highlighted
 {
   background-color: gradient( linear, 0% 0%, 0% 100%, from( #ffffffFF ), to( #689339FF ) );
 }
 
-.EnemyTeam .ProgressBarLeft
+#HealthBar .ProgressBarLeft.EnemyTeam
+{
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #110000FF ), to( #440000FF ) );
+}
+
+ #HealthBar .ProgressBarLeft.EnemyTeam.Highlighted
 {
   background-color: gradient( linear, 0% 0%, 0% 100%, from( #da3700FF ), to( #921a00FF ) );
 }
-
-.Highlighted.EnemyTeam .ProgressBarLeft
-{
-  background-color: gradient( linear, 0% 0%, 0% 100%, from( #ffffffFF ), to( #689339FF ) );
-}
-
 
 #ManaBar
 {
