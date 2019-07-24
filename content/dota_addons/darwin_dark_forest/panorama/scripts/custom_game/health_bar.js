@@ -66,6 +66,7 @@ function UpdateHealthBar() {
             var origin = Entities.GetAbsOrigin(entityIndex);
             var offset = Entities.GetHealthBarOffset(entityIndex);
             offset = offset == -1 ? 100 : offset;
+            offset = offset-20
             var x = Game.WorldToScreenX(origin[0], origin[1], origin[2]+offset);
             var y = Game.WorldToScreenY(origin[0], origin[1], origin[2]+offset);
             panel.SetPositionInPixels(GameUI.CorrectPositionValue(x-panel.actuallayoutwidth/2), GameUI.CorrectPositionValue(y-panel.actuallayoutheight), 0);
@@ -94,9 +95,15 @@ function UpdateHealthBar() {
                 if (ownerInfo.owner_id == Players.GetLocalPlayer())
                 {
                      panel.FindChildTraverse("HealthProgress_Left").AddClass("Highlighted")
+                     panel.FindChildTraverse("Bar").AddClass("Highlighted")
+                     panel.FindChildTraverse("LevelInfo").AddClass("Highlighted")
+                     panel.FindChildTraverse("HealthBar").AddClass("Highlighted")
                 } else {
                     if (Players.GetTeam( ownerInfo.owner_id )!= Players.GetTeam( Players.GetLocalPlayer() ) )
                     {
+                      panel.FindChildTraverse("Bar").AddClass("Highlighted")
+                      panel.FindChildTraverse("HealthBar").AddClass("Highlighted")
+                      panel.FindChildTraverse("LevelInfo").AddClass("Highlighted")
                       panel.FindChildTraverse("HealthProgress_Left").AddClass("Highlighted")
                       panel.FindChildTraverse("HealthProgress_Left").AddClass("EnemyTeam")
                     }

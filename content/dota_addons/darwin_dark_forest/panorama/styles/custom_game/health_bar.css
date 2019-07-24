@@ -57,11 +57,17 @@
 #Bar
 {
   vertical-align: top;
-  width: 70px;
+  width: 90px;
   flow-children: down;
-
   margin-top: 20px;
 }
+
+#Bar.Highlighted
+{
+  width: 140px;
+}
+
+
 #UnitName
 {
   vertical-align: center;
@@ -81,6 +87,13 @@
   width: 100%;
   height: 7px;
 }
+
+#HealthBar.Highlighted
+{
+  height: 12px;
+}
+
+
 #HealthProgress
 {
   width: 100%;
@@ -93,18 +106,18 @@
 
 #HealthBar .ProgressBarLeft
 {
-  background-color: gradient( linear, 0% 0%, 0% 100%, from( #79ac43FF ), to( #689339FF ) );
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #3A6C28 ), color-stop( 0.2, #42792F ), color-stop( .5, #51923B),  to( #3A6C28 ) );
 }
 
 
 #HealthBar .ProgressBarLeft.Highlighted
 {
-  background-color: gradient( linear, 0% 0%, 0% 100%, from( #ffffffFF ), to( #689339FF ) );
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #A9EE60 ), to( #A9EE60 ) );
 }
 
 #HealthBar .ProgressBarLeft.EnemyTeam
 {
-  background-color: gradient( linear, 0% 0%, 0% 100%, from( #110000FF ), to( #440000FF ) );
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #5F3225 ), color-stop( 0.2, #713E2D ), color-stop( .5, #834836), to( #5F3225 ) );
 }
 
  #HealthBar .ProgressBarLeft.EnemyTeam.Highlighted
@@ -115,7 +128,7 @@
 #ManaBar
 {
   width: 100%;
-  height: 5px;
+  height: 6px;
 }
 #ManaProgress
 {
@@ -133,17 +146,26 @@
 #LevelInfo
 {
   horizontal-align: right;
-  margin-top: 6px;
+  margin-top: 28px;
 
   width: 24px;
-  height: 44px;
+  height: 24px;
 }
+
+#LevelInfo.Highlighted
+{
+  margin-top: 28px;
+  width: 30px;
+  height: 30px;
+}
+
+
 #LevelBackground
 {
   horizontal-align: center;
   vertical-align: bottom;
-  width: 24px;
-  height: 24px;
+  width: 100%;
+  height: 100%;
 
   border-radius: 50%;
   background-color: #121212;
@@ -155,8 +177,8 @@
   margin-top: 1px;
   padding: 1px;
 
-  width: 24px;
-  height: 24px;
+  width: 100%;
+  height: 100%;
 
   color: #E7D291;
   text-shadow: 0px 0px 2.25px 2.7 #EC780E24;
@@ -171,8 +193,8 @@
 {
   horizontal-align: center;
   vertical-align: bottom;
-  width: 24px;
-  height: 24px;
+  width: 100%;
+  height: 100%;
 }
 #CircularXPProgressBlur_FG,
 #CircularXPProgress_FG
