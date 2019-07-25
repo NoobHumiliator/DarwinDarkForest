@@ -38,6 +38,11 @@ GameUI.GetCursorEntity = function()
 function UpdateHealthBar() {
     $.Schedule(0, UpdateHealthBar);
 
+    
+    var average_level = CustomNetTables.GetTableValue( "game_state","game_state").average_level
+    var creepLevel = CustomNetTables.GetTableValue( "player_creature_index",Players.GetLocalPlayer()).creepLevel
+
+
     for (var index = 0; index < HealthBarRoot.GetChildCount(); index++) {
         var panel = HealthBarRoot.GetChild(index);
         panel.used = false;
@@ -61,12 +66,10 @@ function UpdateHealthBar() {
 
             panel.unitEntIndex = entityIndex;
 
-            var unitName = Entities.GetUnitName(entityIndex) 
-
             var origin = Entities.GetAbsOrigin(entityIndex);
             var offset = Entities.GetHealthBarOffset(entityIndex);
             offset = offset == -1 ? 100 : offset;
-            offset = offset-20
+
             var x = Game.WorldToScreenX(origin[0], origin[1], origin[2]+offset);
             var y = Game.WorldToScreenY(origin[0], origin[1], origin[2]+offset);
             panel.SetPositionInPixels(GameUI.CorrectPositionValue(x-panel.actuallayoutwidth/2), GameUI.CorrectPositionValue(y-panel.actuallayoutheight), 0);
@@ -75,8 +78,6 @@ function UpdateHealthBar() {
             {
                 cursorPanel = panel;
             }
-
-            panel.SetDialogVariable("unit_name", $.Localize(unitName));
 
             var manaPercent = Entities.GetMana(entityIndex)/Entities.GetMaxMana(entityIndex);
             panel.FindChildTraverse("ManaProgress").value = manaPercent;
@@ -91,33 +92,71 @@ function UpdateHealthBar() {
             {
                 var ownerInfo = CustomNetTables.GetTableValue( "main_creature_owner",entityIndex)
                 var playInfo = CustomNetTables.GetTableValue( "player_info",""+ownerInfo.owner_id)
-
-                if (ownerInfo.owner_id == Players.GetLocalPlayer())
+                
+                if (Game.GetPlayerInfo(ownerInfo.owner_id)!=undefined)
                 {
-                     panel.FindChildTraverse("HealthProgress_Left").AddClass("Highlighted")
-                     panel.FindChildTraverse("Bar").AddClass("Highlighted")
-                     panel.FindChildTraverse("LevelInfo").AddClass("Highlighted")
-                     panel.FindChildTraverse("HealthBar").AddClass("Highlighted")
-                } else {
-                    if (Players.GetTeam( ownerInfo.owner_id )!= Players.GetTeam( Players.GetLocalPlayer() ) )
+                    panel.SetDialogVariable("unit_name", Game.GetPlayerInfo(ownerInfo.owner_id).player_name);
+                    panel.FindChildTraverse("UnitName").style.color=GameUI.CustomUIConfig().team_colors[Players.GetTeam(ownerInfo.owner_id)]
+                    panel.FindChildTraverse("UnitName").AddClass("PlayerName")
+                    
+                    if (ownerInfo.owner_id == Players.GetLocalPlayer())
                     {
-                      panel.FindChildTraverse("Bar").AddClass("Highlighted")
-                      panel.FindChildTraverse("HealthBar").AddClass("Highlighted")
-                      panel.FindChildTraverse("LevelInfo").AddClass("Highlighted")
-                      panel.FindChildTraverse("HealthProgress_Left").AddClass("Highlighted")
-                      panel.FindChildTraverse("HealthProgress_Left").AddClass("EnemyTeam")
+                         panel.FindChildTraverse("HealthProgress_Left").AddClass("Highlighted")
+                         panel.FindChildTraverse("Bar").AddClass("Highlighted")
+                         panel.FindChildTraverse("LevelInfo").AddClass("Highlighted")
+                         panel.FindChildTraverse("HealthBar").AddClass("Highlighted")
+
+                    } else {
+                        if (Players.GetTeam( ownerInfo.owner_id )!= Players.GetTeam( Players.GetLocalPlayer() ) )
+                        {
+                          panel.FindChildTraverse("Bar").AddClass("Highlighted")
+                          panel.FindChildTraverse("HealthBar").AddClass("Highlighted")
+                          panel.FindChildTraverse("LevelInfo").AddClass("Highlighted")
+                          panel.FindChildTraverse("HealthProgress_Left").AddClass("Highlighted")
+                          panel.FindChildTraverse("HealthProgress_Left").AddClass("EnemyTeam")
+                          panel.FindChildTraverse("ManaBar").AddClass("Hidden")
+                          panel.FindChildTraverse("ThreatImage").AddClass("Threat_Red")
+                        }
+                    }
+                    if (playInfo!=undefined)
+                    {
+                        var radio = playInfo.current_exp/playInfo.next_level_need
+                        panel.FindChildTraverse("CircularXPProgress").value = radio;
+                        panel.FindChildTraverse("CircularXPProgressBlur").value = radio;
                     }
                 }
-                if (playInfo!=undefined)
-                {
-                    var radio = playInfo.current_exp/playInfo.next_level_need
-                    panel.FindChildTraverse("CircularXPProgress").value = radio;
-                    panel.FindChildTraverse("CircularXPProgressBlur").value = radio;
-                }
             } else {
+                
+                var unitName = Entities.GetUnitName(entityIndex) 
+                panel.SetDialogVariable("unit_name", $.Localize(unitName));
+
                 if (Entities.GetTeamNumber(entityIndex)!= Players.GetTeam( Players.GetLocalPlayer() ))
                 {
                     panel.FindChildTraverse("HealthProgress_Left").AddClass("EnemyTeam")
+                    panel.FindChildTraverse("ManaBar").AddClass("Hidden")
+                    if (creepLevel>average_level)
+                    {
+                      panel.FindChildTraverse("ThreatImage").AddClass("Threat_Red")
+                    }
+                    if (creepLevel<average_level)
+                    {
+                      panel.FindChildTraverse("ThreatImage").AddClass("Threat_Green")
+                    }
+                    if (creepLevel==average_level)
+                    {   
+                        if (Entities.GetLevel( entityIndex ) == creepLevel)
+                        {
+                           panel.FindChildTraverse("ThreatImage").AddClass("Threat_Yellow") 
+                        } 
+                        if (Entities.GetLevel( entityIndex ) < creepLevel)
+                        {
+                           panel.FindChildTraverse("ThreatImage").AddClass("Threat_Red") 
+                        }
+                        if (Entities.GetLevel( entityIndex ) > creepLevel)
+                        {
+                           panel.FindChildTraverse("ThreatImage").AddClass("Threat_Green") 
+                        } 
+                    }               
                 }
             }
         }

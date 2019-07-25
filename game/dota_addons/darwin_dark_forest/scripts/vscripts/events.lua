@@ -1,6 +1,7 @@
 --[[ events.lua ]]
 LinkLuaModifier( "modifier_zero_cooldown_and_mana_cost", "modifiers/modifier_zero_cooldown_and_mana_cost", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier( "modifier_respawn_invulnerable", "modifiers/modifier_respawn_invulnerable", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_no_health_bar", "modifiers/modifier_no_health_bar", LUA_MODIFIER_MOTION_NONE )
 
 ---------------------------------------------------------------------------
 -- Event: Game state change handler
@@ -256,6 +257,8 @@ function GameMode:OnEntityKilled(keys)
 
        -- 保证是玩家的主控生物
        if hHero and hHero.hCurrentCreep == hKilledUnit and true~=hHero.hCurrentCreep.bKillByMech then
+          
+          CustomNetTables:SetTableValue( "main_creature_owner", tostring(hKilledUnit:GetEntityIndex()), {owner_id=-2,creepName=hKilledUnit:GetUnitName(), creepLevel=hKilledUnit:GetLevel() } )
 
           hHero:Kill(nil, hKillerUnit)
 
@@ -433,6 +436,7 @@ function GameMode:OnNPCSpawned( event )
 
     local hSpawnedUnit = EntIndexToHScript( event.entindex )
     --print("hSpawnedUnit:GetUnitName()"..hSpawnedUnit:GetUnitName())
+    hSpawnedUnit:AddNewModifier(hSpawnedUnit, nil, "modifier_no_health_bar", {})
 
     --如果已经初始化过 （是复生 而不是第一次选出来）
     if hSpawnedUnit:IsHero() and hSpawnedUnit.nCurrentCreepLevel then

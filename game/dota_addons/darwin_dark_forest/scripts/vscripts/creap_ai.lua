@@ -137,6 +137,11 @@ function TryCastAbility(hTarget)
  	if thisEntity:GetLevel()>10 and thisEntity.hLastAttacker~=hTarget then
         bWillCastAbility=false
  	end
+
+ 	--同级生物 不主动释放技能
+ 	if thisEntity:GetLevel()==hTarget:GetLevel() and thisEntity.hLastAttacker~=hTarget then
+        bWillCastAbility=false
+ 	end
  	
     if bWillCastAbility then
 	 	local flAbilityCastTime = CastAbility(hTarget)

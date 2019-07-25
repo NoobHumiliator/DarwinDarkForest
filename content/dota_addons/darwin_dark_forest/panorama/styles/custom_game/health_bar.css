@@ -15,6 +15,11 @@
   opacity: 0;
 }
 
+.Hidden
+{
+  opacity: 0;
+}
+
 .HealthBarPanel.hover
 {
   z-index: 10;
@@ -34,22 +39,26 @@
 
 #Threat
 {
-  margin-top: 26px;
+  margin-top: 30px;
 }
 #ThreatImage
 {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
-.Threat_Green #ThreatImage
+#ThreatImage.Threat_Green
 {
   background-image: url("file://{images}/custom_game/perk_radar/green.png");
 }
-.Threat_Red #ThreatImage
+#ThreatImage.Threat_Yellow
+{
+  background-image: url("file://{images}/custom_game/perk_radar/yellow.png");
+}
+#ThreatImage.Threat_Red
 {
   background-image: url("file://{images}/custom_game/perk_radar/red.png");
 }
@@ -64,7 +73,7 @@
 
 #Bar.Highlighted
 {
-  width: 140px;
+  width: 120px;
 }
 
 
@@ -74,13 +83,23 @@
   horizontal-align: center;
 
   width: 100%;
-  height: 15px;
+  height: 20px;
 
   text-align: center;
   text-overflow: shrink;
 
   z-index: 50;
+  font-size: 30px;
+
+  color: #ffffff;
 }
+
+.PlayerName
+{
+   font-weight: bold;
+}
+
+
 
 #HealthBar
 {
@@ -90,7 +109,7 @@
 
 #HealthBar.Highlighted
 {
-  height: 12px;
+  height: 11px;
 }
 
 
@@ -146,7 +165,7 @@
 #LevelInfo
 {
   horizontal-align: right;
-  margin-top: 28px;
+  margin-top: 32px;
 
   width: 24px;
   height: 24px;
@@ -154,9 +173,7 @@
 
 #LevelInfo.Highlighted
 {
-  margin-top: 28px;
-  width: 30px;
-  height: 30px;
+  margin-top: 38px;
 }
 
 
