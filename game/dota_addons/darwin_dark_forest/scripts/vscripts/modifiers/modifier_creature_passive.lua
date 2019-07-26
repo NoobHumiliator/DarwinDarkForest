@@ -75,6 +75,10 @@ function modifier_creature_passive:GetModifierProvidesFOWVision()
 	        return 1
 	    end
 
+	    if GameRules.bUltimateStage and self:GetParent():GetTeam()~=DOTA_TEAM_NEUTRALS then
+	        return 1
+	    end
+
 	    return 0
 	end
 end

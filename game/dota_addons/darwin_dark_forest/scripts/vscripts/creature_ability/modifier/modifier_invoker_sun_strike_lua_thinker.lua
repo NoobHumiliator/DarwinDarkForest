@@ -15,7 +15,7 @@ end
 function modifier_invoker_sun_strike_lua_thinker:OnCreated( kv )
 	if IsServer() then
 		-- references
-		self.damage = self:GetAbility():GetOrbSpecialValueFor("damage","e")
+		self.damage = self:GetAbility():GetSpecialValueFor("damage")
 		self.radius = self:GetAbility():GetSpecialValueFor("area_of_effect")
 
 		-- Play effects
@@ -35,15 +35,15 @@ function modifier_invoker_sun_strike_lua_thinker:OnDestroy( kv )
 		}
 
 		local enemies = FindUnitsInRadius(
-			self:GetCaster():GetTeamNumber(),	-- int, your team number
-			self:GetParent():GetOrigin(),	-- point, center point
-			nil,	-- handle, cacheUnit. (not known)
-			self.radius,	-- float, radius. or use FIND_UNITS_EVERYWHERE
-			DOTA_UNIT_TARGET_TEAM_ENEMY,	-- int, team filter
-			DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,	-- int, type filter
-			DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES,	-- int, flag filter
-			0,	-- int, order filter
-			false	-- bool, can grow cache
+			self:GetCaster():GetTeamNumber(),
+			self:GetParent():GetOrigin(),	
+			nil,	
+			self.radius,	
+			DOTA_UNIT_TARGET_TEAM_ENEMY,	
+			DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,
+			DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES,	
+			0,
+			false
 		)
 
 		for _,enemy in pairs(enemies) do
@@ -52,10 +52,8 @@ function modifier_invoker_sun_strike_lua_thinker:OnDestroy( kv )
 			ApplyDamage(damageTable)
 		end
 
-		-- Play effects
 		self:PlayEffects2()
 
-		-- remove thinker
 		UTIL_Remove( self:GetParent() )
 	end
 end

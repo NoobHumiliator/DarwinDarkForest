@@ -60,7 +60,7 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 		playerPanel.SetHasClass( "local_player_teammate", isTeammate && ( playerId != Game.GetLocalPlayerID() ) );
 
 		_ScoreboardUpdater_SetTextSafe( playerPanel, "RespawnTimer", ( playerInfo.player_respawn_seconds + 1 ) ); // value is rounded down so just add one for rofd-up	
-		//_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerName", playerInfo.player_name );
+		_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerName", playerInfo.player_name );
 		_ScoreboardUpdater_SetTextSafe( playerPanel, "Level", playerInfo.player_level );
 		_ScoreboardUpdater_SetTextSafe( playerPanel, "Kills", playerInfo.player_kills );
 		_ScoreboardUpdater_SetTextSafe( playerPanel, "Deaths", playerInfo.player_deaths );
@@ -91,27 +91,6 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
                 	playerPortrait.SetImage( "file://{images}/custom_game/creature_portrait/"+unitName+".png" );
                 }
                 
-                if (CustomNetTables.GetTableValue( "game_state","game_state")!=undefined ) 
-                {  
-                	var average_level = CustomNetTables.GetTableValue( "game_state","game_state").average_level
-                	if (creepLevel==average_level)
-                	{
-		               _ScoreboardUpdater_SetHtmlSafe( playerPanel, "PlayerName", "<font color='#FFFF66'>"+playerInfo.player_name+"</font>" );
-                	}
-                	if (creepLevel>average_level)
-                	{
-		               _ScoreboardUpdater_SetHtmlSafe( playerPanel, "PlayerName", "<font color='#EA7070'>"+playerInfo.player_name+"</font>" );
-                	}
-                	if (creepLevel<average_level)
-                	{
-		               _ScoreboardUpdater_SetHtmlSafe( playerPanel, "PlayerName", "<font color='#70EA72'>"+playerInfo.player_name+"</font>" );
-                	}
-                } else {	
-
-                    _ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerName", playerInfo.player_name );
-
-                }
-
 				//playerPortrait.SetImage( "file://{images}/heroes/" + playerInfo.player_selected_hero + ".png" );
 			}
 			else

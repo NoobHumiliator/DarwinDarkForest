@@ -94,6 +94,23 @@
   color: #ffffff;
 }
 
+
+#UnitName.Threat_Green
+{
+    text-shadow: 0px 0px 2.25px 2.0 #008000;
+
+}
+#UnitName.Threat_Yellow
+{
+   text-shadow: 0px 0px 2.25px 2.0 #EEB422;
+
+}
+#UnitName.Threat_Red
+{
+   text-shadow: 0px 0px 2.25px 2.0 #B22222;
+}
+
+
 .PlayerName
 {
    font-weight: bold;

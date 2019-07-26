@@ -40,6 +40,78 @@ spectre_haunt_lua="spectre_reality_lua",
 }
 
 
+ALEARY_PRECACHE_UNIT ={}
+
+ABILITY_PRECACHE_MAP = {
+    antimage_blink="npc_precache_npc_dota_hero_antimage",
+    crystal_maiden_frostbite="npc_precache_npc_dota_hero_crystal_maiden",
+    morphling_waveform="npc_precache_npc_dota_hero_morphling",
+    invoker_tornado="npc_precache_npc_dota_hero_invoker",
+    crystal_maiden_crystal_nova="npc_precache_npc_dota_hero_crystal_maiden",
+    lich_chain_frost="npc_precache_npc_dota_hero_lich",
+    dragon_knight_breathe_fire="npc_precache_npc_dota_hero_dragon_knight",
+    shredder_reactive_armor="npc_precache_npc_dota_hero_shredder",
+    mars_bulwark="npc_precache_npc_dota_hero_mars",
+    tiny_grow="npc_precache_npc_dota_hero_tiny",
+    bristleback_bristleback="npc_precache_npc_dota_hero_bristleback",
+    sandking_epicenter="npc_precache_npc_dota_hero_sandking",
+    lich_frost_shield="npc_precache_npc_dota_hero_lich",
+    dark_seer_surge="npc_precache_npc_dota_hero_dark_seer",
+    templar_assassin_psionic_trap="npc_precache_npc_dota_hero_templar_assassin",
+    wisp_relocate="npc_precache_npc_dota_hero_wisp",
+    ancient_apparition_ice_blast="npc_precache_npc_dota_hero_ancient_apparition",
+    storm_spirit_ball_lightning="npc_precache_npc_dota_hero_storm_spirit",
+    dark_seer_vacuum="npc_precache_npc_dota_hero_dark_seer",
+    templar_assassin_refraction="npc_precache_npc_dota_hero_templar_assassin",
+    spectre_dispersion="npc_precache_npc_dota_hero_spectre",
+    broodmother_spin_web="npc_precache_npc_dota_hero_broodmother",
+    night_stalker_hunter_in_the_night="npc_precache_npc_dota_hero_night_stalker",
+    night_stalker_darkness="npc_precache_npc_dota_hero_night_stalker",
+    ember_spirit_searing_chains="npc_precache_npc_dota_hero_ember_spirit",
+    tidehunter_gush="npc_precache_npc_dota_hero_tidehunter",
+    razor_eye_of_the_storm="npc_precache_npc_dota_hero_razor",
+    phantom_assassin_blur="npc_precache_npc_dota_hero_phantom_assassin",
+    spirit_breaker_greater_bash="npc_precache_npc_dota_hero_spirit_breaker",
+    sandking_burrowstrike="npc_precache_npc_dota_hero_sandking",
+    riki_smoke_screen="npc_precache_npc_dota_hero_riki",
+    bane_brain_sap="npc_precache_npc_dota_hero_bane",
+    riki_blink_strike="npc_precache_npc_dota_hero_riki",
+    clinkz_strafe="npc_precache_npc_dota_hero_clinkz",
+    phantom_assassin_coup_de_grace="npc_precache_npc_dota_hero_phantom_assassin",
+    ursa_overpower="npc_precache_npc_dota_hero_ursa",
+    ursa_fury_swipes="npc_precache_npc_dota_hero_ursa",
+    huskar_berserkers_blood="npc_precache_npc_dota_hero_huskar",
+    ember_spirit_sleight_of_fist="npc_precache_npc_dota_hero_ember_spirit",
+    clinkz_searing_arrows="npc_precache_npc_dota_hero_clinkz",
+    mars_gods_rebuke="npc_precache_npc_dota_hero_mars",
+    centaur_double_edge="npc_precache_npc_dota_hero_centaur",
+    centaur_khan_war_stomp="npc_precache_npc_dota_hero_centaur",
+    huskar_life_break="npc_precache_npc_dota_hero_huskar",
+    alchemist_chemical_rage="npc_precache_npc_dota_hero_alchemist",
+    slardar_amplify_damage="npc_precache_npc_dota_hero_slardar",
+    faceless_void_chronosphere="npc_precache_npc_dota_hero_faceless_void",
+    slardar_bash="npc_precache_npc_dota_hero_slardar",
+    broodmother_insatiable_hunger="npc_precache_npc_dota_hero_broodmother",
+    troll_warlord_battle_trance="npc_precache_npc_dota_hero_troll_warlord",
+    spirit_breaker_charge_of_darkness="npc_precache_npc_dota_hero_spirit_breaker",
+    spectre_desolate="npc_precache_npc_dota_hero_spectre",
+    clinkz_death_pact="npc_precache_npc_dota_hero_clinkz",
+    death_prophet_carrion_swarm="npc_precache_npc_dota_hero_death_prophet",
+    skeleton_king_hellfire_blast="npc_precache_npc_dota_hero_skeleton_king",
+    pugna_nether_blast="npc_precache_npc_dota_hero_pugna",
+    visage_summon_familiars_stone_form="npc_precache_npc_dota_hero_visage",
+    warlock_shadow_word="npc_precache_npc_dota_hero_warlock",
+    dazzle_bad_juju="npc_precache_npc_dota_hero_dazzle",
+    enigma_midnight_pulse="npc_precache_npc_dota_hero_enigma",
+    pudge_meat_hook="npc_precache_npc_dota_hero_pudge",
+    venomancer_poison_nova="npc_precache_npc_dota_hero_venomancer",
+    doom_bringer_infernal_blade="npc_precache_npc_dota_hero_doom_bringer",
+    life_stealer_rage="npc_precache_npc_dota_hero_life_stealer",
+    skeleton_king_mortal_strike="npc_precache_npc_dota_hero_skeleton_king",    
+}
+
+
+
 --进化 
 function Evolve (nPlayerId,hHero)
    
@@ -318,15 +390,43 @@ function AddAbilityForUnit(hUnit,nPlayerId)
 
           --为单位添加技能
           print("AddAbility"..sNewAbilityName)
-          hUnit:AddAbility(sNewAbilityName)
-
-          hUnit:FindAbilityByName(sNewAbilityName):SetLevel(nAbilityLevel)
           
-          --添加配对技能
-          if vPairedAbility[sNewAbilityName]~=nil then
-              if not hUnit:HasAbility(vPairedAbility[sNewAbilityName]) then
-                hUnit:AddAbility(vPairedAbility[sNewAbilityName])
-                hUnit:FindAbilityByName(vPairedAbility[sNewAbilityName]):SetLevel(nAbilityLevel)
+          local bToPrecache = false
+
+          if ABILITY_PRECACHE_MAP[sNewAbilityName] then
+             if ALEARY_PRECACHE_UNIT[ABILITY_PRECACHE_MAP[sNewAbilityName]]==nil then
+                --添加在回调函数处理
+                bToPrecache = true
+                local sToPrecacheUnitName = ABILITY_PRECACHE_MAP[sNewAbilityName]
+                ALEARY_PRECACHE_UNIT[sToPrecacheUnitName]=true
+                print("Prcaching Unit:"..sToPrecacheUnitName)
+                PrecacheUnitByNameAsync(sToPrecacheUnitName, function() 
+                   
+                    hUnit:AddAbility(sNewAbilityName)
+                    hUnit:FindAbilityByName(sNewAbilityName):SetLevel(nAbilityLevel)
+      
+                    --添加配对技能
+                    if vPairedAbility[sNewAbilityName]~=nil then
+                        if not hUnit:HasAbility(vPairedAbility[sNewAbilityName]) then
+                          hUnit:AddAbility(vPairedAbility[sNewAbilityName])
+                          hUnit:FindAbilityByName(vPairedAbility[sNewAbilityName]):SetLevel(nAbilityLevel)
+                        end
+                    end
+
+                end)
+             end
+          end
+          
+          --不需要预载入 直接添加技能即可
+          if not bToPrecache then
+              hUnit:AddAbility(sNewAbilityName)
+              hUnit:FindAbilityByName(sNewAbilityName):SetLevel(nAbilityLevel)
+              --添加配对技能
+              if vPairedAbility[sNewAbilityName]~=nil then
+                  if not hUnit:HasAbility(vPairedAbility[sNewAbilityName]) then
+                    hUnit:AddAbility(vPairedAbility[sNewAbilityName])
+                    hUnit:FindAbilityByName(vPairedAbility[sNewAbilityName]):SetLevel(nAbilityLevel)
+                  end
               end
           end
 
@@ -357,9 +457,8 @@ end
 
 function GameEnterUltimateStage  (nPlayerId)
     local sPlayerName=PlayerResource:GetPlayerName(nPlayerId)
-    Notifications:TopToAll({text = sPlayerName.." ", duration = 4})
-    Notifications:TopToAll({text = "#UltimateStageNote", duration = 4, style = {color = "Orange"}, continue = true})       --无法复活 关闭战争迷雾
-    GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
+    Notifications:TopToAll({text = sPlayerName.." ", duration = 6})
+    Notifications:TopToAll({text = "#UltimateStageNote", duration = 6, style = {color = "Orange"}, continue = true})       --无法复活 关闭战争迷雾
     GameRules.bUltimateStage=true
 end
 

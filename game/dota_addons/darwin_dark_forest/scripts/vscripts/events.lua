@@ -258,7 +258,7 @@ function GameMode:OnEntityKilled(keys)
        -- 保证是玩家的主控生物
        if hHero and hHero.hCurrentCreep == hKilledUnit and true~=hHero.hCurrentCreep.bKillByMech then
           
-          CustomNetTables:SetTableValue( "main_creature_owner", tostring(hKilledUnit:GetEntityIndex()), {owner_id=-2,creepName=hKilledUnit:GetUnitName(), creepLevel=hKilledUnit:GetLevel() } )
+          CustomNetTables:SetTableValue( "main_creature_owner", tostring(hKilledUnit:GetEntityIndex()), nil )
 
           hHero:Kill(nil, hKillerUnit)
 

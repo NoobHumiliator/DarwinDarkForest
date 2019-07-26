@@ -54,7 +54,7 @@ function UpdateHealthBar() {
     var cursorPanel;
     for ( var entityIndex of screenEntities )
     {
-        if (Entities.IsAlive( entityIndex ))
+        if (Entities.IsAlive( entityIndex ) &&  (!Entities.IsUnselectable( entityIndex )) )
         {
             var panel = HealthBarRoot.FindChildTraverse(entityIndex);
             if (panel == null || panel == undefined)
@@ -115,7 +115,6 @@ function UpdateHealthBar() {
                           panel.FindChildTraverse("HealthProgress_Left").AddClass("Highlighted")
                           panel.FindChildTraverse("HealthProgress_Left").AddClass("EnemyTeam")
                           panel.FindChildTraverse("ManaBar").AddClass("Hidden")
-                          panel.FindChildTraverse("ThreatImage").AddClass("Threat_Red")
                         }
                     }
                     if (playInfo!=undefined)
@@ -134,29 +133,46 @@ function UpdateHealthBar() {
                 {
                     panel.FindChildTraverse("HealthProgress_Left").AddClass("EnemyTeam")
                     panel.FindChildTraverse("ManaBar").AddClass("Hidden")
-                    if (creepLevel>average_level)
+
+                    if (Entities.HasAttackCapability( entityIndex ))
                     {
-                      panel.FindChildTraverse("ThreatImage").AddClass("Threat_Red")
-                    }
-                    if (creepLevel<average_level)
-                    {
-                      panel.FindChildTraverse("ThreatImage").AddClass("Threat_Green")
-                    }
-                    if (creepLevel==average_level)
-                    {   
-                        if (Entities.GetLevel( entityIndex ) == creepLevel)
+                        if (creepLevel>average_level)
                         {
-                           panel.FindChildTraverse("ThreatImage").AddClass("Threat_Yellow") 
-                        } 
-                        if (Entities.GetLevel( entityIndex ) < creepLevel)
-                        {
-                           panel.FindChildTraverse("ThreatImage").AddClass("Threat_Red") 
+                          panel.FindChildTraverse("UnitName").AddClass("Threat_Red")
+                          panel.FindChildTraverse("UnitName").RemoveClass("Threat_Green")
+                          panel.FindChildTraverse("UnitName").RemoveClass("Threat_Yellow")
                         }
-                        if (Entities.GetLevel( entityIndex ) > creepLevel)
+                        if (creepLevel<average_level)
                         {
-                           panel.FindChildTraverse("ThreatImage").AddClass("Threat_Green") 
-                        } 
-                    }               
+                          panel.FindChildTraverse("UnitName").AddClass("Threat_Green")
+                          panel.FindChildTraverse("UnitName").RemoveClass("Threat_Red")
+                          panel.FindChildTraverse("UnitName").RemoveClass("Threat_Yellow")
+                        }
+                        if (creepLevel==average_level)
+                        {   
+                            if (Entities.GetLevel( entityIndex ) == creepLevel)
+                            {
+                               panel.FindChildTraverse("UnitName").AddClass("Threat_Yellow") 
+                               panel.FindChildTraverse("UnitName").RemoveClass("Threat_Red")
+                               panel.FindChildTraverse("UnitName").RemoveClass("Threat_Green")
+                            } 
+                            if (Entities.GetLevel( entityIndex ) < creepLevel)
+                            {
+                               panel.FindChildTraverse("UnitName").AddClass("Threat_Red")
+                               panel.FindChildTraverse("UnitName").RemoveClass("Threat_Green")
+                               panel.FindChildTraverse("UnitName").RemoveClass("Threat_Yellow")
+                            }
+                            if (Entities.GetLevel( entityIndex ) > creepLevel)
+                            {
+                               panel.FindChildTraverse("UnitName").AddClass("Threat_Green")
+                               panel.FindChildTraverse("UnitName").RemoveClass("Threat_Red")
+                               panel.FindChildTraverse("UnitName").RemoveClass("Threat_Yellow")
+                            } 
+                        }
+                    } else {
+
+                        panel.FindChildTraverse("UnitName").AddClass("Threat_Green")
+                    }             
                 }
             }
         }

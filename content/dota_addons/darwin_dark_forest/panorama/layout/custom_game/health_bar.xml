@@ -13,9 +13,6 @@
         <Panel class="HealthBarPanel" hittest="false" hittestchildren="false" >
           <Panel id="HealthBarContainer" hittest="false" >
             <Panel id="HealthBarStatusBar" >
-              <Panel id="Threat" >
-                <Panel id="ThreatImage" />
-              </Panel>
               <Panel id="Bar" >
                 <Label id="UnitName" text="{s:unit_name}" />
                 <Panel id="HealthBar" >

@@ -162,6 +162,7 @@
 
                 "States"
                 {
+                    
                     //"MODIFIER_STATE_UNSELECTABLE"       "MODIFIER_STATE_VALUE_ENABLED"
                     "MODIFIER_STATE_NO_HEALTH_BAR"      "MODIFIER_STATE_VALUE_ENABLED"
                     "MODIFIER_STATE_INVULNERABLE"       "MODIFIER_STATE_VALUE_ENABLED"
@@ -8240,7 +8241,6 @@
         "ScriptFile"                    "creature_ability/invoker_sun_strike_lua"
         "AbilityTextureName"            "invoker_sun_strike"
         "FightRecapLevel"               "1"
-        "MaxLevel"                      "8"
         "precache"
         {
             "soundfile" "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
@@ -8257,6 +8257,8 @@
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_ALL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
 
+        "MaxLevel"                      "8"
+
         // Ability Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "0"
@@ -8264,7 +8266,7 @@
 
         // Ability Resource
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "25"
+        "AbilityCooldown"               "15"
         "AbilityManaCost"               "175"
 
         // Damage
@@ -8287,7 +8289,7 @@
             "03"
             {
                 "var_type"              "FIELD_FLOAT"
-                "damage"                "100 162.5 225 287.5 350 412.5 475 537.5"
+                "damage"                "160 240 340 460 600 760 940 1140"
             }
             "04"
             {
@@ -8303,6 +8305,11 @@
             {
                 "var_type"              "FIELD_INTEGER"
                 "nElement"              "4 8 12 16 20 24 28 32"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "nMystery"              "4 8 12 16 20 24 28 32"
             }
         }
     }

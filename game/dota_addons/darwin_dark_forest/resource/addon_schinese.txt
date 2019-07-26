@@ -1634,7 +1634,7 @@
 
 
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua"                                "虚灵分裂"
-    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_Description"                    "在反复经过几次成功的攻击后，虚灵会分裂。"
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_Description"                    "在反复经过几次成功的攻击后，虚灵会分裂。每个玩家做多可以控制10个分裂体，超过上限不在分裂。"
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_count"                          "分裂所需攻击次数"
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_duration"                       "分裂体持续时间："
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_illusion_damage_outgoing"       "%分裂体继承攻击力："
@@ -2016,6 +2016,14 @@
     "DOTA_Tooltip_modifier_centaur_return_lua_buff"               "反伤"
     "DOTA_Tooltip_modifier_centaur_return_lua_buff_Description"   "获得%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成。"
 
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua"                      "阳炎冲击"
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua_Description"          "向目标区域释放毁灭性的阳炎之光能量，一旦能量着陆，将对区域内的敌人进行灼烧。区域内敌人将平摊所有伤害。"
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua_area_of_effect"       "作用范围："
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua_delay"                "延迟:"
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua_damage"               "伤害:"
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua_nElement"             "<font color='#00a0e9'>元素：</font>"
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua_nMystery"             "<font color='#e9c2ff'>神秘：</font>"
+
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "巫妖"
@@ -2279,6 +2287,8 @@
 	"npc_dota_creature_bane_slumbering_terror"                  "祸乱之源"
 	"npc_dota_creature_bane_heir_of_terror_slumbering_terror"                  "恐惧之裔"
 	"npc_dota_creature_bane_lucid_torment_slumbering_terror"                  "无休折磨"
+
+
 	//PlayerUnitBegins
     "npc_dota_creature_player_summoned_familiar"                                           "佣兽"
     "npc_dota_creature_player_wraith_warrior"                                              "冥界士兵"

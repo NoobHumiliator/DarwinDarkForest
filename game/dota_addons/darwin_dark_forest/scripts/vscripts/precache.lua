@@ -27,31 +27,9 @@ local sounds = {
     "soundevents/game_sounds_creeps.vsndevts",
     "soundevents/game_sounds_ui.vsndevts",
     --KV里面没用过的音效，写在这里
-    "soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_warlock.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_death_prophet.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_furion.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_disruptor.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_templar_assassin.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_mars.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts",
-    "soundevents/game_sounds_heroes/game_sounds_bristleback.vsndevts",
 }
+
+
 
 local function PrecacheEverythingFromTable( context, kvtable)
     for key, value in pairs(kvtable) do

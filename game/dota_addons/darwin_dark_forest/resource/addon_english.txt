@@ -1983,7 +1983,14 @@
     "DOTA_Tooltip_modifier_centaur_return_lua_stack_Description"  "Activate to grant additional attack damage per stack."
     "DOTA_Tooltip_modifier_centaur_return_lua_buff"               "Retaliate"
     "DOTA_Tooltip_modifier_centaur_return_lua_buff_Description"   "Gaining %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%% additional attack damage."
-
+    
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua"                      "Sun Strike"
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua_Description"          "Sends a catastrophic ray of fierce energy from the sun at any targeted location, incinerating all enemies standing beneath it once it reaches the earth. Deals damage based on the level of <font color='#cabe68'>Exort</font>, however this damage is spread evenly over all enemies hit."
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua_area_of_effect"       "RADIUS:"
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua_delay"                "DELAY:"
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua_damage"               "DAMAGE:"
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua_nElement"             "<font color='#00a0e9'>Element：</font>"
+    "DOTA_Tooltip_ability_invoker_sun_strike_lua_nMystery"             "<font color='#e9c2ff'>Mystery：</font>"
 
     //EconUnitBegins
 	"npc_dota_creature_lich_glare_of_the_tyrant"                  "Lich"

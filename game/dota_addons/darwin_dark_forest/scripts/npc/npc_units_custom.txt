@@ -1,3 +1,5 @@
+#base npc_unit_precache.txt
+
 // Units File
 "DOTAUnits"
 {
@@ -145,7 +147,7 @@
 		"Level"						"6"
 		"IsSummoned"                "1"
 		"Ability1"					"dota_ability_rune_revealer_lua"
-		//"Ability2"					"dota_ability_reveal_invis"
+		//"Ability2"				"dota_ability_reveal_invis"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"BountyXP"					"0"
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
