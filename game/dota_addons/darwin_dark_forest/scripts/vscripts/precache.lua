@@ -26,7 +26,6 @@ local sounds = {
     "soundevents/game_sounds_winter_2018.vsndevts",
     "soundevents/game_sounds_creeps.vsndevts",
     "soundevents/game_sounds_ui.vsndevts",
-    --KV里面没用过的音效，写在这里
 }
 
 
@@ -34,7 +33,10 @@ local sounds = {
 local function PrecacheEverythingFromTable( context, kvtable)
     for key, value in pairs(kvtable) do
         if type(value) == "table" then
-            PrecacheEverythingFromTable( context, value )
+            --忽略那些预载入单位
+            if not string.find(key, "npc_precache_") then
+               PrecacheEverythingFromTable( context, value )
+            end
         else
             if string.find(value, "vpcf") then
                 PrecacheResource( "particle", value, context)

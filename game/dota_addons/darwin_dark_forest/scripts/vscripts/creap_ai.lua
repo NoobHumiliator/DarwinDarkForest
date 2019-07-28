@@ -352,16 +352,28 @@ end
 function CalculateChasingTime()
     
     --如果x秒不受玩家反击，或者丢失玩家视野 (保证其能移动，不能移动的单位不撤退)
-    --  基础追击时间 4.5秒
-    local flChaseTime=4.5
+    --  基础追击时间 4秒
+    local flChaseTime=4
     
     -- 降低11级生物的仇恨时间
     if thisEntity:GetLevel()==11 then
        flChaseTime=3
     end
 
-    --减少弱势生物被追击时间
-    if GameRules.nAverageLevel then       
+    --调整追击时间
+    if GameRules.nAverageLevel then
+       if thisEntity.hChasingTarget:GetLevel() >= GameRules.nAverageLevel +3 then                  
+           flChaseTime = 13
+       end
+       if thisEntity.hChasingTarget:GetLevel() == GameRules.nAverageLevel +2 then                  
+           flChaseTime = 9
+       end
+       if thisEntity.hChasingTarget:GetLevel() == GameRules.nAverageLevel +1 then                  
+           flChaseTime = 6
+       end
+       if thisEntity.hChasingTarget:GetLevel() == GameRules.nAverageLevel then                  
+           flChaseTime = 4
+       end 
        if thisEntity.hChasingTarget:GetLevel() == GameRules.nAverageLevel -1  then                  
            flChaseTime = 2.25
        end

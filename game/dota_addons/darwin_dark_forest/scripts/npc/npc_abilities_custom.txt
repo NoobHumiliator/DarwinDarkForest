@@ -6393,6 +6393,12 @@
         "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
         "FightRecapLevel"               "1"
         "AbilitySound"                  "Hero_Tusk.Snowball.Cast"
+        "precache"
+        {
+            "particle"                  "particles/act_2/undead_bone_ball_start.vpcf"
+            "particle"                  "particles/act_2/undead_bone_ball.vpcf"
+            "soundfile"                 "soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts"
+        }
 
         "MaxLevel"                      "8"
 

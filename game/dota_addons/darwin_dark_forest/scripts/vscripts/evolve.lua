@@ -107,7 +107,8 @@ ABILITY_PRECACHE_MAP = {
     venomancer_poison_nova="npc_precache_npc_dota_hero_venomancer",
     doom_bringer_infernal_blade="npc_precache_npc_dota_hero_doom_bringer",
     life_stealer_rage="npc_precache_npc_dota_hero_life_stealer",
-    skeleton_king_mortal_strike="npc_precache_npc_dota_hero_skeleton_king",    
+    skeleton_king_mortal_strike="npc_precache_npc_dota_hero_skeleton_king",
+    zuus_cloud_lua="npc_precache_npc_dota_hero_zuus",
 }
 
 
@@ -219,6 +220,7 @@ function SpawnUnitToReplaceHero(sUnitname,hHero,nPlayerId)
 
     --连环删除大法
     local hToKillUnit=hHero.hCurrentCreep
+    CustomNetTables:SetTableValue( "main_creature_owner", tostring(hToKillUnit:GetEntityIndex()), nil )
 
     Timers:CreateTimer(FrameTime(), function()
            if hToKillUnit  and not hToKillUnit:IsNull() and hToKillUnit:IsAlive() then
@@ -691,8 +693,6 @@ function GainExpAndUpdateRadar (nPlayerId,hHero,flExp)
          end
      end
      --更新UI显示
-     CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
      CustomNetTables:SetTableValue( "player_info", tostring(nPlayerId), {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
-      
-    
+         
 end

@@ -36,7 +36,7 @@ function modifier_gaoler_shock:OnIntervalThink()
 
 		local enemies = FindUnitsInRadius( self:GetCaster():GetTeamNumber(), self:GetCaster():GetOrigin(), self:GetCaster(), self.nCurrentRadius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, 0, false )
 		for _,enemy in pairs( enemies ) do
-			if enemy ~= nil and enemy:IsInvulnerable() == false and enemy:IsMagicImmune() == false then
+			if enemy ~= nil and (not enemy:IsNull()) and enemy:IsInvulnerable() == false and enemy:IsMagicImmune() == false then
 				local damageInfo = 
 				{
 					victim = enemy,
