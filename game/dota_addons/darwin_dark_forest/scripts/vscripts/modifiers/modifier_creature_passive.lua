@@ -54,6 +54,10 @@ function modifier_creature_passive:GetModifierProvidesFOWVision()
      
      if IsServer() then
 
+        if GameRules.bUltimateStage and self:GetParent():GetTeam()~=DOTA_TEAM_NEUTRALS then
+	        return 1
+	    end
+
 	    if self:GetParent():GetTeam()~=DOTA_TEAM_NEUTRALS and  GameRules.nAverageLevel then 
 	     	if self:GetParent():GetLevel()>=GameRules.nAverageLevel+2 then
 	     		 if self:GetParent():GetLevel()>=GameRules.nAverageLevel+4 then
@@ -72,10 +76,6 @@ function modifier_creature_passive:GetModifierProvidesFOWVision()
 	    end
 
 	    if self:GetParent():GetLevel()>=10 then
-	        return 1
-	    end
-
-	    if GameRules.bUltimateStage and self:GetParent():GetTeam()~=DOTA_TEAM_NEUTRALS then
 	        return 1
 	    end
 
