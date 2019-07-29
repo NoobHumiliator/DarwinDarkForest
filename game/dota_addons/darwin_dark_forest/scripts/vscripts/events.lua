@@ -217,7 +217,7 @@ function GameMode:OnEntityKilled(keys)
              end
 
              if hHero.hCurrentCreep and hHero.hCurrentCreep:HasModifier("modifier_bonus_ring_effect") then
-                 flExpRatio= flExpRatio*1.5
+                 flExpRatio= flExpRatio*1.3
              end
              
              local flExp = 0
@@ -266,7 +266,7 @@ function GameMode:OnEntityKilled(keys)
           if GameRules.bUltimateStage then
             hHero:SetTimeUntilRespawn(-1)
           else
-            hHero:SetTimeUntilRespawn(5)
+            hHero:SetTimeUntilRespawn(3)
           end
 
           --掉落物品
@@ -322,7 +322,7 @@ function GameMode:OnEntityKilled(keys)
           end
 
           --重生前将出身地随机
-          Timers:CreateTimer(4.6, function()
+          Timers:CreateTimer(2.6, function()
                  GameMode:PutStartPositionToRandomPosForTeam(hHero:GetTeamNumber());
               end
           )
@@ -333,7 +333,7 @@ function GameMode:OnEntityKilled(keys)
           --英雄重生的时候再进化
           --Evolve(nPlayerId,hHero)
           --更新雷达显示
-          CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(nPlayerId),"UpdateRadar", {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
+          CustomNetTables:SetTableValue( "player_info", tostring(nPlayerId), {current_exp=hHero.nCustomExp-vEXP_TABLE[nNewLevel],next_level_need=vEXP_TABLE[nNewLevel+1]-vEXP_TABLE[nNewLevel],perk_table=GameMode.vPlayerPerk[nPlayerId] } )
        end
    end
    DoCleanForDeadUnit(hKilledUnit)

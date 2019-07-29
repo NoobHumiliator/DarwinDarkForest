@@ -1634,7 +1634,7 @@
 
 
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua"                                "虚灵分裂"
-    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_Description"                    "在反复经过几次成功的攻击后，虚灵会分裂。每个玩家做多可以控制10个分裂体，超过上限不在分裂。"
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_Description"                    "在反复经过几次成功的攻击后，虚灵会分裂。每个玩家做多可以控制10个分裂体，超过上限不再分裂。"
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_count"                          "分裂所需攻击次数"
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_duration"                       "分裂体持续时间："
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_illusion_damage_outgoing"       "%分裂体继承攻击力："

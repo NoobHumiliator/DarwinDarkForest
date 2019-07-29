@@ -64,7 +64,7 @@
     "rarity_immortal"                         "Immortal"
 
     "CongratulationNewItem"                   "You earn a new characteristics"
-    "RefundItem"                              "Dupilicate characteristics, auto decomposite for DNA"
+    "RefundItem"                              "Duplicate characteristics, auto decomposite for DNA"
 
     "Confirm"                                 "Confirm"
 
@@ -1597,7 +1597,7 @@
     
 
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua"                                "Eidolon Multiply"
-    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_Description"                    "Eidolon repeated successful attacks cause them to multiply"
+    "DOTA_Tooltip_Ability_eidolon_duplicate_lua_Description"                    "Eidolon repeated successful attacks cause them to multiply.Each player have 10 duplicates maximum."
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_count"                          "Attacks to Multiply:"
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_duration"                       "DURATION:"
     "DOTA_Tooltip_Ability_eidolon_duplicate_lua_illusion_damage_outgoing"       "%DAMAGE PUTPUT:"
