@@ -8,6 +8,10 @@ function item_tome_of_knowledge_lua_2:OnSpellStart()
         hCaster:EmitSound("Item.TomeOfKnowledge")
         self.xp_bonus = self:GetSpecialValueFor( "xp_bonus" )
 
+        if GameRules.bPveMap then
+           self.xp_bonus=self.xp_bonus*0.333
+        end
+
         self:SpendCharge()
         local nPlayerId = hCaster:GetMainControllingPlayer()
         local hHero =  PlayerResource:GetSelectedHeroEntity(nPlayerId)

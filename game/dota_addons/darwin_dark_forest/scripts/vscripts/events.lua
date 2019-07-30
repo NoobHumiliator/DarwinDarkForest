@@ -436,7 +436,7 @@ function GameMode:OnNPCSpawned( event )
 
     local hSpawnedUnit = EntIndexToHScript( event.entindex )
     --print("hSpawnedUnit:GetUnitName()"..hSpawnedUnit:GetUnitName())
-    hSpawnedUnit:AddNewModifier(hSpawnedUnit, nil, "modifier_no_health_bar", {})
+    --hSpawnedUnit:AddNewModifier(hSpawnedUnit, nil, "modifier_no_health_bar", {})
 
     --如果已经初始化过 （是复生 而不是第一次选出来）
     if hSpawnedUnit:IsHero() and hSpawnedUnit.nCurrentCreepLevel then

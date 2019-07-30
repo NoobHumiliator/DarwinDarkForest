@@ -1046,15 +1046,15 @@
 
 
     "DOTA_Tooltip_ability_item_tome_of_knowledge_lua"                                               "知识之书"
-    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_Description"                                   "<h1>使用：启迪</h1>直接获得%xp_bonus%点经验值。"
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_Description"                                   "<h1>使用：启迪</h1>直接获得%xp_bonus%点经验值。<br>单机模式下获得经验减少。"
 
     
     "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_2"                                               "知识之书Ⅱ"
-    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_2_Description"                                   "<h1>使用：启迪</h1>直接获得%xp_bonus%点经验值。"
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_2_Description"                                   "<h1>使用：启迪</h1>直接获得%xp_bonus%点经验值。<br>单机模式下获得经验减少。"
 
 
     "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_3"                                               "知识之书Ⅲ"
-    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_3_Description"                                   "<h1>使用：启迪</h1>直接获得%xp_bonus%点经验值。"
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_3_Description"                                   "<h1>使用：启迪</h1>直接获得%xp_bonus%点经验值。<br>单机模式下获得经验减少。"
 
 
     "DOTA_Tooltip_ability_item_enchanted_mango_lua"                                                "魔法芒果"
@@ -2287,8 +2287,6 @@
 	"npc_dota_creature_bane_slumbering_terror"                  "祸乱之源"
 	"npc_dota_creature_bane_heir_of_terror_slumbering_terror"                  "恐惧之裔"
 	"npc_dota_creature_bane_lucid_torment_slumbering_terror"                  "无休折磨"
-
-
 	//PlayerUnitBegins
     "npc_dota_creature_player_summoned_familiar"                                           "佣兽"
     "npc_dota_creature_player_wraith_warrior"                                              "冥界士兵"

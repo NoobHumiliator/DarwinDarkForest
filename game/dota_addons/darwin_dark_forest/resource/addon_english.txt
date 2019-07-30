@@ -1026,15 +1026,15 @@
 
 
     "DOTA_Tooltip_ability_item_tome_of_knowledge_lua"                                               "Tome of Knowledge"
-    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_Description"                                   "<h1>Use: Enlighten</h1>Grants you %xp_bonus% experience"
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_Description"                                   "<h1>Use: Enlighten</h1>Grants you %xp_bonus% experience.<br>Get less experience in PVE Mode."
 
     
     "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_2"                                            "Tome of Knowledge Ⅱ"
-    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_2_Description"                                "<h1>Use: Enlighten</h1>Grants you %xp_bonus% experience"
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_2_Description"                                "<h1>Use: Enlighten</h1>Grants you %xp_bonus% experience.<br>Get less experience in PVE Mode."
 
 
     "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_3"                                            "Tome of Knowledge Ⅲ"
-    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_3_Description"                                "<h1>Use: Enlighten</h1>Grants you %xp_bonus% experience"
+    "DOTA_Tooltip_ability_item_tome_of_knowledge_lua_3_Description"                                "<h1>Use: Enlighten</h1>Grants you %xp_bonus% experience.<br>Get less experience in PVE Mode."
 
 
     "DOTA_Tooltip_ability_item_enchanted_mango_lua"                                                "Enchanted Mango"

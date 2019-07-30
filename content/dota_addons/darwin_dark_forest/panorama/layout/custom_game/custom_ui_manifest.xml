@@ -62,7 +62,8 @@
        <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/lottery.xml" />
 	   <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" />
 	   <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/notification.xml" />
-	   <CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/health_bar.xml" />
+	   
+	   <!--<CustomUIElement type="Hud"  layoutfile="file://{resources}/layout/custom_game/health_bar.xml" />-->
 
        <CustomUIElement type="EndScreen" layoutfile="file://{resources}/layout/custom_game/multiteam_end_screen.xml" />
 

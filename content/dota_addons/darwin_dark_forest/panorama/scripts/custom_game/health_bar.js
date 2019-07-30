@@ -38,8 +38,14 @@ GameUI.GetCursorEntity = function()
 function UpdateHealthBar() {
     $.Schedule(0, UpdateHealthBar);
 
-    
+    if (CustomNetTables.GetTableValue( "game_state","game_state") == undefined)
+    {
+        return
+    }
+
     var average_level = CustomNetTables.GetTableValue( "game_state","game_state").average_level
+    
+
     var creepLevel = CustomNetTables.GetTableValue( "player_creature_index",Players.GetLocalPlayer()).creepLevel
 
 

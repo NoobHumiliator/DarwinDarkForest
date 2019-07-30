@@ -4296,15 +4296,15 @@
         
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "18.0"
+        "AbilityCooldown"               "20.0"
         
         // Cost
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityManaCost"               "150"
+        "AbilityManaCost"               "125"
         
         // Damage.
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityDamage"                 "250 450 650 850 1050 1250"
+        "AbilityDamage"                 "250 400 550 700 850 1000"
         
         // Special
         //-------------------------------------------------------------------------------------------------------------
@@ -6153,12 +6153,12 @@
             "01"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "damage"                    "2000"
+                "damage"                    "1500"
             }
             "02"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "damage_radius"             "250"
+                "damage_radius"             "220"
             }
             "03"
             {
@@ -6172,23 +6172,23 @@
             }
             "05"
             {
-                "var_type"                          "FIELD_FLOAT"
-                "stun_duration"                     "0.5"
+                "var_type"                 "FIELD_FLOAT"
+                "stun_duration"            "0.5"
             }
             "06"
             {
-                "var_type"                          "FIELD_INTEGER"
-                "knockback_distance"                "450"
+                "var_type"                 "FIELD_INTEGER"
+                "knockback_distance"       "450"
             }
             "07"
             {
-                "var_type"                          "FIELD_INTEGER"
-                "knockback_height"                  "100"
+                "var_type"                 "FIELD_INTEGER"
+                "knockback_height"         "100"
             }
             "08"
             {
-                "var_type"              "FIELD_INTEGER"
-                "movespeed_slow"        "-100"
+                "var_type"                  "FIELD_INTEGER"
+                "movespeed_slow"            "-100"
             }
             "09"
             {
@@ -6228,7 +6228,7 @@
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "450"
         "AbilityCastPoint"              "0.495"
-        "AnimationIgnoresModelScale"     "1"
+        "AnimationIgnoresModelScale"    "1"
         // Time     
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCooldown"               "8"
@@ -6244,12 +6244,12 @@
             "01"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "damage"                    "2000"
+                "damage"                    "1500"
             }
             "02"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "damage_radius"             "110"
+                "damage_radius"             "220"
             }
             "03"
             {
@@ -7357,7 +7357,7 @@
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCooldown"               "55.0"
+        "AbilityCooldown"               "50.0"
 
         // Cost
         //-------------------------------------------------------------------------------------------------------------
@@ -7393,7 +7393,7 @@
             "05"
             {
                 "var_type"              "FIELD_INTEGER"
-                "bonus_health_regen"    "20 25 30 35 40 45"
+                "bonus_health_regen"    "9 12 15 18 21 24"
                 "LinkedSpecialBonus"    "special_bonus_unique_alchemist_4"
             }
             "06"
@@ -7916,7 +7916,7 @@
             "01"
             {
                 "var_type"                  "FIELD_INTEGER"
-                "crit_mult"                 "240 290 350 420 500 590"
+                "crit_mult"                 "170 200 240 290 350 420"
                 "LinkedSpecialBonus"        "special_bonus_unique_mars_gods_rebuke_extra_crit"
             }
             "02"

@@ -21371,7 +21371,7 @@
 		"Model"	                	"models/creeps/sandking_boss/sand_king_boss.vmdl"
 		"SoundSet"		            "Roshan"
 
-		"ModelScale"				"1.8"
+		"ModelScale"				"1.85"
 		"Level"						"10"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
@@ -21385,10 +21385,10 @@
 	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"sand_king_boss_burrowstrike"			
+		"Ability1"					"sand_king_boss_burrowstrike"		
 		"Ability2"					"sand_king_boss_passive"
-		"Ability3"					"sand_king_tail_swipe_right"
-		"Ability4"					"sand_king_tail_swipe_left"	// Ability 4.
+		"Ability3"					"sand_king_tail_swipe_left"
+		"Ability4"					""	        // Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
@@ -71819,7 +71819,7 @@
 		"Model"	                	"models/creeps/sandking_boss/sand_king_boss.vmdl"
 		"SoundSet"		            "Roshan"
 
-		"ModelScale"				"1.8"
+		"ModelScale"				"1.85"
 		"Level"						"10"
 		"vscripts"					"creap_ai.lua"
 		"HasInventory"				"1"
@@ -71833,10 +71833,10 @@
 	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"sand_king_boss_burrowstrike"			
+		"Ability1"					"sand_king_boss_burrowstrike"		
 		"Ability2"					"sand_king_boss_passive"
-		"Ability3"					"sand_king_tail_swipe_right"
-		"Ability4"					"sand_king_tail_swipe_left"	// Ability 4.
+		"Ability3"					"sand_king_tail_swipe_left"
+		"Ability4"					""	        // Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
