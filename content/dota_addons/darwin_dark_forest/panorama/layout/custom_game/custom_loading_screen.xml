@@ -2,8 +2,18 @@
 	<styles>
 		<include src="file://{resources}/styles/dotastyles.css" />
 		<include src="file://{resources}/styles/custom_game/custom_loading_screen.css" />
+		<include src="file://{resources}/styles/custom_game/loading_screen.css" />
 	</styles>
+	<scripts>
+        <include src="file://{resources}/scripts/custom_game/loading_screen.js" />
+    </scripts>
 	<Panel class="OverthrowLoadingRoot">
 		 <Image hittest="false" style="height:100%;width:100%;" src="file://{images}/custom_game/loadingscreen.png"/>
+		 <Panel id="TipContainer" onactivate="NextTip()">
+				<Panel id="TipText">
+					<Label id="TipLabel" text="#LoadingTip_1"/>
+				</Panel>
+				<Panel id="NextTip" class="TipButton" onactivate="NextTip()"/>
+		 </Panel>
 	</Panel>
 </root>

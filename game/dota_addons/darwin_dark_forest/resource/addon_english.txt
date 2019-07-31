@@ -32,7 +32,11 @@
     "rune_pickup_fury"             "Pick up Fury Rune"
     "rune_pickup_decay"            "Pick up Decay Rune"
     "rune_pickup_hunt"             "Pick up Hunt Rune"
-
+    
+    "LoadingTip_1"                 "You can draw evolve from DNA Inventory(Top-Left Menu)."
+    "LoadingTip_2"                 "Game will reward top-5 player DNA when game is over.(25 max per day)"
+    "LoadingTip_3"                 "High Power Field will imprison creatures inside, but grants them great bouns of Exp."
+    "LoadingTip_4"                 "Ranks will be settled on the last day of month, top-200 player will be granted DNA."
 
     "congrates_first_place"         "Winner Winner Chicken Dinner"
     "encourage_runner_ups"          "Never abandon,never give up."

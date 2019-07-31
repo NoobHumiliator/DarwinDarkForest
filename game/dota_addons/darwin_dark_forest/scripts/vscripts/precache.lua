@@ -80,5 +80,7 @@ return function(context)
         PrecacheResource("soundfile", p, context)
     end
 
+    PrecacheUnitByNameSync("npc_dota_hero_broodmother", context, -1)
+
 end
 
