@@ -45,8 +45,9 @@ function Snapshot:GenerateSnapShot(nPlayerID)
     vSanpInfo.sPerkSum= tostring(math.floor(flPerkSum+0.5))
 
     vSanpInfo.sSteamID=tostring(PlayerResource:GetSteamAccountID(nPlayerID))
-
-    vSanpInfo.sUnitName=hHero.hCurrentCreep:GetUnitName()
+    
+    --用原来单位的名字 方便统计
+    vSanpInfo.sUnitName=hHero.sOriginalUnitName
     
     vSanpInfo.sGameTime=tostring(GameRules:GetGameTime())
 

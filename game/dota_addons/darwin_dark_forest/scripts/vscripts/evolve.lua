@@ -117,19 +117,6 @@ ABILITY_PRECACHE_MAP = {
 function Evolve (nPlayerId,hHero)
    
     local nLevel=hHero.nCurrentCreepLevel
-    local sUnitToEnvolve = DetermineNewUnitName(nPlayerId,hHero,nLevel)
-
-    local sOriginalUnitName=""
-
-    --如果装备不朽物品 nPlayerId
-    if Econ.vPlayerData[nPlayerId].vImmortalReplaceMap and  Econ.vPlayerData[nPlayerId].vImmortalReplaceMap[sUnitToEnvolve]  then
-         sOriginalUnitName=sUnitToEnvolve
-         sUnitToEnvolve=Econ.vPlayerData[nPlayerId].vImmortalReplaceMap[sUnitToEnvolve]
-         CustomNetTables:SetTableValue("econ_unit_replace",sUnitToEnvolve,{sOriginalUnitName=sOriginalUnitName})
-    else
-        --没有不朽物品，使用玩家专属生物
-        sUnitToEnvolve = string.gsub(sUnitToEnvolve, "npc_dota_creature_", "npc_dota_creature_player_") 
-    end
 
     --判断游戏阶段
     if nLevel==11 and GameRules.bUltimateStage==false then       
@@ -147,6 +134,18 @@ function Evolve (nPlayerId,hHero)
         end
     end
 
+    local sUnitToEnvolve = DetermineNewUnitName(nPlayerId,hHero,nLevel)
+    local sOriginalUnitName=sUnitToEnvolve
+    hHero.sOriginalUnitName = sOriginalUnitName
+
+    --如果装备不朽物品 nPlayerId
+    if Econ.vPlayerData[nPlayerId].vImmortalReplaceMap and  Econ.vPlayerData[nPlayerId].vImmortalReplaceMap[sUnitToEnvolve]  then
+         sUnitToEnvolve=Econ.vPlayerData[nPlayerId].vImmortalReplaceMap[sUnitToEnvolve]
+         CustomNetTables:SetTableValue("econ_unit_replace",sUnitToEnvolve,{sOriginalUnitName=sOriginalUnitName})
+    else
+        --没有不朽物品，使用玩家专属生物
+        sUnitToEnvolve = string.gsub(sUnitToEnvolve, "npc_dota_creature_", "npc_dota_creature_player_") 
+    end
   
     print("To Evolve Creature"..sUnitToEnvolve)
     local hUnit = SpawnUnitToReplaceHero(sUnitToEnvolve,hHero,nPlayerId)
