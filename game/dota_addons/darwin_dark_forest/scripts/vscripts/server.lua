@@ -1,6 +1,6 @@
 --持久化服务器 交互Service
 if Server == nil then Server = class({}) end
-sServerAddress="http://106.12.3.136:8080/"
+sServerAddress="http://106.13.79.105:8080/"
 
 
 local function stringTable(t)
