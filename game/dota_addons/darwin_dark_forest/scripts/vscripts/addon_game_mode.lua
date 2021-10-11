@@ -312,7 +312,7 @@ function GameMode:InitGameMode()
     GameMode.vStartPointLocation={} --key是teamnumber value坐标
     GameRules.nFatalErrorTimes=1
 
-    GameRules.sMatchId=tostring(GameRules:GetMatchID())
+    GameRules.sMatchId=tostring(GameRules:Script_GetMatchID())
 
     if GameRules.sMatchId=="0" then
        GameRules.sMatchId=tostring(GetSystemTime())..tostring(RandomInt(1,9999999))
