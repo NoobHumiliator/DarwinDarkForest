@@ -16,22 +16,22 @@
                 <Label style="margin-top:30px;horizontal-align:center;" class="instruction_title" text="#GameInstruction" />
                 <Label style="margin-top:30px;horizontal-align:center;" class="instruction_title_small" text="#GameInstructionSmall" />
             </Panel>
-            <Image style="width:533px;height:376px;margin-left:30px;margin-top:100px;" src="raw://resource/note_gif/note1.gif" />
+            <Image style="width:533px;height:376px;margin-left:30px;margin-top:100px;"  src="file://{resources}/images/custom_game/note/note1.png"/>
             <Label style="margin-top:481px;margin-left:30px;width:533px;" class="instruction_note" text="#note_1" />
 
-            <Image style="width:533px;height:376px;margin-left:593px;margin-top:100px;" src="raw://resource/note_gif/note2.gif" />
+            <Image style="width:533px;height:376px;margin-left:593px;margin-top:100px;" src="file://{resources}/images/custom_game/note/note2.png" />
             <Label style="margin-top:481px;margin-left:593px;width:533px;" class="instruction_note" text="#note_2" />
 
-            <Image style="width:533px;height:376px;margin-left:1156px;margin-top:100px;" src="raw://resource/note_gif/note3.gif" />
+            <Image style="width:533px;height:376px;margin-left:1156px;margin-top:100px;" src="file://{resources}/images/custom_game/note/note3.png" />
             <Label style="margin-top:481px;margin-left:1156px;width:533px;" class="instruction_note" text="#note_3" />
 
-            <Image style="width:533px;height:376px;margin-left:30px;margin-top:556px;" src="raw://resource/note_gif/note4.gif" />
+            <Image style="width:533px;height:376px;margin-left:30px;margin-top:556px;" src="file://{resources}/images/custom_game/note/note4.png" />
             <Label style="margin-top:937px;margin-left:30px;width:533px;" class="instruction_note" text="#note_4" />
 
-            <Image style="width:533px;height:376px;margin-left:593px;margin-top:556px;" src="raw://resource/note_gif/note5.gif" />
+            <Image style="width:533px;height:376px;margin-left:593px;margin-top:556px;" src="file://{resources}/images/custom_game/note/note5.png" />
             <Label style="margin-top:937px;margin-left:593px;width:533px;" class="instruction_note" text="#note_5" />
             
-            <Image style="width:533px;height:376px;margin-left:1156px;margin-top:556px;" src="raw://resource/note_gif/note6.gif" />
+            <Image style="width:533px;height:376px;margin-left:1156px;margin-top:556px;" src="file://{resources}/images/custom_game/note/note6.png" />
             <Label style="margin-top:937px;margin-left:1156px;width:533px;" class="instruction_note" text="#note_6" />
 
             

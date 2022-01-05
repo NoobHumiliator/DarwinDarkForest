@@ -48,7 +48,7 @@
                     <TextEntry id="TaobaoCodeEntry" maxchars="25" placeholder="#ClickPlusForCode" oninputsubmit="OnCdkeySubmitted()" />
                     <Button id="SubmitTaobaoCodeButton" onactivate="SubmitTaobaoCode()" class="EvolveButton">
                         <Label id="SubmitTaobaoCodeButtonLabel"  text="#ExchangeKey"/>
-                        <Panel id="SubmitTaobaoCodeButtonLoading" class="Spinner Hidden"/>/>
+                        <Panel id="SubmitTaobaoCodeButtonLoading" class="Spinner Hidden"/>
                     </Button>
                 </Panel>
                 <Button class="InventoryCloseButton" onactivate="CloseInventory()" />
